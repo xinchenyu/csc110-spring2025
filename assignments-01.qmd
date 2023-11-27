@@ -20,7 +20,7 @@ If you need instructions on how to submit your `.py` files to gradescope, watch 
 
 **Due date: `r assignments %>% filter(number == 1) %>% pull(formatted_date)` at 7pm**
 
-<https://uarizona.co1.qualtrics.com/jfe/form/SV_e3QarvVnEiImQ4K>
+<>
 
 This is a survey to collect information on your expectations for CSc 110 Computer Programming I. The completion of this survey is required and will be used for grading purposes.
 

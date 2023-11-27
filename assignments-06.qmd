@@ -18,7 +18,7 @@ Programming Problems should be submitted to [gradescope](https://www.gradescope.
 
 # Programming Problem 11
 
-**Due date: `r assignments %>% filter(number == 10) %>% pull(formatted_date)` at 7pm**
+**Due date: `r assignments %>% filter(number == 11) %>% pull(formatted_date)` at 7pm**
 
 Write a Python function that does the following:
 
