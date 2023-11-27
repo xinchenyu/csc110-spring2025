@@ -27,11 +27,10 @@ website:
         - project-4.qmd
         - project-5.qmd
         - project-6.qmd
-        - extra-A.qmd
-        - extra-B.qmd
-        - extra-C.qmd
-        - extra-D.qmd
-        - extra-E.qmd
+        - project-7.qmd
+        - project-8.qmd
+        - project-9.qmd
+        - project-10.qmd
       - section: "Extra Resources"
         contents: 
         - practice-01.qmd
