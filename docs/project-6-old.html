@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CSc 110 Computer Programming I - Extra Project D</title>
+<title>CSc 110 Computer Programming I - Programming Project 6</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -238,21 +238,33 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./project-6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programming Project 6</span></a>
+ <span class="menu-text">Extra Project E</span></a>
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">project-7.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./project-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extra Project C</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">project-8.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./project-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extra Project D</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">project-9.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./project-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extra Project B</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">project-10.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./project-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extra Project A</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -872,23 +884,10 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#spell-check" id="toc-spell-check" class="nav-link active" data-scroll-target="#spell-check">Spell Check</a></li>
-  <li><a href="#program-behavior" id="toc-program-behavior" class="nav-link" data-scroll-target="#program-behavior">Program behavior</a></li>
-  <li><a href="#misspellings.txt" id="toc-misspellings.txt" class="nav-link" data-scroll-target="#misspellings.txt">misspellings.txt</a></li>
-  <li><a href="#preserving-capitalization" id="toc-preserving-capitalization" class="nav-link" data-scroll-target="#preserving-capitalization">Preserving Capitalization</a></li>
-  <li><a href="#ignoring-punctuation" id="toc-ignoring-punctuation" class="nav-link" data-scroll-target="#ignoring-punctuation">Ignoring Punctuation</a></li>
-  <li><a href="#development-strategy" id="toc-development-strategy" class="nav-link" data-scroll-target="#development-strategy">Development Strategy</a>
-  <ul class="collapse">
-  <li><a href="#reading-in-misspellings.txt" id="toc-reading-in-misspellings.txt" class="nav-link" data-scroll-target="#reading-in-misspellings.txt">(1) Reading in misspellings.txt</a></li>
-  <li><a href="#replacing-words" id="toc-replacing-words" class="nav-link" data-scroll-target="#replacing-words">(2) Replacing words</a></li>
-  <li><a href="#handle-punctuation-handle-capitalization" id="toc-handle-punctuation-handle-capitalization" class="nav-link" data-scroll-target="#handle-punctuation-handle-capitalization">(3) Handle Punctuation / Handle Capitalization</a></li>
-  <li><a href="#write-out-output-file" id="toc-write-out-output-file" class="nav-link" data-scroll-target="#write-out-output-file">(4) Write out output file</a></li>
-  </ul></li>
-  <li><a href="#test-cases" id="toc-test-cases" class="nav-link" data-scroll-target="#test-cases">Test Cases</a>
-  <ul class="collapse">
-  <li><a href="#example-1-no-punctuation-or-capitalized-words" id="toc-example-1-no-punctuation-or-capitalized-words" class="nav-link" data-scroll-target="#example-1-no-punctuation-or-capitalized-words">Example 1 (no punctuation or capitalized words)</a></li>
-  <li><a href="#example-2-with-punctuation-and-capitalized-words" id="toc-example-2-with-punctuation-and-capitalized-words" class="nav-link" data-scroll-target="#example-2-with-punctuation-and-capitalized-words">Example 2 (with punctuation and capitalized words)</a></li>
-  </ul></li>
+  <li><a href="#load_game" id="toc-load_game" class="nav-link active" data-scroll-target="#load_game">load_game</a></li>
+  <li><a href="#load_objects" id="toc-load_objects" class="nav-link" data-scroll-target="#load_objects">load_objects()</a></li>
+  <li><a href="#load_travel_table" id="toc-load_travel_table" class="nav-link" data-scroll-target="#load_travel_table">load_travel_table()</a></li>
+  <li><a href="#print_instructions" id="toc-print_instructions" class="nav-link" data-scroll-target="#print_instructions">print_instructions()</a></li>
   </ul>
 </nav>
     </div>
@@ -897,7 +896,7 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Extra Project D</h1>
+<h1 class="title">Programming Project 6</h1>
 </div>
 
 
@@ -912,143 +911,99 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 
 </header>
 
-<p>This is an extra project (it does not count towards your final grade) for those who have asked me for more practice. If you are a CS major, and are planning on taking CSC 120, this practice project is highly recommended.</p>
-<p>This programming project is an adaptation of Ben Dicken’s Spell Check Programming Assignment.</p>
-<p>You should name the file <code>spellcheck.py</code> and have a function named <code>correct_spelling</code> to write out the ouput file.</p>
-<section id="spell-check" class="level1">
-<h1>Spell Check</h1>
-<p>Most in this class have probably used a spellchecker at least once in your life (more likely, many times). Spell checkers are built into a number of programs, including Microsoft Word, Apple Pages, gmail, and others. In this assignment, you’ll be implementing a program that can suggest and fix spelling issues in text.</p>
-</section>
-<section id="program-behavior" class="level1">
-<h1>Program behavior</h1>
-<p>The spell checking program should be named <code>spellcheck.py</code>. The spell check program takes as argument the name of a text file, which will contain the text that the user wants to be spell-checked. The program than writes out an output file with swapping the contents of the input file with the spelling already fixed.</p>
-<p>Let’s walk through a really simple example to demonstrate the difference in the two modes. Let’s say that the file <code>words.txt</code> has the below content:</p>
-<pre class="{html}"><code>one hudnred dollars
-and fiveteen cents</code></pre>
-<p>The words hundred (hudnred) and the word fifteen (fiveteen) are spelled wrong. The contents of the file should be written out to an output file with the misspelled words replaced with correctly-spelled ones.</p>
-<pre class="{html}"><code>one hundred dollars
-and fifteen cents</code></pre>
-<p>Notice that the program goes ahead and replaces the misspelled words with correctly-spelled ones.</p>
-<p>How was the program able to identify the words that were not spelled correctly? Read the next section to find out.</p>
-</section>
-<section id="misspellings.txt" class="level1">
-<h1>misspellings.txt</h1>
-<p>Your program should open up and read a file names <code>misspellings.txt</code>. You can assume that this file already exists in the same directory as <code>spellcheck.py</code>. When testing on your computer, you should create your own <code>misspellings.txt</code>. This file will include information about how words are misspelled. Using this information, you can determine which words are spelled wrong in the input file. You can assume that each line of <code>misspellings.txt</code> is formatted as follows:</p>
-<pre class="{html}"><code>incorrect_a-&gt;correctly_spelled_word_a
-incorrect_b-&gt;correctly_spelled_word_b</code></pre>
-<p>In other words, the first word on a line of the file is a correctly spelled word, then an arrow, then the correctly-spelled version of the word. For instance:</p>
-<pre class="{html}"><code>hudnred-&gt;hundred
-hundrid-&gt;hundred
-fifeteen-&gt;fifteen
-fiveteen-&gt;fifteen
-fiften-&gt;fifteen</code></pre>
-<p>This file contains two possible misspellings of the word <code>"hundred"</code> and three possible misspellings of the word <code>"fifteen"</code>. Your program should handle a misspellings file of any size.</p>
-<p>Your program should open and read the <code>misspellings.txt</code> file into the program and store the mapping between misspelled and correctly-spelled words in a dictionary. The keys of the dictionary should be the misspelled version of the word, and the value the keys map to should be the correctly-spelled version of that word. Given the example content of <code>misspelling.txt</code> shown above, the misspellings dictionary should have the keys and values shown below:</p>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>misspellings <span class="op">=</span> { </span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'hudnred'</span> : <span class="st">'hundred'</span>,</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'hundrid'</span> : <span class="st">'hundred'</span>,</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'fifeteen'</span> : <span class="st">'fifteen'</span>,</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'fiveteen'</span> : <span class="st">'fifteen'</span>,</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'fiften'</span> : <span class="st">'fifteen'</span> }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Programming Projects are to be submitted to <a href="https://www.gradescope.com/courses/568720">gradescope</a>.</p>
+<p><strong>Due date: Wednesday, December 06, 2023 at 7pm</strong></p>
+<p>In this programming project you will implement four Python functions. Make sure you follow the provided <a href="https://adrianapicoral.com/csc-110/style.html">style guide</a> (you will be graded on it!).</p>
+<p>You are provided with starter code, and four text files. Download the starter code and text files:</p>
+<ul>
+<li><a href="project-6/adventure.py">adventure.py</a></li>
+<li><a href="project-6/game.txt">game.txt</a></li>
+<li><a href="project-6/instructions.txt">instructions.txt</a></li>
+<li><a href="project-6/objects.txt">objects.txt</a></li>
+<li><a href="project-6/travel_table.txt">travel_table.txt</a></li>
+</ul>
+<p>You will only change four functions in the <code>adventure.py</code> file:</p>
+<ul>
+<li><code>load_game()</code></li>
+<li><code>load_objects()</code></li>
+<li><code>load_travel_table()</code></li>
+<li><code>print_instructions()</code></li>
+</ul>
+<p>Note that all of these four functions do not have any parameters (that’s on purpose, do not change that). Make sure you add docstrings for your functions (gradescope will autograde you for that).</p>
+<p>Write your code inside each function where it says <code># implement your code here</code></p>
+<p>Submit your modified <code>adventure.py</code> to gradescope when you are done implementing all four functions.</p>
+<section id="load_game" class="level1">
+<h1>load_game</h1>
+<ol type="1">
+<li>Iterate over each line in the file (the code to open the file is already implemented for you)</li>
+<li>Each line must be split by tab (the tab character is <code>\t</code>) – remember to strip the line before splitting</li>
+<li>Populate the <code>game</code> dictionary with the following:
+<ol type="1">
+<li>key: the first value in the line – type cast it to integer</li>
+<li>value: list containing all the second values associated with the same key in multiple lines</li>
+</ol></li>
+</ol>
+<p>Example: the first 5 lines in <code>game.txt</code> are:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>0   Welcome to Adventure!</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>0   ADVENTURE!</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>0   The simplified version of Colossal Cave Adventure text-based game</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>0   Original by Willie Crowther and Don Woods (1977)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>0   Would you like instructions? YES or NO?</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>After you have read in the file and constructed this dictionary, you can use it to determine the correct spelling of an incorrectly-spelled word. How would you do this?</p>
-<p>After you’ve opened up the input file, loop through each line of it. You can split each line into individual words. For each word on the line, you can check if that word is one of the keys in the misspellings dictionary. If it is, you can assume it is incorrectly spelled. The correct spelling of that word is the value associated with the key, so you can grab it from the dictionary and either replace the original word (if in replace mode) or use it as a suggestion (if in suggest mode).</p>
-</section>
-<section id="preserving-capitalization" class="level1">
-<h1>Preserving Capitalization</h1>
-<p>The words in the <code>misspellings.txt</code> file will be all in lower case. However, your program should also be able to replace or suggest fixes for misspelled capitalized words. For instance, it should be able to change <code>Hudnred</code> to <code>Hundred</code> in replace mode.</p>
-<p>Before you try to look up a word in the misspellings dictionary, determine if it is or is not capitalized (meaning that the first letter is upper-case). Then, you can convert it to lower case. If the word does need replacing, then you should make sure to capitalize the correctly spelled word if the original word was also capitalized.</p>
-<p>You might find the string methods <code>.lower()</code>,<code>.isupper()</code>, and <code>.capitalize()</code> useful.</p>
-</section>
-<section id="ignoring-punctuation" class="level1">
-<h1>Ignoring Punctuation</h1>
-<p>You also should make the spell checker ignore punctuation. In particular, <code>spellcheck.py``` should be able to handle a trailing ,, ., ?, or !. For instance, it should be able to change</code>hudnred?<code>to</code>hundred?` in replace mode. How can this be accomplished?</p>
-<p>Before looking up a word in the misspellings dictionary, check if the last character is one of the four types of punctuation that you should look for (, or . or ? or !). If it is, create a variable to store that punctuation, and then trim it off of the end of the word. Then, proceed with checking the spelling. After you have determined if it is spelled correctly or not, you can put the punctuation at the end of the word.</p>
-</section>
-<section id="development-strategy" class="level1">
-<h1>Development Strategy</h1>
-<section id="reading-in-misspellings.txt" class="level2">
-<h2 class="anchored" data-anchor-id="reading-in-misspellings.txt">(1) Reading in misspellings.txt</h2>
-<p>Create a function that will be responsible for opening up the misspellings file and reading in the information. The function can assume that the misspellings.txt file exists. The function should open the file, read the lines, and populate the misspellings dictionary, as described previously in this specification.</p>
-</section>
-<section id="replacing-words" class="level2">
-<h2 class="anchored" data-anchor-id="replacing-words">(2) Replacing words</h2>
-<p>Next, work reading the input file and replacing misspelled words. At this point, don’t yet worry about capitalized words, or punctuation. Iterate through the contents of the input file, line-by-line and word-by-word. When a correctly-spelled word is encountered, print it out with a trailing space. When an incorrectly-spelled word is encountered, print out the correctly-spelled version instead.</p>
-</section>
-<section id="handle-punctuation-handle-capitalization" class="level2">
-<h2 class="anchored" data-anchor-id="handle-punctuation-handle-capitalization">(3) Handle Punctuation / Handle Capitalization</h2>
-<p>You might find one or the other of these easier or harder, so choose whichever you think you will be able to accomplish more quickly. Once you have one working, move to the other! Handling punctuation is extra credit.</p>
-</section>
-<section id="write-out-output-file" class="level2">
-<h2 class="anchored" data-anchor-id="write-out-output-file">(4) Write out output file</h2>
-<p>Your function that writes out the output file should be named <code>correct_spelling</code> and the output file should have the <code>output_</code> prefix. That means that if the original file was names <code>words_1.txt</code>, the output file should be named <code>output_words_1.txt</code></p>
-</section>
-</section>
-<section id="test-cases" class="level1">
-<h1>Test Cases</h1>
-<p>There are going to be a number of test cases for this assignment. You should test out your program in chunks. Don’t try to tackle everything at once. If you follow the development strategy, you should be able to progressively pass more and more test cases, as you add more and more functionality.</p>
-<p>Below are several examples. Each example includes the contents of <code>misspellings.txt</code>, the contents of the input file, and the results for the output file.</p>
-<section id="example-1-no-punctuation-or-capitalized-words" class="level2">
-<h2 class="anchored" data-anchor-id="example-1-no-punctuation-or-capitalized-words">Example 1 (no punctuation or capitalized words)</h2>
-<p><code>misspellings.txt</code></p>
-<pre class="{html}"><code>datamic-&gt;dramatic
-dramati-&gt;dramatic
-elaphant-&gt;elephant
-elofent-&gt;elephant
-elaphent-&gt;elephant
-zooo-&gt;zoo
-zo-&gt;zoo</code></pre>
-<p><code>words_1.txt</code></p>
-<pre class="{html}"><code>joe and his family went to the zoo the other day
-the zooo had many animals including an elofent
-the elaphant was being too dramati though
-after they walked around joe left the zo</code></pre>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    spell_dict <span class="op">=</span> read_spellings()</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    correct_spelling(<span class="st">"words_1.txt"</span>, spell_dict)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>That translates into the following <code>key: value</code> pair in the <code>game</code> dictionary:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span>: [<span class="st">'Welcome to Adventure!'</span>, <span class="st">'ADVENTURE!'</span>, <span class="st">'The simplified version of Colossal Cave Adventure text-based game'</span>, <span class="st">'Original by Willie Crowther and Don Woods (1977)'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><code>output_words_1.txt</code></p>
-<pre class="{html}"><code>joe and his family went to the zoo the other day
-the zoo had many animals including an elephant
-the elephant was being too dramatic though
-after they walked around joe left the zoo</code></pre>
 </section>
-<section id="example-2-with-punctuation-and-capitalized-words" class="level2">
-<h2 class="anchored" data-anchor-id="example-2-with-punctuation-and-capitalized-words">Example 2 (with punctuation and capitalized words)</h2>
-<p><code>misspellings.txt</code></p>
-<pre class="{html}"><code>hereo-&gt;hero
-heroc-&gt;hero
-fluwe-&gt;flew
-jumpedd-&gt;jumped
-jimped-&gt;jumped
-jumpped-&gt;jumped
-savved-&gt;saved
-sived-&gt;saved
-sivved-&gt;saved
-sumprean-&gt;superman
-sumperan-&gt;superman
-dayy-&gt;day
-ayy-&gt;day</code></pre>
-<p><code>words_2.txt</code></p>
-<pre class="{html}"><code>There once was a hero, named superman.
-Sumperan, being the hero he is, jumped.
-After he jumped, he fluwe!
-Then, Sumprean savved the day.</code></pre>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    spell_dict <span class="op">=</span> read_spellings()</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    correct_spelling(<span class="st">"words_2.txt"</span>, spell_dict)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="load_objects" class="level1">
+<h1>load_objects()</h1>
+<ol type="1">
+<li>Iterate over each line in the file (the code to open the file is already implemented for you)</li>
+<li>Each line must be split by tab (the tab character is <code>\t</code>) – remember to strip the line before splitting</li>
+<li>Populate the <code>objects</code> dictionary with the following:
+<ol type="1">
+<li>key: tuple with the first three values of each line – cast the first two values to integer</li>
+<li>value: list with the rest of the values in each line (starting at index <code>3</code>)</li>
+</ol></li>
+</ol>
+<p>Example: the first line in <code>object.txt</code> is:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>3   0   KEYS    THERE IS A SHINY BRASS LAMP NEARBY.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><code>output_words_2.txt</code></p>
-<pre class="{html}"><code>There once was a hero, named superman.
-Superman, being the hero he is, jumped.
-After he jumped, he flew!
-Then, Superman saved the day.</code></pre>
+<p>That translates into the following <code>key: value</code> pair in the <code>game</code> dictionary:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">3</span>, <span class="dv">0</span>, <span class="st">'KEYS'</span>): [<span class="st">'THERE IS A SHINY BRASS LAMP NEARBY.'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="load_travel_table" class="level1">
+<h1>load_travel_table()</h1>
+<ol type="1">
+<li>Iterate over each line in the file (the code to open the file is already implemented for you)</li>
+<li>Each line must be split by tab (the tab character is <code>\t</code>) – remember to strip the line before splitting</li>
+<li>Populate the <code>travel</code> dictionary with the following:
+<ol type="1">
+<li>key: tuple with the first two values of each line – cast these first two values to integer</li>
+<li>value: third value in each line</li>
+</ol></li>
+</ol>
+<p>Example: the first line in <code>object.txt</code> is:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>0   1   BLANK</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>That translates into the following <code>key: value</code> pair in the <code>game</code> dictionary:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">0</span>, <span class="dv">1</span>): <span class="st">'BLANK'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="print_instructions" class="level1">
+<h1>print_instructions()</h1>
+<ol type="1">
+<li>Open <code>instructions.txt</code> in read mode</li>
+<li>Print the contents of the file</li>
+</ol>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

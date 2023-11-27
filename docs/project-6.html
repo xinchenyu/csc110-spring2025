@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CSc 110 Computer Programming I - Programming Project 6</title>
+<title>CSc 110 Computer Programming I - Extra Project E</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,7 +116,7 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./style.html">Programming Projects</a></li><li class="breadcrumb-item"><a href="./project-6.html">Programming Project 6</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./style.html">Programming Projects</a></li><li class="breadcrumb-item"><a href="./project-6.html">Extra Project E</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -236,21 +236,33 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./project-6.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Programming Project 6</span></a>
+ <span class="menu-text">Extra Project E</span></a>
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">project-7.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./project-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extra Project C</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">project-8.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./project-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extra Project D</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">project-9.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./project-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extra Project B</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">project-10.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./project-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extra Project A</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -870,10 +882,15 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#load_game" id="toc-load_game" class="nav-link active" data-scroll-target="#load_game">load_game</a></li>
-  <li><a href="#load_objects" id="toc-load_objects" class="nav-link" data-scroll-target="#load_objects">load_objects()</a></li>
-  <li><a href="#load_travel_table" id="toc-load_travel_table" class="nav-link" data-scroll-target="#load_travel_table">load_travel_table()</a></li>
-  <li><a href="#print_instructions" id="toc-print_instructions" class="nav-link" data-scroll-target="#print_instructions">print_instructions()</a></li>
+  <li><a href="#encrypter-decrypter" id="toc-encrypter-decrypter" class="nav-link active" data-scroll-target="#encrypter-decrypter">Encrypter / Decrypter</a>
+  <ul class="collapse">
+  <li><a href="#encrypter" id="toc-encrypter" class="nav-link" data-scroll-target="#encrypter">Encrypter</a></li>
+  <li><a href="#decrypter" id="toc-decrypter" class="nav-link" data-scroll-target="#decrypter">Decrypter</a></li>
+  </ul></li>
+  <li><a href="#the-encrypting-algorithm" id="toc-the-encrypting-algorithm" class="nav-link" data-scroll-target="#the-encrypting-algorithm">The encrypting algorithm</a>
+  <ul class="collapse">
+  <li><a href="#test-cases" id="toc-test-cases" class="nav-link" data-scroll-target="#test-cases">Test cases</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -882,7 +899,7 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Programming Project 6</h1>
+<h1 class="title">Extra Project E</h1>
 </div>
 
 
@@ -897,99 +914,101 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 
 </header>
 
-<p>Programming Projects are to be submitted to <a href="https://www.gradescope.com/courses/568720">gradescope</a>.</p>
-<p><strong>Due date: Wednesday, December 06, 2023 at 7pm</strong></p>
-<p>In this programming project you will implement four Python functions. Make sure you follow the provided <a href="https://adrianapicoral.com/csc-110/style.html">style guide</a> (you will be graded on it!).</p>
-<p>You are provided with starter code, and four text files. Download the starter code and text files:</p>
+<p>This is an extra project (it does not count towards your final grade) for those who have asked me for more practice. If you are a CS major, and are planning on taking CSC 120, this practice project is highly recommended.</p>
+<p>This programming project is an adaptation of Ben Dicken’s Encrypter / Decrypter Programming Assignment.</p>
+<section id="encrypter-decrypter" class="level1">
+<h1>Encrypter / Decrypter</h1>
+<p>This assignment exercises file reading and writing, random, and use of lists. You are going to write two separate programs which work together to encrypt (“mix-up”” and decrypt (“re-assemble”) <code>.txt</code> files, <code>.py</code> files, and other text-based files.</p>
+<p>Perhaps you’ve heard of the concept of “Encryption” in passing. In this assignment, we are going to be writing programs that are capable of encrypting and decrypting text files. The Wikipedia definition of Encryption goes like so:</p>
+<blockquote class="blockquote">
+<p>In cryptography, encryption is the process of encoding a message or information in such a way that only authorized parties can access it. Encryption does not itself prevent interference, but denies the intelligible content to a would-be interceptor. In an encryption scheme, the intended information or message, referred to as plaintext, is encrypted using an encryption algorithm, generating ciphertext that can only be read if decrypted. For technical reasons, an encryption scheme usually uses a pseudo-random encryption key generated by an algorithm. It is in principle possible to decrypt the message without possessing the key, but, for a well-designed encryption scheme, considerable computational resources and skills are required. An authorized recipient can easily decrypt the message with the key provided by the originator to recipients but not to unauthorized users.</p>
+</blockquote>
+<p>We are going to implement two programs (one to encrypt a text file, and one to decrypt).</p>
+<section id="encrypter" class="level2">
+<h2 class="anchored" data-anchor-id="encrypter">Encrypter</h2>
+<p>The first program you will write shall be named <code>encrypter.py</code>. The job of this program will be to encrypt (“mix” or “shuffle”) the lines of a text file, but do it in such a way that it can be un-done later with a separate program (which you will also write).</p>
+<p>When run, your program will accept as argument a file name to encrypt. This program will then run its encrypting (mixing) algorithm on the text file named <code>file_name</code>. It will save the encrypted version of the text file to a file named <code>encrypted.txt</code>.</p>
+<p>Your program will encrypt an input file by re-arranging the lines of the input file, based on indexes retrieved from calling <code>randint</code>. For example, to encrypt a file named <code>sample.txt</code> that looks like this:</p>
+<pre>|'''''|
+| 0 0 |
+|  ^  |
+|  -  |
+ ----- 
+   # 
+#######
+  ###
+ #   #
+ %   %
+</pre>
+<p>After running, <code>encrypted.txt</code> will have the following contents:</p>
+<pre>| 0 0 |
+ %   %
+#######
+   # 
+|'''''|
+|  ^  |
+  ###
+|  -  |
+ #   #
+ ----- 
+</pre>
+<p>All of the same lines from the original file exist in this file, but the order is not the same.</p>
+<p>Whenever <code>encrypter.py</code> runs, it will also write an index (key) file. This file will contain the corresponding indexes of each line in the encrypted file. Given the example above, <code>index.txt</code> would look like this:</p>
+<pre>2
+10
+7
+6
+1
+3
+8
+4
+9
+5
+</pre>
+<p>The number on each line of the file is the line number that each shuffled line was on in the original program. For example: 2 is on the first line. This means that the first line of the encrypted file was originally on line 2 of the input file. 10 is on the second line. This means that the second line of the encrypted file was originally on line 10 of the input file.</p>
+<p>Without the <code>index.txt</code> file, another program or a human would not know how to decrypt the <code>encrypted.txt</code> file. If a human or program has both the <code>encrypted</code> file and the <code>index</code> file, it can be decrypted systematically. Thus the index file works like a secret “key” for the program. Whoever has access to both the index file and the encrypted text can decrypt the encrypted text.</p>
+</section>
+<section id="decrypter" class="level2">
+<h2 class="anchored" data-anchor-id="decrypter">Decrypter</h2>
+<p>After writing <code>encrypter.py</code>, you are to write a related program named <code>decrypter.py</code> which will take the name of a text file and index (key) file, and then it will decrypt the text. The program will read in these two files, and using the information stored within them, it will put the contents back in the original order. The decrypted file should be saved to a file named <code>decrypted.txt</code></p>
+<p>You should use lists and the indexes from the index file to help with getting the lines back in the correct order.</p>
+<p>There will be multiple examples of running this program at the end of this specification. Make sure to test your code carefully using the tool!</p>
+</section>
+</section>
+<section id="the-encrypting-algorithm" class="level1">
+<h1>The encrypting algorithm</h1>
+<p>The steps of the algorithm are outlined below and you must implement these steps in python. Note that the below steps are just the steps for how to determine which lines to put where in the encrypted file. You also need to handle all of the file reading, writing, etc.</p>
 <ul>
-<li><a href="project-6/adventure.py">adventure.py</a></li>
-<li><a href="project-6/game.txt">game.txt</a></li>
-<li><a href="project-6/instructions.txt">instructions.txt</a></li>
-<li><a href="project-6/objects.txt">objects.txt</a></li>
-<li><a href="project-6/travel_table.txt">travel_table.txt</a></li>
-</ul>
-<p>You will only change four functions in the <code>adventure.py</code> file:</p>
+<li>Import the random python library</li>
+<li>Initialize the random library with a seed value of <code>42</code>. Just use the line of code <code>random.seed(42)</code>.</li>
+<li>However many lines there are in the input text file, repeat the following steps (line_count * 5) times.
 <ul>
-<li><code>load_game()</code></li>
-<li><code>load_objects()</code></li>
-<li><code>load_travel_table()</code></li>
-<li><code>print_instructions()</code></li>
+<li>Chose two random integers starting from zero and going up to the number of lines in the file minus 1</li>
+<li>Swap the content of the lines at these two indexes</li>
+</ul></li>
 </ul>
-<p>Note that all of these four functions do not have any parameters (that’s on purpose, do not change that). Make sure you add docstrings for your functions (gradescope will autograde you for that).</p>
-<p>Write your code inside each function where it says <code># implement your code here</code></p>
-<p>Submit your modified <code>adventure.py</code> to gradescope when you are done implementing all four functions.</p>
-<section id="load_game" class="level1">
-<h1>load_game</h1>
-<ol type="1">
-<li>Iterate over each line in the file (the code to open the file is already implemented for you)</li>
-<li>Each line must be split by tab (the tab character is <code>\t</code>) – remember to strip the line before splitting</li>
-<li>Populate the <code>game</code> dictionary with the following:
-<ol type="1">
-<li>key: the first value in the line – type cast it to integer</li>
-<li>value: list containing all the second values associated with the same key in multiple lines</li>
-</ol></li>
-</ol>
-<p>Example: the first 5 lines in <code>game.txt</code> are:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>0   Welcome to Adventure!</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>0   ADVENTURE!</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>0   The simplified version of Colossal Cave Adventure text-based game</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>0   Original by Willie Crowther and Don Woods (1977)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>0   Would you like instructions? YES or NO?</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>By choosing the seed <code>42</code>, you should get the same results if you follow the steps carefully.</p>
+<section id="test-cases" class="level2">
+<h2 class="anchored" data-anchor-id="test-cases">Test cases</h2>
+<ul>
+<li><a href="data/sample.txt">sample.txt</a></li>
+<li><a href="data/poem.txt">poem.txt</a></li>
+<li><a href="data/few-steps.txt">few-steps.txt</a></li>
+<li><a href="data/many-steps.txt">many-steps.txt</a></li>
+</ul>
+<p>Call for <code>encrypter.py</code>:</p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    encrypt_file(<span class="st">"sample.txt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>That translates into the following <code>key: value</code> pair in the <code>game</code> dictionary:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span>: [<span class="st">'Welcome to Adventure!'</span>, <span class="st">'ADVENTURE!'</span>, <span class="st">'The simplified version of Colossal Cave Adventure text-based game'</span>, <span class="st">'Original by Willie Crowther and Don Woods (1977)'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Call for <code>decrypter.py</code>:</p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    decrypt_file()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="load_objects" class="level1">
-<h1>load_objects()</h1>
-<ol type="1">
-<li>Iterate over each line in the file (the code to open the file is already implemented for you)</li>
-<li>Each line must be split by tab (the tab character is <code>\t</code>) – remember to strip the line before splitting</li>
-<li>Populate the <code>objects</code> dictionary with the following:
-<ol type="1">
-<li>key: tuple with the first three values of each line – cast the first two values to integer</li>
-<li>value: list with the rest of the values in each line (starting at index <code>3</code>)</li>
-</ol></li>
-</ol>
-<p>Example: the first line in <code>object.txt</code> is:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>3   0   KEYS    THERE IS A SHINY BRASS LAMP NEARBY.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>That translates into the following <code>key: value</code> pair in the <code>game</code> dictionary:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">3</span>, <span class="dv">0</span>, <span class="st">'KEYS'</span>): [<span class="st">'THERE IS A SHINY BRASS LAMP NEARBY.'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="load_travel_table" class="level1">
-<h1>load_travel_table()</h1>
-<ol type="1">
-<li>Iterate over each line in the file (the code to open the file is already implemented for you)</li>
-<li>Each line must be split by tab (the tab character is <code>\t</code>) – remember to strip the line before splitting</li>
-<li>Populate the <code>travel</code> dictionary with the following:
-<ol type="1">
-<li>key: tuple with the first two values of each line – cast these first two values to integer</li>
-<li>value: third value in each line</li>
-</ol></li>
-</ol>
-<p>Example: the first line in <code>object.txt</code> is:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>0   1   BLANK</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>That translates into the following <code>key: value</code> pair in the <code>game</code> dictionary:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">0</span>, <span class="dv">1</span>): <span class="st">'BLANK'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="print_instructions" class="level1">
-<h1>print_instructions()</h1>
-<ol type="1">
-<li>Open <code>instructions.txt</code> in read mode</li>
-<li>Print the contents of the file</li>
-</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

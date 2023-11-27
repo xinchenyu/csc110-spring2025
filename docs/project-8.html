@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CSc 110 Computer Programming I - Extra Project B</title>
+<title>CSc 110 Computer Programming I - Extra Project D</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,9 +116,7 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      CSc 110 Computer Programming I
-      </li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./style.html">Programming Projects</a></li><li class="breadcrumb-item"><a href="./project-8.html">Extra Project D</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -238,21 +236,33 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./project-6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programming Project 6</span></a>
+ <span class="menu-text">Extra Project E</span></a>
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">project-7.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./project-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extra Project C</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">project-8.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./project-8.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Extra Project D</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">project-9.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./project-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extra Project B</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">project-10.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./project-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extra Project A</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -872,19 +882,23 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#wordsearch" id="toc-wordsearch" class="nav-link active" data-scroll-target="#wordsearch">WordSearch</a>
-  <ul class="collapse">
-  <li><a href="#words-text-file" id="toc-words-text-file" class="nav-link" data-scroll-target="#words-text-file">Words text file</a></li>
-  <li><a href="#puzzle-text-file" id="toc-puzzle-text-file" class="nav-link" data-scroll-target="#puzzle-text-file">Puzzle text file</a></li>
-  <li><a href="#output" id="toc-output" class="nav-link" data-scroll-target="#output">Output</a></li>
-  </ul></li>
-  <li><a href="#example-run" id="toc-example-run" class="nav-link" data-scroll-target="#example-run">Example Run</a></li>
+  <li><a href="#spell-check" id="toc-spell-check" class="nav-link active" data-scroll-target="#spell-check">Spell Check</a></li>
+  <li><a href="#program-behavior" id="toc-program-behavior" class="nav-link" data-scroll-target="#program-behavior">Program behavior</a></li>
+  <li><a href="#misspellings.txt" id="toc-misspellings.txt" class="nav-link" data-scroll-target="#misspellings.txt">misspellings.txt</a></li>
+  <li><a href="#preserving-capitalization" id="toc-preserving-capitalization" class="nav-link" data-scroll-target="#preserving-capitalization">Preserving Capitalization</a></li>
+  <li><a href="#ignoring-punctuation" id="toc-ignoring-punctuation" class="nav-link" data-scroll-target="#ignoring-punctuation">Ignoring Punctuation</a></li>
   <li><a href="#development-strategy" id="toc-development-strategy" class="nav-link" data-scroll-target="#development-strategy">Development Strategy</a>
   <ul class="collapse">
-  <li><a href="#reading-in-input-files" id="toc-reading-in-input-files" class="nav-link" data-scroll-target="#reading-in-input-files">(1) Reading in input files</a></li>
-  <li><a href="#word-search" id="toc-word-search" class="nav-link" data-scroll-target="#word-search">(2) Word search</a></li>
+  <li><a href="#reading-in-misspellings.txt" id="toc-reading-in-misspellings.txt" class="nav-link" data-scroll-target="#reading-in-misspellings.txt">(1) Reading in misspellings.txt</a></li>
+  <li><a href="#replacing-words" id="toc-replacing-words" class="nav-link" data-scroll-target="#replacing-words">(2) Replacing words</a></li>
+  <li><a href="#handle-punctuation-handle-capitalization" id="toc-handle-punctuation-handle-capitalization" class="nav-link" data-scroll-target="#handle-punctuation-handle-capitalization">(3) Handle Punctuation / Handle Capitalization</a></li>
+  <li><a href="#write-out-output-file" id="toc-write-out-output-file" class="nav-link" data-scroll-target="#write-out-output-file">(4) Write out output file</a></li>
   </ul></li>
-  <li><a href="#example-run-1" id="toc-example-run-1" class="nav-link" data-scroll-target="#example-run-1">Example run</a></li>
+  <li><a href="#test-cases" id="toc-test-cases" class="nav-link" data-scroll-target="#test-cases">Test Cases</a>
+  <ul class="collapse">
+  <li><a href="#example-1-no-punctuation-or-capitalized-words" id="toc-example-1-no-punctuation-or-capitalized-words" class="nav-link" data-scroll-target="#example-1-no-punctuation-or-capitalized-words">Example 1 (no punctuation or capitalized words)</a></li>
+  <li><a href="#example-2-with-punctuation-and-capitalized-words" id="toc-example-2-with-punctuation-and-capitalized-words" class="nav-link" data-scroll-target="#example-2-with-punctuation-and-capitalized-words">Example 2 (with punctuation and capitalized words)</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -893,7 +907,7 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Extra Project B</h1>
+<h1 class="title">Extra Project D</h1>
 </div>
 
 
@@ -909,112 +923,142 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 </header>
 
 <p>This is an extra project (it does not count towards your final grade) for those who have asked me for more practice. If you are a CS major, and are planning on taking CSC 120, this practice project is highly recommended.</p>
-<p>This programming project is an adaptation of Ben Dicken’s WordSearch Programming Assignment.</p>
-<section id="wordsearch" class="level1">
-<h1>WordSearch</h1>
-<p>In this assignment, you will be tasked with writing a program that finds certain words within a wordsearch grid and returns the word mapped to the line and starting character location of each word. The information of the board, and the words will be provided via files you will need to read in.</p>
-<p>You should name the file <code>wordsearch.py</code>. Your code should have a function called <code>search</code> that returns a dictionary (see specification below).</p>
-<section id="words-text-file" class="level2">
-<h2 class="anchored" data-anchor-id="words-text-file">Words text file</h2>
-<p>Your program should open up and read a text file name which determines which words you are searching for in your puzzle file! You can assume that each line in the input text file is formatted as follows: each line of the file is a word from the “word bank.”</p>
-<p>Contents of <code>words.txt</code>:</p>
-<pre class="{html}"><code>computer
-science</code></pre>
-<p>Your program should open and read the input text file into the program and store the mapping between forwards and backwards words in a dictionary. The keys of the dictionary should be the forward version of the word, and the value the keys map to, should be the backward version of that word. Given the example content of words.txt shown above, the words dictionary should have the keys and values shown below:</p>
+<p>This programming project is an adaptation of Ben Dicken’s Spell Check Programming Assignment.</p>
+<p>You should name the file <code>spellcheck.py</code> and have a function named <code>correct_spelling</code> to write out the ouput file.</p>
+<section id="spell-check" class="level1">
+<h1>Spell Check</h1>
+<p>Most in this class have probably used a spellchecker at least once in your life (more likely, many times). Spell checkers are built into a number of programs, including Microsoft Word, Apple Pages, gmail, and others. In this assignment, you’ll be implementing a program that can suggest and fix spelling issues in text.</p>
+</section>
+<section id="program-behavior" class="level1">
+<h1>Program behavior</h1>
+<p>The spell checking program should be named <code>spellcheck.py</code>. The spell check program takes as argument the name of a text file, which will contain the text that the user wants to be spell-checked. The program than writes out an output file with swapping the contents of the input file with the spelling already fixed.</p>
+<p>Let’s walk through a really simple example to demonstrate the difference in the two modes. Let’s say that the file <code>words.txt</code> has the below content:</p>
+<pre class="{html}"><code>one hudnred dollars
+and fiveteen cents</code></pre>
+<p>The words hundred (hudnred) and the word fifteen (fiveteen) are spelled wrong. The contents of the file should be written out to an output file with the misspelled words replaced with correctly-spelled ones.</p>
+<pre class="{html}"><code>one hundred dollars
+and fifteen cents</code></pre>
+<p>Notice that the program goes ahead and replaces the misspelled words with correctly-spelled ones.</p>
+<p>How was the program able to identify the words that were not spelled correctly? Read the next section to find out.</p>
+</section>
+<section id="misspellings.txt" class="level1">
+<h1>misspellings.txt</h1>
+<p>Your program should open up and read a file names <code>misspellings.txt</code>. You can assume that this file already exists in the same directory as <code>spellcheck.py</code>. When testing on your computer, you should create your own <code>misspellings.txt</code>. This file will include information about how words are misspelled. Using this information, you can determine which words are spelled wrong in the input file. You can assume that each line of <code>misspellings.txt</code> is formatted as follows:</p>
+<pre class="{html}"><code>incorrect_a-&gt;correctly_spelled_word_a
+incorrect_b-&gt;correctly_spelled_word_b</code></pre>
+<p>In other words, the first word on a line of the file is a correctly spelled word, then an arrow, then the correctly-spelled version of the word. For instance:</p>
+<pre class="{html}"><code>hudnred-&gt;hundred
+hundrid-&gt;hundred
+fifeteen-&gt;fifteen
+fiveteen-&gt;fifteen
+fiften-&gt;fifteen</code></pre>
+<p>This file contains two possible misspellings of the word <code>"hundred"</code> and three possible misspellings of the word <code>"fifteen"</code>. Your program should handle a misspellings file of any size.</p>
+<p>Your program should open and read the <code>misspellings.txt</code> file into the program and store the mapping between misspelled and correctly-spelled words in a dictionary. The keys of the dictionary should be the misspelled version of the word, and the value the keys map to should be the correctly-spelled version of that word. Given the example content of <code>misspelling.txt</code> shown above, the misspellings dictionary should have the keys and values shown below:</p>
 <div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>words <span class="op">=</span> { </span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"computer"</span>:<span class="st">"retupmoc"</span>,</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"science"</span>:<span class="st">"ecneics"</span>,</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>misspellings <span class="op">=</span> { </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'hudnred'</span> : <span class="st">'hundred'</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'hundrid'</span> : <span class="st">'hundred'</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'fifeteen'</span> : <span class="st">'fifteen'</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'fiveteen'</span> : <span class="st">'fifteen'</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'fiften'</span> : <span class="st">'fifteen'</span> }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>After you have read in the file and constructed this dictionary, you can use it to determine your word bank, which words you will need to look for within the puzzle.</p>
+<p>After you have read in the file and constructed this dictionary, you can use it to determine the correct spelling of an incorrectly-spelled word. How would you do this?</p>
+<p>After you’ve opened up the input file, loop through each line of it. You can split each line into individual words. For each word on the line, you can check if that word is one of the keys in the misspellings dictionary. If it is, you can assume it is incorrectly spelled. The correct spelling of that word is the value associated with the key, so you can grab it from the dictionary and either replace the original word (if in replace mode) or use it as a suggestion (if in suggest mode).</p>
 </section>
-<section id="puzzle-text-file" class="level2">
-<h2 class="anchored" data-anchor-id="puzzle-text-file">Puzzle text file</h2>
-<p>This file contains a grid of letters and hidden within those letters are certain words you will need to be searching for. You will use your newly created words dictionary to figure out what letter combination of words you need to find. This is an example of what this word-grid file would look like:</p>
-<pre>W O D I W S M Z H 
-N R M E W A N D A 
-L Z H I N O K L H 
-S R E G N E V A V 
-I F R C X H C Q X 
-A H T Z B A Y K Q 
-A R A M E R I C A
-</pre>
-<p>The puzzle file could have more or less Rows/Columns depending on each test case.</p>
+<section id="preserving-capitalization" class="level1">
+<h1>Preserving Capitalization</h1>
+<p>The words in the <code>misspellings.txt</code> file will be all in lower case. However, your program should also be able to replace or suggest fixes for misspelled capitalized words. For instance, it should be able to change <code>Hudnred</code> to <code>Hundred</code> in replace mode.</p>
+<p>Before you try to look up a word in the misspellings dictionary, determine if it is or is not capitalized (meaning that the first letter is upper-case). Then, you can convert it to lower case. If the word does need replacing, then you should make sure to capitalize the correctly spelled word if the original word was also capitalized.</p>
+<p>You might find the string methods <code>.lower()</code>,<code>.isupper()</code>, and <code>.capitalize()</code> useful.</p>
 </section>
-<section id="output" class="level2">
-<h2 class="anchored" data-anchor-id="output">Output</h2>
-<p>The program should return a dictionary with the starting row / col locations for each word found. Your code should have a function called <code>search</code> that returns this dictionary. The formatting of the return dictionary should be something like:</p>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">"word1"</span>: [<span class="dv">0</span>, <span class="dv">0</span>], <span class="st">"word2"</span>: [<span class="dv">5</span>, <span class="dv">5</span>]}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</section>
-<section id="example-run" class="level1">
-<h1>Example Run</h1>
-<p>Say that <code>words.txt</code> contains:</p>
-<pre class="{html}"><code>army
-navy
-star
-america
-bullet</code></pre>
-<p>And then <code>grid.txt</code> contains:</p>
-<pre>Z S Y M R A Z
-R N Z Z A Q L
-M A T R T U I
-N V Y A S S D
-B Y Z T C V B
-V B U L L E T
-A M E R I C A
-</pre>
-<p>Your program should return:</p>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">"army"</span>: [<span class="dv">1</span>, <span class="dv">6</span>],</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a> <span class="st">"bullet"</span>: [<span class="dv">6</span>, <span class="dv">2</span>],</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a> <span class="st">"america"</span>: [<span class="dv">7</span>, <span class="dv">1</span>],</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a> <span class="st">"navy"</span>: [<span class="dv">2</span>, <span class="dv">2</span>],</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a> <span class="st">"star"</span>: [<span class="dv">4</span>, <span class="dv">5</span>]}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="ignoring-punctuation" class="level1">
+<h1>Ignoring Punctuation</h1>
+<p>You also should make the spell checker ignore punctuation. In particular, <code>spellcheck.py``` should be able to handle a trailing ,, ., ?, or !. For instance, it should be able to change</code>hudnred?<code>to</code>hundred?` in replace mode. How can this be accomplished?</p>
+<p>Before looking up a word in the misspellings dictionary, check if the last character is one of the four types of punctuation that you should look for (, or . or ? or !). If it is, create a variable to store that punctuation, and then trim it off of the end of the word. Then, proceed with checking the spelling. After you have determined if it is spelled correctly or not, you can put the punctuation at the end of the word.</p>
 </section>
 <section id="development-strategy" class="level1">
 <h1>Development Strategy</h1>
-<p>This section covers how you should go about structuring and implementing the code. In total, your program should have at least 5 functions. My recommendation for these five functions:</p>
-<ul>
-<li>A function to load in the forwards words, computes the backwards version of each word, and save into a dictionary</li>
-<li>One for transposing the grid</li>
-<li>One for searching through lines</li>
-<li>One for checking if a word is found on a line and where it is (index)</li>
-<li>You may have other functions as well. You should build this program in the following sequence:</li>
-</ul>
-<section id="reading-in-input-files" class="level2">
-<h2 class="anchored" data-anchor-id="reading-in-input-files">(1) Reading in input files</h2>
-<p>Create a function that will be responsible for opening up the words file and reading in the information. You can pass the file name into this function via arguments / parameters. The function should iterate through the lines and create a dictionary that maps the forwards-spelling to the backwards spelling. After the data is read in, the function should return the dictionary back to main.</p>
-<p>Next, open word input grid file up.</p>
-<p>Your functions for this part should be called <code>text_to_dictionary</code> and <code>load_search_grid</code>.</p>
+<section id="reading-in-misspellings.txt" class="level2">
+<h2 class="anchored" data-anchor-id="reading-in-misspellings.txt">(1) Reading in misspellings.txt</h2>
+<p>Create a function that will be responsible for opening up the misspellings file and reading in the information. The function can assume that the misspellings.txt file exists. The function should open the file, read the lines, and populate the misspellings dictionary, as described previously in this specification.</p>
 </section>
-<section id="word-search" class="level2">
-<h2 class="anchored" data-anchor-id="word-search">(2) Word search</h2>
-<p>Horizontal search is a bit easier than vertical mode, so I recommend that you work on this first. Create a function for this, and pass it the word dictionary, the grid file, and the mode. Iterate through the lines of the file one-at-a-time. For each line you encounter, you can search for all of the words in the word dictionary to see if you can find it.</p>
-<p>If you try to do all of this in one function, you will probably end up with 3 or 4 levels of nested loops, which can get rather disorganized. I recommend that you create another function, perhaps called something like search_within_line that handles processing one line of searching. The horizontal function can call this for each line that it encounters.</p>
-<p>There will be separate test cases for horizontal and for vertical. I recommend that you get the horizontal ones to pass before moving on to vertical.</p>
-<p>In vertical search, you have to search for the words in the columns of the grid, rather than the rows. This is a bit more complex, but still very do-able. The way you should go about this is create a loop where you iterate through the column indexes. Within this loop, create another loop that goes through every character in that column and creates a list of those characters. Then, you can treat this column as if it is a row.</p>
+<section id="replacing-words" class="level2">
+<h2 class="anchored" data-anchor-id="replacing-words">(2) Replacing words</h2>
+<p>Next, work reading the input file and replacing misspelled words. At this point, don’t yet worry about capitalized words, or punctuation. Iterate through the contents of the input file, line-by-line and word-by-word. When a correctly-spelled word is encountered, print it out with a trailing space. When an incorrectly-spelled word is encountered, print out the correctly-spelled version instead.</p>
+</section>
+<section id="handle-punctuation-handle-capitalization" class="level2">
+<h2 class="anchored" data-anchor-id="handle-punctuation-handle-capitalization">(3) Handle Punctuation / Handle Capitalization</h2>
+<p>You might find one or the other of these easier or harder, so choose whichever you think you will be able to accomplish more quickly. Once you have one working, move to the other! Handling punctuation is extra credit.</p>
+</section>
+<section id="write-out-output-file" class="level2">
+<h2 class="anchored" data-anchor-id="write-out-output-file">(4) Write out output file</h2>
+<p>Your function that writes out the output file should be named <code>correct_spelling</code> and the output file should have the <code>output_</code> prefix. That means that if the original file was names <code>words_1.txt</code>, the output file should be named <code>output_words_1.txt</code></p>
 </section>
 </section>
-<section id="example-run-1" class="level1">
-<h1>Example run</h1>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    word_bank <span class="op">=</span> text_to_dictionary(<span class="st">"test_word_bank.txt"</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    grid <span class="op">=</span> load_search_grid(<span class="st">"test_puzzle_grid.txt"</span>)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> search(word_bank, grid) <span class="op">==</span> {<span class="st">"army"</span>: [<span class="dv">1</span>, <span class="dv">6</span>],</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"bullet"</span>: [<span class="dv">6</span>, <span class="dv">2</span>],</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"america"</span>: [<span class="dv">7</span>, <span class="dv">1</span>],</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"navy"</span>: [<span class="dv">2</span>, <span class="dv">2</span>],</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"star"</span>: [<span class="dv">4</span>, <span class="dv">5</span>]}</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Passed test."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="test-cases" class="level1">
+<h1>Test Cases</h1>
+<p>There are going to be a number of test cases for this assignment. You should test out your program in chunks. Don’t try to tackle everything at once. If you follow the development strategy, you should be able to progressively pass more and more test cases, as you add more and more functionality.</p>
+<p>Below are several examples. Each example includes the contents of <code>misspellings.txt</code>, the contents of the input file, and the results for the output file.</p>
+<section id="example-1-no-punctuation-or-capitalized-words" class="level2">
+<h2 class="anchored" data-anchor-id="example-1-no-punctuation-or-capitalized-words">Example 1 (no punctuation or capitalized words)</h2>
+<p><code>misspellings.txt</code></p>
+<pre class="{html}"><code>datamic-&gt;dramatic
+dramati-&gt;dramatic
+elaphant-&gt;elephant
+elofent-&gt;elephant
+elaphent-&gt;elephant
+zooo-&gt;zoo
+zo-&gt;zoo</code></pre>
+<p><code>words_1.txt</code></p>
+<pre class="{html}"><code>joe and his family went to the zoo the other day
+the zooo had many animals including an elofent
+the elaphant was being too dramati though
+after they walked around joe left the zo</code></pre>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    spell_dict <span class="op">=</span> read_spellings()</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    correct_spelling(<span class="st">"words_1.txt"</span>, spell_dict)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p><code>output_words_1.txt</code></p>
+<pre class="{html}"><code>joe and his family went to the zoo the other day
+the zoo had many animals including an elephant
+the elephant was being too dramatic though
+after they walked around joe left the zoo</code></pre>
+</section>
+<section id="example-2-with-punctuation-and-capitalized-words" class="level2">
+<h2 class="anchored" data-anchor-id="example-2-with-punctuation-and-capitalized-words">Example 2 (with punctuation and capitalized words)</h2>
+<p><code>misspellings.txt</code></p>
+<pre class="{html}"><code>hereo-&gt;hero
+heroc-&gt;hero
+fluwe-&gt;flew
+jumpedd-&gt;jumped
+jimped-&gt;jumped
+jumpped-&gt;jumped
+savved-&gt;saved
+sived-&gt;saved
+sivved-&gt;saved
+sumprean-&gt;superman
+sumperan-&gt;superman
+dayy-&gt;day
+ayy-&gt;day</code></pre>
+<p><code>words_2.txt</code></p>
+<pre class="{html}"><code>There once was a hero, named superman.
+Sumperan, being the hero he is, jumped.
+After he jumped, he fluwe!
+Then, Sumprean savved the day.</code></pre>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    spell_dict <span class="op">=</span> read_spellings()</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    correct_spelling(<span class="st">"words_2.txt"</span>, spell_dict)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>output_words_2.txt</code></p>
+<pre class="{html}"><code>There once was a hero, named superman.
+Superman, being the hero he is, jumped.
+After he jumped, he flew!
+Then, Superman saved the day.</code></pre>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
