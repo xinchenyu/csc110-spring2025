@@ -1,0 +1,43 @@
+---
+title: "Untitled"
+format: revealjs
+---
+
+## Write a function
+
+1.  Its name is `detect_duplicate`
+2.  It takes two lists: `list_a` and `list_b`
+3.  It returns `True` if the two lists have at least one common item, `False` otherwise
+4.  Use a `for` loop (just one) and use the `in` operator
+
+Test cases:
+
+```{python}
+#| echo: true
+#| eval: false
+assert detect_duplicate([], []) == False
+assert detect_duplicate(["a", "b"], ["c", "d", "a"]) == True
+assert detect_duplicate([0, 3, 2, 1, 2, 4], [5, 6, 0]) == True
+```
+
+## Write a function -- solution
+
+```{python}
+#| echo: true
+#| eval: true
+def detect_duplicate(list_a, list_b):
+  # for every index in the second list
+  for index in range(len(list_b)):
+    # check if item at index in second list is in first list
+    if list_b[index] in list_a:
+      return True
+  # for loop ran without returning True
+  return False
+
+def main():
+  assert detect_duplicate([], []) == False
+  assert detect_duplicate(["a", "b"], ["c", "d", "a"]) == True
+  assert detect_duplicate([0, 3, 2, 1, 2, 4], [5, 6, 0]) == True
+  
+main()
+```

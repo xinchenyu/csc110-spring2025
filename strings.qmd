@@ -1,0 +1,44 @@
+---
+title: "String Manipulation"
+---
+
+Strings are *immutable sequences.* That means that we can retrieve a character in the string by indexing the string with square brackets. However, we are unable to change characters in the string.
+
+Given the string "Apple", for example. The first character, "A" is at index 0, the second character "p" is at index 1 and so on:
+
+|  0  |  1  |  2  |  3  |  4  |
+|:---:|:---:|:---:|:---:|:---:|
+|  A  |  p  |  p  |  l  |  e  |
+
+If we want to retrieve the fourth character in a string, we need to index it at 3:
+
+```{python}
+#| echo: true
+#| eval: true
+name = "Suzanne"
+fourth_letter = name[3]
+print("The fourth character in name is " + fourth_letter)
+```
+
+We can also use membership tests using the operators `in` and `not in` with sequences.
+
+For example:
+
+```{python}
+#| echo: true
+#| eval: true
+def look_for_a(name):
+  if "a" in name:
+    return True
+  else:
+    return False
+  
+def main():
+  name = "Adriana"
+  if look_for_a(name):
+    print("Name contains 'a'")
+  else:
+    print("Name doesn't contain 'a'")
+    
+main()
+```
