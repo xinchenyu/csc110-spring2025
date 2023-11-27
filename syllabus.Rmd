@@ -1,7 +1,7 @@
 ---
 title: "Syllabus"
 author: "Adriana Picoral (she/her/hers)"
-date: "Fall 2023"
+date: "Spring 2024"
 output:
   pdf_document: default
   html_document: default
@@ -157,9 +157,9 @@ There will be four exams throughout the course (including the final), for a tota
 
 The midterm exams will be on:
 
--   Midterm Exam 1 - `r schedule %>% filter(exam == "Midterm 1" & term == "fall 2023") %>% pull(formatted_date)`
--   Midterm Exam 2 - `r schedule %>% filter(exam == "Midterm 2" & term == "fall 2023") %>% pull(formatted_date)`
--   Midterm Exam 3 - `r schedule %>% filter(exam == "Midterm 3" & term == "fall 2023") %>% pull(formatted_date)`
+-   Midterm Exam 1 - `r schedule %>% filter(exam == "Midterm 1" & term == "spring 2024") %>% pull(formatted_date)`
+-   Midterm Exam 2 - `r schedule %>% filter(exam == "Midterm 2" & term == "spring 2024") %>% pull(formatted_date)`
+-   Midterm Exam 3 - `r schedule %>% filter(exam == "Midterm 3" & term == "spring 2024") %>% pull(formatted_date)`
 
 You must keep theses dates available. Do not schedule any flights, travel plans, or other conflicts with these exams.
 
@@ -179,7 +179,7 @@ The final exam is worth 15%.
 
 The final exam will be on:
 
--   `r schedule %>% filter(exam == "Final Exam" & term == "fall 2023") %>% pull(formatted_date)` -- `r schedule %>% filter(exam == "Final Exam" & term == "fall 2023") %>% pull(time)` in  [ENR2](https://maps.app.goo.gl/RiDaC9Np7M8LVPYZ7) room N120
+-   `r schedule %>% filter(exam == "Final Exam" & term == "spring 2024") %>% pull(formatted_date)` -- `r schedule %>% filter(exam == "Final Exam" & term == "spring 2024") %>% pull(time)` in  [ENR2](https://maps.app.goo.gl/RiDaC9Np7M8LVPYZ7) room N120
 
 You must keep this time available. Do not schedule any flights, travel plans, or other conflicts with these exams.
 
@@ -218,7 +218,7 @@ List topics in logical units in a weekly/daily schedule, including assignment du
 
 ```{r}
 schedule %>% 
-  filter(term == "fall 2023") %>% 
+  filter(term == "spring 2024") %>% 
   select(week_number, formatted_start, topic) %>% 
   kable(col.names = c("Week", "Start Date", "Topic"))
 ```

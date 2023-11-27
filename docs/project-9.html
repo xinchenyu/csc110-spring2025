@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CSc 110 Computer Programming I - Extra Project B</title>
+<title>CSc 110 Computer Programming I - Project 9</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,7 +116,7 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./style.html">Programming Projects</a></li><li class="breadcrumb-item"><a href="./project-9.html">Extra Project B</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./style.html">Programming Projects</a></li><li class="breadcrumb-item"><a href="./project-9.html">Project 9</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -236,31 +236,31 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./project-6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Extra Project E</span></a>
+ <span class="menu-text">Project 6</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./project-7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Extra Project C</span></a>
+ <span class="menu-text">Project 7</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./project-8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Extra Project D</span></a>
+ <span class="menu-text">Project 8</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./project-9.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Extra Project B</span></a>
+ <span class="menu-text">Project 9</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./project-10.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Extra Project A</span></a>
+ <span class="menu-text">Project 10</span></a>
   </div>
 </li>
       </ul>
@@ -903,7 +903,7 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Extra Project B</h1>
+<h1 class="title">Project 9</h1>
 </div>
 
 
@@ -918,7 +918,8 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 
 </header>
 
-<p>This is an extra project (it does not count towards your final grade) for those who have asked me for more practice. If you are a CS major, and are planning on taking CSC 120, this practice project is highly recommended.</p>
+<p>Programming Projects are to be submitted to <a href="">gradescope</a>.</p>
+<p><strong>Due date: Wednesday, April 10, 2024 at 7pm</strong></p>
 <p>This programming project is an adaptation of Ben Dicken’s WordSearch Programming Assignment.</p>
 <section id="wordsearch" class="level1">
 <h1>WordSearch</h1>
@@ -928,10 +929,12 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 <h2 class="anchored" data-anchor-id="words-text-file">Words text file</h2>
 <p>Your program should open up and read a text file name which determines which words you are searching for in your puzzle file! You can assume that each line in the input text file is formatted as follows: each line of the file is a word from the “word bank.”</p>
 <p>Contents of <code>words.txt</code>:</p>
-<pre class="{html}"><code>computer
-science</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>computer</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>science</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Your program should open and read the input text file into the program and store the mapping between forwards and backwards words in a dictionary. The keys of the dictionary should be the forward version of the word, and the value the keys map to, should be the backward version of that word. Given the example content of words.txt shown above, the words dictionary should have the keys and values shown below:</p>
-<div class="cell" data-execution_count="1">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>words <span class="op">=</span> { </span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"computer"</span>:<span class="st">"retupmoc"</span>,</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"science"</span>:<span class="st">"ecneics"</span>,</span>
@@ -955,7 +958,7 @@ A R A M E R I C A
 <section id="output" class="level2">
 <h2 class="anchored" data-anchor-id="output">Output</h2>
 <p>The program should return a dictionary with the starting row / col locations for each word found. Your code should have a function called <code>search</code> that returns this dictionary. The formatting of the return dictionary should be something like:</p>
-<div class="cell" data-execution_count="2">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">"word1"</span>: [<span class="dv">0</span>, <span class="dv">0</span>], <span class="st">"word2"</span>: [<span class="dv">5</span>, <span class="dv">5</span>]}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
@@ -963,11 +966,13 @@ A R A M E R I C A
 <section id="example-run" class="level1">
 <h1>Example Run</h1>
 <p>Say that <code>words.txt</code> contains:</p>
-<pre class="{html}"><code>army
-navy
-star
-america
-bullet</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>army</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>navy</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>star</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>america</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>bullet</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>And then <code>grid.txt</code> contains:</p>
 <pre>Z S Y M R A Z
 R N Z Z A Q L
@@ -978,7 +983,7 @@ V B U L L E T
 A M E R I C A
 </pre>
 <p>Your program should return:</p>
-<div class="cell" data-execution_count="3">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">"army"</span>: [<span class="dv">1</span>, <span class="dv">6</span>],</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a> <span class="st">"bullet"</span>: [<span class="dv">6</span>, <span class="dv">2</span>],</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a> <span class="st">"america"</span>: [<span class="dv">7</span>, <span class="dv">1</span>],</span>
@@ -1012,7 +1017,7 @@ A M E R I C A
 </section>
 <section id="example-run-1" class="level1">
 <h1>Example run</h1>
-<div class="cell" data-execution_count="4">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    word_bank <span class="op">=</span> text_to_dictionary(<span class="st">"test_word_bank.txt"</span>)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    grid <span class="op">=</span> load_search_grid(<span class="st">"test_puzzle_grid.txt"</span>)</span>

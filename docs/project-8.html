@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CSc 110 Computer Programming I - Extra Project D</title>
+<title>CSc 110 Computer Programming I - Project 8</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,7 +116,7 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./style.html">Programming Projects</a></li><li class="breadcrumb-item"><a href="./project-8.html">Extra Project D</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./style.html">Programming Projects</a></li><li class="breadcrumb-item"><a href="./project-8.html">Project 8</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -236,31 +236,31 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./project-6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Extra Project E</span></a>
+ <span class="menu-text">Project 6</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./project-7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Extra Project C</span></a>
+ <span class="menu-text">Project 7</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./project-8.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Extra Project D</span></a>
+ <span class="menu-text">Project 8</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./project-9.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Extra Project B</span></a>
+ <span class="menu-text">Project 9</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./project-10.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Extra Project A</span></a>
+ <span class="menu-text">Project 10</span></a>
   </div>
 </li>
       </ul>
@@ -907,7 +907,7 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Extra Project D</h1>
+<h1 class="title">Project 8</h1>
 </div>
 
 
@@ -922,8 +922,8 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 
 </header>
 
-<p>This is an extra project (it does not count towards your final grade) for those who have asked me for more practice. If you are a CS major, and are planning on taking CSC 120, this practice project is highly recommended.</p>
-<p>This programming project is an adaptation of Ben Dicken’s Spell Check Programming Assignment.</p>
+<p>Programming Projects are to be submitted to <a href="">gradescope</a>.</p>
+<p><strong>Due date: Wednesday, April 03, 2024 at 7pm</strong> This programming project is an adaptation of Ben Dicken’s Spell Check Programming Assignment.</p>
 <p>You should name the file <code>spellcheck.py</code> and have a function named <code>correct_spelling</code> to write out the ouput file.</p>
 <section id="spell-check" class="level1">
 <h1>Spell Check</h1>
@@ -933,28 +933,36 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 <h1>Program behavior</h1>
 <p>The spell checking program should be named <code>spellcheck.py</code>. The spell check program takes as argument the name of a text file, which will contain the text that the user wants to be spell-checked. The program than writes out an output file with swapping the contents of the input file with the spelling already fixed.</p>
 <p>Let’s walk through a really simple example to demonstrate the difference in the two modes. Let’s say that the file <code>words.txt</code> has the below content:</p>
-<pre class="{html}"><code>one hudnred dollars
-and fiveteen cents</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>one hudnred dollars</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>and fiveteen cents</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>The words hundred (hudnred) and the word fifteen (fiveteen) are spelled wrong. The contents of the file should be written out to an output file with the misspelled words replaced with correctly-spelled ones.</p>
-<pre class="{html}"><code>one hundred dollars
-and fifteen cents</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>one hundred dollars</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>and fifteen cents</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Notice that the program goes ahead and replaces the misspelled words with correctly-spelled ones.</p>
 <p>How was the program able to identify the words that were not spelled correctly? Read the next section to find out.</p>
 </section>
 <section id="misspellings.txt" class="level1">
 <h1>misspellings.txt</h1>
 <p>Your program should open up and read a file names <code>misspellings.txt</code>. You can assume that this file already exists in the same directory as <code>spellcheck.py</code>. When testing on your computer, you should create your own <code>misspellings.txt</code>. This file will include information about how words are misspelled. Using this information, you can determine which words are spelled wrong in the input file. You can assume that each line of <code>misspellings.txt</code> is formatted as follows:</p>
-<pre class="{html}"><code>incorrect_a-&gt;correctly_spelled_word_a
-incorrect_b-&gt;correctly_spelled_word_b</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>incorrect_a-&gt;correctly_spelled_word_a</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>incorrect_b-&gt;correctly_spelled_word_b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>In other words, the first word on a line of the file is a correctly spelled word, then an arrow, then the correctly-spelled version of the word. For instance:</p>
-<pre class="{html}"><code>hudnred-&gt;hundred
-hundrid-&gt;hundred
-fifeteen-&gt;fifteen
-fiveteen-&gt;fifteen
-fiften-&gt;fifteen</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>hudnred-&gt;hundred</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>hundrid-&gt;hundred</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>fifeteen-&gt;fifteen</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>fiveteen-&gt;fifteen</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>fiften-&gt;fifteen</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>This file contains two possible misspellings of the word <code>"hundred"</code> and three possible misspellings of the word <code>"fifteen"</code>. Your program should handle a misspellings file of any size.</p>
 <p>Your program should open and read the <code>misspellings.txt</code> file into the program and store the mapping between misspelled and correctly-spelled words in a dictionary. The keys of the dictionary should be the misspelled version of the word, and the value the keys map to should be the correctly-spelled version of that word. Given the example content of <code>misspelling.txt</code> shown above, the misspellings dictionary should have the keys and values shown below:</p>
-<div class="cell" data-execution_count="1">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>misspellings <span class="op">=</span> { </span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'hudnred'</span> : <span class="st">'hundred'</span>,</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'hundrid'</span> : <span class="st">'hundred'</span>,</span>
@@ -1002,60 +1010,72 @@ fiften-&gt;fifteen</code></pre>
 <section id="example-1-no-punctuation-or-capitalized-words" class="level2">
 <h2 class="anchored" data-anchor-id="example-1-no-punctuation-or-capitalized-words">Example 1 (no punctuation or capitalized words)</h2>
 <p><code>misspellings.txt</code></p>
-<pre class="{html}"><code>datamic-&gt;dramatic
-dramati-&gt;dramatic
-elaphant-&gt;elephant
-elofent-&gt;elephant
-elaphent-&gt;elephant
-zooo-&gt;zoo
-zo-&gt;zoo</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>datamic-&gt;dramatic</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>dramati-&gt;dramatic</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>elaphant-&gt;elephant</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>elofent-&gt;elephant</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>elaphent-&gt;elephant</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>zooo-&gt;zoo</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>zo-&gt;zoo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p><code>words_1.txt</code></p>
-<pre class="{html}"><code>joe and his family went to the zoo the other day
-the zooo had many animals including an elofent
-the elaphant was being too dramati though
-after they walked around joe left the zo</code></pre>
-<div class="cell" data-execution_count="2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>joe and his family went to the zoo the other day</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>the zooo had many animals including an elofent</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>the elaphant was being too dramati though</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>after they walked around joe left the zo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    spell_dict <span class="op">=</span> read_spellings()</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    correct_spelling(<span class="st">"words_1.txt"</span>, spell_dict)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><code>output_words_1.txt</code></p>
-<pre class="{html}"><code>joe and his family went to the zoo the other day
-the zoo had many animals including an elephant
-the elephant was being too dramatic though
-after they walked around joe left the zoo</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>joe and his family went to the zoo the other day</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>the zoo had many animals including an elephant</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>the elephant was being too dramatic though</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>after they walked around joe left the zoo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="example-2-with-punctuation-and-capitalized-words" class="level2">
 <h2 class="anchored" data-anchor-id="example-2-with-punctuation-and-capitalized-words">Example 2 (with punctuation and capitalized words)</h2>
 <p><code>misspellings.txt</code></p>
-<pre class="{html}"><code>hereo-&gt;hero
-heroc-&gt;hero
-fluwe-&gt;flew
-jumpedd-&gt;jumped
-jimped-&gt;jumped
-jumpped-&gt;jumped
-savved-&gt;saved
-sived-&gt;saved
-sivved-&gt;saved
-sumprean-&gt;superman
-sumperan-&gt;superman
-dayy-&gt;day
-ayy-&gt;day</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>hereo-&gt;hero</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>heroc-&gt;hero</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>fluwe-&gt;flew</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>jumpedd-&gt;jumped</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>jimped-&gt;jumped</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>jumpped-&gt;jumped</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>savved-&gt;saved</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>sived-&gt;saved</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>sivved-&gt;saved</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>sumprean-&gt;superman</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>sumperan-&gt;superman</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>dayy-&gt;day</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>ayy-&gt;day</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p><code>words_2.txt</code></p>
-<pre class="{html}"><code>There once was a hero, named superman.
-Sumperan, being the hero he is, jumped.
-After he jumped, he fluwe!
-Then, Sumprean savved the day.</code></pre>
-<div class="cell" data-execution_count="3">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>There once was a hero, named superman.</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>Sumperan, being the hero he is, jumped.</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>After he jumped, he fluwe!</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>Then, Sumprean savved the day.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    spell_dict <span class="op">=</span> read_spellings()</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    correct_spelling(<span class="st">"words_2.txt"</span>, spell_dict)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><code>output_words_2.txt</code></p>
-<pre class="{html}"><code>There once was a hero, named superman.
-Superman, being the hero he is, jumped.
-After he jumped, he flew!
-Then, Superman saved the day.</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>There once was a hero, named superman.</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>Superman, being the hero he is, jumped.</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>After he jumped, he flew!</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>Then, Superman saved the day.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 </section>

@@ -12,9 +12,9 @@ assignments <- read_excel("assessment_schedule.xlsx") %>%
   mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
 ```
 
-Programming Projects are to be submitted to [gradescope](https://www.gradescope.com/courses/568720).
+Programming Projects are to be submitted to [gradescope]().
 
-**Due date: `r assignments %>% filter(number == 9) %>% pull(formatted_date)` at 7pm**
+**Due date: `r assignments %>% filter(number == 6) %>% pull(formatted_date)` at 7pm**
 
 In this programming project you will implement a number of Python functions to validate or transform values conditionally. Make sure you follow the provided [style guide](style.html) (you will be graded on it!). You are allowed to use `round()`, `str()` and `len()`, but other than that you are **not** allowed to use any other built-in method or function from any Python library.
 

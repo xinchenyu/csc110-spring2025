@@ -1,8 +1,20 @@
 ---
-title: "Extra Project A"
+title: "Project 10"
 ---
 
-This is an extra project (it does not count towards your final grade) for those who have asked me for more practice. If you are a CS major, and are planning on taking CSC 120, this practice project is highly recommended. 
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(readxl)
+assignments <- read_excel("assessment_schedule.xlsx") %>% 
+  mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
+```
+
+Programming Projects are to be submitted to [gradescope]().
+
+**Due date: `r assignments %>% filter(number == 28) %>% pull(formatted_date)` at 7pm**
 
 This programming project is an adaptation of Ben Dicken's Infographic Programming Assignment.
 

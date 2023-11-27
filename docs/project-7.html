@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CSc 110 Computer Programming I - Extra Project C</title>
+<title>CSc 110 Computer Programming I - Project 7</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,7 +116,7 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./style.html">Programming Projects</a></li><li class="breadcrumb-item"><a href="./project-7.html">Extra Project C</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./style.html">Programming Projects</a></li><li class="breadcrumb-item"><a href="./project-7.html">Project 7</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -236,31 +236,31 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./project-6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Extra Project E</span></a>
+ <span class="menu-text">Project 6</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./project-7.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Extra Project C</span></a>
+ <span class="menu-text">Project 7</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./project-8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Extra Project D</span></a>
+ <span class="menu-text">Project 8</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./project-9.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Extra Project B</span></a>
+ <span class="menu-text">Project 9</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./project-10.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Extra Project A</span></a>
+ <span class="menu-text">Project 10</span></a>
   </div>
 </li>
       </ul>
@@ -913,7 +913,7 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Extra Project C</h1>
+<h1 class="title">Project 7</h1>
 </div>
 
 
@@ -928,7 +928,8 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 
 </header>
 
-<p>This is an extra project (it does not count towards your final grade) for those who have asked me for more practice. If you are a CS major, and are planning on taking CSC 120, this practice project is highly recommended.</p>
+<p>Programming Projects are to be submitted to <a href="">gradescope</a>.</p>
+<p><strong>Due date: Wednesday, March 27, 2024 at 7pm</strong></p>
 <p>This programming project is an adaptation of Ben Dicken’s Minesweeper Programming Assignment.</p>
 <p>You should name the file <code>minesweeper.py</code>.</p>
 <section id="minesweeper" class="level1">
@@ -968,11 +969,13 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 <section id="input-file-format" class="level2">
 <h2 class="anchored" data-anchor-id="input-file-format">Input File Format</h2>
 <p>All files used for testing are going to follow the same formatting. The first line will contain an integer which is the width of the board. Similarly, the second line will contain the height. There will then be N (Height of the board) more lines. Each of these lines will contain X (Width of the board) elements separated by commas. Each element may be either a 1 or 0. Provided below is what an example file would look like:</p>
-<pre class="{html}"><code>2
-3
-0, 1
-1, 0
-0, 1</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>2</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>3</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>0, 1</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>1, 0</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>0, 1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 </section>
 <section id="development-strategy" class="level1">
@@ -983,15 +986,17 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 <section id="read_file" class="level3">
 <h3 class="anchored" data-anchor-id="read_file">read_file</h3>
 <p>For this file, for example:</p>
-<pre class="{html}"><code>5
-5
-1, 0, 0, 0, 0
-1, 0, 0, 0, 0
-0, 1, 0, 0, 0
-0, 0, 0, 0, 1
-1, 0, 0 ,0, 1</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>5</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>5</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>1, 0, 0, 0, 0</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>1, 0, 0, 0, 0</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>0, 1, 0, 0, 0</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>0, 0, 0, 0, 1</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>1, 0, 0 ,0, 1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Your function should return:</p>
-<div class="cell" data-execution_count="1">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>[[<span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>],</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a> [<span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>],</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a> [<span class="st">'0'</span>, <span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>],</span>
@@ -1002,11 +1007,11 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 <section id="make_empty_grid" class="level3">
 <h3 class="anchored" data-anchor-id="make_empty_grid">make_empty_grid</h3>
 <p>Return a 2D list that has the same dimensions of a passed in 2D list where every inner element is an empty space. For example, if the passed in the grid is:</p>
-<div class="cell" data-execution_count="2">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>[[<span class="st">'X'</span>, <span class="st">'3'</span>, <span class="st">'X'</span>], [<span class="st">'2'</span>, <span class="st">'X'</span>, <span class="st">'2'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Return:</p>
-<div class="cell" data-execution_count="3">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>[[<span class="st">' '</span>, <span class="st">' '</span>, <span class="st">' '</span>], [<span class="st">' '</span>, <span class="st">' '</span>, <span class="st">' '</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
@@ -1014,7 +1019,7 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 <h3 class="anchored" data-anchor-id="update_grid">update_grid</h3>
 <p>Takes in a single 2D list where every value is either “X” or “0” (Note the formatting is going to be the same as the list returned by read_file). The function should then replace all the 0’s with the number of adjacent mines, which is some cases will still be 0. As we are modifying an already existing list nothing is to be returned by the function. For example, if passed in the result of reading <a href="data/fiveByFive.txt">fiveByFive.txt</a></p>
 <p>Which is:</p>
-<div class="cell" data-execution_count="4">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>[[<span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>], </span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a> [<span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>], </span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a> [<span class="st">'0'</span>, <span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>], </span>
@@ -1022,7 +1027,7 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a> [<span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'X'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The function should modify it to become:</p>
-<div class="cell" data-execution_count="5">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>[[<span class="st">'X'</span>, <span class="st">'2'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>], </span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a> [<span class="st">'X'</span>, <span class="st">'3'</span>, <span class="st">'1'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>], </span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a> [<span class="st">'2'</span>, <span class="st">'X'</span>, <span class="st">'1'</span>, <span class="st">'1'</span>, <span class="st">'1'</span>], </span>
@@ -1079,7 +1084,7 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 </ul>
 <section id="full-game-win" class="level2">
 <h2 class="anchored" data-anchor-id="full-game-win">Full game win</h2>
-<div class="cell" data-execution_count="6">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    grid <span class="op">=</span> read_file(<span class="st">"fiveByFive.txt"</span>)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    user_view <span class="op">=</span> make_empty_grid(grid)</span>
@@ -1137,7 +1142,7 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 </section>
 <section id="full-game-lose" class="level2">
 <h2 class="anchored" data-anchor-id="full-game-lose">Full game lose</h2>
-<div class="cell" data-execution_count="7">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    grid <span class="op">=</span> read_file(<span class="st">"fiveByFive.txt"</span>)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    user_view <span class="op">=</span> make_empty_grid(grid)</span>
