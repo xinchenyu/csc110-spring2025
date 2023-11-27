@@ -51,12 +51,6 @@ The prerequisite is a C or better in College Algebra or CSc 101 or appropriate m
         -   Office hours (open door, drop in, my office [GS](https://goo.gl/maps/h8Vyf7RNQiMAScDY6) 811):
             -   Tuesday 1:00pm to 3:00pm
             -   Wednesday 11:30am to 12:30pm
-    -   Xinchen Yu
-        -   Office: Gould-Simpson 854
-        -   Email: xinchenyu\@arizona.edu
-        -   Instructor Website: [xinchenyu.github.io](https://xinchenyu.github.io/)
-        -   Office hours (open door, drop in, my office GS 854):
-            -   Wednesday 3:00pm to 5:30pm
 
 There will also be many undergraduate TAs. See the class website for their contact info!
 

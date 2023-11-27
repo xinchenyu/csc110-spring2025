@@ -4029,7 +4029,7 @@
     "href": "index.html",
     "title": "CSc 110 Computer Programming I",
     "section": "",
-    "text": "Welcome to CSc 110!\nThis is an introduction to programming with an emphasis on solving problems drawn from a variety of domains. Topics include basic control and data structures, problem solving strategies, and software development tools and techniques. Specifically, the Python programming language will be taught.\n\nCourse D2L: d2l.arizona.edu/d2l/home/1257984\n\nWhere to start:\n\nSyllabus\nSchedule\n\n\n\nInstructor Information\n\nAdriana Picoral 🔈\n\nOffice: Gould-Simpson 811\nEmail: adrianaps@arizona.edu\nInstructor Website: adrianapicoral.com\nOffice hours (open door, drop in, my office GS 811):\n\nTuesday 1pm to 3pm\nWednesday 11:30am to 12:30pm\n\n\n\n\n\nXinchen Yu\n\nOffice: Gould-Simpson 854\nEmail: xinchenyu@arizona.edu\nInstructor Website: xinchenyu.github.io\nOffice hours (open door, drop in, my office GS 854):\n\nWednesday 3:00pm to 5:30pm"
+    "text": "Welcome to CSc 110!\nThis is an introduction to programming with an emphasis on solving problems drawn from a variety of domains. Topics include basic control and data structures, problem solving strategies, and software development tools and techniques. Specifically, the Python programming language will be taught.\n\nCourse D2L: d2l.arizona.edu/d2l/home/1257984\n\nWhere to start:\n\nSyllabus\nSchedule\n\n\n\nInstructor Information\n\nAdriana Picoral 🔈\n\nOffice: Gould-Simpson 811\nEmail: adrianaps@arizona.edu\nInstructor Website: adrianapicoral.com\nOffice hours (open door, drop in, my office GS 811):\n\nTuesday 1pm to 3pm\nWednesday 11:30am to 12:30pm"
   },
   {
     "objectID": "slides-13-03.html#announcements",
@@ -4043,7 +4043,7 @@
     "href": "slides-13-03.html#random-module",
     "title": "random (class slides)",
     "section": "random module",
-    "text": "random module\nRemember to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random()\nprint(n)\n\nn = random.randint(0, 9)\nprint(n)\n\n0.9441006231996018\n7"
+    "text": "random module\nRemember to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random()\nprint(n)\n\nn = random.randint(0, 9)\nprint(n)\n\n0.6876737227504984\n5"
   },
   {
     "objectID": "slides-13-03.html#write-a-function",
