@@ -1,0 +1,85 @@
+---
+title: "Programming Project 1"
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(readxl)
+assignments <- read_excel("assessment_schedule.xlsx") %>% 
+  mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
+```
+
+Programming Projects are to be submitted to [gradescope](https://www.gradescope.com/courses/568720).
+
+**Due date: `r assignments %>% filter(number == 4) %>% pull(formatted_date)` at 7pm**
+
+In this first programming project you will implement a number of Python functions to calculate the area of different geometric shapes. Make sure you follow the provided [style guide](style.html) (you will be graded on it!). You are **not** allowed to use any built-in method or function for any Python library.
+
+Name the program `geometry.py`. Make sure that gradescope gives you the points for passing the test cases.
+
+## Area of a Rectangle
+
+1.  Function name is `rectangle_area`
+2.  It takes two arguments: `base` and `height`
+3.  It returns the area of the rectangle with given `base` and `height`
+
+$$
+area = base \cdot height
+$$
+
+## Area of a Triangle
+
+1.  Function name is `triangle_area`
+2.  It takes three arguments, one for the length of each side of the triangle: `a`, `b`, `c`
+3.  It returns the area of the three given side lengths calculated according to Heron's formula (calculate the semiperimeter first, then use that to calculate the area):
+
+$$
+s = (a + b + c) / 2 
+$$
+
+$$
+area = \sqrt{s \cdot (s-a) \cdot (s-b) \cdot (s-c)}
+$$
+
+4.  Do not use any built-in method or function for any Python library. Remember that roots are the opposite of an exponent. So you can calculate the square root of a number by using the exponent form $n^{1/2}$.
+
+## Area of a Trapezoid
+
+1.  Function name is `trapezoid_area`
+2.  It takes three arguments: `base_1`, `base_2`, and `height`
+3.  It returns the area of the trapezoid with given `base_1`, `base_2`, and `height`.
+
+$$
+area = {1/2} \cdot (base_1 + base_2) \cdot height
+$$
+
+## Area of a Circle
+
+1.  Function name is `circle_area`
+2.  It takes one argument: `radius`
+3.  It returns the area of the circle with the given `radius`, rounded at two decimal places
+4.  Use the value `3.1415` for $\pi$
+
+$$
+area = \pi \cdot radius^2
+$$
+
+## Test cases
+
+```{python}
+#| eval: false
+#| echo: true
+def main():
+    print( rectangle_area(4, 4.5) ) # 18.0
+    print( triangle_area(3, 4, 5) ) # 6.0
+    print( trapezoid_area(11, 25, 5) ) # 90.0
+    print( trapezoid_area(4, 20, 10) ) # 120.0
+    print( circle_area(20) ) # 1256.6
+    print( circle_area(4) ) # 50.26
+  
+main()
+```
+

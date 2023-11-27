@@ -1,0 +1,95 @@
+---
+title: "Programming Project 2"
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(readxl)
+assignments <- read_excel("assessment_schedule.xlsx") %>% 
+  mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
+```
+
+Programming Projects are to be submitted to [gradescope](https://www.gradescope.com/courses/568720).
+
+**Due date: `r assignments %>% filter(number == 9) %>% pull(formatted_date)` at 7pm**
+
+In this programming project you will implement a number of Python functions to validate or transform values conditionally. Make sure you follow the provided [style guide](style.html) (you will be graded on it!). You are allowed to use `round()`, `str()` and `len()`, but other than that you are **not** allowed to use any other built-in method or function from any Python library.
+
+Name the program `grades.py`. Make sure that gradescope gives you the points for passing the test cases.
+
+## Letter Grade
+
+1.  Function name is `letter_grade`
+
+2.  It takes a float argument representing a grade from 0 to 100, and it returns a string
+
+3.  It returns a letter grade based on the following rules:
+
+    -   Greater or equal to 90, return "A"
+    -   Greater or equal to 80, return "B"
+    -   Greater or equal to 70, return "C"
+    -   Greater or equal to 60, return "D"
+    -   Anything less, than 60 return "E" but greater or equal to 0
+    -   If argument is negative or greater than 100, return "X"
+
+## Pass or Fail
+
+1.  Function name is `pass_or_fail`
+2.  It takes a string argument that is one character long, `letter_grade` and it returns a string
+3.  If the argument `letter_grade` is longer than one character, it returns `Error`
+4.  It returns `Pass` if `letter_grade` argument is equal to "A", "B", "C", or "D" -- otherwise it returns `Fail`
+
+## Calculate percentage
+
+1.  Function name is `point_grade`
+2.  It takes two float arguments: `score` and `total_points`
+3.  It calculates the percentage grade by dividing score by total_points, and multiplies result by 100 (percentage = (score / total_points) \* 100)
+4.  It returns the calculated percentage as a float rounded at two decimals
+
+## Calculate final grade
+
+1.  Function name is `get_grade_results`
+2.  It takes two float arguments: `score` and `total_points`
+3.  It calls `point_grade` (a function you've written for this assignment) using the two float arguments: `score` and `total_points` -- it saves the value returned to a variable to be used in the next steps
+4.  Using the calculated point grade value returned by your `point_grade` function call (previous step), it calls the function `letter_grade` to retrieve the letter grade value associated with the calculated point grade and it saves it to a variable
+5.  Using the letter grade retrieved from the previous steps, it calls your `pass_or_fail` function to retrieve a `Pass` or a `Fail` and saves it to a variable
+6.  At this point you should have three variables: a point grade (0 to 100 value), a letter grade (A, B, C, D, or E), and a string that says either `Pass` or `Fail` -- concatenate these three values into one string to be returned by the function
+7.  It returns a string similar to: `Your grade is 92.34 (A - Pass)` or `Your grade is 35.78 (E - Fail)`
+
+## Test Cases
+
+```{python}
+#| eval: false
+#| echo: true
+def main():
+  # test letter_grade function
+  print( letter_grade(90) ) # A
+  print( letter_grade(80) ) # B
+  print( letter_grade(70) ) # C
+  print( letter_grade(60) ) # D
+  print( letter_grade(59) ) # E
+  print( letter_grade(-59) ) # X
+  print( letter_grade(110) ) # X
+  
+  # test pass_or_fail function
+  print( pass_or_fail("B") ) # Pass
+  print( pass_or_fail("E") ) # Fail
+  print( pass_or_fail("ABCD") ) # Error
+  
+  # test point_grade function
+  print( point_grade(0, 100) ) # 0.0
+  print( point_grade(100, 100) ) # 100.0
+  print( point_grade(45, 80) ) # 56.25
+  print( point_grade(37, 40) ) # 92.5
+  
+  # test get_grade_results function
+  print( get_grade_results(0, 100) ) # Your grade is 0.0 (E - Fail)
+  print( get_grade_results(45, 80) ) # Your grade is 56.25 (E - Fail)
+  print( get_grade_results(37, 40) ) # Your grade is 92.5 (A - Pass)
+  
+main()
+```
+

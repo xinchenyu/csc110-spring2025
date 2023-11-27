@@ -1,0 +1,66 @@
+---
+title: "Module 12 Programming Problems"
+---
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(readxl)
+assignments <- read_excel("assessment_schedule.xlsx") %>% 
+  mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
+```
+
+
+Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/568720).
+
+# Programming Problem 23
+
+**Due date: `r assignments %>% filter(number == 21) %>% pull(formatted_date)` at 7pm**
+
+Write a Python function that does the following:
+
+1.  Its name is `sum_nums`
+2.  It takes two arguments: a list of list (2D list) of `integers` and `n` an integers
+3.  It iterates through all of the numbers, and sum all of the ones whose value is less than `n`
+4.  It returns the sum
+
+Test cases:
+
+```{python}
+#| echo: true
+#| eval: false
+print( sum_nums([[2, 12, 2], [12, 5, 100, 9]], 10) ) # 18
+print( sum_nums([[2, 12, 2], [10, 5, 10, 9]], 10) ) # 18
+print( sum_nums([[2, 12, 2], [10, 5, 10, 9]], 0) ) # 0
+print( sum_nums([], 10) ) # 0
+```
+
+Name the program `sums.py`. Make sure that gradescope gives you the points for passing the test case.
+
+# Programming Problem 24
+
+**Due date: `r assignments %>% filter(number == 21) %>% pull(formatted_date)` at 7pm**
+
+Write a Python function that does the following:
+
+1.  Its name is `longest_string`
+2.  It takes one argument: a list of dictionaries
+3.  The keys in each dictionary could be of various types, but you may assume that the values will be strings
+4.  It returns the longest string value from all of the dictionaries in the list
+
+Test cases:
+
+```{python}
+#| echo: true
+#| eval: false
+data = [{'a':'horse', 'b':'caterpillar'}, {'a':'camp', 'c':'joker'}]
+print( longest_string(data) ) # caterpillar
+
+data = [{1:'abc', 5:'onetwothree'}, {2:'abcd'}, {7:'one two three'}]
+print( longest_string(data) ) # one two three
+```
+
+Name the program `longest.py`. Make sure that gradescope gives you the points for passing the test case.

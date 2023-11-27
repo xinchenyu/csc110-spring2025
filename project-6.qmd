@@ -1,0 +1,115 @@
+---
+title: "Programming Project 6"
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(readxl)
+assignments <- read_excel("assessment_schedule.xlsx") %>% 
+  mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
+```
+
+Programming Projects are to be submitted to [gradescope](https://www.gradescope.com/courses/568720).
+
+**Due date: `r assignments %>% filter(number == 23) %>% pull(formatted_date)` at 7pm**
+
+In this programming project you will implement four Python functions. Make sure you follow the provided [style guide](https://adrianapicoral.com/csc-110/style.html) (you will be graded on it!).
+
+You are provided with starter code, and four text files. Download the starter code and text files:
+
+-   [adventure.py](project-6/adventure.py)
+-   [game.txt](project-6/game.txt)
+-   [instructions.txt](project-6/instructions.txt)
+-   [objects.txt](project-6/objects.txt)
+-   [travel_table.txt](project-6/travel_table.txt)
+
+You will only change four functions in the `adventure.py` file:
+
+-   `load_game()`
+-   `load_objects()`
+-   `load_travel_table()`
+-   `print_instructions()`
+
+Note that all of these four functions do not have any parameters (that's on purpose, do not change that). Make sure you add docstrings for your functions (gradescope will autograde you for that).
+
+Write your code inside each function where it says `# implement your code here`
+
+Submit your modified `adventure.py` to gradescope when you are done implementing all four functions.
+
+# load_game
+
+1.  Iterate over each line in the file (the code to open the file is already implemented for you)
+2.  Each line must be split by tab (the tab character is `\t`) -- remember to strip the line before splitting
+3.  Populate the `game` dictionary with the following:
+    1.  key: the first value in the line -- type cast it to integer
+    2.  value: list containing all the second values associated with the same key in multiple lines
+
+Example: the first 5 lines in `game.txt` are:
+
+```{html}
+0	Welcome to Adventure!
+0	ADVENTURE!
+0	The simplified version of Colossal Cave Adventure text-based game
+0	Original by Willie Crowther and Don Woods (1977)
+0	Would you like instructions? YES or NO?
+```
+
+That translates into the following `key: value` pair in the `game` dictionary:
+
+```{python}
+#| eval: false
+#| echo: true
+0: ['Welcome to Adventure!', 'ADVENTURE!', 'The simplified version of Colossal Cave Adventure text-based game', 'Original by Willie Crowther and Don Woods (1977)'
+```
+
+# load_objects()
+
+1.  Iterate over each line in the file (the code to open the file is already implemented for you)
+2.  Each line must be split by tab (the tab character is `\t`) -- remember to strip the line before splitting
+3.  Populate the `objects` dictionary with the following:
+    1.  key: tuple with the first three values of each line -- cast the first two values to integer
+    2.  value: list with the rest of the values in each line (starting at index `3`)
+
+Example: the first line in `object.txt` is:
+
+```{html}
+3	0	KEYS	THERE IS A SHINY BRASS LAMP NEARBY.
+```
+
+That translates into the following `key: value` pair in the `game` dictionary:
+
+```{python}
+#| eval: false
+#| echo: true
+(3, 0, 'KEYS'): ['THERE IS A SHINY BRASS LAMP NEARBY.']
+```
+
+# load_travel_table()
+
+1.  Iterate over each line in the file (the code to open the file is already implemented for you)
+2.  Each line must be split by tab (the tab character is `\t`) -- remember to strip the line before splitting
+3.  Populate the `travel` dictionary with the following:
+    1.  key: tuple with the first two values of each line -- cast these first two values to integer
+    2.  value: third value in each line
+
+Example: the first line in `object.txt` is:
+
+```{html}
+0	1 	BLANK
+```
+
+That translates into the following `key: value` pair in the `game` dictionary:
+
+```{python}
+#| eval: false
+#| echo: true
+(0, 1): 'BLANK'
+```
+
+# print_instructions()
+
+1.  Open `instructions.txt` in read mode
+2.  Print the contents of the file

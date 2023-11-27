@@ -1,0 +1,141 @@
+---
+title: "Extra Project B"
+---
+
+This is an extra project (it does not count towards your final grade) for those who have asked me for more practice. If you are a CS major, and are planning on taking CSC 120, this practice project is highly recommended. 
+
+This programming project is an adaptation of Ben Dicken's WordSearch Programming Assignment.
+
+# WordSearch
+
+In this assignment, you will be tasked with writing a program that finds certain words within a wordsearch grid and returns the word mapped to the line and starting character location of each word. The information of the board, and the words will be provided via files you will need to read in. 
+
+You should name the file `wordsearch.py`. Your code should have a function called `search` that returns a dictionary (see specification below).
+
+## Words text file
+
+Your program should open up and read a text file name which determines which words you are searching for in your puzzle file! You can assume that each line in the input text file is formatted as follows: each line of the file is a word from the "word bank." 
+
+Contents of `words.txt`:
+
+```{html}
+computer
+science
+```
+
+Your program should open and read the input text file into the program and store the mapping between forwards and backwards words in a dictionary. The keys of the dictionary should be the forward version of the word, and the value the keys map to, should be the backward version of that word. Given the example content of words.txt shown above, the words dictionary should have the keys and values shown below:
+
+```{python}
+words = { 
+    "computer":"retupmoc",
+    "science":"ecneics",
+}
+```
+
+After you have read in the file and constructed this dictionary, you can use it to determine your word bank, which words you will need to look for within the puzzle.
+
+## Puzzle text file
+
+This file contains a grid of letters and hidden within those letters are certain words you will need to be searching for. You will use your newly created words dictionary to figure out what letter combination of words you need to find. This is an example of what this word-grid file would look like:
+
+<pre>
+W O D I W S M Z H 
+N R M E W A N D A 
+L Z H I N O K L H 
+S R E G N E V A V 
+I F R C X H C Q X 
+A H T Z B A Y K Q 
+A R A M E R I C A
+</pre>
+
+The puzzle file could have more or less Rows/Columns depending on each test case.
+
+## Output
+
+The program should return a dictionary with the starting row / col locations for each word found. Your code should have a function called `search` that returns this dictionary. The formatting of the return dictionary should be something like:
+
+```{python}
+#| eval: false
+{"word1": [0, 0], "word2": [5, 5]}
+```
+
+
+# Example Run
+
+Say that `words.txt` contains:
+
+```{html}
+army
+navy
+star
+america
+bullet
+```
+
+And then `grid.txt` contains:
+
+<pre>
+Z S Y M R A Z
+R N Z Z A Q L
+M A T R T U I
+N V Y A S S D
+B Y Z T C V B
+V B U L L E T
+A M E R I C A
+</pre>
+
+Your program should return:
+
+```{python}
+#| eval: false
+{"army": [1, 6],
+ "bullet": [6, 2],
+ "america": [7, 1],
+ "navy": [2, 2],
+ "star": [4, 5]}
+```
+
+# Development Strategy
+
+This section covers how you should go about structuring and implementing the code. In total, your program should have at least 5 functions. My recommendation for these five functions:
+
+* A function to load in the forwards words, computes the backwards version of each word, and save into a dictionary
+* One for transposing the grid
+* One for searching through lines
+* One for checking if a word is found on a line and where it is (index)
+* You may have other functions as well. You should build this program in the following sequence:
+
+## (1) Reading in input files
+
+Create a function that will be responsible for opening up the words file and reading in the information. You can pass the file name into this function via arguments / parameters. The function should iterate through the lines and create a dictionary that maps the forwards-spelling to the backwards spelling. After the data is read in, the function should return the dictionary back to main.
+
+Next, open word input grid file up.
+
+Your functions for this part should be called `text_to_dictionary` and `load_search_grid`.
+
+## (2) Word search
+
+Horizontal search is a bit easier than vertical mode, so I recommend that you work on this first. Create a function for this, and pass it the word dictionary, the grid file, and the mode. Iterate through the lines of the file one-at-a-time. For each line you encounter, you can search for all of the words in the word dictionary to see if you can find it.
+
+If you try to do all of this in one function, you will probably end up with 3 or 4 levels of nested loops, which can get rather disorganized. I recommend that you create another function, perhaps called something like search_within_line that handles processing one line of searching. The horizontal function can call this for each line that it encounters.
+
+There will be separate test cases for horizontal and for vertical. I recommend that you get the horizontal ones to pass before moving on to vertical.
+
+In vertical search, you have to search for the words in the columns of the grid, rather than the rows. This is a bit more complex, but still very do-able. The way you should go about this is create a loop where you iterate through the column indexes. Within this loop, create another loop that goes through every character in that column and creates a list of those characters. Then, you can treat this column as if it is a row.
+
+# Example run
+
+```{python}
+#| echo: true
+#| eval: false
+if __name__ == '__main__':
+    word_bank = text_to_dictionary("test_word_bank.txt")
+    grid = load_search_grid("test_puzzle_grid.txt")
+    assert search(word_bank, grid) == {"army": [1, 6],
+                                       "bullet": [6, 2],
+                                       "america": [7, 1],
+                                       "navy": [2, 2],
+                                       "star": [4, 5]}
+    print("Passed test.")
+```
+

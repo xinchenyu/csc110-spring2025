@@ -1,0 +1,62 @@
+---
+title: "Module 10 Programming Problems"
+---
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(readxl)
+assignments <- read_excel("assessment_schedule.xlsx") %>% 
+  mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
+```
+
+
+Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/568720).
+
+# Programming Problem 19
+
+**Due date: `r assignments %>% filter(number == 17) %>% pull(formatted_date)` at 7pm**
+
+Write a Python function that does the following:
+
+1.  Its name is `zip_lists`
+2.  It takes three arguments: `list_1`, `list_2`, `list_3` -- all of the same length
+3.  It iterates over all three lists (remember, they have the same length, so you can use the same index for all of them) appending to a new list of tuples of three elements
+4.  It returns the list of tuples
+
+Test cases:
+
+```{python}
+#| echo: true
+#| eval: false
+print( zip_lists([1, 2], ["a", "b"], [1.0, 2.0]) ) # [(1, "a", 1.0), (2, "b", 2.0)]
+print( zip_lists([], [], []) ) # []
+```
+
+Name the program `create_tuples.py`. Make sure that gradescope gives you the points for passing the test case.
+
+# Programming Problem 20
+
+**Due date: `r assignments %>% filter(number == 17) %>% pull(formatted_date)` at 7pm**
+
+Write a Python function that does the following:
+
+1.  Its name is `all_mappings`
+2.  It takes a single `dictionary` as an argument, which maps strings to lists of integers
+3.  It returns a list of 2-value tuples, where the first value of the tuples is a key from D, and the second value is an element from its associated list value
+
+Test cases:
+
+```{python}
+#| echo: true
+#| eval: false
+print( all_mappings({"a": [7, 3, 1]}) ) # [("a", 7), ("a", 3), ("a", 1)]
+print( all_mappings({"a": [8], "b": [2]}) ) # [("a", 8), ("b", 2)]
+print( all_mappings({"a": [], "b": [2]}) ) # [("b", 2)]
+print( all_mappings({}) ) # []
+```
+
+Name the program `mappings.py`. Make sure that gradescope gives you the points for passing the test case.

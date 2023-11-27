@@ -1,0 +1,133 @@
+---
+title: "Programming Project 5"
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(readxl)
+assignments <- read_excel("assessment_schedule.xlsx") %>% 
+  mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
+```
+
+Programming Projects are to be submitted to [gradescope](https://www.gradescope.com/courses/568720).
+
+**Due date: `r assignments %>% filter(number == 18) %>% pull(formatted_date)` at 7pm**
+
+In this programming project you will implement a number of Python functions to implement a Benford's Law analysis. Make sure you follow the provided [style guide](https://adrianapicoral.com/csc-110/style.html) (you will be graded on it!).
+
+Name your program `benfords_law.py` to submit to gradescope. Make sure that gradescope gives you the points for passing the test cases.
+
+This programming project is an adaptation of Ben Dicken's Benford's Law Programming Assignment.
+
+Benford's Law is a mathematical law that describes the behavior of naturally-occurring numbers in some kinds of numerical data sets. I recommend that you watch this video before proceeding to get an explanation:
+
+{{< video https://youtu.be/XXjlR2OK1kM >}}
+
+Benford's law is useful for distinguishing naturally occurring data from randomized or made-up data. It has been used in the real world to detect election fraud (For example, in the 2009 Iranian election). It has also been used as evidence in criminal cases in the US. In this PA, you'll be writing a program that reads in a data set, and prints out the plot of first-digits. Then, you can look at the plot to determine if it conforms to the law or not! Name your file `benfords_law.py.` You should organize the code into several functions.
+
+## Read input file
+
+1.  Its name is `csv_to_list`
+2.  It takes a string argument, `file_name`
+3.  It opens the file in read mode
+4.  It iterates over the lines appending numeric values to a new list
+5.  Each line in the file is split on comma, for each element that you get from splitting check if the string represents an integer or a float -- if either an integer or a float, append the string to the new list
+6.  It returns a list of numbers found in the file
+
+Here's what `places.csv` looks like:
+
+```{HTML}
+region,population
+pima,1234
+georgia,145
+steele,10
+tampa,1700
+greece,1729
+rome,1711
+milan,219
+tucson,231
+tuscany,20001
+florence,301
+nigeria,3879
+newyork,404
+phoenix,40123
+belgium,505
+madrid,502
+nogales,601
+brussels,712
+tempe,81231
+anthem,91231
+```
+
+```{python}
+#| eval: false
+print( csv_to_list("places.csv") )
+```
+
+```{HTML}
+["1234", "145", "10", "1700", "1729", "1711", "219", "231", "20001", "301", "3879", "404", "40123", "505", "502", "601", "712", "81231", "91231"]
+```
+
+## Count start digits
+
+1.  Its name is `count_start_digits`
+2.  It takes one argument, a list of strings that represent `numbers` (for example: `["1234", "145", "10", "1700", "1729"]`)
+3.  It creates a `dictionary` to keep counts of the digits (1 to 9) that start each number in the `numbers` list
+4.  It iterates over the values in `numbers` adding `1` to the respective value associated to each digit `key` (1 to 9) in the `dictionary`
+5.  Remember to convert the first character in each value in `numbers` to an integer (the dictionary keys are integers)
+6.  It returns the dictionary of counts
+
+Test case:
+
+```{python}
+#| eval: false
+list_of_numbers = csv_to_list("places.csv")
+counts = count_start_digits(list_of_numbers)
+print(counts) # {1: 6, 2: 3, 3: 2, 4: 2, 5: 2, 6: 1, 7: 1, 8: 1, 9: 1}
+```
+
+## Calculate percentages
+
+1.  Its name is `digit_percentages`
+2.  It takes a dictionary with digit `counts`
+3.  It creates a new dictionary with the `percentage` for each digit
+4.  To calculate percentage, first calculate the sum of all the counts, then divide each value in `counts` by the calculated total (round it to two decimals)
+5.  It returns the new dictionary
+
+Test case:
+
+```{python}
+#| eval: false
+list_of_numbers = csv_to_list("places.csv")
+counts = count_start_digits(list_of_numbers)
+percentages = digit_percentages(counts)
+print(percentages) # {1: 31.58, 2: 15.79, 3: 10.53, 4: 10.53, 5: 10.53, 6: 5.26, 7: 5.26, 8: 5.26, 9: 5.26}
+```
+
+## Does it follow the law?
+
+1.  Its name is `check_benfords_law`
+2.  It takes one argument, a dictionary with `percentages` per digit
+3.  A data set follows Benford's law if the percentage of occurrences of each digits follows the percentages below (plus 10% or minus 5%)
+4.  If every digit percentage falls within the specified rage, return `True`, otherwise return `False`
+
+| digit | percent (-5, +10) |
+|-------|-------------------|
+| 1     | 30%               |
+| 2     | 17%               |
+| 3     | 12%               |
+| 4     | 9%                |
+| 5     | 7%                |
+| 6     | 6%                |
+| 7     | 5%                |
+| 8     | 5%                |
+| 9     | 4%                |
+
+### Test cases
+
+-   [populations.csv](data/populations.csv) does follow Benford's Law
+-   [stocks.csv](data/stocks.csv) does follow Benford's Law
+-   [random_numbers.csv](data/random_numbers.csv) does NOT follow Benford's Law

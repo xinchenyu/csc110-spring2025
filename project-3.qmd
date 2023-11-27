@@ -1,0 +1,102 @@
+---
+title: "Programming Project 3"
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(readxl)
+assignments <- read_excel("assessment_schedule.xlsx") %>% 
+  mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
+```
+
+Programming Projects are to be submitted to [gradescope](https://www.gradescope.com/courses/568720).
+
+**Due date: `r assignments %>% filter(number == 12) %>% pull(formatted_date)` at 7pm**
+
+In this programming project you will implement a number of Python functions to run descriptive statistics on lists. Make sure you follow the provided [style guide](https://adrianapicoral.com/csc-110/style.html) (you will be graded on it!).
+
+Here's the built-in functions you are allowed to use: `round()` and `len()`. You are not allowed to use for loops -- use `while` loops.
+
+Name the program `stats.py`. Make sure that gradescope gives you the points for passing the test cases.
+
+# Mean
+
+1.  Function name is `mean`
+2.  It takes a list of numeric values (integers or floats) as argument: `numbers`
+3.  It calculates the mean of the values in `numbers` by summing each value (use a `while` loop) and dividing the total by the number of items in the list `numbers`
+4.  It returns a float rounded at two decimals representing the mean of the values in `numbers`
+
+# Variance
+
+1.  Function name is `variance`
+2.  It takes a list of numeric values (integers or floats) as argument: `numbers`
+3.  It calculates the variance of the values in `numbers` by:
+    1.  calculating the mean (call the function you created to calculate mean)
+    2.  summing the squares of the difference between each value in `numbers` and the mean -- create a `total` variable, in a `while` loop add to `total` the squared difference between each value and the mean
+    3.  dividing the sum of squares (previous step) by the number of items in the list `numbers` minus 1
+
+$$
+\frac{\sum{|x-mean|^2}}{n - 1}
+$$
+
+4.  It returns the result as a float rounded at two decimals
+
+# Standard Deviation
+
+1.  Function name is `sd`
+2.  It takes a list of numeric values (integers or floats) as argument: `numbers`
+3.  It calculates the standard deviation of the values in `numbers` by:
+    1.  calculating the variance (use the function you wrote)
+    2.  taking the square root of the result in the previous step
+4.  It returns the result as a float rounded at two decimals
+
+# Range
+
+1.  Function name is `list_range`
+2.  It takes a list of numeric values (integers or floats) as argument: `numbers`
+3.  It finds the lowest and highest numbers in the `numbers` argument
+4.  It returns the difference between the highest and lowest number (that is the range)
+5.  Do not use built-in functions `max`, `min` and `range`
+
+# Test cases
+
+```{python}
+#| eval: false
+#| echo: true
+def main():
+  value = mean([])
+  assert value == 0, \
+      f"expected return value was 0, but function returned {value}" 
+  
+  value = mean([0, 0, 0])
+  assert value == 0, \
+      f"expected return value was 0, but function returned {value}" 
+  
+  value = mean([4, 5, 2])
+  assert value == 3.67, \
+      f"expected return value was 3.67, but function returned {value}" 
+  
+  value = variance([4, 5, 2])
+  assert value == 2.33, \
+      f"expected return value was 2.33, but function returned {value}" 
+  
+  value = sd([4, 5, 2])
+  assert value == 1.53, \
+      f"expected return value was 1.53, but function returned {value}"
+  
+  value = list_range([4, 5, 2])
+  assert value == 3, \
+      f"expected return value was 3, but function returned {value}"
+  
+  value = list_range([])
+  assert value == 0, \
+      f"expected return value was 0, but function returned {value}"
+
+  print("All tests passed.")
+
+main()
+```
+

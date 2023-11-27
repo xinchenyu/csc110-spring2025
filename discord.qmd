@@ -1,0 +1,19 @@
+---
+title: "Discord (online discussion and office hours)"
+---
+
+Link to join our Discord server: <https://discord.gg/wZrMTMG7v>
+
+READ THE INFORMATION BELOW, IT'S **VERY** IMPORTANT.
+
+# Discord Rules
+
+-   Change your user name for the CSC 110 Spring 2023 server so that **your name on this server matches your name on the roster/D2L**. TAs, coords, and instructors will be checking if your name is in the roster before answering your questions or adding you to the office hours voice channels.
+
+-   Do **not** direct message (DM) TAs.
+
+-   Do **not** share code solutions. You are free to share error messages, but not code. TAs and instructors can access your submission on gradescope.
+
+-   It is expected that everyone will participate in the online discussion in a mature and respectful manner. Do not demean or embarrass others. Do not make sexist, racist, xenophobic, homophobic, transphobic, or victim-blaming comments. Immature, aggressive, or disrespectful behavior will not be tolerated. If you see anyone breaking this rule, report that person to me (adrianaps\@arizona.edu)
+
+-   Be cautious of how you use humor in sessions and online. Be aware of the potential impact of your words, regardless of the intentions. Think through and reread your comments before you say/post them.
