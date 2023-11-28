@@ -14,7 +14,7 @@ assignments <- read_excel("assessment_schedule.xlsx") %>%
 
 Programming Projects are to be submitted to [gradescope]().
 
-**Due date: `r assignments %>% filter(number == 24) %>% pull(formatted_date)` at 7pm**
+**Due date: `r assignments %>% filter(assessment == "Programming Project 10") %>% pull(formatted_date)` at 7pm**
 
 This programming project is an adaptation of Ben Dicken's WordSearch Programming Assignment.
 

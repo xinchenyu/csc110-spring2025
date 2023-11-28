@@ -16,7 +16,7 @@ Programming Problems should be submitted to [gradescope](https://www.gradescope.
 
 # Programming Problem 5
 
-**Due date: `r assignments %>% filter(number == 5) %>% pull(formatted_date)` at 7pm**
+**Due date: `r assignments %>% filter(assessment == "Module 3 Programming Problems") %>% pull(formatted_date)` at 7pm**
 
 Write two python functions. The first function does the following:
 

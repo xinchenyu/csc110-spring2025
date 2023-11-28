@@ -1,3 +1,7 @@
 ---
 title: "Programming Project 5"
 ---
+
+Programming Projects are to be submitted to [gradescope]().
+
+**Due date: `r assignments %>% filter(assessment == "Programming Project 6") %>% pull(formatted_date)` at 7pm**

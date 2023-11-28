@@ -14,7 +14,7 @@ assignments <- read_excel("assessment_schedule.xlsx") %>%
 
 Programming Projects are to be submitted to [gradescope]().
 
-**Due date: `r assignments %>% filter(number == 4) %>% pull(formatted_date)` at 7pm**
+**Due date: `r assignments %>% filter(assessment == "Programming Project 1") %>% pull(formatted_date)` at 7pm**
 
 In this first programming project you will implement a number of Python functions to calculate the area of different geometric shapes. Make sure you follow the provided [style guide](style.html) (you will be graded on it!). You are **not** allowed to use any built-in method or function for any Python library.
 

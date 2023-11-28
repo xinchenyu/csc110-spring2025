@@ -18,7 +18,7 @@ If you need instructions on how to submit your `.py` files to gradescope, watch 
 
 # Survey
 
-**Due date: `r assignments %>% filter(number == 1) %>% pull(formatted_date)` at 7pm**
+**Due date: `r assignments %>% filter(assessment == "Survey") %>% pull(formatted_date)` at 7pm**
 
 <>
 
@@ -26,7 +26,7 @@ This is a survey to collect information on your expectations for CSc 110 Compute
 
 # Programming Problem 1
 
-**Due date: `r assignments %>% filter(number == 2) %>% pull(formatted_date)` at 7pm**
+**Due date: `r assignments %>% filter(assessment == "Module 1 Programming Problems") %>% pull(formatted_date)` at 7pm**
 
 Write a python program that prints out the string "Hello World!". Be careful with capitalization and punctuation.
 

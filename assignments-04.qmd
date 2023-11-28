@@ -16,7 +16,7 @@ Programming Problems should be submitted to [gradescope](https://www.gradescope.
 
 # Programming Problem 7
 
-**Due date: `r assignments %>% filter(number == 7) %>% pull(formatted_date)` at 7pm**
+**Due date: `r assignments %>% filter(assessment == "Module 4 Programming Problems") %>% pull(formatted_date)` at 7pm**
 
 Write a program to check whether a person is eligible for voting or not.
 

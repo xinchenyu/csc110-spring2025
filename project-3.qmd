@@ -14,7 +14,7 @@ assignments <- read_excel("assessment_schedule.xlsx") %>%
 
 Programming Projects are to be submitted to [gradescope]().
 
-**Due date: `r assignments %>% filter(number == 10) %>% pull(formatted_date)` at 7pm**
+**Due date: `r assignments %>% filter(assessment == "Programming Project 3") %>% pull(formatted_date)` at 7pm**
 
 In this programming project you will implement a number of Python functions to run descriptive statistics on lists. Make sure you follow the provided [style guide](https://adrianapicoral.com/csc-110/style.html) (you will be graded on it!).
 
