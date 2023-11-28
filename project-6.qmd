@@ -1,5 +1,5 @@
 ---
-title: "Project 6"
+title: "Programming Project 6"
 ---
 
 ```{r}
