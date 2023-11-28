@@ -263,6 +263,12 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
  <span class="menu-text">Programming Project 10</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./project-11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programming Project 11</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -882,22 +888,28 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#spell-check" id="toc-spell-check" class="nav-link active" data-scroll-target="#spell-check">Spell Check</a></li>
-  <li><a href="#program-behavior" id="toc-program-behavior" class="nav-link" data-scroll-target="#program-behavior">Program behavior</a></li>
-  <li><a href="#misspellings.txt" id="toc-misspellings.txt" class="nav-link" data-scroll-target="#misspellings.txt">misspellings.txt</a></li>
-  <li><a href="#preserving-capitalization" id="toc-preserving-capitalization" class="nav-link" data-scroll-target="#preserving-capitalization">Preserving Capitalization</a></li>
-  <li><a href="#ignoring-punctuation" id="toc-ignoring-punctuation" class="nav-link" data-scroll-target="#ignoring-punctuation">Ignoring Punctuation</a></li>
+  <li><a href="#minesweeper" id="toc-minesweeper" class="nav-link active" data-scroll-target="#minesweeper">Minesweeper</a>
+  <ul class="collapse">
+  <li><a href="#minesweeper-rules" id="toc-minesweeper-rules" class="nav-link" data-scroll-target="#minesweeper-rules">Minesweeper Rules</a></li>
+  <li><a href="#input-file-format" id="toc-input-file-format" class="nav-link" data-scroll-target="#input-file-format">Input File Format</a></li>
+  </ul></li>
   <li><a href="#development-strategy" id="toc-development-strategy" class="nav-link" data-scroll-target="#development-strategy">Development Strategy</a>
   <ul class="collapse">
-  <li><a href="#reading-in-misspellings.txt" id="toc-reading-in-misspellings.txt" class="nav-link" data-scroll-target="#reading-in-misspellings.txt">(1) Reading in misspellings.txt</a></li>
-  <li><a href="#replacing-words" id="toc-replacing-words" class="nav-link" data-scroll-target="#replacing-words">(2) Replacing words</a></li>
-  <li><a href="#handle-punctuation-handle-capitalization" id="toc-handle-punctuation-handle-capitalization" class="nav-link" data-scroll-target="#handle-punctuation-handle-capitalization">(3) Handle Punctuation / Handle Capitalization</a></li>
-  <li><a href="#write-out-output-file" id="toc-write-out-output-file" class="nav-link" data-scroll-target="#write-out-output-file">(4) Write out output file</a></li>
-  </ul></li>
-  <li><a href="#test-cases" id="toc-test-cases" class="nav-link" data-scroll-target="#test-cases">Test Cases</a>
+  <li><a href="#functions-to-implement" id="toc-functions-to-implement" class="nav-link" data-scroll-target="#functions-to-implement">Functions to Implement</a>
   <ul class="collapse">
-  <li><a href="#example-1-no-punctuation-or-capitalized-words" id="toc-example-1-no-punctuation-or-capitalized-words" class="nav-link" data-scroll-target="#example-1-no-punctuation-or-capitalized-words">Example 1 (no punctuation or capitalized words)</a></li>
-  <li><a href="#example-2-with-punctuation-and-capitalized-words" id="toc-example-2-with-punctuation-and-capitalized-words" class="nav-link" data-scroll-target="#example-2-with-punctuation-and-capitalized-words">Example 2 (with punctuation and capitalized words)</a></li>
+  <li><a href="#read_file" id="toc-read_file" class="nav-link" data-scroll-target="#read_file">read_file</a></li>
+  <li><a href="#make_empty_grid" id="toc-make_empty_grid" class="nav-link" data-scroll-target="#make_empty_grid">make_empty_grid</a></li>
+  <li><a href="#update_grid" id="toc-update_grid" class="nav-link" data-scroll-target="#update_grid">update_grid</a></li>
+  <li><a href="#dig" id="toc-dig" class="nav-link" data-scroll-target="#dig">dig</a></li>
+  <li><a href="#count_total_moves" id="toc-count_total_moves" class="nav-link" data-scroll-target="#count_total_moves">count_total_moves</a></li>
+  <li><a href="#print_grid" id="toc-print_grid" class="nav-link" data-scroll-target="#print_grid">print_grid</a></li>
+  <li><a href="#determine_game_status" id="toc-determine_game_status" class="nav-link" data-scroll-target="#determine_game_status">determine_game_status</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#test-cases" id="toc-test-cases" class="nav-link" data-scroll-target="#test-cases">Test cases</a>
+  <ul class="collapse">
+  <li><a href="#full-game-win" id="toc-full-game-win" class="nav-link" data-scroll-target="#full-game-win">Full game win</a></li>
+  <li><a href="#full-game-lose" id="toc-full-game-lose" class="nav-link" data-scroll-target="#full-game-lose">Full game lose</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -923,159 +935,256 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 </header>
 
 <p>Programming Projects are to be submitted to <a href="">gradescope</a>.</p>
-<p><strong>Due date: Wednesday, April 03, 2024 at 7pm</strong> This programming project is an adaptation of Ben Dicken’s Spell Check Programming Assignment.</p>
-<p>You should name the file <code>spellcheck.py</code> and have a function named <code>correct_spelling</code> to write out the ouput file.</p>
-<section id="spell-check" class="level1">
-<h1>Spell Check</h1>
-<p>Most in this class have probably used a spellchecker at least once in your life (more likely, many times). Spell checkers are built into a number of programs, including Microsoft Word, Apple Pages, gmail, and others. In this assignment, you’ll be implementing a program that can suggest and fix spelling issues in text.</p>
+<p><strong>Due date: Wednesday, April 03, 2024 at 7pm</strong></p>
+<p>This programming project is an adaptation of Ben Dicken’s Minesweeper Programming Assignment.</p>
+<p>You should name the file <code>minesweeper.py</code>.</p>
+<section id="minesweeper" class="level1">
+<h1>Minesweeper</h1>
+<p>Minesweeper is a one player puzzle game that was often preinstalled with older versions of Windows. The goal of the game is to clear a grid of squares, one at a time, trying to avoid any squares that have hidden mines. Upon clearing a square, a number may appear which tells how many mines are adjacent to the given square. Selecting a square containing a mine results in an instant loss, while revealing all non-mine squares results in a win. There are still versions of this game around, like <a href="https://www.google.com/fbx?fbx=minesweeper">this one made by Google</a>.</p>
+<section id="minesweeper-rules" class="level2">
+<h2 class="anchored" data-anchor-id="minesweeper-rules">Minesweeper Rules</h2>
+<p>For this assignment, we are going to simplify some of the rules of the original game while still keeping the core of the game intact. Instead of clicking on squares your program will be given coordinates. The primary gameplay loop is going to be generating coordinates to a square on the board upon which the square is revealed. There are two possibilities for what a square can contain.</p>
+<p>If a “X” is revealed, this is a mine which results in an instant loss.</p>
+<p>Otherwise, an integer is revealed, which is the number of adjacent (including diagonally) mines from the revealed square (including 0, which is handled differently by the original game). All integers around the given coordinates are also revealed (the mines remain hidden).</p>
+<p>For example, let’s say a player is provided the given board:</p>
+<pre> 2 [ ][ ][ ]
+ 1 [ ][ ][ ]
+ 0 [ ][ ][ ]
+    a  b  c
+</pre>
+<p>If the the coordinates <code>(0, "a")</code>are provided, a result may be:</p>
+<pre> 2 [ ][ ][ ]
+ 1 [1][ ][ ]
+ 0 [1][2][ ]
+    a  b  c
+</pre>
+<p>This means that at <code>(0, "a")</code> there is not a mine, however there is one nearby. We know there’s no mine in <code>(1, "a")</code> because the integer <code>1</code> was also revealed. Specifically there is probably a mine in <code>(1, "b")</code>. Suppose the player’s next move is c0, which would produce:</p>
+<pre> 2 [ ][ ][ ]
+ 1 [1][ ][ ]
+ 0 [1][2][2]
+    a  b  c
+</pre>
+<p>The 2 revealed means that there would be 2 mines somewhere among <code>(1, "b")</code>, <code>(1, "c")</code> and <code>(0, "c")</code>. After this let’s say the coordinates <code>(1, "b")</code> are provided.</p>
+<pre> 2 [ ][ ][ ]
+ 1 [1][X][ ]
+ 0 [1][2][2]
+    a  b  c
+</pre>
+<p>Since this reveals an X the game has ended and the player loss. If all non-mine squares were revealed, the player would have won.</p>
 </section>
-<section id="program-behavior" class="level1">
-<h1>Program behavior</h1>
-<p>The spell checking program should be named <code>spellcheck.py</code>. The spell check program takes as argument the name of a text file, which will contain the text that the user wants to be spell-checked. The program than writes out an output file with swapping the contents of the input file with the spelling already fixed.</p>
-<p>Let’s walk through a really simple example to demonstrate the difference in the two modes. Let’s say that the file <code>words.txt</code> has the below content:</p>
+<section id="input-file-format" class="level2">
+<h2 class="anchored" data-anchor-id="input-file-format">Input File Format</h2>
+<p>All files used for testing are going to follow the same formatting. The first line will contain an integer which is the width of the board. Similarly, the second line will contain the height. There will then be N (Height of the board) more lines. Each of these lines will contain X (Width of the board) elements separated by commas. Each element may be either a 1 or 0. Provided below is what an example file would look like:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>one hudnred dollars</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>and fiveteen cents</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>2</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>3</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>0, 1</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>1, 0</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>0, 1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The words hundred (hudnred) and the word fifteen (fiveteen) are spelled wrong. The contents of the file should be written out to an output file with the misspelled words replaced with correctly-spelled ones.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>one hundred dollars</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>and fifteen cents</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Notice that the program goes ahead and replaces the misspelled words with correctly-spelled ones.</p>
-<p>How was the program able to identify the words that were not spelled correctly? Read the next section to find out.</p>
 </section>
-<section id="misspellings.txt" class="level1">
-<h1>misspellings.txt</h1>
-<p>Your program should open up and read a file names <code>misspellings.txt</code>. You can assume that this file already exists in the same directory as <code>spellcheck.py</code>. When testing on your computer, you should create your own <code>misspellings.txt</code>. This file will include information about how words are misspelled. Using this information, you can determine which words are spelled wrong in the input file. You can assume that each line of <code>misspellings.txt</code> is formatted as follows:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>incorrect_a-&gt;correctly_spelled_word_a</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>incorrect_b-&gt;correctly_spelled_word_b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>In other words, the first word on a line of the file is a correctly spelled word, then an arrow, then the correctly-spelled version of the word. For instance:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>hudnred-&gt;hundred</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>hundrid-&gt;hundred</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>fifeteen-&gt;fifteen</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>fiveteen-&gt;fifteen</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>fiften-&gt;fifteen</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>This file contains two possible misspellings of the word <code>"hundred"</code> and three possible misspellings of the word <code>"fifteen"</code>. Your program should handle a misspellings file of any size.</p>
-<p>Your program should open and read the <code>misspellings.txt</code> file into the program and store the mapping between misspelled and correctly-spelled words in a dictionary. The keys of the dictionary should be the misspelled version of the word, and the value the keys map to should be the correctly-spelled version of that word. Given the example content of <code>misspelling.txt</code> shown above, the misspellings dictionary should have the keys and values shown below:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>misspellings <span class="op">=</span> { </span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'hudnred'</span> : <span class="st">'hundred'</span>,</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'hundrid'</span> : <span class="st">'hundred'</span>,</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'fifeteen'</span> : <span class="st">'fifteen'</span>,</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'fiveteen'</span> : <span class="st">'fifteen'</span>,</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'fiften'</span> : <span class="st">'fifteen'</span> }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>After you have read in the file and constructed this dictionary, you can use it to determine the correct spelling of an incorrectly-spelled word. How would you do this?</p>
-<p>After you’ve opened up the input file, loop through each line of it. You can split each line into individual words. For each word on the line, you can check if that word is one of the keys in the misspellings dictionary. If it is, you can assume it is incorrectly spelled. The correct spelling of that word is the value associated with the key, so you can grab it from the dictionary and either replace the original word (if in replace mode) or use it as a suggestion (if in suggest mode).</p>
-</section>
-<section id="preserving-capitalization" class="level1">
-<h1>Preserving Capitalization</h1>
-<p>The words in the <code>misspellings.txt</code> file will be all in lower case. However, your program should also be able to replace or suggest fixes for misspelled capitalized words. For instance, it should be able to change <code>Hudnred</code> to <code>Hundred</code> in replace mode.</p>
-<p>Before you try to look up a word in the misspellings dictionary, determine if it is or is not capitalized (meaning that the first letter is upper-case). Then, you can convert it to lower case. If the word does need replacing, then you should make sure to capitalize the correctly spelled word if the original word was also capitalized.</p>
-<p>You might find the string methods <code>.lower()</code>,<code>.isupper()</code>, and <code>.capitalize()</code> useful.</p>
-</section>
-<section id="ignoring-punctuation" class="level1">
-<h1>Ignoring Punctuation</h1>
-<p>You also should make the spell checker ignore punctuation. In particular, <code>spellcheck.py``` should be able to handle a trailing ,, ., ?, or !. For instance, it should be able to change</code>hudnred?<code>to</code>hundred?` in replace mode. How can this be accomplished?</p>
-<p>Before looking up a word in the misspellings dictionary, check if the last character is one of the four types of punctuation that you should look for (, or . or ? or !). If it is, create a variable to store that punctuation, and then trim it off of the end of the word. Then, proceed with checking the spelling. After you have determined if it is spelled correctly or not, you can put the punctuation at the end of the word.</p>
 </section>
 <section id="development-strategy" class="level1">
 <h1>Development Strategy</h1>
-<section id="reading-in-misspellings.txt" class="level2">
-<h2 class="anchored" data-anchor-id="reading-in-misspellings.txt">(1) Reading in misspellings.txt</h2>
-<p>Create a function that will be responsible for opening up the misspellings file and reading in the information. The function can assume that the misspellings.txt file exists. The function should open the file, read the lines, and populate the misspellings dictionary, as described previously in this specification.</p>
+<p>In order to get the game working, you must implement several functions. Descriptions for what every function should do are provided below. Implementing and testing these functions is up to you.</p>
+<section id="functions-to-implement" class="level2">
+<h2 class="anchored" data-anchor-id="functions-to-implement">Functions to Implement</h2>
+<section id="read_file" class="level3">
+<h3 class="anchored" data-anchor-id="read_file">read_file</h3>
+<p>For this file, for example:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>5</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>5</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>1, 0, 0, 0, 0</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>1, 0, 0, 0, 0</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>0, 1, 0, 0, 0</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>0, 0, 0, 0, 1</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>1, 0, 0 ,0, 1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Your function should return:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>[[<span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>],</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a> [<span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>],</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a> [<span class="st">'0'</span>, <span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>],</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a> [<span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'X'</span>],</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a> [<span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'X'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="replacing-words" class="level2">
-<h2 class="anchored" data-anchor-id="replacing-words">(2) Replacing words</h2>
-<p>Next, work reading the input file and replacing misspelled words. At this point, don’t yet worry about capitalized words, or punctuation. Iterate through the contents of the input file, line-by-line and word-by-word. When a correctly-spelled word is encountered, print it out with a trailing space. When an incorrectly-spelled word is encountered, print out the correctly-spelled version instead.</p>
+<section id="make_empty_grid" class="level3">
+<h3 class="anchored" data-anchor-id="make_empty_grid">make_empty_grid</h3>
+<p>Return a 2D list that has the same dimensions of a passed in 2D list where every inner element is an empty space. For example, if the passed in the grid is:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>[[<span class="st">'X'</span>, <span class="st">'3'</span>, <span class="st">'X'</span>], [<span class="st">'2'</span>, <span class="st">'X'</span>, <span class="st">'2'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Return:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>[[<span class="st">' '</span>, <span class="st">' '</span>, <span class="st">' '</span>], [<span class="st">' '</span>, <span class="st">' '</span>, <span class="st">' '</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="handle-punctuation-handle-capitalization" class="level2">
-<h2 class="anchored" data-anchor-id="handle-punctuation-handle-capitalization">(3) Handle Punctuation / Handle Capitalization</h2>
-<p>You might find one or the other of these easier or harder, so choose whichever you think you will be able to accomplish more quickly. Once you have one working, move to the other! Handling punctuation is extra credit.</p>
+<section id="update_grid" class="level3">
+<h3 class="anchored" data-anchor-id="update_grid">update_grid</h3>
+<p>Takes in a single 2D list where every value is either “X” or “0” (Note the formatting is going to be the same as the list returned by read_file). The function should then replace all the 0’s with the number of adjacent mines, which is some cases will still be 0. As we are modifying an already existing list nothing is to be returned by the function. For example, if passed in the result of reading <a href="data/fiveByFive.txt">fiveByFive.txt</a></p>
+<p>Which is:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>[[<span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>], </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a> [<span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>], </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a> [<span class="st">'0'</span>, <span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>], </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a> [<span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'X'</span>], </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a> [<span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'X'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The function should modify it to become:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>[[<span class="st">'X'</span>, <span class="st">'2'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>], </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a> [<span class="st">'X'</span>, <span class="st">'3'</span>, <span class="st">'1'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>], </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a> [<span class="st">'2'</span>, <span class="st">'X'</span>, <span class="st">'1'</span>, <span class="st">'1'</span>, <span class="st">'1'</span>], </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a> [<span class="st">'2'</span>, <span class="st">'2'</span>, <span class="st">'1'</span>, <span class="st">'2'</span>, <span class="st">'X'</span>], </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a> [<span class="st">'X'</span>, <span class="st">'1'</span>, <span class="st">'0'</span>, <span class="st">'2'</span>, <span class="st">'X'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="write-out-output-file" class="level2">
-<h2 class="anchored" data-anchor-id="write-out-output-file">(4) Write out output file</h2>
-<p>Your function that writes out the output file should be named <code>correct_spelling</code> and the output file should have the <code>output_</code> prefix. That means that if the original file was names <code>words_1.txt</code>, the output file should be named <code>output_words_1.txt</code></p>
+<section id="dig" class="level3">
+<h3 class="anchored" data-anchor-id="dig">dig</h3>
+<p>It handles the actual making of a move.</p>
+<p>Takes in three parameters:</p>
+<ul>
+<li>The first is a 2D list that follows the formatting of the grid returned from <code>update_grid.</code> This 2D list serves as an answer key of sorts that contains what to reveal to the user. As squares are revealed the values are copied from here to the user’s view.</li>
+<li>The second parameter is a string which is the coordinate to reveal. Not that this is formatted so that the first character is a letter, which is the x position to reveal. The rest of the string is going to be a number which is the y position to reveal. “a0” For example would reveal the bottom left corner of the grid.</li>
+<li>The third parameter is a 2D list, which is used to show which squares the player has revealed. Initially, this grid will be formatted as the return value from <code>make_empty_grid</code>, however, as the player reveals more squares those corresponding values from the answer key list are going to be moved into this grid we are going to refer to as the user view.</li>
+</ul>
+<p>To actually make a move requires translating the string into two integers which are the corresponding values to use as indices to get the value at that point on the grid. Then, copy the value from that location (using those new values) on the answer key grid into the same spot of the user view grid.</p>
+<p>The next step is to check all the squares around the given coordinates, revealing only the integers for those squares, keeping the mines hidden.</p>
+</section>
+<section id="count_total_moves" class="level3">
+<h3 class="anchored" data-anchor-id="count_total_moves">count_total_moves</h3>
+<p>It returns the number of spots on the grid that have not been revealed by the player and do not contain a mine.</p>
+</section>
+<section id="print_grid" class="level3">
+<h3 class="anchored" data-anchor-id="print_grid">print_grid</h3>
+<p>Takes in a 2D list and prints it out to standard output. For example printing the initial user view (remember the user view is the blank grid made from <code>make_empty_grid</code>) of the grid from <a href="data/tenSquare.txt">tenSquare.txt</a> should output:</p>
+<pre>10 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 9 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 8 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 7 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 6 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 5 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 4 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 3 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 2 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 1 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 0 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+    a  b  c  d  e  f  g  h  i  j  k
+</pre>
+<p>Take note of how the number labels are right-aligned. For the letter labels you can assume that the width will be at most 26 (One for each lower case letter) and the height will be 100 or less. You may also assume that every element in the 2D list will be only a single character string.</p>
+</section>
+<section id="determine_game_status" class="level3">
+<h3 class="anchored" data-anchor-id="determine_game_status">determine_game_status</h3>
+<p>This function should return a boolean which is <code>True</code> if the game should continue or <code>False</code> if the game is over. <code>False</code> is returned if a mine has been revealed or count is <code>0</code> meaning there are no squares without mines that are not revealed.</p>
+</section>
 </section>
 </section>
 <section id="test-cases" class="level1">
-<h1>Test Cases</h1>
-<p>There are going to be a number of test cases for this assignment. You should test out your program in chunks. Don’t try to tackle everything at once. If you follow the development strategy, you should be able to progressively pass more and more test cases, as you add more and more functionality.</p>
-<p>Below are several examples. Each example includes the contents of <code>misspellings.txt</code>, the contents of the input file, and the results for the output file.</p>
-<section id="example-1-no-punctuation-or-capitalized-words" class="level2">
-<h2 class="anchored" data-anchor-id="example-1-no-punctuation-or-capitalized-words">Example 1 (no punctuation or capitalized words)</h2>
-<p><code>misspellings.txt</code></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>datamic-&gt;dramatic</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>dramati-&gt;dramatic</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>elaphant-&gt;elephant</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>elofent-&gt;elephant</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>elaphent-&gt;elephant</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>zooo-&gt;zoo</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>zo-&gt;zoo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><code>words_1.txt</code></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>joe and his family went to the zoo the other day</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>the zooo had many animals including an elofent</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>the elaphant was being too dramati though</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>after they walked around joe left the zo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<h1>Test cases</h1>
+<p>Files:</p>
+<ul>
+<li><a href="data/fiveByFive.txt">fiveByFive.txt</a></li>
+<li><a href="data/tenSquare.txt">tenSquare.txt</a></li>
+</ul>
+<section id="full-game-win" class="level2">
+<h2 class="anchored" data-anchor-id="full-game-win">Full game win</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    spell_dict <span class="op">=</span> read_spellings()</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    correct_spelling(<span class="st">"words_1.txt"</span>, spell_dict)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    grid <span class="op">=</span> read_file(<span class="st">"fiveByFive.txt"</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    user_view <span class="op">=</span> make_empty_grid(grid)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    update_grid(grid)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    moves <span class="op">=</span> [<span class="st">"b0"</span>, <span class="st">"c2"</span>, <span class="st">"e4"</span>, <span class="st">"c4"</span>, <span class="st">"e2"</span>, <span class="st">"a2"</span>, <span class="st">"d0"</span>]</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    index <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> determine_game_status(grid, user_view) <span class="kw">and</span> index <span class="op">&lt;</span> <span class="bu">len</span>(moves):</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        dig(grid, moves[index], user_view)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>        index <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><code>output_words_1.txt</code></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>joe and his family went to the zoo the other day</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>the zoo had many animals including an elephant</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>the elephant was being too dramatic though</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>after they walked around joe left the zoo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<p>Should print to the standard output the following:</p>
+<pre> 4[ ][ ][ ][ ][ ]
+ 3[ ][ ][ ][ ][ ]
+ 2[ ][ ][ ][ ][ ]
+ 1[2][2][1][ ][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][ ][ ][ ][ ]
+ 3[ ][3][1][0][ ]
+ 2[ ][ ][1][1][ ]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][ ][ ][0][0]
+ 3[ ][3][1][0][0]
+ 2[ ][ ][1][1][ ]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][2][0][0][0]
+ 3[ ][3][1][0][0]
+ 2[ ][ ][1][1][ ]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][2][0][0][0]
+ 3[ ][3][1][0][0]
+ 2[ ][ ][1][1][1]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][2][0][0][0]
+ 3[ ][3][1][0][0]
+ 2[2][ ][1][1][1]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][2][0][0][0]
+ 3[ ][3][1][0][0]
+ 2[2][ ][1][1][1]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][2][ ]
+   a  b  c  d  e  
+</pre>
 </section>
-<section id="example-2-with-punctuation-and-capitalized-words" class="level2">
-<h2 class="anchored" data-anchor-id="example-2-with-punctuation-and-capitalized-words">Example 2 (with punctuation and capitalized words)</h2>
-<p><code>misspellings.txt</code></p>
+<section id="full-game-lose" class="level2">
+<h2 class="anchored" data-anchor-id="full-game-lose">Full game lose</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>hereo-&gt;hero</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>heroc-&gt;hero</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>fluwe-&gt;flew</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>jumpedd-&gt;jumped</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>jimped-&gt;jumped</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>jumpped-&gt;jumped</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>savved-&gt;saved</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>sived-&gt;saved</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>sivved-&gt;saved</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>sumprean-&gt;superman</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>sumperan-&gt;superman</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>dayy-&gt;day</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>ayy-&gt;day</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    grid <span class="op">=</span> read_file(<span class="st">"fiveByFive.txt"</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    user_view <span class="op">=</span> make_empty_grid(grid)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    update_grid(grid)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    moves <span class="op">=</span> [<span class="st">"b0"</span>, <span class="st">"c2"</span>, <span class="st">"e4"</span>, <span class="st">"b2"</span>, <span class="st">"e2"</span>, <span class="st">"a2"</span>, <span class="st">"d0"</span>]</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    index <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> determine_game_status(grid, user_view) <span class="kw">and</span> index <span class="op">&lt;</span> <span class="bu">len</span>(moves):</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>        dig(grid, moves[index], user_view)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>        index <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><code>words_2.txt</code></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>There once was a hero, named superman.</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>Sumperan, being the hero he is, jumped.</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>After he jumped, he fluwe!</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>Then, Sumprean savved the day.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    spell_dict <span class="op">=</span> read_spellings()</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    correct_spelling(<span class="st">"words_2.txt"</span>, spell_dict)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><code>output_words_2.txt</code></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>There once was a hero, named superman.</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>Superman, being the hero he is, jumped.</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>After he jumped, he flew!</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>Then, Superman saved the day.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<p>Should output:</p>
+<pre> 4[ ][ ][ ][ ][ ]
+ 3[ ][ ][ ][ ][ ]
+ 2[ ][ ][ ][ ][ ]
+ 1[2][2][1][ ][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][ ][ ][ ][ ]
+ 3[ ][3][1][0][ ]
+ 2[ ][ ][1][1][ ]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][ ][ ][0][0]
+ 3[ ][3][1][0][0]
+ 2[ ][ ][1][1][ ]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][ ][ ][0][0]
+ 3[ ][3][1][0][0]
+ 2[ ][X][1][1][ ]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+</pre>
 
 
 </section>

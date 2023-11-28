@@ -31,6 +31,7 @@ website:
         - project-8.qmd
         - project-9.qmd
         - project-10.qmd
+        - project-11.qmd
       - section: "Extra Resources"
         contents: 
         - practice-01.qmd

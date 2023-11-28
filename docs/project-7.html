@@ -263,6 +263,12 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
  <span class="menu-text">Programming Project 10</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./project-11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programming Project 11</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -882,28 +888,14 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#minesweeper" id="toc-minesweeper" class="nav-link active" data-scroll-target="#minesweeper">Minesweeper</a>
+  <li><a href="#encrypter-decrypter" id="toc-encrypter-decrypter" class="nav-link active" data-scroll-target="#encrypter-decrypter">Encrypter / Decrypter</a>
   <ul class="collapse">
-  <li><a href="#minesweeper-rules" id="toc-minesweeper-rules" class="nav-link" data-scroll-target="#minesweeper-rules">Minesweeper Rules</a></li>
-  <li><a href="#input-file-format" id="toc-input-file-format" class="nav-link" data-scroll-target="#input-file-format">Input File Format</a></li>
+  <li><a href="#encrypter" id="toc-encrypter" class="nav-link" data-scroll-target="#encrypter">Encrypter</a></li>
+  <li><a href="#decrypter" id="toc-decrypter" class="nav-link" data-scroll-target="#decrypter">Decrypter</a></li>
   </ul></li>
-  <li><a href="#development-strategy" id="toc-development-strategy" class="nav-link" data-scroll-target="#development-strategy">Development Strategy</a>
+  <li><a href="#the-encrypting-algorithm" id="toc-the-encrypting-algorithm" class="nav-link" data-scroll-target="#the-encrypting-algorithm">The encrypting algorithm</a>
   <ul class="collapse">
-  <li><a href="#functions-to-implement" id="toc-functions-to-implement" class="nav-link" data-scroll-target="#functions-to-implement">Functions to Implement</a>
-  <ul class="collapse">
-  <li><a href="#read_file" id="toc-read_file" class="nav-link" data-scroll-target="#read_file">read_file</a></li>
-  <li><a href="#make_empty_grid" id="toc-make_empty_grid" class="nav-link" data-scroll-target="#make_empty_grid">make_empty_grid</a></li>
-  <li><a href="#update_grid" id="toc-update_grid" class="nav-link" data-scroll-target="#update_grid">update_grid</a></li>
-  <li><a href="#dig" id="toc-dig" class="nav-link" data-scroll-target="#dig">dig</a></li>
-  <li><a href="#count_total_moves" id="toc-count_total_moves" class="nav-link" data-scroll-target="#count_total_moves">count_total_moves</a></li>
-  <li><a href="#print_grid" id="toc-print_grid" class="nav-link" data-scroll-target="#print_grid">print_grid</a></li>
-  <li><a href="#determine_game_status" id="toc-determine_game_status" class="nav-link" data-scroll-target="#determine_game_status">determine_game_status</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#test-cases" id="toc-test-cases" class="nav-link" data-scroll-target="#test-cases">Test cases</a>
-  <ul class="collapse">
-  <li><a href="#full-game-win" id="toc-full-game-win" class="nav-link" data-scroll-target="#full-game-win">Full game win</a></li>
-  <li><a href="#full-game-lose" id="toc-full-game-lose" class="nav-link" data-scroll-target="#full-game-lose">Full game lose</a></li>
+  <li><a href="#test-cases" id="toc-test-cases" class="nav-link" data-scroll-target="#test-cases">Test cases</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -930,255 +922,97 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 
 <p>Programming Projects are to be submitted to <a href="">gradescope</a>.</p>
 <p><strong>Due date: Wednesday, March 27, 2024 at 7pm</strong></p>
-<p>This programming project is an adaptation of Ben Dicken’s Minesweeper Programming Assignment.</p>
-<p>You should name the file <code>minesweeper.py</code>.</p>
-<section id="minesweeper" class="level1">
-<h1>Minesweeper</h1>
-<p>Minesweeper is a one player puzzle game that was often preinstalled with older versions of Windows. The goal of the game is to clear a grid of squares, one at a time, trying to avoid any squares that have hidden mines. Upon clearing a square, a number may appear which tells how many mines are adjacent to the given square. Selecting a square containing a mine results in an instant loss, while revealing all non-mine squares results in a win. There are still versions of this game around, like <a href="https://www.google.com/fbx?fbx=minesweeper">this one made by Google</a>.</p>
-<section id="minesweeper-rules" class="level2">
-<h2 class="anchored" data-anchor-id="minesweeper-rules">Minesweeper Rules</h2>
-<p>For this assignment, we are going to simplify some of the rules of the original game while still keeping the core of the game intact. Instead of clicking on squares your program will be given coordinates. The primary gameplay loop is going to be generating coordinates to a square on the board upon which the square is revealed. There are two possibilities for what a square can contain.</p>
-<p>If a “X” is revealed, this is a mine which results in an instant loss.</p>
-<p>Otherwise, an integer is revealed, which is the number of adjacent (including diagonally) mines from the revealed square (including 0, which is handled differently by the original game). All integers around the given coordinates are also revealed (the mines remain hidden).</p>
-<p>For example, let’s say a player is provided the given board:</p>
-<pre> 2 [ ][ ][ ]
- 1 [ ][ ][ ]
- 0 [ ][ ][ ]
-    a  b  c
+<p>This programming project is an adaptation of Ben Dicken’s Encrypter / Decrypter Programming Assignment.</p>
+<section id="encrypter-decrypter" class="level1">
+<h1>Encrypter / Decrypter</h1>
+<p>This assignment exercises file reading and writing, random, and use of lists. You are going to write two separate programs which work together to encrypt (“mix-up”” and decrypt (“re-assemble”) <code>.txt</code> files, <code>.py</code> files, and other text-based files.</p>
+<p>Perhaps you’ve heard of the concept of “Encryption” in passing. In this assignment, we are going to be writing programs that are capable of encrypting and decrypting text files. The Wikipedia definition of Encryption goes like so:</p>
+<blockquote class="blockquote">
+<p>In cryptography, encryption is the process of encoding a message or information in such a way that only authorized parties can access it. Encryption does not itself prevent interference, but denies the intelligible content to a would-be interceptor. In an encryption scheme, the intended information or message, referred to as plaintext, is encrypted using an encryption algorithm, generating ciphertext that can only be read if decrypted. For technical reasons, an encryption scheme usually uses a pseudo-random encryption key generated by an algorithm. It is in principle possible to decrypt the message without possessing the key, but, for a well-designed encryption scheme, considerable computational resources and skills are required. An authorized recipient can easily decrypt the message with the key provided by the originator to recipients but not to unauthorized users.</p>
+</blockquote>
+<p>We are going to implement two programs (one to encrypt a text file, and one to decrypt).</p>
+<section id="encrypter" class="level2">
+<h2 class="anchored" data-anchor-id="encrypter">Encrypter</h2>
+<p>The first program you will write shall be named <code>encrypter.py</code>. The job of this program will be to encrypt (“mix” or “shuffle”) the lines of a text file, but do it in such a way that it can be un-done later with a separate program (which you will also write).</p>
+<p>When run, your program will accept as argument a file name to encrypt. This program will then run its encrypting (mixing) algorithm on the text file named <code>file_name</code>. It will save the encrypted version of the text file to a file named <code>encrypted.txt</code>.</p>
+<p>Your program will encrypt an input file by re-arranging the lines of the input file, based on indexes retrieved from calling <code>randint</code>. For example, to encrypt a file named <code>sample.txt</code> that looks like this:</p>
+<pre>|'''''|
+| 0 0 |
+|  ^  |
+|  -  |
+ ----- 
+   # 
+#######
+  ###
+ #   #
+ %   %
 </pre>
-<p>If the the coordinates <code>(0, "a")</code>are provided, a result may be:</p>
-<pre> 2 [ ][ ][ ]
- 1 [1][ ][ ]
- 0 [1][2][ ]
-    a  b  c
+<p>After running, <code>encrypted.txt</code> will have the following contents:</p>
+<pre>| 0 0 |
+ %   %
+#######
+   # 
+|'''''|
+|  ^  |
+  ###
+|  -  |
+ #   #
+ ----- 
 </pre>
-<p>This means that at <code>(0, "a")</code> there is not a mine, however there is one nearby. We know there’s no mine in <code>(1, "a")</code> because the integer <code>1</code> was also revealed. Specifically there is probably a mine in <code>(1, "b")</code>. Suppose the player’s next move is c0, which would produce:</p>
-<pre> 2 [ ][ ][ ]
- 1 [1][ ][ ]
- 0 [1][2][2]
-    a  b  c
+<p>All of the same lines from the original file exist in this file, but the order is not the same.</p>
+<p>Whenever <code>encrypter.py</code> runs, it will also write an index (key) file. This file will contain the corresponding indexes of each line in the encrypted file. Given the example above, <code>index.txt</code> would look like this:</p>
+<pre>2
+10
+7
+6
+1
+3
+8
+4
+9
+5
 </pre>
-<p>The 2 revealed means that there would be 2 mines somewhere among <code>(1, "b")</code>, <code>(1, "c")</code> and <code>(0, "c")</code>. After this let’s say the coordinates <code>(1, "b")</code> are provided.</p>
-<pre> 2 [ ][ ][ ]
- 1 [1][X][ ]
- 0 [1][2][2]
-    a  b  c
-</pre>
-<p>Since this reveals an X the game has ended and the player loss. If all non-mine squares were revealed, the player would have won.</p>
+<p>The number on each line of the file is the line number that each shuffled line was on in the original program. For example: 2 is on the first line. This means that the first line of the encrypted file was originally on line 2 of the input file. 10 is on the second line. This means that the second line of the encrypted file was originally on line 10 of the input file.</p>
+<p>Without the <code>index.txt</code> file, another program or a human would not know how to decrypt the <code>encrypted.txt</code> file. If a human or program has both the <code>encrypted</code> file and the <code>index</code> file, it can be decrypted systematically. Thus the index file works like a secret “key” for the program. Whoever has access to both the index file and the encrypted text can decrypt the encrypted text.</p>
 </section>
-<section id="input-file-format" class="level2">
-<h2 class="anchored" data-anchor-id="input-file-format">Input File Format</h2>
-<p>All files used for testing are going to follow the same formatting. The first line will contain an integer which is the width of the board. Similarly, the second line will contain the height. There will then be N (Height of the board) more lines. Each of these lines will contain X (Width of the board) elements separated by commas. Each element may be either a 1 or 0. Provided below is what an example file would look like:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>2</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>3</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>0, 1</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>1, 0</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>0, 1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="decrypter" class="level2">
+<h2 class="anchored" data-anchor-id="decrypter">Decrypter</h2>
+<p>After writing <code>encrypter.py</code>, you are to write a related program named <code>decrypter.py</code> which will take the name of a text file and index (key) file, and then it will decrypt the text. The program will read in these two files, and using the information stored within them, it will put the contents back in the original order. The decrypted file should be saved to a file named <code>decrypted.txt</code></p>
+<p>You should use lists and the indexes from the index file to help with getting the lines back in the correct order.</p>
+<p>There will be multiple examples of running this program at the end of this specification. Make sure to test your code carefully using the tool!</p>
 </section>
 </section>
-<section id="development-strategy" class="level1">
-<h1>Development Strategy</h1>
-<p>In order to get the game working, you must implement several functions. Descriptions for what every function should do are provided below. Implementing and testing these functions is up to you.</p>
-<section id="functions-to-implement" class="level2">
-<h2 class="anchored" data-anchor-id="functions-to-implement">Functions to Implement</h2>
-<section id="read_file" class="level3">
-<h3 class="anchored" data-anchor-id="read_file">read_file</h3>
-<p>For this file, for example:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>5</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>5</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>1, 0, 0, 0, 0</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>1, 0, 0, 0, 0</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>0, 1, 0, 0, 0</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>0, 0, 0, 0, 1</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>1, 0, 0 ,0, 1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Your function should return:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>[[<span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>],</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a> [<span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>],</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a> [<span class="st">'0'</span>, <span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>],</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a> [<span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'X'</span>],</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a> [<span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'X'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="make_empty_grid" class="level3">
-<h3 class="anchored" data-anchor-id="make_empty_grid">make_empty_grid</h3>
-<p>Return a 2D list that has the same dimensions of a passed in 2D list where every inner element is an empty space. For example, if the passed in the grid is:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>[[<span class="st">'X'</span>, <span class="st">'3'</span>, <span class="st">'X'</span>], [<span class="st">'2'</span>, <span class="st">'X'</span>, <span class="st">'2'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Return:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>[[<span class="st">' '</span>, <span class="st">' '</span>, <span class="st">' '</span>], [<span class="st">' '</span>, <span class="st">' '</span>, <span class="st">' '</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="update_grid" class="level3">
-<h3 class="anchored" data-anchor-id="update_grid">update_grid</h3>
-<p>Takes in a single 2D list where every value is either “X” or “0” (Note the formatting is going to be the same as the list returned by read_file). The function should then replace all the 0’s with the number of adjacent mines, which is some cases will still be 0. As we are modifying an already existing list nothing is to be returned by the function. For example, if passed in the result of reading <a href="data/fiveByFive.txt">fiveByFive.txt</a></p>
-<p>Which is:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>[[<span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>], </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a> [<span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>], </span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a> [<span class="st">'0'</span>, <span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>], </span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a> [<span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'X'</span>], </span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a> [<span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'X'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>The function should modify it to become:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>[[<span class="st">'X'</span>, <span class="st">'2'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>], </span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a> [<span class="st">'X'</span>, <span class="st">'3'</span>, <span class="st">'1'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>], </span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a> [<span class="st">'2'</span>, <span class="st">'X'</span>, <span class="st">'1'</span>, <span class="st">'1'</span>, <span class="st">'1'</span>], </span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a> [<span class="st">'2'</span>, <span class="st">'2'</span>, <span class="st">'1'</span>, <span class="st">'2'</span>, <span class="st">'X'</span>], </span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a> [<span class="st">'X'</span>, <span class="st">'1'</span>, <span class="st">'0'</span>, <span class="st">'2'</span>, <span class="st">'X'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="dig" class="level3">
-<h3 class="anchored" data-anchor-id="dig">dig</h3>
-<p>It handles the actual making of a move.</p>
-<p>Takes in three parameters:</p>
+<section id="the-encrypting-algorithm" class="level1">
+<h1>The encrypting algorithm</h1>
+<p>The steps of the algorithm are outlined below and you must implement these steps in python. Note that the below steps are just the steps for how to determine which lines to put where in the encrypted file. You also need to handle all of the file reading, writing, etc.</p>
 <ul>
-<li>The first is a 2D list that follows the formatting of the grid returned from <code>update_grid.</code> This 2D list serves as an answer key of sorts that contains what to reveal to the user. As squares are revealed the values are copied from here to the user’s view.</li>
-<li>The second parameter is a string which is the coordinate to reveal. Not that this is formatted so that the first character is a letter, which is the x position to reveal. The rest of the string is going to be a number which is the y position to reveal. “a0” For example would reveal the bottom left corner of the grid.</li>
-<li>The third parameter is a 2D list, which is used to show which squares the player has revealed. Initially, this grid will be formatted as the return value from <code>make_empty_grid</code>, however, as the player reveals more squares those corresponding values from the answer key list are going to be moved into this grid we are going to refer to as the user view.</li>
-</ul>
-<p>To actually make a move requires translating the string into two integers which are the corresponding values to use as indices to get the value at that point on the grid. Then, copy the value from that location (using those new values) on the answer key grid into the same spot of the user view grid.</p>
-<p>The next step is to check all the squares around the given coordinates, revealing only the integers for those squares, keeping the mines hidden.</p>
-</section>
-<section id="count_total_moves" class="level3">
-<h3 class="anchored" data-anchor-id="count_total_moves">count_total_moves</h3>
-<p>It returns the number of spots on the grid that have not been revealed by the player and do not contain a mine.</p>
-</section>
-<section id="print_grid" class="level3">
-<h3 class="anchored" data-anchor-id="print_grid">print_grid</h3>
-<p>Takes in a 2D list and prints it out to standard output. For example printing the initial user view (remember the user view is the blank grid made from <code>make_empty_grid</code>) of the grid from <a href="data/tenSquare.txt">tenSquare.txt</a> should output:</p>
-<pre>10 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 9 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 8 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 7 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 6 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 5 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 4 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 3 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 2 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 1 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 0 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-    a  b  c  d  e  f  g  h  i  j  k
-</pre>
-<p>Take note of how the number labels are right-aligned. For the letter labels you can assume that the width will be at most 26 (One for each lower case letter) and the height will be 100 or less. You may also assume that every element in the 2D list will be only a single character string.</p>
-</section>
-<section id="determine_game_status" class="level3">
-<h3 class="anchored" data-anchor-id="determine_game_status">determine_game_status</h3>
-<p>This function should return a boolean which is <code>True</code> if the game should continue or <code>False</code> if the game is over. <code>False</code> is returned if a mine has been revealed or count is <code>0</code> meaning there are no squares without mines that are not revealed.</p>
-</section>
-</section>
-</section>
-<section id="test-cases" class="level1">
-<h1>Test cases</h1>
-<p>Files:</p>
+<li>Import the random python library</li>
+<li>Initialize the random library with a seed value of <code>42</code>. Just use the line of code <code>random.seed(42)</code>.</li>
+<li>However many lines there are in the input text file, repeat the following steps (line_count * 5) times.
 <ul>
-<li><a href="data/fiveByFive.txt">fiveByFive.txt</a></li>
-<li><a href="data/tenSquare.txt">tenSquare.txt</a></li>
+<li>Chose two random integers starting from zero and going up to the number of lines in the file minus 1</li>
+<li>Swap the content of the lines at these two indexes</li>
+</ul></li>
 </ul>
-<section id="full-game-win" class="level2">
-<h2 class="anchored" data-anchor-id="full-game-win">Full game win</h2>
+<p>By choosing the seed <code>42</code>, you should get the same results if you follow the steps carefully.</p>
+<section id="test-cases" class="level2">
+<h2 class="anchored" data-anchor-id="test-cases">Test cases</h2>
+<ul>
+<li><a href="data/sample.txt">sample.txt</a></li>
+<li><a href="data/poem.txt">poem.txt</a></li>
+<li><a href="data/few-steps.txt">few-steps.txt</a></li>
+<li><a href="data/many-steps.txt">many-steps.txt</a></li>
+</ul>
+<p>Call for <code>encrypter.py</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    grid <span class="op">=</span> read_file(<span class="st">"fiveByFive.txt"</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    user_view <span class="op">=</span> make_empty_grid(grid)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    update_grid(grid)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    moves <span class="op">=</span> [<span class="st">"b0"</span>, <span class="st">"c2"</span>, <span class="st">"e4"</span>, <span class="st">"c4"</span>, <span class="st">"e2"</span>, <span class="st">"a2"</span>, <span class="st">"d0"</span>]</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    index <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> determine_game_status(grid, user_view) <span class="kw">and</span> index <span class="op">&lt;</span> <span class="bu">len</span>(moves):</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        dig(grid, moves[index], user_view)</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>        index <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    encrypt_file(<span class="st">"sample.txt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Should print to the standard output the following:</p>
-<pre> 4[ ][ ][ ][ ][ ]
- 3[ ][ ][ ][ ][ ]
- 2[ ][ ][ ][ ][ ]
- 1[2][2][1][ ][ ]
- 0[ ][1][0][ ][ ]
-   a  b  c  d  e  
- 4[ ][ ][ ][ ][ ]
- 3[ ][3][1][0][ ]
- 2[ ][ ][1][1][ ]
- 1[2][2][1][2][ ]
- 0[ ][1][0][ ][ ]
-   a  b  c  d  e  
- 4[ ][ ][ ][0][0]
- 3[ ][3][1][0][0]
- 2[ ][ ][1][1][ ]
- 1[2][2][1][2][ ]
- 0[ ][1][0][ ][ ]
-   a  b  c  d  e  
- 4[ ][2][0][0][0]
- 3[ ][3][1][0][0]
- 2[ ][ ][1][1][ ]
- 1[2][2][1][2][ ]
- 0[ ][1][0][ ][ ]
-   a  b  c  d  e  
- 4[ ][2][0][0][0]
- 3[ ][3][1][0][0]
- 2[ ][ ][1][1][1]
- 1[2][2][1][2][ ]
- 0[ ][1][0][ ][ ]
-   a  b  c  d  e  
- 4[ ][2][0][0][0]
- 3[ ][3][1][0][0]
- 2[2][ ][1][1][1]
- 1[2][2][1][2][ ]
- 0[ ][1][0][ ][ ]
-   a  b  c  d  e  
- 4[ ][2][0][0][0]
- 3[ ][3][1][0][0]
- 2[2][ ][1][1][1]
- 1[2][2][1][2][ ]
- 0[ ][1][0][2][ ]
-   a  b  c  d  e  
-</pre>
-</section>
-<section id="full-game-lose" class="level2">
-<h2 class="anchored" data-anchor-id="full-game-lose">Full game lose</h2>
+<p>Call for <code>decrypter.py</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    grid <span class="op">=</span> read_file(<span class="st">"fiveByFive.txt"</span>)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    user_view <span class="op">=</span> make_empty_grid(grid)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    update_grid(grid)</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    moves <span class="op">=</span> [<span class="st">"b0"</span>, <span class="st">"c2"</span>, <span class="st">"e4"</span>, <span class="st">"b2"</span>, <span class="st">"e2"</span>, <span class="st">"a2"</span>, <span class="st">"d0"</span>]</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    index <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> determine_game_status(grid, user_view) <span class="kw">and</span> index <span class="op">&lt;</span> <span class="bu">len</span>(moves):</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>        dig(grid, moves[index], user_view)</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>        index <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    decrypt_file()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Should output:</p>
-<pre> 4[ ][ ][ ][ ][ ]
- 3[ ][ ][ ][ ][ ]
- 2[ ][ ][ ][ ][ ]
- 1[2][2][1][ ][ ]
- 0[ ][1][0][ ][ ]
-   a  b  c  d  e  
- 4[ ][ ][ ][ ][ ]
- 3[ ][3][1][0][ ]
- 2[ ][ ][1][1][ ]
- 1[2][2][1][2][ ]
- 0[ ][1][0][ ][ ]
-   a  b  c  d  e  
- 4[ ][ ][ ][0][0]
- 3[ ][3][1][0][0]
- 2[ ][ ][1][1][ ]
- 1[2][2][1][2][ ]
- 0[ ][1][0][ ][ ]
-   a  b  c  d  e  
- 4[ ][ ][ ][0][0]
- 3[ ][3][1][0][0]
- 2[ ][X][1][1][ ]
- 1[2][2][1][2][ ]
- 0[ ][1][0][ ][ ]
-   a  b  c  d  e  
-</pre>
 
 
 </section>
