@@ -229,7 +229,7 @@ We won't have classes due to university-wide holidays on the following dates:
 
 ```{r}
 schedule %>% 
-  filter(!is.na(holiday)) %>% 
+  filter(!is.na(holiday) & term == "spring 2024") %>% 
   select(week_number, formatted_date, holiday) %>% 
   kable(col.names = c("Week", "Date", "Holiday"))
 ```

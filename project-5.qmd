@@ -5,3 +5,117 @@ title: "Programming Project 5"
 Programming Projects are to be submitted to [gradescope]().
 
 **Due date: `r assignments %>% filter(assessment == "Programming Project 6") %>% pull(formatted_date)` at 7pm**
+
+
+This programming project is an adaptation of Ben Dicken's Where's the Money Programming Assignment.
+
+Budgeting and money management is very important both at the individual level, and for corporations and government. Having a clear understanding of where your money goes, how much you are saving, and how much you invest is important to financial success. As a famous author once wrote:
+
+> Annual income twenty pounds, annual expenditure nineteen six, result happiness.
+> Annual income twenty pounds, annual expenditure twenty pound ought and six, result misery.
+
+*–Charles Dickens*
+
+In this assignment, you will be writing a program that helps a user visualize and understand how much money they spend of various categories of expenditures. Perhaps you will even find this program useful for your personal finances! You should name your program `wheres_the_money.py`.
+
+# Overview of the program
+
+This program takes a number of various arguments about how much someone makes, and how much they spend. The program will accept 5 argument values:
+
+* Annual salary
+* Monthly mortgage or rent
+* Monthly bills
+* Weekly grocery/food expenses
+* Annual travel
+
+
+These 5 values will be used to generate a visualization of the financial situation that looks like so:
+
+<pre>
+------------------------------------------------------------------
+See the financial breakdown below, based on a salary of $50000
+------------------------------------------------------------------
+| mortgage/rent | $  12,000.00 |  24.0% | ########################
+|         bills | $   4,800.00 |   9.6% | #########
+|          food | $  10,400.00 |  20.8% | ####################
+|        travel | $   2,500.00 |   5.0% | #####
+|           tax | $  10,000.00 |  20.0% | ####################
+|         extra | $  10,300.00 |  20.6% | ####################
+------------------------------------------------------------------
+</pre>
+
+As you can see, the result is essentially a 6-row, 4-column grid that neatly shows that amounts and percentages of income go where.
+
+Each row represents an expense (or other category) where money goes to on a yearly basis. The first columns provides the name of the category. The second column shows the amount of money that goes to this category in dollars. The third columns shows the amount of money as a percentage of yearly income. The last column is a horizontal bard that correlates with the percentage of income. The number of # characters in this column should be the same as the percentage of income (rounded down).
+
+# Calculating the values
+
+The output provided above shows the kind of output this program should produce. Let’s talk a bit about how to compute these values.
+
+The basis for all of the percentages is the first input value - the annual income. All of the percentages are calculated based on this. The next two inputs, rent and bills, are monthly expense values. In order to get the total spend on these categories annually, these numbers must be multiplied by the number of months in a year. Then, you can use this result to calculate the percentage. The fourth value is a weekly expense, so this must instead be multiplied by the number of weeks in a year. The fifth value is already input as an annual value, so you don’t need to multiple by number of weeks or months.
+
+The tax percentage is dependent upon the amount of money a person make annually. The tax brackets are as follows:
+
+* [$0, $15k] annually: 10% tax
+* ($15k, $75k] annually: 20% tax
+* ($75k, $200k] annually: 25% tax
+* over $200k annually: 30% tax
+
+You should use one or more if / elif / else statements in the code to determine which tax percentage to use. You can store the tax percentage as an integer variable, with one of the following values: 10, 20, 25, or 30. You can compute the amount of the salary goes to taxes as a particular percentage with this formula:
+
+* annual_salary * ( tax_percentage / 100.0)
+
+After calculating all of these values programmatically, you should generate the output table.
+
+There is also a tax limit of $75,000. The tax should be capped at this value, and if the limit is reached, a message indicating this should be printed out after the chart. The message should say:
+
+<pre>
+>>> TAX LIMIT REACHED <<<
+Overspending
+What happens if the expenditures and taxes are more than the annual salary? This should be represented by negative values in the extra row. You should also print a warning after the chart. Below is an example of a financial situation in which the user spends more than they earn, resulting in a deficit in the extra row.
+</pre>
+
+
+```{python}
+#| eval: false
+#| echo: true
+# arguments: salary, mortgage/rent, bills, food, travel
+wheres_the_money(40000, 2000, 300, 150, 4000)
+```
+
+
+<pre>
+------------------------------------------------------------------------------------------------------
+See the financial breakdown below, based on a salary of $40000
+------------------------------------------------------------------------------------------------------
+| mortgage/rent | $  24,000.00 |  60.0% | ############################################################
+|         bills | $   3,600.00 |   9.0% | #########
+|          food | $   7,800.00 |  19.5% | ###################
+|        travel | $   4,000.00 |  10.0% | ##########
+|           tax | $   8,000.00 |  20.0% | ####################
+|         extra | $  -7,400.00 | -18.5% |
+------------------------------------------------------------------------------------------------------
+>>> WARNING: DEFICIT <<<
+Validation
+You are required to validate the inputs that your program accepts. You should use if-statements for the validation. For each numeric input, you should use the isnumeric function to check if is a positive integer before converting the value to an integer.
+</pre>
+
+
+# Formatting a Number
+
+Notice that the numbers are formatted in a particular way in the output table. You must match this formatting exactly. In order to do so, you can use the format() function. This function was mentioned in chapter two of the textbook. I will provide one example of how you can use this function to match the formatting in the spec.
+
+Say we have a floating point number, like below:
+
+number = 134567.123
+Perhaps this is a result you get for one of the dollar values after doing the necessary computations. When printing, you’ll want to adjust the way it is printed in several ways.
+
+# Add a comma
+
+Set to stop at two decimal points
+Add necessary spacing before the number, so that the table lines up
+You could print out this number and add these three things:
+
+string_to_print_out = format(number, '15,.1f')
+T
+he 15 indicates that the resulting string should be 15 characters wide. Any characters not needed to display the number will be added as padding to the left side. The , indicates that commas should be added to the number. The 1 indicates that one decimal place should be shown. Use this function (with different formatting options) to print out the formatted percentages and dollar values that you calculate.

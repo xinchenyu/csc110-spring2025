@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -850,7 +884,16 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview-of-the-program" id="toc-overview-of-the-program" class="nav-link active" data-scroll-target="#overview-of-the-program">Overview of the program</a></li>
+  <li><a href="#calculating-the-values" id="toc-calculating-the-values" class="nav-link" data-scroll-target="#calculating-the-values">Calculating the values</a></li>
+  <li><a href="#formatting-a-number" id="toc-formatting-a-number" class="nav-link" data-scroll-target="#formatting-a-number">Formatting a Number</a></li>
+  <li><a href="#add-a-comma" id="toc-add-a-comma" class="nav-link" data-scroll-target="#add-a-comma">Add a comma</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -874,8 +917,91 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 
 <p>Programming Projects are to be submitted to <a href="">gradescope</a>.</p>
 <p><strong>Due date: <code>r assignments %&gt;% filter(assessment == "Programming Project 6") %&gt;% pull(formatted_date)</code> at 7pm</strong></p>
+<p>This programming project is an adaptation of Ben Dicken’s Where’s the Money Programming Assignment.</p>
+<p>Budgeting and money management is very important both at the individual level, and for corporations and government. Having a clear understanding of where your money goes, how much you are saving, and how much you invest is important to financial success. As a famous author once wrote:</p>
+<blockquote class="blockquote">
+<p>Annual income twenty pounds, annual expenditure nineteen six, result happiness. Annual income twenty pounds, annual expenditure twenty pound ought and six, result misery.</p>
+</blockquote>
+<p><em>–Charles Dickens</em></p>
+<p>In this assignment, you will be writing a program that helps a user visualize and understand how much money they spend of various categories of expenditures. Perhaps you will even find this program useful for your personal finances! You should name your program <code>wheres_the_money.py</code>.</p>
+<section id="overview-of-the-program" class="level1">
+<h1>Overview of the program</h1>
+<p>This program takes a number of various arguments about how much someone makes, and how much they spend. The program will accept 5 argument values:</p>
+<ul>
+<li>Annual salary</li>
+<li>Monthly mortgage or rent</li>
+<li>Monthly bills</li>
+<li>Weekly grocery/food expenses</li>
+<li>Annual travel</li>
+</ul>
+<p>These 5 values will be used to generate a visualization of the financial situation that looks like so:</p>
+<pre>------------------------------------------------------------------
+See the financial breakdown below, based on a salary of $50000
+------------------------------------------------------------------
+| mortgage/rent | $  12,000.00 |  24.0% | ########################
+|         bills | $   4,800.00 |   9.6% | #########
+|          food | $  10,400.00 |  20.8% | ####################
+|        travel | $   2,500.00 |   5.0% | #####
+|           tax | $  10,000.00 |  20.0% | ####################
+|         extra | $  10,300.00 |  20.6% | ####################
+------------------------------------------------------------------
+</pre>
+<p>As you can see, the result is essentially a 6-row, 4-column grid that neatly shows that amounts and percentages of income go where.</p>
+<p>Each row represents an expense (or other category) where money goes to on a yearly basis. The first columns provides the name of the category. The second column shows the amount of money that goes to this category in dollars. The third columns shows the amount of money as a percentage of yearly income. The last column is a horizontal bard that correlates with the percentage of income. The number of # characters in this column should be the same as the percentage of income (rounded down).</p>
+</section>
+<section id="calculating-the-values" class="level1">
+<h1>Calculating the values</h1>
+<p>The output provided above shows the kind of output this program should produce. Let’s talk a bit about how to compute these values.</p>
+<p>The basis for all of the percentages is the first input value - the annual income. All of the percentages are calculated based on this. The next two inputs, rent and bills, are monthly expense values. In order to get the total spend on these categories annually, these numbers must be multiplied by the number of months in a year. Then, you can use this result to calculate the percentage. The fourth value is a weekly expense, so this must instead be multiplied by the number of weeks in a year. The fifth value is already input as an annual value, so you don’t need to multiple by number of weeks or months.</p>
+<p>The tax percentage is dependent upon the amount of money a person make annually. The tax brackets are as follows:</p>
+<ul>
+<li>[$0, $15k] annually: 10% tax</li>
+<li>($15k, $75k] annually: 20% tax</li>
+<li>($75k, $200k] annually: 25% tax</li>
+<li>over $200k annually: 30% tax</li>
+</ul>
+<p>You should use one or more if / elif / else statements in the code to determine which tax percentage to use. You can store the tax percentage as an integer variable, with one of the following values: 10, 20, 25, or 30. You can compute the amount of the salary goes to taxes as a particular percentage with this formula:</p>
+<ul>
+<li>annual_salary * ( tax_percentage / 100.0)</li>
+</ul>
+<p>After calculating all of these values programmatically, you should generate the output table.</p>
+<p>There is also a tax limit of $75,000. The tax should be capped at this value, and if the limit is reached, a message indicating this should be printed out after the chart. The message should say:</p>
+<pre>&gt;&gt;&gt; TAX LIMIT REACHED &lt;&lt;&lt;
+Overspending
+What happens if the expenditures and taxes are more than the annual salary? This should be represented by negative values in the extra row. You should also print a warning after the chart. Below is an example of a financial situation in which the user spends more than they earn, resulting in a deficit in the extra row.
+</pre>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># arguments: salary, mortgage/rent, bills, food, travel</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>wheres_the_money(<span class="dv">40000</span>, <span class="dv">2000</span>, <span class="dv">300</span>, <span class="dv">150</span>, <span class="dv">4000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre>------------------------------------------------------------------------------------------------------
+See the financial breakdown below, based on a salary of $40000
+------------------------------------------------------------------------------------------------------
+| mortgage/rent | $  24,000.00 |  60.0% | ############################################################
+|         bills | $   3,600.00 |   9.0% | #########
+|          food | $   7,800.00 |  19.5% | ###################
+|        travel | $   4,000.00 |  10.0% | ##########
+|           tax | $   8,000.00 |  20.0% | ####################
+|         extra | $  -7,400.00 | -18.5% |
+------------------------------------------------------------------------------------------------------
+&gt;&gt;&gt; WARNING: DEFICIT &lt;&lt;&lt;
+Validation
+You are required to validate the inputs that your program accepts. You should use if-statements for the validation. For each numeric input, you should use the isnumeric function to check if is a positive integer before converting the value to an integer.
+</pre>
+</section>
+<section id="formatting-a-number" class="level1">
+<h1>Formatting a Number</h1>
+<p>Notice that the numbers are formatted in a particular way in the output table. You must match this formatting exactly. In order to do so, you can use the format() function. This function was mentioned in chapter two of the textbook. I will provide one example of how you can use this function to match the formatting in the spec.</p>
+<p>Say we have a floating point number, like below:</p>
+<p>number = 134567.123 Perhaps this is a result you get for one of the dollar values after doing the necessary computations. When printing, you’ll want to adjust the way it is printed in several ways.</p>
+</section>
+<section id="add-a-comma" class="level1">
+<h1>Add a comma</h1>
+<p>Set to stop at two decimal points Add necessary spacing before the number, so that the table lines up You could print out this number and add these three things:</p>
+<p>string_to_print_out = format(number, ‘15,.1f’) T he 15 indicates that the resulting string should be 15 characters wide. Any characters not needed to display the number will be added as padding to the left side. The , indicates that commas should be added to the number. The 1 indicates that one decimal place should be shown. Use this function (with different formatting options) to print out the formatted percentages and dollar values that you calculate.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
