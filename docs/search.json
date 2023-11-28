@@ -102,7 +102,7 @@
     "href": "syllabus.html#administrative-drops",
     "title": "Syllabus",
     "section": "Administrative Drops",
-    "text": "Administrative Drops\nEvery semester, students enroll in introductory CS classes but do not submit any work, resulting in a grade of E at the end of the term. To prevent this, at the end of the second week (September 1), all students who have not submitted/completed five or more of the following will be administratively dropped:\n\nClass presence on August 21\nAugust 23 quiz\nClass presence on August 25\nBeginning of semester survey\nClass presence on August 28\nAugust 30 quiz\nModule 1 Programming Problem 1\nModule 1 Programming Problem 2\nClass presence on September 1\n\nIn addition, to ensure your success in this course, and that you are on top of the work that is due every week, administrative drops will be in place throughout the semester. Students who miss coursework for two weeks or more often get an E at the end of the term in this course. After the second week of class, at any point during the semester if you fail to attend class and submit assignments for two consecutive weeks you will be administratively dropped."
+    "text": "Administrative Drops\nEvery semester, students enroll in introductory CS classes but do not submit any work, resulting in a grade of E at the end of the term. To prevent this, at the end of the second week (January 19), all students who have not submitted/completed five or more of the following will be administratively dropped:\n\nClass presence on January 10\nJanuary 10 quiz\nClass presence on January 12\nBeginning of semester survey\nClass presence on January 15\nJanuary 17 quiz\nModule 1 Programming Problem 1\nModule 1 Programming Problem 2\nClass presence on January 19\n\nIn addition, to ensure your success in this course, and that you are on top of the work that is due every week, administrative drops will be in place throughout the semester. Students who miss coursework for two weeks or more often get an E at the end of the term in this course. After the second week of class, at any point during the semester if you fail to attend class and submit assignments for two consecutive weeks you will be administratively dropped."
   },
   {
     "objectID": "syllabus.html#illnesses-and-emergencies",
@@ -1488,7 +1488,7 @@
     "href": "slides-13-03.html#random-module",
     "title": "random (class slides)",
     "section": "random module",
-    "text": "random module\nRemember to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random()\nprint(n)\n\nn = random.randint(0, 9)\nprint(n)\n\n0.7311587912269103\n0"
+    "text": "random module\nRemember to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random()\nprint(n)\n\nn = random.randint(0, 9)\nprint(n)\n\n0.3824719084081688\n5"
   },
   {
     "objectID": "slides-13-03.html#write-a-function",
@@ -1502,7 +1502,7 @@
     "href": "slides-13-03.html#write-a-function-solution",
     "title": "random (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nPeter"
+    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nJune"
   },
   {
     "objectID": "slides-13-03.html#setting-a-seed",

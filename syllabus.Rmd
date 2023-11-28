@@ -106,17 +106,17 @@ Absences pre-approved by the UA Dean of Students (or dean's designee) will be ho
 
 ## Administrative Drops
 
-Every semester, students enroll in introductory CS classes but do not submit any work, resulting in a grade of `E` at the end of the term. To prevent this, at the end of the **second week** (September 1), all students who have not submitted/completed **five or more** of the following will be administratively dropped:
+Every semester, students enroll in introductory CS classes but do not submit any work, resulting in a grade of `E` at the end of the term. To prevent this, at the end of the **second week** (January 19), all students who have not submitted/completed **five or more** of the following will be administratively dropped:
 
-1.  Class presence on August 21
-2.  August 23 quiz
-3.  Class presence on August 25
-4.  [Beginning of semester survey](https://uarizona.co1.qualtrics.com/jfe/form/SV_e3QarvVnEiImQ4K)
-5.  Class presence on August 28
-6.  August 30 quiz
-7.  [Module 1 Programming Problem 1](https://adrianapicoral.com/csc-110/assignments-01.html)
-8.  [Module 1 Programming Problem 2](https://adrianapicoral.com/csc-110/assignments-01.html)
-9.  Class presence on September 1
+1.  Class presence on January 10
+2.  January 10 quiz
+3.  Class presence on January 12
+4.  [Beginning of semester survey]()
+5.  Class presence on January 15
+6.  January 17 quiz
+7.  [Module 1 Programming Problem 1]()
+8.  [Module 1 Programming Problem 2]()
+9.  Class presence on January 19
 
 In addition, to ensure your success in this course, and that you are on top of the work that is due every week, administrative drops will be in place throughout the semester. Students who miss coursework for two weeks or more often get an E at the end of the term in this course. After the second week of class, at any point during the semester if you fail to attend class and submit assignments for two consecutive weeks you will be administratively dropped.
 
