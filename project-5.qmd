@@ -21,6 +21,8 @@ Programming Projects are to be submitted to [gradescope]().
 
 This programming project is an adaptation of Ben Dicken's Where's the Money Programming Assignment.
 
+# Where's the Money
+
 Budgeting and money management is very important both at the individual level, and for corporations and government. Having a clear understanding of where your money goes, how much you are saving, and how much you invest is important to financial success. As a famous author once wrote:
 
 > Annual income twenty pounds, annual expenditure nineteen six, result happiness.
