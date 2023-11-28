@@ -148,12 +148,13 @@ All readings, videos, and assignment instructions will be available in the cours
 
 The breakdown of grades in this course is as follows:
 
--   55% exams
+-   45% exams
 -   25% weekly quizzes
--   10% programming problems
--   10% programming projects
+-   5% programming problems
+-   10% short programming projects
+-   15% programming projects
 
-There will be four exams throughout the course (including the final), for a total of 55%. These exams may cover material from class, the programming assignments, the final project, and the readings. Three exams of these exams will be during the semester, the lowest grade will be dropped (each of the two remaining exam grades is worth 20% of your final grade). If you would like an exam regraded, we reserve the right to regrade the entire exam, not only the parts you might question.
+There will be four exams throughout the course (including the final), for a total of 45%. These exams may cover material from class, the programming assignments, the final project, and the readings. Three exams of these exams will be during the semester, the lowest grade will be dropped (each of the two remaining exam grades is worth 15% of your final grade). If you would like an exam regraded, we reserve the right to regrade the entire exam, not only the parts you might question.
 
 The midterm exams will be on:
 
