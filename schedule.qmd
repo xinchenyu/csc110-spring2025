@@ -154,7 +154,7 @@ All assignments that are submitted on Gradescope are due at 7pm (Tuesdays for pr
 ## Assignments
 
 -   [Module 7 Programming Problems](assignments-07.html) -- Due date: `r assignments %>% filter(number == 11) %>% pull(formatted_date)` at 7pm
--   [Programming Project 5](project-5.html) -- Due date: `r assignments %>% filter(number == 14) %>% pull(formatted_date)` at 7pm
+- [Project 5]()
 
 
 # Week 9 (`r schedule %>% filter(week_number == 9 & term == "spring 2024") %>% pull(formatted_start)`)
@@ -187,6 +187,8 @@ All assignments that are submitted on Gradescope are due at 7pm (Tuesdays for pr
 ## Assignments
 
 -   [Module 9 Programming Problems](assignments-09.html) -- Due date: `r assignments %>% filter(number == 15) %>% pull(formatted_date)` at 7pm
+-   [Programming Project 5](project-5.html) -- Due date: `r assignments %>% filter(number == 14) %>% pull(formatted_date)` at 7pm
+
 
 
 
