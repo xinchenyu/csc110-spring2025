@@ -9,7 +9,7 @@ website:
 
 This is an introduction to programming with an emphasis on solving problems drawn from a variety of domains. Topics include basic control and data structures, problem solving strategies, and software development tools and techniques. Specifically, the Python programming language will be taught.
 
--   Course D2L: [d2l.arizona.edu/d2l/home/1257984](https://d2l.arizona.edu/d2l/home/1325409)
+-   Course D2L: [d2l](https://d2l.arizona.edu)
 
 Where to start:
 
