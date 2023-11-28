@@ -47,7 +47,7 @@ All assignments that are submitted on Gradescope are due at 7pm (Tuesdays for pr
 ## Assignments
 
 -   [Survey](https://uarizona.co1.qualtrics.com/jfe/form/SV_e3QarvVnEiImQ4K) -- Due date: `r assignments %>% filter(number == 1) %>% pull(formatted_date)` at 7pm
--   [Module 1 Programming Problems](assignments-01.html) -- Due date: `r assignments %>% filter(number == 2) %>% pull(formatted_date)` at 7pm
+-   [Module 1 Programming Problems](assignments-01.html) -- Due date: `r assignments %>% filter(assessment == "Module 1 Programming Problems") %>% pull(formatted_date)` at 7pm
 
 # Week 2 (`r schedule %>% filter(week_number == 2 & term == "spring 2024") %>% pull(formatted_start)`)
 
@@ -63,8 +63,8 @@ All assignments that are submitted on Gradescope are due at 7pm (Tuesdays for pr
 
 ## Assignments
 
--   [Module 2 Programming Problems](assignments-02.html) -- Due date: `r assignments %>% filter(number == 3) %>% pull(formatted_date)` at 7pm
--   [Programming Project 1](project-1.html) -- Due date: `r assignments %>% filter(number == 4) %>% pull(formatted_date)` at 7pm
+-   [Module 2 Programming Problems](assignments-02.html) -- Due date: `r assignments %>% filter(assessment == "Module 2 Programming Problems") %>% pull(formatted_date)` at 7pm
+-   [Programming Project 1](project-1.html) -- Due date: `r assignments %>% filter(assessment == "Programming Project 1") %>% pull(formatted_date)` at 7pm
 
 # Week 3 (`r schedule %>% filter(week_number == 3 & term == "spring 2024") %>% pull(formatted_start)`)
 
@@ -80,8 +80,8 @@ All assignments that are submitted on Gradescope are due at 7pm (Tuesdays for pr
 
 ## Assignments
 
--   [Module 3 Programming Problems](assignments-03.html) -- Due date: `r assignments %>% filter(number == 5) %>% pull(formatted_date)` at 7pm
--   [Programming Project 2](project-2.html) -- Due date: `r assignments %>% filter(number == 6) %>% pull(formatted_date)` at 7pm
+-   [Module 3 Programming Problems](assignments-03.html) -- Due date: `r assignments %>% filter(assessment == "Module 3 Programming Problems") %>% pull(formatted_date)` at 7pm
+-   [Programming Project 2](project-2.html) -- Due date: `r assignments %>% filter(assessment == "Programming Project 2") %>% pull(formatted_date)` at 7pm
 
 # Week 4 (`r schedule %>% filter(week_number == 4 & term == "spring 2024") %>% pull(formatted_start)`)
 
@@ -99,7 +99,7 @@ All assignments that are submitted on Gradescope are due at 7pm (Tuesdays for pr
 
 ## Assignments
 
--   [Module 4 Programming Problems](assignments-04.html) -- Due date: `r assignments %>% filter(number == 7) %>% pull(formatted_date)` at 7pm
+-   [Module 4 Programming Problems](assignments-04.html) -- Due date: `r assignments %>% filter(assessment == "Module 4 Programming Problems") %>% pull(formatted_date)` at 7pm
 
 # Week 5 (`r schedule %>% filter(week_number == 5 & term == "spring 2024") %>% pull(formatted_start)`)
 
@@ -116,8 +116,8 @@ All assignments that are submitted on Gradescope are due at 7pm (Tuesdays for pr
 
 ## Assignments
 
--   [Module 5 Programming Problems](assignments-05.html) -- Due date: `r assignments %>% filter(number == 9) %>% pull(formatted_date)` at 7pm
--   [Programming Project 3](project-3.html) -- Due date: `r assignments %>% filter(number == 10) %>% pull(formatted_date)` at 7pm
+-   [Module 5 Programming Problems](assignments-05.html) -- Due date: `r assignments %>% filter(assessment == "Module 5 Programming Problems") %>% pull(formatted_date)` at 7pm
+-   [Programming Project 3](project-3.html) -- Due date: `r assignments %>% filter(assessment == "Programming Project 3") %>% pull(formatted_date)` at 7pm
 
 
 # Week 6 (`r schedule %>% filter(week_number == 6 & term == "spring 2024") %>% pull(formatted_start)`)
@@ -133,8 +133,8 @@ All assignments that are submitted on Gradescope are due at 7pm (Tuesdays for pr
 
 ## Assignments
 
--   [Module 6 Programming Problems](assignments-06.html) -- Due date: `r assignments %>% filter(number == 11) %>% pull(formatted_date)` at 7pm
--   [Programming Project 4](project-4.html) -- Due date: `r assignments %>% filter(number == 12) %>% pull(formatted_date)` at 7pm
+-   [Module 6 Programming Problems](assignments-06.html) -- Due date: `r assignments %>% filter(assessment == "Module 6 Programming Problems") %>% pull(formatted_date)` at 7pm
+-   [Programming Project 4](project-4.html) -- Due date: `r assignments %>% filter(assessment == "Programming Project 4") %>% pull(formatted_date)` at 7pm
 
 
 # Week 7-8 (`r schedule %>% filter(week_number == 7 & term == "spring 2024") %>% pull(formatted_start)`)
