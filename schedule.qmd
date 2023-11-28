@@ -228,8 +228,6 @@ All assignments that are submitted on Gradescope are due at 7pm (Tuesdays for pr
 -   [Programming Project 8](project-8.html) -- Due date: `r assignments %>% filter(assessment == "Programming Project 8") %>% pull(formatted_date)` at 7pm
 
 
-
-
 # Week 13 (`r schedule %>% filter(week_number == 13 & term == "spring 2024") %>% pull(formatted_start)`)
 
 ## Readings
