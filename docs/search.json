@@ -144,7 +144,7 @@
     "href": "syllabus.html#assignment-due-dates",
     "title": "Syllabus",
     "section": "Assignment due dates",
-    "text": "Assignment due dates\n\n\n\n\n\nAssessment\nDate\n\n\n\n\nSurvey\nFriday, January 12, 2024\n\n\nModule 1 Programming Problems\nTuesday, January 16, 2024\n\n\nModule 2 Programming Problems\nTuesday, January 23, 2024\n\n\nProgramming Project 1\nWednesday, January 24, 2024\n\n\nModule 3 Programming Problems\nTuesday, January 30, 2024\n\n\nProgramming Project 2\nWednesday, January 31, 2024\n\n\nModule 4 Programming Problems\nTuesday, February 06, 2024\n\n\nMidterm 1\nWednesday, February 07, 2024\n\n\nModule 5 Programming Problems\nTuesday, February 13, 2024\n\n\nProgramming Project 3\nWednesday, February 14, 2024\n\n\nModule 6 Programming Problems\nTuesday, February 20, 2024\n\n\nProgramming Project 4\nWednesday, February 21, 2024\n\n\nModule 7 Programming Problems\nTuesday, March 12, 2024\n\n\nProgramming Project 5\nWednesday, March 13, 2024\n\n\nModule 8 Programming Problems\nTuesday, March 19, 2024\n\n\nProgramming Project 6\nWednesday, March 20, 2024\n\n\nMidterm 2\nWednesday, March 20, 2024\n\n\nModule 9 Programming Problems\nTuesday, March 26, 2024\n\n\nProgramming Project 7\nWednesday, March 27, 2024\n\n\nModule 10 Programming Problems\nTuesday, April 02, 2024\n\n\nProgramming Project 8\nWednesday, April 03, 2024\n\n\nModule 11 Programming Problems\nTuesday, April 09, 2024\n\n\nProgramming Project 9\nWednesday, April 10, 2024\n\n\nModule 12 Programming Problems\nTuesday, April 23, 2024\n\n\nProgramming Project 10\nWednesday, April 24, 2024\n\n\nMidterm 3\nWednesday, April 17, 2024\n\n\nModule 13 Programming Problems\nTuesday, April 30, 2024\n\n\nProgramming Project 11\nWednesday, May 01, 2024\n\n\nFinal Exam\nFriday, May 03, 2024"
+    "text": "Assignment due dates\n\n\n\n\n\nAssessment\nDate\n\n\n\n\nSurvey\nFriday, January 12, 2024\n\n\nModule 1 Programming Problems\nTuesday, January 16, 2024\n\n\nModule 2 Programming Problems\nTuesday, January 23, 2024\n\n\nProgramming Project 1\nWednesday, January 24, 2024\n\n\nModule 3 Programming Problems\nTuesday, January 30, 2024\n\n\nProgramming Project 2\nWednesday, January 31, 2024\n\n\nModule 4 Programming Problems\nTuesday, February 06, 2024\n\n\nMidterm 1\nWednesday, February 07, 2024\n\n\nModule 5 Programming Problems\nTuesday, February 13, 2024\n\n\nProgramming Project 3\nWednesday, February 14, 2024\n\n\nModule 6 Programming Problems\nTuesday, February 20, 2024\n\n\nProgramming Project 4\nWednesday, February 21, 2024\n\n\nModule 7 Programming Problems\nTuesday, March 12, 2024\n\n\nProgramming Project 5\nWednesday, March 13, 2024\n\n\nModule 8 Programming Problems\nTuesday, March 19, 2024\n\n\nProgramming Project 6\nWednesday, March 20, 2024\n\n\nMidterm 2\nWednesday, March 20, 2024\n\n\nModule 9 Programming Problems\nTuesday, March 26, 2024\n\n\nProgramming Project 7\nWednesday, March 27, 2024\n\n\nModule 10 Programming Problems\nTuesday, April 02, 2024\n\n\nProgramming Project 8\nWednesday, April 03, 2024\n\n\nModule 11 Programming Problems\nTuesday, April 09, 2024\n\n\nProgramming Project 9\nWednesday, April 10, 2024\n\n\nMidterm 3\nWednesday, April 17, 2024\n\n\nModule 12 Programming Problems\nTuesday, April 23, 2024\n\n\nProgramming Project 10\nWednesday, April 24, 2024\n\n\nModule 13 Programming Problems\nTuesday, April 30, 2024\n\n\nProgramming Project 11\nWednesday, May 01, 2024\n\n\nFinal Exam\nFriday, May 03, 2024"
   },
   {
     "objectID": "syllabus.html#threatening-behavior-policy",
@@ -1488,7 +1488,7 @@
     "href": "slides-13-03.html#random-module",
     "title": "random (class slides)",
     "section": "random module",
-    "text": "random module\nRemember to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random()\nprint(n)\n\nn = random.randint(0, 9)\nprint(n)\n\n0.24963349050573003\n9"
+    "text": "random module\nRemember to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random()\nprint(n)\n\nn = random.randint(0, 9)\nprint(n)\n\n0.43114817164102137\n5"
   },
   {
     "objectID": "slides-13-03.html#write-a-function",
@@ -1502,7 +1502,7 @@
     "href": "slides-13-03.html#write-a-function-solution",
     "title": "random (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nMary"
+    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nJune"
   },
   {
     "objectID": "slides-13-03.html#setting-a-seed",
@@ -1943,7 +1943,7 @@
     "href": "project-5.html",
     "title": "Programming Project 5",
     "section": "",
-    "text": "Programming Projects are to be submitted to gradescope.\nDue date: r assignments %&gt;% filter(assessment == \"Programming Project 5\") %&gt;% pull(formatted_date) at 7pm\nThis programming project is an adaptation of Ben Dicken’s Where’s the Money Programming Assignment.\nBudgeting and money management is very important both at the individual level, and for corporations and government. Having a clear understanding of where your money goes, how much you are saving, and how much you invest is important to financial success. As a famous author once wrote:\n–Charles Dickens\nIn this assignment, you will be writing a program that helps a user visualize and understand how much money they spend of various categories of expenditures. Perhaps you will even find this program useful for your personal finances! You should name your program wheres_the_money.py."
+    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Wednesday, March 13, 2024 at 7pm\nThis programming project is an adaptation of Ben Dicken’s Where’s the Money Programming Assignment.\nBudgeting and money management is very important both at the individual level, and for corporations and government. Having a clear understanding of where your money goes, how much you are saving, and how much you invest is important to financial success. As a famous author once wrote:\n–Charles Dickens\nIn this assignment, you will be writing a program that helps a user visualize and understand how much money they spend of various categories of expenditures. Perhaps you will even find this program useful for your personal finances! You should name your program wheres_the_money.py."
   },
   {
     "objectID": "project-5.html#add-a-comma",
