@@ -63,11 +63,15 @@ The tax percentage is dependent upon the amount of money a person make annually.
 
 You should use one or more if / elif / else statements in the code to determine which tax percentage to use. You can store the tax percentage as an integer variable, with one of the following values: 10, 20, 25, or 30. You can compute the amount of the salary goes to taxes as a particular percentage with this formula:
 
-* annual_salary * ( tax_percentage / 100.0)
+```{python}
+#| eval: false
+#| echo: true
+annual_salary * ( tax_percentage / 100.0)
+```
 
 After calculating all of these values programmatically, you should generate the output table.
 
-There is also a tax limit of $75,000. The tax should be capped at this value, and if the limit is reached, a message indicating this should be printed out after the chart. The message should say:
+There is also a tax limit of `$75,000`. The tax should be capped at this value, and if the limit is reached, a message indicating this should be printed out after the chart. The message should say:
 
 <pre>
 >>> TAX LIMIT REACHED <<<
@@ -107,15 +111,15 @@ Notice that the numbers are formatted in a particular way in the output table. Y
 
 Say we have a floating point number, like below:
 
+```{python}
+#| eval: false
+#| echo: true
 number = 134567.123
+```
+
 Perhaps this is a result you get for one of the dollar values after doing the necessary computations. When printing, you’ll want to adjust the way it is printed in several ways.
 
-# Add a comma
+## Add a comma
 
-Set to stop at two decimal points
-Add necessary spacing before the number, so that the table lines up
-You could print out this number and add these three things:
-
-string_to_print_out = format(number, '15,.1f')
-T
-he 15 indicates that the resulting string should be 15 characters wide. Any characters not needed to display the number will be added as padding to the left side. The , indicates that commas should be added to the number. The 1 indicates that one decimal place should be shown. Use this function (with different formatting options) to print out the formatted percentages and dollar values that you calculate.
+* Set to stop at two decimal points
+* Add necessary spacing before the number, so that the table lines up

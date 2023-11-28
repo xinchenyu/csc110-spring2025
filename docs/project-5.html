@@ -890,8 +890,10 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
   <ul>
   <li><a href="#overview-of-the-program" id="toc-overview-of-the-program" class="nav-link active" data-scroll-target="#overview-of-the-program">Overview of the program</a></li>
   <li><a href="#calculating-the-values" id="toc-calculating-the-values" class="nav-link" data-scroll-target="#calculating-the-values">Calculating the values</a></li>
-  <li><a href="#formatting-a-number" id="toc-formatting-a-number" class="nav-link" data-scroll-target="#formatting-a-number">Formatting a Number</a></li>
+  <li><a href="#formatting-a-number" id="toc-formatting-a-number" class="nav-link" data-scroll-target="#formatting-a-number">Formatting a Number</a>
+  <ul class="collapse">
   <li><a href="#add-a-comma" id="toc-add-a-comma" class="nav-link" data-scroll-target="#add-a-comma">Add a comma</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -961,18 +963,18 @@ See the financial breakdown below, based on a salary of $50000
 <li>over $200k annually: 30% tax</li>
 </ul>
 <p>You should use one or more if / elif / else statements in the code to determine which tax percentage to use. You can store the tax percentage as an integer variable, with one of the following values: 10, 20, 25, or 30. You can compute the amount of the salary goes to taxes as a particular percentage with this formula:</p>
-<ul>
-<li>annual_salary * ( tax_percentage / 100.0)</li>
-</ul>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>annual_salary <span class="op">*</span> ( tax_percentage <span class="op">/</span> <span class="fl">100.0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>After calculating all of these values programmatically, you should generate the output table.</p>
-<p>There is also a tax limit of $75,000. The tax should be capped at this value, and if the limit is reached, a message indicating this should be printed out after the chart. The message should say:</p>
+<p>There is also a tax limit of <code>$75,000</code>. The tax should be capped at this value, and if the limit is reached, a message indicating this should be printed out after the chart. The message should say:</p>
 <pre>&gt;&gt;&gt; TAX LIMIT REACHED &lt;&lt;&lt;
 Overspending
 What happens if the expenditures and taxes are more than the annual salary? This should be represented by negative values in the extra row. You should also print a warning after the chart. Below is an example of a financial situation in which the user spends more than they earn, resulting in a deficit in the extra row.
 </pre>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># arguments: salary, mortgage/rent, bills, food, travel</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>wheres_the_money(<span class="dv">40000</span>, <span class="dv">2000</span>, <span class="dv">300</span>, <span class="dv">150</span>, <span class="dv">4000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># arguments: salary, mortgage/rent, bills, food, travel</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>wheres_the_money(<span class="dv">40000</span>, <span class="dv">2000</span>, <span class="dv">300</span>, <span class="dv">150</span>, <span class="dv">4000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre>------------------------------------------------------------------------------------------------------
 See the financial breakdown below, based on a salary of $40000
@@ -993,14 +995,19 @@ You are required to validate the inputs that your program accepts. You should us
 <h1>Formatting a Number</h1>
 <p>Notice that the numbers are formatted in a particular way in the output table. You must match this formatting exactly. In order to do so, you can use the format() function. This function was mentioned in chapter two of the textbook. I will provide one example of how you can use this function to match the formatting in the spec.</p>
 <p>Say we have a floating point number, like below:</p>
-<p>number = 134567.123 Perhaps this is a result you get for one of the dollar values after doing the necessary computations. When printing, you’ll want to adjust the way it is printed in several ways.</p>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>number <span class="op">=</span> <span class="fl">134567.123</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Perhaps this is a result you get for one of the dollar values after doing the necessary computations. When printing, you’ll want to adjust the way it is printed in several ways.</p>
+<section id="add-a-comma" class="level2">
+<h2 class="anchored" data-anchor-id="add-a-comma">Add a comma</h2>
+<ul>
+<li>Set to stop at two decimal points</li>
+<li>Add necessary spacing before the number, so that the table lines up</li>
+</ul>
+
+
 </section>
-<section id="add-a-comma" class="level1">
-<h1>Add a comma</h1>
-<p>Set to stop at two decimal points Add necessary spacing before the number, so that the table lines up You could print out this number and add these three things:</p>
-<p>string_to_print_out = format(number, ‘15,.1f’) T he 15 indicates that the resulting string should be 15 characters wide. Any characters not needed to display the number will be added as padding to the left side. The , indicates that commas should be added to the number. The 1 indicates that one decimal place should be shown. Use this function (with different formatting options) to print out the formatted percentages and dollar values that you calculate.</p>
-
-
 </section>
 
 </main> <!-- /main -->
