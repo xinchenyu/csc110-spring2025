@@ -21,6 +21,8 @@ In this PA, you will be writing two simple programs that print out text. Note th
 
 Make sure you follow the provided [style guide](style.html) (you will be graded on it!). You are **not** allowed to use any built-in method or function for any Python library.
 
+Also make sure you check the [Academic Integrity](academic-integrity.html) and [Common Gradescope Errors](gradescope-errors.html) pages.
+
 # Mad Libs
 
 Mad Libs is a simple game/activity where the host player prompts other participant(s) for words of various types. For instance, the host might ask the other participants for various words that fall into categories such as nouns, places, names, verbs, etc. These words are filled in to blanks in a story, and after the host has gotten all of the words filled in, the story is read aloud. For instance, here is a printable mad lib from [madlibs.com](https://www.madlibs.com/).

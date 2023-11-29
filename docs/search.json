@@ -3980,7 +3980,7 @@
     "href": "project-1.html",
     "title": "Programming Project 1",
     "section": "",
-    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Wednesday, January 24, 2024 at 7pm\nIn this PA, you will be writing two simple programs that print out text. Note that this programming project is relatively straightforward. Not all of the future assignments will be this way. It is simple because we have not yet covered a wide variety of programming concepts, so there’s only so much I can reasonably expect you to be able to program. The programming projects will get more challenging, but also, hopefully, more interesting!\nMake sure you follow the provided style guide (you will be graded on it!). You are not allowed to use any built-in method or function for any Python library."
+    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Wednesday, January 24, 2024 at 7pm\nIn this PA, you will be writing two simple programs that print out text. Note that this programming project is relatively straightforward. Not all of the future assignments will be this way. It is simple because we have not yet covered a wide variety of programming concepts, so there’s only so much I can reasonably expect you to be able to program. The programming projects will get more challenging, but also, hopefully, more interesting!\nMake sure you follow the provided style guide (you will be graded on it!). You are not allowed to use any built-in method or function for any Python library.\nAlso make sure you check the Academic Integrity and Common Gradescope Errors pages."
   },
   {
     "objectID": "project-1.html#move-mad-lib",
