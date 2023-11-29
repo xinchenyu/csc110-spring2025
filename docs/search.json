@@ -112,6 +112,13 @@
     "text": "Illnesses and Emergencies\n\nIf you feel sick, or may have been in contact with someone who is infectious, stay home. Except for seeking medical care, avoid contact with others and do not travel.\nNotify your instructor if you will be missing up to one week of course meetings and/or assignment deadlines.\nIf you must miss the equivalent of more than one week of class and have an emergency, the Dean of Students is the proper office to contact (DOS-deanofstudents@email.arizona.edu). The Dean of Students considers the following as qualified emergencies: the birth of a child, mental health hospitalization, domestic violence matter, house fire, hospitalization for physical health (concussion/emergency surgery/coma/COVID-19 complications/ICU), death of immediate family, Title IX matters, etc.\nPlease understand that there is no guarantee of an extension when you are absent from class and/or miss a deadline.\n\nStatement on compliance with COVID-19 mitigation guidelines: As we enter the semester, our health and safety remain the university’s highest priority. To protect the health of everyone in this class, students are required to follow the university guidelines on COVID-19 mitigation. Please visit www.covid19.arizona.edu."
   },
   {
+    "objectID": "syllabus.html#late-work",
+    "href": "syllabus.html#late-work",
+    "title": "Syllabus",
+    "section": "Late Work",
+    "text": "Late Work\nFor programming problems and projects, late work is not accepted"
+  },
+  {
     "objectID": "syllabus.html#extra-credit",
     "href": "syllabus.html#extra-credit",
     "title": "Syllabus",
@@ -1488,7 +1495,7 @@
     "href": "slides-13-03.html#random-module",
     "title": "random (class slides)",
     "section": "random module",
-    "text": "random module\nRemember to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random()\nprint(n)\n\nn = random.randint(0, 9)\nprint(n)\n\n0.3824719084081688\n5"
+    "text": "random module\nRemember to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random()\nprint(n)\n\nn = random.randint(0, 9)\nprint(n)\n\n0.41861692045820953\n1"
   },
   {
     "objectID": "slides-13-03.html#write-a-function",
@@ -1502,7 +1509,7 @@
     "href": "slides-13-03.html#write-a-function-solution",
     "title": "random (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nJune"
+    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nJoan"
   },
   {
     "objectID": "slides-13-03.html#setting-a-seed",
@@ -1792,172 +1799,599 @@
     "text": "Test cases\n\nsample.txt\npoem.txt\nfew-steps.txt\nmany-steps.txt\n\nCall for encrypter.py:\n\nif __name__ == \"__main__\":\n    encrypt_file(\"sample.txt\")\n\nCall for decrypter.py:\n\nif __name__ == \"__main__\":\n    decrypt_file()"
   },
   {
-    "objectID": "ascii-table.html",
-    "href": "ascii-table.html",
-    "title": "ASCII table",
-    "section": "",
-    "text": "ASCII stands for American Standard Code for Information Interchange, and it represents all characters in English. Nowadays we usually use UTF-8 encoding instead os ASCII because we use more characters (emojis, for example).\nHere’s the decimal values for the characters we encounter in this course:\n\n\n\nord(char)\nchar\n\n\n\n\n32\nspace\n\n\n33\n!\n\n\n34\n”\n\n\n35\n#\n\n\n36\n$\n\n\n37\n%\n\n\n38\n&\n\n\n39\n’\n\n\n40\n(\n\n\n41\n)\n\n\n42\n*\n\n\n43\n+\n\n\n44\n,\n\n\n45\n-\n\n\n46\n.\n\n\n47\n/\n\n\n48\n0\n\n\n49\n1\n\n\n50\n2\n\n\n51\n3\n\n\n52\n4\n\n\n53\n5\n\n\n54\n6\n\n\n55\n7\n\n\n56\n8\n\n\n57\n9\n\n\n58\n:\n\n\n59\n;\n\n\n60\n&lt;\n\n\n61\n=\n\n\n62\n&gt;\n\n\n63\n?\n\n\n64\n@\n\n\n65\nA\n\n\n66\nB\n\n\n67\nC\n\n\n68\nD\n\n\n69\nE\n\n\n70\nF\n\n\n71\nG\n\n\n72\nH\n\n\n73\nI\n\n\n74\nJ\n\n\n75\nK\n\n\n76\nL\n\n\n77\nM\n\n\n78\nN\n\n\n79\nO\n\n\n80\nP\n\n\n81\nQ\n\n\n82\nR\n\n\n83\nS\n\n\n84\nT\n\n\n85\nU\n\n\n86\nV\n\n\n87\nW\n\n\n88\nX\n\n\n89\nY\n\n\n90\nZ\n\n\n91\n[\n\n\n92\n\\\n\n\n93\n]\n\n\n94\n^\n\n\n95\n_\n\n\n96\n`\n\n\n97\na\n\n\n98\nb\n\n\n99\nc\n\n\n100\nd\n\n\n101\ne\n\n\n102\nf\n\n\n103\ng\n\n\n104\nh\n\n\n105\ni\n\n\n106\nj\n\n\n107\nk\n\n\n108\nl\n\n\n109\nm\n\n\n110\nn\n\n\n111\no\n\n\n112\np\n\n\n113\nq\n\n\n114\nr\n\n\n115\ns\n\n\n116\nt\n\n\n117\nu\n\n\n118\nv\n\n\n119\nw\n\n\n120\nx\n\n\n121\ny\n\n\n122\nz\n\n\n123\n{\n\n\n124\n|\n\n\n125\n}"
-  },
-  {
-    "objectID": "slides-03-01.html#function-comments",
-    "href": "slides-03-01.html#function-comments",
-    "title": "More on Functions (class slides)",
-    "section": "Function Comments",
-    "text": "Function Comments\n\nEvery function created is required to have a function comment, including main\nFunction comments are a multi-line string (as opposed to using # for other comments)"
-  },
-  {
-    "objectID": "slides-03-01.html#function-comments-1",
-    "href": "slides-03-01.html#function-comments-1",
-    "title": "More on Functions (class slides)",
-    "section": "Function Comments",
-    "text": "Function Comments\n\n'''\nAdriana Picoral\nCSC110\nClass Demonstration\nThis program has two functions: one to calculate the area of a sphere,\nthe other to calculate the volume of a sphere.\nThe main() function is called to print to the standard output the\narea and volume of a sphere of radius .75\n'''\n\ndef sphere_volume(radius):\n  '''\n  This function calculates the volume of a sphere of given radius.\n  Args:\n    radius: integer representing the radius of the sphere\n  Returns:\n    The float representing the volume of a sphere of the given radius\n  '''\n  volume = (1 / 3) * sphere_area(radius) * radius\n  return round(volume, 2)\n\n\ndef sphere_area(radius):\n  '''\n  This function calculates the area of a sphere of given radius.\n  Args:\n    radius: integer representing the radius of the sphere\n  Returns:\n    The float representing the area of a sphere of the given radius\n  '''\n  area = 4 * 3.1415 * radius**2\n  return round(area, 2)\n\n\ndef main():\n  '''\n  This function prints the volume and area of a sphere of radius .75.\n  Args:\n    None\n  Returns:\n    None\n  '''\n  r = .75\n  v = sphere_volume(r)\n  a = sphere_area(r)\n  print(v, a)\n  \nmain()\n\n1.77 7.07"
-  },
-  {
-    "objectID": "slides-03-01.html#global-vs.-local-variables-scope",
-    "href": "slides-03-01.html#global-vs.-local-variables-scope",
-    "title": "More on Functions (class slides)",
-    "section": "Global vs. Local variables (scope)",
-    "text": "Global vs. Local variables (scope)\n\nEvery variable that is created has a particular scope\nThe scope of a variable is the range of coder over which that variable can be used or modified"
-  },
-  {
-    "objectID": "slides-03-01.html#global-vs.-local-variables-scope-1",
-    "href": "slides-03-01.html#global-vs.-local-variables-scope-1",
-    "title": "More on Functions (class slides)",
-    "section": "Global vs. Local variables (scope)",
-    "text": "Global vs. Local variables (scope)\n\nLocal Variables have local scope – for example, a variable assigned inside a function can only be used or modified withing that function\nGlobal Variables have global scope – for example, a variable delcared outside a function can be accessed or modified acorss mulitple functions"
-  },
-  {
-    "objectID": "slides-03-01.html#global-vs.-local-variables-scope-2",
-    "href": "slides-03-01.html#global-vs.-local-variables-scope-2",
-    "title": "More on Functions (class slides)",
-    "section": "Global vs. Local variables (scope)",
-    "text": "Global vs. Local variables (scope)\n\nIn the previous program we wrote (volume and area of sphere), r, v and a are local variables within the main() function.\nThe variable area is also local within the sphere_area(radius) function scope.\nThe variable volume is local within sphere_volume(radius)"
-  },
-  {
-    "objectID": "slides-03-01.html#global-or-local",
-    "href": "slides-03-01.html#global-or-local",
-    "title": "More on Functions (class slides)",
-    "section": "Global or Local?",
-    "text": "Global or Local?\n\na = 10               # What are the global and local variables?\nb = 5                # Is the output of the two programs the same \n                     # or different?\ndef sum():\n  return a + b\n\ndef main():\n  print(sum())\n  \nmain()\n\nvs.\n\ndef sum(a, b):\n  return a + b\n\ndef main():\n  print(sum(10, 5))\n  \nmain()"
-  },
-  {
-    "objectID": "slides-03-01.html#argument-vs.-parameter",
-    "href": "slides-03-01.html#argument-vs.-parameter",
-    "title": "More on Functions (class slides)",
-    "section": "Argument vs. Parameter",
-    "text": "Argument vs. Parameter\n\nNever set variables as global variables, pass values to functions when called\nWhen a function is defined, the values you want to pass to the function are called parameter variables\nWhen the function is then called, the values you pass to the function are called arguments"
-  },
-  {
-    "objectID": "slides-03-01.html#write-a-function",
-    "href": "slides-03-01.html#write-a-function",
-    "title": "More on Functions (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\nWrite a Python function that does the following:\n\nIts name is hypotenuse\nIt takes two arguments: a and b representing the length of the two non-hypotenuse sides of a right angle triangle\nIt calculate the hypotenuse (c) according to the Pythagorean theorem formula: \\(c = \\sqrt(a^2 + b^2)\\)\nIt returns the calculated hypotenuse\nTest cases: hypotenuse(3, 4) should return 5.0, hypotenuse(10, 10) should return 14.14"
-  },
-  {
-    "objectID": "slides-03-01.html#write-a-function-1",
-    "href": "slides-03-01.html#write-a-function-1",
-    "title": "More on Functions (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\n\ndef sqrt(n):\n  '''\n  This function calculates the square root of a number\n  Args:\n    n: integer or float\n  Returns:\n    The square root of n\n  '''\n  return n**.5\n\ndef hypotenuse(a, b):\n  '''\n  This function calculates the hypotenuse of a right angle triangle.\n  Args:\n    a: number (integer or float) representing one of the non-hypotenuse sides\n    b: number (integer or float) representing one of the non-hypotenuse sides\n  Returns:\n    Float representing the length of the hypotenuse given a and b\n  ''' \n  h = sqrt(a**2 + b**2)\n  return round(h, 2)\n\ndef main():\n  '''\n  This function calls the hypotenuse function to calculate and then\n  print out the hypotenuse of a right angle triangle of sides 3 and 4\n  and the hypotenuse of a right angle triange of sides 10 and 10\n  '''\n  result = hypotenuse(3, 4)\n  print(result)\n  \n  result = hypotenuse(10, 10)\n  print(result)\n  \nmain()\n\n5.0\n14.14"
-  },
-  {
-    "objectID": "slides-11-03.html#announcements",
-    "href": "slides-11-03.html#announcements",
-    "title": "sets (class slides)",
+    "objectID": "slides-11-01.html#announcements",
+    "href": "slides-11-01.html#announcements",
+    "title": "data structures – review (class slides)",
     "section": "Announcements",
-    "text": "Announcements\n\nFill out SCS (https://scsonline.oia.arizona.edu/) – if 80% response rate for whole class, one project grade gets dropped\n\nAbout the final exam:\n\nThursday, December 14, 2023 – 6:00pm - 8:00pm in ENR2 room N120\nFind the room before final date\nDo not bring excess stuff – space is limited\nPractice writing on smaller desk"
+    "text": "Announcements\n\nMidterm 3 this Wednesday – BRING PHOTO ID\n\nReview Session – Gittings 129b (this room) 5-7pm\nfirst hour: review lecture\nsecond hour: group work\n\nFill out SCS (https://scsonline.oia.arizona.edu/) – if 80% response, one project grade gets dropped"
   },
   {
-    "objectID": "slides-11-03.html#survey",
-    "href": "slides-11-03.html#survey",
-    "title": "sets (class slides)",
-    "section": "Survey",
-    "text": "Survey\nTake 10 minutes to fill out survey:\nhttps://bit.ly/ua-ta-students"
+    "objectID": "slides-11-01.html#data-structures-in-python",
+    "href": "slides-11-01.html#data-structures-in-python",
+    "title": "data structures – review (class slides)",
+    "section": "Data Structures in Python",
+    "text": "Data Structures in Python\n\nlists (mutable)\ndictionaries (mutable)\ntuples (immutable)"
   },
   {
-    "objectID": "slides-11-03.html#set-methods",
-    "href": "slides-11-03.html#set-methods",
-    "title": "sets (class slides)",
+    "objectID": "slides-11-01.html#lists",
+    "href": "slides-11-01.html#lists",
+    "title": "data structures – review (class slides)",
+    "section": "Lists",
+    "text": "Lists\n\nstore:\n\nordered items\nelements of different types\n\nuse square brackets ([]) syntax for creating a list\nallow indexing (integers starting at 0) with square brackets ([]) as well\nare mutable"
+  },
+  {
+    "objectID": "slides-11-01.html#lists-1",
+    "href": "slides-11-01.html#lists-1",
+    "title": "data structures – review (class slides)",
+    "section": "Lists",
+    "text": "Lists\nIndexing to retrieve values:\n\nmy_list = [\"a\", 1, \"b\", 2]\nmy_list[0]\n\n'a'\n\n\nIndexing to mutate values:\n\nmy_list[0] = 5\nmy_list\n\n[5, 1, 'b', 2]"
+  },
+  {
+    "objectID": "slides-11-01.html#list-methods",
+    "href": "slides-11-01.html#list-methods",
+    "title": "data structures – review (class slides)",
+    "section": "List methods",
+    "text": "List methods\n\n.append(value)\n.insert(index, value)\n.pop(index)\n.remove(value)"
+  },
+  {
+    "objectID": "slides-11-01.html#tuples",
+    "href": "slides-11-01.html#tuples",
+    "title": "data structures – review (class slides)",
+    "section": "Tuples",
+    "text": "Tuples\n\nstore:\n\nordered items\nelements of different types\n\nuse parentheses (()) syntax for creating a tuple\nallow indexing (integers starting at 0) with square brackets ([])\nare immutable"
+  },
+  {
+    "objectID": "slides-11-01.html#tuples-1",
+    "href": "slides-11-01.html#tuples-1",
+    "title": "data structures – review (class slides)",
+    "section": "Tuples",
+    "text": "Tuples\nIndexing to retrieve values:\n\nmy_tuple = (\"a\", 1, \"b\", 2)\nmy_tuple[0]\n\n'a'\n\n\nNot possible to mutate/change values in tuples\nNo methods to change it (because tuples are immutable)"
+  },
+  {
+    "objectID": "slides-11-01.html#dictionaries",
+    "href": "slides-11-01.html#dictionaries",
+    "title": "data structures – review (class slides)",
+    "section": "Dictionaries",
+    "text": "Dictionaries\n\nstore pairs of items key: value\nuse curly brackets ({}) with key and value separated by colon (:)\nallow value retrieval through key with square brackets ([])\nare mutable"
+  },
+  {
+    "objectID": "slides-11-01.html#dictionaries-1",
+    "href": "slides-11-01.html#dictionaries-1",
+    "title": "data structures – review (class slides)",
+    "section": "Dictionaries",
+    "text": "Dictionaries\nUse key to retrieve values:\n\nmy_dict = {\"banana\": 10, \"apple\": 3, \"orange\": 40}\nmy_dict[\"banana\"]\n\n10\n\n\nUse key to add key: value pairs:\n\nmy_dict[\"pear\"] = 5\nmy_dict\n\n{'banana': 10, 'apple': 3, 'orange': 40, 'pear': 5}\n\n\nUse key to mutate value associated with key:\n\nmy_dict[\"pear\"] += 5\nmy_dict\n\n{'banana': 10, 'apple': 3, 'orange': 40, 'pear': 10}"
+  },
+  {
+    "objectID": "slides-11-01.html#dictionary-methods",
+    "href": "slides-11-01.html#dictionary-methods",
+    "title": "data structures – review (class slides)",
+    "section": "Dictionary methods",
+    "text": "Dictionary methods\n\n.values()\n.items()\n.pop()"
+  },
+  {
+    "objectID": "slides-11-01.html#evaluate-the-code",
+    "href": "slides-11-01.html#evaluate-the-code",
+    "title": "data structures – review (class slides)",
+    "section": "Evaluate the code",
+    "text": "Evaluate the code\nIndicate when errors are thrown\n\nmy_list = [2, 3, 1, 2]\nmy_list.append(3)\nmy_list.insert(0, 1)\nmy_list[3] = 4\nmy_list # evaluate what this list holds at this point\n\nmy_list[6] = 10\n\nmy_tupple = (3, 4, 1)\nmy_tupple.append(3)\nmy_tupple # evaluate what this tuple holds at this point\n\nmy_dictionary = {3: 4, 1: 2, 5: 4}\nmy_dictionary[5] = 10\nmy_dictionary # evaluate what this dictionary holds at this point\n\nmy_dictionary.append(4: 5)\nmy_dictionary # evaluate what this dictionary holds at this point"
+  },
+  {
+    "objectID": "slides-11-01.html#evaluate-the-code-1",
+    "href": "slides-11-01.html#evaluate-the-code-1",
+    "title": "data structures – review (class slides)",
+    "section": "Evaluate the code",
+    "text": "Evaluate the code\nIndicate when errors are thrown\n\nmy_list = [2, 3, 1, 2]\nmy_list.append(3)\nmy_list.insert(0, 1)\nmy_list[3] = 4\nmy_list # evaluate what this list holds at this point\n\n[1, 2, 3, 4, 2, 3]\n\n\n\n# error --- my_list[6] = 10\n\nmy_tupple = (3, 4, 1)\n# error --- my_tupple.append(3)\nmy_tupple # evaluate what this tuple holds at this point\n\n(3, 4, 1)\n\n\n\nmy_dictionary = {3: 4, 1: 2, 5: 4}\nmy_dictionary[5] = 10\nmy_dictionary # evaluate what this dictionary holds at this point\n\n{3: 4, 1: 2, 5: 10}\n\n\n\n# error --- my_dictionary.append(4: 5)\nmy_dictionary # evaluate what this dictionary holds at this point\n\n{3: 4, 1: 2, 5: 10}"
+  },
+  {
+    "objectID": "slides-11-01.html#iterating-over-data-structures",
+    "href": "slides-11-01.html#iterating-over-data-structures",
+    "title": "data structures – review (class slides)",
+    "section": "Iterating over data structures",
+    "text": "Iterating over data structures\nUse for x in data_structure to retrieve values/keys (cannot make changes with this type of loop)\n\nmy_list = [3, 5, 5]\nfor value in my_list:\n  print(value)\n\n3\n5\n5\n\n\n\nmy_tuple = (3, 5, 5)\nfor value in my_tuple:\n  print(value)\n\n3\n5\n5"
+  },
+  {
+    "objectID": "slides-11-01.html#iterating-over-dictionaries",
+    "href": "slides-11-01.html#iterating-over-dictionaries",
+    "title": "data structures – review (class slides)",
+    "section": "Iterating over dictionaries",
+    "text": "Iterating over dictionaries\n\nmy_dictionary = {3: \"a\", 5: \"b\"}\nfor key in my_dictionary:\n  print(key)\n\n3\n5\n\n\nYou can change values in a dictionary with for key in dictionary\n\nmy_dictionary = {\"a\": 2, \"b\": 3}\nfor key in my_dictionary:\n  my_dictionary[key] += 1\nmy_dictionary\n\n{'a': 3, 'b': 4}"
+  },
+  {
+    "objectID": "slides-11-01.html#iterating-over-dictionaries-1",
+    "href": "slides-11-01.html#iterating-over-dictionaries-1",
+    "title": "data structures – review (class slides)",
+    "section": "Iterating over dictionaries",
+    "text": "Iterating over dictionaries\nUse for x in data_structure.method() for dictionaries\n\nmy_dictionary = {3: \"a\", 5: \"b\"}\nfor value in my_dictionary.values():\n  print(value)\n\na\nb\n\n\n\nmy_dictionary = {3: \"a\", 5: \"b\"}\nfor key, value in my_dictionary.items():\n  print(value)\n  print(key)\n\na\n3\nb\n5"
+  },
+  {
+    "objectID": "slides-11-01.html#cannot-change-size-of-data-structure",
+    "href": "slides-11-01.html#cannot-change-size-of-data-structure",
+    "title": "data structures – review (class slides)",
+    "section": "Cannot change size of data structure",
+    "text": "Cannot change size of data structure\nIt is not possible to remove or add items to a list or a dictionary inside a for x in data_structure loop. This is what happens when you try to do so:\nWeird behavior:\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.remove(value)\nmy_list\n\n[3, 2]\n\n\nInfinite loop:\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.append(value + 1) # this causes an infinite loop"
+  },
+  {
+    "objectID": "slides-11-01.html#cannot-change-size-of-data-structure-1",
+    "href": "slides-11-01.html#cannot-change-size-of-data-structure-1",
+    "title": "data structures – review (class slides)",
+    "section": "Cannot change size of data structure",
+    "text": "Cannot change size of data structure\nIt is not possible to remove or add items to a list or a dictionary inside a for x in data_structure loop. This is what happens when you try to do so:\nError:\n\nmy_dict = {2: 0, 3: 1, 1: 0, 2: 0}\nfor key in my_dict:\n  my_dict.pop(key) # this causes an error"
+  },
+  {
+    "objectID": "slides-11-01.html#write-a-function",
+    "href": "slides-11-01.html#write-a-function",
+    "title": "data structures – review (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\n\nIts name is count_names\nIt opens in read mode a file that contains a name per line, with repeated names\nIt counts how many unique names there are in the file\nIt returns an integer with the count\nUse a list for this\n\n\nassert count_names(\"names.txt\") == 11"
+  },
+  {
+    "objectID": "slides-11-01.html#write-a-function-solution",
+    "href": "slides-11-01.html#write-a-function-solution",
+    "title": "data structures – review (class slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\n\ndef count_names(file_name):\n  f = open(file_name, \"r\")\n  name_list = []\n  for line in f:\n    name = line.strip()\n    if name not in name_list:\n      name_list.append(name)\n  f.close()\n  return len(name_list)\n\ndef main():\n  assert count_names(\"names.txt\") == 11\n  \nmain()"
+  },
+  {
+    "objectID": "slides-11-01.html#write-a-function-1",
+    "href": "slides-11-01.html#write-a-function-1",
+    "title": "data structures – review (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\n\nIts name is count_names\nIt opens in read mode a file that contains a name per line, with repeated names\nIt counts how many unique names there are in the file\nIt returns an integer with the count\nUse a dictionary for this\n\n\nassert count_names(\"names.txt\") == 11"
+  },
+  {
+    "objectID": "slides-11-01.html#write-a-functionn-solution",
+    "href": "slides-11-01.html#write-a-functionn-solution",
+    "title": "data structures – review (class slides)",
+    "section": "Write a functionn – solution",
+    "text": "Write a functionn – solution\n\ndef count_names(file_name):\n  f = open(file_name, \"r\")\n  name_dict = {}\n  for line in f:\n    name = line.strip()\n    if name not in name_dict:\n      name_dict[name] = \"\"\n  f.close()\n  return len(name_dict)\n\ndef main():\n  assert count_names(\"names.txt\") == 11\n  \nmain()"
+  },
+  {
+    "objectID": "project-6.html",
+    "href": "project-6.html",
+    "title": "Programming Project 6",
+    "section": "",
+    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Wednesday, March 20, 2024 at 7pm\nIn this programming project you will implement a number of Python functions to implement a Benford’s Law analysis. Make sure you follow the provided style guide (you will be graded on it!).\nName your program benfords_law.py to submit to gradescope. Make sure that gradescope gives you the points for passing the test cases.\nThis programming project is an adaptation of Ben Dicken’s Benford’s Law Programming Assignment.\nBenford’s Law is a mathematical law that describes the behavior of naturally-occurring numbers in some kinds of numerical data sets. I recommend that you watch this video before proceeding to get an explanation:\nBenford’s law is useful for distinguishing naturally occurring data from randomized or made-up data. It has been used in the real world to detect election fraud (For example, in the 2009 Iranian election). It has also been used as evidence in criminal cases in the US. In this PA, you’ll be writing a program that reads in a data set, and prints out the plot of first-digits. Then, you can look at the plot to determine if it conforms to the law or not! Name your file benfords_law.py. You should organize the code into several functions."
+  },
+  {
+    "objectID": "project-6.html#read-input-file",
+    "href": "project-6.html#read-input-file",
+    "title": "Programming Project 6",
+    "section": "Read input file",
+    "text": "Read input file\n\nIts name is csv_to_list\nIt takes a string argument, file_name\nIt opens the file in read mode\nIt iterates over the lines appending numeric values to a new list\nEach line in the file is split on comma, for each element that you get from splitting check if the string represents an integer or a float – if either an integer or a float, append the string to the new list\nIt returns a list of numbers found in the file\n\nHere’s what places.csv looks like:\n\nregion,population\npima,1234\ngeorgia,145\nsteele,10\ntampa,1700\ngreece,1729\nrome,1711\nmilan,219\ntucson,231\ntuscany,20001\nflorence,301\nnigeria,3879\nnewyork,404\nphoenix,40123\nbelgium,505\nmadrid,502\nnogales,601\nbrussels,712\ntempe,81231\nanthem,91231\n\n\nprint( csv_to_list(\"places.csv\") )\n\n\n[\"1234\", \"145\", \"10\", \"1700\", \"1729\", \"1711\", \"219\", \"231\", \"20001\", \"301\", \"3879\", \"404\", \"40123\", \"505\", \"502\", \"601\", \"712\", \"81231\", \"91231\"]"
+  },
+  {
+    "objectID": "project-6.html#count-start-digits",
+    "href": "project-6.html#count-start-digits",
+    "title": "Programming Project 6",
+    "section": "Count start digits",
+    "text": "Count start digits\n\nIts name is count_start_digits\nIt takes one argument, a list of strings that represent numbers (for example: [\"1234\", \"145\", \"10\", \"1700\", \"1729\"])\nIt creates a dictionary to keep counts of the digits (1 to 9) that start each number in the numbers list\nIt iterates over the values in numbers adding 1 to the respective value associated to each digit key (1 to 9) in the dictionary\nRemember to convert the first character in each value in numbers to an integer (the dictionary keys are integers)\nIt returns the dictionary of counts\n\nTest case:\n\nlist_of_numbers = csv_to_list(\"places.csv\")\ncounts = count_start_digits(list_of_numbers)\nprint(counts) # {1: 6, 2: 3, 3: 2, 4: 2, 5: 2, 6: 1, 7: 1, 8: 1, 9: 1}"
+  },
+  {
+    "objectID": "project-6.html#calculate-percentages",
+    "href": "project-6.html#calculate-percentages",
+    "title": "Programming Project 6",
+    "section": "Calculate percentages",
+    "text": "Calculate percentages\n\nIts name is digit_percentages\nIt takes a dictionary with digit counts\nIt creates a new dictionary with the percentage for each digit\nTo calculate percentage, first calculate the sum of all the counts, then divide each value in counts by the calculated total (round it to two decimals)\nIt returns the new dictionary\n\nTest case:\n\nlist_of_numbers = csv_to_list(\"places.csv\")\ncounts = count_start_digits(list_of_numbers)\npercentages = digit_percentages(counts)\nprint(percentages) # {1: 31.58, 2: 15.79, 3: 10.53, 4: 10.53, 5: 10.53, 6: 5.26, 7: 5.26, 8: 5.26, 9: 5.26}"
+  },
+  {
+    "objectID": "project-6.html#does-it-follow-the-law",
+    "href": "project-6.html#does-it-follow-the-law",
+    "title": "Programming Project 6",
+    "section": "Does it follow the law?",
+    "text": "Does it follow the law?\n\nIts name is check_benfords_law\nIt takes one argument, a dictionary with percentages per digit\nA data set follows Benford’s law if the percentage of occurrences of each digits follows the percentages below (plus 10% or minus 5%)\nIf every digit percentage falls within the specified rage, return True, otherwise return False\n\n\n\n\ndigit\npercent (-5, +10)\n\n\n\n\n1\n30%\n\n\n2\n17%\n\n\n3\n12%\n\n\n4\n9%\n\n\n5\n7%\n\n\n6\n6%\n\n\n7\n5%\n\n\n8\n5%\n\n\n9\n4%\n\n\n\n\nTest cases\n\npopulations.csv does follow Benford’s Law\nstocks.csv does follow Benford’s Law\nrandom_numbers.csv does NOT follow Benford’s Law"
+  },
+  {
+    "objectID": "project-4.html",
+    "href": "project-4.html",
+    "title": "Programming Project 4",
+    "section": "",
+    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Wednesday, February 21, 2024 at 7pm\nIn this programming project you will implement a number of Python functions to implement a simplified version of chess. Make sure you follow the provided style guide (you will be graded on it!).\nName your program one_d_chess.py to submit to gradescope. Make sure that gradescope gives you the points for passing the test cases.\nThis programming project is an adaptation of Ben Dicken’s 1 Dimensional Chess Programming Assignment.\nIn this programming project, you will be implementing a simpler variant of chess: 1D Chess! 1D chess is a variant of the game that is played on a board that has only one column of spaces, rather than a grid of spaces, as in typical chess. There are actually multiple variants of 1D chess. In this PA, you should implement a custom variant of 1D chess, which I’ll refer to as “110 1D chess”."
+  },
+  {
+    "objectID": "project-4.html#d-chess-rules",
+    "href": "project-4.html#d-chess-rules",
+    "title": "Programming Project 4",
+    "section": "1D Chess Rules",
+    "text": "1D Chess Rules\nIn 110 1D chess, the board will be 1 by 9. Each player will get one king, and two knights. The white pieces go on the left, and the black on the right. The starting positions for the pieces of the game should be as follows:\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |\n+-----------------------------------------------------+\n\nKings and Knights move and kill their opponents differently. Knights can move either left or right, and when they move thy jump two pieces over. If they land on another piece, they kill them and take their spot. The king can move left or right, until they hit either another piece or an edge of the board. If a king hits another piece, they kill them and take their place. In chess, a player cannot typically kill one of their own pieces. In 110 1D chess, a king or knight can kill one of their own, if they hit or land on them, so be careful!"
+  },
+  {
+    "objectID": "project-4.html#start-game",
+    "href": "project-4.html#start-game",
+    "title": "Programming Project 4",
+    "section": "Start Game",
+    "text": "Start Game\n\nIts name is create_board\nIt takes no arguments\nIt returns a list with the initial state of the board (as shown in the test case below)\n\nTest case:\n\nprint( create_board() ) # [\"WKi\", \"WKn\", \"WKn\", \n                        #  \"EMPTY\", \"EMPTY\", \"EMPTY\",\n                        #  \"BKn\", \"BKn\", \"BKi\"]"
+  },
+  {
+    "objectID": "project-4.html#print-board",
+    "href": "project-4.html#print-board",
+    "title": "Programming Project 4",
+    "section": "Print Board",
+    "text": "Print Board\n\nIts name is printable_board\nIt takes one argument, the board list\nIt returns a string that is the graphical representation of the board\n\nTest case for initial board state:\n\nboard = create_board()\nprint( printable_board(board) ) # \"+-----------------------------------------------------+\\n\n                                #  | WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |\\n\n                                #  +-----------------------------------------------------+\"\n\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |\n+-----------------------------------------------------+"
+  },
+  {
+    "objectID": "project-4.html#check-move-validity",
+    "href": "project-4.html#check-move-validity",
+    "title": "Programming Project 4",
+    "section": "Check move validity",
+    "text": "Check move validity\n\nIts name is is_valid_move\nIt has three parameters: the board (list), the position (index) of the player to move, and player (\"WHITE\" or \"BLACK\")\nIt returns a boolean (True or False) – it returns True if the desired move is valid, an False otherwise\nA move is valid if:\n\n\nThe position (index) is a valid index in the board list\nThe position is an index of one of the current player’s pieces on the board\n\nYou do not need a while loop or for loop within this function. It can be accomplished with if statements. If the above two conditions are True, the function should return True. In any other case, return False.\nTest cases:\n\nboard = create_board()\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( is_valid_move(board, 1, \"BLACK\" ) ) # False\nprint( is_valid_move(board, 9, \"BLACK\" ) ) # False\nprint( is_valid_move(board, -1, \"BLACK\" ) ) # False\nprint( is_valid_move(board, 6, \"BLACK\" ) ) # True\nprint( is_valid_move(board, 2, \"WHITE\" ) ) # True"
+  },
+  {
+    "objectID": "project-4.html#move-a-king",
+    "href": "project-4.html#move-a-king",
+    "title": "Programming Project 4",
+    "section": "Move a king",
+    "text": "Move a king\n\nIts name is move_king\nIt takes three arguments: the board list, the position (index) of the player to move, and a direction (either \"LEFT\" or \"RIGHT\")\nIt changes the position of a king in the board list\nA king can move either left or right\nThe king will move until either it reaches another piece (killing that piece and taking its place), or an end of the board\nIt uses a for-loop or while-loop to iterate through the elements in the list and determine the spot it should end up at\n\nTest cases:\n\nboard = create_board()\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |\n+-----------------------------------------------------+\n\n\nmove_king(board, 0, \"LEFT\") \nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |\n+-----------------------------------------------------+\n\n\nmove_king(board, 8, \"LEFT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     |     |     | BKn | BKi |     |\n+-----------------------------------------------------+"
+  },
+  {
+    "objectID": "project-4.html#move-a-knight",
+    "href": "project-4.html#move-a-knight",
+    "title": "Programming Project 4",
+    "section": "Move a knight",
+    "text": "Move a knight\n\nIts name is move_knight\nIt takes three arguments: the board list, the position (index) of the player to move, and a direction (either \"LEFT\" or \"RIGHT\")\nIt changes the position of the moving knight in the board list\n\nA knight can move either left or right\nA knight moves two locations\nIf the moving knight lands on a space that another piece occupies, then it kills that piece\nKnights can jump over other pieces\nIf the moving knight cannot move due to the ending position of the move being out-of-bounds of the board, the knight should stay in its place\n\nTest cases:\n\nboard = create_board()\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |\n+-----------------------------------------------------+\n\n\nmove_knight(board, 6, \"LEFT\") \nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     | BKn |     |     | BKn | BKi |\n+-----------------------------------------------------+\n\n\nmove_knight(board, 2, \"RIGHT\") \nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn |     |     | WKn |     |     | BKn | BKi |\n+-----------------------------------------------------+"
+  },
+  {
+    "objectID": "project-4.html#make-a-move",
+    "href": "project-4.html#make-a-move",
+    "title": "Programming Project 4",
+    "section": "Make a move",
+    "text": "Make a move\n\nIts name is move\nIt takes three arguments: the board list, the position (index) of the player to move, and a direction (either \"LEFT\" or \"RIGHT\")\nIt determines if the piece to be moved is a king or a knight – if it is a king, call the move_king function; if a knight, call move_knight\n\nTest case:\n\nboard = create_board()\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |\n+-----------------------------------------------------+\n\n\nmove(board, 0, \"LEFT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |\n+-----------------------------------------------------+\n\n\nmove(board, 8, \"LEFT\") \nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     |     |     | BKn | BKi |     |\n+-----------------------------------------------------+"
+  },
+  {
+    "objectID": "project-4.html#game-over",
+    "href": "project-4.html#game-over",
+    "title": "Programming Project 4",
+    "section": "Game over",
+    "text": "Game over\n\nIts name is is_game_over\nIt takes the board list as an argument\nIt determines if the game is over or not\nIt returns a boolean (True or False)\nIf the white king does not exist on the board, then the game is over (it returns True)\nIf the black king does not exist on the board, then the game is over (it returns True)\nIf both kings are still in the board list, it returns False\n\nTest case:\n\nboard = create_board()\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( is_game_over(board) ) # False\nmove(board, 2, \"RIGHT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn |     |     | WKn |     | BKn | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( is_game_over(board) ) # False\nmove(board, 6, \"LEFT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn |     |     | BKn |     |     | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( is_game_over(board) ) # False\nmove(board, 1, \"RIGHT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi |     |     | WKn | BKn |     |     | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( is_game_over(board) ) # False\nmove(board, 4, \"LEFT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi |     | BKn | WKn |     |     |     | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( is_game_over(board) ) # False\nmove(board, 0, \"RIGHT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n|     |     | WKi | WKn |     |     |     | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( is_game_over(board) ) # False\nmove(board, 7, \"LEFT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n|     |     | WKi | WKn |     | BKn |     |     | BKi |\n+-----------------------------------------------------+\n\n\nprint( is_game_over(board) ) # False\nmove(board, 3, \"RIGHT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n|     |     | WKi |     |     | WKn |     |     | BKi |\n+-----------------------------------------------------+\n\n\nprint( is_game_over(board) ) # False\nmove(board, 8, \"LEFT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n|     |     | WKi |     |     | BKi |     |     |     |\n+-----------------------------------------------------+\n\n\nprint( is_game_over(board) ) # False\nmove(board, 2, \"RIGHT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n|     |     |     |     |     | WKi |     |     |     |\n+-----------------------------------------------------+\n\n\nprint( is_game_over(board) ) # True"
+  },
+  {
+    "objectID": "project-4.html#determine-the-winner",
+    "href": "project-4.html#determine-the-winner",
+    "title": "Programming Project 4",
+    "section": "Determine the winner",
+    "text": "Determine the winner\n\nIts name is whos_the_winner\nIt takes the board list as an argument\nIf the white king does not exist on the board, it returns “Black”\nIf the black king does not exist on the board, it returns “White”\nReturn None if both kings are on the board\n\nTest case:\n\nboard = create_board()\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( whos_the_winner(board) ) # None\nmove(board, 2, \"RIGHT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn |     |     | WKn |     | BKn | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( whos_the_winner(board) ) # None\nmove(board, 6, \"LEFT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn |     |     | BKn |     |     | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( whos_the_winner(board) ) # None\nmove(board, 1, \"RIGHT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn |     |     | BKn |     |     | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( whos_the_winner(board) ) # None\nmove(board, 1, \"RIGHT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi |     |     | WKn | BKn |     |     | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( whos_the_winner(board) ) # None\nmove(board, 4, \"LEFT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi |     | BKn | WKn |     |     |     | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( whos_the_winner(board) ) # None\nmove(board, 0, \"RIGHT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n|     |     | WKi | WKn |     |     |     | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( whos_the_winner(board) ) # None\nmove(board, 7, \"LEFT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n|     |     | WKi | WKn |     | BKn |     |     | BKi |\n+-----------------------------------------------------+\n\n\nprint( whos_the_winner(board) ) # None\nmove(board, 3, \"RIGHT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n|     |     | WKi |     |     | WKn |     |     | BKi |\n+-----------------------------------------------------+\n\n\nprint( whos_the_winner(board) ) # None\nmove(board, 8, \"LEFT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n|     |     | WKi |     |     | BKi |     |     |     |\n+-----------------------------------------------------+\n\n\nprint( whos_the_winner(board) ) # None\nmove(board, 2, \"RIGHT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n|     |     |     |     |     | WKi |     |     |     |\n+-----------------------------------------------------+\n\n\nprint( is_game_over(board) ) # True\nprint( whos_the_winner(board) ) # WHITE"
+  },
+  {
+    "objectID": "slides-11-02.html#data-structures-in-python",
+    "href": "slides-11-02.html#data-structures-in-python",
+    "title": "intro to sets (class slides)",
+    "section": "Data Structures in Python",
+    "text": "Data Structures in Python\n\nlists (mutable)\ndictionaries (mutable)\ntuples (immutable)\nsets (mutable)"
+  },
+  {
+    "objectID": "slides-11-02.html#lists",
+    "href": "slides-11-02.html#lists",
+    "title": "intro to sets (class slides)",
+    "section": "Lists",
+    "text": "Lists\n\nstore:\n\nordered items (it keeps the original order)\nelements of different types\nrepeated elements\n\nuse square brackets ([]) syntax for creating a list\nallow indexing (integers starting at 0) with square brackets ([]) as well\nare mutable"
+  },
+  {
+    "objectID": "slides-11-02.html#tuples",
+    "href": "slides-11-02.html#tuples",
+    "title": "intro to sets (class slides)",
+    "section": "Tuples",
+    "text": "Tuples\n\nstore:\n\nordered items (it keeps the original order)\nelements of different types\nrepeated elements\n\nuse parentheses (()) syntax for creating a tuple\nallow indexing (integers starting at 0) with square brackets ([])\nare immutable"
+  },
+  {
+    "objectID": "slides-11-02.html#dictionaries",
+    "href": "slides-11-02.html#dictionaries",
+    "title": "intro to sets (class slides)",
+    "section": "Dictionaries",
+    "text": "Dictionaries\n\nstore pairs of items key: value\nkeys have to be unique (no repeated keys allowed)\nuse curly brackets ({}) with key and value separated by colon (:)\nallow value retrieval through key with square brackets ([])\nare mutable"
+  },
+  {
+    "objectID": "slides-11-02.html#sets",
+    "href": "slides-11-02.html#sets",
+    "title": "intro to sets (class slides)",
+    "section": "Sets",
+    "text": "Sets\n\nA set is (another) data structure\nHelpful ways of thinking about it\n\nA dictionary without the values\nA “bag” of elements"
+  },
+  {
+    "objectID": "slides-11-02.html#sets-1",
+    "href": "slides-11-02.html#sets-1",
+    "title": "intro to sets (class slides)",
+    "section": "Sets",
+    "text": "Sets\n\nDo not store items in the order you created them\nDo not allow repeated items to be stored\nCannot use square brackets to retrieve an item\nUse set() to initiate an empty set\nUse for x in set to iterate over the elements in a set"
+  },
+  {
+    "objectID": "slides-11-02.html#set-methods",
+    "href": "slides-11-02.html#set-methods",
+    "title": "intro to sets (class slides)",
     "section": "Set methods",
-    "text": "Set methods\n\n.add(value) adds an element to the set\n.discard(value) discards the specified value\n.union(set2) returns a set with the all elements in both sets\n.intersection(set2) returns a set with the all elements in common"
+    "text": "Set methods\n\n.add(value) adds an element to the set\n.discard(value) discards the specified value\n\nYou can also use the operator in and the function len() with sets\nUse the function set() to convert a list to a set, and list() to convert a set into a list"
   },
   {
-    "objectID": "slides-11-03.html#union",
-    "href": "slides-11-03.html#union",
-    "title": "sets (class slides)",
-    "section": "union",
-    "text": "union\n\ns1 = {1, 2, 3}\ns2 = {3, 4, 5}\ns1.union(s2)\n\n{1, 2, 3, 4, 5}\n\n\n\nunion"
-  },
-  {
-    "objectID": "slides-11-03.html#intersection",
-    "href": "slides-11-03.html#intersection",
-    "title": "sets (class slides)",
-    "section": "intersection",
-    "text": "intersection\n\ns1 = {1, 2, 3}\ns2 = {3, 4, 5}\ns1.intersection(s2)\n\n{3}\n\n\n\nintersection"
-  },
-  {
-    "objectID": "slides-11-03.html#evaluate-the-code",
-    "href": "slides-11-03.html#evaluate-the-code",
-    "title": "sets (class slides)",
+    "objectID": "slides-11-02.html#evaluate-the-code",
+    "href": "slides-11-02.html#evaluate-the-code",
+    "title": "intro to sets (class slides)",
     "section": "Evaluate the code",
-    "text": "Evaluate the code\n\npresences = {\"Anna\", \"Beatrice\", \"Claude\"}\nabsences = {\"Elvin\", \"Harley\"}\nabsences.add(\"Becca\")\npresences.union(absences)\n\ntask_1 = {\"Anna\", \"Beatrice\", \"Claude\"}\ntask_2 = {\"Anna\", \"Elvin\", \"Harley\", \"Beatrice\"}\ntask_1.intersection(task_2)\n\ntask_2.discard(\"Anna\")\ntask_1.intersection(task_2)"
+    "text": "Evaluate the code\n\nnumbers = {5, 7, 10, 5, 3, 5, 9, 8, 20, 5}\nnumbers  # evaluate what this set holds at this point\n\nnumbers.add(30)\nnumbers  # evaluate what this set holds at this point\n\nnumbers.discard(10)\nnumbers  # evaluate what this set holds at this point"
   },
   {
-    "objectID": "slides-11-03.html#evaluate-the-code-1",
-    "href": "slides-11-03.html#evaluate-the-code-1",
-    "title": "sets (class slides)",
+    "objectID": "slides-11-02.html#evaluate-the-code-1",
+    "href": "slides-11-02.html#evaluate-the-code-1",
+    "title": "intro to sets (class slides)",
     "section": "Evaluate the code",
-    "text": "Evaluate the code\n\npresences = {\"Anna\", \"Beatrice\", \"Claude\"}\nabsences = {\"Elvin\", \"Harley\"}\nabsences.add(\"Becca\")\npresences.union(absences)\n\n{'Anna', 'Beatrice', 'Becca', 'Claude', 'Elvin', 'Harley'}\n\n\n\ntask_1 = {\"Anna\", \"Beatrice\", \"Claude\"}\ntask_2 = {\"Anna\", \"Elvin\", \"Harley\", \"Beatrice\"}\ntask_1.intersection(task_2)\n\n{'Anna', 'Beatrice'}\n\n\n\ntask_2.discard(\"Anna\")\ntask_1.intersection(task_2)\n\n{'Beatrice'}"
+    "text": "Evaluate the code\n\nnumbers = {5, 7, 10, 5, 3, 5, 9, 8, 20, 5}\nnumbers\n\n{3, 5, 7, 8, 9, 10, 20}\n\n\n\nnumbers.add(30)\nnumbers\n\n{3, 5, 7, 8, 9, 10, 20, 30}\n\n\n\nnumbers.discard(10)\nnumbers\n\n{3, 5, 7, 8, 9, 20, 30}"
   },
   {
-    "objectID": "slides-11-03.html#write-a-function",
-    "href": "slides-11-03.html#write-a-function",
-    "title": "sets (class slides)",
+    "objectID": "slides-11-02.html#evaluate-the-code-2",
+    "href": "slides-11-02.html#evaluate-the-code-2",
+    "title": "intro to sets (class slides)",
+    "section": "Evaluate the code",
+    "text": "Evaluate the code\n\nnumbers_list = [2, 1, 2, 1, 3, 4, 1]\nnumbers_list # evaluate this line\n\nnumbers_set = set(numbers_list)\nnumbers_set # evaluate this line\n\nnumbers_set.add(1)\nnumbers_set.add(2)\nnumbers_set # evaluate this line\n\nnumbers_set.add(5)\nnumbers_set # evaluate this line\n\nnumbers_set.discard(6)\nnumbers_set.discard(1)\nnumbers_set # evaluate this line"
+  },
+  {
+    "objectID": "slides-11-02.html#evaluate-the-code-3",
+    "href": "slides-11-02.html#evaluate-the-code-3",
+    "title": "intro to sets (class slides)",
+    "section": "Evaluate the code",
+    "text": "Evaluate the code\n\nnumbers_list = [2, 1, 2, 1, 3, 4, 1]\nnumbers_list # evaluate this line\n\n[2, 1, 2, 1, 3, 4, 1]\n\n\n\nnumbers_set = set(numbers_list)\nnumbers_set # evaluate this line\n\n{1, 2, 3, 4}\n\n\n\nnumbers_set.add(1)\nnumbers_set.add(2)\nnumbers_set # evaluate this line\n\n{1, 2, 3, 4}\n\n\n\nnumbers_set.add(5)\nnumbers_set # evaluate this line\n\n{1, 2, 3, 4, 5}\n\n\n\nnumbers_set.discard(6)\nnumbers_set.discard(1)\nnumbers_set # evaluate this line\n\n{2, 3, 4, 5}"
+  },
+  {
+    "objectID": "slides-11-02.html#write-a-function",
+    "href": "slides-11-02.html#write-a-function",
+    "title": "intro to sets (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is common_values\nIt takes two sets are arguments\nIt returns False if the sets have no elements in common, True otherwise\n\n\nassert common_values({1, 2, 3}, {3, 4, 5}) == True\nassert common_values({1, 2, 3}, {30, 40, 50}) == False"
+    "text": "Write a function\n\nIts name is count_names\nIt opens in read mode a file that contains a name per line, with repeated names\nIt counts how many unique names there are in the file\nIt returns an integer with the count\nUse a set for this\n\n\nassert count_names(\"names.txt\") == 11"
   },
   {
-    "objectID": "slides-11-03.html#write-a-function-solution",
-    "href": "slides-11-03.html#write-a-function-solution",
-    "title": "sets (class slides)",
+    "objectID": "slides-11-02.html#write-a-function-solution",
+    "href": "slides-11-02.html#write-a-function-solution",
+    "title": "intro to sets (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef common_values(set_1, set_2):\n  return len(set_1.intersection(set_2)) != 0\n\nif __name__ == \"__main__\":\n  assert common_values({1, 2, 3}, {3, 4, 5}) == True\n  assert common_values({1, 2, 3}, {30, 40, 50}) == False\n  print(\"Passed tests.\")\n\nPassed tests."
+    "text": "Write a function – solution\n\ndef count_names(file_name):\n  f = open(file_name, \"r\")\n  name_set = set()\n  for line in f:\n    name_set.add(line.strip())\n  f.close()\n  return len(name_set)\n\ndef main():\n  assert count_names(\"names.txt\") == 11\n  \nmain()"
   },
   {
-    "objectID": "slides-11-03.html#write-a-function-1",
-    "href": "slides-11-03.html#write-a-function-1",
-    "title": "sets (class slides)",
+    "objectID": "slides-11-02.html#write-a-function-1",
+    "href": "slides-11-02.html#write-a-function-1",
+    "title": "intro to sets (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nFunction name is discard_elements\nIt takes two sets as argument: set_1 and set_2\nIt mutates the first set (set_1) removing all elements it has in common with set_2\n\n\ntest_set = {1, 2, 3, 4}\ndiscard_elements(test_set, {2})\nassert test_set == {1, 3, 4}"
+    "text": "Write a function\n\nIts name is has_duplicates\nIt takes a variable number of arguments: *values\nIt returns True if there are repeated elements in *values, False otherwise\n\n\nassert has_duplicates(3, 2, 1, 2, 3) == True\nassert has_duplicates(3, 20, 1, 2, 13) == False"
   },
   {
-    "objectID": "slides-11-03.html#write-a-function-solution-1",
-    "href": "slides-11-03.html#write-a-function-solution-1",
-    "title": "sets (class slides)",
+    "objectID": "slides-11-02.html#write-a-function-solution-1",
+    "href": "slides-11-02.html#write-a-function-solution-1",
+    "title": "intro to sets (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef discard_elements(set_1, set_2):\n  to_remove = set_1.intersection(set_2)\n  for value in to_remove:\n    set_1.discard(value)\n    \nif __name__ == \"__main__\":\n  test_set = {1, 2, 3, 4}\n  discard_elements(test_set, {2})\n  assert test_set == {1, 3, 4}\n  print(test_set)\n\n{1, 3, 4}"
+    "text": "Write a function – solution\n\ndef has_duplicates(*values):\n  values_set = set(values)\n  return not len(values) == len(values_set)\n\ndef main():\n  assert has_duplicates(3, 2, 1, 2, 3) == True\n  assert has_duplicates(3, 20, 1, 2, 13) == False\n  \nmain()"
   },
   {
-    "objectID": "project-5.html",
-    "href": "project-5.html",
-    "title": "Programming Project 5",
-    "section": "",
-    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Wednesday, March 13, 2024 at 7pm\nThis programming project is an adaptation of Ben Dicken’s Where’s the Money Programming Assignment."
+    "objectID": "slides-03-02.html#write-a-function",
+    "href": "slides-03-02.html#write-a-function",
+    "title": "Built-in Python Functions (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\nWrite a Python function that does the following:\n\nIts name is greeting\nIt takes two arguments, first_name and last_name\nIt returns a string with a greeting using first_name and last_name\n\n\nprint( greeting(\"Adriana\", \"Picoral\") ) # Hello, Adriana Picoral!"
   },
   {
-    "objectID": "project-5.html#add-a-comma",
-    "href": "project-5.html#add-a-comma",
-    "title": "Programming Project 5",
-    "section": "Add a comma",
-    "text": "Add a comma\n\nSet to stop at two decimal points\nAdd necessary spacing before the number, so that the table lines up"
+    "objectID": "slides-03-02.html#reading-the-documentation",
+    "href": "slides-03-02.html#reading-the-documentation",
+    "title": "Built-in Python Functions (class slides)",
+    "section": "Reading the documentation",
+    "text": "Reading the documentation\nAccess the Python 3.11 documentation and read the definitions for print(), round(), input(), len(), int(), and str().\nWith your table members, write a short definition for each of the built-in functions above on a white board."
   },
   {
-    "objectID": "class-code.html",
-    "href": "class-code.html",
-    "title": "Code created in class",
-    "section": "",
-    "text": "I created a GitHub repository with the code created in class during live-coding demonstrations: TBA"
+    "objectID": "slides-03-02.html#len-function",
+    "href": "slides-03-02.html#len-function",
+    "title": "Built-in Python Functions (class slides)",
+    "section": "len() function",
+    "text": "len() function\n\nThe len() function can be used with many types – we will be using it with string for now\nIt returns the number of characters in a string\n\n\ncharacter_count = len(\"Adriana\")\nprint(character_count)\n\n7"
+  },
+  {
+    "objectID": "slides-03-02.html#write-a-function-1",
+    "href": "slides-03-02.html#write-a-function-1",
+    "title": "Built-in Python Functions (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\nWrite a Python function that does the following:\n\nIts name is count_characters\nIt takes a string argument, name\nIt returns the total number of characters in name\n\n\nprint( count_characters(\"Adriana\") ) # 7\nprint( count_characters(\"\") ) # 0\nprint( count_characters(\" \") ) # 1\nprint( count_characters(\"10\") ) # 2"
+  },
+  {
+    "objectID": "slides-03-02.html#input-function",
+    "href": "slides-03-02.html#input-function",
+    "title": "Built-in Python Functions (class slides)",
+    "section": "input() function",
+    "text": "input() function\n\nThe input() function prompts the user to input text in the standard output\nWhatever is inside the parentheses in input() will be written to the standard output (without a trailing newline, which you can add using \\n).\nThe function then reads a line from input, converts it to a string (stripping a trailing newline), and returns that\ninput() always returns a string\n\n\ninput(\"What's your name?\\n\")"
+  },
+  {
+    "objectID": "slides-03-02.html#write-main",
+    "href": "slides-03-02.html#write-main",
+    "title": "Built-in Python Functions (class slides)",
+    "section": "Write main()",
+    "text": "Write main()\nNow you should have two functions in your .py script: greeting and count_characters.\nWrite a main() function."
+  },
+  {
+    "objectID": "slides-03-02.html#write-a-function-2",
+    "href": "slides-03-02.html#write-a-function-2",
+    "title": "Built-in Python Functions (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\nIn the same script, write main():\n\nPrompt user to enter their first name and last name using input()\nCall your greeting function and save the string it returns to a variable\nPrint the variable\nCall your count_characters function with the user’s full name and save the integer value returned to a variable\nPrint a message to the user: Your full name has X letters. – replacing X with the right character count"
+  },
+  {
+    "objectID": "slides-03-02.html#announcements",
+    "href": "slides-03-02.html#announcements",
+    "title": "Built-in Python Functions (class slides)",
+    "section": "Announcements",
+    "text": "Announcements\n\nMidterm 1 on September 20 (this room)\nModules 1-4 (practice problems on the website)\nReview session TBA\nBRING PHOTO ID TO THE EXAM\nBRING PHOTO ID TO QUIZ 04 (this Wednesday, Sept 13)"
+  },
+  {
+    "objectID": "slides-03-02.html#input-function-1",
+    "href": "slides-03-02.html#input-function-1",
+    "title": "Built-in Python Functions (class slides)",
+    "section": "input() function",
+    "text": "input() function\nUse input() to get user input (it always returns a string)"
+  },
+  {
+    "objectID": "slides-03-02.html#int-function",
+    "href": "slides-03-02.html#int-function",
+    "title": "Built-in Python Functions (class slides)",
+    "section": "int() function",
+    "text": "int() function\n\nThe int() function can be used to convert a string to an integer type\nIt only works if the string only contains digits\n\n\nage = '35'\nage_int = int(age)\nprint(type(age), type(age_int))\n\n&lt;class 'str'&gt; &lt;class 'int'&gt;"
+  },
+  {
+    "objectID": "slides-03-02.html#float-function",
+    "href": "slides-03-02.html#float-function",
+    "title": "Built-in Python Functions (class slides)",
+    "section": "float() function",
+    "text": "float() function\n\nThe float() function can be used to convert a string to a float type\nIt only works if the string only contains digits and optionally a decimal point\n\n\nage = '35'\nage_float = float(age)\nprint(type(age), type(age_float))\n\n&lt;class 'str'&gt; &lt;class 'float'&gt;"
+  },
+  {
+    "objectID": "slides-03-02.html#write-a-function-3",
+    "href": "slides-03-02.html#write-a-function-3",
+    "title": "Built-in Python Functions (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\nWrite a Python function that does the following:\n\nIts name is calculate_year_born, with no parameters\nIt prompts user to enter their age input()\nIt converts user’s age to integer (since input() always returns a string)\nIt calculates (imperfectly) the year a person of age was born by subtracting age from 2023\nIt returns an integer representing the approximate year person of age was born\n\n\nprint( calculate_year_born() ) # user enters 42, function returns 1981"
+  },
+  {
+    "objectID": "slides-03-02.html#organizing-your-code",
+    "href": "slides-03-02.html#organizing-your-code",
+    "title": "Built-in Python Functions (class slides)",
+    "section": "Organizing your code",
+    "text": "Organizing your code\n\nSplit your functions and your main() in different files\nUse from script_name import *\nFor gradescope, submit only your script with all of your functions"
+  },
+  {
+    "objectID": "slides-07-01.html#lists-vs-strings",
+    "href": "slides-07-01.html#lists-vs-strings",
+    "title": "mutability (class slides)",
+    "section": "Lists vs strings",
+    "text": "Lists vs strings\n\nLists are mutable\nStrings are not\nIn addition to retrieving an item from a list, we can remove or change it (which is not something you can do with strings)\n\n\nsongs = [\"Lavender Haze\", \"Calm Down\", \"As It Was\", \"About Damn Time\"]\nsongs\n\n['Lavender Haze', 'Calm Down', 'As It Was', 'About Damn Time']\n\n\n\nsongs[0] = \"Flowers\"\nsongs\n\n['Flowers', 'Calm Down', 'As It Was', 'About Damn Time']"
+  },
+  {
+    "objectID": "slides-07-01.html#lists-are-mutable",
+    "href": "slides-07-01.html#lists-are-mutable",
+    "title": "mutability (class slides)",
+    "section": "Lists are mutable",
+    "text": "Lists are mutable\n(strings are not)\nBecause lists are mutable:\n\nonce a list is changed inside a function, that change persists when the function has finished running\nif your function changes a list, you don’t strictly need to return that list – we will be returning because that’s what you need to be doing in the future"
+  },
+  {
+    "objectID": "slides-07-01.html#write-a-function",
+    "href": "slides-07-01.html#write-a-function",
+    "title": "mutability (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\n\nIts name is make_all_even\nIt takes one argument, a list of integers\nIt iterates over the list, changing odd numbers to even number (even up)\n\n\ntest_integers = [1, 2, 3, 4]\nassert make_all_even(test_integers) == test_integers\nassert test_integers == [2, 2, 4, 4]"
+  },
+  {
+    "objectID": "slides-07-01.html#write-a-function-solution",
+    "href": "slides-07-01.html#write-a-function-solution",
+    "title": "mutability (class slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\n\ndef make_all_even(integers):\n  index = 0\n  while index &lt; len(integers):\n    if integers[index] % 2 == 1:\n      integers[index] += 1\n    index += 1\n  return integers\n      \ndef main():\n  test_integers = [1, 2, 3, 4]\n  assert make_all_even(test_integers) == test_integers\n  assert test_integers == [2, 2, 4, 4]\n  print(test_integers) # we print the list we created before function call\n  \nmain()\n\n[2, 2, 4, 4]\n\n\nLet’s visualize this on Python Tutor"
+  },
+  {
+    "objectID": "slides-07-01.html#object-references",
+    "href": "slides-07-01.html#object-references",
+    "title": "mutability (class slides)",
+    "section": "Object References",
+    "text": "Object References\n\nA variable doesn’t store values, it stores a reference to an object that lives in your computer memory (RAM)\nThe same variable name can be pointed to a different object\nA variable name can point to an object that is already referenced by another variable"
+  },
+  {
+    "objectID": "slides-07-01.html#examples",
+    "href": "slides-07-01.html#examples",
+    "title": "mutability (class slides)",
+    "section": "Examples",
+    "text": "Examples\nStrings are not mutable\n\ntitle = \"Dr.\"\nlast_name = \"Brown\"\nprint(title + \" \" + last_name)\n\ntitle = \"Ms.\"\nprint(title + \" \" + last_name)\n\nname = last_name\nlast_name = \"Silva\" # last_name points to a different object\nprint(title + \" \" + name)\n\nDr. Brown\nMs. Brown\nMs. Brown\n\n\nVisualize these examples in Python Tutor"
+  },
+  {
+    "objectID": "slides-07-01.html#examples-1",
+    "href": "slides-07-01.html#examples-1",
+    "title": "mutability (class slides)",
+    "section": "Examples",
+    "text": "Examples\nLists are mutable\n\nnames = [\"Dr.\", \"Brown\"]\nprint(names[0] + \" \" + names[1])\n\nnames[0] = \"Ms.\"\nprint(names[0] + \" \" + names[1])\n\nnames_copy = names\nnames[1] = \"Silva\"\nprint(names_copy[0] + \" \" + names_copy[1])\n\nDr. Brown\nMs. Brown\nMs. Silva\n\n\nVisualize these examples in Python Tutor"
+  },
+  {
+    "objectID": "slides-07-01.html#another-example",
+    "href": "slides-07-01.html#another-example",
+    "title": "mutability (class slides)",
+    "section": "Another example",
+    "text": "Another example\n\nnumbers = [50, 30, 80]\nsame_numbers = numbers\nsame_numbers[1] = 40\nnumbers = \"look, numbers!\"\nsame_numbers = numbers\n\nVisualize these examples in Python Tutor"
+  },
+  {
+    "objectID": "slides-07-01.html#object-references-1",
+    "href": "slides-07-01.html#object-references-1",
+    "title": "mutability (class slides)",
+    "section": "Object references",
+    "text": "Object references\n\nA variable does not actually hold the value of the object within it\nInstead, it’s a reference to the object\n\nThe object is “sitting” somewhere in your computer’s memory (RAM)"
+  },
+  {
+    "objectID": "slides-07-01.html#object-references-2",
+    "href": "slides-07-01.html#object-references-2",
+    "title": "mutability (class slides)",
+    "section": "Object references",
+    "text": "Object references\n\nWhen you assign a value to a new variable, one of two things could happen\n\nIf you assign it to an existing object, the variable references that object\nIf you assign it to a new object, the object is created, placed in memory, and then the variable references it"
+  },
+  {
+    "objectID": "slides-07-01.html#garbage-collection",
+    "href": "slides-07-01.html#garbage-collection",
+    "title": "mutability (class slides)",
+    "section": "Garbage Collection",
+    "text": "Garbage Collection\n\nWhen there’s no variable pointing to an object anymore, that object is removed from memory by Python’s Garbage Collector (so you don’t have to worry about memory leaks)"
+  },
+  {
+    "objectID": "slides-07-01.html#summary",
+    "href": "slides-07-01.html#summary",
+    "title": "mutability (class slides)",
+    "section": "Summary",
+    "text": "Summary\nWhen working with lists, once they are changed in a function, the changes happen to the object in memory\nChanges to lists persist once the function has finished running"
+  },
+  {
+    "objectID": "slides-07-01.html#pop-list-method",
+    "href": "slides-07-01.html#pop-list-method",
+    "title": "mutability (class slides)",
+    "section": ".pop() list method",
+    "text": ".pop() list method\nWe will be using a few built-in list methods (not all of them, some you will implement yourself from scratch)\nHere’s how .pop() works:\n\nsongs = [\"Lavender Haze\", \"Calm Down\", \"As It Was\", \"About Damn Time\"]\nsongs\n\n['Lavender Haze', 'Calm Down', 'As It Was', 'About Damn Time']\n\n\n\nsongs.pop(0)\nsongs\n\n['Calm Down', 'As It Was', 'About Damn Time']"
+  },
+  {
+    "objectID": "slides-07-01.html#write-two-functions",
+    "href": "slides-07-01.html#write-two-functions",
+    "title": "mutability (class slides)",
+    "section": "Write two functions",
+    "text": "Write two functions\n\nNames are remove_vowels_list and remove_vowels_string\nThe first function takes a list of characters as argument, the second takes a single string\nThe first function removes (use .pop(index)) all vowels from the characters list, the second creates a new_string with only characters that are not vowels\nThe first function returns the original argument list, the second function returns the new_string\n\n\nassert remove_vowels_list([\"b\", \"a\", \"n\", \"a\", \"n\", \"a\"]) == [\"b\", \"n\", \"n\"]\nassert remove_vowels_string(\"banana\") == \"bnn\""
+  },
+  {
+    "objectID": "slides-07-01.html#write-two-functions-solution",
+    "href": "slides-07-01.html#write-two-functions-solution",
+    "title": "mutability (class slides)",
+    "section": "Write two functions – solution",
+    "text": "Write two functions – solution\n\ndef remove_vowels_list(characters):\n  index = 0\n  while index &lt; len(characters):\n    if characters[index] in \"aeiou\":\n      characters.pop(index)\n    else:\n      index += 1 # go to next index only if no item has been removed\n  return characters\n    \ndef remove_vowels_string(string):\n  new_string = \"\"\n  index = 0\n  while index &lt; len(string):\n    if string[index] not in \"aeiou\":\n      new_string += string[index]\n    index += 1\n  return new_string\n\ndef main():\n  test_characters = [\"b\", \"a\", \"n\", \"a\", \"n\", \"a\"]\n  test_string = \"banana\"\n  \n  assert remove_vowels_list(test_characters) == test_characters\n  assert test_characters == [\"b\", \"n\", \"n\"]\n  assert remove_vowels_string(\"banana\") == \"bnn\"\n  \n  print(test_characters)\n  print(test_string)\n      \nmain()\n\n['b', 'n', 'n']\nbanana"
+  },
+  {
+    "objectID": "slides-07-01.html#list-methods",
+    "href": "slides-07-01.html#list-methods",
+    "title": "mutability (class slides)",
+    "section": "List methods",
+    "text": "List methods\nWe will be using the following list methods in this class:\n\n.append() adds an element at the end of the list: list.append(value)\n.insert() adds an element at the provided index: list.insert(index, value)\n.pop() removes a specific element at the provided index: list.pop(index)\n.remove() removes the first element with the provided value: list.remove(value)"
+  },
+  {
+    "objectID": "slides-07-01.html#append-list-method",
+    "href": "slides-07-01.html#append-list-method",
+    "title": "mutability (class slides)",
+    "section": ".append() list method",
+    "text": ".append() list method\n\nsongs = [\"Lavender Haze\", \"Calm Down\", \"As It Was\", \"About Damn Time\"]\nsongs\n\n['Lavender Haze', 'Calm Down', 'As It Was', 'About Damn Time']\n\n\n\nsongs.append(\"Flowers\")\nsongs\n\n['Lavender Haze', 'Calm Down', 'As It Was', 'About Damn Time', 'Flowers']"
+  },
+  {
+    "objectID": "slides-07-01.html#write-a-function-1",
+    "href": "slides-07-01.html#write-a-function-1",
+    "title": "mutability (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\n\nIts name is indices_of_vowels\nIt takes a single string as its parameter.\nIt returns a list of integers that represent the indices of the vowels in the original list\n\nTest cases:\n\nassert indices_of_vowels(\"hello\") == [1, 4]\nassert indices_of_vowels(\"\") == []\nassert indices_of_vowels(\"aeiou\") == [0, 1, 2, 3, 4]"
+  },
+  {
+    "objectID": "slides-07-01.html#write-a-function-solution-1",
+    "href": "slides-07-01.html#write-a-function-solution-1",
+    "title": "mutability (class slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\n\ndef indices_of_vowels(string):\n  result = [] # initialize empty list to hold indices\n  index = 0 # initialize index\n  while index &lt; len(string):\n    if string[index] in \"aeiou\": # check if character is vowel\n      result.append(index) # append index to result\n    index += 1 # increment index\n    \n  return result\n\ndef main():\n  assert indices_of_vowels(\"hello\") == [1, 4]\n  assert indices_of_vowels(\"\") == []\n  assert indices_of_vowels(\"aeiou\") == [0, 1, 2, 3, 4]\n  print(\"Passed all tests.\")\n\nmain()\n\nPassed all tests."
+  },
+  {
+    "objectID": "slides-07-01.html#write-a-function-2",
+    "href": "slides-07-01.html#write-a-function-2",
+    "title": "mutability (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\n\nIts name is reverse_list\nIt takes a list as argument\nIt returns a new list with the items of the original list inverted\n\nTest case:\n\ntest_strings = [\"banana\", \"apple\", \"grape\"]\nassert reverse_list(test_strings) == [\"grape\", \"apple\", \"banana\"]"
+  },
+  {
+    "objectID": "slides-07-01.html#write-a-function-solution-2",
+    "href": "slides-07-01.html#write-a-function-solution-2",
+    "title": "mutability (class slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\n\ndef reverse_list(items):\n  index = len(items) - 1 # initialize index\n  inverted_list = []\n  while index &gt;= 0:\n    inverted_list.append(items[index])\n    index -= 1\n  return inverted_list\n    \ndef main():\n  test_strings = [\"banana\", \"apple\", \"grape\"]\n  assert reverse_list(test_strings) == [\"grape\", \"apple\", \"banana\"]\n  print(\"Passed test\")\n  \nmain()\n\nPassed test"
   },
   {
     "objectID": "practice-01.html",
@@ -2926,599 +3360,221 @@
     "text": "We have seen how to use if statements. These are some of the most commonly used parts of Python and hence, becoming comfortable with them is essential."
   },
   {
-    "objectID": "slides-07-01.html#lists-vs-strings",
-    "href": "slides-07-01.html#lists-vs-strings",
-    "title": "mutability (class slides)",
-    "section": "Lists vs strings",
-    "text": "Lists vs strings\n\nLists are mutable\nStrings are not\nIn addition to retrieving an item from a list, we can remove or change it (which is not something you can do with strings)\n\n\nsongs = [\"Lavender Haze\", \"Calm Down\", \"As It Was\", \"About Damn Time\"]\nsongs\n\n['Lavender Haze', 'Calm Down', 'As It Was', 'About Damn Time']\n\n\n\nsongs[0] = \"Flowers\"\nsongs\n\n['Flowers', 'Calm Down', 'As It Was', 'About Damn Time']"
+    "objectID": "academic-integrity.html",
+    "href": "academic-integrity.html",
+    "title": "Academic Integrity",
+    "section": "",
+    "text": "All work you submit for grading in this course must be your own. Submitting work that includes (minor and/or major) components that are not your own work is considered plagiarism. Instances of plagiarism will be reported to the Dean of Students.\nKeep in mind that all assignments and practice problems provided in this course are meant to help you practice the skills that you will need to do well in all the assignments (including on paper quizzes and exams), so it is generally in your best interest to avoid taking shortcuts even on these assignments."
   },
   {
-    "objectID": "slides-07-01.html#lists-are-mutable",
-    "href": "slides-07-01.html#lists-are-mutable",
-    "title": "mutability (class slides)",
-    "section": "Lists are mutable",
-    "text": "Lists are mutable\n(strings are not)\nBecause lists are mutable:\n\nonce a list is changed inside a function, that change persists when the function has finished running\nif your function changes a list, you don’t strictly need to return that list – we will be returning because that’s what you need to be doing in the future"
+    "objectID": "class-code.html",
+    "href": "class-code.html",
+    "title": "Code created in class",
+    "section": "",
+    "text": "I created a GitHub repository with the code created in class during live-coding demonstrations: TBA"
   },
   {
-    "objectID": "slides-07-01.html#write-a-function",
-    "href": "slides-07-01.html#write-a-function",
-    "title": "mutability (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\n\nIts name is make_all_even\nIt takes one argument, a list of integers\nIt iterates over the list, changing odd numbers to even number (even up)\n\n\ntest_integers = [1, 2, 3, 4]\nassert make_all_even(test_integers) == test_integers\nassert test_integers == [2, 2, 4, 4]"
+    "objectID": "project-5.html",
+    "href": "project-5.html",
+    "title": "Programming Project 5",
+    "section": "",
+    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Wednesday, March 13, 2024 at 7pm\nThis programming project is an adaptation of Ben Dicken’s Where’s the Money Programming Assignment."
   },
   {
-    "objectID": "slides-07-01.html#write-a-function-solution",
-    "href": "slides-07-01.html#write-a-function-solution",
-    "title": "mutability (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef make_all_even(integers):\n  index = 0\n  while index &lt; len(integers):\n    if integers[index] % 2 == 1:\n      integers[index] += 1\n    index += 1\n  return integers\n      \ndef main():\n  test_integers = [1, 2, 3, 4]\n  assert make_all_even(test_integers) == test_integers\n  assert test_integers == [2, 2, 4, 4]\n  print(test_integers) # we print the list we created before function call\n  \nmain()\n\n[2, 2, 4, 4]\n\n\nLet’s visualize this on Python Tutor"
+    "objectID": "project-5.html#add-a-comma",
+    "href": "project-5.html#add-a-comma",
+    "title": "Programming Project 5",
+    "section": "Add a comma",
+    "text": "Add a comma\n\nSet to stop at two decimal points\nAdd necessary spacing before the number, so that the table lines up"
   },
   {
-    "objectID": "slides-07-01.html#object-references",
-    "href": "slides-07-01.html#object-references",
-    "title": "mutability (class slides)",
-    "section": "Object References",
-    "text": "Object References\n\nA variable doesn’t store values, it stores a reference to an object that lives in your computer memory (RAM)\nThe same variable name can be pointed to a different object\nA variable name can point to an object that is already referenced by another variable"
-  },
-  {
-    "objectID": "slides-07-01.html#examples",
-    "href": "slides-07-01.html#examples",
-    "title": "mutability (class slides)",
-    "section": "Examples",
-    "text": "Examples\nStrings are not mutable\n\ntitle = \"Dr.\"\nlast_name = \"Brown\"\nprint(title + \" \" + last_name)\n\ntitle = \"Ms.\"\nprint(title + \" \" + last_name)\n\nname = last_name\nlast_name = \"Silva\" # last_name points to a different object\nprint(title + \" \" + name)\n\nDr. Brown\nMs. Brown\nMs. Brown\n\n\nVisualize these examples in Python Tutor"
-  },
-  {
-    "objectID": "slides-07-01.html#examples-1",
-    "href": "slides-07-01.html#examples-1",
-    "title": "mutability (class slides)",
-    "section": "Examples",
-    "text": "Examples\nLists are mutable\n\nnames = [\"Dr.\", \"Brown\"]\nprint(names[0] + \" \" + names[1])\n\nnames[0] = \"Ms.\"\nprint(names[0] + \" \" + names[1])\n\nnames_copy = names\nnames[1] = \"Silva\"\nprint(names_copy[0] + \" \" + names_copy[1])\n\nDr. Brown\nMs. Brown\nMs. Silva\n\n\nVisualize these examples in Python Tutor"
-  },
-  {
-    "objectID": "slides-07-01.html#another-example",
-    "href": "slides-07-01.html#another-example",
-    "title": "mutability (class slides)",
-    "section": "Another example",
-    "text": "Another example\n\nnumbers = [50, 30, 80]\nsame_numbers = numbers\nsame_numbers[1] = 40\nnumbers = \"look, numbers!\"\nsame_numbers = numbers\n\nVisualize these examples in Python Tutor"
-  },
-  {
-    "objectID": "slides-07-01.html#object-references-1",
-    "href": "slides-07-01.html#object-references-1",
-    "title": "mutability (class slides)",
-    "section": "Object references",
-    "text": "Object references\n\nA variable does not actually hold the value of the object within it\nInstead, it’s a reference to the object\n\nThe object is “sitting” somewhere in your computer’s memory (RAM)"
-  },
-  {
-    "objectID": "slides-07-01.html#object-references-2",
-    "href": "slides-07-01.html#object-references-2",
-    "title": "mutability (class slides)",
-    "section": "Object references",
-    "text": "Object references\n\nWhen you assign a value to a new variable, one of two things could happen\n\nIf you assign it to an existing object, the variable references that object\nIf you assign it to a new object, the object is created, placed in memory, and then the variable references it"
-  },
-  {
-    "objectID": "slides-07-01.html#garbage-collection",
-    "href": "slides-07-01.html#garbage-collection",
-    "title": "mutability (class slides)",
-    "section": "Garbage Collection",
-    "text": "Garbage Collection\n\nWhen there’s no variable pointing to an object anymore, that object is removed from memory by Python’s Garbage Collector (so you don’t have to worry about memory leaks)"
-  },
-  {
-    "objectID": "slides-07-01.html#summary",
-    "href": "slides-07-01.html#summary",
-    "title": "mutability (class slides)",
-    "section": "Summary",
-    "text": "Summary\nWhen working with lists, once they are changed in a function, the changes happen to the object in memory\nChanges to lists persist once the function has finished running"
-  },
-  {
-    "objectID": "slides-07-01.html#pop-list-method",
-    "href": "slides-07-01.html#pop-list-method",
-    "title": "mutability (class slides)",
-    "section": ".pop() list method",
-    "text": ".pop() list method\nWe will be using a few built-in list methods (not all of them, some you will implement yourself from scratch)\nHere’s how .pop() works:\n\nsongs = [\"Lavender Haze\", \"Calm Down\", \"As It Was\", \"About Damn Time\"]\nsongs\n\n['Lavender Haze', 'Calm Down', 'As It Was', 'About Damn Time']\n\n\n\nsongs.pop(0)\nsongs\n\n['Calm Down', 'As It Was', 'About Damn Time']"
-  },
-  {
-    "objectID": "slides-07-01.html#write-two-functions",
-    "href": "slides-07-01.html#write-two-functions",
-    "title": "mutability (class slides)",
-    "section": "Write two functions",
-    "text": "Write two functions\n\nNames are remove_vowels_list and remove_vowels_string\nThe first function takes a list of characters as argument, the second takes a single string\nThe first function removes (use .pop(index)) all vowels from the characters list, the second creates a new_string with only characters that are not vowels\nThe first function returns the original argument list, the second function returns the new_string\n\n\nassert remove_vowels_list([\"b\", \"a\", \"n\", \"a\", \"n\", \"a\"]) == [\"b\", \"n\", \"n\"]\nassert remove_vowels_string(\"banana\") == \"bnn\""
-  },
-  {
-    "objectID": "slides-07-01.html#write-two-functions-solution",
-    "href": "slides-07-01.html#write-two-functions-solution",
-    "title": "mutability (class slides)",
-    "section": "Write two functions – solution",
-    "text": "Write two functions – solution\n\ndef remove_vowels_list(characters):\n  index = 0\n  while index &lt; len(characters):\n    if characters[index] in \"aeiou\":\n      characters.pop(index)\n    else:\n      index += 1 # go to next index only if no item has been removed\n  return characters\n    \ndef remove_vowels_string(string):\n  new_string = \"\"\n  index = 0\n  while index &lt; len(string):\n    if string[index] not in \"aeiou\":\n      new_string += string[index]\n    index += 1\n  return new_string\n\ndef main():\n  test_characters = [\"b\", \"a\", \"n\", \"a\", \"n\", \"a\"]\n  test_string = \"banana\"\n  \n  assert remove_vowels_list(test_characters) == test_characters\n  assert test_characters == [\"b\", \"n\", \"n\"]\n  assert remove_vowels_string(\"banana\") == \"bnn\"\n  \n  print(test_characters)\n  print(test_string)\n      \nmain()\n\n['b', 'n', 'n']\nbanana"
-  },
-  {
-    "objectID": "slides-07-01.html#list-methods",
-    "href": "slides-07-01.html#list-methods",
-    "title": "mutability (class slides)",
-    "section": "List methods",
-    "text": "List methods\nWe will be using the following list methods in this class:\n\n.append() adds an element at the end of the list: list.append(value)\n.insert() adds an element at the provided index: list.insert(index, value)\n.pop() removes a specific element at the provided index: list.pop(index)\n.remove() removes the first element with the provided value: list.remove(value)"
-  },
-  {
-    "objectID": "slides-07-01.html#append-list-method",
-    "href": "slides-07-01.html#append-list-method",
-    "title": "mutability (class slides)",
-    "section": ".append() list method",
-    "text": ".append() list method\n\nsongs = [\"Lavender Haze\", \"Calm Down\", \"As It Was\", \"About Damn Time\"]\nsongs\n\n['Lavender Haze', 'Calm Down', 'As It Was', 'About Damn Time']\n\n\n\nsongs.append(\"Flowers\")\nsongs\n\n['Lavender Haze', 'Calm Down', 'As It Was', 'About Damn Time', 'Flowers']"
-  },
-  {
-    "objectID": "slides-07-01.html#write-a-function-1",
-    "href": "slides-07-01.html#write-a-function-1",
-    "title": "mutability (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\n\nIts name is indices_of_vowels\nIt takes a single string as its parameter.\nIt returns a list of integers that represent the indices of the vowels in the original list\n\nTest cases:\n\nassert indices_of_vowels(\"hello\") == [1, 4]\nassert indices_of_vowels(\"\") == []\nassert indices_of_vowels(\"aeiou\") == [0, 1, 2, 3, 4]"
-  },
-  {
-    "objectID": "slides-07-01.html#write-a-function-solution-1",
-    "href": "slides-07-01.html#write-a-function-solution-1",
-    "title": "mutability (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef indices_of_vowels(string):\n  result = [] # initialize empty list to hold indices\n  index = 0 # initialize index\n  while index &lt; len(string):\n    if string[index] in \"aeiou\": # check if character is vowel\n      result.append(index) # append index to result\n    index += 1 # increment index\n    \n  return result\n\ndef main():\n  assert indices_of_vowels(\"hello\") == [1, 4]\n  assert indices_of_vowels(\"\") == []\n  assert indices_of_vowels(\"aeiou\") == [0, 1, 2, 3, 4]\n  print(\"Passed all tests.\")\n\nmain()\n\nPassed all tests."
-  },
-  {
-    "objectID": "slides-07-01.html#write-a-function-2",
-    "href": "slides-07-01.html#write-a-function-2",
-    "title": "mutability (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\n\nIts name is reverse_list\nIt takes a list as argument\nIt returns a new list with the items of the original list inverted\n\nTest case:\n\ntest_strings = [\"banana\", \"apple\", \"grape\"]\nassert reverse_list(test_strings) == [\"grape\", \"apple\", \"banana\"]"
-  },
-  {
-    "objectID": "slides-07-01.html#write-a-function-solution-2",
-    "href": "slides-07-01.html#write-a-function-solution-2",
-    "title": "mutability (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef reverse_list(items):\n  index = len(items) - 1 # initialize index\n  inverted_list = []\n  while index &gt;= 0:\n    inverted_list.append(items[index])\n    index -= 1\n  return inverted_list\n    \ndef main():\n  test_strings = [\"banana\", \"apple\", \"grape\"]\n  assert reverse_list(test_strings) == [\"grape\", \"apple\", \"banana\"]\n  print(\"Passed test\")\n  \nmain()\n\nPassed test"
-  },
-  {
-    "objectID": "slides-03-02.html#write-a-function",
-    "href": "slides-03-02.html#write-a-function",
-    "title": "Built-in Python Functions (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\nWrite a Python function that does the following:\n\nIts name is greeting\nIt takes two arguments, first_name and last_name\nIt returns a string with a greeting using first_name and last_name\n\n\nprint( greeting(\"Adriana\", \"Picoral\") ) # Hello, Adriana Picoral!"
-  },
-  {
-    "objectID": "slides-03-02.html#reading-the-documentation",
-    "href": "slides-03-02.html#reading-the-documentation",
-    "title": "Built-in Python Functions (class slides)",
-    "section": "Reading the documentation",
-    "text": "Reading the documentation\nAccess the Python 3.11 documentation and read the definitions for print(), round(), input(), len(), int(), and str().\nWith your table members, write a short definition for each of the built-in functions above on a white board."
-  },
-  {
-    "objectID": "slides-03-02.html#len-function",
-    "href": "slides-03-02.html#len-function",
-    "title": "Built-in Python Functions (class slides)",
-    "section": "len() function",
-    "text": "len() function\n\nThe len() function can be used with many types – we will be using it with string for now\nIt returns the number of characters in a string\n\n\ncharacter_count = len(\"Adriana\")\nprint(character_count)\n\n7"
-  },
-  {
-    "objectID": "slides-03-02.html#write-a-function-1",
-    "href": "slides-03-02.html#write-a-function-1",
-    "title": "Built-in Python Functions (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\nWrite a Python function that does the following:\n\nIts name is count_characters\nIt takes a string argument, name\nIt returns the total number of characters in name\n\n\nprint( count_characters(\"Adriana\") ) # 7\nprint( count_characters(\"\") ) # 0\nprint( count_characters(\" \") ) # 1\nprint( count_characters(\"10\") ) # 2"
-  },
-  {
-    "objectID": "slides-03-02.html#input-function",
-    "href": "slides-03-02.html#input-function",
-    "title": "Built-in Python Functions (class slides)",
-    "section": "input() function",
-    "text": "input() function\n\nThe input() function prompts the user to input text in the standard output\nWhatever is inside the parentheses in input() will be written to the standard output (without a trailing newline, which you can add using \\n).\nThe function then reads a line from input, converts it to a string (stripping a trailing newline), and returns that\ninput() always returns a string\n\n\ninput(\"What's your name?\\n\")"
-  },
-  {
-    "objectID": "slides-03-02.html#write-main",
-    "href": "slides-03-02.html#write-main",
-    "title": "Built-in Python Functions (class slides)",
-    "section": "Write main()",
-    "text": "Write main()\nNow you should have two functions in your .py script: greeting and count_characters.\nWrite a main() function."
-  },
-  {
-    "objectID": "slides-03-02.html#write-a-function-2",
-    "href": "slides-03-02.html#write-a-function-2",
-    "title": "Built-in Python Functions (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\nIn the same script, write main():\n\nPrompt user to enter their first name and last name using input()\nCall your greeting function and save the string it returns to a variable\nPrint the variable\nCall your count_characters function with the user’s full name and save the integer value returned to a variable\nPrint a message to the user: Your full name has X letters. – replacing X with the right character count"
-  },
-  {
-    "objectID": "slides-03-02.html#announcements",
-    "href": "slides-03-02.html#announcements",
-    "title": "Built-in Python Functions (class slides)",
+    "objectID": "slides-11-03.html#announcements",
+    "href": "slides-11-03.html#announcements",
+    "title": "sets (class slides)",
     "section": "Announcements",
-    "text": "Announcements\n\nMidterm 1 on September 20 (this room)\nModules 1-4 (practice problems on the website)\nReview session TBA\nBRING PHOTO ID TO THE EXAM\nBRING PHOTO ID TO QUIZ 04 (this Wednesday, Sept 13)"
+    "text": "Announcements\n\nFill out SCS (https://scsonline.oia.arizona.edu/) – if 80% response rate for whole class, one project grade gets dropped\n\nAbout the final exam:\n\nThursday, December 14, 2023 – 6:00pm - 8:00pm in ENR2 room N120\nFind the room before final date\nDo not bring excess stuff – space is limited\nPractice writing on smaller desk"
   },
   {
-    "objectID": "slides-03-02.html#input-function-1",
-    "href": "slides-03-02.html#input-function-1",
-    "title": "Built-in Python Functions (class slides)",
-    "section": "input() function",
-    "text": "input() function\nUse input() to get user input (it always returns a string)"
+    "objectID": "slides-11-03.html#survey",
+    "href": "slides-11-03.html#survey",
+    "title": "sets (class slides)",
+    "section": "Survey",
+    "text": "Survey\nTake 10 minutes to fill out survey:\nhttps://bit.ly/ua-ta-students"
   },
   {
-    "objectID": "slides-03-02.html#int-function",
-    "href": "slides-03-02.html#int-function",
-    "title": "Built-in Python Functions (class slides)",
-    "section": "int() function",
-    "text": "int() function\n\nThe int() function can be used to convert a string to an integer type\nIt only works if the string only contains digits\n\n\nage = '35'\nage_int = int(age)\nprint(type(age), type(age_int))\n\n&lt;class 'str'&gt; &lt;class 'int'&gt;"
-  },
-  {
-    "objectID": "slides-03-02.html#float-function",
-    "href": "slides-03-02.html#float-function",
-    "title": "Built-in Python Functions (class slides)",
-    "section": "float() function",
-    "text": "float() function\n\nThe float() function can be used to convert a string to a float type\nIt only works if the string only contains digits and optionally a decimal point\n\n\nage = '35'\nage_float = float(age)\nprint(type(age), type(age_float))\n\n&lt;class 'str'&gt; &lt;class 'float'&gt;"
-  },
-  {
-    "objectID": "slides-03-02.html#write-a-function-3",
-    "href": "slides-03-02.html#write-a-function-3",
-    "title": "Built-in Python Functions (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\nWrite a Python function that does the following:\n\nIts name is calculate_year_born, with no parameters\nIt prompts user to enter their age input()\nIt converts user’s age to integer (since input() always returns a string)\nIt calculates (imperfectly) the year a person of age was born by subtracting age from 2023\nIt returns an integer representing the approximate year person of age was born\n\n\nprint( calculate_year_born() ) # user enters 42, function returns 1981"
-  },
-  {
-    "objectID": "slides-03-02.html#organizing-your-code",
-    "href": "slides-03-02.html#organizing-your-code",
-    "title": "Built-in Python Functions (class slides)",
-    "section": "Organizing your code",
-    "text": "Organizing your code\n\nSplit your functions and your main() in different files\nUse from script_name import *\nFor gradescope, submit only your script with all of your functions"
-  },
-  {
-    "objectID": "slides-11-02.html#data-structures-in-python",
-    "href": "slides-11-02.html#data-structures-in-python",
-    "title": "intro to sets (class slides)",
-    "section": "Data Structures in Python",
-    "text": "Data Structures in Python\n\nlists (mutable)\ndictionaries (mutable)\ntuples (immutable)\nsets (mutable)"
-  },
-  {
-    "objectID": "slides-11-02.html#lists",
-    "href": "slides-11-02.html#lists",
-    "title": "intro to sets (class slides)",
-    "section": "Lists",
-    "text": "Lists\n\nstore:\n\nordered items (it keeps the original order)\nelements of different types\nrepeated elements\n\nuse square brackets ([]) syntax for creating a list\nallow indexing (integers starting at 0) with square brackets ([]) as well\nare mutable"
-  },
-  {
-    "objectID": "slides-11-02.html#tuples",
-    "href": "slides-11-02.html#tuples",
-    "title": "intro to sets (class slides)",
-    "section": "Tuples",
-    "text": "Tuples\n\nstore:\n\nordered items (it keeps the original order)\nelements of different types\nrepeated elements\n\nuse parentheses (()) syntax for creating a tuple\nallow indexing (integers starting at 0) with square brackets ([])\nare immutable"
-  },
-  {
-    "objectID": "slides-11-02.html#dictionaries",
-    "href": "slides-11-02.html#dictionaries",
-    "title": "intro to sets (class slides)",
-    "section": "Dictionaries",
-    "text": "Dictionaries\n\nstore pairs of items key: value\nkeys have to be unique (no repeated keys allowed)\nuse curly brackets ({}) with key and value separated by colon (:)\nallow value retrieval through key with square brackets ([])\nare mutable"
-  },
-  {
-    "objectID": "slides-11-02.html#sets",
-    "href": "slides-11-02.html#sets",
-    "title": "intro to sets (class slides)",
-    "section": "Sets",
-    "text": "Sets\n\nA set is (another) data structure\nHelpful ways of thinking about it\n\nA dictionary without the values\nA “bag” of elements"
-  },
-  {
-    "objectID": "slides-11-02.html#sets-1",
-    "href": "slides-11-02.html#sets-1",
-    "title": "intro to sets (class slides)",
-    "section": "Sets",
-    "text": "Sets\n\nDo not store items in the order you created them\nDo not allow repeated items to be stored\nCannot use square brackets to retrieve an item\nUse set() to initiate an empty set\nUse for x in set to iterate over the elements in a set"
-  },
-  {
-    "objectID": "slides-11-02.html#set-methods",
-    "href": "slides-11-02.html#set-methods",
-    "title": "intro to sets (class slides)",
+    "objectID": "slides-11-03.html#set-methods",
+    "href": "slides-11-03.html#set-methods",
+    "title": "sets (class slides)",
     "section": "Set methods",
-    "text": "Set methods\n\n.add(value) adds an element to the set\n.discard(value) discards the specified value\n\nYou can also use the operator in and the function len() with sets\nUse the function set() to convert a list to a set, and list() to convert a set into a list"
+    "text": "Set methods\n\n.add(value) adds an element to the set\n.discard(value) discards the specified value\n.union(set2) returns a set with the all elements in both sets\n.intersection(set2) returns a set with the all elements in common"
   },
   {
-    "objectID": "slides-11-02.html#evaluate-the-code",
-    "href": "slides-11-02.html#evaluate-the-code",
-    "title": "intro to sets (class slides)",
+    "objectID": "slides-11-03.html#union",
+    "href": "slides-11-03.html#union",
+    "title": "sets (class slides)",
+    "section": "union",
+    "text": "union\n\ns1 = {1, 2, 3}\ns2 = {3, 4, 5}\ns1.union(s2)\n\n{1, 2, 3, 4, 5}\n\n\n\nunion"
+  },
+  {
+    "objectID": "slides-11-03.html#intersection",
+    "href": "slides-11-03.html#intersection",
+    "title": "sets (class slides)",
+    "section": "intersection",
+    "text": "intersection\n\ns1 = {1, 2, 3}\ns2 = {3, 4, 5}\ns1.intersection(s2)\n\n{3}\n\n\n\nintersection"
+  },
+  {
+    "objectID": "slides-11-03.html#evaluate-the-code",
+    "href": "slides-11-03.html#evaluate-the-code",
+    "title": "sets (class slides)",
     "section": "Evaluate the code",
-    "text": "Evaluate the code\n\nnumbers = {5, 7, 10, 5, 3, 5, 9, 8, 20, 5}\nnumbers  # evaluate what this set holds at this point\n\nnumbers.add(30)\nnumbers  # evaluate what this set holds at this point\n\nnumbers.discard(10)\nnumbers  # evaluate what this set holds at this point"
+    "text": "Evaluate the code\n\npresences = {\"Anna\", \"Beatrice\", \"Claude\"}\nabsences = {\"Elvin\", \"Harley\"}\nabsences.add(\"Becca\")\npresences.union(absences)\n\ntask_1 = {\"Anna\", \"Beatrice\", \"Claude\"}\ntask_2 = {\"Anna\", \"Elvin\", \"Harley\", \"Beatrice\"}\ntask_1.intersection(task_2)\n\ntask_2.discard(\"Anna\")\ntask_1.intersection(task_2)"
   },
   {
-    "objectID": "slides-11-02.html#evaluate-the-code-1",
-    "href": "slides-11-02.html#evaluate-the-code-1",
-    "title": "intro to sets (class slides)",
+    "objectID": "slides-11-03.html#evaluate-the-code-1",
+    "href": "slides-11-03.html#evaluate-the-code-1",
+    "title": "sets (class slides)",
     "section": "Evaluate the code",
-    "text": "Evaluate the code\n\nnumbers = {5, 7, 10, 5, 3, 5, 9, 8, 20, 5}\nnumbers\n\n{3, 5, 7, 8, 9, 10, 20}\n\n\n\nnumbers.add(30)\nnumbers\n\n{3, 5, 7, 8, 9, 10, 20, 30}\n\n\n\nnumbers.discard(10)\nnumbers\n\n{3, 5, 7, 8, 9, 20, 30}"
+    "text": "Evaluate the code\n\npresences = {\"Anna\", \"Beatrice\", \"Claude\"}\nabsences = {\"Elvin\", \"Harley\"}\nabsences.add(\"Becca\")\npresences.union(absences)\n\n{'Anna', 'Beatrice', 'Becca', 'Claude', 'Elvin', 'Harley'}\n\n\n\ntask_1 = {\"Anna\", \"Beatrice\", \"Claude\"}\ntask_2 = {\"Anna\", \"Elvin\", \"Harley\", \"Beatrice\"}\ntask_1.intersection(task_2)\n\n{'Anna', 'Beatrice'}\n\n\n\ntask_2.discard(\"Anna\")\ntask_1.intersection(task_2)\n\n{'Beatrice'}"
   },
   {
-    "objectID": "slides-11-02.html#evaluate-the-code-2",
-    "href": "slides-11-02.html#evaluate-the-code-2",
-    "title": "intro to sets (class slides)",
-    "section": "Evaluate the code",
-    "text": "Evaluate the code\n\nnumbers_list = [2, 1, 2, 1, 3, 4, 1]\nnumbers_list # evaluate this line\n\nnumbers_set = set(numbers_list)\nnumbers_set # evaluate this line\n\nnumbers_set.add(1)\nnumbers_set.add(2)\nnumbers_set # evaluate this line\n\nnumbers_set.add(5)\nnumbers_set # evaluate this line\n\nnumbers_set.discard(6)\nnumbers_set.discard(1)\nnumbers_set # evaluate this line"
-  },
-  {
-    "objectID": "slides-11-02.html#evaluate-the-code-3",
-    "href": "slides-11-02.html#evaluate-the-code-3",
-    "title": "intro to sets (class slides)",
-    "section": "Evaluate the code",
-    "text": "Evaluate the code\n\nnumbers_list = [2, 1, 2, 1, 3, 4, 1]\nnumbers_list # evaluate this line\n\n[2, 1, 2, 1, 3, 4, 1]\n\n\n\nnumbers_set = set(numbers_list)\nnumbers_set # evaluate this line\n\n{1, 2, 3, 4}\n\n\n\nnumbers_set.add(1)\nnumbers_set.add(2)\nnumbers_set # evaluate this line\n\n{1, 2, 3, 4}\n\n\n\nnumbers_set.add(5)\nnumbers_set # evaluate this line\n\n{1, 2, 3, 4, 5}\n\n\n\nnumbers_set.discard(6)\nnumbers_set.discard(1)\nnumbers_set # evaluate this line\n\n{2, 3, 4, 5}"
-  },
-  {
-    "objectID": "slides-11-02.html#write-a-function",
-    "href": "slides-11-02.html#write-a-function",
-    "title": "intro to sets (class slides)",
+    "objectID": "slides-11-03.html#write-a-function",
+    "href": "slides-11-03.html#write-a-function",
+    "title": "sets (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is count_names\nIt opens in read mode a file that contains a name per line, with repeated names\nIt counts how many unique names there are in the file\nIt returns an integer with the count\nUse a set for this\n\n\nassert count_names(\"names.txt\") == 11"
+    "text": "Write a function\n\nIts name is common_values\nIt takes two sets are arguments\nIt returns False if the sets have no elements in common, True otherwise\n\n\nassert common_values({1, 2, 3}, {3, 4, 5}) == True\nassert common_values({1, 2, 3}, {30, 40, 50}) == False"
   },
   {
-    "objectID": "slides-11-02.html#write-a-function-solution",
-    "href": "slides-11-02.html#write-a-function-solution",
-    "title": "intro to sets (class slides)",
+    "objectID": "slides-11-03.html#write-a-function-solution",
+    "href": "slides-11-03.html#write-a-function-solution",
+    "title": "sets (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef count_names(file_name):\n  f = open(file_name, \"r\")\n  name_set = set()\n  for line in f:\n    name_set.add(line.strip())\n  f.close()\n  return len(name_set)\n\ndef main():\n  assert count_names(\"names.txt\") == 11\n  \nmain()"
+    "text": "Write a function – solution\n\ndef common_values(set_1, set_2):\n  return len(set_1.intersection(set_2)) != 0\n\nif __name__ == \"__main__\":\n  assert common_values({1, 2, 3}, {3, 4, 5}) == True\n  assert common_values({1, 2, 3}, {30, 40, 50}) == False\n  print(\"Passed tests.\")\n\nPassed tests."
   },
   {
-    "objectID": "slides-11-02.html#write-a-function-1",
-    "href": "slides-11-02.html#write-a-function-1",
-    "title": "intro to sets (class slides)",
+    "objectID": "slides-11-03.html#write-a-function-1",
+    "href": "slides-11-03.html#write-a-function-1",
+    "title": "sets (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is has_duplicates\nIt takes a variable number of arguments: *values\nIt returns True if there are repeated elements in *values, False otherwise\n\n\nassert has_duplicates(3, 2, 1, 2, 3) == True\nassert has_duplicates(3, 20, 1, 2, 13) == False"
+    "text": "Write a function\n\nFunction name is discard_elements\nIt takes two sets as argument: set_1 and set_2\nIt mutates the first set (set_1) removing all elements it has in common with set_2\n\n\ntest_set = {1, 2, 3, 4}\ndiscard_elements(test_set, {2})\nassert test_set == {1, 3, 4}"
   },
   {
-    "objectID": "slides-11-02.html#write-a-function-solution-1",
-    "href": "slides-11-02.html#write-a-function-solution-1",
-    "title": "intro to sets (class slides)",
+    "objectID": "slides-11-03.html#write-a-function-solution-1",
+    "href": "slides-11-03.html#write-a-function-solution-1",
+    "title": "sets (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef has_duplicates(*values):\n  values_set = set(values)\n  return not len(values) == len(values_set)\n\ndef main():\n  assert has_duplicates(3, 2, 1, 2, 3) == True\n  assert has_duplicates(3, 20, 1, 2, 13) == False\n  \nmain()"
+    "text": "Write a function – solution\n\ndef discard_elements(set_1, set_2):\n  to_remove = set_1.intersection(set_2)\n  for value in to_remove:\n    set_1.discard(value)\n    \nif __name__ == \"__main__\":\n  test_set = {1, 2, 3, 4}\n  discard_elements(test_set, {2})\n  assert test_set == {1, 3, 4}\n  print(test_set)\n\n{1, 3, 4}"
   },
   {
-    "objectID": "project-4.html",
-    "href": "project-4.html",
-    "title": "Programming Project 4",
+    "objectID": "slides-03-01.html#function-comments",
+    "href": "slides-03-01.html#function-comments",
+    "title": "More on Functions (class slides)",
+    "section": "Function Comments",
+    "text": "Function Comments\n\nEvery function created is required to have a function comment, including main\nFunction comments are a multi-line string (as opposed to using # for other comments)"
+  },
+  {
+    "objectID": "slides-03-01.html#function-comments-1",
+    "href": "slides-03-01.html#function-comments-1",
+    "title": "More on Functions (class slides)",
+    "section": "Function Comments",
+    "text": "Function Comments\n\n'''\nAdriana Picoral\nCSC110\nClass Demonstration\nThis program has two functions: one to calculate the area of a sphere,\nthe other to calculate the volume of a sphere.\nThe main() function is called to print to the standard output the\narea and volume of a sphere of radius .75\n'''\n\ndef sphere_volume(radius):\n  '''\n  This function calculates the volume of a sphere of given radius.\n  Args:\n    radius: integer representing the radius of the sphere\n  Returns:\n    The float representing the volume of a sphere of the given radius\n  '''\n  volume = (1 / 3) * sphere_area(radius) * radius\n  return round(volume, 2)\n\n\ndef sphere_area(radius):\n  '''\n  This function calculates the area of a sphere of given radius.\n  Args:\n    radius: integer representing the radius of the sphere\n  Returns:\n    The float representing the area of a sphere of the given radius\n  '''\n  area = 4 * 3.1415 * radius**2\n  return round(area, 2)\n\n\ndef main():\n  '''\n  This function prints the volume and area of a sphere of radius .75.\n  Args:\n    None\n  Returns:\n    None\n  '''\n  r = .75\n  v = sphere_volume(r)\n  a = sphere_area(r)\n  print(v, a)\n  \nmain()\n\n1.77 7.07"
+  },
+  {
+    "objectID": "slides-03-01.html#global-vs.-local-variables-scope",
+    "href": "slides-03-01.html#global-vs.-local-variables-scope",
+    "title": "More on Functions (class slides)",
+    "section": "Global vs. Local variables (scope)",
+    "text": "Global vs. Local variables (scope)\n\nEvery variable that is created has a particular scope\nThe scope of a variable is the range of coder over which that variable can be used or modified"
+  },
+  {
+    "objectID": "slides-03-01.html#global-vs.-local-variables-scope-1",
+    "href": "slides-03-01.html#global-vs.-local-variables-scope-1",
+    "title": "More on Functions (class slides)",
+    "section": "Global vs. Local variables (scope)",
+    "text": "Global vs. Local variables (scope)\n\nLocal Variables have local scope – for example, a variable assigned inside a function can only be used or modified withing that function\nGlobal Variables have global scope – for example, a variable delcared outside a function can be accessed or modified acorss mulitple functions"
+  },
+  {
+    "objectID": "slides-03-01.html#global-vs.-local-variables-scope-2",
+    "href": "slides-03-01.html#global-vs.-local-variables-scope-2",
+    "title": "More on Functions (class slides)",
+    "section": "Global vs. Local variables (scope)",
+    "text": "Global vs. Local variables (scope)\n\nIn the previous program we wrote (volume and area of sphere), r, v and a are local variables within the main() function.\nThe variable area is also local within the sphere_area(radius) function scope.\nThe variable volume is local within sphere_volume(radius)"
+  },
+  {
+    "objectID": "slides-03-01.html#global-or-local",
+    "href": "slides-03-01.html#global-or-local",
+    "title": "More on Functions (class slides)",
+    "section": "Global or Local?",
+    "text": "Global or Local?\n\na = 10               # What are the global and local variables?\nb = 5                # Is the output of the two programs the same \n                     # or different?\ndef sum():\n  return a + b\n\ndef main():\n  print(sum())\n  \nmain()\n\nvs.\n\ndef sum(a, b):\n  return a + b\n\ndef main():\n  print(sum(10, 5))\n  \nmain()"
+  },
+  {
+    "objectID": "slides-03-01.html#argument-vs.-parameter",
+    "href": "slides-03-01.html#argument-vs.-parameter",
+    "title": "More on Functions (class slides)",
+    "section": "Argument vs. Parameter",
+    "text": "Argument vs. Parameter\n\nNever set variables as global variables, pass values to functions when called\nWhen a function is defined, the values you want to pass to the function are called parameter variables\nWhen the function is then called, the values you pass to the function are called arguments"
+  },
+  {
+    "objectID": "slides-03-01.html#write-a-function",
+    "href": "slides-03-01.html#write-a-function",
+    "title": "More on Functions (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\nWrite a Python function that does the following:\n\nIts name is hypotenuse\nIt takes two arguments: a and b representing the length of the two non-hypotenuse sides of a right angle triangle\nIt calculate the hypotenuse (c) according to the Pythagorean theorem formula: \\(c = \\sqrt(a^2 + b^2)\\)\nIt returns the calculated hypotenuse\nTest cases: hypotenuse(3, 4) should return 5.0, hypotenuse(10, 10) should return 14.14"
+  },
+  {
+    "objectID": "slides-03-01.html#write-a-function-1",
+    "href": "slides-03-01.html#write-a-function-1",
+    "title": "More on Functions (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\n\ndef sqrt(n):\n  '''\n  This function calculates the square root of a number\n  Args:\n    n: integer or float\n  Returns:\n    The square root of n\n  '''\n  return n**.5\n\ndef hypotenuse(a, b):\n  '''\n  This function calculates the hypotenuse of a right angle triangle.\n  Args:\n    a: number (integer or float) representing one of the non-hypotenuse sides\n    b: number (integer or float) representing one of the non-hypotenuse sides\n  Returns:\n    Float representing the length of the hypotenuse given a and b\n  ''' \n  h = sqrt(a**2 + b**2)\n  return round(h, 2)\n\ndef main():\n  '''\n  This function calls the hypotenuse function to calculate and then\n  print out the hypotenuse of a right angle triangle of sides 3 and 4\n  and the hypotenuse of a right angle triange of sides 10 and 10\n  '''\n  result = hypotenuse(3, 4)\n  print(result)\n  \n  result = hypotenuse(10, 10)\n  print(result)\n  \nmain()\n\n5.0\n14.14"
+  },
+  {
+    "objectID": "ascii-table.html",
+    "href": "ascii-table.html",
+    "title": "ASCII table",
     "section": "",
-    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Wednesday, February 21, 2024 at 7pm\nIn this programming project you will implement a number of Python functions to implement a simplified version of chess. Make sure you follow the provided style guide (you will be graded on it!).\nName your program one_d_chess.py to submit to gradescope. Make sure that gradescope gives you the points for passing the test cases.\nThis programming project is an adaptation of Ben Dicken’s 1 Dimensional Chess Programming Assignment.\nIn this programming project, you will be implementing a simpler variant of chess: 1D Chess! 1D chess is a variant of the game that is played on a board that has only one column of spaces, rather than a grid of spaces, as in typical chess. There are actually multiple variants of 1D chess. In this PA, you should implement a custom variant of 1D chess, which I’ll refer to as “110 1D chess”."
+    "text": "ASCII stands for American Standard Code for Information Interchange, and it represents all characters in English. Nowadays we usually use UTF-8 encoding instead os ASCII because we use more characters (emojis, for example).\nHere’s the decimal values for the characters we encounter in this course:\n\n\n\nord(char)\nchar\n\n\n\n\n32\nspace\n\n\n33\n!\n\n\n34\n”\n\n\n35\n#\n\n\n36\n$\n\n\n37\n%\n\n\n38\n&\n\n\n39\n’\n\n\n40\n(\n\n\n41\n)\n\n\n42\n*\n\n\n43\n+\n\n\n44\n,\n\n\n45\n-\n\n\n46\n.\n\n\n47\n/\n\n\n48\n0\n\n\n49\n1\n\n\n50\n2\n\n\n51\n3\n\n\n52\n4\n\n\n53\n5\n\n\n54\n6\n\n\n55\n7\n\n\n56\n8\n\n\n57\n9\n\n\n58\n:\n\n\n59\n;\n\n\n60\n&lt;\n\n\n61\n=\n\n\n62\n&gt;\n\n\n63\n?\n\n\n64\n@\n\n\n65\nA\n\n\n66\nB\n\n\n67\nC\n\n\n68\nD\n\n\n69\nE\n\n\n70\nF\n\n\n71\nG\n\n\n72\nH\n\n\n73\nI\n\n\n74\nJ\n\n\n75\nK\n\n\n76\nL\n\n\n77\nM\n\n\n78\nN\n\n\n79\nO\n\n\n80\nP\n\n\n81\nQ\n\n\n82\nR\n\n\n83\nS\n\n\n84\nT\n\n\n85\nU\n\n\n86\nV\n\n\n87\nW\n\n\n88\nX\n\n\n89\nY\n\n\n90\nZ\n\n\n91\n[\n\n\n92\n\\\n\n\n93\n]\n\n\n94\n^\n\n\n95\n_\n\n\n96\n`\n\n\n97\na\n\n\n98\nb\n\n\n99\nc\n\n\n100\nd\n\n\n101\ne\n\n\n102\nf\n\n\n103\ng\n\n\n104\nh\n\n\n105\ni\n\n\n106\nj\n\n\n107\nk\n\n\n108\nl\n\n\n109\nm\n\n\n110\nn\n\n\n111\no\n\n\n112\np\n\n\n113\nq\n\n\n114\nr\n\n\n115\ns\n\n\n116\nt\n\n\n117\nu\n\n\n118\nv\n\n\n119\nw\n\n\n120\nx\n\n\n121\ny\n\n\n122\nz\n\n\n123\n{\n\n\n124\n|\n\n\n125\n}"
   },
   {
-    "objectID": "project-4.html#d-chess-rules",
-    "href": "project-4.html#d-chess-rules",
-    "title": "Programming Project 4",
-    "section": "1D Chess Rules",
-    "text": "1D Chess Rules\nIn 110 1D chess, the board will be 1 by 9. Each player will get one king, and two knights. The white pieces go on the left, and the black on the right. The starting positions for the pieces of the game should be as follows:\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |\n+-----------------------------------------------------+\n\nKings and Knights move and kill their opponents differently. Knights can move either left or right, and when they move thy jump two pieces over. If they land on another piece, they kill them and take their spot. The king can move left or right, until they hit either another piece or an edge of the board. If a king hits another piece, they kill them and take their place. In chess, a player cannot typically kill one of their own pieces. In 110 1D chess, a king or knight can kill one of their own, if they hit or land on them, so be careful!"
-  },
-  {
-    "objectID": "project-4.html#start-game",
-    "href": "project-4.html#start-game",
-    "title": "Programming Project 4",
-    "section": "Start Game",
-    "text": "Start Game\n\nIts name is create_board\nIt takes no arguments\nIt returns a list with the initial state of the board (as shown in the test case below)\n\nTest case:\n\nprint( create_board() ) # [\"WKi\", \"WKn\", \"WKn\", \n                        #  \"EMPTY\", \"EMPTY\", \"EMPTY\",\n                        #  \"BKn\", \"BKn\", \"BKi\"]"
-  },
-  {
-    "objectID": "project-4.html#print-board",
-    "href": "project-4.html#print-board",
-    "title": "Programming Project 4",
-    "section": "Print Board",
-    "text": "Print Board\n\nIts name is printable_board\nIt takes one argument, the board list\nIt returns a string that is the graphical representation of the board\n\nTest case for initial board state:\n\nboard = create_board()\nprint( printable_board(board) ) # \"+-----------------------------------------------------+\\n\n                                #  | WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |\\n\n                                #  +-----------------------------------------------------+\"\n\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |\n+-----------------------------------------------------+"
-  },
-  {
-    "objectID": "project-4.html#check-move-validity",
-    "href": "project-4.html#check-move-validity",
-    "title": "Programming Project 4",
-    "section": "Check move validity",
-    "text": "Check move validity\n\nIts name is is_valid_move\nIt has three parameters: the board (list), the position (index) of the player to move, and player (\"WHITE\" or \"BLACK\")\nIt returns a boolean (True or False) – it returns True if the desired move is valid, an False otherwise\nA move is valid if:\n\n\nThe position (index) is a valid index in the board list\nThe position is an index of one of the current player’s pieces on the board\n\nYou do not need a while loop or for loop within this function. It can be accomplished with if statements. If the above two conditions are True, the function should return True. In any other case, return False.\nTest cases:\n\nboard = create_board()\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( is_valid_move(board, 1, \"BLACK\" ) ) # False\nprint( is_valid_move(board, 9, \"BLACK\" ) ) # False\nprint( is_valid_move(board, -1, \"BLACK\" ) ) # False\nprint( is_valid_move(board, 6, \"BLACK\" ) ) # True\nprint( is_valid_move(board, 2, \"WHITE\" ) ) # True"
-  },
-  {
-    "objectID": "project-4.html#move-a-king",
-    "href": "project-4.html#move-a-king",
-    "title": "Programming Project 4",
-    "section": "Move a king",
-    "text": "Move a king\n\nIts name is move_king\nIt takes three arguments: the board list, the position (index) of the player to move, and a direction (either \"LEFT\" or \"RIGHT\")\nIt changes the position of a king in the board list\nA king can move either left or right\nThe king will move until either it reaches another piece (killing that piece and taking its place), or an end of the board\nIt uses a for-loop or while-loop to iterate through the elements in the list and determine the spot it should end up at\n\nTest cases:\n\nboard = create_board()\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |\n+-----------------------------------------------------+\n\n\nmove_king(board, 0, \"LEFT\") \nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |\n+-----------------------------------------------------+\n\n\nmove_king(board, 8, \"LEFT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     |     |     | BKn | BKi |     |\n+-----------------------------------------------------+"
-  },
-  {
-    "objectID": "project-4.html#move-a-knight",
-    "href": "project-4.html#move-a-knight",
-    "title": "Programming Project 4",
-    "section": "Move a knight",
-    "text": "Move a knight\n\nIts name is move_knight\nIt takes three arguments: the board list, the position (index) of the player to move, and a direction (either \"LEFT\" or \"RIGHT\")\nIt changes the position of the moving knight in the board list\n\nA knight can move either left or right\nA knight moves two locations\nIf the moving knight lands on a space that another piece occupies, then it kills that piece\nKnights can jump over other pieces\nIf the moving knight cannot move due to the ending position of the move being out-of-bounds of the board, the knight should stay in its place\n\nTest cases:\n\nboard = create_board()\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |\n+-----------------------------------------------------+\n\n\nmove_knight(board, 6, \"LEFT\") \nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     | BKn |     |     | BKn | BKi |\n+-----------------------------------------------------+\n\n\nmove_knight(board, 2, \"RIGHT\") \nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn |     |     | WKn |     |     | BKn | BKi |\n+-----------------------------------------------------+"
-  },
-  {
-    "objectID": "project-4.html#make-a-move",
-    "href": "project-4.html#make-a-move",
-    "title": "Programming Project 4",
-    "section": "Make a move",
-    "text": "Make a move\n\nIts name is move\nIt takes three arguments: the board list, the position (index) of the player to move, and a direction (either \"LEFT\" or \"RIGHT\")\nIt determines if the piece to be moved is a king or a knight – if it is a king, call the move_king function; if a knight, call move_knight\n\nTest case:\n\nboard = create_board()\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |\n+-----------------------------------------------------+\n\n\nmove(board, 0, \"LEFT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |\n+-----------------------------------------------------+\n\n\nmove(board, 8, \"LEFT\") \nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     |     |     | BKn | BKi |     |\n+-----------------------------------------------------+"
-  },
-  {
-    "objectID": "project-4.html#game-over",
-    "href": "project-4.html#game-over",
-    "title": "Programming Project 4",
-    "section": "Game over",
-    "text": "Game over\n\nIts name is is_game_over\nIt takes the board list as an argument\nIt determines if the game is over or not\nIt returns a boolean (True or False)\nIf the white king does not exist on the board, then the game is over (it returns True)\nIf the black king does not exist on the board, then the game is over (it returns True)\nIf both kings are still in the board list, it returns False\n\nTest case:\n\nboard = create_board()\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( is_game_over(board) ) # False\nmove(board, 2, \"RIGHT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn |     |     | WKn |     | BKn | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( is_game_over(board) ) # False\nmove(board, 6, \"LEFT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn |     |     | BKn |     |     | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( is_game_over(board) ) # False\nmove(board, 1, \"RIGHT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi |     |     | WKn | BKn |     |     | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( is_game_over(board) ) # False\nmove(board, 4, \"LEFT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi |     | BKn | WKn |     |     |     | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( is_game_over(board) ) # False\nmove(board, 0, \"RIGHT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n|     |     | WKi | WKn |     |     |     | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( is_game_over(board) ) # False\nmove(board, 7, \"LEFT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n|     |     | WKi | WKn |     | BKn |     |     | BKi |\n+-----------------------------------------------------+\n\n\nprint( is_game_over(board) ) # False\nmove(board, 3, \"RIGHT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n|     |     | WKi |     |     | WKn |     |     | BKi |\n+-----------------------------------------------------+\n\n\nprint( is_game_over(board) ) # False\nmove(board, 8, \"LEFT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n|     |     | WKi |     |     | BKi |     |     |     |\n+-----------------------------------------------------+\n\n\nprint( is_game_over(board) ) # False\nmove(board, 2, \"RIGHT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n|     |     |     |     |     | WKi |     |     |     |\n+-----------------------------------------------------+\n\n\nprint( is_game_over(board) ) # True"
-  },
-  {
-    "objectID": "project-4.html#determine-the-winner",
-    "href": "project-4.html#determine-the-winner",
-    "title": "Programming Project 4",
-    "section": "Determine the winner",
-    "text": "Determine the winner\n\nIts name is whos_the_winner\nIt takes the board list as an argument\nIf the white king does not exist on the board, it returns “Black”\nIf the black king does not exist on the board, it returns “White”\nReturn None if both kings are on the board\n\nTest case:\n\nboard = create_board()\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( whos_the_winner(board) ) # None\nmove(board, 2, \"RIGHT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn |     |     | WKn |     | BKn | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( whos_the_winner(board) ) # None\nmove(board, 6, \"LEFT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn |     |     | BKn |     |     | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( whos_the_winner(board) ) # None\nmove(board, 1, \"RIGHT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi | WKn |     |     | BKn |     |     | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( whos_the_winner(board) ) # None\nmove(board, 1, \"RIGHT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi |     |     | WKn | BKn |     |     | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( whos_the_winner(board) ) # None\nmove(board, 4, \"LEFT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n| WKi |     | BKn | WKn |     |     |     | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( whos_the_winner(board) ) # None\nmove(board, 0, \"RIGHT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n|     |     | WKi | WKn |     |     |     | BKn | BKi |\n+-----------------------------------------------------+\n\n\nprint( whos_the_winner(board) ) # None\nmove(board, 7, \"LEFT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n|     |     | WKi | WKn |     | BKn |     |     | BKi |\n+-----------------------------------------------------+\n\n\nprint( whos_the_winner(board) ) # None\nmove(board, 3, \"RIGHT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n|     |     | WKi |     |     | WKn |     |     | BKi |\n+-----------------------------------------------------+\n\n\nprint( whos_the_winner(board) ) # None\nmove(board, 8, \"LEFT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n|     |     | WKi |     |     | BKi |     |     |     |\n+-----------------------------------------------------+\n\n\nprint( whos_the_winner(board) ) # None\nmove(board, 2, \"RIGHT\")\nprint( printable_board(board) )\n\n\n+-----------------------------------------------------+\n|     |     |     |     |     | WKi |     |     |     |\n+-----------------------------------------------------+\n\n\nprint( is_game_over(board) ) # True\nprint( whos_the_winner(board) ) # WHITE"
-  },
-  {
-    "objectID": "project-6.html",
-    "href": "project-6.html",
-    "title": "Programming Project 6",
+    "objectID": "project-1_old.html",
+    "href": "project-1_old.html",
+    "title": "Programming Project 1",
     "section": "",
-    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Wednesday, March 20, 2024 at 7pm\nIn this programming project you will implement a number of Python functions to implement a Benford’s Law analysis. Make sure you follow the provided style guide (you will be graded on it!).\nName your program benfords_law.py to submit to gradescope. Make sure that gradescope gives you the points for passing the test cases.\nThis programming project is an adaptation of Ben Dicken’s Benford’s Law Programming Assignment.\nBenford’s Law is a mathematical law that describes the behavior of naturally-occurring numbers in some kinds of numerical data sets. I recommend that you watch this video before proceeding to get an explanation:\nBenford’s law is useful for distinguishing naturally occurring data from randomized or made-up data. It has been used in the real world to detect election fraud (For example, in the 2009 Iranian election). It has also been used as evidence in criminal cases in the US. In this PA, you’ll be writing a program that reads in a data set, and prints out the plot of first-digits. Then, you can look at the plot to determine if it conforms to the law or not! Name your file benfords_law.py. You should organize the code into several functions."
+    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Wednesday, January 24, 2024 at 7pm\nIn this first programming project you will implement a number of Python functions to calculate the area of different geometric shapes. Make sure you follow the provided style guide (you will be graded on it!). You are not allowed to use any built-in method or function for any Python library.\nName the program geometry.py. Make sure that gradescope gives you the points for passing the test cases."
   },
   {
-    "objectID": "project-6.html#read-input-file",
-    "href": "project-6.html#read-input-file",
-    "title": "Programming Project 6",
-    "section": "Read input file",
-    "text": "Read input file\n\nIts name is csv_to_list\nIt takes a string argument, file_name\nIt opens the file in read mode\nIt iterates over the lines appending numeric values to a new list\nEach line in the file is split on comma, for each element that you get from splitting check if the string represents an integer or a float – if either an integer or a float, append the string to the new list\nIt returns a list of numbers found in the file\n\nHere’s what places.csv looks like:\n\nregion,population\npima,1234\ngeorgia,145\nsteele,10\ntampa,1700\ngreece,1729\nrome,1711\nmilan,219\ntucson,231\ntuscany,20001\nflorence,301\nnigeria,3879\nnewyork,404\nphoenix,40123\nbelgium,505\nmadrid,502\nnogales,601\nbrussels,712\ntempe,81231\nanthem,91231\n\n\nprint( csv_to_list(\"places.csv\") )\n\n\n[\"1234\", \"145\", \"10\", \"1700\", \"1729\", \"1711\", \"219\", \"231\", \"20001\", \"301\", \"3879\", \"404\", \"40123\", \"505\", \"502\", \"601\", \"712\", \"81231\", \"91231\"]"
+    "objectID": "project-1_old.html#area-of-a-rectangle",
+    "href": "project-1_old.html#area-of-a-rectangle",
+    "title": "Programming Project 1",
+    "section": "Area of a Rectangle",
+    "text": "Area of a Rectangle\n\nFunction name is rectangle_area\nIt takes two arguments: base and height\nIt returns the area of the rectangle with given base and height\n\n\\[\narea = base \\cdot height\n\\]"
   },
   {
-    "objectID": "project-6.html#count-start-digits",
-    "href": "project-6.html#count-start-digits",
-    "title": "Programming Project 6",
-    "section": "Count start digits",
-    "text": "Count start digits\n\nIts name is count_start_digits\nIt takes one argument, a list of strings that represent numbers (for example: [\"1234\", \"145\", \"10\", \"1700\", \"1729\"])\nIt creates a dictionary to keep counts of the digits (1 to 9) that start each number in the numbers list\nIt iterates over the values in numbers adding 1 to the respective value associated to each digit key (1 to 9) in the dictionary\nRemember to convert the first character in each value in numbers to an integer (the dictionary keys are integers)\nIt returns the dictionary of counts\n\nTest case:\n\nlist_of_numbers = csv_to_list(\"places.csv\")\ncounts = count_start_digits(list_of_numbers)\nprint(counts) # {1: 6, 2: 3, 3: 2, 4: 2, 5: 2, 6: 1, 7: 1, 8: 1, 9: 1}"
+    "objectID": "project-1_old.html#area-of-a-triangle",
+    "href": "project-1_old.html#area-of-a-triangle",
+    "title": "Programming Project 1",
+    "section": "Area of a Triangle",
+    "text": "Area of a Triangle\n\nFunction name is triangle_area\nIt takes three arguments, one for the length of each side of the triangle: a, b, c\nIt returns the area of the three given side lengths calculated according to Heron’s formula (calculate the semiperimeter first, then use that to calculate the area):\n\n\\[\ns = (a + b + c) / 2\n\\]\n\\[\narea = \\sqrt{s \\cdot (s-a) \\cdot (s-b) \\cdot (s-c)}\n\\]\n\nDo not use any built-in method or function for any Python library. Remember that roots are the opposite of an exponent. So you can calculate the square root of a number by using the exponent form \\(n^{1/2}\\)."
   },
   {
-    "objectID": "project-6.html#calculate-percentages",
-    "href": "project-6.html#calculate-percentages",
-    "title": "Programming Project 6",
-    "section": "Calculate percentages",
-    "text": "Calculate percentages\n\nIts name is digit_percentages\nIt takes a dictionary with digit counts\nIt creates a new dictionary with the percentage for each digit\nTo calculate percentage, first calculate the sum of all the counts, then divide each value in counts by the calculated total (round it to two decimals)\nIt returns the new dictionary\n\nTest case:\n\nlist_of_numbers = csv_to_list(\"places.csv\")\ncounts = count_start_digits(list_of_numbers)\npercentages = digit_percentages(counts)\nprint(percentages) # {1: 31.58, 2: 15.79, 3: 10.53, 4: 10.53, 5: 10.53, 6: 5.26, 7: 5.26, 8: 5.26, 9: 5.26}"
+    "objectID": "project-1_old.html#area-of-a-trapezoid",
+    "href": "project-1_old.html#area-of-a-trapezoid",
+    "title": "Programming Project 1",
+    "section": "Area of a Trapezoid",
+    "text": "Area of a Trapezoid\n\nFunction name is trapezoid_area\nIt takes three arguments: base_1, base_2, and height\nIt returns the area of the trapezoid with given base_1, base_2, and height.\n\n\\[\narea = {1/2} \\cdot (base_1 + base_2) \\cdot height\n\\]"
   },
   {
-    "objectID": "project-6.html#does-it-follow-the-law",
-    "href": "project-6.html#does-it-follow-the-law",
-    "title": "Programming Project 6",
-    "section": "Does it follow the law?",
-    "text": "Does it follow the law?\n\nIts name is check_benfords_law\nIt takes one argument, a dictionary with percentages per digit\nA data set follows Benford’s law if the percentage of occurrences of each digits follows the percentages below (plus 10% or minus 5%)\nIf every digit percentage falls within the specified rage, return True, otherwise return False\n\n\n\n\ndigit\npercent (-5, +10)\n\n\n\n\n1\n30%\n\n\n2\n17%\n\n\n3\n12%\n\n\n4\n9%\n\n\n5\n7%\n\n\n6\n6%\n\n\n7\n5%\n\n\n8\n5%\n\n\n9\n4%\n\n\n\n\nTest cases\n\npopulations.csv does follow Benford’s Law\nstocks.csv does follow Benford’s Law\nrandom_numbers.csv does NOT follow Benford’s Law"
+    "objectID": "project-1_old.html#area-of-a-circle",
+    "href": "project-1_old.html#area-of-a-circle",
+    "title": "Programming Project 1",
+    "section": "Area of a Circle",
+    "text": "Area of a Circle\n\nFunction name is circle_area\nIt takes one argument: radius\nIt returns the area of the circle with the given radius, rounded at two decimal places\nUse the value 3.1415 for \\(\\pi\\)\n\n\\[\narea = \\pi \\cdot radius^2\n\\]"
   },
   {
-    "objectID": "slides-11-01.html#announcements",
-    "href": "slides-11-01.html#announcements",
-    "title": "data structures – review (class slides)",
-    "section": "Announcements",
-    "text": "Announcements\n\nMidterm 3 this Wednesday – BRING PHOTO ID\n\nReview Session – Gittings 129b (this room) 5-7pm\nfirst hour: review lecture\nsecond hour: group work\n\nFill out SCS (https://scsonline.oia.arizona.edu/) – if 80% response, one project grade gets dropped"
-  },
-  {
-    "objectID": "slides-11-01.html#data-structures-in-python",
-    "href": "slides-11-01.html#data-structures-in-python",
-    "title": "data structures – review (class slides)",
-    "section": "Data Structures in Python",
-    "text": "Data Structures in Python\n\nlists (mutable)\ndictionaries (mutable)\ntuples (immutable)"
-  },
-  {
-    "objectID": "slides-11-01.html#lists",
-    "href": "slides-11-01.html#lists",
-    "title": "data structures – review (class slides)",
-    "section": "Lists",
-    "text": "Lists\n\nstore:\n\nordered items\nelements of different types\n\nuse square brackets ([]) syntax for creating a list\nallow indexing (integers starting at 0) with square brackets ([]) as well\nare mutable"
-  },
-  {
-    "objectID": "slides-11-01.html#lists-1",
-    "href": "slides-11-01.html#lists-1",
-    "title": "data structures – review (class slides)",
-    "section": "Lists",
-    "text": "Lists\nIndexing to retrieve values:\n\nmy_list = [\"a\", 1, \"b\", 2]\nmy_list[0]\n\n'a'\n\n\nIndexing to mutate values:\n\nmy_list[0] = 5\nmy_list\n\n[5, 1, 'b', 2]"
-  },
-  {
-    "objectID": "slides-11-01.html#list-methods",
-    "href": "slides-11-01.html#list-methods",
-    "title": "data structures – review (class slides)",
-    "section": "List methods",
-    "text": "List methods\n\n.append(value)\n.insert(index, value)\n.pop(index)\n.remove(value)"
-  },
-  {
-    "objectID": "slides-11-01.html#tuples",
-    "href": "slides-11-01.html#tuples",
-    "title": "data structures – review (class slides)",
-    "section": "Tuples",
-    "text": "Tuples\n\nstore:\n\nordered items\nelements of different types\n\nuse parentheses (()) syntax for creating a tuple\nallow indexing (integers starting at 0) with square brackets ([])\nare immutable"
-  },
-  {
-    "objectID": "slides-11-01.html#tuples-1",
-    "href": "slides-11-01.html#tuples-1",
-    "title": "data structures – review (class slides)",
-    "section": "Tuples",
-    "text": "Tuples\nIndexing to retrieve values:\n\nmy_tuple = (\"a\", 1, \"b\", 2)\nmy_tuple[0]\n\n'a'\n\n\nNot possible to mutate/change values in tuples\nNo methods to change it (because tuples are immutable)"
-  },
-  {
-    "objectID": "slides-11-01.html#dictionaries",
-    "href": "slides-11-01.html#dictionaries",
-    "title": "data structures – review (class slides)",
-    "section": "Dictionaries",
-    "text": "Dictionaries\n\nstore pairs of items key: value\nuse curly brackets ({}) with key and value separated by colon (:)\nallow value retrieval through key with square brackets ([])\nare mutable"
-  },
-  {
-    "objectID": "slides-11-01.html#dictionaries-1",
-    "href": "slides-11-01.html#dictionaries-1",
-    "title": "data structures – review (class slides)",
-    "section": "Dictionaries",
-    "text": "Dictionaries\nUse key to retrieve values:\n\nmy_dict = {\"banana\": 10, \"apple\": 3, \"orange\": 40}\nmy_dict[\"banana\"]\n\n10\n\n\nUse key to add key: value pairs:\n\nmy_dict[\"pear\"] = 5\nmy_dict\n\n{'banana': 10, 'apple': 3, 'orange': 40, 'pear': 5}\n\n\nUse key to mutate value associated with key:\n\nmy_dict[\"pear\"] += 5\nmy_dict\n\n{'banana': 10, 'apple': 3, 'orange': 40, 'pear': 10}"
-  },
-  {
-    "objectID": "slides-11-01.html#dictionary-methods",
-    "href": "slides-11-01.html#dictionary-methods",
-    "title": "data structures – review (class slides)",
-    "section": "Dictionary methods",
-    "text": "Dictionary methods\n\n.values()\n.items()\n.pop()"
-  },
-  {
-    "objectID": "slides-11-01.html#evaluate-the-code",
-    "href": "slides-11-01.html#evaluate-the-code",
-    "title": "data structures – review (class slides)",
-    "section": "Evaluate the code",
-    "text": "Evaluate the code\nIndicate when errors are thrown\n\nmy_list = [2, 3, 1, 2]\nmy_list.append(3)\nmy_list.insert(0, 1)\nmy_list[3] = 4\nmy_list # evaluate what this list holds at this point\n\nmy_list[6] = 10\n\nmy_tupple = (3, 4, 1)\nmy_tupple.append(3)\nmy_tupple # evaluate what this tuple holds at this point\n\nmy_dictionary = {3: 4, 1: 2, 5: 4}\nmy_dictionary[5] = 10\nmy_dictionary # evaluate what this dictionary holds at this point\n\nmy_dictionary.append(4: 5)\nmy_dictionary # evaluate what this dictionary holds at this point"
-  },
-  {
-    "objectID": "slides-11-01.html#evaluate-the-code-1",
-    "href": "slides-11-01.html#evaluate-the-code-1",
-    "title": "data structures – review (class slides)",
-    "section": "Evaluate the code",
-    "text": "Evaluate the code\nIndicate when errors are thrown\n\nmy_list = [2, 3, 1, 2]\nmy_list.append(3)\nmy_list.insert(0, 1)\nmy_list[3] = 4\nmy_list # evaluate what this list holds at this point\n\n[1, 2, 3, 4, 2, 3]\n\n\n\n# error --- my_list[6] = 10\n\nmy_tupple = (3, 4, 1)\n# error --- my_tupple.append(3)\nmy_tupple # evaluate what this tuple holds at this point\n\n(3, 4, 1)\n\n\n\nmy_dictionary = {3: 4, 1: 2, 5: 4}\nmy_dictionary[5] = 10\nmy_dictionary # evaluate what this dictionary holds at this point\n\n{3: 4, 1: 2, 5: 10}\n\n\n\n# error --- my_dictionary.append(4: 5)\nmy_dictionary # evaluate what this dictionary holds at this point\n\n{3: 4, 1: 2, 5: 10}"
-  },
-  {
-    "objectID": "slides-11-01.html#iterating-over-data-structures",
-    "href": "slides-11-01.html#iterating-over-data-structures",
-    "title": "data structures – review (class slides)",
-    "section": "Iterating over data structures",
-    "text": "Iterating over data structures\nUse for x in data_structure to retrieve values/keys (cannot make changes with this type of loop)\n\nmy_list = [3, 5, 5]\nfor value in my_list:\n  print(value)\n\n3\n5\n5\n\n\n\nmy_tuple = (3, 5, 5)\nfor value in my_tuple:\n  print(value)\n\n3\n5\n5"
-  },
-  {
-    "objectID": "slides-11-01.html#iterating-over-dictionaries",
-    "href": "slides-11-01.html#iterating-over-dictionaries",
-    "title": "data structures – review (class slides)",
-    "section": "Iterating over dictionaries",
-    "text": "Iterating over dictionaries\n\nmy_dictionary = {3: \"a\", 5: \"b\"}\nfor key in my_dictionary:\n  print(key)\n\n3\n5\n\n\nYou can change values in a dictionary with for key in dictionary\n\nmy_dictionary = {\"a\": 2, \"b\": 3}\nfor key in my_dictionary:\n  my_dictionary[key] += 1\nmy_dictionary\n\n{'a': 3, 'b': 4}"
-  },
-  {
-    "objectID": "slides-11-01.html#iterating-over-dictionaries-1",
-    "href": "slides-11-01.html#iterating-over-dictionaries-1",
-    "title": "data structures – review (class slides)",
-    "section": "Iterating over dictionaries",
-    "text": "Iterating over dictionaries\nUse for x in data_structure.method() for dictionaries\n\nmy_dictionary = {3: \"a\", 5: \"b\"}\nfor value in my_dictionary.values():\n  print(value)\n\na\nb\n\n\n\nmy_dictionary = {3: \"a\", 5: \"b\"}\nfor key, value in my_dictionary.items():\n  print(value)\n  print(key)\n\na\n3\nb\n5"
-  },
-  {
-    "objectID": "slides-11-01.html#cannot-change-size-of-data-structure",
-    "href": "slides-11-01.html#cannot-change-size-of-data-structure",
-    "title": "data structures – review (class slides)",
-    "section": "Cannot change size of data structure",
-    "text": "Cannot change size of data structure\nIt is not possible to remove or add items to a list or a dictionary inside a for x in data_structure loop. This is what happens when you try to do so:\nWeird behavior:\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.remove(value)\nmy_list\n\n[3, 2]\n\n\nInfinite loop:\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.append(value + 1) # this causes an infinite loop"
-  },
-  {
-    "objectID": "slides-11-01.html#cannot-change-size-of-data-structure-1",
-    "href": "slides-11-01.html#cannot-change-size-of-data-structure-1",
-    "title": "data structures – review (class slides)",
-    "section": "Cannot change size of data structure",
-    "text": "Cannot change size of data structure\nIt is not possible to remove or add items to a list or a dictionary inside a for x in data_structure loop. This is what happens when you try to do so:\nError:\n\nmy_dict = {2: 0, 3: 1, 1: 0, 2: 0}\nfor key in my_dict:\n  my_dict.pop(key) # this causes an error"
-  },
-  {
-    "objectID": "slides-11-01.html#write-a-function",
-    "href": "slides-11-01.html#write-a-function",
-    "title": "data structures – review (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\n\nIts name is count_names\nIt opens in read mode a file that contains a name per line, with repeated names\nIt counts how many unique names there are in the file\nIt returns an integer with the count\nUse a list for this\n\n\nassert count_names(\"names.txt\") == 11"
-  },
-  {
-    "objectID": "slides-11-01.html#write-a-function-solution",
-    "href": "slides-11-01.html#write-a-function-solution",
-    "title": "data structures – review (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef count_names(file_name):\n  f = open(file_name, \"r\")\n  name_list = []\n  for line in f:\n    name = line.strip()\n    if name not in name_list:\n      name_list.append(name)\n  f.close()\n  return len(name_list)\n\ndef main():\n  assert count_names(\"names.txt\") == 11\n  \nmain()"
-  },
-  {
-    "objectID": "slides-11-01.html#write-a-function-1",
-    "href": "slides-11-01.html#write-a-function-1",
-    "title": "data structures – review (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\n\nIts name is count_names\nIt opens in read mode a file that contains a name per line, with repeated names\nIt counts how many unique names there are in the file\nIt returns an integer with the count\nUse a dictionary for this\n\n\nassert count_names(\"names.txt\") == 11"
-  },
-  {
-    "objectID": "slides-11-01.html#write-a-functionn-solution",
-    "href": "slides-11-01.html#write-a-functionn-solution",
-    "title": "data structures – review (class slides)",
-    "section": "Write a functionn – solution",
-    "text": "Write a functionn – solution\n\ndef count_names(file_name):\n  f = open(file_name, \"r\")\n  name_dict = {}\n  for line in f:\n    name = line.strip()\n    if name not in name_dict:\n      name_dict[name] = \"\"\n  f.close()\n  return len(name_dict)\n\ndef main():\n  assert count_names(\"names.txt\") == 11\n  \nmain()"
+    "objectID": "project-1_old.html#test-cases",
+    "href": "project-1_old.html#test-cases",
+    "title": "Programming Project 1",
+    "section": "Test cases",
+    "text": "Test cases\n\ndef main():\n    print( rectangle_area(4, 4.5) ) # 18.0\n    print( triangle_area(3, 4, 5) ) # 6.0\n    print( trapezoid_area(11, 25, 5) ) # 90.0\n    print( trapezoid_area(4, 20, 10) ) # 120.0\n    print( circle_area(20) ) # 1256.6\n    print( circle_area(4) ) # 50.26\n  \nmain()"
   },
   {
     "objectID": "slides-13-01.html#announcements",
@@ -3924,42 +3980,21 @@
     "href": "project-1.html",
     "title": "Programming Project 1",
     "section": "",
-    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Wednesday, January 24, 2024 at 7pm\nIn this first programming project you will implement a number of Python functions to calculate the area of different geometric shapes. Make sure you follow the provided style guide (you will be graded on it!). You are not allowed to use any built-in method or function for any Python library.\nName the program geometry.py. Make sure that gradescope gives you the points for passing the test cases."
+    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Wednesday, January 24, 2024 at 7pm\nIn this PA, you will be writing two simple programs that print out text. Note that this programming project is relatively straightforward. Not all of the future assignments will be this way. It is simple because we have not yet covered a wide variety of programming concepts, so there’s only so much I can reasonably expect you to be able to program. The programming projects will get more challenging, but also, hopefully, more interesting!\nMake sure you follow the provided style guide (you will be graded on it!). You are not allowed to use any built-in method or function for any Python library."
   },
   {
-    "objectID": "project-1.html#area-of-a-rectangle",
-    "href": "project-1.html#area-of-a-rectangle",
+    "objectID": "project-1.html#move-mad-lib",
+    "href": "project-1.html#move-mad-lib",
     "title": "Programming Project 1",
-    "section": "Area of a Rectangle",
-    "text": "Area of a Rectangle\n\nFunction name is rectangle_area\nIt takes two arguments: base and height\nIt returns the area of the rectangle with given base and height\n\n\\[\narea = base \\cdot height\n\\]"
+    "section": "Move Mad Lib",
+    "text": "Move Mad Lib\nThe first program should be named move.py. The outline of the story is shown below:\n??? decided to move from their apartment on 5th\nto a condo on ???. They called their friend ???\nfor help. However, they could not fit ??? into\nthe moving truck, so they had to rent a ??? ???\nin order to move it!\n\nThe locations with ??? indicate that these should be replaced with a word specified by the computer user. Your create_story function should take 6 arguments, and fill them in to the story. An example of running the program would look like so:\n\nperson_one = \"Janet\"\nstreet_name = \"Loopdydoo Avenue\"\nperson_two = \"Richard\"\nobject_name = \"Christmas tree\"\nvehicle = \"Horse-drawn carriage\"\nadjective = \"Off-road\"\nstory = create_story(person_one, street_name, person_two, \\\n                     object_name, vehicle, adjective)\nprint(story)\n\nJanet decided to move from their apartment on 5th\nto a condo on Loopdydoo Avenue. They called their friend Richard\nfor help. However, they could not fit Christmas tree into\nthe moving truck, so they had to rent a Off-road Horse-drawn carriage\nin order to move it!"
   },
   {
-    "objectID": "project-1.html#area-of-a-triangle",
-    "href": "project-1.html#area-of-a-triangle",
+    "objectID": "project-1.html#vacation-mad-lib",
+    "href": "project-1.html#vacation-mad-lib",
     "title": "Programming Project 1",
-    "section": "Area of a Triangle",
-    "text": "Area of a Triangle\n\nFunction name is triangle_area\nIt takes three arguments, one for the length of each side of the triangle: a, b, c\nIt returns the area of the three given side lengths calculated according to Heron’s formula (calculate the semiperimeter first, then use that to calculate the area):\n\n\\[\ns = (a + b + c) / 2\n\\]\n\\[\narea = \\sqrt{s \\cdot (s-a) \\cdot (s-b) \\cdot (s-c)}\n\\]\n\nDo not use any built-in method or function for any Python library. Remember that roots are the opposite of an exponent. So you can calculate the square root of a number by using the exponent form \\(n^{1/2}\\)."
-  },
-  {
-    "objectID": "project-1.html#area-of-a-trapezoid",
-    "href": "project-1.html#area-of-a-trapezoid",
-    "title": "Programming Project 1",
-    "section": "Area of a Trapezoid",
-    "text": "Area of a Trapezoid\n\nFunction name is trapezoid_area\nIt takes three arguments: base_1, base_2, and height\nIt returns the area of the trapezoid with given base_1, base_2, and height.\n\n\\[\narea = {1/2} \\cdot (base_1 + base_2) \\cdot height\n\\]"
-  },
-  {
-    "objectID": "project-1.html#area-of-a-circle",
-    "href": "project-1.html#area-of-a-circle",
-    "title": "Programming Project 1",
-    "section": "Area of a Circle",
-    "text": "Area of a Circle\n\nFunction name is circle_area\nIt takes one argument: radius\nIt returns the area of the circle with the given radius, rounded at two decimal places\nUse the value 3.1415 for \\(\\pi\\)\n\n\\[\narea = \\pi \\cdot radius^2\n\\]"
-  },
-  {
-    "objectID": "project-1.html#test-cases",
-    "href": "project-1.html#test-cases",
-    "title": "Programming Project 1",
-    "section": "Test cases",
-    "text": "Test cases\n\ndef main():\n    print( rectangle_area(4, 4.5) ) # 18.0\n    print( triangle_area(3, 4, 5) ) # 6.0\n    print( trapezoid_area(11, 25, 5) ) # 90.0\n    print( trapezoid_area(4, 20, 10) ) # 120.0\n    print( circle_area(20) ) # 1256.6\n    print( circle_area(4) ) # 50.26\n  \nmain()"
+    "section": "Vacation Mad Lib",
+    "text": "Vacation Mad Lib\nThe second program should be named vacation.py. The outline of the story is shown below:\n??? and ??? were best friends.\nOne day ??? and ??? decided to go on a\nvacation to ???. However, they didn't know\nwhat to do with their ??? pet ??? named ???.\n??? had been causing problems, due to constant ???ing.\n??? found a sitter for their pet, and ??? went on the trip.\n\nAgain, locations with ??? indicate that these should be replaced with a word specified by the computer user. Your create_story function should take 8 arguments. An example of running the program would look like so:\n\nperson_one = \"Joe\"\nperson_two = \"Lily\"\npet = \"Poncho\"\nplace = \"Madagascar\"\nadjective = \"Ridiculous\"\nverb = \"plank\"\nadverb = \"spastically\"\n\nJoe and Lily were best friends.\nOne day Joe and Lily decided to go on a\nvacation to Madagascar. However, they didn't know\nwhat to do with their Ridiculous pet polar bear named Poncho.\nPoncho had been causing problems, due to constant planking.\nJoe found a sitter for their pet, and spastically went on the trip."
   },
   {
     "objectID": "slides-04-02.html#announcements",

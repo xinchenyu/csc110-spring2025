@@ -2,6 +2,7 @@
 title: "Programming Project 1"
 ---
 
+
 ```{r}
 #| echo: false
 #| message: false
@@ -16,70 +17,85 @@ Programming Projects are to be submitted to [gradescope]().
 
 **Due date: `r assignments %>% filter(assessment == "Programming Project 1") %>% pull(formatted_date)` at 7pm**
 
-In this first programming project you will implement a number of Python functions to calculate the area of different geometric shapes. Make sure you follow the provided [style guide](style.html) (you will be graded on it!). You are **not** allowed to use any built-in method or function for any Python library.
+In this PA, you will be writing two simple programs that print out text. Note that this programming project is relatively straightforward. Not all of the future assignments will be this way. It is simple because we have not yet covered a wide variety of programming concepts, so there's only so much I can reasonably expect you to be able to program. The programming projects will get more challenging, but also, hopefully, more interesting!
 
-Name the program `geometry.py`. Make sure that gradescope gives you the points for passing the test cases.
+Make sure you follow the provided [style guide](style.html) (you will be graded on it!). You are **not** allowed to use any built-in method or function for any Python library.
 
-## Area of a Rectangle
+# Mad Libs
 
-1.  Function name is `rectangle_area`
-2.  It takes two arguments: `base` and `height`
-3.  It returns the area of the rectangle with given `base` and `height`
+Mad Libs is a simple game/activity where the host player prompts other participant(s) for words of various types. For instance, the host might ask the other participants for various words that fall into categories such as nouns, places, names, verbs, etc. These words are filled in to blanks in a story, and after the host has gotten all of the words filled in, the story is read aloud. For instance, here is a printable mad lib from [madlibs.com](https://www.madlibs.com/).
 
-$$
-area = base \cdot height
-$$
+In this programming exercise, you'll write two mad lib program, that act as the host of the game. The program will take as argument various strings (words), and then it will return a single string with a story using these words.
 
-## Area of a Triangle
+## Move Mad Lib
 
-1.  Function name is `triangle_area`
-2.  It takes three arguments, one for the length of each side of the triangle: `a`, `b`, `c`
-3.  It returns the area of the three given side lengths calculated according to Heron's formula (calculate the semiperimeter first, then use that to calculate the area):
+The first program should be named `move.py`. The outline of the story is shown below:
 
-$$
-s = (a + b + c) / 2 
-$$
+<pre>
+??? decided to move from their apartment on 5th
+to a condo on ???. They called their friend ???
+for help. However, they could not fit ??? into
+the moving truck, so they had to rent a ??? ???
+in order to move it!
+</pre>
 
-$$
-area = \sqrt{s \cdot (s-a) \cdot (s-b) \cdot (s-c)}
-$$
-
-4.  Do not use any built-in method or function for any Python library. Remember that roots are the opposite of an exponent. So you can calculate the square root of a number by using the exponent form $n^{1/2}$.
-
-## Area of a Trapezoid
-
-1.  Function name is `trapezoid_area`
-2.  It takes three arguments: `base_1`, `base_2`, and `height`
-3.  It returns the area of the trapezoid with given `base_1`, `base_2`, and `height`.
-
-$$
-area = {1/2} \cdot (base_1 + base_2) \cdot height
-$$
-
-## Area of a Circle
-
-1.  Function name is `circle_area`
-2.  It takes one argument: `radius`
-3.  It returns the area of the circle with the given `radius`, rounded at two decimal places
-4.  Use the value `3.1415` for $\pi$
-
-$$
-area = \pi \cdot radius^2
-$$
-
-## Test cases
+The locations with `???` indicate that these should be replaced with a word specified by the computer user. Your `create_story` function should take 6 arguments, and fill them in to the story. An example of running the program would look like so:
 
 ```{python}
 #| eval: false
 #| echo: true
-def main():
-    print( rectangle_area(4, 4.5) ) # 18.0
-    print( triangle_area(3, 4, 5) ) # 6.0
-    print( trapezoid_area(11, 25, 5) ) # 90.0
-    print( trapezoid_area(4, 20, 10) ) # 120.0
-    print( circle_area(20) ) # 1256.6
-    print( circle_area(4) ) # 50.26
-  
-main()
+person_one = "Janet"
+street_name = "Loopdydoo Avenue"
+person_two = "Richard"
+object_name = "Christmas tree"
+vehicle = "Horse-drawn carriage"
+adjective = "Off-road"
+story = create_story(person_one, street_name, person_two, \
+                     object_name, vehicle, adjective)
+print(story)
 ```
 
+
+<pre>
+Janet decided to move from their apartment on 5th
+to a condo on Loopdydoo Avenue. They called their friend Richard
+for help. However, they could not fit Christmas tree into
+the moving truck, so they had to rent a Off-road Horse-drawn carriage
+in order to move it!
+</pre>
+
+## Vacation Mad Lib
+The second program should be named `vacation.py`. The outline of the story is shown below:
+
+<pre>
+??? and ??? were best friends.
+One day ??? and ??? decided to go on a
+vacation to ???. However, they didn't know
+what to do with their ??? pet ??? named ???.
+??? had been causing problems, due to constant ???ing.
+??? found a sitter for their pet, and ??? went on the trip.
+</pre>
+
+Again, locations with `???` indicate that these should be replaced with a word specified by the computer user. Your `create_story` function should take 8 arguments. An example of running the program would look like so:
+
+```{python}
+#| eval: false
+#| echo: true
+person_one = "Joe"
+person_two = "Lily"
+pet = "Poncho"
+place = "Madagascar"
+adjective = "Ridiculous"
+verb = "plank"
+adverb = "spastically"
+```
+
+
+<pre>
+Joe and Lily were best friends.
+One day Joe and Lily decided to go on a
+vacation to Madagascar. However, they didn't know
+what to do with their Ridiculous pet polar bear named Poncho.
+Poncho had been causing problems, due to constant planking.
+Joe found a sitter for their pet, and spastically went on the trip.
+</pre>

@@ -166,6 +166,10 @@ You must keep theses dates available. Do not schedule any flights, travel plans,
 
 Weekly quizzes will be held every Wednesday (unless otherwise noted). The 2 (two) lowest grades for quizzes will be dropped from final grade calculations.
 
+## Late Work
+
+For programming problems and projects, late work is not accepted
+
 ## Extra Credit
 
 Up to 1 point of extra credit will be awarded to students who come to office hours in person. Check our office hours schedule on the website <https://adrianapicoral.com/csc-110/tas.html> and ask the TA or instructor to submit your points to gradescope. 
@@ -265,7 +269,13 @@ At the University of Arizona, we strive to make learning experiences as accessib
 
 # Code of Academic Integrity
 
-Students are encouraged to share intellectual views and discuss freely the principles and applications of course materials. However, graded work/exercises must be the product of independent effort unless otherwise instructed. Students are expected to adhere to the UA Code of Academic Integrity as described in the UA General Catalog. See <https://deanofstudents.arizona.edu/student-rights-responsibilities/academic-integrity>.
+Students are encouraged to share intellectual views and discuss freely the principles and applications of course materials. However, graded work/exercises must be the product of independent effort unless otherwise instructed. 
+
+**All work you submit for grading in this course must be your own. Submitting work that includes many (minor and/or major) components that are not your own work is considered plagiarism. Instances of plagiarism will be reported to the Dean of Students.**
+
+Keep in mind that all assignments and practice problems provided in this course are meant to help you to practice the skills that you will need for graded work (including on paper quizzes and exams), so it is generally in your best interest to avoid taking shortcuts even on these assignments.
+
+Students are expected to adhere to the UA Code of Academic Integrity as described in the UA General Catalog. See <https://deanofstudents.arizona.edu/student-rights-responsibilities/academic-integrity>.
 
 Uploading material from this course to a website other than D2L is strictly prohibited and will be considered a violation of the course policy and a violation of the code of academic integrity. Obtaining material associated with this course (or previous offerings of this course) on a site other than D2L and the course website, such as Chegg, Course Hero, etc. or accessing these sites during a quiz or exam is a violation of the code of academic integrity. Any student determined to have uploaded or accessed material in an unauthorized manner will be reported to the Dean of Students for a Code of Academic Integrity violation, with a recommended sanction of a failing grade in the course (faculty can replace this sanction with whatever sanction they plan to use for their course).
 

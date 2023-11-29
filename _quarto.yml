@@ -16,6 +16,7 @@ website:
         - schedule.qmd
         - tas.qmd
         - discord.qmd
+        - academic-integrity.qmd
         - about.qmd
         - about_python.md
       - section: "Programming Projects"

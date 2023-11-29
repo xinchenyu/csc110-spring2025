@@ -103,8 +103,6 @@ gtag('js', new Date());
 gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -174,6 +172,12 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
   <div class="sidebar-item-container"> 
   <a href="./discord.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Discord (online discussion and office hours)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./academic-integrity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Academic Integrity</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -890,11 +894,11 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#area-of-a-rectangle" id="toc-area-of-a-rectangle" class="nav-link active" data-scroll-target="#area-of-a-rectangle">Area of a Rectangle</a></li>
-  <li><a href="#area-of-a-triangle" id="toc-area-of-a-triangle" class="nav-link" data-scroll-target="#area-of-a-triangle">Area of a Triangle</a></li>
-  <li><a href="#area-of-a-trapezoid" id="toc-area-of-a-trapezoid" class="nav-link" data-scroll-target="#area-of-a-trapezoid">Area of a Trapezoid</a></li>
-  <li><a href="#area-of-a-circle" id="toc-area-of-a-circle" class="nav-link" data-scroll-target="#area-of-a-circle">Area of a Circle</a></li>
-  <li><a href="#test-cases" id="toc-test-cases" class="nav-link" data-scroll-target="#test-cases">Test cases</a></li>
+  <li><a href="#mad-libs" id="toc-mad-libs" class="nav-link active" data-scroll-target="#mad-libs">Mad Libs</a>
+  <ul class="collapse">
+  <li><a href="#move-mad-lib" id="toc-move-mad-lib" class="nav-link" data-scroll-target="#move-mad-lib">Move Mad Lib</a></li>
+  <li><a href="#vacation-mad-lib" id="toc-vacation-mad-lib" class="nav-link" data-scroll-target="#vacation-mad-lib">Vacation Mad Lib</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -920,74 +924,70 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 
 <p>Programming Projects are to be submitted to <a href="">gradescope</a>.</p>
 <p><strong>Due date: Wednesday, January 24, 2024 at 7pm</strong></p>
-<p>In this first programming project you will implement a number of Python functions to calculate the area of different geometric shapes. Make sure you follow the provided <a href="style.html">style guide</a> (you will be graded on it!). You are <strong>not</strong> allowed to use any built-in method or function for any Python library.</p>
-<p>Name the program <code>geometry.py</code>. Make sure that gradescope gives you the points for passing the test cases.</p>
-<section id="area-of-a-rectangle" class="level2">
-<h2 class="anchored" data-anchor-id="area-of-a-rectangle">Area of a Rectangle</h2>
-<ol type="1">
-<li>Function name is <code>rectangle_area</code></li>
-<li>It takes two arguments: <code>base</code> and <code>height</code></li>
-<li>It returns the area of the rectangle with given <code>base</code> and <code>height</code></li>
-</ol>
-<p><span class="math display">\[
-area = base \cdot height
-\]</span></p>
-</section>
-<section id="area-of-a-triangle" class="level2">
-<h2 class="anchored" data-anchor-id="area-of-a-triangle">Area of a Triangle</h2>
-<ol type="1">
-<li>Function name is <code>triangle_area</code></li>
-<li>It takes three arguments, one for the length of each side of the triangle: <code>a</code>, <code>b</code>, <code>c</code></li>
-<li>It returns the area of the three given side lengths calculated according to Heron’s formula (calculate the semiperimeter first, then use that to calculate the area):</li>
-</ol>
-<p><span class="math display">\[
-s = (a + b + c) / 2
-\]</span></p>
-<p><span class="math display">\[
-area = \sqrt{s \cdot (s-a) \cdot (s-b) \cdot (s-c)}
-\]</span></p>
-<ol start="4" type="1">
-<li>Do not use any built-in method or function for any Python library. Remember that roots are the opposite of an exponent. So you can calculate the square root of a number by using the exponent form <span class="math inline">\(n^{1/2}\)</span>.</li>
-</ol>
-</section>
-<section id="area-of-a-trapezoid" class="level2">
-<h2 class="anchored" data-anchor-id="area-of-a-trapezoid">Area of a Trapezoid</h2>
-<ol type="1">
-<li>Function name is <code>trapezoid_area</code></li>
-<li>It takes three arguments: <code>base_1</code>, <code>base_2</code>, and <code>height</code></li>
-<li>It returns the area of the trapezoid with given <code>base_1</code>, <code>base_2</code>, and <code>height</code>.</li>
-</ol>
-<p><span class="math display">\[
-area = {1/2} \cdot (base_1 + base_2) \cdot height
-\]</span></p>
-</section>
-<section id="area-of-a-circle" class="level2">
-<h2 class="anchored" data-anchor-id="area-of-a-circle">Area of a Circle</h2>
-<ol type="1">
-<li>Function name is <code>circle_area</code></li>
-<li>It takes one argument: <code>radius</code></li>
-<li>It returns the area of the circle with the given <code>radius</code>, rounded at two decimal places</li>
-<li>Use the value <code>3.1415</code> for <span class="math inline">\(\pi\)</span></li>
-</ol>
-<p><span class="math display">\[
-area = \pi \cdot radius^2
-\]</span></p>
-</section>
-<section id="test-cases" class="level2">
-<h2 class="anchored" data-anchor-id="test-cases">Test cases</h2>
+<p>In this PA, you will be writing two simple programs that print out text. Note that this programming project is relatively straightforward. Not all of the future assignments will be this way. It is simple because we have not yet covered a wide variety of programming concepts, so there’s only so much I can reasonably expect you to be able to program. The programming projects will get more challenging, but also, hopefully, more interesting!</p>
+<p>Make sure you follow the provided <a href="style.html">style guide</a> (you will be graded on it!). You are <strong>not</strong> allowed to use any built-in method or function for any Python library.</p>
+<section id="mad-libs" class="level1">
+<h1>Mad Libs</h1>
+<p>Mad Libs is a simple game/activity where the host player prompts other participant(s) for words of various types. For instance, the host might ask the other participants for various words that fall into categories such as nouns, places, names, verbs, etc. These words are filled in to blanks in a story, and after the host has gotten all of the words filled in, the story is read aloud. For instance, here is a printable mad lib from <a href="https://www.madlibs.com/">madlibs.com</a>.</p>
+<p>In this programming exercise, you’ll write two mad lib program, that act as the host of the game. The program will take as argument various strings (words), and then it will return a single string with a story using these words.</p>
+<section id="move-mad-lib" class="level2">
+<h2 class="anchored" data-anchor-id="move-mad-lib">Move Mad Lib</h2>
+<p>The first program should be named <code>move.py</code>. The outline of the story is shown below:</p>
+<pre>??? decided to move from their apartment on 5th
+to a condo on ???. They called their friend ???
+for help. However, they could not fit ??? into
+the moving truck, so they had to rent a ??? ???
+in order to move it!
+</pre>
+<p>The locations with <code>???</code> indicate that these should be replaced with a word specified by the computer user. Your <code>create_story</code> function should take 6 arguments, and fill them in to the story. An example of running the program would look like so:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>( rectangle_area(<span class="dv">4</span>, <span class="fl">4.5</span>) ) <span class="co"># 18.0</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>( triangle_area(<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>) ) <span class="co"># 6.0</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>( trapezoid_area(<span class="dv">11</span>, <span class="dv">25</span>, <span class="dv">5</span>) ) <span class="co"># 90.0</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>( trapezoid_area(<span class="dv">4</span>, <span class="dv">20</span>, <span class="dv">10</span>) ) <span class="co"># 120.0</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>( circle_area(<span class="dv">20</span>) ) <span class="co"># 1256.6</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>( circle_area(<span class="dv">4</span>) ) <span class="co"># 50.26</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>person_one <span class="op">=</span> <span class="st">"Janet"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>street_name <span class="op">=</span> <span class="st">"Loopdydoo Avenue"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>person_two <span class="op">=</span> <span class="st">"Richard"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>object_name <span class="op">=</span> <span class="st">"Christmas tree"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>vehicle <span class="op">=</span> <span class="st">"Horse-drawn carriage"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>adjective <span class="op">=</span> <span class="st">"Off-road"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>story <span class="op">=</span> create_story(person_one, street_name, person_two, <span class="op">\</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                     object_name, vehicle, adjective)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(story)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<pre>Janet decided to move from their apartment on 5th
+to a condo on Loopdydoo Avenue. They called their friend Richard
+for help. However, they could not fit Christmas tree into
+the moving truck, so they had to rent a Off-road Horse-drawn carriage
+in order to move it!
+</pre>
+</section>
+<section id="vacation-mad-lib" class="level2">
+<h2 class="anchored" data-anchor-id="vacation-mad-lib">Vacation Mad Lib</h2>
+<p>The second program should be named <code>vacation.py</code>. The outline of the story is shown below:</p>
+<pre>??? and ??? were best friends.
+One day ??? and ??? decided to go on a
+vacation to ???. However, they didn't know
+what to do with their ??? pet ??? named ???.
+??? had been causing problems, due to constant ???ing.
+??? found a sitter for their pet, and ??? went on the trip.
+</pre>
+<p>Again, locations with <code>???</code> indicate that these should be replaced with a word specified by the computer user. Your <code>create_story</code> function should take 8 arguments. An example of running the program would look like so:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>person_one <span class="op">=</span> <span class="st">"Joe"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>person_two <span class="op">=</span> <span class="st">"Lily"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>pet <span class="op">=</span> <span class="st">"Poncho"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>place <span class="op">=</span> <span class="st">"Madagascar"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>adjective <span class="op">=</span> <span class="st">"Ridiculous"</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>verb <span class="op">=</span> <span class="st">"plank"</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>adverb <span class="op">=</span> <span class="st">"spastically"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre>Joe and Lily were best friends.
+One day Joe and Lily decided to go on a
+vacation to Madagascar. However, they didn't know
+what to do with their Ridiculous pet polar bear named Poncho.
+Poncho had been causing problems, due to constant planking.
+Joe found a sitter for their pet, and spastically went on the trip.
+</pre>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
