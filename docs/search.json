@@ -3826,7 +3826,7 @@
     "href": "project-2.html",
     "title": "Programming Project 2",
     "section": "",
-    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Wednesday, January 31, 2024 at 7pm\nIn this programming project you will implement a number of Python functions to validate or transform values conditionally. Make sure you follow the provided style guide (you will be graded on it!). You are allowed to use round(), str() and len(), but other than that you are not allowed to use any other built-in method or function from any Python library.\nName the program grades.py. Make sure that gradescope gives you the points for passing the test cases."
+    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Wednesday, January 31, 2024 at 7pm\nIn this programming project you will implement a number of Python functions to validate or transform values conditionally. Make sure you follow the provided style guide (you will be graded on it!). You are allowed to use round(), str() and len(), but other than that you are not allowed to use any other built-in method or function from any Python library.\nAlso make sure you check the Academic Integrity and Common Gradescope Errors pages.\nName the program grades.py. Make sure that gradescope gives you the points for passing the test cases."
   },
   {
     "objectID": "project-2.html#letter-grade",
@@ -4975,5 +4975,33 @@
     "title": "Module 1 Programming Problems",
     "section": "",
     "text": "Programming Problems should be submitted to gradescope.\nIf you need instructions on how to submit your .py files to gradescope, watch the video at the end of this page.\n\nSurvey\nDue date: Friday, January 12, 2024 at 7pm\n&lt;&gt;\nThis is a survey to collect information on your expectations for CSc 110 Computer Programming I. The completion of this survey is required and will be used for grading purposes.\n\n\nProgramming Problem 1\nDue date: Tuesday, January 16, 2024 at 7pm\nWrite a python program that prints out the string “Hello World!”. Be careful with capitalization and punctuation.\nThe exact output of the program should be:\nHello World!\n\nName the program hello.py. Make sure that gradescope (https://www.gradescope.com/courses/487587/assignments/2554285) gives you the points for passing the test case.\n\n\nProgramming Problem 2\nDue date: Tuesday, January 16, 2024 at 7pm\nWrite a python program that prints out the following excerpt from Amanda Gorman’s poem, “The Hill We Climb”:\nWhen day comes, we ask ourselves, where can we find light in this never-ending shade?\n\nThe loss we carry. A sea we must wade.\nWe braved the belly of the beast.\n\nWe've learned that quiet isn't always peace, \nand the norms and notions of what \"just\" is isn't always justice.\n\nAnd yet the dawn is ours before we knew it.\n\nSomehow we do it.\n\nName the program poem.py. Make sure that gradescope gives you the points for passing the test case. You can submit your solution to gradescope as many times as you want before the deadline.\nHINT: print() has a parameter called end which is set as end=\"\\n\" by default – change that to end=\"\" to remove the last newline character.\nMake sure you do the reading for this module, especially the section on Escape Sequences\n\n\nHow to submit to gradescope video"
+  },
+  {
+    "objectID": "project-2.html#letter_grade",
+    "href": "project-2.html#letter_grade",
+    "title": "Programming Project 2",
+    "section": "letter_grade()",
+    "text": "letter_grade()\nThis function determines a letter grade (“A”, “B”, and so on) based on a float argument representing a percentage grade.\nIt returns a letter grade based on the following rules:\n-   Greater or equal to 90, return \"A\"\n-   Greater or equal to 80, return \"B\"\n-   Greater or equal to 70, return \"C\"\n-   Greater or equal to 60, return \"D\"\n-   Anything less, than 60 return \"E\" but greater or equal to 0\n-   If argument is negative or greater than 100, return \"X\""
+  },
+  {
+    "objectID": "project-2.html#pass_or_fail",
+    "href": "project-2.html#pass_or_fail",
+    "title": "Programming Project 2",
+    "section": "pass_or_fail",
+    "text": "pass_or_fail\nThis function determines if a student passed or failed a class, based on their final letter grade. Letter grades equal to “A”, “B”, “C”, or “D” are passing grades (\"Pass\")."
+  },
+  {
+    "objectID": "project-2.html#calculate-percentage-point_grade-function",
+    "href": "project-2.html#calculate-percentage-point_grade-function",
+    "title": "Programming Project 2",
+    "section": "Calculate percentage – point_grade function",
+    "text": "Calculate percentage – point_grade function\nThis function calculates a percentage grade based on a score and total_points. It calculates the percentage grade by dividing score by total_points, and multiplies result by 100. It returns the calculated percentage as a float rounded at two decimals"
+  },
+  {
+    "objectID": "project-2.html#calculate-final-grade-get_grade_results-function",
+    "href": "project-2.html#calculate-final-grade-get_grade_results-function",
+    "title": "Programming Project 2",
+    "section": "Calculate final grade – get_grade_results function",
+    "text": "Calculate final grade – get_grade_results function\nThis function takes two score and total_points, and it calls the previous functions you’ve written – DO NOT recalculate percentage of grade, letter grade, etc. in this function. You are required to call the other functions. It returns a message similar to: Your grade is 92.34 (A - Pass) or Your grade is 35.78 (E - Fail)"
   }
 ]

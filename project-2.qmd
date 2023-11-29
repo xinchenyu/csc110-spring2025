@@ -18,15 +18,15 @@ Programming Projects are to be submitted to [gradescope]().
 
 In this programming project you will implement a number of Python functions to validate or transform values conditionally. Make sure you follow the provided [style guide](style.html) (you will be graded on it!). You are allowed to use `round()`, `str()` and `len()`, but other than that you are **not** allowed to use any other built-in method or function from any Python library.
 
+Also make sure you check the [Academic Integrity](academic-integrity.html) and [Common Gradescope Errors](gradescope-errors.html) pages.
+
 Name the program `grades.py`. Make sure that gradescope gives you the points for passing the test cases.
 
-## Letter Grade
+## `letter_grade()`
 
-1.  Function name is `letter_grade`
+This function determines a letter grade ("A", "B", and so on) based on a float argument representing a percentage grade.
 
-2.  It takes a float argument representing a grade from 0 to 100, and it returns a string
-
-3.  It returns a letter grade based on the following rules:
+It returns a letter grade based on the following rules:
 
     -   Greater or equal to 90, return "A"
     -   Greater or equal to 80, return "B"
@@ -35,29 +35,18 @@ Name the program `grades.py`. Make sure that gradescope gives you the points for
     -   Anything less, than 60 return "E" but greater or equal to 0
     -   If argument is negative or greater than 100, return "X"
 
-## Pass or Fail
+## `pass_or_fail`
 
-1.  Function name is `pass_or_fail`
-2.  It takes a string argument that is one character long, `letter_grade` and it returns a string
-3.  If the argument `letter_grade` is longer than one character, it returns `Error`
-4.  It returns `Pass` if `letter_grade` argument is equal to "A", "B", "C", or "D" -- otherwise it returns `Fail`
+This function determines if a student passed or failed a class, based on their final letter grade.
+Letter grades equal to "A", "B", "C", or "D" are passing grades (`"Pass"`).
 
-## Calculate percentage
+## Calculate percentage -- `point_grade` function
 
-1.  Function name is `point_grade`
-2.  It takes two float arguments: `score` and `total_points`
-3.  It calculates the percentage grade by dividing score by total_points, and multiplies result by 100 (percentage = (score / total_points) \* 100)
-4.  It returns the calculated percentage as a float rounded at two decimals
+This function calculates a percentage grade based on a `score` and `total_points`. It calculates the percentage grade by dividing score by total_points, and multiplies result by 100. It returns the calculated percentage as a float rounded at two decimals
 
-## Calculate final grade
+## Calculate final grade -- `get_grade_results` function
 
-1.  Function name is `get_grade_results`
-2.  It takes two float arguments: `score` and `total_points`
-3.  It calls `point_grade` (a function you've written for this assignment) using the two float arguments: `score` and `total_points` -- it saves the value returned to a variable to be used in the next steps
-4.  Using the calculated point grade value returned by your `point_grade` function call (previous step), it calls the function `letter_grade` to retrieve the letter grade value associated with the calculated point grade and it saves it to a variable
-5.  Using the letter grade retrieved from the previous steps, it calls your `pass_or_fail` function to retrieve a `Pass` or a `Fail` and saves it to a variable
-6.  At this point you should have three variables: a point grade (0 to 100 value), a letter grade (A, B, C, D, or E), and a string that says either `Pass` or `Fail` -- concatenate these three values into one string to be returned by the function
-7.  It returns a string similar to: `Your grade is 92.34 (A - Pass)` or `Your grade is 35.78 (E - Fail)`
+This function takes two `score` and `total_points`, and it calls the previous functions you've written -- DO NOT recalculate percentage of grade, letter grade, etc. in this function. You are required to call the other functions.  It returns a message similar to: `Your grade is 92.34 (A - Pass)` or `Your grade is 35.78 (E - Fail)`
 
 ## Test Cases
 
