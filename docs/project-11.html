@@ -894,18 +894,19 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#creating-information-files" id="toc-creating-information-files" class="nav-link active" data-scroll-target="#creating-information-files">Creating information files</a></li>
+  <li><a href="#wordsearch" id="toc-wordsearch" class="nav-link active" data-scroll-target="#wordsearch">WordSearch</a>
+  <ul class="collapse">
+  <li><a href="#words-text-file" id="toc-words-text-file" class="nav-link" data-scroll-target="#words-text-file">Words text file</a></li>
+  <li><a href="#puzzle-text-file" id="toc-puzzle-text-file" class="nav-link" data-scroll-target="#puzzle-text-file">Puzzle text file</a></li>
+  <li><a href="#output" id="toc-output" class="nav-link" data-scroll-target="#output">Output</a></li>
+  </ul></li>
+  <li><a href="#example-run" id="toc-example-run" class="nav-link" data-scroll-target="#example-run">Example Run</a></li>
   <li><a href="#development-strategy" id="toc-development-strategy" class="nav-link" data-scroll-target="#development-strategy">Development Strategy</a>
   <ul class="collapse">
-  <li><a href="#reading-and-processing-the-file" id="toc-reading-and-processing-the-file" class="nav-link" data-scroll-target="#reading-and-processing-the-file">(1) Reading and processing the file</a></li>
-  <li><a href="#counting-words" id="toc-counting-words" class="nav-link" data-scroll-target="#counting-words">(2) Counting words</a></li>
-  <li><a href="#finding-most-occurrences" id="toc-finding-most-occurrences" class="nav-link" data-scroll-target="#finding-most-occurrences">(3) Finding most occurrences</a></li>
-  <li><a href="#counting-capitalized" id="toc-counting-capitalized" class="nav-link" data-scroll-target="#counting-capitalized">(4) Counting Capitalized</a></li>
-  <li><a href="#counting-punctuated" id="toc-counting-punctuated" class="nav-link" data-scroll-target="#counting-punctuated">(5) Counting Punctuated</a></li>
-  <li><a href="#writing-the-information-file" id="toc-writing-the-information-file" class="nav-link" data-scroll-target="#writing-the-information-file">(6) Writing the information file</a></li>
+  <li><a href="#reading-in-input-files" id="toc-reading-in-input-files" class="nav-link" data-scroll-target="#reading-in-input-files">(1) Reading in input files</a></li>
+  <li><a href="#word-search" id="toc-word-search" class="nav-link" data-scroll-target="#word-search">(2) Word search</a></li>
   </ul></li>
-  <li><a href="#resource-files" id="toc-resource-files" class="nav-link" data-scroll-target="#resource-files">Resource Files</a></li>
-  <li><a href="#test-case" id="toc-test-case" class="nav-link" data-scroll-target="#test-case">Test case</a></li>
+  <li><a href="#example-run-1" id="toc-example-run-1" class="nav-link" data-scroll-target="#example-run-1">Example run</a></li>
   </ul>
 </nav>
     </div>
@@ -931,126 +932,113 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 
 <p>Programming Projects are to be submitted to <a href="">gradescope</a>.</p>
 <p><strong>Due date: Wednesday, May 01, 2024 at 7pm</strong></p>
-<p>This programming project is an adaptation of Ben Dicken’s Infographic Programming Assignment.</p>
-<section id="creating-information-files" class="level1">
-<h1>Creating information files</h1>
-<p>In this programming problem, you will be writing a program that reads in a text file (perhaps containing the contents of a book, poem, article, etc) and produces an information file based on the text. You will need to use one or more dictionaries to count words in the program. You may also use lists and / or sets.</p>
-<p>The information file should contain the following information about the text:</p>
-<ul>
-<li>The name of the text file</li>
-<li>The total number of words.</li>
-<li>The most used small, medium, and large words in the file. For the purposes of this project, the definitions of a small, medium, and large word is:
-<ul>
-<li>small: length 0-4, inclusive.</li>
-<li>medium: length 5-7, inclusive.</li>
-<li>large: length 8+, inclusive.</li>
-</ul></li>
-<li>The frequencies and percentages for each word length category</li>
-<li>The frequencies and percentages for each capitalized word category</li>
-<li>The frequencies and percentages for each punctuated word category</li>
-</ul>
-<p>Name your Python file <code>infofile.py</code>.</p>
+<p>This programming project is an adaptation of Ben Dicken’s WordSearch Programming Assignment.</p>
+<section id="wordsearch" class="level1">
+<h1>WordSearch</h1>
+<p>In this assignment, you will be tasked with writing a program that finds certain words within a wordsearch grid and returns the word mapped to the line and starting character location of each word. The information of the board, and the words will be provided via files you will need to read in.</p>
+<p>You should name the file <code>wordsearch.py</code>. Your code should have a function called <code>search</code> that returns a dictionary (see specification below).</p>
+<section id="words-text-file" class="level2">
+<h2 class="anchored" data-anchor-id="words-text-file">Words text file</h2>
+<p>Your program should open up and read a text file name which determines which words you are searching for in your puzzle file! You can assume that each line in the input text file is formatted as follows: each line of the file is a word from the “word bank.”</p>
+<p>Contents of <code>words.txt</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>computer</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>science</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Your program should open and read the input text file into the program and store the mapping between forwards and backwards words in a dictionary. The keys of the dictionary should be the forward version of the word, and the value the keys map to, should be the backward version of that word. Given the example content of words.txt shown above, the words dictionary should have the keys and values shown below:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>words <span class="op">=</span> { </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"computer"</span>:<span class="st">"retupmoc"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"science"</span>:<span class="st">"ecneics"</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>After you have read in the file and constructed this dictionary, you can use it to determine your word bank, which words you will need to look for within the puzzle.</p>
+</section>
+<section id="puzzle-text-file" class="level2">
+<h2 class="anchored" data-anchor-id="puzzle-text-file">Puzzle text file</h2>
+<p>This file contains a grid of letters and hidden within those letters are certain words you will need to be searching for. You will use your newly created words dictionary to figure out what letter combination of words you need to find. This is an example of what this word-grid file would look like:</p>
+<pre>W O D I W S M Z H 
+N R M E W A N D A 
+L Z H I N O K L H 
+S R E G N E V A V 
+I F R C X H C Q X 
+A H T Z B A Y K Q 
+A R A M E R I C A
+</pre>
+<p>The puzzle file could have more or less Rows/Columns depending on each test case.</p>
+</section>
+<section id="output" class="level2">
+<h2 class="anchored" data-anchor-id="output">Output</h2>
+<p>The program should return a dictionary with the starting row / col locations for each word found. Your code should have a function called <code>search</code> that returns this dictionary. The formatting of the return dictionary should be something like:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">"word1"</span>: [<span class="dv">0</span>, <span class="dv">0</span>], <span class="st">"word2"</span>: [<span class="dv">5</span>, <span class="dv">5</span>]}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="example-run" class="level1">
+<h1>Example Run</h1>
+<p>Say that <code>words.txt</code> contains:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>army</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>navy</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>star</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>america</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>bullet</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>And then <code>grid.txt</code> contains:</p>
+<pre>Z S Y M R A Z
+R N Z Z A Q L
+M A T R T U I
+N V Y A S S D
+B Y Z T C V B
+V B U L L E T
+A M E R I C A
+</pre>
+<p>Your program should return:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">"army"</span>: [<span class="dv">1</span>, <span class="dv">6</span>],</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a> <span class="st">"bullet"</span>: [<span class="dv">6</span>, <span class="dv">2</span>],</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a> <span class="st">"america"</span>: [<span class="dv">7</span>, <span class="dv">1</span>],</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a> <span class="st">"navy"</span>: [<span class="dv">2</span>, <span class="dv">2</span>],</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a> <span class="st">"star"</span>: [<span class="dv">4</span>, <span class="dv">5</span>]}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="development-strategy" class="level1">
 <h1>Development Strategy</h1>
-<section id="reading-and-processing-the-file" class="level2">
-<h2 class="anchored" data-anchor-id="reading-and-processing-the-file">(1) Reading and processing the file</h2>
-<p>The first step is to open an input file and read in all of the lines and strip the newlines off of the ends. To get the words, all you have to do is split each line on whitespace. To accomplish this, just call <code>split()</code> on each line string, with no argument. You can then append each individual word to a python list. You do not need to strip off punctuation from the words or normalize the cases.</p>
-<p>For example, if you input file had the following content:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>two forks.</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>one knife.</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>two glasses.</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>one plate.</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>one napkin.</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>his glasses.</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>his knife.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>The words list should have the following content after processing the file:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>words <span class="op">=</span> [<span class="st">'two'</span>, <span class="st">'forks.'</span>, <span class="st">'one'</span>, <span class="st">'knife.'</span>, <span class="st">'two'</span>, <span class="st">'glasses.'</span>, <span class="op">\</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>         <span class="st">'one'</span>, <span class="st">'plate.'</span>, <span class="st">'one'</span>, <span class="st">'napkin.'</span>, <span class="st">'his,'</span> <span class="st">'glasses.'</span>, <span class="st">'his'</span>, <span class="st">'knife.'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="counting-words" class="level2">
-<h2 class="anchored" data-anchor-id="counting-words">(2) Counting words</h2>
-<p>Once you have a list of all of the words from the file, you can count the occurrences. You should use a dictionary for this. Continuing from the example of the last step, the dictionary should have the following contents:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>word_counts <span class="op">=</span> {<span class="st">'two'</span>:<span class="dv">2</span>, <span class="st">'one'</span>:<span class="dv">3</span>, <span class="st">'forks.'</span>:<span class="dv">1</span>, <span class="st">'knife.'</span>:<span class="dv">2</span>, <span class="op">\</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>               <span class="st">'glasses.'</span>:<span class="dv">2</span>, <span class="st">'plate.'</span>:<span class="dv">1</span>, <span class="st">'napkin.'</span>:<span class="dv">1</span>, <span class="st">'his'</span>:<span class="dv">2</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="finding-most-occurrences" class="level2">
-<h2 class="anchored" data-anchor-id="finding-most-occurrences">(3) Finding most occurrences</h2>
-<p>Next, you can find the small, medium, and large words that occur the most. In the example, it would be <code>one</code> for small, <code>knife.</code> for medium, and <code>glasses.</code> for large. You can do this by iterating through the key and value pairs in the <code>word_counts</code> dictionary, and keeping track of which has the highest count.</p>
-</section>
-<section id="counting-capitalized" class="level2">
-<h2 class="anchored" data-anchor-id="counting-capitalized">(4) Counting Capitalized</h2>
-<p>Next, compute how many unique capitalized and non-capitalized. You can do this by getting the keys of the <code>word_counts</code> dictionary as a list, and then looping through them all.</p>
-</section>
-<section id="counting-punctuated" class="level2">
-<h2 class="anchored" data-anchor-id="counting-punctuated">(5) Counting Punctuated</h2>
-<p>Compute how many unique punctuated and non-punctuated words there are. Use a similar process as you did for step (4).</p>
-</section>
-<section id="writing-the-information-file" class="level2">
-<h2 class="anchored" data-anchor-id="writing-the-information-file">(6) Writing the information file</h2>
-<p>You should write a text file with three sections on the information you compiled. Here’s an example of what the file should look like for the contents of the file in section <code>(1)</code>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Total number of unique words: 8</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>Most frequent words by size:</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>* Small: one</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>* Medium: knife.</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>* Large: glasses.</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>Length:</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>* Small: 3 (37.5%)</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>* Medium: 4 (50.0%)</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>* Large: 1 (12.5%)</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>###################%%%%%%%%%%%%%%%%%%%%%%%%%******</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>Capitalization:</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>* Capitalized: 0 (0.0%)</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>* Non-capitalized: 8 (100.0%)</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>Punctuation:</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>* Punctuated: 5 (62.5%)</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>* Non-punctuated: 3 (37.5%)</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>###############################%%%%%%%%%%%%%%%%%%%</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>To calculate how many characters in each bar use the formula:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>(category_item_count<span class="op">/</span>total_item_count) <span class="op">*</span> <span class="dv">50</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</section>
-<section id="resource-files" class="level1">
-<h1>Resource Files</h1>
-<p>Below are some resource files you might find interesting to run your program with.</p>
+<p>This section covers how you should go about structuring and implementing the code. In total, your program should have at least 5 functions. My recommendation for these five functions:</p>
 <ul>
-<li><a href="data/poem.txt">poem.txt</a></li>
-<li><a href="data/Cat_in_the_Hat.txt">Cat_in_the_Hat.txt</a></li>
+<li>A function to load in the forwards words, computes the backwards version of each word, and save into a dictionary</li>
+<li>One for transposing the grid</li>
+<li>One for searching through lines</li>
+<li>One for checking if a word is found on a line and where it is (index)</li>
+<li>You may have other functions as well. You should build this program in the following sequence:</li>
 </ul>
-<p>If you’d like to try the program on other books, you can visit <a href="https://gutenberg.org/">gutenberg.org</a>.</p>
+<section id="reading-in-input-files" class="level2">
+<h2 class="anchored" data-anchor-id="reading-in-input-files">(1) Reading in input files</h2>
+<p>Create a function that will be responsible for opening up the words file and reading in the information. You can pass the file name into this function via arguments / parameters. The function should iterate through the lines and create a dictionary that maps the forwards-spelling to the backwards spelling. After the data is read in, the function should return the dictionary back to main.</p>
+<p>Next, open word input grid file up.</p>
+<p>Your functions for this part should be called <code>text_to_dictionary</code> and <code>load_search_grid</code>.</p>
 </section>
-<section id="test-case" class="level1">
-<h1>Test case</h1>
+<section id="word-search" class="level2">
+<h2 class="anchored" data-anchor-id="word-search">(2) Word search</h2>
+<p>Horizontal search is a bit easier than vertical mode, so I recommend that you work on this first. Create a function for this, and pass it the word dictionary, the grid file, and the mode. Iterate through the lines of the file one-at-a-time. For each line you encounter, you can search for all of the words in the word dictionary to see if you can find it.</p>
+<p>If you try to do all of this in one function, you will probably end up with 3 or 4 levels of nested loops, which can get rather disorganized. I recommend that you create another function, perhaps called something like search_within_line that handles processing one line of searching. The horizontal function can call this for each line that it encounters.</p>
+<p>There will be separate test cases for horizontal and for vertical. I recommend that you get the horizontal ones to pass before moving on to vertical.</p>
+<p>In vertical search, you have to search for the words in the columns of the grid, rather than the rows. This is a bit more complex, but still very do-able. The way you should go about this is create a loop where you iterate through the column indexes. Within this loop, create another loop that goes through every character in that column and creates a list of those characters. Then, you can treat this column as if it is a row.</p>
+</section>
+</section>
+<section id="example-run-1" class="level1">
+<h1>Example run</h1>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    word_list <span class="op">=</span> text_to_list(<span class="st">"test.txt"</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> word_list <span class="op">==</span> [<span class="st">'two'</span>, <span class="st">'forks.'</span>, <span class="st">'one'</span>, <span class="st">'knife.'</span>, <span class="st">'two'</span>, <span class="st">'glasses.'</span>, <span class="op">\</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>         <span class="st">'one'</span>, <span class="st">'plate.'</span>, <span class="st">'one'</span>, <span class="st">'napkin.'</span>, <span class="st">'his'</span>, <span class="st">'glasses.'</span>, <span class="st">'his'</span>, <span class="st">'knife.'</span>]</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    word_counts <span class="op">=</span> count_words(word_list)    </span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> word_counts <span class="op">==</span> {<span class="st">'two'</span>:<span class="dv">2</span>, <span class="st">'one'</span>:<span class="dv">3</span>, <span class="st">'forks.'</span>:<span class="dv">1</span>, <span class="st">'knife.'</span>:<span class="dv">2</span>, <span class="op">\</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>               <span class="st">'glasses.'</span>:<span class="dv">2</span>, <span class="st">'plate.'</span>:<span class="dv">1</span>, <span class="st">'napkin.'</span>:<span class="dv">1</span>, <span class="st">'his'</span>:<span class="dv">2</span>}</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> most_frequent(word_counts) <span class="op">==</span> (<span class="st">'one'</span>, <span class="st">'knife.'</span>, <span class="st">'glasses.'</span>)</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> count_capitalized(word_counts) <span class="op">==</span> (<span class="dv">0</span>, <span class="dv">8</span>)</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> count_punctuated(word_counts) <span class="op">==</span> (<span class="dv">5</span>, <span class="dv">3</span>)</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> count_sizes(word_counts) <span class="op">==</span> (<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">1</span>)</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    write_results(word_counts, filename)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    word_bank <span class="op">=</span> text_to_dictionary(<span class="st">"test_word_bank.txt"</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    grid <span class="op">=</span> load_search_grid(<span class="st">"test_puzzle_grid.txt"</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> search(word_bank, grid) <span class="op">==</span> {<span class="st">"army"</span>: [<span class="dv">1</span>, <span class="dv">6</span>],</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"bullet"</span>: [<span class="dv">6</span>, <span class="dv">2</span>],</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"america"</span>: [<span class="dv">7</span>, <span class="dv">1</span>],</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"navy"</span>: [<span class="dv">2</span>, <span class="dv">2</span>],</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"star"</span>: [<span class="dv">4</span>, <span class="dv">5</span>]}</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Passed test."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

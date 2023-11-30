@@ -894,10 +894,12 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#read-input-file" id="toc-read-input-file" class="nav-link active" data-scroll-target="#read-input-file">Read input file</a></li>
-  <li><a href="#count-start-digits" id="toc-count-start-digits" class="nav-link" data-scroll-target="#count-start-digits">Count start digits</a></li>
-  <li><a href="#calculate-percentages" id="toc-calculate-percentages" class="nav-link" data-scroll-target="#calculate-percentages">Calculate percentages</a></li>
-  <li><a href="#does-it-follow-the-law" id="toc-does-it-follow-the-law" class="nav-link" data-scroll-target="#does-it-follow-the-law">Does it follow the law?</a>
+  <li><a href="#encrypter-decrypter" id="toc-encrypter-decrypter" class="nav-link active" data-scroll-target="#encrypter-decrypter">Encrypter / Decrypter</a>
+  <ul class="collapse">
+  <li><a href="#encrypter" id="toc-encrypter" class="nav-link" data-scroll-target="#encrypter">Encrypter</a></li>
+  <li><a href="#decrypter" id="toc-decrypter" class="nav-link" data-scroll-target="#decrypter">Decrypter</a></li>
+  </ul></li>
+  <li><a href="#the-encrypting-algorithm" id="toc-the-encrypting-algorithm" class="nav-link" data-scroll-target="#the-encrypting-algorithm">The encrypting algorithm</a>
   <ul class="collapse">
   <li><a href="#test-cases" id="toc-test-cases" class="nav-link" data-scroll-target="#test-cases">Test cases</a></li>
   </ul></li>
@@ -925,148 +927,98 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 </header>
 
 <p>Programming Projects are to be submitted to <a href="">gradescope</a>.</p>
-<p><strong>Due date: Wednesday, March 20, 2024 at 7pm</strong></p>
-<p>In this programming project you will implement a number of Python functions to implement a Benford’s Law analysis. Make sure you follow the provided <a href="https://adrianapicoral.com/csc-110/style.html">style guide</a> (you will be graded on it!).</p>
-<p>Name your program <code>benfords_law.py</code> to submit to gradescope. Make sure that gradescope gives you the points for passing the test cases.</p>
-<p>This programming project is an adaptation of Ben Dicken’s Benford’s Law Programming Assignment.</p>
-<p>Benford’s Law is a mathematical law that describes the behavior of naturally-occurring numbers in some kinds of numerical data sets. I recommend that you watch this video before proceeding to get an explanation:</p>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/XXjlR2OK1kM" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>Benford’s law is useful for distinguishing naturally occurring data from randomized or made-up data. It has been used in the real world to detect election fraud (For example, in the 2009 Iranian election). It has also been used as evidence in criminal cases in the US. In this PA, you’ll be writing a program that reads in a data set, and prints out the plot of first-digits. Then, you can look at the plot to determine if it conforms to the law or not! Name your file <code>benfords_law.py.</code> You should organize the code into several functions.</p>
-<section id="read-input-file" class="level2">
-<h2 class="anchored" data-anchor-id="read-input-file">Read input file</h2>
-<ol type="1">
-<li>Its name is <code>csv_to_list</code></li>
-<li>It takes a string argument, <code>file_name</code></li>
-<li>It opens the file in read mode</li>
-<li>It iterates over the lines appending numeric values to a new list</li>
-<li>Each line in the file is split on comma, for each element that you get from splitting check if the string represents an integer or a float – if either an integer or a float, append the string to the new list</li>
-<li>It returns a list of numbers found in the file</li>
-</ol>
-<p>Here’s what <code>places.csv</code> looks like:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>region,population</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pima,1234</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>georgia,145</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>steele,10</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>tampa,1700</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>greece,1729</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>rome,1711</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>milan,219</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>tucson,231</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>tuscany,20001</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>florence,301</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>nigeria,3879</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>newyork,404</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>phoenix,40123</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>belgium,505</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>madrid,502</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>nogales,601</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>brussels,712</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>tempe,81231</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>anthem,91231</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( csv_to_list(<span class="st">"places.csv"</span>) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>["1234", "145", "10", "1700", "1729", "1711", "219", "231", "20001", "301", "3879", "404", "40123", "505", "502", "601", "712", "81231", "91231"]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<p><strong>Due date: Thursday, March 14, 2024 at 7pm</strong></p>
+<p>This programming project is an adaptation of Ben Dicken’s Encrypter / Decrypter Programming Assignment.</p>
+<section id="encrypter-decrypter" class="level1">
+<h1>Encrypter / Decrypter</h1>
+<p>This assignment exercises file reading and writing, random, and use of lists. You are going to write two separate programs which work together to encrypt (“mix-up”” and decrypt (“re-assemble”) <code>.txt</code> files, <code>.py</code> files, and other text-based files.</p>
+<p>Perhaps you’ve heard of the concept of “Encryption” in passing. In this assignment, we are going to be writing programs that are capable of encrypting and decrypting text files. The Wikipedia definition of Encryption goes like so:</p>
+<blockquote class="blockquote">
+<p>In cryptography, encryption is the process of encoding a message or information in such a way that only authorized parties can access it. Encryption does not itself prevent interference, but denies the intelligible content to a would-be interceptor. In an encryption scheme, the intended information or message, referred to as plaintext, is encrypted using an encryption algorithm, generating ciphertext that can only be read if decrypted. For technical reasons, an encryption scheme usually uses a pseudo-random encryption key generated by an algorithm. It is in principle possible to decrypt the message without possessing the key, but, for a well-designed encryption scheme, considerable computational resources and skills are required. An authorized recipient can easily decrypt the message with the key provided by the originator to recipients but not to unauthorized users.</p>
+</blockquote>
+<p>We are going to implement two programs (one to encrypt a text file, and one to decrypt).</p>
+<section id="encrypter" class="level2">
+<h2 class="anchored" data-anchor-id="encrypter">Encrypter</h2>
+<p>The first program you will write shall be named <code>encrypter.py</code>. The job of this program will be to encrypt (“mix” or “shuffle”) the lines of a text file, but do it in such a way that it can be un-done later with a separate program (which you will also write).</p>
+<p>When run, your program will accept as argument a file name to encrypt. This program will then run its encrypting (mixing) algorithm on the text file named <code>file_name</code>. It will save the encrypted version of the text file to a file named <code>encrypted.txt</code>.</p>
+<p>Your program will encrypt an input file by re-arranging the lines of the input file, based on indexes retrieved from calling <code>randint</code>. For example, to encrypt a file named <code>sample.txt</code> that looks like this:</p>
+<pre>|'''''|
+| 0 0 |
+|  ^  |
+|  -  |
+ ----- 
+   # 
+#######
+  ###
+ #   #
+ %   %
+</pre>
+<p>After running, <code>encrypted.txt</code> will have the following contents:</p>
+<pre>| 0 0 |
+ %   %
+#######
+   # 
+|'''''|
+|  ^  |
+  ###
+|  -  |
+ #   #
+ ----- 
+</pre>
+<p>All of the same lines from the original file exist in this file, but the order is not the same.</p>
+<p>Whenever <code>encrypter.py</code> runs, it will also write an index (key) file. This file will contain the corresponding indexes of each line in the encrypted file. Given the example above, <code>index.txt</code> would look like this:</p>
+<pre>2
+10
+7
+6
+1
+3
+8
+4
+9
+5
+</pre>
+<p>The number on each line of the file is the line number that each shuffled line was on in the original program. For example: 2 is on the first line. This means that the first line of the encrypted file was originally on line 2 of the input file. 10 is on the second line. This means that the second line of the encrypted file was originally on line 10 of the input file.</p>
+<p>Without the <code>index.txt</code> file, another program or a human would not know how to decrypt the <code>encrypted.txt</code> file. If a human or program has both the <code>encrypted</code> file and the <code>index</code> file, it can be decrypted systematically. Thus the index file works like a secret “key” for the program. Whoever has access to both the index file and the encrypted text can decrypt the encrypted text.</p>
 </section>
-<section id="count-start-digits" class="level2">
-<h2 class="anchored" data-anchor-id="count-start-digits">Count start digits</h2>
-<ol type="1">
-<li>Its name is <code>count_start_digits</code></li>
-<li>It takes one argument, a list of strings that represent <code>numbers</code> (for example: <code>["1234", "145", "10", "1700", "1729"]</code>)</li>
-<li>It creates a <code>dictionary</code> to keep counts of the digits (1 to 9) that start each number in the <code>numbers</code> list</li>
-<li>It iterates over the values in <code>numbers</code> adding <code>1</code> to the respective value associated to each digit <code>key</code> (1 to 9) in the <code>dictionary</code></li>
-<li>Remember to convert the first character in each value in <code>numbers</code> to an integer (the dictionary keys are integers)</li>
-<li>It returns the dictionary of counts</li>
-</ol>
-<p>Test case:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>list_of_numbers <span class="op">=</span> csv_to_list(<span class="st">"places.csv"</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> count_start_digits(list_of_numbers)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(counts) <span class="co"># {1: 6, 2: 3, 3: 2, 4: 2, 5: 2, 6: 1, 7: 1, 8: 1, 9: 1}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="decrypter" class="level2">
+<h2 class="anchored" data-anchor-id="decrypter">Decrypter</h2>
+<p>After writing <code>encrypter.py</code>, you are to write a related program named <code>decrypter.py</code> which will take the name of a text file and index (key) file, and then it will decrypt the text. The program will read in these two files, and using the information stored within them, it will put the contents back in the original order. The decrypted file should be saved to a file named <code>decrypted.txt</code></p>
+<p>You should use lists and the indexes from the index file to help with getting the lines back in the correct order.</p>
+<p>There will be multiple examples of running this program at the end of this specification. Make sure to test your code carefully using the tool!</p>
 </section>
-<section id="calculate-percentages" class="level2">
-<h2 class="anchored" data-anchor-id="calculate-percentages">Calculate percentages</h2>
-<ol type="1">
-<li>Its name is <code>digit_percentages</code></li>
-<li>It takes a dictionary with digit <code>counts</code></li>
-<li>It creates a new dictionary with the <code>percentage</code> for each digit</li>
-<li>To calculate percentage, first calculate the sum of all the counts, then divide each value in <code>counts</code> by the calculated total (round it to two decimals)</li>
-<li>It returns the new dictionary</li>
-</ol>
-<p>Test case:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>list_of_numbers <span class="op">=</span> csv_to_list(<span class="st">"places.csv"</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> count_start_digits(list_of_numbers)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>percentages <span class="op">=</span> digit_percentages(counts)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(percentages) <span class="co"># {1: 31.58, 2: 15.79, 3: 10.53, 4: 10.53, 5: 10.53, 6: 5.26, 7: 5.26, 8: 5.26, 9: 5.26}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </section>
-<section id="does-it-follow-the-law" class="level2">
-<h2 class="anchored" data-anchor-id="does-it-follow-the-law">Does it follow the law?</h2>
-<ol type="1">
-<li>Its name is <code>check_benfords_law</code></li>
-<li>It takes one argument, a dictionary with <code>percentages</code> per digit</li>
-<li>A data set follows Benford’s law if the percentage of occurrences of each digits follows the percentages below (plus 10% or minus 5%)</li>
-<li>If every digit percentage falls within the specified rage, return <code>True</code>, otherwise return <code>False</code></li>
-</ol>
-<table class="table">
-<thead>
-<tr class="header">
-<th>digit</th>
-<th>percent (-5, +10)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td>30%</td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td>17%</td>
-</tr>
-<tr class="odd">
-<td>3</td>
-<td>12%</td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td>9%</td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>7%</td>
-</tr>
-<tr class="even">
-<td>6</td>
-<td>6%</td>
-</tr>
-<tr class="odd">
-<td>7</td>
-<td>5%</td>
-</tr>
-<tr class="even">
-<td>8</td>
-<td>5%</td>
-</tr>
-<tr class="odd">
-<td>9</td>
-<td>4%</td>
-</tr>
-</tbody>
-</table>
-<section id="test-cases" class="level3">
-<h3 class="anchored" data-anchor-id="test-cases">Test cases</h3>
+<section id="the-encrypting-algorithm" class="level1">
+<h1>The encrypting algorithm</h1>
+<p>The steps of the algorithm are outlined below and you must implement these steps in python. Note that the below steps are just the steps for how to determine which lines to put where in the encrypted file. You also need to handle all of the file reading, writing, etc.</p>
 <ul>
-<li><a href="data/populations.csv">populations.csv</a> does follow Benford’s Law</li>
-<li><a href="data/stocks.csv">stocks.csv</a> does follow Benford’s Law</li>
-<li><a href="data/random_numbers.csv">random_numbers.csv</a> does NOT follow Benford’s Law</li>
+<li>Import the random python library</li>
+<li>Initialize the random library with a seed value of <code>42</code>. Just use the line of code <code>random.seed(42)</code>.</li>
+<li>However many lines there are in the input text file, repeat the following steps (line_count * 5) times.
+<ul>
+<li>Chose two random integers starting from zero and going up to the number of lines in the file minus 1</li>
+<li>Swap the content of the lines at these two indexes</li>
+</ul></li>
 </ul>
+<p>By choosing the seed <code>42</code>, you should get the same results if you follow the steps carefully.</p>
+<section id="test-cases" class="level2">
+<h2 class="anchored" data-anchor-id="test-cases">Test cases</h2>
+<ul>
+<li><a href="data/sample.txt">sample.txt</a></li>
+<li><a href="data/poem.txt">poem.txt</a></li>
+<li><a href="data/few-steps.txt">few-steps.txt</a></li>
+<li><a href="data/many-steps.txt">many-steps.txt</a></li>
+</ul>
+<p>Call for <code>encrypter.py</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    encrypt_file(<span class="st">"sample.txt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Call for <code>decrypter.py</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    decrypt_file()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 </section>

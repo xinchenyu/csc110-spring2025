@@ -894,19 +894,29 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#wordsearch" id="toc-wordsearch" class="nav-link active" data-scroll-target="#wordsearch">WordSearch</a>
+  <li><a href="#minesweeper" id="toc-minesweeper" class="nav-link active" data-scroll-target="#minesweeper">Minesweeper</a>
   <ul class="collapse">
-  <li><a href="#words-text-file" id="toc-words-text-file" class="nav-link" data-scroll-target="#words-text-file">Words text file</a></li>
-  <li><a href="#puzzle-text-file" id="toc-puzzle-text-file" class="nav-link" data-scroll-target="#puzzle-text-file">Puzzle text file</a></li>
-  <li><a href="#output" id="toc-output" class="nav-link" data-scroll-target="#output">Output</a></li>
+  <li><a href="#minesweeper-rules" id="toc-minesweeper-rules" class="nav-link" data-scroll-target="#minesweeper-rules">Minesweeper Rules</a></li>
+  <li><a href="#input-file-format" id="toc-input-file-format" class="nav-link" data-scroll-target="#input-file-format">Input File Format</a></li>
   </ul></li>
-  <li><a href="#example-run" id="toc-example-run" class="nav-link" data-scroll-target="#example-run">Example Run</a></li>
   <li><a href="#development-strategy" id="toc-development-strategy" class="nav-link" data-scroll-target="#development-strategy">Development Strategy</a>
   <ul class="collapse">
-  <li><a href="#reading-in-input-files" id="toc-reading-in-input-files" class="nav-link" data-scroll-target="#reading-in-input-files">(1) Reading in input files</a></li>
-  <li><a href="#word-search" id="toc-word-search" class="nav-link" data-scroll-target="#word-search">(2) Word search</a></li>
+  <li><a href="#functions-to-implement" id="toc-functions-to-implement" class="nav-link" data-scroll-target="#functions-to-implement">Functions to Implement</a>
+  <ul class="collapse">
+  <li><a href="#read_file" id="toc-read_file" class="nav-link" data-scroll-target="#read_file">read_file</a></li>
+  <li><a href="#make_empty_grid" id="toc-make_empty_grid" class="nav-link" data-scroll-target="#make_empty_grid">make_empty_grid</a></li>
+  <li><a href="#update_grid" id="toc-update_grid" class="nav-link" data-scroll-target="#update_grid">update_grid</a></li>
+  <li><a href="#dig" id="toc-dig" class="nav-link" data-scroll-target="#dig">dig</a></li>
+  <li><a href="#count_total_moves" id="toc-count_total_moves" class="nav-link" data-scroll-target="#count_total_moves">count_total_moves</a></li>
+  <li><a href="#print_grid" id="toc-print_grid" class="nav-link" data-scroll-target="#print_grid">print_grid</a></li>
+  <li><a href="#determine_game_status" id="toc-determine_game_status" class="nav-link" data-scroll-target="#determine_game_status">determine_game_status</a></li>
   </ul></li>
-  <li><a href="#example-run-1" id="toc-example-run-1" class="nav-link" data-scroll-target="#example-run-1">Example run</a></li>
+  </ul></li>
+  <li><a href="#test-cases" id="toc-test-cases" class="nav-link" data-scroll-target="#test-cases">Test cases</a>
+  <ul class="collapse">
+  <li><a href="#full-game-win" id="toc-full-game-win" class="nav-link" data-scroll-target="#full-game-win">Full game win</a></li>
+  <li><a href="#full-game-lose" id="toc-full-game-lose" class="nav-link" data-scroll-target="#full-game-lose">Full game lose</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -931,117 +941,259 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 </header>
 
 <p>Programming Projects are to be submitted to <a href="">gradescope</a>.</p>
-<p><strong>Due date: Wednesday, April 24, 2024 at 7pm</strong></p>
-<p>This programming project is an adaptation of Ben Dicken’s WordSearch Programming Assignment.</p>
-<section id="wordsearch" class="level1">
-<h1>WordSearch</h1>
-<p>In this assignment, you will be tasked with writing a program that finds certain words within a wordsearch grid and returns the word mapped to the line and starting character location of each word. The information of the board, and the words will be provided via files you will need to read in.</p>
-<p>You should name the file <code>wordsearch.py</code>. Your code should have a function called <code>search</code> that returns a dictionary (see specification below).</p>
-<section id="words-text-file" class="level2">
-<h2 class="anchored" data-anchor-id="words-text-file">Words text file</h2>
-<p>Your program should open up and read a text file name which determines which words you are searching for in your puzzle file! You can assume that each line in the input text file is formatted as follows: each line of the file is a word from the “word bank.”</p>
-<p>Contents of <code>words.txt</code>:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>computer</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>science</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Your program should open and read the input text file into the program and store the mapping between forwards and backwards words in a dictionary. The keys of the dictionary should be the forward version of the word, and the value the keys map to, should be the backward version of that word. Given the example content of words.txt shown above, the words dictionary should have the keys and values shown below:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>words <span class="op">=</span> { </span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"computer"</span>:<span class="st">"retupmoc"</span>,</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"science"</span>:<span class="st">"ecneics"</span>,</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>After you have read in the file and constructed this dictionary, you can use it to determine your word bank, which words you will need to look for within the puzzle.</p>
-</section>
-<section id="puzzle-text-file" class="level2">
-<h2 class="anchored" data-anchor-id="puzzle-text-file">Puzzle text file</h2>
-<p>This file contains a grid of letters and hidden within those letters are certain words you will need to be searching for. You will use your newly created words dictionary to figure out what letter combination of words you need to find. This is an example of what this word-grid file would look like:</p>
-<pre>W O D I W S M Z H 
-N R M E W A N D A 
-L Z H I N O K L H 
-S R E G N E V A V 
-I F R C X H C Q X 
-A H T Z B A Y K Q 
-A R A M E R I C A
+<p><strong>Due date: Thursday, April 18, 2024 at 7pm</strong></p>
+<p>This programming project is an adaptation of Ben Dicken’s Minesweeper Programming Assignment.</p>
+<p>You should name the file <code>minesweeper.py</code>.</p>
+<section id="minesweeper" class="level1">
+<h1>Minesweeper</h1>
+<p>Minesweeper is a one player puzzle game that was often preinstalled with older versions of Windows. The goal of the game is to clear a grid of squares, one at a time, trying to avoid any squares that have hidden mines. Upon clearing a square, a number may appear which tells how many mines are adjacent to the given square. Selecting a square containing a mine results in an instant loss, while revealing all non-mine squares results in a win. There are still versions of this game around, like <a href="https://www.google.com/fbx?fbx=minesweeper">this one made by Google</a>.</p>
+<section id="minesweeper-rules" class="level2">
+<h2 class="anchored" data-anchor-id="minesweeper-rules">Minesweeper Rules</h2>
+<p>For this assignment, we are going to simplify some of the rules of the original game while still keeping the core of the game intact. Instead of clicking on squares your program will be given coordinates. The primary gameplay loop is going to be generating coordinates to a square on the board upon which the square is revealed. There are two possibilities for what a square can contain.</p>
+<p>If a “X” is revealed, this is a mine which results in an instant loss.</p>
+<p>Otherwise, an integer is revealed, which is the number of adjacent (including diagonally) mines from the revealed square (including 0, which is handled differently by the original game). All integers around the given coordinates are also revealed (the mines remain hidden).</p>
+<p>For example, let’s say a player is provided the given board:</p>
+<pre> 2 [ ][ ][ ]
+ 1 [ ][ ][ ]
+ 0 [ ][ ][ ]
+    a  b  c
 </pre>
-<p>The puzzle file could have more or less Rows/Columns depending on each test case.</p>
-</section>
-<section id="output" class="level2">
-<h2 class="anchored" data-anchor-id="output">Output</h2>
-<p>The program should return a dictionary with the starting row / col locations for each word found. Your code should have a function called <code>search</code> that returns this dictionary. The formatting of the return dictionary should be something like:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">"word1"</span>: [<span class="dv">0</span>, <span class="dv">0</span>], <span class="st">"word2"</span>: [<span class="dv">5</span>, <span class="dv">5</span>]}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</section>
-<section id="example-run" class="level1">
-<h1>Example Run</h1>
-<p>Say that <code>words.txt</code> contains:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>army</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>navy</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>star</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>america</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>bullet</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>And then <code>grid.txt</code> contains:</p>
-<pre>Z S Y M R A Z
-R N Z Z A Q L
-M A T R T U I
-N V Y A S S D
-B Y Z T C V B
-V B U L L E T
-A M E R I C A
+<p>If the the coordinates <code>(0, "a")</code>are provided, a result may be:</p>
+<pre> 2 [ ][ ][ ]
+ 1 [1][ ][ ]
+ 0 [1][2][ ]
+    a  b  c
 </pre>
-<p>Your program should return:</p>
+<p>This means that at <code>(0, "a")</code> there is not a mine, however there is one nearby. We know there’s no mine in <code>(1, "a")</code> because the integer <code>1</code> was also revealed. Specifically there is probably a mine in <code>(1, "b")</code>. Suppose the player’s next move is c0, which would produce:</p>
+<pre> 2 [ ][ ][ ]
+ 1 [1][ ][ ]
+ 0 [1][2][2]
+    a  b  c
+</pre>
+<p>The 2 revealed means that there would be 2 mines somewhere among <code>(1, "b")</code>, <code>(1, "c")</code> and <code>(0, "c")</code>. After this let’s say the coordinates <code>(1, "b")</code> are provided.</p>
+<pre> 2 [ ][ ][ ]
+ 1 [1][X][ ]
+ 0 [1][2][2]
+    a  b  c
+</pre>
+<p>Since this reveals an X the game has ended and the player loss. If all non-mine squares were revealed, the player would have won.</p>
+</section>
+<section id="input-file-format" class="level2">
+<h2 class="anchored" data-anchor-id="input-file-format">Input File Format</h2>
+<p>All files used for testing are going to follow the same formatting. The first line will contain an integer which is the width of the board. Similarly, the second line will contain the height. There will then be N (Height of the board) more lines. Each of these lines will contain X (Width of the board) elements separated by commas. Each element may be either a 1 or 0. Provided below is what an example file would look like:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">"army"</span>: [<span class="dv">1</span>, <span class="dv">6</span>],</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a> <span class="st">"bullet"</span>: [<span class="dv">6</span>, <span class="dv">2</span>],</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a> <span class="st">"america"</span>: [<span class="dv">7</span>, <span class="dv">1</span>],</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a> <span class="st">"navy"</span>: [<span class="dv">2</span>, <span class="dv">2</span>],</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a> <span class="st">"star"</span>: [<span class="dv">4</span>, <span class="dv">5</span>]}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>2</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>3</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>0, 1</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>1, 0</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>0, 1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
 </section>
 <section id="development-strategy" class="level1">
 <h1>Development Strategy</h1>
-<p>This section covers how you should go about structuring and implementing the code. In total, your program should have at least 5 functions. My recommendation for these five functions:</p>
-<ul>
-<li>A function to load in the forwards words, computes the backwards version of each word, and save into a dictionary</li>
-<li>One for transposing the grid</li>
-<li>One for searching through lines</li>
-<li>One for checking if a word is found on a line and where it is (index)</li>
-<li>You may have other functions as well. You should build this program in the following sequence:</li>
-</ul>
-<section id="reading-in-input-files" class="level2">
-<h2 class="anchored" data-anchor-id="reading-in-input-files">(1) Reading in input files</h2>
-<p>Create a function that will be responsible for opening up the words file and reading in the information. You can pass the file name into this function via arguments / parameters. The function should iterate through the lines and create a dictionary that maps the forwards-spelling to the backwards spelling. After the data is read in, the function should return the dictionary back to main.</p>
-<p>Next, open word input grid file up.</p>
-<p>Your functions for this part should be called <code>text_to_dictionary</code> and <code>load_search_grid</code>.</p>
-</section>
-<section id="word-search" class="level2">
-<h2 class="anchored" data-anchor-id="word-search">(2) Word search</h2>
-<p>Horizontal search is a bit easier than vertical mode, so I recommend that you work on this first. Create a function for this, and pass it the word dictionary, the grid file, and the mode. Iterate through the lines of the file one-at-a-time. For each line you encounter, you can search for all of the words in the word dictionary to see if you can find it.</p>
-<p>If you try to do all of this in one function, you will probably end up with 3 or 4 levels of nested loops, which can get rather disorganized. I recommend that you create another function, perhaps called something like search_within_line that handles processing one line of searching. The horizontal function can call this for each line that it encounters.</p>
-<p>There will be separate test cases for horizontal and for vertical. I recommend that you get the horizontal ones to pass before moving on to vertical.</p>
-<p>In vertical search, you have to search for the words in the columns of the grid, rather than the rows. This is a bit more complex, but still very do-able. The way you should go about this is create a loop where you iterate through the column indexes. Within this loop, create another loop that goes through every character in that column and creates a list of those characters. Then, you can treat this column as if it is a row.</p>
-</section>
-</section>
-<section id="example-run-1" class="level1">
-<h1>Example run</h1>
+<p>In order to get the game working, you must implement several functions. Descriptions for what every function should do are provided below. Implementing and testing these functions is up to you.</p>
+<section id="functions-to-implement" class="level2">
+<h2 class="anchored" data-anchor-id="functions-to-implement">Functions to Implement</h2>
+<section id="read_file" class="level3">
+<h3 class="anchored" data-anchor-id="read_file">read_file</h3>
+<p>For this file, for example:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    word_bank <span class="op">=</span> text_to_dictionary(<span class="st">"test_word_bank.txt"</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    grid <span class="op">=</span> load_search_grid(<span class="st">"test_puzzle_grid.txt"</span>)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> search(word_bank, grid) <span class="op">==</span> {<span class="st">"army"</span>: [<span class="dv">1</span>, <span class="dv">6</span>],</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"bullet"</span>: [<span class="dv">6</span>, <span class="dv">2</span>],</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"america"</span>: [<span class="dv">7</span>, <span class="dv">1</span>],</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"navy"</span>: [<span class="dv">2</span>, <span class="dv">2</span>],</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"star"</span>: [<span class="dv">4</span>, <span class="dv">5</span>]}</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Passed test."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>5</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>5</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>1, 0, 0, 0, 0</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>1, 0, 0, 0, 0</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>0, 1, 0, 0, 0</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>0, 0, 0, 0, 1</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>1, 0, 0 ,0, 1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Your function should return:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>[[<span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>],</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a> [<span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>],</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a> [<span class="st">'0'</span>, <span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>],</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a> [<span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'X'</span>],</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a> [<span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'X'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="make_empty_grid" class="level3">
+<h3 class="anchored" data-anchor-id="make_empty_grid">make_empty_grid</h3>
+<p>Return a 2D list that has the same dimensions of a passed in 2D list where every inner element is an empty space. For example, if the passed in the grid is:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>[[<span class="st">'X'</span>, <span class="st">'3'</span>, <span class="st">'X'</span>], [<span class="st">'2'</span>, <span class="st">'X'</span>, <span class="st">'2'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Return:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>[[<span class="st">' '</span>, <span class="st">' '</span>, <span class="st">' '</span>], [<span class="st">' '</span>, <span class="st">' '</span>, <span class="st">' '</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="update_grid" class="level3">
+<h3 class="anchored" data-anchor-id="update_grid">update_grid</h3>
+<p>Takes in a single 2D list where every value is either “X” or “0” (Note the formatting is going to be the same as the list returned by read_file). The function should then replace all the 0’s with the number of adjacent mines, which is some cases will still be 0. As we are modifying an already existing list nothing is to be returned by the function. For example, if passed in the result of reading <a href="data/fiveByFive.txt">fiveByFive.txt</a></p>
+<p>Which is:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>[[<span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>], </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a> [<span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>], </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a> [<span class="st">'0'</span>, <span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>], </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a> [<span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'X'</span>], </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a> [<span class="st">'X'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'X'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The function should modify it to become:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>[[<span class="st">'X'</span>, <span class="st">'2'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>], </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a> [<span class="st">'X'</span>, <span class="st">'3'</span>, <span class="st">'1'</span>, <span class="st">'0'</span>, <span class="st">'0'</span>], </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a> [<span class="st">'2'</span>, <span class="st">'X'</span>, <span class="st">'1'</span>, <span class="st">'1'</span>, <span class="st">'1'</span>], </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a> [<span class="st">'2'</span>, <span class="st">'2'</span>, <span class="st">'1'</span>, <span class="st">'2'</span>, <span class="st">'X'</span>], </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a> [<span class="st">'X'</span>, <span class="st">'1'</span>, <span class="st">'0'</span>, <span class="st">'2'</span>, <span class="st">'X'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="dig" class="level3">
+<h3 class="anchored" data-anchor-id="dig">dig</h3>
+<p>It handles the actual making of a move.</p>
+<p>Takes in three parameters:</p>
+<ul>
+<li>The first is a 2D list that follows the formatting of the grid returned from <code>update_grid.</code> This 2D list serves as an answer key of sorts that contains what to reveal to the user. As squares are revealed the values are copied from here to the user’s view.</li>
+<li>The second parameter is a string which is the coordinate to reveal. Not that this is formatted so that the first character is a letter, which is the x position to reveal. The rest of the string is going to be a number which is the y position to reveal. “a0” For example would reveal the bottom left corner of the grid.</li>
+<li>The third parameter is a 2D list, which is used to show which squares the player has revealed. Initially, this grid will be formatted as the return value from <code>make_empty_grid</code>, however, as the player reveals more squares those corresponding values from the answer key list are going to be moved into this grid we are going to refer to as the user view.</li>
+</ul>
+<p>To actually make a move requires translating the string into two integers which are the corresponding values to use as indices to get the value at that point on the grid. Then, copy the value from that location (using those new values) on the answer key grid into the same spot of the user view grid.</p>
+<p>The next step is to check all the squares around the given coordinates, revealing only the integers for those squares, keeping the mines hidden.</p>
+</section>
+<section id="count_total_moves" class="level3">
+<h3 class="anchored" data-anchor-id="count_total_moves">count_total_moves</h3>
+<p>It returns the number of spots on the grid that have not been revealed by the player and do not contain a mine.</p>
+</section>
+<section id="print_grid" class="level3">
+<h3 class="anchored" data-anchor-id="print_grid">print_grid</h3>
+<p>Takes in a 2D list and prints it out to standard output. For example printing the initial user view (remember the user view is the blank grid made from <code>make_empty_grid</code>) of the grid from <a href="data/tenSquare.txt">tenSquare.txt</a> should output:</p>
+<pre>10 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 9 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 8 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 7 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 6 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 5 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 4 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 3 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 2 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 1 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 0 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+    a  b  c  d  e  f  g  h  i  j  k
+</pre>
+<p>Take note of how the number labels are right-aligned. For the letter labels you can assume that the width will be at most 26 (One for each lower case letter) and the height will be 100 or less. You may also assume that every element in the 2D list will be only a single character string.</p>
+</section>
+<section id="determine_game_status" class="level3">
+<h3 class="anchored" data-anchor-id="determine_game_status">determine_game_status</h3>
+<p>This function should return a boolean which is <code>True</code> if the game should continue or <code>False</code> if the game is over. <code>False</code> is returned if a mine has been revealed or count is <code>0</code> meaning there are no squares without mines that are not revealed.</p>
+</section>
+</section>
+</section>
+<section id="test-cases" class="level1">
+<h1>Test cases</h1>
+<p>Files:</p>
+<ul>
+<li><a href="data/fiveByFive.txt">fiveByFive.txt</a></li>
+<li><a href="data/tenSquare.txt">tenSquare.txt</a></li>
+</ul>
+<section id="full-game-win" class="level2">
+<h2 class="anchored" data-anchor-id="full-game-win">Full game win</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    grid <span class="op">=</span> read_file(<span class="st">"fiveByFive.txt"</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    user_view <span class="op">=</span> make_empty_grid(grid)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    update_grid(grid)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    moves <span class="op">=</span> [<span class="st">"b0"</span>, <span class="st">"c2"</span>, <span class="st">"e4"</span>, <span class="st">"c4"</span>, <span class="st">"e2"</span>, <span class="st">"a2"</span>, <span class="st">"d0"</span>]</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    index <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> determine_game_status(grid, user_view) <span class="kw">and</span> index <span class="op">&lt;</span> <span class="bu">len</span>(moves):</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        dig(grid, moves[index], user_view)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>        index <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Should print to the standard output the following:</p>
+<pre> 4[ ][ ][ ][ ][ ]
+ 3[ ][ ][ ][ ][ ]
+ 2[ ][ ][ ][ ][ ]
+ 1[2][2][1][ ][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][ ][ ][ ][ ]
+ 3[ ][3][1][0][ ]
+ 2[ ][ ][1][1][ ]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][ ][ ][0][0]
+ 3[ ][3][1][0][0]
+ 2[ ][ ][1][1][ ]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][2][0][0][0]
+ 3[ ][3][1][0][0]
+ 2[ ][ ][1][1][ ]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][2][0][0][0]
+ 3[ ][3][1][0][0]
+ 2[ ][ ][1][1][1]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][2][0][0][0]
+ 3[ ][3][1][0][0]
+ 2[2][ ][1][1][1]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][2][0][0][0]
+ 3[ ][3][1][0][0]
+ 2[2][ ][1][1][1]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][2][ ]
+   a  b  c  d  e  
+</pre>
+</section>
+<section id="full-game-lose" class="level2">
+<h2 class="anchored" data-anchor-id="full-game-lose">Full game lose</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    grid <span class="op">=</span> read_file(<span class="st">"fiveByFive.txt"</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    user_view <span class="op">=</span> make_empty_grid(grid)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    update_grid(grid)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    moves <span class="op">=</span> [<span class="st">"b0"</span>, <span class="st">"c2"</span>, <span class="st">"e4"</span>, <span class="st">"b2"</span>, <span class="st">"e2"</span>, <span class="st">"a2"</span>, <span class="st">"d0"</span>]</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    index <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> determine_game_status(grid, user_view) <span class="kw">and</span> index <span class="op">&lt;</span> <span class="bu">len</span>(moves):</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>        dig(grid, moves[index], user_view)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>        index <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Should output:</p>
+<pre> 4[ ][ ][ ][ ][ ]
+ 3[ ][ ][ ][ ][ ]
+ 2[ ][ ][ ][ ][ ]
+ 1[2][2][1][ ][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][ ][ ][ ][ ]
+ 3[ ][3][1][0][ ]
+ 2[ ][ ][1][1][ ]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][ ][ ][0][0]
+ 3[ ][3][1][0][0]
+ 2[ ][ ][1][1][ ]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][ ][ ][0][0]
+ 3[ ][3][1][0][0]
+ 2[ ][X][1][1][ ]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+</pre>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
