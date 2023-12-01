@@ -141,7 +141,7 @@ All assignments that are submitted on Gradescope are due at 7pm (Tuesdays for pr
 
 
 
-# Week 7-8 (`r schedule %>% filter(week_number == 7 & term == "spring 2024") %>% pull(formatted_start)`)
+# Week 7 (`r schedule %>% filter(week_number == 7 & term == "spring 2024") %>% pull(formatted_start)`)
 
 ## Midterm 1 (`r assignments %>% filter(assessment == "Midterm 1") %>% pull(formatted_date)`)
 
@@ -154,8 +154,6 @@ All assignments that are submitted on Gradescope are due at 7pm (Tuesdays for pr
 
 -   [mutability](slides-07-01.html)
 -   [for loops with range](slides-07-02.html)
--   [2D lists and nested for loops](slides-07-03.html)
--   [nested for loops](slides-07-04.html)
 
 ## Assignments
 
@@ -163,7 +161,7 @@ All assignments that are submitted on Gradescope are due at 7pm (Tuesdays for pr
 -   [Programming Project 5](project-5.html) -- Due date: `r assignments %>% filter(assessment == "Programming Project 5") %>% pull(formatted_date)` at 7pm
 
 
-# Week 9 (`r schedule %>% filter(week_number == 9 & term == "spring 2024") %>% pull(formatted_start)`)
+# Week 8 (`r schedule %>% filter(week_number == 9 & term == "spring 2024") %>% pull(formatted_start)`)
 
 ## Readings
 
@@ -179,7 +177,7 @@ All assignments that are submitted on Gradescope are due at 7pm (Tuesdays for pr
 -   [Module 8 Programming Problems](assignments-08.html) -- Due date: `r assignments %>% filter(assessment == "Module 8 Programming Problems") %>% pull(formatted_date)` at 7pm
 -   [Programming Project 6](project-6.html) -- Due date: `r assignments %>% filter(assessment == "Programming Project 6") %>% pull(formatted_date)` at 7pm
 
-# Week 10 (`r schedule %>% filter(week_number == 10 & term == "spring 2024") %>% pull(formatted_start)`)
+# Week 9 (`r schedule %>% filter(week_number == 10 & term == "spring 2024") %>% pull(formatted_start)`)
 
 ## Readings
 
@@ -196,18 +194,16 @@ All assignments that are submitted on Gradescope are due at 7pm (Tuesdays for pr
 
 
 
-# Week 11 (`r schedule %>% filter(week_number == 11 & term == "spring 2024") %>% pull(formatted_start)`)
+# Week 10 (`r schedule %>% filter(week_number == 11 & term == "spring 2024") %>% pull(formatted_start)`)
 
 ## Midterm 2 (`r assignments %>% filter(assessment == "Midterm 2") %>% pull(formatted_date)`)
 
 ## Readings
 
--   [Tuples](data_structures_tuples.html)
-
 ## Class slides 
 
--   [returning tuples](slides-10-01.html)
--   [tuples](slides-10-02.html)
+-   [2D lists and nested for loops](slides-07-03.html)
+-   [nested for loops](slides-07-04.html)
 
 ## Assignments
 
@@ -215,10 +211,20 @@ All assignments that are submitted on Gradescope are due at 7pm (Tuesdays for pr
 -   [Programming Project 7](project-7.html) -- Due date: `r assignments %>% filter(assessment == "Programming Project 7") %>% pull(formatted_date)` at 7pm
 
 
-# Week 12 (`r schedule %>% filter(week_number == 12 & term == "spring 2024") %>% pull(formatted_start)`)
+# Week 11 (`r schedule %>% filter(week_number == 12 & term == "spring 2024") %>% pull(formatted_start)`)
 
 ## Readings
 
+-   [Tuples](data_structures_tuples.html)
+
+## Class slides
+
+-   [returning tuples](slides-10-01.html)
+-   [tuples](slides-10-02.html)
+
+# Week 12 (`r schedule %>% filter(week_number == 12 & term == "spring 2024") %>% pull(formatted_start)`)
+
+## Readings
 -   [Sets](data_structures_sets.html)
 
 ## Class slides
@@ -231,7 +237,6 @@ All assignments that are submitted on Gradescope are due at 7pm (Tuesdays for pr
 
 -   [Module 11 Programming Problems](assignments-11.html) -- Due date: `r assignments %>% filter(assessment == "Module 11 Programming Problems") %>% pull(formatted_date)` at 7pm
 -   [Programming Project 8](project-8.html) -- Due date: `r assignments %>% filter(assessment == "Programming Project 8") %>% pull(formatted_date)` at 7pm
-
 
 
 # Week 13 (`r schedule %>% filter(week_number == 13 & term == "spring 2024") %>% pull(formatted_start)`)

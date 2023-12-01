@@ -89,8 +89,6 @@ website:
         - control_flow_for.md
         - slides-07-01.qmd
         - slides-07-02.qmd
-        - slides-07-03.qmd
-        - slides-07-04.qmd
         - assignments-07.qmd
       - section: "Module 8 - Data Structures (dictionaries)"
         contents:
@@ -110,30 +108,34 @@ website:
         - slides-10-01.qmd
         - slides-10-02.qmd
         - assignments-10.qmd
-      - section: "Module 11 - Data Structures (sets)"
+      - section: "Module 11 - Data Structures (2D lists)"
+        contents:
+        - slides-07-03.qmd
+        - slides-07-04.qmd
+      - section: "Module 12 - Data Structures (sets)"
         contents:
         - data_structures_sets.md
         - slides-11-01.qmd
         - slides-11-02.qmd
         - slides-11-03.qmd
         - assignments-11.qmd
-      - section: "Module 12 - Control Flow with different Data Structures"
+      - section: "Module 13 - Control Flow with different Data Structures"
         contents:
         - structures-review.qmd
         - slides-12-01.qmd
         - slides-12-02.qmd
         - assignments-12.qmd
-      - section: "Module 13 - Combining Data Structures and Sorting Lists"
+      - section: "Module 14 - Combining Data Structures and Sorting Lists"
         contents:
         - slides-13-01.qmd
         - slides-13-02.qmd
         - slides-13-03.qmd
         - assignments-13.qmd
-      - section: "Module 14 - Handling Exceptions"
+      - section: "Module 15 - Handling Exceptions"
         contents:
         - exceptions.md
         - slides-14-01.qmd
-      - section: "Module 15 - Review"
+      - section: "Module 16 - Review"
         contents:
         - final-review.qmd
 
