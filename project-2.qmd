@@ -16,69 +16,87 @@ Programming Projects are to be submitted to [gradescope]().
 
 **Due date: `r assignments %>% filter(assessment == "Programming Project 2") %>% pull(formatted_date)` at 7pm**
 
-In this programming project you will implement a number of Python functions to validate or transform values conditionally. Make sure you follow the provided [style guide](style.html) (you will be graded on it!). You are allowed to use `round()`, `str()` and `len()`, but other than that you are **not** allowed to use any other built-in method or function from any Python library.
+In this programming project you will implement a number of Python functions to run descriptive statistics on lists. Make sure you follow the provided [style guide](https://adrianapicoral.com/csc-110/style.html) (you will be graded on it!).
 
-Also make sure you check the [Academic Integrity](academic-integrity.html) and [Common Gradescope Errors](gradescope-errors.html) pages.
+Here's the built-in functions you are allowed to use: `round()` and `len()`. You are not allowed to use for loops -- use `while` loops.
 
-Name the program `grades.py`. Make sure that gradescope gives you the points for passing the test cases.
+Name the program `stats.py`. Make sure that gradescope gives you the points for passing the test cases.
 
-## `letter_grade()`
+# Mean
 
-This function determines a letter grade ("A", "B", and so on) based on a float argument representing a percentage grade.
+1.  Function name is `mean`
+2.  It takes a list of numeric values (integers or floats) as argument: `numbers`
+3.  It calculates the mean of the values in `numbers` by summing each value (use a `while` loop) and dividing the total by the number of items in the list `numbers`
+4.  It returns a float rounded at two decimals representing the mean of the values in `numbers`
 
-It returns a letter grade based on the following rules:
+# Variance
 
-    -   Greater or equal to 90, return "A"
-    -   Greater or equal to 80, return "B"
-    -   Greater or equal to 70, return "C"
-    -   Greater or equal to 60, return "D"
-    -   Anything less, than 60 return "E" but greater or equal to 0
-    -   If argument is negative or greater than 100, return "X"
+1.  Function name is `variance`
+2.  It takes a list of numeric values (integers or floats) as argument: `numbers`
+3.  It calculates the variance of the values in `numbers` by:
+    1.  calculating the mean (call the function you created to calculate mean)
+    2.  summing the squares of the difference between each value in `numbers` and the mean -- create a `total` variable, in a `while` loop add to `total` the squared difference between each value and the mean
+    3.  dividing the sum of squares (previous step) by the number of items in the list `numbers` minus 1
 
-## `pass_or_fail`
+$$
+\frac{\sum{|x-mean|^2}}{n - 1}
+$$
 
-This function determines if a student passed or failed a class, based on their final letter grade.
-Letter grades equal to "A", "B", "C", or "D" are passing grades (`"Pass"`).
+4.  It returns the result as a float rounded at two decimals
 
-## Calculate percentage -- `point_grade` function
+# Standard Deviation
 
-This function calculates a percentage grade based on a `score` and `total_points`. It calculates the percentage grade by dividing score by total_points, and multiplies result by 100. It returns the calculated percentage as a float rounded at two decimals
+1.  Function name is `sd`
+2.  It takes a list of numeric values (integers or floats) as argument: `numbers`
+3.  It calculates the standard deviation of the values in `numbers` by:
+    1.  calculating the variance (use the function you wrote)
+    2.  taking the square root of the result in the previous step
+4.  It returns the result as a float rounded at two decimals
 
-## Calculate final grade -- `get_grade_results` function
+# Range
 
-This function takes two `score` and `total_points`, and it calls the previous functions you've written -- DO NOT recalculate percentage of grade, letter grade, etc. in this function. You are required to call the other functions.  It returns a message similar to: `Your grade is 92.34 (A - Pass)` or `Your grade is 35.78 (E - Fail)`
+1.  Function name is `list_range`
+2.  It takes a list of numeric values (integers or floats) as argument: `numbers`
+3.  It finds the lowest and highest numbers in the `numbers` argument
+4.  It returns the difference between the highest and lowest number (that is the range)
+5.  Do not use built-in functions `max`, `min` and `range`
 
-## Test Cases
+# Test cases
 
 ```{python}
 #| eval: false
 #| echo: true
 def main():
-  # test letter_grade function
-  print( letter_grade(90) ) # A
-  print( letter_grade(80) ) # B
-  print( letter_grade(70) ) # C
-  print( letter_grade(60) ) # D
-  print( letter_grade(59) ) # E
-  print( letter_grade(-59) ) # X
-  print( letter_grade(110) ) # X
+  value = mean([])
+  assert value == 0, \
+      f"expected return value was 0, but function returned {value}" 
   
-  # test pass_or_fail function
-  print( pass_or_fail("B") ) # Pass
-  print( pass_or_fail("E") ) # Fail
-  print( pass_or_fail("ABCD") ) # Error
+  value = mean([0, 0, 0])
+  assert value == 0, \
+      f"expected return value was 0, but function returned {value}" 
   
-  # test point_grade function
-  print( point_grade(0, 100) ) # 0.0
-  print( point_grade(100, 100) ) # 100.0
-  print( point_grade(45, 80) ) # 56.25
-  print( point_grade(37, 40) ) # 92.5
+  value = mean([4, 5, 2])
+  assert value == 3.67, \
+      f"expected return value was 3.67, but function returned {value}" 
   
-  # test get_grade_results function
-  print( get_grade_results(0, 100) ) # Your grade is 0.0 (E - Fail)
-  print( get_grade_results(45, 80) ) # Your grade is 56.25 (E - Fail)
-  print( get_grade_results(37, 40) ) # Your grade is 92.5 (A - Pass)
+  value = variance([4, 5, 2])
+  assert value == 2.33, \
+      f"expected return value was 2.33, but function returned {value}" 
   
+  value = sd([4, 5, 2])
+  assert value == 1.53, \
+      f"expected return value was 1.53, but function returned {value}"
+  
+  value = list_range([4, 5, 2])
+  assert value == 3, \
+      f"expected return value was 3, but function returned {value}"
+  
+  value = list_range([])
+  assert value == 0, \
+      f"expected return value was 0, but function returned {value}"
+
+  print("All tests passed.")
+
 main()
 ```
 

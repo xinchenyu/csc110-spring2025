@@ -269,12 +269,6 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
  <span class="menu-text">Programming Project 10</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project-11.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programming Project 11</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -894,12 +888,17 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#wheres-the-money" id="toc-wheres-the-money" class="nav-link active" data-scroll-target="#wheres-the-money">Where’s the Money</a></li>
-  <li><a href="#overview-of-the-program" id="toc-overview-of-the-program" class="nav-link" data-scroll-target="#overview-of-the-program">Overview of the program</a></li>
-  <li><a href="#calculating-the-values" id="toc-calculating-the-values" class="nav-link" data-scroll-target="#calculating-the-values">Calculating the values</a></li>
-  <li><a href="#formatting-a-number" id="toc-formatting-a-number" class="nav-link" data-scroll-target="#formatting-a-number">Formatting a Number</a>
+  <li><a href="#d-chess-rules" id="toc-d-chess-rules" class="nav-link active" data-scroll-target="#d-chess-rules"><strong>1D Chess Rules</strong></a></li>
+  <li><a href="#functions-to-implement" id="toc-functions-to-implement" class="nav-link" data-scroll-target="#functions-to-implement">Functions to implement</a>
   <ul class="collapse">
-  <li><a href="#add-a-comma" id="toc-add-a-comma" class="nav-link" data-scroll-target="#add-a-comma">Add a comma</a></li>
+  <li><a href="#start-game" id="toc-start-game" class="nav-link" data-scroll-target="#start-game">Start Game</a></li>
+  <li><a href="#print-board" id="toc-print-board" class="nav-link" data-scroll-target="#print-board">Print Board</a></li>
+  <li><a href="#check-move-validity" id="toc-check-move-validity" class="nav-link" data-scroll-target="#check-move-validity">Check move validity</a></li>
+  <li><a href="#move-a-king" id="toc-move-a-king" class="nav-link" data-scroll-target="#move-a-king">Move a king</a></li>
+  <li><a href="#move-a-knight" id="toc-move-a-knight" class="nav-link" data-scroll-target="#move-a-knight">Move a knight</a></li>
+  <li><a href="#make-a-move" id="toc-make-a-move" class="nav-link" data-scroll-target="#make-a-move">Make a move</a></li>
+  <li><a href="#game-over" id="toc-game-over" class="nav-link" data-scroll-target="#game-over">Game over</a></li>
+  <li><a href="#determine-the-winner" id="toc-determine-the-winner" class="nav-link" data-scroll-target="#determine-the-winner">Determine the winner</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -924,97 +923,444 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 
 </header>
 
-<p>Programming Projects are to be submitted to <a href="">gradescope</a></p>
-<p><strong>Due date: Thursday, February 08, 2024 at 7pm</strong></p>
-<p>This programming project is an adaptation of Ben Dicken’s Where’s the Money Programming Assignment.</p>
-<section id="wheres-the-money" class="level1">
-<h1>Where’s the Money</h1>
-<p>Budgeting and money management is very important both at the individual level, and for corporations and government. Having a clear understanding of where your money goes, how much you are saving, and how much you invest is important to financial success. As a famous author once wrote:</p>
-<blockquote class="blockquote">
-<p>Annual income twenty pounds, annual expenditure nineteen six, result happiness. Annual income twenty pounds, annual expenditure twenty pound ought and six, result misery.</p>
-</blockquote>
-<p><em>–Charles Dickens</em></p>
-<p>In this assignment, you will be writing a program that helps a user visualize and understand how much money they spend of various categories of expenditures. Perhaps you will even find this program useful for your personal finances! You should name your program <code>wheres_the_money.py</code>.</p>
-</section>
-<section id="overview-of-the-program" class="level1">
-<h1>Overview of the program</h1>
-<p>This program takes a number of various arguments about how much someone makes, and how much they spend. The program will accept 5 argument values:</p>
-<ul>
-<li>Annual salary</li>
-<li>Monthly mortgage or rent</li>
-<li>Monthly bills</li>
-<li>Weekly grocery/food expenses</li>
-<li>Annual travel</li>
-</ul>
-<p>These 5 values will be used to generate a visualization of the financial situation that looks like so:</p>
-<pre>------------------------------------------------------------------
-See the financial breakdown below, based on a salary of $50000
-------------------------------------------------------------------
-| mortgage/rent | $  12,000.00 |  24.0% | ########################
-|         bills | $   4,800.00 |   9.6% | #########
-|          food | $  10,400.00 |  20.8% | ####################
-|        travel | $   2,500.00 |   5.0% | #####
-|           tax | $  10,000.00 |  20.0% | ####################
-|         extra | $  10,300.00 |  20.6% | ####################
-------------------------------------------------------------------
-</pre>
-<p>As you can see, the result is essentially a 6-row, 4-column grid that neatly shows that amounts and percentages of income go where.</p>
-<p>Each row represents an expense (or other category) where money goes to on a yearly basis. The first columns provides the name of the category. The second column shows the amount of money that goes to this category in dollars. The third columns shows the amount of money as a percentage of yearly income. The last column is a horizontal bard that correlates with the percentage of income. The number of # characters in this column should be the same as the percentage of income (rounded down).</p>
-</section>
-<section id="calculating-the-values" class="level1">
-<h1>Calculating the values</h1>
-<p>The output provided above shows the kind of output this program should produce. Let’s talk a bit about how to compute these values.</p>
-<p>The basis for all of the percentages is the first input value - the annual income. All of the percentages are calculated based on this. The next two inputs, rent and bills, are monthly expense values. In order to get the total spend on these categories annually, these numbers must be multiplied by the number of months in a year. Then, you can use this result to calculate the percentage. The fourth value is a weekly expense, so this must instead be multiplied by the number of weeks in a year. The fifth value is already input as an annual value, so you don’t need to multiple by number of weeks or months.</p>
-<p>The tax percentage is dependent upon the amount of money a person make annually. The tax brackets are as follows:</p>
-<ul>
-<li>[$0, $15k] annually: 10% tax</li>
-<li>($15k, $75k] annually: 20% tax</li>
-<li>($75k, $200k] annually: 25% tax</li>
-<li>over $200k annually: 30% tax</li>
-</ul>
-<p>You should use one or more if / elif / else statements in the code to determine which tax percentage to use. You can store the tax percentage as an integer variable, with one of the following values: 10, 20, 25, or 30. You can compute the amount of the salary goes to taxes as a particular percentage with this formula:</p>
+<p>Programming Projects are to be submitted to <a href="">gradescope</a>.</p>
+<p><strong>Due date: Thursday, February 22, 2024 at 7pm</strong></p>
+<p>In this programming project you will implement a number of Python functions to implement a simplified version of chess. Make sure you follow the provided <a href="https://adrianapicoral.com/csc-110/style.html">style guide</a> (you will be graded on it!).</p>
+<p>Name your program <code>one_d_chess.py</code> to submit to gradescope. Make sure that gradescope gives you the points for passing the test cases.</p>
+<p>This programming project is an adaptation of Ben Dicken’s 1 Dimensional Chess Programming Assignment.</p>
+<p>In this programming project, you will be implementing a simpler variant of chess: 1D Chess! 1D chess is a variant of the game that is played on a board that has only one column of spaces, rather than a grid of spaces, as in typical chess. There are actually <a href="https://www.chessvariants.com/shape.dir/onedim.html">multiple variants of 1D chess</a>. In this PA, you should implement a custom variant of 1D chess, which I’ll refer to as “110 1D chess”.</p>
+<section id="d-chess-rules" class="level2">
+<h2 class="anchored" data-anchor-id="d-chess-rules"><strong>1D Chess Rules</strong></h2>
+<p>In 110 1D chess, the board will be 1 by 9. Each player will get one king, and two knights. The white pieces go on the left, and the black on the right. The starting positions for the pieces of the game should be as follows:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>annual_salary <span class="op">*</span> ( tax_percentage <span class="op">/</span> <span class="fl">100.0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>After calculating all of these values programmatically, you should generate the output table.</p>
-<p>There is also a tax limit of <code>$75,000</code>. The tax should be capped at this value, and if the limit is reached, a message indicating this should be printed out after the chart. The message should say:</p>
-<pre>&gt;&gt;&gt; TAX LIMIT REACHED &lt;&lt;&lt;
-Overspending
-What happens if the expenditures and taxes are more than the annual salary? This should be represented by negative values in the extra row. You should also print a warning after the chart. Below is an example of a financial situation in which the user spends more than they earn, resulting in a deficit in the extra row.
-</pre>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># arguments: salary, mortgage/rent, bills, food, travel</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>wheres_the_money(<span class="dv">40000</span>, <span class="dv">2000</span>, <span class="dv">300</span>, <span class="dv">150</span>, <span class="dv">4000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<pre>------------------------------------------------------------------------------------------------------
-See the financial breakdown below, based on a salary of $40000
-------------------------------------------------------------------------------------------------------
-| mortgage/rent | $  24,000.00 |  60.0% | ############################################################
-|         bills | $   3,600.00 |   9.0% | #########
-|          food | $   7,800.00 |  19.5% | ###################
-|        travel | $   4,000.00 |  10.0% | ##########
-|           tax | $   8,000.00 |  20.0% | ####################
-|         extra | $  -7,400.00 | -18.5% |
-------------------------------------------------------------------------------------------------------
-&gt;&gt;&gt; WARNING: DEFICIT &lt;&lt;&lt;
-Validation
-You are required to validate the inputs that your program accepts. You should use if-statements for the validation. For each numeric input, you should use the isnumeric function to check if is a positive integer before converting the value to an integer.
-</pre>
+<p>Kings and Knights move and kill their opponents differently. Knights can move either left or right, and when they move thy jump two pieces over. If they land on another piece, they kill them and take their spot. The king can move left or right, until they hit either another piece or an edge of the board. If a king hits another piece, they kill them and take their place. In chess, a player cannot typically kill one of their own pieces. In 110 1D chess, a king or knight can kill one of their own, if they hit or land on them, so be careful!</p>
 </section>
-<section id="formatting-a-number" class="level1">
-<h1>Formatting a Number</h1>
-<p>Notice that the numbers are formatted in a particular way in the output table. You must match this formatting exactly. In order to do so, you can use the format() function. This function was mentioned in chapter two of the textbook. I will provide one example of how you can use this function to match the formatting in the spec.</p>
-<p>Say we have a floating point number, like below:</p>
+<section id="functions-to-implement" class="level1">
+<h1>Functions to implement</h1>
+<section id="start-game" class="level2">
+<h2 class="anchored" data-anchor-id="start-game">Start Game</h2>
+<ol type="1">
+<li>Its name is <code>create_board</code></li>
+<li>It takes no arguments</li>
+<li>It returns a list with the initial state of the board (as shown in the test case below)</li>
+</ol>
+<p>Test case:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>number <span class="op">=</span> <span class="fl">134567.123</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( create_board() ) <span class="co"># ["WKi", "WKn", "WKn", </span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                        <span class="co">#  "EMPTY", "EMPTY", "EMPTY",</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                        <span class="co">#  "BKn", "BKn", "BKi"]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Perhaps this is a result you get for one of the dollar values after doing the necessary computations. When printing, you’ll want to adjust the way it is printed in several ways.</p>
-<section id="add-a-comma" class="level2">
-<h2 class="anchored" data-anchor-id="add-a-comma">Add a comma</h2>
+</section>
+<section id="print-board" class="level2">
+<h2 class="anchored" data-anchor-id="print-board">Print Board</h2>
+<ol type="1">
+<li>Its name is <code>printable_board</code></li>
+<li>It takes one argument, the <code>board</code> list</li>
+<li>It returns a string that is the graphical representation of the board</li>
+</ol>
+<p>Test case for initial board state:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>board <span class="op">=</span> create_board()</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) ) <span class="co"># "+-----------------------------------------------------+\n</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>                                <span class="co">#  | WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |\n</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>                                <span class="co">#  +-----------------------------------------------------+"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="check-move-validity" class="level2">
+<h2 class="anchored" data-anchor-id="check-move-validity">Check move validity</h2>
+<ol type="1">
+<li>Its name is <code>is_valid_move</code></li>
+<li>It has three parameters: the <code>board</code> (list), the <code>position</code> (index) of the player to move, and <code>player</code> (<code>"WHITE"</code> or <code>"BLACK"</code>)</li>
+<li>It returns a boolean (<code>True</code> or <code>False</code>) – it returns <code>True</code> if the desired move is valid, an <code>False</code> otherwise</li>
+<li>A move is valid if:</li>
+</ol>
 <ul>
-<li>Set to stop at two decimal points</li>
-<li>Add necessary spacing before the number, so that the table lines up</li>
+<li>The position (index) is a valid index in the <code>board</code> list</li>
+<li>The position is an index of one of the current player’s pieces on the board</li>
 </ul>
+<p>You do not need a while loop or for loop within this function. It can be accomplished with if statements. If the above two conditions are True, the function should return True. In any other case, return False.</p>
+<p>Test cases:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>board <span class="op">=</span> create_board()</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( is_valid_move(board, <span class="dv">1</span>, <span class="st">"BLACK"</span> ) ) <span class="co"># False</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( is_valid_move(board, <span class="dv">9</span>, <span class="st">"BLACK"</span> ) ) <span class="co"># False</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( is_valid_move(board, <span class="op">-</span><span class="dv">1</span>, <span class="st">"BLACK"</span> ) ) <span class="co"># False</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( is_valid_move(board, <span class="dv">6</span>, <span class="st">"BLACK"</span> ) ) <span class="co"># True</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( is_valid_move(board, <span class="dv">2</span>, <span class="st">"WHITE"</span> ) ) <span class="co"># True</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="move-a-king" class="level2">
+<h2 class="anchored" data-anchor-id="move-a-king">Move a king</h2>
+<ol type="1">
+<li>Its name is <code>move_king</code></li>
+<li>It takes three arguments: the <code>board</code> list, the <code>position</code> (index) of the player to move, and a <code>direction</code> (either <code>"LEFT"</code> or <code>"RIGHT"</code>)</li>
+<li>It changes the position of a king in the board list</li>
+<li>A king can move either left or right</li>
+<li>The king will move until either it reaches another piece (killing that piece and taking its place), or an end of the board</li>
+<li>It uses a for-loop or while-loop to iterate through the elements in the list and determine the spot it should end up at</li>
+</ol>
+<p>Test cases:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>board <span class="op">=</span> create_board()</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>move_king(board, <span class="dv">0</span>, <span class="st">"LEFT"</span>) </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>move_king(board, <span class="dv">8</span>, <span class="st">"LEFT"</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>| WKi | WKn | WKn |     |     |     | BKn | BKi |     |</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="move-a-knight" class="level2">
+<h2 class="anchored" data-anchor-id="move-a-knight">Move a knight</h2>
+<ol type="1">
+<li>Its name is <code>move_knight</code></li>
+<li>It takes three arguments: the <code>board</code> list, the <code>position</code> (index) of the player to move, and a <code>direction</code> (either <code>"LEFT"</code> or <code>"RIGHT"</code>)</li>
+<li>It changes the position of the moving knight in the board list<br>
+</li>
+<li>A knight can move either left or right</li>
+<li>A knight moves two locations</li>
+<li>If the moving knight lands on a space that another piece occupies, then it kills that piece</li>
+<li>Knights can jump over other pieces</li>
+<li>If the moving knight cannot move due to the ending position of the move being out-of-bounds of the board, the knight should stay in its place</li>
+</ol>
+<p>Test cases:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>board <span class="op">=</span> create_board()</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>move_knight(board, <span class="dv">6</span>, <span class="st">"LEFT"</span>) </span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>| WKi | WKn | WKn |     | BKn |     |     | BKn | BKi |</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>move_knight(board, <span class="dv">2</span>, <span class="st">"RIGHT"</span>) </span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>| WKi | WKn |     |     | WKn |     |     | BKn | BKi |</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="make-a-move" class="level2">
+<h2 class="anchored" data-anchor-id="make-a-move">Make a move</h2>
+<ol type="1">
+<li>Its name is <code>move</code></li>
+<li>It takes three arguments: the <code>board</code> list, the <code>position</code> (index) of the player to move, and a <code>direction</code> (either <code>"LEFT"</code> or <code>"RIGHT"</code>)</li>
+<li>It determines if the piece to be moved is a king or a knight – if it is a king, call the <code>move_king</code> function; if a knight, call <code>move_knight</code></li>
+</ol>
+<p>Test case:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>board <span class="op">=</span> create_board()</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>move(board, <span class="dv">0</span>, <span class="st">"LEFT"</span>)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>move(board, <span class="dv">8</span>, <span class="st">"LEFT"</span>) </span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>| WKi | WKn | WKn |     |     |     | BKn | BKi |     |</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="game-over" class="level2">
+<h2 class="anchored" data-anchor-id="game-over">Game over</h2>
+<ol type="1">
+<li>Its name is <code>is_game_over</code></li>
+<li>It takes the <code>board</code> list as an argument</li>
+<li>It determines if the game is over or not</li>
+<li>It returns a boolean (<code>True</code> or <code>False</code>)</li>
+<li>If the white king does not exist on the board, then the game is over (it returns <code>True</code>)</li>
+<li>If the black king does not exist on the board, then the game is over (it returns <code>True</code>)</li>
+<li>If both kings are still in the board list, it returns <code>False</code></li>
+</ol>
+<p>Test case:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>board <span class="op">=</span> create_board()</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( is_game_over(board) ) <span class="co"># False</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>move(board, <span class="dv">2</span>, <span class="st">"RIGHT"</span>)</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>| WKi | WKn |     |     | WKn |     | BKn | BKn | BKi |</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( is_game_over(board) ) <span class="co"># False</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>move(board, <span class="dv">6</span>, <span class="st">"LEFT"</span>)</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>| WKi | WKn |     |     | BKn |     |     | BKn | BKi |</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( is_game_over(board) ) <span class="co"># False</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>move(board, <span class="dv">1</span>, <span class="st">"RIGHT"</span>)</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>| WKi |     |     | WKn | BKn |     |     | BKn | BKi |</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( is_game_over(board) ) <span class="co"># False</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>move(board, <span class="dv">4</span>, <span class="st">"LEFT"</span>)</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>| WKi |     | BKn | WKn |     |     |     | BKn | BKi |</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( is_game_over(board) ) <span class="co"># False</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>move(board, <span class="dv">0</span>, <span class="st">"RIGHT"</span>)</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>|     |     | WKi | WKn |     |     |     | BKn | BKi |</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( is_game_over(board) ) <span class="co"># False</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>move(board, <span class="dv">7</span>, <span class="st">"LEFT"</span>)</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>|     |     | WKi | WKn |     | BKn |     |     | BKi |</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( is_game_over(board) ) <span class="co"># False</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>move(board, <span class="dv">3</span>, <span class="st">"RIGHT"</span>)</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>|     |     | WKi |     |     | WKn |     |     | BKi |</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( is_game_over(board) ) <span class="co"># False</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>move(board, <span class="dv">8</span>, <span class="st">"LEFT"</span>)</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>|     |     | WKi |     |     | BKi |     |     |     |</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( is_game_over(board) ) <span class="co"># False</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>move(board, <span class="dv">2</span>, <span class="st">"RIGHT"</span>)</span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>|     |     |     |     |     | WKi |     |     |     |</span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( is_game_over(board) ) <span class="co"># True</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="determine-the-winner" class="level2">
+<h2 class="anchored" data-anchor-id="determine-the-winner">Determine the winner</h2>
+<ol type="1">
+<li>Its name is <code>whos_the_winner</code></li>
+<li>It takes the <code>board</code> list as an argument</li>
+<li>If the white king does not exist on the board, it returns “Black”</li>
+<li>If the black king does not exist on the board, it returns “White”</li>
+<li>Return <code>None</code> if both kings are on the board</li>
+</ol>
+<p>Test case:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>board <span class="op">=</span> create_board()</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( whos_the_winner(board) ) <span class="co"># None</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>move(board, <span class="dv">2</span>, <span class="st">"RIGHT"</span>)</span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>| WKi | WKn |     |     | WKn |     | BKn | BKn | BKi |</span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( whos_the_winner(board) ) <span class="co"># None</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>move(board, <span class="dv">6</span>, <span class="st">"LEFT"</span>)</span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>| WKi | WKn |     |     | BKn |     |     | BKn | BKi |</span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( whos_the_winner(board) ) <span class="co"># None</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>move(board, <span class="dv">1</span>, <span class="st">"RIGHT"</span>)</span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>| WKi | WKn |     |     | BKn |     |     | BKn | BKi |</span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( whos_the_winner(board) ) <span class="co"># None</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>move(board, <span class="dv">1</span>, <span class="st">"RIGHT"</span>)</span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>| WKi |     |     | WKn | BKn |     |     | BKn | BKi |</span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( whos_the_winner(board) ) <span class="co"># None</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>move(board, <span class="dv">4</span>, <span class="st">"LEFT"</span>)</span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>| WKi |     | BKn | WKn |     |     |     | BKn | BKi |</span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( whos_the_winner(board) ) <span class="co"># None</span></span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>move(board, <span class="dv">0</span>, <span class="st">"RIGHT"</span>)</span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>|     |     | WKi | WKn |     |     |     | BKn | BKi |</span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( whos_the_winner(board) ) <span class="co"># None</span></span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>move(board, <span class="dv">7</span>, <span class="st">"LEFT"</span>)</span>
+<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>|     |     | WKi | WKn |     | BKn |     |     | BKi |</span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( whos_the_winner(board) ) <span class="co"># None</span></span>
+<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>move(board, <span class="dv">3</span>, <span class="st">"RIGHT"</span>)</span>
+<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>|     |     | WKi |     |     | WKn |     |     | BKi |</span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( whos_the_winner(board) ) <span class="co"># None</span></span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>move(board, <span class="dv">8</span>, <span class="st">"LEFT"</span>)</span>
+<span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>|     |     | WKi |     |     | BKi |     |     |     |</span>
+<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( whos_the_winner(board) ) <span class="co"># None</span></span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a>move(board, <span class="dv">2</span>, <span class="st">"RIGHT"</span>)</span>
+<span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( printable_board(board) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
+<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>|     |     |     |     |     | WKi |     |     |     |</span>
+<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( is_game_over(board) ) <span class="co"># True</span></span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( whos_the_winner(board) ) <span class="co"># WHITE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 </section>

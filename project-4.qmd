@@ -2,7 +2,6 @@
 title: "Programming Project 4"
 ---
 
-
 ```{r}
 #| echo: false
 #| message: false
@@ -13,127 +12,544 @@ assignments <- read_excel("assessment_schedule.xlsx") %>%
   mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
 ```
 
-
-Programming Projects are to be submitted to [gradescope]()
+Programming Projects are to be submitted to [gradescope]().
 
 **Due date: `r assignments %>% filter(assessment == "Programming Project 4") %>% pull(formatted_date)` at 7pm**
 
+In this programming project you will implement a number of Python functions to implement a simplified version of chess. Make sure you follow the provided [style guide](https://adrianapicoral.com/csc-110/style.html) (you will be graded on it!).
 
-This programming project is an adaptation of Ben Dicken's Where's the Money Programming Assignment.
+Name your program `one_d_chess.py` to submit to gradescope. Make sure that gradescope gives you the points for passing the test cases.
 
-# Where's the Money
+This programming project is an adaptation of Ben Dicken's 1 Dimensional Chess Programming Assignment.
 
-Budgeting and money management is very important both at the individual level, and for corporations and government. Having a clear understanding of where your money goes, how much you are saving, and how much you invest is important to financial success. As a famous author once wrote:
+In this programming project, you will be implementing a simpler variant of chess: 1D Chess! 1D chess is a variant of the game that is played on a board that has only one column of spaces, rather than a grid of spaces, as in typical chess. There are actually [multiple variants of 1D chess](https://www.chessvariants.com/shape.dir/onedim.html). In this PA, you should implement a custom variant of 1D chess, which I'll refer to as "110 1D chess".
 
-> Annual income twenty pounds, annual expenditure nineteen six, result happiness.
-> Annual income twenty pounds, annual expenditure twenty pound ought and six, result misery.
+## **1D Chess Rules**
 
-*–Charles Dickens*
+In 110 1D chess, the board will be 1 by 9. Each player will get one king, and two knights. The white pieces go on the left, and the black on the right. The starting positions for the pieces of the game should be as follows:
 
-In this assignment, you will be writing a program that helps a user visualize and understand how much money they spend of various categories of expenditures. Perhaps you will even find this program useful for your personal finances! You should name your program `wheres_the_money.py`.
+```{html}
++-----------------------------------------------------+
+| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |
++-----------------------------------------------------+
+```
 
-# Overview of the program
+Kings and Knights move and kill their opponents differently. Knights can move either left or right, and when they move thy jump two pieces over. If they land on another piece, they kill them and take their spot. The king can move left or right, until they hit either another piece or an edge of the board. If a king hits another piece, they kill them and take their place. In chess, a player cannot typically kill one of their own pieces. In 110 1D chess, a king or knight can kill one of their own, if they hit or land on them, so be careful!
 
-This program takes a number of various arguments about how much someone makes, and how much they spend. The program will accept 5 argument values:
+# Functions to implement
 
-* Annual salary
-* Monthly mortgage or rent
-* Monthly bills
-* Weekly grocery/food expenses
-* Annual travel
+## Start Game
 
+1.  Its name is `create_board`
+2.  It takes no arguments
+3.  It returns a list with the initial state of the board (as shown in the test case below)
 
-These 5 values will be used to generate a visualization of the financial situation that looks like so:
-
-<pre>
-------------------------------------------------------------------
-See the financial breakdown below, based on a salary of $50000
-------------------------------------------------------------------
-| mortgage/rent | $  12,000.00 |  24.0% | ########################
-|         bills | $   4,800.00 |   9.6% | #########
-|          food | $  10,400.00 |  20.8% | ####################
-|        travel | $   2,500.00 |   5.0% | #####
-|           tax | $  10,000.00 |  20.0% | ####################
-|         extra | $  10,300.00 |  20.6% | ####################
-------------------------------------------------------------------
-</pre>
-
-As you can see, the result is essentially a 6-row, 4-column grid that neatly shows that amounts and percentages of income go where.
-
-Each row represents an expense (or other category) where money goes to on a yearly basis. The first columns provides the name of the category. The second column shows the amount of money that goes to this category in dollars. The third columns shows the amount of money as a percentage of yearly income. The last column is a horizontal bard that correlates with the percentage of income. The number of # characters in this column should be the same as the percentage of income (rounded down).
-
-# Calculating the values
-
-The output provided above shows the kind of output this program should produce. Let’s talk a bit about how to compute these values.
-
-The basis for all of the percentages is the first input value - the annual income. All of the percentages are calculated based on this. The next two inputs, rent and bills, are monthly expense values. In order to get the total spend on these categories annually, these numbers must be multiplied by the number of months in a year. Then, you can use this result to calculate the percentage. The fourth value is a weekly expense, so this must instead be multiplied by the number of weeks in a year. The fifth value is already input as an annual value, so you don’t need to multiple by number of weeks or months.
-
-The tax percentage is dependent upon the amount of money a person make annually. The tax brackets are as follows:
-
-* [$0, $15k] annually: 10% tax
-* ($15k, $75k] annually: 20% tax
-* ($75k, $200k] annually: 25% tax
-* over $200k annually: 30% tax
-
-You should use one or more if / elif / else statements in the code to determine which tax percentage to use. You can store the tax percentage as an integer variable, with one of the following values: 10, 20, 25, or 30. You can compute the amount of the salary goes to taxes as a particular percentage with this formula:
+Test case:
 
 ```{python}
 #| eval: false
-#| echo: true
-annual_salary * ( tax_percentage / 100.0)
+print( create_board() ) # ["WKi", "WKn", "WKn", 
+                        #  "EMPTY", "EMPTY", "EMPTY",
+                        #  "BKn", "BKn", "BKi"]
 ```
 
-After calculating all of these values programmatically, you should generate the output table.
+## Print Board
 
-There is also a tax limit of `$75,000`. The tax should be capped at this value, and if the limit is reached, a message indicating this should be printed out after the chart. The message should say:
+1.  Its name is `printable_board`
+2.  It takes one argument, the `board` list
+3.  It returns a string that is the graphical representation of the board
 
-<pre>
->>> TAX LIMIT REACHED <<<
-Overspending
-What happens if the expenditures and taxes are more than the annual salary? This should be represented by negative values in the extra row. You should also print a warning after the chart. Below is an example of a financial situation in which the user spends more than they earn, resulting in a deficit in the extra row.
-</pre>
-
+Test case for initial board state:
 
 ```{python}
 #| eval: false
-#| echo: true
-# arguments: salary, mortgage/rent, bills, food, travel
-wheres_the_money(40000, 2000, 300, 150, 4000)
+board = create_board()
+print( printable_board(board) ) # "+-----------------------------------------------------+\n
+                                #  | WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |\n
+                                #  +-----------------------------------------------------+"
 ```
 
+```{html}
++-----------------------------------------------------+
+| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |
++-----------------------------------------------------+
+```
 
-<pre>
-------------------------------------------------------------------------------------------------------
-See the financial breakdown below, based on a salary of $40000
-------------------------------------------------------------------------------------------------------
-| mortgage/rent | $  24,000.00 |  60.0% | ############################################################
-|         bills | $   3,600.00 |   9.0% | #########
-|          food | $   7,800.00 |  19.5% | ###################
-|        travel | $   4,000.00 |  10.0% | ##########
-|           tax | $   8,000.00 |  20.0% | ####################
-|         extra | $  -7,400.00 | -18.5% |
-------------------------------------------------------------------------------------------------------
->>> WARNING: DEFICIT <<<
-Validation
-You are required to validate the inputs that your program accepts. You should use if-statements for the validation. For each numeric input, you should use the isnumeric function to check if is a positive integer before converting the value to an integer.
-</pre>
+## Check move validity
 
+1.  Its name is `is_valid_move`
+2.  It has three parameters: the `board` (list), the `position` (index) of the player to move, and `player` (`"WHITE"` or `"BLACK"`)
+3.  It returns a boolean (`True` or `False`) -- it returns `True` if the desired move is valid, an `False` otherwise
+4.  A move is valid if:
 
-# Formatting a Number
+-   The position (index) is a valid index in the `board` list
+-   The position is an index of one of the current player's pieces on the board
 
-Notice that the numbers are formatted in a particular way in the output table. You must match this formatting exactly. In order to do so, you can use the format() function. This function was mentioned in chapter two of the textbook. I will provide one example of how you can use this function to match the formatting in the spec.
+You do not need a while loop or for loop within this function. It can be accomplished with if statements. If the above two conditions are True, the function should return True. In any other case, return False.
 
-Say we have a floating point number, like below:
+Test cases:
 
 ```{python}
 #| eval: false
-#| echo: true
-number = 134567.123
+board = create_board()
+print( printable_board(board) )
 ```
 
-Perhaps this is a result you get for one of the dollar values after doing the necessary computations. When printing, you’ll want to adjust the way it is printed in several ways.
+```{html}
++-----------------------------------------------------+
+| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |
++-----------------------------------------------------+
+```
 
-## Add a comma
+```{python}
+#| eval: false
+print( is_valid_move(board, 1, "BLACK" ) ) # False
+print( is_valid_move(board, 9, "BLACK" ) ) # False
+print( is_valid_move(board, -1, "BLACK" ) ) # False
+print( is_valid_move(board, 6, "BLACK" ) ) # True
+print( is_valid_move(board, 2, "WHITE" ) ) # True
+```
 
-* Set to stop at two decimal points
-* Add necessary spacing before the number, so that the table lines up
+## Move a king
+
+1.  Its name is `move_king`
+2.  It takes three arguments: the `board` list, the `position` (index) of the player to move, and a `direction` (either `"LEFT"` or `"RIGHT"`)
+3.  It changes the position of a king in the board list
+4.  A king can move either left or right
+5.  The king will move until either it reaches another piece (killing that piece and taking its place), or an end of the board
+6.  It uses a for-loop or while-loop to iterate through the elements in the list and determine the spot it should end up at
+
+Test cases:
+
+```{python}
+#| eval: false
+board = create_board()
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+move_king(board, 0, "LEFT") 
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+move_king(board, 8, "LEFT")
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+| WKi | WKn | WKn |     |     |     | BKn | BKi |     |
++-----------------------------------------------------+
+```
+
+## Move a knight
+
+1.  Its name is `move_knight`
+2.  It takes three arguments: the `board` list, the `position` (index) of the player to move, and a `direction` (either `"LEFT"` or `"RIGHT"`)
+3.  It changes the position of the moving knight in the board list\
+4.  A knight can move either left or right
+5.  A knight moves two locations
+6.  If the moving knight lands on a space that another piece occupies, then it kills that piece
+7.  Knights can jump over other pieces
+8.  If the moving knight cannot move due to the ending position of the move being out-of-bounds of the board, the knight should stay in its place
+
+Test cases:
+
+```{python}
+#| eval: false
+board = create_board()
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+move_knight(board, 6, "LEFT") 
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+| WKi | WKn | WKn |     | BKn |     |     | BKn | BKi |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+move_knight(board, 2, "RIGHT") 
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+| WKi | WKn |     |     | WKn |     |     | BKn | BKi |
++-----------------------------------------------------+
+```
+
+## Make a move
+
+1.  Its name is `move`
+2.  It takes three arguments: the `board` list, the `position` (index) of the player to move, and a `direction` (either `"LEFT"` or `"RIGHT"`)
+3.  It determines if the piece to be moved is a king or a knight -- if it is a king, call the `move_king` function; if a knight, call `move_knight`
+
+Test case:
+
+```{python}
+#| eval: false
+board = create_board()
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+move(board, 0, "LEFT")
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+move(board, 8, "LEFT") 
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+| WKi | WKn | WKn |     |     |     | BKn | BKi |     |
++-----------------------------------------------------+
+```
+
+## Game over
+
+1.  Its name is `is_game_over`
+2.  It takes the `board` list as an argument
+3.  It determines if the game is over or not
+4.  It returns a boolean (`True` or `False`)
+5.  If the white king does not exist on the board, then the game is over (it returns `True`)
+6.  If the black king does not exist on the board, then the game is over (it returns `True`)
+7.  If both kings are still in the board list, it returns `False`
+
+Test case:
+
+```{python}
+#| eval: false
+board = create_board()
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+print( is_game_over(board) ) # False
+move(board, 2, "RIGHT")
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+| WKi | WKn |     |     | WKn |     | BKn | BKn | BKi |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+print( is_game_over(board) ) # False
+move(board, 6, "LEFT")
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+| WKi | WKn |     |     | BKn |     |     | BKn | BKi |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+print( is_game_over(board) ) # False
+move(board, 1, "RIGHT")
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+| WKi |     |     | WKn | BKn |     |     | BKn | BKi |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+print( is_game_over(board) ) # False
+move(board, 4, "LEFT")
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+| WKi |     | BKn | WKn |     |     |     | BKn | BKi |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+print( is_game_over(board) ) # False
+move(board, 0, "RIGHT")
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+|     |     | WKi | WKn |     |     |     | BKn | BKi |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+print( is_game_over(board) ) # False
+move(board, 7, "LEFT")
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+|     |     | WKi | WKn |     | BKn |     |     | BKi |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+print( is_game_over(board) ) # False
+move(board, 3, "RIGHT")
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+|     |     | WKi |     |     | WKn |     |     | BKi |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+print( is_game_over(board) ) # False
+move(board, 8, "LEFT")
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+|     |     | WKi |     |     | BKi |     |     |     |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+print( is_game_over(board) ) # False
+move(board, 2, "RIGHT")
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+|     |     |     |     |     | WKi |     |     |     |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+print( is_game_over(board) ) # True
+```
+
+## Determine the winner
+
+1.  Its name is `whos_the_winner`
+2.  It takes the `board` list as an argument
+3.  If the white king does not exist on the board, it returns "Black"
+4.  If the black king does not exist on the board, it returns "White"
+5.  Return `None` if both kings are on the board
+
+Test case:
+
+```{python}
+#| eval: false
+board = create_board()
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+print( whos_the_winner(board) ) # None
+move(board, 2, "RIGHT")
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+| WKi | WKn |     |     | WKn |     | BKn | BKn | BKi |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+print( whos_the_winner(board) ) # None
+move(board, 6, "LEFT")
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+| WKi | WKn |     |     | BKn |     |     | BKn | BKi |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+print( whos_the_winner(board) ) # None
+move(board, 1, "RIGHT")
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+| WKi | WKn |     |     | BKn |     |     | BKn | BKi |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+print( whos_the_winner(board) ) # None
+move(board, 1, "RIGHT")
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+| WKi |     |     | WKn | BKn |     |     | BKn | BKi |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+print( whos_the_winner(board) ) # None
+move(board, 4, "LEFT")
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+| WKi |     | BKn | WKn |     |     |     | BKn | BKi |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+print( whos_the_winner(board) ) # None
+move(board, 0, "RIGHT")
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+|     |     | WKi | WKn |     |     |     | BKn | BKi |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+print( whos_the_winner(board) ) # None
+move(board, 7, "LEFT")
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+|     |     | WKi | WKn |     | BKn |     |     | BKi |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+print( whos_the_winner(board) ) # None
+move(board, 3, "RIGHT")
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+|     |     | WKi |     |     | WKn |     |     | BKi |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+print( whos_the_winner(board) ) # None
+move(board, 8, "LEFT")
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+|     |     | WKi |     |     | BKi |     |     |     |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+print( whos_the_winner(board) ) # None
+move(board, 2, "RIGHT")
+print( printable_board(board) )
+```
+
+```{html}
++-----------------------------------------------------+
+|     |     |     |     |     | WKi |     |     |     |
++-----------------------------------------------------+
+```
+
+```{python}
+#| eval: false
+print( is_game_over(board) ) # True
+print( whos_the_winner(board) ) # WHITE
+```

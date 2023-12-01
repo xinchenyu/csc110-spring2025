@@ -103,8 +103,6 @@ gtag('js', new Date());
 gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -269,12 +267,6 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
   <div class="sidebar-item-container"> 
   <a href="./project-10.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Programming Project 10</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project-11.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programming Project 11</span></a>
   </div>
 </li>
       </ul>
@@ -896,11 +888,13 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#mean" id="toc-mean" class="nav-link active" data-scroll-target="#mean">Mean</a></li>
-  <li><a href="#variance" id="toc-variance" class="nav-link" data-scroll-target="#variance">Variance</a></li>
-  <li><a href="#standard-deviation" id="toc-standard-deviation" class="nav-link" data-scroll-target="#standard-deviation">Standard Deviation</a></li>
-  <li><a href="#range" id="toc-range" class="nav-link" data-scroll-target="#range">Range</a></li>
-  <li><a href="#test-cases" id="toc-test-cases" class="nav-link" data-scroll-target="#test-cases">Test cases</a></li>
+  <li><a href="#wheres-the-money" id="toc-wheres-the-money" class="nav-link active" data-scroll-target="#wheres-the-money">Where’s the Money</a></li>
+  <li><a href="#overview-of-the-program" id="toc-overview-of-the-program" class="nav-link" data-scroll-target="#overview-of-the-program">Overview of the program</a></li>
+  <li><a href="#calculating-the-values" id="toc-calculating-the-values" class="nav-link" data-scroll-target="#calculating-the-values">Calculating the values</a></li>
+  <li><a href="#formatting-a-number" id="toc-formatting-a-number" class="nav-link" data-scroll-target="#formatting-a-number">Formatting a Number</a>
+  <ul class="collapse">
+  <li><a href="#add-a-comma" id="toc-add-a-comma" class="nav-link" data-scroll-target="#add-a-comma">Add a comma</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -924,100 +918,100 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 
 </header>
 
-<p>Programming Projects are to be submitted to <a href="">gradescope</a>.</p>
-<p><strong>Due date: Thursday, February 01, 2024 at 7pm</strong></p>
-<p>In this programming project you will implement a number of Python functions to run descriptive statistics on lists. Make sure you follow the provided <a href="https://adrianapicoral.com/csc-110/style.html">style guide</a> (you will be graded on it!).</p>
-<p>Here’s the built-in functions you are allowed to use: <code>round()</code> and <code>len()</code>. You are not allowed to use for loops – use <code>while</code> loops.</p>
-<p>Name the program <code>stats.py</code>. Make sure that gradescope gives you the points for passing the test cases.</p>
-<section id="mean" class="level1">
-<h1>Mean</h1>
-<ol type="1">
-<li>Function name is <code>mean</code></li>
-<li>It takes a list of numeric values (integers or floats) as argument: <code>numbers</code></li>
-<li>It calculates the mean of the values in <code>numbers</code> by summing each value (use a <code>while</code> loop) and dividing the total by the number of items in the list <code>numbers</code></li>
-<li>It returns a float rounded at two decimals representing the mean of the values in <code>numbers</code></li>
-</ol>
+<p>Programming Projects are to be submitted to <a href="">gradescope</a></p>
+<p><strong>Due date: Thursday, February 08, 2024 at 7pm</strong></p>
+<p>This programming project is an adaptation of Ben Dicken’s Where’s the Money Programming Assignment.</p>
+<section id="wheres-the-money" class="level1">
+<h1>Where’s the Money</h1>
+<p>Budgeting and money management is very important both at the individual level, and for corporations and government. Having a clear understanding of where your money goes, how much you are saving, and how much you invest is important to financial success. As a famous author once wrote:</p>
+<blockquote class="blockquote">
+<p>Annual income twenty pounds, annual expenditure nineteen six, result happiness. Annual income twenty pounds, annual expenditure twenty pound ought and six, result misery.</p>
+</blockquote>
+<p><em>–Charles Dickens</em></p>
+<p>In this assignment, you will be writing a program that helps a user visualize and understand how much money they spend of various categories of expenditures. Perhaps you will even find this program useful for your personal finances! You should name your program <code>wheres_the_money.py</code>.</p>
 </section>
-<section id="variance" class="level1">
-<h1>Variance</h1>
-<ol type="1">
-<li>Function name is <code>variance</code></li>
-<li>It takes a list of numeric values (integers or floats) as argument: <code>numbers</code></li>
-<li>It calculates the variance of the values in <code>numbers</code> by:
-<ol type="1">
-<li>calculating the mean (call the function you created to calculate mean)</li>
-<li>summing the squares of the difference between each value in <code>numbers</code> and the mean – create a <code>total</code> variable, in a <code>while</code> loop add to <code>total</code> the squared difference between each value and the mean</li>
-<li>dividing the sum of squares (previous step) by the number of items in the list <code>numbers</code> minus 1</li>
-</ol></li>
-</ol>
-<p><span class="math display">\[
-\frac{\sum{|x-mean|^2}}{n - 1}
-\]</span></p>
-<ol start="4" type="1">
-<li>It returns the result as a float rounded at two decimals</li>
-</ol>
+<section id="overview-of-the-program" class="level1">
+<h1>Overview of the program</h1>
+<p>This program takes a number of various arguments about how much someone makes, and how much they spend. The program will accept 5 argument values:</p>
+<ul>
+<li>Annual salary</li>
+<li>Monthly mortgage or rent</li>
+<li>Monthly bills</li>
+<li>Weekly grocery/food expenses</li>
+<li>Annual travel</li>
+</ul>
+<p>These 5 values will be used to generate a visualization of the financial situation that looks like so:</p>
+<pre>------------------------------------------------------------------
+See the financial breakdown below, based on a salary of $50000
+------------------------------------------------------------------
+| mortgage/rent | $  12,000.00 |  24.0% | ########################
+|         bills | $   4,800.00 |   9.6% | #########
+|          food | $  10,400.00 |  20.8% | ####################
+|        travel | $   2,500.00 |   5.0% | #####
+|           tax | $  10,000.00 |  20.0% | ####################
+|         extra | $  10,300.00 |  20.6% | ####################
+------------------------------------------------------------------
+</pre>
+<p>As you can see, the result is essentially a 6-row, 4-column grid that neatly shows that amounts and percentages of income go where.</p>
+<p>Each row represents an expense (or other category) where money goes to on a yearly basis. The first columns provides the name of the category. The second column shows the amount of money that goes to this category in dollars. The third columns shows the amount of money as a percentage of yearly income. The last column is a horizontal bard that correlates with the percentage of income. The number of # characters in this column should be the same as the percentage of income (rounded down).</p>
 </section>
-<section id="standard-deviation" class="level1">
-<h1>Standard Deviation</h1>
-<ol type="1">
-<li>Function name is <code>sd</code></li>
-<li>It takes a list of numeric values (integers or floats) as argument: <code>numbers</code></li>
-<li>It calculates the standard deviation of the values in <code>numbers</code> by:
-<ol type="1">
-<li>calculating the variance (use the function you wrote)</li>
-<li>taking the square root of the result in the previous step</li>
-</ol></li>
-<li>It returns the result as a float rounded at two decimals</li>
-</ol>
-</section>
-<section id="range" class="level1">
-<h1>Range</h1>
-<ol type="1">
-<li>Function name is <code>list_range</code></li>
-<li>It takes a list of numeric values (integers or floats) as argument: <code>numbers</code></li>
-<li>It finds the lowest and highest numbers in the <code>numbers</code> argument</li>
-<li>It returns the difference between the highest and lowest number (that is the range)</li>
-<li>Do not use built-in functions <code>max</code>, <code>min</code> and <code>range</code></li>
-</ol>
-</section>
-<section id="test-cases" class="level1">
-<h1>Test cases</h1>
+<section id="calculating-the-values" class="level1">
+<h1>Calculating the values</h1>
+<p>The output provided above shows the kind of output this program should produce. Let’s talk a bit about how to compute these values.</p>
+<p>The basis for all of the percentages is the first input value - the annual income. All of the percentages are calculated based on this. The next two inputs, rent and bills, are monthly expense values. In order to get the total spend on these categories annually, these numbers must be multiplied by the number of months in a year. Then, you can use this result to calculate the percentage. The fourth value is a weekly expense, so this must instead be multiplied by the number of weeks in a year. The fifth value is already input as an annual value, so you don’t need to multiple by number of weeks or months.</p>
+<p>The tax percentage is dependent upon the amount of money a person make annually. The tax brackets are as follows:</p>
+<ul>
+<li>[$0, $15k] annually: 10% tax</li>
+<li>($15k, $75k] annually: 20% tax</li>
+<li>($75k, $200k] annually: 25% tax</li>
+<li>over $200k annually: 30% tax</li>
+</ul>
+<p>You should use one or more if / elif / else statements in the code to determine which tax percentage to use. You can store the tax percentage as an integer variable, with one of the following values: 10, 20, 25, or 30. You can compute the amount of the salary goes to taxes as a particular percentage with this formula:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  value <span class="op">=</span> mean([])</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">assert</span> value <span class="op">==</span> <span class="dv">0</span>, <span class="op">\</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"expected return value was 0, but function returned </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"</span> </span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  value <span class="op">=</span> mean([<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>])</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">assert</span> value <span class="op">==</span> <span class="dv">0</span>, <span class="op">\</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"expected return value was 0, but function returned </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"</span> </span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  value <span class="op">=</span> mean([<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">2</span>])</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">assert</span> value <span class="op">==</span> <span class="fl">3.67</span>, <span class="op">\</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"expected return value was 3.67, but function returned </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"</span> </span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  value <span class="op">=</span> variance([<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">2</span>])</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">assert</span> value <span class="op">==</span> <span class="fl">2.33</span>, <span class="op">\</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"expected return value was 2.33, but function returned </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"</span> </span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  value <span class="op">=</span> sd([<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">2</span>])</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="cf">assert</span> value <span class="op">==</span> <span class="fl">1.53</span>, <span class="op">\</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"expected return value was 1.53, but function returned </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  value <span class="op">=</span> list_range([<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">2</span>])</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="cf">assert</span> value <span class="op">==</span> <span class="dv">3</span>, <span class="op">\</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"expected return value was 3, but function returned </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  value <span class="op">=</span> list_range([])</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="cf">assert</span> value <span class="op">==</span> <span class="dv">0</span>, <span class="op">\</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"expected return value was 0, but function returned </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">"All tests passed."</span>)</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>annual_salary <span class="op">*</span> ( tax_percentage <span class="op">/</span> <span class="fl">100.0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>After calculating all of these values programmatically, you should generate the output table.</p>
+<p>There is also a tax limit of <code>$75,000</code>. The tax should be capped at this value, and if the limit is reached, a message indicating this should be printed out after the chart. The message should say:</p>
+<pre>&gt;&gt;&gt; TAX LIMIT REACHED &lt;&lt;&lt;
+Overspending
+What happens if the expenditures and taxes are more than the annual salary? This should be represented by negative values in the extra row. You should also print a warning after the chart. Below is an example of a financial situation in which the user spends more than they earn, resulting in a deficit in the extra row.
+</pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># arguments: salary, mortgage/rent, bills, food, travel</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>wheres_the_money(<span class="dv">40000</span>, <span class="dv">2000</span>, <span class="dv">300</span>, <span class="dv">150</span>, <span class="dv">4000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre>------------------------------------------------------------------------------------------------------
+See the financial breakdown below, based on a salary of $40000
+------------------------------------------------------------------------------------------------------
+| mortgage/rent | $  24,000.00 |  60.0% | ############################################################
+|         bills | $   3,600.00 |   9.0% | #########
+|          food | $   7,800.00 |  19.5% | ###################
+|        travel | $   4,000.00 |  10.0% | ##########
+|           tax | $   8,000.00 |  20.0% | ####################
+|         extra | $  -7,400.00 | -18.5% |
+------------------------------------------------------------------------------------------------------
+&gt;&gt;&gt; WARNING: DEFICIT &lt;&lt;&lt;
+Validation
+You are required to validate the inputs that your program accepts. You should use if-statements for the validation. For each numeric input, you should use the isnumeric function to check if is a positive integer before converting the value to an integer.
+</pre>
+</section>
+<section id="formatting-a-number" class="level1">
+<h1>Formatting a Number</h1>
+<p>Notice that the numbers are formatted in a particular way in the output table. You must match this formatting exactly. In order to do so, you can use the format() function. This function was mentioned in chapter two of the textbook. I will provide one example of how you can use this function to match the formatting in the spec.</p>
+<p>Say we have a floating point number, like below:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>number <span class="op">=</span> <span class="fl">134567.123</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Perhaps this is a result you get for one of the dollar values after doing the necessary computations. When printing, you’ll want to adjust the way it is printed in several ways.</p>
+<section id="add-a-comma" class="level2">
+<h2 class="anchored" data-anchor-id="add-a-comma">Add a comma</h2>
+<ul>
+<li>Set to stop at two decimal points</li>
+<li>Add necessary spacing before the number, so that the table lines up</li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

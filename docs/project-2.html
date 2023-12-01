@@ -103,6 +103,8 @@ gtag('js', new Date());
 gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 </script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -267,12 +269,6 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
   <div class="sidebar-item-container"> 
   <a href="./project-10.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Programming Project 10</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project-11.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programming Project 11</span></a>
   </div>
 </li>
       </ul>
@@ -894,11 +890,11 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#letter_grade" id="toc-letter_grade" class="nav-link active" data-scroll-target="#letter_grade"><code>letter_grade()</code></a></li>
-  <li><a href="#pass_or_fail" id="toc-pass_or_fail" class="nav-link" data-scroll-target="#pass_or_fail"><code>pass_or_fail</code></a></li>
-  <li><a href="#calculate-percentage-point_grade-function" id="toc-calculate-percentage-point_grade-function" class="nav-link" data-scroll-target="#calculate-percentage-point_grade-function">Calculate percentage – <code>point_grade</code> function</a></li>
-  <li><a href="#calculate-final-grade-get_grade_results-function" id="toc-calculate-final-grade-get_grade_results-function" class="nav-link" data-scroll-target="#calculate-final-grade-get_grade_results-function">Calculate final grade – <code>get_grade_results</code> function</a></li>
-  <li><a href="#test-cases" id="toc-test-cases" class="nav-link" data-scroll-target="#test-cases">Test Cases</a></li>
+  <li><a href="#mean" id="toc-mean" class="nav-link active" data-scroll-target="#mean">Mean</a></li>
+  <li><a href="#variance" id="toc-variance" class="nav-link" data-scroll-target="#variance">Variance</a></li>
+  <li><a href="#standard-deviation" id="toc-standard-deviation" class="nav-link" data-scroll-target="#standard-deviation">Standard Deviation</a></li>
+  <li><a href="#range" id="toc-range" class="nav-link" data-scroll-target="#range">Range</a></li>
+  <li><a href="#test-cases" id="toc-test-cases" class="nav-link" data-scroll-target="#test-cases">Test cases</a></li>
   </ul>
 </nav>
     </div>
@@ -923,63 +919,96 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 </header>
 
 <p>Programming Projects are to be submitted to <a href="">gradescope</a>.</p>
-<p><strong>Due date: Thursday, January 25, 2024 at 7pm</strong></p>
-<p>In this programming project you will implement a number of Python functions to validate or transform values conditionally. Make sure you follow the provided <a href="style.html">style guide</a> (you will be graded on it!). You are allowed to use <code>round()</code>, <code>str()</code> and <code>len()</code>, but other than that you are <strong>not</strong> allowed to use any other built-in method or function from any Python library.</p>
-<p>Also make sure you check the <a href="academic-integrity.html">Academic Integrity</a> and <a href="gradescope-errors.html">Common Gradescope Errors</a> pages.</p>
-<p>Name the program <code>grades.py</code>. Make sure that gradescope gives you the points for passing the test cases.</p>
-<section id="letter_grade" class="level2">
-<h2 class="anchored" data-anchor-id="letter_grade"><code>letter_grade()</code></h2>
-<p>This function determines a letter grade (“A”, “B”, and so on) based on a float argument representing a percentage grade.</p>
-<p>It returns a letter grade based on the following rules:</p>
-<pre><code>-   Greater or equal to 90, return "A"
--   Greater or equal to 80, return "B"
--   Greater or equal to 70, return "C"
--   Greater or equal to 60, return "D"
--   Anything less, than 60 return "E" but greater or equal to 0
--   If argument is negative or greater than 100, return "X"</code></pre>
+<p><strong>Due date: Thursday, February 01, 2024 at 7pm</strong></p>
+<p>In this programming project you will implement a number of Python functions to run descriptive statistics on lists. Make sure you follow the provided <a href="https://adrianapicoral.com/csc-110/style.html">style guide</a> (you will be graded on it!).</p>
+<p>Here’s the built-in functions you are allowed to use: <code>round()</code> and <code>len()</code>. You are not allowed to use for loops – use <code>while</code> loops.</p>
+<p>Name the program <code>stats.py</code>. Make sure that gradescope gives you the points for passing the test cases.</p>
+<section id="mean" class="level1">
+<h1>Mean</h1>
+<ol type="1">
+<li>Function name is <code>mean</code></li>
+<li>It takes a list of numeric values (integers or floats) as argument: <code>numbers</code></li>
+<li>It calculates the mean of the values in <code>numbers</code> by summing each value (use a <code>while</code> loop) and dividing the total by the number of items in the list <code>numbers</code></li>
+<li>It returns a float rounded at two decimals representing the mean of the values in <code>numbers</code></li>
+</ol>
 </section>
-<section id="pass_or_fail" class="level2">
-<h2 class="anchored" data-anchor-id="pass_or_fail"><code>pass_or_fail</code></h2>
-<p>This function determines if a student passed or failed a class, based on their final letter grade. Letter grades equal to “A”, “B”, “C”, or “D” are passing grades (<code>"Pass"</code>).</p>
+<section id="variance" class="level1">
+<h1>Variance</h1>
+<ol type="1">
+<li>Function name is <code>variance</code></li>
+<li>It takes a list of numeric values (integers or floats) as argument: <code>numbers</code></li>
+<li>It calculates the variance of the values in <code>numbers</code> by:
+<ol type="1">
+<li>calculating the mean (call the function you created to calculate mean)</li>
+<li>summing the squares of the difference between each value in <code>numbers</code> and the mean – create a <code>total</code> variable, in a <code>while</code> loop add to <code>total</code> the squared difference between each value and the mean</li>
+<li>dividing the sum of squares (previous step) by the number of items in the list <code>numbers</code> minus 1</li>
+</ol></li>
+</ol>
+<p><span class="math display">\[
+\frac{\sum{|x-mean|^2}}{n - 1}
+\]</span></p>
+<ol start="4" type="1">
+<li>It returns the result as a float rounded at two decimals</li>
+</ol>
 </section>
-<section id="calculate-percentage-point_grade-function" class="level2">
-<h2 class="anchored" data-anchor-id="calculate-percentage-point_grade-function">Calculate percentage – <code>point_grade</code> function</h2>
-<p>This function calculates a percentage grade based on a <code>score</code> and <code>total_points</code>. It calculates the percentage grade by dividing score by total_points, and multiplies result by 100. It returns the calculated percentage as a float rounded at two decimals</p>
+<section id="standard-deviation" class="level1">
+<h1>Standard Deviation</h1>
+<ol type="1">
+<li>Function name is <code>sd</code></li>
+<li>It takes a list of numeric values (integers or floats) as argument: <code>numbers</code></li>
+<li>It calculates the standard deviation of the values in <code>numbers</code> by:
+<ol type="1">
+<li>calculating the variance (use the function you wrote)</li>
+<li>taking the square root of the result in the previous step</li>
+</ol></li>
+<li>It returns the result as a float rounded at two decimals</li>
+</ol>
 </section>
-<section id="calculate-final-grade-get_grade_results-function" class="level2">
-<h2 class="anchored" data-anchor-id="calculate-final-grade-get_grade_results-function">Calculate final grade – <code>get_grade_results</code> function</h2>
-<p>This function takes two <code>score</code> and <code>total_points</code>, and it calls the previous functions you’ve written – DO NOT recalculate percentage of grade, letter grade, etc. in this function. You are required to call the other functions. It returns a message similar to: <code>Your grade is 92.34 (A - Pass)</code> or <code>Your grade is 35.78 (E - Fail)</code></p>
+<section id="range" class="level1">
+<h1>Range</h1>
+<ol type="1">
+<li>Function name is <code>list_range</code></li>
+<li>It takes a list of numeric values (integers or floats) as argument: <code>numbers</code></li>
+<li>It finds the lowest and highest numbers in the <code>numbers</code> argument</li>
+<li>It returns the difference between the highest and lowest number (that is the range)</li>
+<li>Do not use built-in functions <code>max</code>, <code>min</code> and <code>range</code></li>
+</ol>
 </section>
-<section id="test-cases" class="level2">
-<h2 class="anchored" data-anchor-id="test-cases">Test Cases</h2>
+<section id="test-cases" class="level1">
+<h1>Test cases</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># test letter_grade function</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>( letter_grade(<span class="dv">90</span>) ) <span class="co"># A</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>( letter_grade(<span class="dv">80</span>) ) <span class="co"># B</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>( letter_grade(<span class="dv">70</span>) ) <span class="co"># C</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>( letter_grade(<span class="dv">60</span>) ) <span class="co"># D</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>( letter_grade(<span class="dv">59</span>) ) <span class="co"># E</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>( letter_grade(<span class="op">-</span><span class="dv">59</span>) ) <span class="co"># X</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>( letter_grade(<span class="dv">110</span>) ) <span class="co"># X</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># test pass_or_fail function</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>( pass_or_fail(<span class="st">"B"</span>) ) <span class="co"># Pass</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>( pass_or_fail(<span class="st">"E"</span>) ) <span class="co"># Fail</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>( pass_or_fail(<span class="st">"ABCD"</span>) ) <span class="co"># Error</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="co"># test point_grade function</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>( point_grade(<span class="dv">0</span>, <span class="dv">100</span>) ) <span class="co"># 0.0</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>( point_grade(<span class="dv">100</span>, <span class="dv">100</span>) ) <span class="co"># 100.0</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>( point_grade(<span class="dv">45</span>, <span class="dv">80</span>) ) <span class="co"># 56.25</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>( point_grade(<span class="dv">37</span>, <span class="dv">40</span>) ) <span class="co"># 92.5</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="co"># test get_grade_results function</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>( get_grade_results(<span class="dv">0</span>, <span class="dv">100</span>) ) <span class="co"># Your grade is 0.0 (E - Fail)</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>( get_grade_results(<span class="dv">45</span>, <span class="dv">80</span>) ) <span class="co"># Your grade is 56.25 (E - Fail)</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>( get_grade_results(<span class="dv">37</span>, <span class="dv">40</span>) ) <span class="co"># Your grade is 92.5 (A - Pass)</span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  value <span class="op">=</span> mean([])</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">assert</span> value <span class="op">==</span> <span class="dv">0</span>, <span class="op">\</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"expected return value was 0, but function returned </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"</span> </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  value <span class="op">=</span> mean([<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>])</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">assert</span> value <span class="op">==</span> <span class="dv">0</span>, <span class="op">\</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"expected return value was 0, but function returned </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"</span> </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  value <span class="op">=</span> mean([<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">2</span>])</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">assert</span> value <span class="op">==</span> <span class="fl">3.67</span>, <span class="op">\</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"expected return value was 3.67, but function returned </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"</span> </span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  value <span class="op">=</span> variance([<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">2</span>])</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">assert</span> value <span class="op">==</span> <span class="fl">2.33</span>, <span class="op">\</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"expected return value was 2.33, but function returned </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"</span> </span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  value <span class="op">=</span> sd([<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">2</span>])</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="cf">assert</span> value <span class="op">==</span> <span class="fl">1.53</span>, <span class="op">\</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"expected return value was 1.53, but function returned </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  value <span class="op">=</span> list_range([<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">2</span>])</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="cf">assert</span> value <span class="op">==</span> <span class="dv">3</span>, <span class="op">\</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"expected return value was 3, but function returned </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  value <span class="op">=</span> list_range([])</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="cf">assert</span> value <span class="op">==</span> <span class="dv">0</span>, <span class="op">\</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"expected return value was 0, but function returned </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">"All tests passed."</span>)</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
