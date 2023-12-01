@@ -4204,7 +4204,7 @@
     "href": "slides-14-03.html#random-module",
     "title": "random (class slides)",
     "section": "random module",
-    "text": "random module\nRemember to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random()\nprint(n)\n\nn = random.randint(0, 9)\nprint(n)\n\n0.09688780752481596\n4"
+    "text": "random module\nRemember to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random()\nprint(n)\n\nn = random.randint(0, 9)\nprint(n)\n\n0.07925407834468468\n3"
   },
   {
     "objectID": "slides-14-03.html#write-a-function",
@@ -4218,7 +4218,7 @@
     "href": "slides-14-03.html#write-a-function-solution",
     "title": "random (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nMary"
+    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nPeter"
   },
   {
     "objectID": "slides-14-03.html#setting-a-seed",
@@ -4333,8 +4333,8 @@
     "text": "We have seen how to use operators, operands and expressions - these are the basic building blocks of any program. Next, we will see how to make use of these in our programs using statements."
   },
   {
-    "objectID": "assignments-10.html",
-    "href": "assignments-10.html",
+    "objectID": "assignments-11.html",
+    "href": "assignments-11.html",
     "title": "Module 10 Programming Problems",
     "section": "",
     "text": "Programming Problems should be submitted to gradescope.\n\nProgramming Problem 19\nDue date: Wednesday, April 03, 2024 at 7pm\nWrite a Python function that does the following:\n\nIts name is zip_lists\nIt takes three arguments: list_1, list_2, list_3 – all of the same length\nIt iterates over all three lists (remember, they have the same length, so you can use the same index for all of them) appending to a new list of tuples of three elements\nIt returns the list of tuples\n\nTest cases:\n\nprint( zip_lists([1, 2], [\"a\", \"b\"], [1.0, 2.0]) ) # [(1, \"a\", 1.0), (2, \"b\", 2.0)]\nprint( zip_lists([], [], []) ) # []\n\nName the program create_tuples.py. Make sure that gradescope gives you the points for passing the test case.\n\n\nProgramming Problem 20\nDue date: Wednesday, March 27, 2024 at 7pm\nWrite a Python function that does the following:\n\nIts name is all_mappings\nIt takes a single dictionary as an argument, which maps strings to lists of integers\nIt returns a list of 2-value tuples, where the first value of the tuples is a key from D, and the second value is an element from its associated list value\n\nTest cases:\n\nprint( all_mappings({\"a\": [7, 3, 1]}) ) # [(\"a\", 7), (\"a\", 3), (\"a\", 1)]\nprint( all_mappings({\"a\": [8], \"b\": [2]}) ) # [(\"a\", 8), (\"b\", 2)]\nprint( all_mappings({\"a\": [], \"b\": [2]}) ) # [(\"b\", 2)]\nprint( all_mappings({}) ) # []\n\nName the program mappings.py. Make sure that gradescope gives you the points for passing the test case."
@@ -4799,7 +4799,7 @@
     "href": "schedule.html#assignments-9",
     "title": "Schedule",
     "section": "Assignments",
-    "text": "Assignments\n\nModule 10 Programming Problems – Due date: Wednesday, April 03, 2024 at 7pm\nProgramming Project 7 – Due date: Thursday, April 04, 2024 at 7pm"
+    "text": "Assignments\n\nProgramming Project 7 – Due date: Thursday, April 04, 2024 at 7pm"
   },
   {
     "objectID": "schedule.html#readings-9",
@@ -4816,6 +4816,13 @@
     "text": "Class slides\n\nreturning tuples\ntuples"
   },
   {
+    "objectID": "schedule.html#assignments-10",
+    "href": "schedule.html#assignments-10",
+    "title": "Schedule",
+    "section": "Assignments",
+    "text": "Assignments\n\nModule 11 Programming Problems – Due date: Wednesday, April 10, 2024 at 7pm"
+  },
+  {
     "objectID": "schedule.html#readings-10",
     "href": "schedule.html#readings-10",
     "title": "Schedule",
@@ -4830,11 +4837,11 @@
     "text": "Class slides\n\ndata structures – review\nintro to sets\nsets"
   },
   {
-    "objectID": "schedule.html#assignments-10",
-    "href": "schedule.html#assignments-10",
+    "objectID": "schedule.html#assignments-11",
+    "href": "schedule.html#assignments-11",
     "title": "Schedule",
     "section": "Assignments",
-    "text": "Assignments\n\nModule 11 Programming Problems – Due date: Wednesday, April 10, 2024 at 7pm\nProgramming Project 8 – Due date: Thursday, April 11, 2024 at 7pm"
+    "text": "Assignments\n\nModule 12 Programming Problems – Due date: Wednesday, April 10, 2024 at 7pm\nProgramming Project 8 – Due date: Thursday, April 11, 2024 at 7pm"
   },
   {
     "objectID": "schedule.html#readings-11",
@@ -4851,11 +4858,11 @@
     "text": "Class slides\n\nmutating lists\nmutating dictionaries"
   },
   {
-    "objectID": "schedule.html#assignments-11",
-    "href": "schedule.html#assignments-11",
+    "objectID": "schedule.html#assignments-12",
+    "href": "schedule.html#assignments-12",
     "title": "Schedule",
     "section": "Assignments",
-    "text": "Assignments\n\nModule 12 Programming Problems – Due date: Wednesday, April 17, 2024 at 7pm\nProgramming Project 9 – Due date: Thursday, April 18, 2024 at 7pm"
+    "text": "Assignments\n\nModule 13 Programming Problems – Due date: Wednesday, April 17, 2024 at 7pm\nProgramming Project 9 – Due date: Thursday, April 18, 2024 at 7pm"
   },
   {
     "objectID": "schedule.html#class-slides-13",
@@ -4865,11 +4872,11 @@
     "text": "Class slides\n\nmore on lists\ncombining data structures\nsorting"
   },
   {
-    "objectID": "schedule.html#assignments-12",
-    "href": "schedule.html#assignments-12",
+    "objectID": "schedule.html#assignments-13",
+    "href": "schedule.html#assignments-13",
     "title": "Schedule",
     "section": "Assignments",
-    "text": "Assignments\n\nModule 13 Programming Problems – Due date: Thursday, April 25, 2024 at 7pm"
+    "text": "Assignments\n\nModule 14 Programming Problems – Due date: at 7pm"
   },
   {
     "objectID": "schedule.html#midterm-3-wednesday-april-24-2024",
@@ -4893,8 +4900,8 @@
     "text": "Class slides\n\nhandling exceptions"
   },
   {
-    "objectID": "schedule.html#assignments-13",
-    "href": "schedule.html#assignments-13",
+    "objectID": "schedule.html#assignments-14",
+    "href": "schedule.html#assignments-14",
     "title": "Schedule",
     "section": "Assignments",
     "text": "Assignments\n\nProgramming Project 10 – Due date: Wednesday, May 01, 2024 at 7pm"
