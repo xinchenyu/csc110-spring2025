@@ -1,5 +1,5 @@
 ---
-title: "Module 12 Programming Problems"
+title: "Module 11 Programming Problems"
 ---
 
 
@@ -16,51 +16,47 @@ assignments <- read_excel("assessment_schedule.xlsx") %>%
 
 Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/568720).
 
-# Programming Problem 23
+# Programming Problem 21
 
-**Due date: `r assignments %>% filter(assessment == "Module 12 Programming Problems") %>% pull(formatted_date)` at 7pm**
+**Due date: `r assignments %>% filter(assessment == "Module 11 Programming Problems") %>% pull(formatted_date)` at 7pm**
 
 Write a Python function that does the following:
 
-1.  Its name is `sum_nums`
-2.  It takes two arguments: a list of list (2D list) of `integers` and `n` an integers
-3.  It iterates through all of the numbers, and sum all of the ones whose value is less than `n`
-4.  It returns the sum
+1.  Its name is `differences`
+2.  It takes two sets as arguments: `set_1` and `set_2`
+3.  It calculates and returns the number of elements that are different (not in common) between the two parameter sets
+4.  It returns an integer with the number of different elements
 
 Test cases:
 
 ```{python}
 #| echo: true
 #| eval: false
-print( sum_nums([[2, 12, 2], [12, 5, 100, 9]], 10) ) # 18
-print( sum_nums([[2, 12, 2], [10, 5, 10, 9]], 10) ) # 18
-print( sum_nums([[2, 12, 2], [10, 5, 10, 9]], 0) ) # 0
-print( sum_nums([], 10) ) # 0
+print( differences({1, 2, 3}, {2, 3, 4, 5}) ) # 3
+print( differences({'john', 'mark', 'paul'}, {'john', 'mark'}) ) # 1
 ```
 
-Name the program `sums.py`. Make sure that gradescope gives you the points for passing the test case.
+Name the program `differences.py`. Make sure that gradescope gives you the points for passing the test case.
 
-# Programming Problem 24
+# Programming Problem 22
 
-**Due date: `r assignments %>% filter(number == 21) %>% pull(formatted_date)` at 7pm**
+**Due date: `r assignments %>% filter(number == 19) %>% pull(formatted_date)` at 7pm**
 
 Write a Python function that does the following:
 
-1.  Its name is `longest_string`
-2.  It takes one argument: a list of dictionaries
-3.  The keys in each dictionary could be of various types, but you may assume that the values will be strings
-4.  It returns the longest string value from all of the dictionaries in the list
+1.  Its name is `has_duplicate`
+2.  It takes a single list as argument
+3.  It returns `True` if the list contains any duplicate values, `False` if all values are unique
 
 Test cases:
 
 ```{python}
 #| echo: true
 #| eval: false
-data = [{'a':'horse', 'b':'caterpillar'}, {'a':'camp', 'c':'joker'}]
-print( longest_string(data) ) # caterpillar
-
-data = [{1:'abc', 5:'onetwothree'}, {2:'abcd'}, {7:'one two three'}]
-print( longest_string(data) ) # one two three
+print( has_duplicate([]) ) # False
+print( has_duplicate([1, 2, 3, 1]) ) # True
+print( has_duplicate([1, "a", "b", 4, 5]) ) # False
+print( has_duplicate([1, "a", "a", 2, 3, 4]) ) # True
 ```
 
-Name the program `longest.py`. Make sure that gradescope gives you the points for passing the test case.
+Name the program `detect_duplicates.py`. Make sure that gradescope gives you the points for passing the test case.

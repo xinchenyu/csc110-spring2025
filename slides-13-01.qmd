@@ -1,178 +1,182 @@
 ---
-title: "more on lists (class slides)"
+title: "mutating lists (class slides)"
 format: revealjs
 slide-number: true
 df-print: kable
 ---
 
-# CSc 110 -- More lists
+# CSc 110 - mutating lists
 
-## Announcements
+## Lists are mutable
 
-*	Fill out SCS (https://scsonline.oia.arizona.edu/) – if 80% response rate for whole class, one project grade gets dropped
+* changes to a list in a function will remain after the function finishes running
+* changes to individual list elements do not change the list itself
 
-About the final exam:
+## Changing a list in a loop
 
--   Thursday, December 14, 2023 – 6:00pm - 8:00pm in [ENR2](https://maps.app.goo.gl/RiDaC9Np7M8LVPYZ7) room N120 
--   Find the room before final date
--   Do not bring excess stuff – space is limited
--   Practice writing on smaller desk
-
-
-## Combining lists
-
-What will happen? Run this code on your computer and on [Python Tutor](https://pythontutor.com/visualize.html)
+Changes to individual list elements do not change the list itself
 
 ```{python}
-#| eval: false
 #| echo: true
-vegetables = ["kale", "carrot", "peas", "celery"]
-fruits = ["banana", "tomato", "pear"]
-vegetables + fruits
-```
-
-What will happen below? Will vegetables be mutated?
-
-```{python}
-#| eval: false
-#| echo: true
-def combine_lists(list_1, list_2):
-  list_1 = list_1 + list_2
-  return list_1
-  
-if __name__ == "__main__":
-  vegetables = ["kale", "carrot", "peas", "celery"]
-  fruits = ["banana", "tomato", "pear"]
-  combine_lists(vegetables, fruits)
-  vegetables
-```
-
-## Combining lists
-
-What will happen? Run this code on your computer and on [Python Tutor](https://pythontutor.com/visualize.html) the difference between the two chunks of code (the one above and the one below)?
-
-```{python}
 #| eval: true
-#| echo: true
-def combine_lists(list_1, list_2):
-  for item in list_2:
-    list_1.append(item)
-  return list_1
-  
-if __name__ == "__main__":
-  vegetables = ["kale", "carrot", "peas", "celery"]
-  fruits = ["banana", "tomato", "pear"]
-  combine_lists(vegetables, fruits)
-  print(vegetables)
+numbers = [1, 2, 1, 4, 5]
+for n in numbers:
+  n += 1
+numbers
 ```
 
-## Combining lists
-
-What will happen? Run this code on your computer and on [Python Tutor](https://pythontutor.com/visualize.html) the difference between the two chunks of code (the one above and the one below)?
+Use a `for i in range` loop instead:
 
 ```{python}
+#| echo: true
 #| eval: true
-#| echo: true
-def combine_lists(list_1, list_2):
-  list_1.extend(list_2)
-  return list_1
-  
-if __name__ == "__main__":
-  vegetables = ["kale", "carrot", "peas", "celery"]
-  fruits = ["banana", "tomato", "pear"]
-  combine_lists(vegetables, fruits)
-  print(vegetables)
-```
-
-## list methods
-
-* `.append(value)`
-* `.insert(index, value)`
-* `.pop(index)`
-* `.remove(value)`
-* `.extend(list)`
-
-## Evaluate the code
-
-Indicate when an **error** occurs.
-
-```{python}
-#| eval: false
-#| echo: true
-numbers = [1, 2, 31, 0, 2]
-numbers.append(40)
-numbers # evaluate this at this point
-
-numbers.insert(3, 10)
-numbers # evaluate this at this point
-
-numbers.remove(2)
-numbers # evaluate this at this point
-
-numbers.pop(2)
-numbers # evaluate this at this point
-
-new_list = [40, 50, 60]
-numbers.extend(new_list)
-numbers # evaluate this at this point
-```
-
-## Evaluate the code -- solution
-
-```{python}
-#| eval: true
-#| echo: true
-numbers = [1, 2, 31, 0, 2]
-numbers.append(40)
-numbers # evaluate this at this point
-```
-
-
-```{python}
-#| eval: true
-#| echo: true
-numbers.insert(3, 10)
-numbers # evaluate this at this point
-```
-
-
-```{python}
-#| eval: true
-#| echo: true
-numbers.remove(2)
-numbers # evaluate this at this point
-```
-
-
-```{python}
-#| eval: true
-#| echo: true
-numbers.pop(2)
-numbers # evaluate this at this point
-```
-
-
-```{python}
-#| eval: true
-#| echo: true
-new_list = [40, 50, 60]
-numbers.extend(new_list)
-numbers # evaluate this at this point
+numbers = [1, 2, 1, 4, 5]
+for i in range(len(numbers)):
+  numbers[i] += 1
+numbers
 ```
 
 ## Write a function
 
-1. Its name is `remove_and_append`
-1. It has three parameters, all lists: `original_list`, `to_remove_list`, `to_append_list`
-1. It **mutates** the `original_list` removing values found in `to_remove_list` and then appending the values in `to_append_list`
+1. Its name is `square_all`
+1. It takes a list of integers as argument
+1. It **mutates** the list, squaring each integer (`n**2`)
 
-Test case:
+```{python}
+#| echo: true
+#| eval: false
+test_list = [1, 2, 3, 4]
+square_all(test_list)
+assert test_list == [1, 4, 9, 16]
+assert square_all([-1, -2, -4]) == [1, 4, 16]
+```
+
+
+## Write a function -- solution
+
+```{python}
+#| echo: true
+#| eval: true
+def square_all(numbers):
+  for i in range(len(numbers)):
+    numbers[i] = numbers[i]**2
+  return numbers
+    
+def main():
+  test_list = [1, 2, 3, 4]
+  square_all(test_list)
+  assert test_list == [1, 4, 9, 16]
+  assert square_all([-1, -2, -4]) == [1, 4, 16]
+  print(test_list) # [1, 4, 9, 16]
+  
+main()
+```
+
+
+## Removing elements from a list in a `loop`
+
+Using a `for i in range` when removing items in a list throws an error
+
+```{python}
+#| echo: true
+#| eval: false
+numbers = [1, 2, 1, 4, 5]
+for i in range(len(numbers)):
+  numbers.pop(i)
+numbers
+```
+
+ERROR
+
+## Removing elements from a list in a `loop`
+
+Use a `while` loop instead (remember to adjust `i` if doing conditional removal)
+
+```{python}
+#| echo: true
+#| eval: true
+numbers = [1, 2, 1, 4, 5]
+i = 0
+while i < len(numbers):
+  numbers.pop(i)
+numbers
+```
+
+Or go backwards
+
+
+```{python}
+#| echo: true
+#| eval: true
+numbers = [1, 2, 1, 4, 5]
+for i in range(len(numbers)-1, -1, -1):
+  numbers.pop(i)
+numbers
+```
+
+## Write a function
+
+1. Its name is `remove_names`
+1. It takes one argument: a list of strings
+1. It `mutates` and `returns` the argument list removing all strings that end in vowel
+
+```{python}
+#| echo: true
+#| eval: false
+names = ["Beatrice", "Philip", "Anna", "Peter"]
+remove_names(names)
+assert names == ["Philip", "Peter"]
+```
+
+## Write a function -- solution
+
+```{python}
+#| echo: true
+#| eval: true
+def remove_names(string_list):
+  i = 0
+  while i < len(string_list):
+    if string_list[i][-1] in "aeiou":
+      string_list.pop(i)
+    else:
+      i += 1
+  return string_list
+      
+def main():
+  names = ["Beatrice", "Philip", "Anna", "Peter"]
+  remove_names(names)
+  assert names == ["Philip", "Peter"]
+  print(names) # ["Philip", "Peter"]
+
+main()
+```
+
+
+## Removing elements from inner lists in 2D lists
+
+```{python}
+#| echo: true
+#| eval: true
+lists_of_numbers = [ [2, 3, 1, 2], [4, 5, 2, 1] ]
+for inner_list in lists_of_numbers:
+  for i in range(len(inner_list)-1, -1, -1):
+    inner_list.pop(i)
+    
+print(lists_of_numbers)
+```
+
+## Write a function
+
+1. Its name is `remove_odds`
+1. It takes a list of lists of integers as argument
+1. It **mutates** the inner list, removing odd numbers
+
 ```{python}
 #| eval: false
 #| echo: true
-test_list = [1, 2, 3]
-remove_and_append(test_list, [2, 3, 4], [10, 11])
-assert test_list == [1, 10, 11]
+lists_of_numbers = [ [2, 3, 1, 2], [4, 5, 2, 1] ]
+remove_odds(lists_of_numbers)
+assert lists_of_numbers == [ [2, 2], [4, 2] ]
 ```
 
 ## Write a function -- solution
@@ -180,17 +184,24 @@ assert test_list == [1, 10, 11]
 ```{python}
 #| eval: true
 #| echo: true
-def remove_and_append(original_list, to_remove_list, to_append_list):
-  for item in to_remove_list:
-    if item in original_list:
-      original_list.remove(item)
-  original_list.extend(to_append_list)
-  return original_list
+def remove_odds(lists_of_numbers):
+  for inner_list in lists_of_numbers:
+    for i in range(len(inner_list)-1, -1, -1):
+      if inner_list[i] % 2 != 0:
+        inner_list.pop(i)
+  return lists_of_numbers
 
-if __name__ == "__main__":
-  test_list = [1, 2, 3]
-  remove_and_append(test_list, [2, 3, 4], [10, 11])
-  assert test_list == [1, 10, 11]
-  print(test_list) # [1, 10, 11]
+def main():
+  test_list = [ [2, 3, 1, 2], [4, 5, 2, 1] ]
+  remove_odds(test_list)
+  assert test_list == [ [2, 2], [4, 2] ]
+  print(test_list) # [ [2, 2], [4, 2] ]
+  
+main()
 ```
 
+# Submit code for attendance
+
+Submit your `remove_odds` functions to Gradescope for attendance.
+
+Name your file `remove_odds.py`

@@ -10,7 +10,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
-  <title>CSc 110 Computer Programming I - more on for loops (class slides)</title>
+  <title>CSc 110 Computer Programming I - random (class slides)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -392,248 +392,192 @@
       margin-right: 0; 
     }
   </style>
-  <script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">more on for loops (class slides)</h1>
+  <h1 class="title">random (class slides)</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
 <section>
-<section id="csc-110---more-on-for-loops-lists" class="title-slide slide level1 center">
-<h1>CSc 110 - more on for loops lists</h1>
+<section id="csc-110-generating-random-numbers-and-other-important-functions-and-methods" class="title-slide slide level1 center">
+<h1>CSC 110 – Generating Random Numbers and Other Important Functions and Methods</h1>
 
 </section>
-<section id="lists-within-lists" class="slide level2">
-<h2>lists within lists</h2>
-<p>We’ve worked with lists of integers, list of strings, and lists of floats – but we can also have lists of lists:</p>
+<section id="announcements" class="slide level2">
+<h2>Announcements</h2>
+<ul>
+<li>Fill out SCS (https://scsonline.oia.arizona.edu/) – if 80% response rate for whole class, one project grade gets dropped</li>
+</ul>
+<p>About the final exam:</p>
+<ul>
+<li>Thursday, December 14, 2023 – 6:00pm - 8:00pm in <a href="https://maps.app.goo.gl/RiDaC9Np7M8LVPYZ7">ENR2</a> room N120</li>
+<li>Find the room before final date</li>
+<li>Do not bring excess stuff – space is limited</li>
+<li>Practice writing on smaller desk</li>
+</ul>
+</section>
+<section id="random-module" class="slide level2">
+<h2>random module</h2>
+<p>Remember to <code>import</code> the module <code>random</code></p>
+<p>What do the functions <code>.random()</code> and <code>.randint()</code> return?</p>
 <div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>lists <span class="op">=</span> [[<span class="dv">9</span>,  <span class="dv">8</span>,  <span class="dv">7</span>,  <span class="dv">8</span>],</span>
-<span id="cb1-2"><a href="#cb1-2"></a>         [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">4</span>],</span>
-<span id="cb1-3"><a href="#cb1-3"></a>         [<span class="dv">5</span>,  <span class="dv">50</span>, <span class="dv">55</span>, <span class="dv">4</span>]]</span>
-<span id="cb1-4"><a href="#cb1-4"></a>lists[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
-<pre><code>[9, 8, 7, 8]</code></pre>
-</div>
-</div>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>lists[<span class="dv">0</span>][<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
-<pre><code>9</code></pre>
-</div>
-</div>
-</section>
-<section id="d-lists" class="slide level2">
-<h2>2D lists</h2>
-<ul>
-<li>The “first dimension” is the outer list</li>
-<li>The “second dimension” are the inner lists</li>
-</ul>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>lists <span class="op">=</span> [[<span class="dv">9</span>,  <span class="dv">8</span>,  <span class="dv">7</span>,  <span class="dv">8</span>], <span class="co"># index 0 of outer list</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>         [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">4</span>], <span class="co"># index 1 of outer list</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a>         [<span class="dv">5</span>,  <span class="dv">50</span>, <span class="dv">55</span>, <span class="dv">4</span>]] <span class="co"># index 2 of outer list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section></section>
-<section>
-<section id="d-lists-1" class="title-slide slide level1 center">
-<h1>2D lists</h1>
-<ul>
-<li>When we draw pictures of 2D lists, the first dimension is the vertical axis, the second is the horizontal</li>
-</ul>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>lists <span class="op">=</span> [[<span class="dv">9</span>,  <span class="dv">8</span>,  <span class="dv">7</span>,  <span class="dv">8</span>],</span>
-<span id="cb6-2"><a href="#cb6-2"></a>         [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">4</span>],</span>
-<span id="cb6-3"><a href="#cb6-3"></a>         [<span class="dv">5</span>,  <span class="dv">50</span>, <span class="dv">55</span>, <span class="dv">4</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-
-<img data-src="images/2d_list.png" class="r-stretch"></section>
-<section id="evaluate-the-expressions" class="slide level2">
-<h2>Evaluate the Expressions</h2>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>numbers <span class="op">=</span> [[<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">3</span>],</span>
-<span id="cb7-2"><a href="#cb7-2"></a>           [<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">5</span>]]</span>
-<span id="cb7-3"><a href="#cb7-3"></a>numbers[<span class="dv">1</span>][<span class="dv">2</span>]   </span>
-<span id="cb7-4"><a href="#cb7-4"></a></span>
-<span id="cb7-5"><a href="#cb7-5"></a>items <span class="op">=</span> [[<span class="dv">9</span>, <span class="dv">7</span>, <span class="dv">8</span>],</span>
-<span id="cb7-6"><a href="#cb7-6"></a>         [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>],</span>
-<span id="cb7-7"><a href="#cb7-7"></a>         [<span class="dv">5</span>],</span>
-<span id="cb7-8"><a href="#cb7-8"></a>         [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>]]</span>
-<span id="cb7-9"><a href="#cb7-9"></a>items[<span class="dv">1</span>][<span class="dv">5</span>]</span>
-<span id="cb7-10"><a href="#cb7-10"></a>items[<span class="dv">2</span>][<span class="dv">5</span>]</span>
-<span id="cb7-11"><a href="#cb7-11"></a>items[<span class="dv">3</span>][<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="evaluate-the-expressions-1" class="slide level2">
-<h2>Evaluate the Expressions</h2>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>numbers <span class="op">=</span> [[<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">3</span>],</span>
-<span id="cb8-2"><a href="#cb8-2"></a>           [<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">5</span>]]</span>
-<span id="cb8-3"><a href="#cb8-3"></a>numbers[<span class="dv">1</span>][<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<pre><code>5</code></pre>
-</div>
-</div>
-<div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>items <span class="op">=</span> [[<span class="dv">9</span>, <span class="dv">7</span>, <span class="dv">8</span>],</span>
-<span id="cb10-2"><a href="#cb10-2"></a>         [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>],</span>
-<span id="cb10-3"><a href="#cb10-3"></a>         [<span class="dv">5</span>],</span>
-<span id="cb10-4"><a href="#cb10-4"></a>         [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>]]</span>
-<span id="cb10-5"><a href="#cb10-5"></a>items[<span class="dv">1</span>][<span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
-<pre><code>6</code></pre>
-</div>
-</div>
-<div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a>items[<span class="dv">2</span>][<span class="dv">5</span>] <span class="co"># will throw error</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>items[<span class="dv">3</span>][<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
-<pre><code>30</code></pre>
-</div>
-</div>
-</section>
-<section id="for-loops-with-lists-of-lists" class="slide level2">
-<h2><code>for</code> loops with lists of lists</h2>
-<div class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a>items <span class="op">=</span> [[<span class="dv">9</span>, <span class="dv">7</span>, <span class="dv">8</span>],</span>
-<span id="cb15-2"><a href="#cb15-2"></a>         [<span class="dv">5</span>],</span>
-<span id="cb15-3"><a href="#cb15-3"></a>         [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>]]</span>
-<span id="cb15-4"><a href="#cb15-4"></a>         </span>
-<span id="cb15-5"><a href="#cb15-5"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(items)):</span>
-<span id="cb15-6"><a href="#cb15-6"></a>  <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(items[i])):</span>
-<span id="cb15-7"><a href="#cb15-7"></a>    <span class="bu">print</span>( items[i][j] )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> random</span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a>n <span class="op">=</span> random.random()</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="bu">print</span>(n)</span>
+<span id="cb1-5"><a href="#cb1-5"></a></span>
+<span id="cb1-6"><a href="#cb1-6"></a>n <span class="op">=</span> random.randint(<span class="dv">0</span>, <span class="dv">9</span>)</span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="bu">print</span>(n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>9
-7
-8
-5
-10
-20
-30</code></pre>
+<pre><code>0.09688780752481596
+4</code></pre>
 </div>
 </div>
 </section>
 <section id="write-a-function" class="slide level2">
 <h2>Write a function</h2>
 <ol type="1">
-<li>Its name is <code>flatten</code></li>
-<li>It takes one parameter, which is a list of lists of integers: <code>numbers</code></li>
-<li>It returns a single list that flattens that list of lists into a single list that contains exactly the same values</li>
-<li>Do not use any list methods besides <code>.append()</code></li>
+<li>Function name is <code>pick_winner</code></li>
+<li>It takes a list as argument</li>
+<li>It generates a random index, and returns the item at that position</li>
 </ol>
-<div class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="cf">assert</span> flatten([]) <span class="op">==</span> []</span>
-<span id="cb17-2"><a href="#cb17-2"></a><span class="cf">assert</span> flatten([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]]) <span class="op">==</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
-<span id="cb17-3"><a href="#cb17-3"></a><span class="cf">assert</span> flatten([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>]]) <span class="op">==</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>winner <span class="op">=</span> pick_winner([<span class="st">"Peter"</span>, <span class="st">"Joan"</span>, <span class="st">"Mary"</span>, <span class="st">"June"</span>])</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="bu">print</span>(winner)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a><span class="kw">def</span> flatten(numbers):</span>
-<span id="cb18-2"><a href="#cb18-2"></a>  new_list <span class="op">=</span> []</span>
-<span id="cb18-3"><a href="#cb18-3"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(numbers)):</span>
-<span id="cb18-4"><a href="#cb18-4"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(numbers[i])):</span>
-<span id="cb18-5"><a href="#cb18-5"></a>      new_list.append(numbers[i][j])</span>
-<span id="cb18-6"><a href="#cb18-6"></a>  <span class="cf">return</span> new_list</span>
-<span id="cb18-7"><a href="#cb18-7"></a></span>
-<span id="cb18-8"><a href="#cb18-8"></a><span class="kw">def</span> main():</span>
-<span id="cb18-9"><a href="#cb18-9"></a>  <span class="cf">assert</span> flatten([]) <span class="op">==</span> []</span>
-<span id="cb18-10"><a href="#cb18-10"></a>  <span class="cf">assert</span> flatten([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]]) <span class="op">==</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
-<span id="cb18-11"><a href="#cb18-11"></a>  <span class="cf">assert</span> flatten([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>]]) <span class="op">==</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
-<span id="cb18-12"><a href="#cb18-12"></a></span>
-<span id="cb18-13"><a href="#cb18-13"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> random</span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="kw">def</span> pick_winner(names):</span>
+<span id="cb4-4"><a href="#cb4-4"></a>  index <span class="op">=</span> random.randint(<span class="dv">0</span>, <span class="bu">len</span>(names) <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb4-5"><a href="#cb4-5"></a>  <span class="cf">return</span> names[index]</span>
+<span id="cb4-6"><a href="#cb4-6"></a></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb4-8"><a href="#cb4-8"></a>  winner <span class="op">=</span> pick_winner([<span class="st">"Peter"</span>, <span class="st">"Joan"</span>, <span class="st">"Mary"</span>, <span class="st">"June"</span>])</span>
+<span id="cb4-9"><a href="#cb4-9"></a>  <span class="bu">print</span>(winner)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Mary</code></pre>
+</div>
+</div>
+</section>
+<section id="setting-a-seed" class="slide level2">
+<h2>Setting a seed</h2>
+<p>What happens when you run <code>pick_winner</code> multiple times?</p>
+<p>To get always the same result (for autograding purposes, for example) we can set a seed.</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> random</span>
+<span id="cb6-2"><a href="#cb6-2"></a></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="kw">def</span> pick_winner(names):</span>
+<span id="cb6-4"><a href="#cb6-4"></a>  index <span class="op">=</span> random.randint(<span class="dv">0</span>, <span class="bu">len</span>(names) <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb6-5"><a href="#cb6-5"></a>  <span class="cf">return</span> names[index]</span>
+<span id="cb6-6"><a href="#cb6-6"></a></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb6-8"><a href="#cb6-8"></a>  random.seed(<span class="dv">42</span>)</span>
+<span id="cb6-9"><a href="#cb6-9"></a>  winner <span class="op">=</span> pick_winner([<span class="st">"Peter"</span>, <span class="st">"Joan"</span>, <span class="st">"Mary"</span>, <span class="st">"June"</span>])</span>
+<span id="cb6-10"><a href="#cb6-10"></a>  <span class="bu">print</span>(winner)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Peter</code></pre>
+</div>
 </div>
 </section>
 <section id="write-a-function-1" class="slide level2">
 <h2>Write a function</h2>
 <ol type="1">
-<li>Its name is <code>get_highest_average</code></li>
-<li>It takes an argument, <code>lists</code>, which is a 2D list of numbers (floats or integers)</li>
-<li>It calculates the mean of each sublist, and returns the highest average</li>
+<li>Function name is <code>pick_winners</code></li>
+<li>It takes a list as argument</li>
+<li>It generates <code>n-2</code> random indices, and returns a new list with the items at those positions in the original argument list – make sure to remove names that have already been selected</li>
 </ol>
-<div class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="cf">assert</span> get_highest_average([[<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">2</span>, <span class="dv">2</span>]]) <span class="op">==</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="write-a-function-2" class="slide level2">
-<h2>Write a function</h2>
-<p>An illustration:</p>
-<div class="cell" data-reveal="true">
-<div class="cell-output-display">
-<div>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-  A["[[ ],  &lt;br&gt;  [2, 3, 7], &lt;br&gt; [15, 21, 3, 24], &lt;br&gt; [6, 4] ]"] --&gt; B("len([]) &gt; 0 ?") 
-  A --&gt; SS("len([2, 3, 7]) &gt; 0 ?") --&gt; K["[2, 3, 7]"]
-  A --&gt; SSS("len([15, 2, 3, 8]) &gt; 0 ?") --&gt; S["[15, 2, 3, 8]"]
-  A --&gt; SSSS("len([6, 4]) &gt; 0 ?") --&gt; F["[6, 4]"]
-  K --&gt;id1[calculate mean: 4]
-  S --&gt; id2[calculate mean: 7]
-  F --&gt; id3[calculate mean: 5]
-  id1 --&gt; E["[4, 7, 5]"]
-  id2 --&gt; E
-  id3 --&gt; E
-  
-  L("len([4, 7, 5]) &gt; 0 ?") --&gt; id4[calculate highest mean: 7]
-  
-
-  style id1 fill:#ffd5f1,stroke:#333,stroke-width:2px
-  style id2 fill:#ffd5f1,stroke:#333,stroke-width:2px
-  style id3 fill:#ffd5f1,stroke:#333,stroke-width:2px
-  style id4 fill:#feffad,stroke:#333,stroke-width:2px
-</pre>
-</div>
-</div>
-</div>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>winner <span class="op">=</span> pick_winners([<span class="st">"Peter"</span>, <span class="st">"Joan"</span>, <span class="st">"Mary"</span>, <span class="st">"June"</span>])</span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="bu">print</span>(winner) <span class="co"># it prints out a list of two items</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-solution-1" class="slide level2">
 <h2>Write a function – solution</h2>
-<div class="cell" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a><span class="kw">def</span> get_highest_average(numbers):</span>
-<span id="cb20-2"><a href="#cb20-2"></a>  means <span class="op">=</span> []</span>
-<span id="cb20-3"><a href="#cb20-3"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(numbers)):</span>
-<span id="cb20-4"><a href="#cb20-4"></a>    <span class="cf">if</span> <span class="bu">len</span>(numbers[i]) <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb20-5"><a href="#cb20-5"></a>      total_sublist <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb20-6"><a href="#cb20-6"></a>      <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(numbers[i])):</span>
-<span id="cb20-7"><a href="#cb20-7"></a>        total_sublist <span class="op">+=</span> numbers[i][j]</span>
-<span id="cb20-8"><a href="#cb20-8"></a>      mean_sublist <span class="op">=</span> total_sublist <span class="op">/</span> <span class="bu">len</span>(numbers[i])</span>
-<span id="cb20-9"><a href="#cb20-9"></a>      means.append(mean_sublist)</span>
-<span id="cb20-10"><a href="#cb20-10"></a>  </span>
-<span id="cb20-11"><a href="#cb20-11"></a>  <span class="cf">if</span> <span class="bu">len</span>(means) <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb20-12"><a href="#cb20-12"></a>    highest_mean <span class="op">=</span> means[<span class="dv">0</span>]</span>
-<span id="cb20-13"><a href="#cb20-13"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(means)):</span>
-<span id="cb20-14"><a href="#cb20-14"></a>      <span class="cf">if</span> means[i] <span class="op">&gt;</span> highest_mean:</span>
-<span id="cb20-15"><a href="#cb20-15"></a>        highest_mean <span class="op">=</span> means[i]</span>
-<span id="cb20-16"><a href="#cb20-16"></a>        </span>
-<span id="cb20-17"><a href="#cb20-17"></a>    <span class="cf">return</span> highest_mean</span>
-<span id="cb20-18"><a href="#cb20-18"></a></span>
-<span id="cb20-19"><a href="#cb20-19"></a><span class="kw">def</span> main():</span>
-<span id="cb20-20"><a href="#cb20-20"></a>  <span class="cf">assert</span> get_highest_average([[<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">2</span>, <span class="dv">2</span>]]) <span class="op">==</span> <span class="dv">2</span></span>
-<span id="cb20-21"><a href="#cb20-21"></a>  <span class="cf">assert</span> get_highest_average([[<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>], []]) <span class="op">==</span> <span class="dv">1</span></span>
-<span id="cb20-22"><a href="#cb20-22"></a>  <span class="cf">assert</span> get_highest_average([[], []]) <span class="op">==</span> <span class="va">None</span></span>
-<span id="cb20-23"><a href="#cb20-23"></a>  <span class="cf">assert</span> get_highest_average([]) <span class="op">==</span> <span class="va">None</span></span>
-<span id="cb20-24"><a href="#cb20-24"></a>  </span>
-<span id="cb20-25"><a href="#cb20-25"></a>  weeks <span class="op">=</span> [ [<span class="dv">100</span>, <span class="dv">100</span>, <span class="dv">105</span>, <span class="dv">105</span>, <span class="dv">102</span>, <span class="dv">102</span>, <span class="dv">100</span>],</span>
-<span id="cb20-26"><a href="#cb20-26"></a>            [<span class="dv">70</span>, <span class="dv">71</span>, <span class="dv">75</span>, <span class="dv">72</span>, <span class="dv">81</span>, <span class="dv">80</span>, <span class="dv">74</span>],</span>
-<span id="cb20-27"><a href="#cb20-27"></a>            [<span class="dv">78</span>, <span class="dv">72</span>, <span class="dv">74</span>, <span class="dv">71</span>, <span class="dv">70</span>, <span class="dv">70</span>, <span class="dv">70</span>],</span>
-<span id="cb20-28"><a href="#cb20-28"></a>            [<span class="dv">30</span>, <span class="dv">32</span>, <span class="dv">40</span>, <span class="dv">38</span>, <span class="dv">31</span>, <span class="dv">32</span>, <span class="dv">30</span>] ]</span>
-<span id="cb20-29"><a href="#cb20-29"></a>  average <span class="op">=</span> get_highest_average(weeks)</span>
-<span id="cb20-30"><a href="#cb20-30"></a>  <span class="cf">assert</span> average <span class="op">==</span> <span class="dv">102</span></span>
-<span id="cb20-31"><a href="#cb20-31"></a>  </span>
-<span id="cb20-32"><a href="#cb20-32"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">import</span> random</span>
+<span id="cb9-2"><a href="#cb9-2"></a></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="kw">def</span> pick_winners(names):</span>
+<span id="cb9-4"><a href="#cb9-4"></a>  new_list <span class="op">=</span> []</span>
+<span id="cb9-5"><a href="#cb9-5"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(names)<span class="op">-</span><span class="dv">2</span>): <span class="co"># note how i here just controls how many iterations</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a>    index <span class="op">=</span> random.randint(<span class="dv">0</span>, <span class="bu">len</span>(names) <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb9-7"><a href="#cb9-7"></a>    new_list.append(names[index])</span>
+<span id="cb9-8"><a href="#cb9-8"></a>    names.pop(index)</span>
+<span id="cb9-9"><a href="#cb9-9"></a>  <span class="cf">return</span> new_list</span>
+<span id="cb9-10"><a href="#cb9-10"></a></span>
+<span id="cb9-11"><a href="#cb9-11"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb9-12"><a href="#cb9-12"></a>  random.seed(<span class="dv">42</span>)</span>
+<span id="cb9-13"><a href="#cb9-13"></a>  winners <span class="op">=</span> pick_winners([<span class="st">"Peter"</span>, <span class="st">"Joan"</span>, <span class="st">"Mary"</span>, <span class="st">"June"</span>])</span>
+<span id="cb9-14"><a href="#cb9-14"></a>  <span class="bu">print</span>(winners)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['Peter', 'Joan']</code></pre>
 </div>
+</div>
+</section>
+<section id="ascii" class="slide level2">
+<h2>ASCII</h2>
+<p>ASCII stands for American Standard Code for Information Interchange, and it represents all characters in English. Nowadays we usually use <code>UTF-8</code> encoding instead os ASCII because we use more characters (emojis, for example).</p>
+<p>Check the <a href="ascii-table.html">ascii table</a> that contains the main characters in English.</p>
+</section>
+<section id="ord-function" class="slide level2">
+<h2><code>ord()</code> function</h2>
+<p>You can use the <code>ord()</code> function with a single character (that is, a string of length 1) to get the decimal value of that character. Check the <a href="ascii-table.html">ascii table</a> that contains the main characters in English.</p>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="bu">ord</span>(<span class="st">"A"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>65</code></pre>
+</div>
+</div>
+</section>
+<section id="write-a-function-2" class="slide level2">
+<h2>Write a function</h2>
+<ol type="1">
+<li>Function name is <code>pick_winners</code></li>
+<li>It takes a list as argument</li>
+<li>It generates <code>n-2</code> random indices, and returns a new list with the items at those positions in the original argument list – make sure to remove names that have already been selected</li>
+<li>It only selects names that start with a lowercase character (use the built-in function <code>ord()</code>).</li>
+</ol>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>winner <span class="op">=</span> pick_winners([<span class="st">"peter"</span>, <span class="st">"Joan"</span>, <span class="st">"mary"</span>, <span class="st">"June"</span>, <span class="st">"john"</span>])</span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="bu">print</span>(winner) <span class="co"># it prints out a list of two items</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-a-function-solution-2" class="slide level2">
+<h2>Write a function – solution</h2>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="im">import</span> random</span>
+<span id="cb14-2"><a href="#cb14-2"></a></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="kw">def</span> pick_winners(names):</span>
+<span id="cb14-4"><a href="#cb14-4"></a>  new_list <span class="op">=</span> []</span>
+<span id="cb14-5"><a href="#cb14-5"></a>  <span class="cf">while</span> <span class="bu">len</span>(new_list) <span class="op">&lt;</span> <span class="dv">2</span> <span class="kw">and</span> <span class="bu">len</span>(names) <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb14-6"><a href="#cb14-6"></a>    index <span class="op">=</span> random.randint(<span class="dv">0</span>, <span class="bu">len</span>(names) <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb14-7"><a href="#cb14-7"></a>    <span class="cf">if</span> <span class="dv">97</span> <span class="op">&lt;=</span> <span class="bu">ord</span>(names[index][<span class="dv">0</span>]) <span class="op">&lt;=</span> <span class="dv">122</span>:</span>
+<span id="cb14-8"><a href="#cb14-8"></a>      new_list.append(names[index])</span>
+<span id="cb14-9"><a href="#cb14-9"></a>    names.pop(index)</span>
+<span id="cb14-10"><a href="#cb14-10"></a>  <span class="cf">return</span> new_list</span>
+<span id="cb14-11"><a href="#cb14-11"></a></span>
+<span id="cb14-12"><a href="#cb14-12"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb14-13"><a href="#cb14-13"></a>  random.seed(<span class="dv">42</span>)</span>
+<span id="cb14-14"><a href="#cb14-14"></a>  winners <span class="op">=</span> pick_winners([<span class="st">"peter"</span>, <span class="st">"Joan"</span>, <span class="st">"mary"</span>, <span class="st">"June"</span>, <span class="st">"john"</span>])</span>
+<span id="cb14-15"><a href="#cb14-15"></a>  <span class="bu">print</span>(winners)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['peter', 'john']</code></pre>
+</div>
+</div>
+</section>
+<section id="isupper-and-.islower-string-methods" class="slide level2">
+<h2><code>.isupper()</code> and <code>.islower()</code> string methods</h2>
+<p><code>.isupper()</code> is a string method that returns <code>True</code> if all the characters in the string are in upper case, otherwise it returns <code>False</code>.</p>
+<p><code>.islower()</code> is checks for lowercase</p>
 
 <div class="footer footer-default">
 

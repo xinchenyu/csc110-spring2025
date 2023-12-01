@@ -10,7 +10,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
-  <title>CSc 110 Computer Programming I - combining data structures (class slides)</title>
+  <title>CSc 110 Computer Programming I - handling exceptions (class slides)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -398,100 +398,106 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">combining data structures (class slides)</h1>
+  <h1 class="title">handling exceptions (class slides)</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
 <section>
-<section id="csc-110-combining-data-structures" class="title-slide slide level1 center">
-<h1>CSC 110 – Combining data structures</h1>
+<section id="csc-handling-errors-or-exceptions" class="title-slide slide level1 center">
+<h1>CSC – handling errors (or exceptions)</h1>
 
 </section>
-<section id="tuples-as-dictionary-keys" class="slide level2">
-<h2>Tuples as dictionary keys</h2>
+<section id="try-and-except" class="slide level2">
+<h2><code>try:</code> and <code>except:</code></h2>
 <ul>
-<li>We can only use immutable types as dictionary keys (strings, integers, and tuples)</li>
-<li>Values in a dictionary can be of any type</li>
+<li>Can be used to catch errors in a program without it having to crash!</li>
+<li>The programmer can provide more information and/or context as to what happened</li>
+<li>Can make debugging easier if you provide clear error messages</li>
 </ul>
 </section>
-<section id="tuples-as-dictionary-keys-1" class="slide level2">
-<h2>Tuples as dictionary keys</h2>
-<p>Tuples are useful as keys since keys need to be unique (no repeated key is allowed)</p>
+<section id="try-and-except-1" class="slide level2">
+<h2><code>try:</code> and <code>except:</code></h2>
 <div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>course_schedule <span class="op">=</span> { (<span class="st">"CSC 110"</span>, <span class="st">"section 1"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
-<span id="cb1-2"><a href="#cb1-2"></a>                    (<span class="st">"CSC 110"</span>, <span class="st">"section 2"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
-<span id="cb1-3"><a href="#cb1-3"></a>                    (<span class="st">"CSC 120"</span>, <span class="st">"section 1"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
-<span id="cb1-4"><a href="#cb1-4"></a>                    (<span class="st">"CSC 120"</span>, <span class="st">"section 2"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
-<span id="cb1-5"><a href="#cb1-5"></a>                    (<span class="st">"CSC 144"</span>, <span class="st">"section 1"</span>) : (<span class="st">"Social Sciences"</span>, <span class="st">"100"</span>),</span>
-<span id="cb1-6"><a href="#cb1-6"></a>                    (<span class="st">"CSC 210"</span>, <span class="st">"section 1"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>)}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>ages <span class="op">=</span> [<span class="dv">35</span>, <span class="dv">35</span>, <span class="dv">23</span>, <span class="dv">18</span>, <span class="dv">45</span>, <span class="dv">18</span>, <span class="dv">72</span>]</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="cf">try</span>:</span>
+<span id="cb1-3"><a href="#cb1-3"></a>    <span class="bu">print</span>(ages[<span class="dv">0</span>] <span class="op">+</span> ages[<span class="dv">4</span>])</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="cf">except</span>:</span>
+<span id="cb1-5"><a href="#cb1-5"></a>    <span class="bu">print</span>(<span class="st">'Failed to print the sum of two ages'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>80</code></pre>
 </div>
-<ul>
-<li>How would you retrieve the room where CSC 144, section 1 takes place?</li>
-<li>How would you retrieve all rooms for CSC 120?</li>
-</ul>
+</div>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>ages <span class="op">=</span> [<span class="dv">35</span>, <span class="dv">35</span>, <span class="dv">23</span>, <span class="dv">18</span>, <span class="dv">45</span>, <span class="dv">18</span>, <span class="dv">72</span>]</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="cf">try</span>:</span>
+<span id="cb3-3"><a href="#cb3-3"></a>    <span class="bu">print</span>(ages[<span class="dv">0</span>] <span class="op">+</span> ages[<span class="dv">7</span>])</span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="cf">except</span>:</span>
+<span id="cb3-5"><a href="#cb3-5"></a>    <span class="bu">print</span>(<span class="st">'Failed to print the sum of two ages'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Failed to print the sum of two ages</code></pre>
+</div>
+</div>
+</section>
+<section id="try-and-except-2" class="slide level2">
+<h2><code>try:</code> and <code>except:</code></h2>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>ages <span class="op">=</span> [<span class="dv">35</span>, <span class="dv">35</span>, <span class="dv">23</span>, <span class="dv">18</span>, <span class="dv">45</span>, <span class="dv">18</span>, <span class="dv">72</span>]</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="cf">try</span>:</span>
+<span id="cb5-3"><a href="#cb5-3"></a>    <span class="bu">print</span>(ages[<span class="dv">0</span>] <span class="op">+</span> ages[<span class="dv">7</span>])</span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="cf">except</span>:</span>
+<span id="cb5-5"><a href="#cb5-5"></a>    <span class="bu">print</span>(<span class="st">'Failed to print the sum of two ages'</span>)</span>
+<span id="cb5-6"><a href="#cb5-6"></a>    <span class="bu">print</span>(<span class="st">'Tried to get a value from an index that does not exist in the list'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Failed to print the sum of two ages
+Tried to get a value from an index that does not exist in the list</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>ages <span class="op">=</span> [<span class="dv">35</span>, <span class="dv">35</span>, <span class="dv">23</span>, <span class="dv">18</span>, <span class="dv">45</span>, <span class="dv">18</span>, <span class="dv">72</span>]</span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="bu">print</span>(ages[<span class="dv">0</span>] <span class="op">+</span> ages[<span class="dv">7</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>IndexError: list index out of range</p>
 </section>
 <section id="write-a-function" class="slide level2">
 <h2>Write a function</h2>
 <ol type="1">
-<li>Its name is <code>retrieve_room</code></li>
-<li>It takes three arguments: a dictionary with course information, a string for course code and number (e.g., <code>"CSC 110"</code>) and a string for section (e.g., <code>"section 1"</code>)</li>
-<li>It returns a string with the building and room numbers (concatenated)</li>
+<li>Its name is <code>read_numbers</code></li>
+<li>It takes a string for a file name</li>
+<li>It opens the file in read mode, it splits the lines by space</li>
+<li>It returns a list with all float numbers in the file</li>
+<li><a href="data/weather.txt">Download test file</a></li>
 </ol>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="bu">print</span>( retrieve_room(course_schedule, <span class="st">"CSC 110"</span>, <span class="st">"section 1"</span>) ) </span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="co"># "Gittings 129b"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="bu">print</span>( read_numbers(<span class="st">"weather.txt"</span>) ) <span class="co"># [89.5, 50.2, 93.4, 69.0]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">def</span> retrieve_room(course_dict, course, section):</span>
-<span id="cb3-2"><a href="#cb3-2"></a>  c, s <span class="op">=</span>  course_dict[(course, section)]</span>
-<span id="cb3-3"><a href="#cb3-3"></a>  <span class="cf">return</span> c <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> s</span>
-<span id="cb3-4"><a href="#cb3-4"></a></span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="kw">def</span> main():</span>
-<span id="cb3-6"><a href="#cb3-6"></a>  course_schedule <span class="op">=</span> { (<span class="st">"CSC 110"</span>, <span class="st">"section 1"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
-<span id="cb3-7"><a href="#cb3-7"></a>                    (<span class="st">"CSC 110"</span>, <span class="st">"section 2"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
-<span id="cb3-8"><a href="#cb3-8"></a>                    (<span class="st">"CSC 120"</span>, <span class="st">"section 1"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
-<span id="cb3-9"><a href="#cb3-9"></a>                    (<span class="st">"CSC 120"</span>, <span class="st">"section 2"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
-<span id="cb3-10"><a href="#cb3-10"></a>                    (<span class="st">"CSC 144"</span>, <span class="st">"section 1"</span>) : (<span class="st">"Social Sciences"</span>, <span class="st">"100"</span>),</span>
-<span id="cb3-11"><a href="#cb3-11"></a>                    (<span class="st">"CSC 210"</span>, <span class="st">"section 1"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>)}</span>
-<span id="cb3-12"><a href="#cb3-12"></a>  <span class="bu">print</span>( retrieve_room(course_schedule, </span>
-<span id="cb3-13"><a href="#cb3-13"></a>                       <span class="st">"CSC 110"</span>, <span class="st">"section 1"</span>)) <span class="co"># "Gittings 129b"</span></span>
-<span id="cb3-14"><a href="#cb3-14"></a>  </span>
-<span id="cb3-15"><a href="#cb3-15"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">def</span> read_numbers(file_name):</span>
+<span id="cb9-2"><a href="#cb9-2"></a>  floats <span class="op">=</span> []</span>
+<span id="cb9-3"><a href="#cb9-3"></a>  not_floats <span class="op">=</span> []</span>
+<span id="cb9-4"><a href="#cb9-4"></a>  f <span class="op">=</span> <span class="bu">open</span>(file_name, <span class="st">"r"</span>)</span>
+<span id="cb9-5"><a href="#cb9-5"></a>  <span class="cf">for</span> line <span class="kw">in</span> f:</span>
+<span id="cb9-6"><a href="#cb9-6"></a>    words <span class="op">=</span> line.strip().split(<span class="st">" "</span>)</span>
+<span id="cb9-7"><a href="#cb9-7"></a>    <span class="cf">for</span> w <span class="kw">in</span> words:</span>
+<span id="cb9-8"><a href="#cb9-8"></a>      <span class="cf">try</span>:</span>
+<span id="cb9-9"><a href="#cb9-9"></a>        floats.append(<span class="bu">float</span>(w))</span>
+<span id="cb9-10"><a href="#cb9-10"></a>      <span class="cf">except</span>:</span>
+<span id="cb9-11"><a href="#cb9-11"></a>        not_floats.append(w)</span>
+<span id="cb9-12"><a href="#cb9-12"></a>  f.close()</span>
+<span id="cb9-13"><a href="#cb9-13"></a>  <span class="cf">return</span> floats</span>
+<span id="cb9-14"><a href="#cb9-14"></a></span>
+<span id="cb9-15"><a href="#cb9-15"></a><span class="kw">def</span> main():</span>
+<span id="cb9-16"><a href="#cb9-16"></a>  <span class="bu">print</span>( read_numbers(<span class="st">"weather.txt"</span>) ) <span class="co"># [89.5, 50.2, 93.4, 69.0]</span></span>
+<span id="cb9-17"><a href="#cb9-17"></a>  </span>
+<span id="cb9-18"><a href="#cb9-18"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Gittings 129b</code></pre>
+<pre><code>[89.5, 50.2, 93.4, 69.0]</code></pre>
 </div>
 </div>
-</section>
-<section id="dictionaries-as-values" class="slide level2">
-<h2>Dictionaries as values</h2>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>course_schedule <span class="op">=</span> { <span class="st">"CSC 110"</span>: </span>
-<span id="cb5-2"><a href="#cb5-2"></a>                      {<span class="dv">1</span>: {<span class="st">"building"</span>: <span class="st">"Gittings"</span>, <span class="st">"room"</span>: <span class="st">"129b"</span>},</span>
-<span id="cb5-3"><a href="#cb5-3"></a>                       <span class="dv">2</span>: {<span class="st">"building"</span>: <span class="st">"Gittings"</span>, <span class="st">"room"</span>: <span class="st">"129b"</span>} },</span>
-<span id="cb5-4"><a href="#cb5-4"></a>                    <span class="st">"CSC 120"</span>:</span>
-<span id="cb5-5"><a href="#cb5-5"></a>                       {<span class="dv">1</span>: {<span class="st">"building"</span>: <span class="st">"Gittings"</span>, <span class="st">"room"</span>: <span class="st">"129b"</span>},</span>
-<span id="cb5-6"><a href="#cb5-6"></a>                        <span class="dv">2</span>: {<span class="st">"building"</span>: <span class="st">"Gittings"</span>, <span class="st">"room"</span>: <span class="st">"129b"</span>} },</span>
-<span id="cb5-7"><a href="#cb5-7"></a>                    <span class="st">"CSC 144"</span>:</span>
-<span id="cb5-8"><a href="#cb5-8"></a>                       {<span class="dv">1</span>: {<span class="st">"building"</span>: <span class="st">"Social Sciences"</span>, <span class="st">"room"</span>: <span class="st">"100"</span>}}}</span>
-<span id="cb5-9"><a href="#cb5-9"></a>                       </span>
-<span id="cb5-10"><a href="#cb5-10"></a>course_schedule[<span class="st">"CSC 110"</span>][<span class="dv">1</span>][<span class="st">"building"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<pre><code>'Gittings'</code></pre>
-</div>
-</div>
-<ul>
-<li>How would you retrieve the room for the section 1 of CSC 120?</li>
-</ul>
-</section>
-<section id="how-to-organize-data" class="slide level2">
-<h2>How to organize data?</h2>
-<p>A common programming task is to read data from a file into some data structure in python – how the data structure is structured is very much up to the developer.</p>
-<p><a href="data/csc_courses.csv">Download the csv (comma separate value) file with course information</a> and discuss with your table mates: How would you structure these data in Python?</p>
 
 <div class="footer footer-default">
 

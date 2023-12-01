@@ -1,356 +1,237 @@
 ---
-title: "sorting (class slides)"
+title: "mutating dictionaries (class slides)"
 format: revealjs
 slide-number: true
 df-print: kable
 ---
 
-# CSC 110 -- Sorting
+# CSc 110 - mutating dictionaries
 
 ## Announcements
 
-* Final exams (BRING PHOTO ID):
-* Study guide on the practice problems page
+*	Fill out SCS (https://scsonline.oia.arizona.edu/) – if 80% response rate for whole class, one project grade gets dropped
 
-## Sorting
+About the final exam:
 
--   A number of reasons to want sorted data
-    -   For doing binary search!
-    -   Finding a median value
-    -   Finding the min and max
-    -   Others?
+-   Thursday, December 14, 2023 – 6:00pm - 8:00pm in [ENR2](https://maps.app.goo.gl/RiDaC9Np7M8LVPYZ7) room N120 
+-   Find the room before final date
+-   Do not bring excess stuff – space is limited
+-   Practice writing on smaller desk
 
-## Sorting
+## Dictionaries are mutable
 
--   lists have built-in functionality to rearrange the elements to be in sorted order
-    -   **list_var.sort()**
-    -   **sorted(list_var)**
--   But, someone at some point had to come up with an **algorithm** for this!
--   How does sorting work, behind the scenes?
+-   changes to a dictionary in a function will remain after the function finishes running
+-   you can change dictionary values using keys
 
-## What is a sorted list?
+## Changing values in a dictionary
 
--   A **sorting algorithm** is an algorithm that puts elements of a list in a certain order
--   However, there are different types of "ordering"
-    -   Ascending numeric order (numbers)
-    -   Descending numeric order (numbers)
-    -   Lexicographic (strings)
-    -   Others...
--   We will mostly stick with Ascending numeric for the examples in this lecture
-
-## What is a sorted list?
-
-```{python}
-#| echo: true
-#| eval: true
-items = [5, 10, 20, 6, 7, 9, 43, 10, 12]
-```
-
-### Not sorted
-
-```{python}
-#| echo: false
-#| eval: true
-items
-```
-
-### Sorted
-
-```{python}
-#| echo: false
-#| eval: true
-items.sort()
-items
-```
-
-## Discuss
-
-Come up with a sorting algorithm
-
--   Discuss ideas for how to sort numbers
-
--   Depict your algorithm with drawings/diagrams or with pseudocode
-
--   Can't use the **.sort()** method
-
-## In-place and out-of-place
-
--   **In-place sorting:** does not require a secondary data structure
-
--   **Out-of-place sorting:** may require a secondary data structure
-
-## Selection sort
-
-**Selection sort is a very simple sorting algorithm**
-
-1.  Scan the list and find the smallest element
-
-2.  Swap this element with the beginning element
-
-3.  Continue these steps for the remaining list, not including the element just swapped
-
-4.  Repeat
-
-## Selection sort
-
--   Visualizing sorting algorithms with graphics can give one a better understanding
-
--   <https://visualgo.net/en/sorting>
-
-## Write selection sort
-
-1.  Function name is `selection_sort`
-2.  It takes a list as argument
-3.  It **mutates** the list argument, sorting it
-4.  It iterates over the list, scanning the list to find the smallest element
-5.  It swaps the smallest element found in each iteration with the beginning element (start with beginning element at zero indes, add one to beginning index with each iteration)
-
-## Write selection sort -- solution
+You can change dictionary values using keys
 
 ```{python}
 #| eval: true
 #| echo: true
-def find_min_index(items):
-  min_index = None
-  for i in range(len(items)):
-    if min_index == None or items[min_index] > items[i]:
-      min_index = i
-  return min_index
+names_ages = {"Paul": 32, "Patricia": 44, "Eduardo": 27}
+for key in names_ages:
+  names_ages[key] += 1
+names_ages
+```
 
-def selection_sort(items):
-  begin_index = 0
-  while begin_index < len(items)-1:
-    # get min of sublist, add begin_index to shift it
-    min_index = find_min_index(items[begin_index:]) + begin_index
-    items[begin_index], items[min_index] = items[min_index], items[begin_index]
-    begin_index += 1
-    
+## Write a function
+
+1.  Its name is `sales_tax`
+2.  It takes a dictionary as argument, with string keys and float values
+3.  It **mutates** the dictionary argument, multiplying each value by 0.056 and rounding the result to two decimals
+
+```{python}
+#| eval: false
+#| echo: true
+groceries = {"banana": 2.50, "milk": 4.25, "bread": 3.68}
+sales_tax(groceries)
+assert groceries == {'banana': 0.14, 'milk': 0.24, 'bread': 0.21}
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def sales_tax(dictionary):
+  for key in dictionary:
+    dictionary[key] = round(dictionary[key] * 0.056, 2)
+  return dictionary
+
 def main():
-  test_list = [5, 10, 20, 6, 7, 9, 43, 10, 12]
-  selection_sort(test_list)
-  print(test_list)
+  groceries = {"banana": 2.50, "milk": 4.25, "bread": 3.68}
+  sales_tax(groceries)
+  assert groceries == {'banana': 0.14, 'milk': 0.24, 'bread': 0.21}
+  print(groceries)
   
 main()
     
 ```
 
-## How many total sweeps and swaps to sort this list?
+## Write a function
+
+1.  Its name is `sales_tax`
+2.  It takes a dictionary as argument, with string keys and float values
+3.  It returns a new dictionary, multiplying each value by 0.056 and rounding the result to two decimals
 
 ```{python}
-#| eval: true
+#| eval: false
 #| echo: true
-numbers = [ 3, 1, 7, 2, 4 ]
+groceries = {"banana": 2.50, "milk": 4.25, "bread": 3.68}
+assert sales_tax(groceries) == {'banana': 0.14, 'milk': 0.24, 'bread': 0.21}
 ```
 
-## How many total sweeps and swaps to sort this list?
-
-\[3, 1, 7, 2, 4\] sweep
-
-\[1, 3, 7, 2, 4\] swap and sweep
-
-\[1, 2, 7, 3, 4\] swap and sweep
-
-\[1, 2, 3, 7, 4\] swap and sweep
-
-\[1, 2, 3, 4, 7\] swap
-
-4 sweeps
-
-4 swaps (worst case scenario)
-
-## How many total sweeps and swaps to sort this list?
+## Write a function -- solution
 
 ```{python}
 #| eval: true
 #| echo: true
-numbers = [ 3, 1, 7, 2, 4, 8, 5 ]
+def sales_tax(dictionary):
+  result = {}
+  for key, value in dictionary.items():
+    result[key] = round(value * 0.056, 2)
+  return result
+
+def main():
+  groceries = {"banana": 2.50, "milk": 4.25, "bread": 3.68}
+  assert sales_tax(groceries) == {'banana': 0.14, 'milk': 0.24, 'bread': 0.21}
+  print( sales_tax(groceries) )
+
+main()
 ```
 
-## How many total sweeps and swaps to sort this list?
+## Removing `key: value` from a dictionary
 
-\[ 3, 1, 7, 2, 4, 8, 5 \] sweep
+Cannot iterate over a dictionary and change its size:
 
-\[ 1, 3, 7, 2, 4, 8, 5 \] swap and sweep
+```{python}
+#| eval: false
+#| echo: true
+counts = {"a": 10, "e": 4, "i": 3}
+for key in counts:
+  counts.pop(key)
+```
 
-\[ 1, 2, 7, 3, 4, 8, 5 \] swap and sweep
+RuntimeError: dictionary changed size during iteration
 
-\[ 1, 2, 3, 7, 4, 8, 5 \] swap and sweep
+## Removing `key: value` from a dictionary
 
-\[ 1, 2, 3, 4, 7, 8, 5 \] swap and sweep
-
-\[ 1, 2, 3, 4, 5, 8, 7 \] swap and sweep
-
-\[ 1, 2, 3, 4, 5, 7, 8 \] swap
-
-6 sweeps, 6 swaps
-
-## Bubble sort
-
--   **Bubble Sort:** another sorting algorithm
-
-    1.  Scan through each element in the list, comparing the current element with the next one
-
-    2.  If the next one is smaller, swap the elements
-
-    3.  Continue these iterations until the whole list is sorted
-
--   This causes the large elements to "bubble up" to the top
-
-## Write bubble sort
-
-1.  Function name is `bubble_sort`
-2.  It takes a list as argument
-3.  It **mutates** the list, sorting it
-4.  It iterates over the list, comparing each element with the next one, if the next one is smaller, swap elements
-5.  It continues these iterations until the whole list is sorted
-
-## Write bubble sort -- solution 1
+Use another data structure (like a set) instead
 
 ```{python}
 #| eval: true
 #| echo: true
-def bubble_sort(items):
-  end = len(items)-1
-  for i in range(len(items)-1):
-    for j in range(end):
-      if items[j] > items[j+1]:
-        items[j], items[j+1] = items[j+1], items[j]
-    end -=1
+counts = {"a": 10, "e": 4, "i": 3}
+keys = set(counts)
+for k in keys:
+  counts.pop(k)
+counts
+```
+
+## Write a function
+
+1.  Its name is `remove_records`
+2.  It takes a dictionary as argument, with string keys
+3.  It **mutates** and returns the dictionary argument removing keys that start and end with the same character
+
+```{python}
+#| eval: false
+#| echo: true
+students = {"Anna": "A", "Peter": "B", "Bob": "D", "Cedric": "A"}
+remove_records(students)
+assert students == {"Peter": "B"}
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def remove_records(dictionary):
+  for k in set(dictionary):
+    if len(k) > 0 and k[0].lower() == k[-1].lower():
+      dictionary.pop(k)
+  return dictionary
       
 def main():
-  test_list = [5, 10, 20, 6, 7, 9, 43, 10, 12]
-  bubble_sort(test_list)
-  print(test_list)
+  students = {"Anna": "A", "Peter": "B", "Bob": "D", "Cedric": "A"}
+  remove_records(students)
+  assert students == {"Peter": "B"}
+  print(students)
   
 main()
 ```
 
-8 sweeps, 10 swaps
+## Write a function
 
-## Swaps
+1.  Its name is `repetition`
+2.  It takes a dictionary as argument, with strings as keys and integers as values (you can assume the values are never negative)
+3.  It **mutates** and returns the dictionary, replacing each value with a list of the key repeated by the value
 
-> \[5, 10, 20, 6, 7, 9, 43, 10, 12\]
+```{python}
+#| eval: false
+#| echo: true
+test_dictionary = {"a": 5, "b": 2, "c": 3}
+repetition(test_dictionary)
+assert test_dictionary == {"a": ["a", "a", "a", "a", "a"], 
+                           "b": ["b", "b"], "c": ["c", "c", "c"] }
+```
 
-\[5, 10, 6, 20, 7, 9, 43, 10, 12\]
-
-\[5, 10, 6, 7, 20, 9, 43, 10, 12\]
-
-\[5, 10, 6, 7, 9, 20, 43, 10, 12\]
-
-\[5, 10, 6, 7, 9, 20, 10, 43, 12\]
-
-\[5, 10, 6, 7, 9, 20, 10, 12, 43\]
-
-------------------------------------------------------------------------
-
-> \[5, 10, 6, 7, 9, 20, 10, 12, 43\]
-
-\[5, 6, 10, 7, 9, 20, 10, 12, 43\]
-
-\[5, 6, 7, 10, 9, 20, 10, 12, 43\]
-
-\[5, 6, 7, 9, 10, 20, 10, 12, 43\]
-
-\[5, 6, 7, 9, 10, 10, 20, 12, 43\]
-
-\[5, 6, 7, 9, 10, 10, 12, 20, 43\]
-
-## Write bubble sort -- solution 2
+## Write a function -- solution
 
 ```{python}
 #| eval: true
 #| echo: true
-def bubble_sort(items):
-  is_sorted = False
-  end = len(items)-1
-  while not is_sorted:
-    is_sorted = True
-    for i in range(end):
-      if items[i] > items[i+1]:
-        items[i], items[i+1] = items[i+1], items[i]
-        is_sorted = False
-    end -= 1
-      
+def repetition(dictionary):
+  for key, value in dictionary.items():
+    dictionary[key] = [key] * value
+  return dictionary
+
 def main():
-  test_list = [5, 10, 20, 6, 7, 9, 43, 10, 12]
-  bubble_sort(test_list)
-  print(test_list)
-  
+  test_dictionary = {"a": 5, "b": 2, "c": 3}
+  repetition(test_dictionary)
+  assert test_dictionary == {"a": ["a", "a", "a", "a", "a"], 
+                           "b": ["b", "b"], "c": ["c", "c", "c"] }
+  print(test_dictionary) # {"a": ["a", "a", "a", "a", "a"], 
+                         #  "b": ["b", "b"], "c": ["c", "c", "c"] }
 main()
 ```
 
-3 sweeps, 10 swaps
+## Write a function
 
-## How many total sweeps and swaps to sort this list?
+1.  Its name is `get_names`
+2.  It has two parameters: a `dictionary` that maps one_letter strings to lists of strings, an a `string`
+3.  It returns a list with strings (names) from the lists in the dictionary that include the second parameter (`string`) as a substring (this search is not case sensitive)
+
+Test case:
+
+```{python}
+#| eval: false
+#| echo: true
+names = {"R": ["Randy", "Roger"], "S": ["Steve", "Sally"], "T": ["Tanner"]}
+assert get_names(names, "er") == ["Roger", "Tanner"]
+```
+
+## Write a function -- solution
 
 ```{python}
 #| eval: true
 #| echo: true
-numbers = [ 3, 1, 7, 2, 4 ]
+def get_names(dictionary, string):
+  new_list = []
+  for name_list in dictionary.values():
+    for name in name_list:
+      if string.lower() in name.lower():
+        new_list.append(name)
+  return new_list
+
+def main():
+  names = { "R": ["Randy", "Roger"], 
+            "S": ["Steve", "Sally"], 
+            "T": ["Tanner"] }
+  print( get_names(names, "er") ) # ["Roger", "Tanner"]
+  
+main()
 ```
-
-## How many total sweeps and swaps to sort this list?
-
-> \[ 3, 1, 7, 2, 4 \] first sweep
-
-\[ 1, 3, 7, 2, 4 \] swap
-
-\[ 1, 3, 2, 7, 4 \] swap
-
-\[ 1, 3, 2, 4, 7 \] swap
-
-> \[ 1, 3, 2, 4, 7 \] second sweep
-
-\[ 1, 2, 3, 4, 7 \] swap
-
-> \[ 1, 2, 3, 4, 7 \] third sweep
-
-## How many total sweeps and swaps?
-
-```{python}
-#| eval: true
-#| echo: true
-numbers = [ 3, 1, 7, 2, 4, 8, 5 ]
-```
-
-## How many total sweeps and swaps?
-
-> \[ 3, 1, 7, 2, 4, 8, 5 \] first sweep
-
-\[ 1, 3, 7, 2, 4, 8, 5 \] swap
-
-\[ 1, 3, 2, 7, 4, 8, 5 \] swap
-
-\[ 1, 3, 2, 4, 7, 8, 5 \] swap
-
-\[ 1, 3, 2, 4, 7, 5, 8 \] swap
-
-> \[ 1, 3, 2, 4, 7, 5, 8 \] second sweep
-
-\[ 1, 2, 3, 4, 7, 5, 8 \] swap
-
-\[ 1, 2, 3, 4, 5, 7, 8 \] swap
-
-> \[ 1, 2, 3, 4, 5, 7, 8 \] third sweep
-
-## Lots of algorithms
-
--   There are many sorting algorithms
-
-    -   **Bogo sort**
-
-    -   **Selection sort**
-
-    -   **Bubble sort**
-
-    -   **Insertion sort**
-
-    -   **Merge sort**
-
-    -   **Quick sort**
-
-    -   \...more\...
-
-## Visualization
-
-<https://www.youtube.com/watch?v=kPRA0W1kECg>

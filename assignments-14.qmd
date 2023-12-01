@@ -1,0 +1,73 @@
+---
+title: "Module 13 Programming Problems"
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(readxl)
+assignments <- read_excel("assessment_schedule.xlsx") %>% 
+  mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
+```
+
+Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/568720).
+
+# Programming Problem 25
+
+**Due date: `r assignments %>% filter(assessment == "Module 13 Programming Problems") %>% pull(formatted_date)` at 7pm**
+
+Write a Python function that does the following:
+
+1.  Its name is `swap`
+2.  It takes two arguments: a dictionary and a set
+3.  It swaps the key and value for all of the keys that exist in the dictionary that also exist in the set
+4.  It does not return anything
+
+Test cases:
+
+```{python}
+#| echo: true
+#| eval: false
+dict_data = {'a':'b', 'c':'d', 'e':'f'}
+set_data = {'c', 'e'}
+swap(dict_data, set_data)
+print(dict_data) # {'a': 'b', 'd': 'c', 'f': 'e'}
+
+dict_data = {23:24, 110:120, 50:45, 70:50, 57:1}
+set_data = {23, 110, 57}
+swap(dict_data, set_data)
+print(dict_data) # {50: 45, 70: 50, 24: 23, 120: 110, 1: 57}
+
+dict_data = {23:24, 110:120, 50:45, 70:50, 57:1}
+set_data = {100}
+swap(dict_data, set_data)
+print(dict_data) # {23:24, 110:120, 50:45, 70:50, 57:1}
+```
+
+Name the program `swap_structures.py`. Make sure that gradescope gives you the points for passing the test case.
+
+# Programming Problem 26
+
+**Due date: `r assignments %>% filter(number == 22) %>% pull(formatted_date)` at 7pm**
+
+Write a Python function that does the following:
+
+1.  Its name is `get_elements`
+2.  It two arguments: a `dictionary` with strings as keys and integers as values, and an integer `n`
+3.  It returns a list containing all of the values who fall into at **least one** of these three categories:
+    -   The corresponding key starts with an upper-case letter
+    -   The corresponding key ends with an upper-case letter
+    -   The value is greater than or equal to the second parameter integer
+
+Test cases:
+
+```{python}
+#| echo: true
+#| eval: false
+data = {'Alpha':10, 'bravo':25, 'charliE':15, 'dELTa':2}
+print( get_elements(data, 12) ) # [10, 25, 15]
+```
+
+Name the program `get_specific.py`. Make sure that gradescope gives you the points for passing the test case.

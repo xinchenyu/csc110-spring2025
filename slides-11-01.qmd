@@ -1,308 +1,136 @@
 ---
-title: "data structures -- review (class slides)"
+title: "more on for loops (class slides)"
 format: revealjs
 slide-number: true
 df-print: kable
 ---
 
-# CSc 110 - Data Structures
-
-## Announcements
-
-* Midterm 3 this Wednesday -- BRING PHOTO ID
-  * Review Session -- Gittings 129b (this room) 5-7pm
-  * first hour: review lecture
-  * second hour: group work
-* Fill out SCS (https://scsonline.oia.arizona.edu/) -- if 80% response, one project grade gets dropped
+# CSc 110 - more on for loops lists
 
 
-## Data Structures in Python
+## lists within lists
 
--   lists (mutable)
--   dictionaries (mutable)
--   tuples (immutable)
-
-## Lists
-
--   store:
-    -   ordered items
-    -   elements of different types
--   use square brackets (`[]`) syntax for creating a list
--   allow indexing (integers starting at `0`) with square brackets (`[]`) as well
--   are **mutable**
-
-## Lists
-
-Indexing to retrieve values:
+We've worked with lists of integers, list of strings, and lists of floats -- but we can also have lists of lists:
 
 ```{python}
 #| eval: true
 #| echo: true
-my_list = ["a", 1, "b", 2]
-my_list[0]
+lists = [[9,  8,  7,  8],
+         [10, 20, 30, 4],
+         [5,  50, 55, 4]]
+lists[0]
 ```
-
-Indexing to mutate values:
 
 ```{python}
 #| eval: true
 #| echo: true
-my_list[0] = 5
-my_list
+lists[0][0]
 ```
 
-## List methods
+## 2D lists
 
--   `.append(value)`
--   `.insert(index, value)`
--   `.pop(index)`
--   `.remove(value)`
-
-## Tuples
-
--   store:
-    -   ordered items
-    -   elements of different types
--   use parentheses (`()`) syntax for creating a tuple
--   allow indexing (integers starting at `0`) with square brackets (`[]`)
--   are **immutable**
-
-## Tuples
-
-Indexing to retrieve values:
+-   The "first dimension" is the outer list
+-   The "second dimension" are the inner lists
 
 ```{python}
 #| eval: true
 #| echo: true
-my_tuple = ("a", 1, "b", 2)
-my_tuple[0]
+lists = [[9,  8,  7,  8], # index 0 of outer list
+         [10, 20, 30, 4], # index 1 of outer list
+         [5,  50, 55, 4]] # index 2 of outer list
 ```
 
-Not possible to mutate/change values in tuples
+# 2D lists
 
-No methods to change it (because tuples are immutable)
-
-## Dictionaries
-
--   store pairs of items `key: value`
--   use curly brackets (`{}`) with key and value separated by colon (`:`)
--   allow value retrieval through key with square brackets (`[]`)
--   are **mutable**
-
-## Dictionaries
-
-Use key to retrieve values:
+-   When we draw pictures of 2D lists, the first dimension is the vertical axis, the second is the horizontal
 
 ```{python}
 #| eval: true
 #| echo: true
-my_dict = {"banana": 10, "apple": 3, "orange": 40}
-my_dict["banana"]
+lists = [[9,  8,  7,  8],
+         [10, 20, 30, 4],
+         [5,  50, 55, 4]]
 ```
 
-Use key to add `key: value` pairs:
+![](images/2d_list.png)
 
-```{python}
-#| eval: true
-#| echo: true
-my_dict["pear"] = 5
-my_dict
-```
-
-Use key to mutate value associated with key:
-
-```{python}
-#| eval: true
-#| echo: true
-my_dict["pear"] += 5
-my_dict
-```
-
-## Dictionary methods
-
--   `.values()`
--   `.items()`
--   `.pop()`
-
-## Evaluate the code
-
-Indicate when errors are thrown
+## Evaluate the Expressions
 
 ```{python}
 #| eval: false
 #| echo: true
-my_list = [2, 3, 1, 2]
-my_list.append(3)
-my_list.insert(0, 1)
-my_list[3] = 4
-my_list # evaluate what this list holds at this point
+numbers = [[4, 2, 3],
+           [0, 2, 5]]
+numbers[1][2]   
 
-my_list[6] = 10
-
-my_tupple = (3, 4, 1)
-my_tupple.append(3)
-my_tupple # evaluate what this tuple holds at this point
-
-my_dictionary = {3: 4, 1: 2, 5: 4}
-my_dictionary[5] = 10
-my_dictionary # evaluate what this dictionary holds at this point
-
-my_dictionary.append(4: 5)
-my_dictionary # evaluate what this dictionary holds at this point
+items = [[9, 7, 8],
+         [1, 2, 3, 4, 5, 6],
+         [5],
+         [10, 20, 30]]
+items[1][5]
+items[2][5]
+items[3][2]
 ```
 
-## Evaluate the code
-
-Indicate when errors are thrown
+## Evaluate the Expressions
 
 ```{python}
 #| eval: true
 #| echo: true
-my_list = [2, 3, 1, 2]
-my_list.append(3)
-my_list.insert(0, 1)
-my_list[3] = 4
-my_list # evaluate what this list holds at this point
+numbers = [[4, 2, 3],
+           [0, 2, 5]]
+numbers[1][2]
 ```
 
 ```{python}
 #| eval: true
 #| echo: true
-# error --- my_list[6] = 10
-
-my_tupple = (3, 4, 1)
-# error --- my_tupple.append(3)
-my_tupple # evaluate what this tuple holds at this point
+items = [[9, 7, 8],
+         [1, 2, 3, 4, 5, 6],
+         [5],
+         [10, 20, 30]]
+items[1][5]
 ```
-
-```{python}
-#| eval: true
-#| echo: true
-my_dictionary = {3: 4, 1: 2, 5: 4}
-my_dictionary[5] = 10
-my_dictionary # evaluate what this dictionary holds at this point
-```
-
-```{python}
-#| eval: true
-#| echo: true
-# error --- my_dictionary.append(4: 5)
-my_dictionary # evaluate what this dictionary holds at this point
-```
-
-## Iterating over data structures
-
-Use `for x in data_structure` to retrieve values/keys (cannot make changes with this type of loop)
-
-```{python}
-#| eval: true
-#| echo: true
-my_list = [3, 5, 5]
-for value in my_list:
-  print(value)
-```
-
-```{python}
-#| eval: true
-#| echo: true
-my_tuple = (3, 5, 5)
-for value in my_tuple:
-  print(value)
-```
-
-## Iterating over dictionaries
-
-```{python}
-#| eval: true
-#| echo: true
-my_dictionary = {3: "a", 5: "b"}
-for key in my_dictionary:
-  print(key)
-```
-
-You can change values in a dictionary with `for key in dictionary`
-
-```{python}
-#| eval: true
-#| echo: true
-my_dictionary = {"a": 2, "b": 3}
-for key in my_dictionary:
-  my_dictionary[key] += 1
-my_dictionary
-```
-
-## Iterating over dictionaries
-
-Use `for x in data_structure.method()` for dictionaries
-
-```{python}
-#| eval: true
-#| echo: true
-my_dictionary = {3: "a", 5: "b"}
-for value in my_dictionary.values():
-  print(value)
-```
-
-```{python}
-#| eval: true
-#| echo: true
-my_dictionary = {3: "a", 5: "b"}
-for key, value in my_dictionary.items():
-  print(value)
-  print(key)
-```
-
-## Cannot change size of data structure
-
-It is not possible to remove or add items to a list or a dictionary inside a `for x in data_structure` loop. This is what happens when you try to do so:
-
-Weird behavior:
-
-```{python}
-#| eval: true
-#| echo: true
-my_list = [2, 3, 1, 2]
-for value in my_list:
-  my_list.remove(value)
-my_list
-```
-
-Infinite loop:
 
 ```{python}
 #| eval: false
 #| echo: true
-my_list = [2, 3, 1, 2]
-for value in my_list:
-  my_list.append(value + 1) # this causes an infinite loop
+items[2][5] # will throw error
 ```
 
-## Cannot change size of data structure
+```{python}
+#| eval: true
+#| echo: true
+items[3][2]
+```
 
-It is not possible to remove or add items to a list or a dictionary inside a `for x in data_structure` loop. This is what happens when you try to do so:
-
-Error:
+## `for` loops with lists of lists
 
 ```{python}
-#| eval: false
+#| eval: true
 #| echo: true
-my_dict = {2: 0, 3: 1, 1: 0, 2: 0}
-for key in my_dict:
-  my_dict.pop(key) # this causes an error
+items = [[9, 7, 8],
+         [5],
+         [10, 20, 30]]
+         
+for i in range(len(items)):
+  for j in range(len(items[i])):
+    print( items[i][j] )
 ```
 
 ## Write a function
 
-1.  Its name is `count_names`
-2.  It opens in read mode [a file that contains a name per line](data/names.txt), with repeated names
-3.  It counts how many unique names there are in the file
-4.  It returns an **integer** with the count
-5.  Use a **list** for this
+1.  Its name is `flatten`
+2.  It takes one parameter, which is a list of lists of integers: `numbers`
+3.  It returns a single list that flattens that list of lists into a single list that contains exactly the same values
+4.  Do not use any list methods besides `.append()`
 
 ```{python}
 #| eval: false
 #| echo: true
-assert count_names("names.txt") == 11
+assert flatten([]) == []
+assert flatten([[1, 2, 3], [4, 5, 6]]) == [1, 2, 3, 4, 5, 6]
+assert flatten([[1, 2, 3], [4]]) == [1, 2, 3, 4]
 ```
 
 
@@ -311,62 +139,96 @@ assert count_names("names.txt") == 11
 ```{python}
 #| eval: true
 #| echo: true
-def count_names(file_name):
-  f = open(file_name, "r")
-  name_list = []
-  for line in f:
-    name = line.strip()
-    if name not in name_list:
-      name_list.append(name)
-  f.close()
-  return len(name_list)
+def flatten(numbers):
+  new_list = []
+  for i in range(len(numbers)):
+    for j in range(len(numbers[i])):
+      new_list.append(numbers[i][j])
+  return new_list
 
 def main():
-  assert count_names("names.txt") == 11
-  
+  assert flatten([]) == []
+  assert flatten([[1, 2, 3], [4, 5, 6]]) == [1, 2, 3, 4, 5, 6]
+  assert flatten([[1, 2, 3], [4]]) == [1, 2, 3, 4]
+
 main()
 ```
 
-# Submit code for attendance
-
-Submit your `count_names` functions to Gradescope for attendance.
-
-Name your file `names.py`
-
-
 ## Write a function
 
-1.  Its name is `count_names`
-2.  It opens in read mode [a file that contains a name per line](data/names.txt), with repeated names
-3.  It counts how many unique names there are in the file
-4.  It returns an **integer** with the count
-5.  Use a **dictionary** for this
+1.  Its name is `get_highest_average`
+2.  It takes an argument, `lists`, which is a 2D list of numbers (floats or integers)
+3.  It calculates the mean of each sublist, and returns the highest average
 
 ```{python}
 #| eval: false
 #| echo: true
-assert count_names("names.txt") == 11
+assert get_highest_average([[1, 1, 1], [2, 2]]) == 2
+```
+
+## Write a function
+
+An illustration:
+
+```{mermaid}
+flowchart LR
+  A["[[ ],  <br>  [2, 3, 7], <br> [15, 21, 3, 24], <br> [6, 4] ]"] --> B("len([]) > 0 ?") 
+  A --> SS("len([2, 3, 7]) > 0 ?") --> K["[2, 3, 7]"]
+  A --> SSS("len([15, 2, 3, 8]) > 0 ?") --> S["[15, 2, 3, 8]"]
+  A --> SSSS("len([6, 4]) > 0 ?") --> F["[6, 4]"]
+  K -->id1[calculate mean: 4]
+  S --> id2[calculate mean: 7]
+  F --> id3[calculate mean: 5]
+  id1 --> E["[4, 7, 5]"]
+  id2 --> E
+  id3 --> E
+  
+  L("len([4, 7, 5]) > 0 ?") --> id4[calculate highest mean: 7]
+  
+
+  style id1 fill:#ffd5f1,stroke:#333,stroke-width:2px
+  style id2 fill:#ffd5f1,stroke:#333,stroke-width:2px
+  style id3 fill:#ffd5f1,stroke:#333,stroke-width:2px
+  style id4 fill:#feffad,stroke:#333,stroke-width:2px
 ```
 
 
-
-## Write a functionn -- solution
+## Write a function -- solution
 
 ```{python}
 #| eval: true
 #| echo: true
-def count_names(file_name):
-  f = open(file_name, "r")
-  name_dict = {}
-  for line in f:
-    name = line.strip()
-    if name not in name_dict:
-      name_dict[name] = ""
-  f.close()
-  return len(name_dict)
+def get_highest_average(numbers):
+  means = []
+  for i in range(len(numbers)):
+    if len(numbers[i]) > 0:
+      total_sublist = 0
+      for j in range(len(numbers[i])):
+        total_sublist += numbers[i][j]
+      mean_sublist = total_sublist / len(numbers[i])
+      means.append(mean_sublist)
+  
+  if len(means) > 0:
+    highest_mean = means[0]
+    for i in range(len(means)):
+      if means[i] > highest_mean:
+        highest_mean = means[i]
+        
+    return highest_mean
 
 def main():
-  assert count_names("names.txt") == 11
+  assert get_highest_average([[1, 1, 1], [2, 2]]) == 2
+  assert get_highest_average([[1, 1, 1], []]) == 1
+  assert get_highest_average([[], []]) == None
+  assert get_highest_average([]) == None
+  
+  weeks = [ [100, 100, 105, 105, 102, 102, 100],
+            [70, 71, 75, 72, 81, 80, 74],
+            [78, 72, 74, 71, 70, 70, 70],
+            [30, 32, 40, 38, 31, 32, 30] ]
+  average = get_highest_average(weeks)
+  assert average == 102
   
 main()
+      
 ```

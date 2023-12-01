@@ -1,100 +1,196 @@
 ---
-title: "handling exceptions (class slides)"
+title: "more on lists (class slides)"
 format: revealjs
 slide-number: true
 df-print: kable
 ---
 
+# CSc 110 -- More lists
 
-# CSC -- handling errors (or exceptions)
+## Announcements
 
-## `try:` and `except:`
+*	Fill out SCS (https://scsonline.oia.arizona.edu/) – if 80% response rate for whole class, one project grade gets dropped
 
-* Can be used to catch errors in a program without it having to crash!
-* The programmer can provide more information and/or context as to what happened
-* Can make debugging easier if you provide clear error messages
+About the final exam:
 
-## `try:` and `except:`
+-   Thursday, December 14, 2023 – 6:00pm - 8:00pm in [ENR2](https://maps.app.goo.gl/RiDaC9Np7M8LVPYZ7) room N120 
+-   Find the room before final date
+-   Do not bring excess stuff – space is limited
+-   Practice writing on smaller desk
 
-```{python}
-#| echo: true
-#| eval: true
-ages = [35, 35, 23, 18, 45, 18, 72]
-try:
-    print(ages[0] + ages[4])
-except:
-    print('Failed to print the sum of two ages')
-```
+
+## Combining lists
+
+What will happen? Run this code on your computer and on [Python Tutor](https://pythontutor.com/visualize.html)
 
 ```{python}
-#| echo: true
-#| eval: true
-ages = [35, 35, 23, 18, 45, 18, 72]
-try:
-    print(ages[0] + ages[7])
-except:
-    print('Failed to print the sum of two ages')
-```
-
-## `try:` and `except:`
-
-```{python}
-#| echo: true
-#| eval: true
-ages = [35, 35, 23, 18, 45, 18, 72]
-try:
-    print(ages[0] + ages[7])
-except:
-    print('Failed to print the sum of two ages')
-    print('Tried to get a value from an index that does not exist in the list')
-```
-
-```{python}
-#| echo: true
 #| eval: false
-ages = [35, 35, 23, 18, 45, 18, 72]
-print(ages[0] + ages[7])
+#| echo: true
+vegetables = ["kale", "carrot", "peas", "celery"]
+fruits = ["banana", "tomato", "pear"]
+vegetables + fruits
 ```
 
-IndexError: list index out of range
+What will happen below? Will vegetables be mutated?
+
+```{python}
+#| eval: false
+#| echo: true
+def combine_lists(list_1, list_2):
+  list_1 = list_1 + list_2
+  return list_1
+  
+if __name__ == "__main__":
+  vegetables = ["kale", "carrot", "peas", "celery"]
+  fruits = ["banana", "tomato", "pear"]
+  combine_lists(vegetables, fruits)
+  vegetables
+```
+
+## Combining lists
+
+What will happen? Run this code on your computer and on [Python Tutor](https://pythontutor.com/visualize.html) the difference between the two chunks of code (the one above and the one below)?
+
+```{python}
+#| eval: true
+#| echo: true
+def combine_lists(list_1, list_2):
+  for item in list_2:
+    list_1.append(item)
+  return list_1
+  
+if __name__ == "__main__":
+  vegetables = ["kale", "carrot", "peas", "celery"]
+  fruits = ["banana", "tomato", "pear"]
+  combine_lists(vegetables, fruits)
+  print(vegetables)
+```
+
+## Combining lists
+
+What will happen? Run this code on your computer and on [Python Tutor](https://pythontutor.com/visualize.html) the difference between the two chunks of code (the one above and the one below)?
+
+```{python}
+#| eval: true
+#| echo: true
+def combine_lists(list_1, list_2):
+  list_1.extend(list_2)
+  return list_1
+  
+if __name__ == "__main__":
+  vegetables = ["kale", "carrot", "peas", "celery"]
+  fruits = ["banana", "tomato", "pear"]
+  combine_lists(vegetables, fruits)
+  print(vegetables)
+```
+
+## list methods
+
+* `.append(value)`
+* `.insert(index, value)`
+* `.pop(index)`
+* `.remove(value)`
+* `.extend(list)`
+
+## Evaluate the code
+
+Indicate when an **error** occurs.
+
+```{python}
+#| eval: false
+#| echo: true
+numbers = [1, 2, 31, 0, 2]
+numbers.append(40)
+numbers # evaluate this at this point
+
+numbers.insert(3, 10)
+numbers # evaluate this at this point
+
+numbers.remove(2)
+numbers # evaluate this at this point
+
+numbers.pop(2)
+numbers # evaluate this at this point
+
+new_list = [40, 50, 60]
+numbers.extend(new_list)
+numbers # evaluate this at this point
+```
+
+## Evaluate the code -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+numbers = [1, 2, 31, 0, 2]
+numbers.append(40)
+numbers # evaluate this at this point
+```
+
+
+```{python}
+#| eval: true
+#| echo: true
+numbers.insert(3, 10)
+numbers # evaluate this at this point
+```
+
+
+```{python}
+#| eval: true
+#| echo: true
+numbers.remove(2)
+numbers # evaluate this at this point
+```
+
+
+```{python}
+#| eval: true
+#| echo: true
+numbers.pop(2)
+numbers # evaluate this at this point
+```
+
+
+```{python}
+#| eval: true
+#| echo: true
+new_list = [40, 50, 60]
+numbers.extend(new_list)
+numbers # evaluate this at this point
+```
 
 ## Write a function
 
-1. Its name is `read_numbers`
-1. It takes a string for a file name
-1. It opens the file in read mode, it splits the lines by space
-1. It returns a list with all float numbers in the file
-1. [Download test file](data/weather.txt)
+1. Its name is `remove_and_append`
+1. It has three parameters, all lists: `original_list`, `to_remove_list`, `to_append_list`
+1. It **mutates** the `original_list` removing values found in `to_remove_list` and then appending the values in `to_append_list`
 
+Test case:
 ```{python}
-#| echo: true
 #| eval: false
-print( read_numbers("weather.txt") ) # [89.5, 50.2, 93.4, 69.0]
+#| echo: true
+test_list = [1, 2, 3]
+remove_and_append(test_list, [2, 3, 4], [10, 11])
+assert test_list == [1, 10, 11]
 ```
 
 ## Write a function -- solution
 
-
 ```{python}
-#| echo: true
 #| eval: true
-def read_numbers(file_name):
-  floats = []
-  not_floats = []
-  f = open(file_name, "r")
-  for line in f:
-    words = line.strip().split(" ")
-    for w in words:
-      try:
-        floats.append(float(w))
-      except:
-        not_floats.append(w)
-  f.close()
-  return floats
+#| echo: true
+def remove_and_append(original_list, to_remove_list, to_append_list):
+  for item in to_remove_list:
+    if item in original_list:
+      original_list.remove(item)
+  original_list.extend(to_append_list)
+  return original_list
 
-def main():
-  print( read_numbers("weather.txt") ) # [89.5, 50.2, 93.4, 69.0]
-  
-main()
+if __name__ == "__main__":
+  test_list = [1, 2, 3]
+  remove_and_append(test_list, [2, 3, 4], [10, 11])
+  assert test_list == [1, 10, 11]
+  print(test_list) # [1, 10, 11]
 ```
 

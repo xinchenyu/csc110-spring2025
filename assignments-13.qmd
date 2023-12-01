@@ -1,6 +1,7 @@
 ---
-title: "Module 13 Programming Problems"
+title: "Module 12 Programming Problems"
 ---
+
 
 ```{r}
 #| echo: false
@@ -12,62 +13,54 @@ assignments <- read_excel("assessment_schedule.xlsx") %>%
   mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
 ```
 
+
 Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/568720).
 
-# Programming Problem 25
+# Programming Problem 23
 
-**Due date: `r assignments %>% filter(assessment == "Module 13 Programming Problems") %>% pull(formatted_date)` at 7pm**
+**Due date: `r assignments %>% filter(assessment == "Module 12 Programming Problems") %>% pull(formatted_date)` at 7pm**
 
 Write a Python function that does the following:
 
-1.  Its name is `swap`
-2.  It takes two arguments: a dictionary and a set
-3.  It swaps the key and value for all of the keys that exist in the dictionary that also exist in the set
-4.  It does not return anything
+1.  Its name is `sum_nums`
+2.  It takes two arguments: a list of list (2D list) of `integers` and `n` an integers
+3.  It iterates through all of the numbers, and sum all of the ones whose value is less than `n`
+4.  It returns the sum
 
 Test cases:
 
 ```{python}
 #| echo: true
 #| eval: false
-dict_data = {'a':'b', 'c':'d', 'e':'f'}
-set_data = {'c', 'e'}
-swap(dict_data, set_data)
-print(dict_data) # {'a': 'b', 'd': 'c', 'f': 'e'}
-
-dict_data = {23:24, 110:120, 50:45, 70:50, 57:1}
-set_data = {23, 110, 57}
-swap(dict_data, set_data)
-print(dict_data) # {50: 45, 70: 50, 24: 23, 120: 110, 1: 57}
-
-dict_data = {23:24, 110:120, 50:45, 70:50, 57:1}
-set_data = {100}
-swap(dict_data, set_data)
-print(dict_data) # {23:24, 110:120, 50:45, 70:50, 57:1}
+print( sum_nums([[2, 12, 2], [12, 5, 100, 9]], 10) ) # 18
+print( sum_nums([[2, 12, 2], [10, 5, 10, 9]], 10) ) # 18
+print( sum_nums([[2, 12, 2], [10, 5, 10, 9]], 0) ) # 0
+print( sum_nums([], 10) ) # 0
 ```
 
-Name the program `swap_structures.py`. Make sure that gradescope gives you the points for passing the test case.
+Name the program `sums.py`. Make sure that gradescope gives you the points for passing the test case.
 
-# Programming Problem 26
+# Programming Problem 24
 
-**Due date: `r assignments %>% filter(number == 22) %>% pull(formatted_date)` at 7pm**
+**Due date: `r assignments %>% filter(number == 21) %>% pull(formatted_date)` at 7pm**
 
 Write a Python function that does the following:
 
-1.  Its name is `get_elements`
-2.  It two arguments: a `dictionary` with strings as keys and integers as values, and an integer `n`
-3.  It returns a list containing all of the values who fall into at **least one** of these three categories:
-    -   The corresponding key starts with an upper-case letter
-    -   The corresponding key ends with an upper-case letter
-    -   The value is greater than or equal to the second parameter integer
+1.  Its name is `longest_string`
+2.  It takes one argument: a list of dictionaries
+3.  The keys in each dictionary could be of various types, but you may assume that the values will be strings
+4.  It returns the longest string value from all of the dictionaries in the list
 
 Test cases:
 
 ```{python}
 #| echo: true
 #| eval: false
-data = {'Alpha':10, 'bravo':25, 'charliE':15, 'dELTa':2}
-print( get_elements(data, 12) ) # [10, 25, 15]
+data = [{'a':'horse', 'b':'caterpillar'}, {'a':'camp', 'c':'joker'}]
+print( longest_string(data) ) # caterpillar
+
+data = [{1:'abc', 5:'onetwothree'}, {2:'abcd'}, {7:'one two three'}]
+print( longest_string(data) ) # one two three
 ```
 
-Name the program `get_specific.py`. Make sure that gradescope gives you the points for passing the test case.
+Name the program `longest.py`. Make sure that gradescope gives you the points for passing the test case.
