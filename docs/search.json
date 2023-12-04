@@ -2482,14 +2482,14 @@
     "href": "slides-07-03.html#announcements",
     "title": "random (class slides)",
     "section": "Announcements",
-    "text": "Announcements\n\nFill out SCS (https://scsonline.oia.arizona.edu/) – if 80% response rate for whole class, one project grade gets dropped\n\nAbout the final exam:\n\nThursday, December 14, 2023 – 6:00pm - 8:00pm in ENR2 room N120\nFind the room before final date\nDo not bring excess stuff – space is limited\nPractice writing on smaller desk"
+    "text": "Announcements"
   },
   {
     "objectID": "slides-07-03.html#random-module",
     "href": "slides-07-03.html#random-module",
     "title": "random (class slides)",
     "section": "random module",
-    "text": "random module\nRemember to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random()\nprint(n)\n\nn = random.randint(0, 9)\nprint(n)\n\n0.07591367660502712\n0"
+    "text": "random module\nRemember to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random()\nprint(n)\n\nn = random.randint(0, 9)\nprint(n)\n\n0.2012753651286301\n1"
   },
   {
     "objectID": "slides-07-03.html#write-a-function",
@@ -2503,7 +2503,7 @@
     "href": "slides-07-03.html#write-a-function-solution",
     "title": "random (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nMary"
+    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nJune"
   },
   {
     "objectID": "slides-07-03.html#setting-a-seed",
