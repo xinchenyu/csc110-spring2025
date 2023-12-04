@@ -32,6 +32,7 @@ website:
         - project-8.qmd
         - project-9.qmd
         - project-10.qmd
+        - project-11.qmd
       - section: "Extra Resources"
         contents: 
         - practice-01.qmd
@@ -89,6 +90,7 @@ website:
         - control_flow_for.md
         - slides-07-01.qmd
         - slides-07-02.qmd
+        - slides-07-03.qmd
         - assignments-07.qmd
       - section: "Module 8 - Data Structures (dictionaries)"
         contents:
@@ -129,7 +131,6 @@ website:
         contents:
         - slides-14-01.qmd
         - slides-14-02.qmd
-        - slides-14-03.qmd
         - assignments-14.qmd
       - section: "Module 15 - Handling Exceptions"
         contents:

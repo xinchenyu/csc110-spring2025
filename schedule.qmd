@@ -155,6 +155,7 @@ All assignments that are submitted on Gradescope are due at 7pm (Tuesdays for pr
 
 -   [mutability](slides-07-01.html)
 -   [for loops with range](slides-07-02.html)
+-   [module random](slides-07-03.html)
 
 ## Assignments
 
@@ -265,8 +266,7 @@ All assignments that are submitted on Gradescope are due at 7pm (Tuesdays for pr
 ## Class slides
 
 -   [more on lists](slides-14-01.html)
--   [combining data structures](slides-14-02.html)
--   [sorting](slides-14-03.html)
+-   [sorting](slides-14-02.html)
 
 ## Assignments
 
