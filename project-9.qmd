@@ -16,309 +16,141 @@ Programming Projects are to be submitted to [gradescope]().
 
 **Due date: `r assignments %>% filter(assessment == "Programming Project 9") %>% pull(formatted_date)` at 7pm**
 
-This programming project is an adaptation of Ben Dicken's Minesweeper Programming Assignment.
+This programming project is an adaptation of Ben Dicken's Infographic Programming Assignment.
 
-You should name the file `minesweeper.py`. 
+# Creating information files
 
-# Minesweeper
+In this programming problem, you will be writing a program that reads in a text file (perhaps containing the contents of a book, poem, article, etc) and produces an information file based on the text. You will need to use one or more dictionaries to count words in the program. You may also use lists and / or sets. 
 
-Minesweeper is a one player puzzle game that was often preinstalled with older versions of Windows. The goal of the game is to clear a grid of squares, one at a time, trying to avoid any squares that have hidden mines. Upon clearing a square, a number may appear which tells how many mines are adjacent to the given square. Selecting a square containing a mine results in an instant loss, while revealing all non-mine squares results in a win. There are still versions of this game around, like [this one made by Google](https://www.google.com/fbx?fbx=minesweeper).
+The information file should contain the following information about the text:
 
-## Minesweeper Rules
+* The name of the text file
+* The total number of words.
+* The most used small, medium, and large words in the file. For the purposes of this project, the definitions of a small, medium, and large word is:
+    * small: length 0-4, inclusive.
+    * medium: length 5-7, inclusive.
+    * large: length 8+, inclusive.
+* The frequencies and percentages for each word length category
+* The frequencies and percentages for each capitalized word category
+* The frequencies and percentages for each punctuated word category
 
-For this assignment, we are going to simplify some of the rules of the original game while still keeping the core of the game intact. Instead of clicking on squares your program will be given coordinates. The primary gameplay loop is going to be generating coordinates to a square on the board upon which the square is revealed. There are two possibilities for what a square can contain.
-
-If a "X" is revealed, this is a mine which results in an instant loss.
-
-Otherwise, an integer is revealed, which is the number of adjacent (including diagonally) mines from the revealed square (including 0, which is handled differently by the original game). All integers around the given coordinates are also revealed (the mines remain hidden).
-
-For example, let's say a player is provided the given board:
-
-<pre>
- 2 [ ][ ][ ]
- 1 [ ][ ][ ]
- 0 [ ][ ][ ]
-    a  b  c
-</pre>
-
-If the the coordinates `(0, "a") `are provided, a result may be:
-
-<pre>
- 2 [ ][ ][ ]
- 1 [1][ ][ ]
- 0 [1][2][ ]
-    a  b  c
-</pre>
-
-This means that at `(0, "a")` there is not a mine, however there is one nearby. We know there's no mine in `(1, "a")` because the integer `1` was also revealed. Specifically there is probably a mine in `(1, "b")`. Suppose the player's next move is c0, which would produce:
-
-<pre>
- 2 [ ][ ][ ]
- 1 [1][ ][ ]
- 0 [1][2][2]
-    a  b  c
-</pre>
-
-The 2 revealed means that there would be 2 mines somewhere among `(1, "b")`, `(1, "c")` and `(0, "c")`. After this let's say the coordinates `(1, "b")` are provided.
-
-<pre>
- 2 [ ][ ][ ]
- 1 [1][X][ ]
- 0 [1][2][2]
-    a  b  c
-</pre>
-
-Since this reveals an X the game has ended and the player loss. If all non-mine squares were revealed, the player would have won.
-
-## Input File Format
-
-All files used for testing are going to follow the same formatting. The first line will contain an integer which is the width of the board. Similarly, the second line will contain the height. There will then be N (Height of the board) more lines. Each of these lines will contain X (Width of the board) elements separated by commas. Each element may be either a 1 or 0. Provided below is what an example file would look like:
-
-
-```{html}
-2
-3
-0, 1
-1, 0
-0, 1
-```
+Name your Python file `infofile.py`.
 
 # Development Strategy
 
-In order to get the game working, you must implement several functions. Descriptions for what every function should do are provided below. Implementing and testing these functions is up to you.
+## (1) Reading and processing the file
 
-## Functions to Implement
+The first step is to open an input file and read in all of the lines and strip the newlines off of the ends. To get the words, all you have to do is split each line on whitespace. To accomplish this, just call `split()` on each line string, with no argument. You can then append each individual word to a python list. You do not need to strip off punctuation from the words or normalize the cases.
 
-### read_file
-
-For this file, for example:
+For example, if you input file had the following content:
 
 ```{html}
-5
-5
-1, 0, 0, 0, 0
-1, 0, 0, 0, 0
-0, 1, 0, 0, 0
-0, 0, 0, 0, 1
-1, 0, 0 ,0, 1
+two forks.
+one knife.
+two glasses.
+one plate.
+one napkin.
+his glasses.
+his knife.
 ```
 
-Your function should return:
-
-```{python}
-#| eval: false
-#| echo: true
-[['X', '0', '0', '0', '0'],
- ['X', '0', '0', '0', '0'],
- ['0', 'X', '0', '0', '0'],
- ['0', '0', '0', '0', 'X'],
- ['X', '0', '0', '0', 'X']]
-```
-
-
-### make_empty_grid
-
-Return a 2D list that has the same dimensions of a passed in 2D list where every inner element is an empty space. For example, if the passed in the grid is:
+The words list should have the following content after processing the file:
 
 ```{python}
 #| echo: true
 #| eval: false
-[['X', '3', 'X'], ['2', 'X', '2']]
+words = ['two', 'forks.', 'one', 'knife.', 'two', 'glasses.', \
+         'one', 'plate.', 'one', 'napkin.', 'his,' 'glasses.', 'his', 'knife.']
 ```
 
-Return:
+## (2) Counting words
+
+Once you have a list of all of the words from the file, you can count the occurrences. You should use a dictionary for this. Continuing from the example of the last step, the dictionary should have the following contents:
 
 ```{python}
 #| echo: true
 #| eval: false
-[[' ', ' ', ' '], [' ', ' ', ' ']]
+word_counts = {'two':2, 'one':3, 'forks.':1, 'knife.':2, \
+               'glasses.':2, 'plate.':1, 'napkin.':1, 'his':2}
 ```
 
-### update_grid
+## (3) Finding most occurrences
 
-Takes in a single 2D list where every value is either "X" or "0" (Note the formatting is going to be the same as the list returned by read_file). The function should then replace all the 0’s with the number of adjacent mines, which is some cases will still be 0. As we are modifying an already existing list nothing is to be returned by the function. For example, if passed in the result of reading [fiveByFive.txt](data/fiveByFive.txt)
+Next, you can find the small, medium, and large words that occur the most. In the example, it would be `one` for small, `knife.` for medium, and `glasses.` for large. You can do this by iterating through the key and value pairs in the `word_counts` dictionary, and keeping track of which has the highest count. 
 
-Which is:
+## (4) Counting Capitalized
 
+Next, compute how many unique capitalized and non-capitalized. You can do this by getting the keys of the `word_counts` dictionary as a list, and then looping through them all.
 
-```{python}
-#| echo: true
-#| eval: false
-[['X', '0', '0', '0', '0'], 
- ['X', '0', '0', '0', '0'], 
- ['0', 'X', '0', '0', '0'], 
- ['0', '0', '0', '0', 'X'], 
- ['X', '0', '0', '0', 'X']]
+## (5) Counting Punctuated
+
+Compute how many unique punctuated and non-punctuated words there are. Use a similar process as you did for step (4).
+
+## (6) Writing the information file
+
+You should write a text file with three sections on the information you compiled. Here's an example of what the file should look like for the contents of the file in section `(1)`.
+
+```{html}
+Total number of unique words: 8
+Most frequent words by size:
+* Small: one
+* Medium: knife.
+* Large: glasses.
+
+Length:
+* Small: 3 (37.5%)
+* Medium: 4 (50.0%)
+* Large: 1 (12.5%)
+###################%%%%%%%%%%%%%%%%%%%%%%%%%******
+
+Capitalization:
+* Capitalized: 0 (0.0%)
+* Non-capitalized: 8 (100.0%)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Punctuation:
+* Punctuated: 5 (62.5%)
+* Non-punctuated: 3 (37.5%)
+###############################%%%%%%%%%%%%%%%%%%%
 ```
 
 
-The function should modify it to become:
+To calculate how many characters in each bar use the formula:
 
 ```{python}
-#| echo: true
 #| eval: false
-[['X', '2', '0', '0', '0'], 
- ['X', '3', '1', '0', '0'], 
- ['2', 'X', '1', '1', '1'], 
- ['2', '2', '1', '2', 'X'], 
- ['X', '1', '0', '2', 'X']]
+#| echo: true
+(category_item_count/total_item_count) * 50
 ```
 
-### dig
+# Resource Files
 
-It handles the actual making of a move.
+Below are some resource files you might find interesting to run your program with.
 
-Takes in three parameters:
+* [poem.txt](data/poem.txt)
+* [Cat_in_the_Hat.txt](data/Cat_in_the_Hat.txt)
 
-* The first is a 2D list that follows the formatting of the grid returned from `update_grid.` This 2D list serves as an answer key of sorts that contains what to reveal to the user. As squares are revealed the values are copied from here to the user's view.
-* The second parameter is a string which is the coordinate to reveal. Not that this is formatted so that the first character is a letter, which is the x position to reveal. The rest of the string is going to be a number which is the y position to reveal. "a0" For example would reveal the bottom left corner of the grid.
-* The third parameter is a 2D list, which is used to show which squares the player has revealed. Initially, this grid will be formatted as the return value from `make_empty_grid`, however, as the player reveals more squares those corresponding values from the answer key list are going to be moved into this grid we are going to refer to as the user view.
+If you'd like to try the program on other books, you can visit [gutenberg.org](https://gutenberg.org/).
 
-To actually make a move requires translating the string into two integers which are the corresponding values to use as indices to get the value at that point on the grid. Then, copy the value from that location (using those new values) on the answer key grid into the same spot of the user view grid.
-
-The next step is to check all the squares around the given coordinates, revealing only the integers for those squares, keeping the mines hidden.
-
-### count_total_moves
-
-It returns the number of spots on the grid that have not been revealed by the player and do not contain a mine.
-
-### print_grid
-
-Takes in a 2D list and prints it out to standard output. For example printing the initial user view (remember the user view is the blank grid made from `make_empty_grid`) of the grid from [tenSquare.txt](data/tenSquare.txt) should output:
-
-<pre>
-10 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 9 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 8 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 7 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 6 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 5 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 4 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 3 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 2 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 1 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 0 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-    a  b  c  d  e  f  g  h  i  j  k
-</pre>
-
-Take note of how the number labels are right-aligned. For the letter labels you can assume that the width will be at most 26 (One for each lower case letter) and the height will be 100 or less. You may also assume that every element in the 2D list will be only a single character string.
-
-### determine_game_status
-
-This function should return a boolean which is `True` if the game should continue or `False` if the game is over. `False` is returned if a mine has been revealed or count is `0` meaning there are no squares without mines that are not revealed.
-
-# Test cases
-
-Files:
-
-* [fiveByFive.txt](data/fiveByFive.txt)
-* [tenSquare.txt](data/tenSquare.txt)
-
-
-## Full game win
+# Test case
 
 ```{python}
-#| echo: true
 #| eval: false
+#| echo: true
 if __name__ == '__main__':
-    grid = read_file("fiveByFive.txt")
-    user_view = make_empty_grid(grid)
-    update_grid(grid)
-    moves = ["b0", "c2", "e4", "c4", "e2", "a2", "d0"]
-    index = 0
-    while determine_game_status(grid, user_view) and index < len(moves):
-        dig(grid, moves[index], user_view)
-        index += 1
+    word_list = text_to_list("test.txt")
+    assert word_list == ['two', 'forks.', 'one', 'knife.', 'two', 'glasses.', \
+         'one', 'plate.', 'one', 'napkin.', 'his', 'glasses.', 'his', 'knife.']
+    
+    word_counts = count_words(word_list)    
+    assert word_counts == {'two':2, 'one':3, 'forks.':1, 'knife.':2, \
+               'glasses.':2, 'plate.':1, 'napkin.':1, 'his':2}
+    
+    assert most_frequent(word_counts) == ('one', 'knife.', 'glasses.')
+    assert count_capitalized(word_counts) == (0, 8)
+    assert count_punctuated(word_counts) == (5, 3)
+    assert count_sizes(word_counts) == (3, 4, 1)
+    
+    write_results(word_counts, filename)
 ```
 
-Should print to the standard output the following:
-
-<pre>
- 4[ ][ ][ ][ ][ ]
- 3[ ][ ][ ][ ][ ]
- 2[ ][ ][ ][ ][ ]
- 1[2][2][1][ ][ ]
- 0[ ][1][0][ ][ ]
-   a  b  c  d  e  
- 4[ ][ ][ ][ ][ ]
- 3[ ][3][1][0][ ]
- 2[ ][ ][1][1][ ]
- 1[2][2][1][2][ ]
- 0[ ][1][0][ ][ ]
-   a  b  c  d  e  
- 4[ ][ ][ ][0][0]
- 3[ ][3][1][0][0]
- 2[ ][ ][1][1][ ]
- 1[2][2][1][2][ ]
- 0[ ][1][0][ ][ ]
-   a  b  c  d  e  
- 4[ ][2][0][0][0]
- 3[ ][3][1][0][0]
- 2[ ][ ][1][1][ ]
- 1[2][2][1][2][ ]
- 0[ ][1][0][ ][ ]
-   a  b  c  d  e  
- 4[ ][2][0][0][0]
- 3[ ][3][1][0][0]
- 2[ ][ ][1][1][1]
- 1[2][2][1][2][ ]
- 0[ ][1][0][ ][ ]
-   a  b  c  d  e  
- 4[ ][2][0][0][0]
- 3[ ][3][1][0][0]
- 2[2][ ][1][1][1]
- 1[2][2][1][2][ ]
- 0[ ][1][0][ ][ ]
-   a  b  c  d  e  
- 4[ ][2][0][0][0]
- 3[ ][3][1][0][0]
- 2[2][ ][1][1][1]
- 1[2][2][1][2][ ]
- 0[ ][1][0][2][ ]
-   a  b  c  d  e  
-</pre>
-
-## Full game lose
-
-```{python}
-#| echo: true
-#| eval: false
-if __name__ == '__main__':
-    grid = read_file("fiveByFive.txt")
-    user_view = make_empty_grid(grid)
-    update_grid(grid)
-    moves = ["b0", "c2", "e4", "b2", "e2", "a2", "d0"]
-    index = 0
-    while determine_game_status(grid, user_view) and index < len(moves):
-        dig(grid, moves[index], user_view)
-        index += 1
-```
-
-Should output:
-
-<pre>
- 4[ ][ ][ ][ ][ ]
- 3[ ][ ][ ][ ][ ]
- 2[ ][ ][ ][ ][ ]
- 1[2][2][1][ ][ ]
- 0[ ][1][0][ ][ ]
-   a  b  c  d  e  
- 4[ ][ ][ ][ ][ ]
- 3[ ][3][1][0][ ]
- 2[ ][ ][1][1][ ]
- 1[2][2][1][2][ ]
- 0[ ][1][0][ ][ ]
-   a  b  c  d  e  
- 4[ ][ ][ ][0][0]
- 3[ ][3][1][0][0]
- 2[ ][ ][1][1][ ]
- 1[2][2][1][2][ ]
- 0[ ][1][0][ ][ ]
-   a  b  c  d  e  
- 4[ ][ ][ ][0][0]
- 3[ ][3][1][0][0]
- 2[ ][X][1][1][ ]
- 1[2][2][1][2][ ]
- 0[ ][1][0][ ][ ]
-   a  b  c  d  e  
-</pre>
