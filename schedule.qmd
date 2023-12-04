@@ -161,7 +161,7 @@ All assignments that are submitted on Gradescope are due at 7pm (Tuesdays for pr
 -   [Programming Project 5](project-5.html) -- Due date: `r assignments %>% filter(assessment == "Programming Project 5") %>% pull(formatted_date)` at 7pm
 
 
-# Week 8 (`r schedule %>% filter(week_number == 9 & term == "spring 2024") %>% pull(formatted_start)`)
+# Week 8 (`r schedule %>% filter(week_number == 8 & term == "spring 2024") %>% pull(formatted_start)`)
 
 ## Readings
 
@@ -177,7 +177,7 @@ All assignments that are submitted on Gradescope are due at 7pm (Tuesdays for pr
 -   [Module 8 Programming Problems](assignments-08.html) -- Due date: `r assignments %>% filter(assessment == "Module 8 Programming Problems") %>% pull(formatted_date)` at 7pm
 -   [Programming Project 6](project-6.html) -- Due date: `r assignments %>% filter(assessment == "Programming Project 6") %>% pull(formatted_date)` at 7pm
 
-# Week 9 (`r schedule %>% filter(week_number == 10 & term == "spring 2024") %>% pull(formatted_start)`)
+# Week 9 (`r schedule %>% filter(week_number == 9 & term == "spring 2024") %>% pull(formatted_start)`)
 
 ## Readings
 
@@ -194,9 +194,7 @@ All assignments that are submitted on Gradescope are due at 7pm (Tuesdays for pr
 
 
 
-# Week 10 (`r schedule %>% filter(week_number == 11 & term == "spring 2024") %>% pull(formatted_start)`)
-
-## Midterm 2 (`r assignments %>% filter(assessment == "Midterm 2") %>% pull(formatted_date)`)
+# Week 10 (`r schedule %>% filter(week_number == 10 & term == "spring 2024") %>% pull(formatted_start)`)
 
 ## Readings
 
@@ -211,7 +209,9 @@ All assignments that are submitted on Gradescope are due at 7pm (Tuesdays for pr
 -   [Programming Project 7](project-7.html) -- Due date: `r assignments %>% filter(assessment == "Programming Project 7") %>% pull(formatted_date)` at 7pm
 
 
-# Week 11 (`r schedule %>% filter(week_number == 12 & term == "spring 2024") %>% pull(formatted_start)`)
+# Week 11 (`r schedule %>% filter(week_number == 11 & term == "spring 2024") %>% pull(formatted_start)`)
+
+## Midterm 2 (`r assignments %>% filter(assessment == "Midterm 2") %>% pull(formatted_date)`)
 
 ## Readings
 
