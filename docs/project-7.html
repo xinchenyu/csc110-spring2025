@@ -254,7 +254,7 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./project-8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programming Project 8</span></a>
+ <span class="menu-text">Programming Project 7</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -896,22 +896,12 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#spell-check" id="toc-spell-check" class="nav-link active" data-scroll-target="#spell-check">Spell Check</a></li>
-  <li><a href="#program-behavior" id="toc-program-behavior" class="nav-link" data-scroll-target="#program-behavior">Program behavior</a></li>
-  <li><a href="#misspellings.txt" id="toc-misspellings.txt" class="nav-link" data-scroll-target="#misspellings.txt">misspellings.txt</a></li>
-  <li><a href="#preserving-capitalization" id="toc-preserving-capitalization" class="nav-link" data-scroll-target="#preserving-capitalization">Preserving Capitalization</a></li>
-  <li><a href="#ignoring-punctuation" id="toc-ignoring-punctuation" class="nav-link" data-scroll-target="#ignoring-punctuation">Ignoring Punctuation</a></li>
-  <li><a href="#development-strategy" id="toc-development-strategy" class="nav-link" data-scroll-target="#development-strategy">Development Strategy</a>
+  <li><a href="#read-input-file" id="toc-read-input-file" class="nav-link active" data-scroll-target="#read-input-file">Read input file</a></li>
+  <li><a href="#count-start-digits" id="toc-count-start-digits" class="nav-link" data-scroll-target="#count-start-digits">Count start digits</a></li>
+  <li><a href="#calculate-percentages" id="toc-calculate-percentages" class="nav-link" data-scroll-target="#calculate-percentages">Calculate percentages</a></li>
+  <li><a href="#does-it-follow-the-law" id="toc-does-it-follow-the-law" class="nav-link" data-scroll-target="#does-it-follow-the-law">Does it follow the law?</a>
   <ul class="collapse">
-  <li><a href="#reading-in-misspellings.txt" id="toc-reading-in-misspellings.txt" class="nav-link" data-scroll-target="#reading-in-misspellings.txt">(1) Reading in misspellings.txt</a></li>
-  <li><a href="#replacing-words" id="toc-replacing-words" class="nav-link" data-scroll-target="#replacing-words">(2) Replacing words</a></li>
-  <li><a href="#handle-punctuation-handle-capitalization" id="toc-handle-punctuation-handle-capitalization" class="nav-link" data-scroll-target="#handle-punctuation-handle-capitalization">(3) Handle Punctuation / Handle Capitalization</a></li>
-  <li><a href="#write-out-output-file" id="toc-write-out-output-file" class="nav-link" data-scroll-target="#write-out-output-file">(4) Write out output file</a></li>
-  </ul></li>
-  <li><a href="#test-cases" id="toc-test-cases" class="nav-link" data-scroll-target="#test-cases">Test Cases</a>
-  <ul class="collapse">
-  <li><a href="#example-1-no-punctuation-or-capitalized-words" id="toc-example-1-no-punctuation-or-capitalized-words" class="nav-link" data-scroll-target="#example-1-no-punctuation-or-capitalized-words">Example 1 (no punctuation or capitalized words)</a></li>
-  <li><a href="#example-2-with-punctuation-and-capitalized-words" id="toc-example-2-with-punctuation-and-capitalized-words" class="nav-link" data-scroll-target="#example-2-with-punctuation-and-capitalized-words">Example 2 (with punctuation and capitalized words)</a></li>
+  <li><a href="#test-cases" id="toc-test-cases" class="nav-link" data-scroll-target="#test-cases">Test cases</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -937,159 +927,148 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 </header>
 
 <p>Programming Projects are to be submitted to <a href="">gradescope</a>.</p>
-<p><strong>Due date: Thursday, April 04, 2024 at 7pm</strong> This programming project is an adaptation of Ben Dicken’s Spell Check Programming Assignment.</p>
-<p>You should name the file <code>spellcheck.py</code> and have a function named <code>correct_spelling</code> to write out the ouput file.</p>
-<section id="spell-check" class="level1">
-<h1>Spell Check</h1>
-<p>Most in this class have probably used a spellchecker at least once in your life (more likely, many times). Spell checkers are built into a number of programs, including Microsoft Word, Apple Pages, gmail, and others. In this assignment, you’ll be implementing a program that can suggest and fix spelling issues in text.</p>
-</section>
-<section id="program-behavior" class="level1">
-<h1>Program behavior</h1>
-<p>The spell checking program should be named <code>spellcheck.py</code>. The spell check program takes as argument the name of a text file, which will contain the text that the user wants to be spell-checked. The program than writes out an output file with swapping the contents of the input file with the spelling already fixed.</p>
-<p>Let’s walk through a really simple example to demonstrate the difference in the two modes. Let’s say that the file <code>words.txt</code> has the below content:</p>
+<p><strong>Due date: Friday, March 22, 2024 at 7pm</strong></p>
+<p>In this programming project you will implement a number of Python functions to implement a Benford’s Law analysis. Make sure you follow the provided <a href="https://adrianapicoral.com/csc-110/style.html">style guide</a> (you will be graded on it!).</p>
+<p>Name your program <code>benfords_law.py</code> to submit to gradescope. Make sure that gradescope gives you the points for passing the test cases.</p>
+<p>This programming project is an adaptation of Ben Dicken’s Benford’s Law Programming Assignment.</p>
+<p>Benford’s Law is a mathematical law that describes the behavior of naturally-occurring numbers in some kinds of numerical data sets. I recommend that you watch this video before proceeding to get an explanation:</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/XXjlR2OK1kM" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>Benford’s law is useful for distinguishing naturally occurring data from randomized or made-up data. It has been used in the real world to detect election fraud (For example, in the 2009 Iranian election). It has also been used as evidence in criminal cases in the US. In this PA, you’ll be writing a program that reads in a data set, and prints out the plot of first-digits. Then, you can look at the plot to determine if it conforms to the law or not! Name your file <code>benfords_law.py.</code> You should organize the code into several functions.</p>
+<section id="read-input-file" class="level2">
+<h2 class="anchored" data-anchor-id="read-input-file">Read input file</h2>
+<ol type="1">
+<li>Its name is <code>csv_to_list</code></li>
+<li>It takes a string argument, <code>file_name</code></li>
+<li>It opens the file in read mode</li>
+<li>It iterates over the lines appending numeric values to a new list</li>
+<li>Each line in the file is split on comma, for each element that you get from splitting check if the string represents an integer or a float – if either an integer or a float, append the string to the new list</li>
+<li>It returns a list of numbers found in the file</li>
+</ol>
+<p>Here’s what <code>places.csv</code> looks like:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>one hudnred dollars</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>and fiveteen cents</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>The words hundred (hudnred) and the word fifteen (fiveteen) are spelled wrong. The contents of the file should be written out to an output file with the misspelled words replaced with correctly-spelled ones.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>one hundred dollars</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>and fifteen cents</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Notice that the program goes ahead and replaces the misspelled words with correctly-spelled ones.</p>
-<p>How was the program able to identify the words that were not spelled correctly? Read the next section to find out.</p>
-</section>
-<section id="misspellings.txt" class="level1">
-<h1>misspellings.txt</h1>
-<p>Your program should open up and read a file names <code>misspellings.txt</code>. You can assume that this file already exists in the same directory as <code>spellcheck.py</code>. When testing on your computer, you should create your own <code>misspellings.txt</code>. This file will include information about how words are misspelled. Using this information, you can determine which words are spelled wrong in the input file. You can assume that each line of <code>misspellings.txt</code> is formatted as follows:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>incorrect_a-&gt;correctly_spelled_word_a</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>incorrect_b-&gt;correctly_spelled_word_b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>In other words, the first word on a line of the file is a correctly spelled word, then an arrow, then the correctly-spelled version of the word. For instance:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>hudnred-&gt;hundred</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>hundrid-&gt;hundred</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>fifeteen-&gt;fifteen</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>fiveteen-&gt;fifteen</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>fiften-&gt;fifteen</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>This file contains two possible misspellings of the word <code>"hundred"</code> and three possible misspellings of the word <code>"fifteen"</code>. Your program should handle a misspellings file of any size.</p>
-<p>Your program should open and read the <code>misspellings.txt</code> file into the program and store the mapping between misspelled and correctly-spelled words in a dictionary. The keys of the dictionary should be the misspelled version of the word, and the value the keys map to should be the correctly-spelled version of that word. Given the example content of <code>misspelling.txt</code> shown above, the misspellings dictionary should have the keys and values shown below:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>misspellings <span class="op">=</span> { </span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'hudnred'</span> : <span class="st">'hundred'</span>,</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'hundrid'</span> : <span class="st">'hundred'</span>,</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'fifeteen'</span> : <span class="st">'fifteen'</span>,</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'fiveteen'</span> : <span class="st">'fifteen'</span>,</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'fiften'</span> : <span class="st">'fifteen'</span> }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>After you have read in the file and constructed this dictionary, you can use it to determine the correct spelling of an incorrectly-spelled word. How would you do this?</p>
-<p>After you’ve opened up the input file, loop through each line of it. You can split each line into individual words. For each word on the line, you can check if that word is one of the keys in the misspellings dictionary. If it is, you can assume it is incorrectly spelled. The correct spelling of that word is the value associated with the key, so you can grab it from the dictionary and either replace the original word (if in replace mode) or use it as a suggestion (if in suggest mode).</p>
-</section>
-<section id="preserving-capitalization" class="level1">
-<h1>Preserving Capitalization</h1>
-<p>The words in the <code>misspellings.txt</code> file will be all in lower case. However, your program should also be able to replace or suggest fixes for misspelled capitalized words. For instance, it should be able to change <code>Hudnred</code> to <code>Hundred</code> in replace mode.</p>
-<p>Before you try to look up a word in the misspellings dictionary, determine if it is or is not capitalized (meaning that the first letter is upper-case). Then, you can convert it to lower case. If the word does need replacing, then you should make sure to capitalize the correctly spelled word if the original word was also capitalized.</p>
-<p>You might find the string methods <code>.lower()</code>,<code>.isupper()</code>, and <code>.capitalize()</code> useful.</p>
-</section>
-<section id="ignoring-punctuation" class="level1">
-<h1>Ignoring Punctuation</h1>
-<p>You also should make the spell checker ignore punctuation. In particular, <code>spellcheck.py``` should be able to handle a trailing ,, ., ?, or !. For instance, it should be able to change</code>hudnred?<code>to</code>hundred?` in replace mode. How can this be accomplished?</p>
-<p>Before looking up a word in the misspellings dictionary, check if the last character is one of the four types of punctuation that you should look for (, or . or ? or !). If it is, create a variable to store that punctuation, and then trim it off of the end of the word. Then, proceed with checking the spelling. After you have determined if it is spelled correctly or not, you can put the punctuation at the end of the word.</p>
-</section>
-<section id="development-strategy" class="level1">
-<h1>Development Strategy</h1>
-<section id="reading-in-misspellings.txt" class="level2">
-<h2 class="anchored" data-anchor-id="reading-in-misspellings.txt">(1) Reading in misspellings.txt</h2>
-<p>Create a function that will be responsible for opening up the misspellings file and reading in the information. The function can assume that the misspellings.txt file exists. The function should open the file, read the lines, and populate the misspellings dictionary, as described previously in this specification.</p>
-</section>
-<section id="replacing-words" class="level2">
-<h2 class="anchored" data-anchor-id="replacing-words">(2) Replacing words</h2>
-<p>Next, work reading the input file and replacing misspelled words. At this point, don’t yet worry about capitalized words, or punctuation. Iterate through the contents of the input file, line-by-line and word-by-word. When a correctly-spelled word is encountered, print it out with a trailing space. When an incorrectly-spelled word is encountered, print out the correctly-spelled version instead.</p>
-</section>
-<section id="handle-punctuation-handle-capitalization" class="level2">
-<h2 class="anchored" data-anchor-id="handle-punctuation-handle-capitalization">(3) Handle Punctuation / Handle Capitalization</h2>
-<p>You might find one or the other of these easier or harder, so choose whichever you think you will be able to accomplish more quickly. Once you have one working, move to the other! Handling punctuation is extra credit.</p>
-</section>
-<section id="write-out-output-file" class="level2">
-<h2 class="anchored" data-anchor-id="write-out-output-file">(4) Write out output file</h2>
-<p>Your function that writes out the output file should be named <code>correct_spelling</code> and the output file should have the <code>output_</code> prefix. That means that if the original file was names <code>words_1.txt</code>, the output file should be named <code>output_words_1.txt</code></p>
-</section>
-</section>
-<section id="test-cases" class="level1">
-<h1>Test Cases</h1>
-<p>There are going to be a number of test cases for this assignment. You should test out your program in chunks. Don’t try to tackle everything at once. If you follow the development strategy, you should be able to progressively pass more and more test cases, as you add more and more functionality.</p>
-<p>Below are several examples. Each example includes the contents of <code>misspellings.txt</code>, the contents of the input file, and the results for the output file.</p>
-<section id="example-1-no-punctuation-or-capitalized-words" class="level2">
-<h2 class="anchored" data-anchor-id="example-1-no-punctuation-or-capitalized-words">Example 1 (no punctuation or capitalized words)</h2>
-<p><code>misspellings.txt</code></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>datamic-&gt;dramatic</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>dramati-&gt;dramatic</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>elaphant-&gt;elephant</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>elofent-&gt;elephant</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>elaphent-&gt;elephant</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>zooo-&gt;zoo</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>zo-&gt;zoo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><code>words_1.txt</code></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>joe and his family went to the zoo the other day</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>the zooo had many animals including an elofent</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>the elaphant was being too dramati though</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>after they walked around joe left the zo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>region,population</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pima,1234</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>georgia,145</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>steele,10</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>tampa,1700</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>greece,1729</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>rome,1711</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>milan,219</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>tucson,231</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>tuscany,20001</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>florence,301</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>nigeria,3879</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>newyork,404</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>phoenix,40123</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>belgium,505</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>madrid,502</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>nogales,601</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>brussels,712</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>tempe,81231</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>anthem,91231</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    spell_dict <span class="op">=</span> read_spellings()</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    correct_spelling(<span class="st">"words_1.txt"</span>, spell_dict)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( csv_to_list(<span class="st">"places.csv"</span>) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><code>output_words_1.txt</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>joe and his family went to the zoo the other day</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>the zoo had many animals including an elephant</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>the elephant was being too dramatic though</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>after they walked around joe left the zoo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>["1234", "145", "10", "1700", "1729", "1711", "219", "231", "20001", "301", "3879", "404", "40123", "505", "502", "601", "712", "81231", "91231"]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="example-2-with-punctuation-and-capitalized-words" class="level2">
-<h2 class="anchored" data-anchor-id="example-2-with-punctuation-and-capitalized-words">Example 2 (with punctuation and capitalized words)</h2>
-<p><code>misspellings.txt</code></p>
+<section id="count-start-digits" class="level2">
+<h2 class="anchored" data-anchor-id="count-start-digits">Count start digits</h2>
+<ol type="1">
+<li>Its name is <code>count_start_digits</code></li>
+<li>It takes one argument, a list of strings that represent <code>numbers</code> (for example: <code>["1234", "145", "10", "1700", "1729"]</code>)</li>
+<li>It creates a <code>dictionary</code> to keep counts of the digits (1 to 9) that start each number in the <code>numbers</code> list</li>
+<li>It iterates over the values in <code>numbers</code> adding <code>1</code> to the respective value associated to each digit <code>key</code> (1 to 9) in the <code>dictionary</code></li>
+<li>Remember to convert the first character in each value in <code>numbers</code> to an integer (the dictionary keys are integers)</li>
+<li>It returns the dictionary of counts</li>
+</ol>
+<p>Test case:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>hereo-&gt;hero</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>heroc-&gt;hero</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>fluwe-&gt;flew</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>jumpedd-&gt;jumped</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>jimped-&gt;jumped</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>jumpped-&gt;jumped</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>savved-&gt;saved</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>sived-&gt;saved</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>sivved-&gt;saved</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>sumprean-&gt;superman</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>sumperan-&gt;superman</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>dayy-&gt;day</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>ayy-&gt;day</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>list_of_numbers <span class="op">=</span> csv_to_list(<span class="st">"places.csv"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> count_start_digits(list_of_numbers)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(counts) <span class="co"># {1: 6, 2: 3, 3: 2, 4: 2, 5: 2, 6: 1, 7: 1, 8: 1, 9: 1}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><code>words_2.txt</code></p>
+</section>
+<section id="calculate-percentages" class="level2">
+<h2 class="anchored" data-anchor-id="calculate-percentages">Calculate percentages</h2>
+<ol type="1">
+<li>Its name is <code>digit_percentages</code></li>
+<li>It takes a dictionary with digit <code>counts</code></li>
+<li>It creates a new dictionary with the <code>percentage</code> for each digit</li>
+<li>To calculate percentage, first calculate the sum of all the counts, then divide each value in <code>counts</code> by the calculated total (round it to two decimals)</li>
+<li>It returns the new dictionary</li>
+</ol>
+<p>Test case:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>There once was a hero, named superman.</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>Sumperan, being the hero he is, jumped.</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>After he jumped, he fluwe!</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>Then, Sumprean savved the day.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>list_of_numbers <span class="op">=</span> csv_to_list(<span class="st">"places.csv"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> count_start_digits(list_of_numbers)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>percentages <span class="op">=</span> digit_percentages(counts)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(percentages) <span class="co"># {1: 31.58, 2: 15.79, 3: 10.53, 4: 10.53, 5: 10.53, 6: 5.26, 7: 5.26, 8: 5.26, 9: 5.26}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    spell_dict <span class="op">=</span> read_spellings()</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    correct_spelling(<span class="st">"words_2.txt"</span>, spell_dict)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><code>output_words_2.txt</code></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>There once was a hero, named superman.</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>Superman, being the hero he is, jumped.</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>After he jumped, he flew!</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>Then, Superman saved the day.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+</section>
+<section id="does-it-follow-the-law" class="level2">
+<h2 class="anchored" data-anchor-id="does-it-follow-the-law">Does it follow the law?</h2>
+<ol type="1">
+<li>Its name is <code>check_benfords_law</code></li>
+<li>It takes one argument, a dictionary with <code>percentages</code> per digit</li>
+<li>A data set follows Benford’s law if the percentage of occurrences of each digits follows the percentages below (plus 10% or minus 5%)</li>
+<li>If every digit percentage falls within the specified rage, return <code>True</code>, otherwise return <code>False</code></li>
+</ol>
+<table class="table">
+<thead>
+<tr class="header">
+<th>digit</th>
+<th>percent (-5, +10)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>30%</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>17%</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>12%</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>9%</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>7%</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>6%</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>5%</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>5%</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>4%</td>
+</tr>
+</tbody>
+</table>
+<section id="test-cases" class="level3">
+<h3 class="anchored" data-anchor-id="test-cases">Test cases</h3>
+<ul>
+<li><a href="data/populations.csv">populations.csv</a> does follow Benford’s Law</li>
+<li><a href="data/stocks.csv">stocks.csv</a> does follow Benford’s Law</li>
+<li><a href="data/random_numbers.csv">random_numbers.csv</a> does NOT follow Benford’s Law</li>
+</ul>
 
 
 </section>
