@@ -793,49 +793,49 @@
   {
     "objectID": "project-8.html",
     "href": "project-8.html",
-    "title": "Programming Project 7",
+    "title": "Programming Project 8",
     "section": "",
-    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Friday, March 22, 2024 at 7pm This programming project is an adaptation of Ben Dicken’s Spell Check Programming Assignment.\nYou should name the file spellcheck.py and have a function named correct_spelling to write out the ouput file."
+    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Thursday, April 04, 2024 at 7pm This programming project is an adaptation of Ben Dicken’s Spell Check Programming Assignment.\nYou should name the file spellcheck.py and have a function named correct_spelling to write out the ouput file."
   },
   {
     "objectID": "project-8.html#reading-in-misspellings.txt",
     "href": "project-8.html#reading-in-misspellings.txt",
-    "title": "Programming Project 7",
+    "title": "Programming Project 8",
     "section": "(1) Reading in misspellings.txt",
     "text": "(1) Reading in misspellings.txt\nCreate a function that will be responsible for opening up the misspellings file and reading in the information. The function can assume that the misspellings.txt file exists. The function should open the file, read the lines, and populate the misspellings dictionary, as described previously in this specification."
   },
   {
     "objectID": "project-8.html#replacing-words",
     "href": "project-8.html#replacing-words",
-    "title": "Programming Project 7",
+    "title": "Programming Project 8",
     "section": "(2) Replacing words",
     "text": "(2) Replacing words\nNext, work reading the input file and replacing misspelled words. At this point, don’t yet worry about capitalized words, or punctuation. Iterate through the contents of the input file, line-by-line and word-by-word. When a correctly-spelled word is encountered, print it out with a trailing space. When an incorrectly-spelled word is encountered, print out the correctly-spelled version instead."
   },
   {
     "objectID": "project-8.html#handle-punctuation-handle-capitalization",
     "href": "project-8.html#handle-punctuation-handle-capitalization",
-    "title": "Programming Project 7",
+    "title": "Programming Project 8",
     "section": "(3) Handle Punctuation / Handle Capitalization",
     "text": "(3) Handle Punctuation / Handle Capitalization\nYou might find one or the other of these easier or harder, so choose whichever you think you will be able to accomplish more quickly. Once you have one working, move to the other! Handling punctuation is extra credit."
   },
   {
     "objectID": "project-8.html#write-out-output-file",
     "href": "project-8.html#write-out-output-file",
-    "title": "Programming Project 7",
+    "title": "Programming Project 8",
     "section": "(4) Write out output file",
     "text": "(4) Write out output file\nYour function that writes out the output file should be named correct_spelling and the output file should have the output_ prefix. That means that if the original file was names words_1.txt, the output file should be named output_words_1.txt"
   },
   {
     "objectID": "project-8.html#example-1-no-punctuation-or-capitalized-words",
     "href": "project-8.html#example-1-no-punctuation-or-capitalized-words",
-    "title": "Programming Project 7",
+    "title": "Programming Project 8",
     "section": "Example 1 (no punctuation or capitalized words)",
     "text": "Example 1 (no punctuation or capitalized words)\nmisspellings.txt\n\ndatamic-&gt;dramatic\ndramati-&gt;dramatic\nelaphant-&gt;elephant\nelofent-&gt;elephant\nelaphent-&gt;elephant\nzooo-&gt;zoo\nzo-&gt;zoo\n\nwords_1.txt\n\njoe and his family went to the zoo the other day\nthe zooo had many animals including an elofent\nthe elaphant was being too dramati though\nafter they walked around joe left the zo\n\n\nif __name__ == '__main__':\n    spell_dict = read_spellings()\n    correct_spelling(\"words_1.txt\", spell_dict)\n\noutput_words_1.txt\n\njoe and his family went to the zoo the other day\nthe zoo had many animals including an elephant\nthe elephant was being too dramatic though\nafter they walked around joe left the zoo"
   },
   {
     "objectID": "project-8.html#example-2-with-punctuation-and-capitalized-words",
     "href": "project-8.html#example-2-with-punctuation-and-capitalized-words",
-    "title": "Programming Project 7",
+    "title": "Programming Project 8",
     "section": "Example 2 (with punctuation and capitalized words)",
     "text": "Example 2 (with punctuation and capitalized words)\nmisspellings.txt\n\nhereo-&gt;hero\nheroc-&gt;hero\nfluwe-&gt;flew\njumpedd-&gt;jumped\njimped-&gt;jumped\njumpped-&gt;jumped\nsavved-&gt;saved\nsived-&gt;saved\nsivved-&gt;saved\nsumprean-&gt;superman\nsumperan-&gt;superman\ndayy-&gt;day\nayy-&gt;day\n\nwords_2.txt\n\nThere once was a hero, named superman.\nSumperan, being the hero he is, jumped.\nAfter he jumped, he fluwe!\nThen, Sumprean savved the day.\n\n\nif __name__ == '__main__':\n    spell_dict = read_spellings()\n    correct_spelling(\"words_2.txt\", spell_dict)\n\noutput_words_2.txt\n\nThere once was a hero, named superman.\nSuperman, being the hero he is, jumped.\nAfter he jumped, he flew!\nThen, Superman saved the day."
   },
@@ -2489,7 +2489,7 @@
     "href": "slides-07-03.html#random-module",
     "title": "random (class slides)",
     "section": "random module",
-    "text": "random module\nRemember to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random()\nprint(n)\n\nn = random.randint(0, 9)\nprint(n)\n\n0.753942557177893\n9"
+    "text": "random module\nRemember to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random()\nprint(n)\n\nn = random.randint(0, 9)\nprint(n)\n\n0.32845442279148074\n2"
   },
   {
     "objectID": "slides-07-03.html#write-a-function",
@@ -2503,7 +2503,7 @@
     "href": "slides-07-03.html#write-a-function-solution",
     "title": "random (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nMary"
+    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nJoan"
   },
   {
     "objectID": "slides-07-03.html#setting-a-seed",
