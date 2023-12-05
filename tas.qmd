@@ -10,14 +10,13 @@ The best way to talk with a particular TA is via office hours, so check the sche
 
 Course coordinators are experienced UGTAs that assist the instructor with course management and will have a supervisory role with the course UGTAs.
 
--   Kendra Jones (kek13)
 -   Miro Vanek (mirovanek)
 
 # Senior TAs
 
 Senior UGTAs in the Department of Computer Science are experienced UGTAs (with at least 2 semesters of CS UGTA experience), who take on a leadership role. They will assist with UGTA hiring, work closely with the course coordinator on various tasks, lead UGTA training, and mentor new UGTAs. If you are interested in becoming a TA in the future, reach out to the senior TAs.
 
--   Khojiakbar Yokubjonov (yokubjonovk)
+-   TBA
 
 # TAs
 
@@ -25,42 +24,16 @@ Undergraduate Teaching Assistants (UGTAs) in the Department of Computer Science 
 
 ## 1pm Section
 
--   Adan Baca (adanbaca)
--   Ali Sartaz Khan askhan1)
--   Emma Elliott (emmae)
--   Henry Einhaus (heinhaus)
--   Khojiakbar Yokubjonov (yokubjonovk)
--   Miro Vanek (mirovanek)
--   Mustafa Alnidawi (mustafaa1)
--   Nees Abusaada (neeszeyad)
--   Rachel Whitaker (rmlwhitaker)
--   Savannah Rabasa (srabasa)
--   Steven Truong (steven08truong)
--   Taoseef Aziz (taoseefaziz)
--   Waldo Barrientos (waldogb)
+-   TBA
 
 ## 2pm Section
 
--   Amyra White (amyraawhite)
--   Anthony Hsu (anthonyhsu)
--   Caeden Motley (ccm1)
--   Cole Perry (colegperry)
--   Pearl McNabb (fpm)
--   Gabriel Hernandez (gabehernandez07)
--   Garegin Mazmanyan (gmazmanyan)
--   Kendra Jones (kek13)
--   Madeline DeLeon (mdeleon58)
--   Michael Rafko (mrafko)
--   Owen Chambers (owenchambers)
--   Suhani Surana (suhanisurana)
--   Zachary Nicolosi (zjnicolosi)
+-   TBA
 
 Interested in becoming a TA in the future? Check out [more information about what TAs do and how to apply](https://www.cs.arizona.edu/ugta).
 
 # Office Hours
 
-Shown below is the office hours schedule. The in-person office hours are hosted in Gould-Simpson 837. Adriana's office hours are in GS 811 and Xinchen's is in GS 854 (everyone else will be in GS 837). An (O) next to a name indicates that the office hour is online. For these office hours, log in to the class [discord](discord.html) server, put your name in the #office-hours text channel, and join the #office-hour voice channel.
+Shown below is the office hours schedule. The in-person office hours are hosted in Gould-Simpson 837. Adriana's office hours are in GS 811 (everyone else will be in GS 837). An (O) next to a name indicates that the office hour is online. For these office hours, log in to the class [discord](discord.html) server, put your name in the #office-hours text channel, and join the #office-hour voice channel.
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRsH__bPTyq6k5sV7A09ugSnsabqYaBnFQo5O4mX2ahHAhp0II6gn0WRQhoXRpLcZXyWwr0ytd7avP3/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="600px">
-
-</iframe>
+TBA
