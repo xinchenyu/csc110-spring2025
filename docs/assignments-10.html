@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CSc 110 Computer Programming I - Programming Project 9</title>
+<title>CSc 110 Computer Programming I - Module 10 Programming Problems</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,7 +116,7 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./style.html">Programming Projects</a></li><li class="breadcrumb-item"><a href="./project-9.html">Programming Project 9</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_structures_tuples.html">Module 10 - Data Structures (tuples)</a></li><li class="breadcrumb-item"><a href="./assignments-10.html">Module 10 Programming Problems</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -259,7 +259,7 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project-9.html" class="sidebar-item-text sidebar-link active">
+  <a href="./project-9.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Programming Project 9</span></a>
   </div>
 </li>
@@ -721,7 +721,7 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./assignments-10.html" class="sidebar-item-text sidebar-link">
+  <a href="./assignments-10.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Module 10 Programming Problems</span></a>
   </div>
 </li>
@@ -911,18 +911,8 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#creating-information-files" id="toc-creating-information-files" class="nav-link active" data-scroll-target="#creating-information-files">Creating information files</a></li>
-  <li><a href="#development-strategy" id="toc-development-strategy" class="nav-link" data-scroll-target="#development-strategy">Development Strategy</a>
-  <ul class="collapse">
-  <li><a href="#reading-and-processing-the-file" id="toc-reading-and-processing-the-file" class="nav-link" data-scroll-target="#reading-and-processing-the-file">(1) Reading and processing the file</a></li>
-  <li><a href="#counting-words" id="toc-counting-words" class="nav-link" data-scroll-target="#counting-words">(2) Counting words</a></li>
-  <li><a href="#finding-most-occurrences" id="toc-finding-most-occurrences" class="nav-link" data-scroll-target="#finding-most-occurrences">(3) Finding most occurrences</a></li>
-  <li><a href="#counting-capitalized" id="toc-counting-capitalized" class="nav-link" data-scroll-target="#counting-capitalized">(4) Counting Capitalized</a></li>
-  <li><a href="#counting-punctuated" id="toc-counting-punctuated" class="nav-link" data-scroll-target="#counting-punctuated">(5) Counting Punctuated</a></li>
-  <li><a href="#writing-the-information-file" id="toc-writing-the-information-file" class="nav-link" data-scroll-target="#writing-the-information-file">(6) Writing the information file</a></li>
-  </ul></li>
-  <li><a href="#resource-files" id="toc-resource-files" class="nav-link" data-scroll-target="#resource-files">Resource Files</a></li>
-  <li><a href="#test-case" id="toc-test-case" class="nav-link" data-scroll-target="#test-case">Test case</a></li>
+  <li><a href="#programming-problem-19" id="toc-programming-problem-19" class="nav-link active" data-scroll-target="#programming-problem-19">Programming Problem 19</a></li>
+  <li><a href="#programming-problem-20" id="toc-programming-problem-20" class="nav-link" data-scroll-target="#programming-problem-20">Programming Problem 20</a></li>
   </ul>
 </nav>
     </div>
@@ -931,7 +921,7 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Programming Project 9</h1>
+<h1 class="title">Module 10 Programming Problems</h1>
 </div>
 
 
@@ -946,129 +936,41 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 
 </header>
 
-<p>Programming Projects are to be submitted to <a href="https://www.gradescope.com/courses/676322">gradescope</a>.</p>
-<p><strong>Due date: Thursday, April 11, 2024 at 7pm</strong></p>
-<p>This programming project is an adaptation of Ben Dicken’s Infographic Programming Assignment.</p>
-<section id="creating-information-files" class="level1">
-<h1>Creating information files</h1>
-<p>In this programming problem, you will be writing a program that reads in a text file (perhaps containing the contents of a book, poem, article, etc) and produces an information file based on the text. You will need to use one or more dictionaries to count words in the program. You may also use lists and / or sets.</p>
-<p>The information file should contain the following information about the text:</p>
-<ul>
-<li>The name of the text file</li>
-<li>The total number of words.</li>
-<li>The most used small, medium, and large words in the file. For the purposes of this project, the definitions of a small, medium, and large word is:
-<ul>
-<li>small: length 0-4, inclusive.</li>
-<li>medium: length 5-7, inclusive.</li>
-<li>large: length 8+, inclusive.</li>
-</ul></li>
-<li>The frequencies and percentages for each word length category</li>
-<li>The frequencies and percentages for each capitalized word category</li>
-<li>The frequencies and percentages for each punctuated word category</li>
-</ul>
-<p>Name your Python file <code>infofile.py</code>.</p>
-</section>
-<section id="development-strategy" class="level1">
-<h1>Development Strategy</h1>
-<section id="reading-and-processing-the-file" class="level2">
-<h2 class="anchored" data-anchor-id="reading-and-processing-the-file">(1) Reading and processing the file</h2>
-<p>The first step is to open an input file and read in all of the lines and strip the newlines off of the ends. To get the words, all you have to do is split each line on whitespace. To accomplish this, just call <code>split()</code> on each line string, with no argument. You can then append each individual word to a python list. You do not need to strip off punctuation from the words or normalize the cases.</p>
-<p>For example, if you input file had the following content:</p>
+<p>Programming Problems should be submitted to <a href="https://www.gradescope.com/courses/676322">gradescope</a>.</p>
+<section id="programming-problem-19" class="level1">
+<h1>Programming Problem 19</h1>
+<p><strong>Due date: at 7pm</strong></p>
+<p>Write a Python function that does the following:</p>
+<ol type="1">
+<li>Its name is <code>zip_lists</code></li>
+<li>It takes three arguments: <code>list_1</code>, <code>list_2</code>, <code>list_3</code> – all of the same length</li>
+<li>It iterates over all three lists (remember, they have the same length, so you can use the same index for all of them) appending to a new list of tuples of three elements</li>
+<li>It returns the list of tuples</li>
+</ol>
+<p>Test cases:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>two forks.</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>one knife.</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>two glasses.</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>one plate.</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>one napkin.</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>his glasses.</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>his knife.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( zip_lists([<span class="dv">1</span>, <span class="dv">2</span>], [<span class="st">"a"</span>, <span class="st">"b"</span>], [<span class="fl">1.0</span>, <span class="fl">2.0</span>]) ) <span class="co"># [(1, "a", 1.0), (2, "b", 2.0)]</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( zip_lists([], [], []) ) <span class="co"># []</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The words list should have the following content after processing the file:</p>
+<p>Name the program <code>create_tuples.py</code>. Make sure that gradescope gives you the points for passing the test case.</p>
+</section>
+<section id="programming-problem-20" class="level1">
+<h1>Programming Problem 20</h1>
+<p><strong>Due date: at 7pm</strong></p>
+<p>Write a Python function that does the following:</p>
+<ol type="1">
+<li>Its name is <code>all_mappings</code></li>
+<li>It takes a single <code>dictionary</code> as an argument, which maps strings to lists of integers</li>
+<li>It returns a list of 2-value tuples, where the first value of the tuples is a key from D, and the second value is an element from its associated list value</li>
+</ol>
+<p>Test cases:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>words <span class="op">=</span> [<span class="st">'two'</span>, <span class="st">'forks.'</span>, <span class="st">'one'</span>, <span class="st">'knife.'</span>, <span class="st">'two'</span>, <span class="st">'glasses.'</span>, <span class="op">\</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>         <span class="st">'one'</span>, <span class="st">'plate.'</span>, <span class="st">'one'</span>, <span class="st">'napkin.'</span>, <span class="st">'his,'</span> <span class="st">'glasses.'</span>, <span class="st">'his'</span>, <span class="st">'knife.'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( all_mappings({<span class="st">"a"</span>: [<span class="dv">7</span>, <span class="dv">3</span>, <span class="dv">1</span>]}) ) <span class="co"># [("a", 7), ("a", 3), ("a", 1)]</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( all_mappings({<span class="st">"a"</span>: [<span class="dv">8</span>], <span class="st">"b"</span>: [<span class="dv">2</span>]}) ) <span class="co"># [("a", 8), ("b", 2)]</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( all_mappings({<span class="st">"a"</span>: [], <span class="st">"b"</span>: [<span class="dv">2</span>]}) ) <span class="co"># [("b", 2)]</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( all_mappings({}) ) <span class="co"># []</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="counting-words" class="level2">
-<h2 class="anchored" data-anchor-id="counting-words">(2) Counting words</h2>
-<p>Once you have a list of all of the words from the file, you can count the occurrences. You should use a dictionary for this. Continuing from the example of the last step, the dictionary should have the following contents:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>word_counts <span class="op">=</span> {<span class="st">'two'</span>:<span class="dv">2</span>, <span class="st">'one'</span>:<span class="dv">3</span>, <span class="st">'forks.'</span>:<span class="dv">1</span>, <span class="st">'knife.'</span>:<span class="dv">2</span>, <span class="op">\</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>               <span class="st">'glasses.'</span>:<span class="dv">2</span>, <span class="st">'plate.'</span>:<span class="dv">1</span>, <span class="st">'napkin.'</span>:<span class="dv">1</span>, <span class="st">'his'</span>:<span class="dv">2</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="finding-most-occurrences" class="level2">
-<h2 class="anchored" data-anchor-id="finding-most-occurrences">(3) Finding most occurrences</h2>
-<p>Next, you can find the small, medium, and large words that occur the most. In the example, it would be <code>one</code> for small, <code>knife.</code> for medium, and <code>glasses.</code> for large. You can do this by iterating through the key and value pairs in the <code>word_counts</code> dictionary, and keeping track of which has the highest count.</p>
-</section>
-<section id="counting-capitalized" class="level2">
-<h2 class="anchored" data-anchor-id="counting-capitalized">(4) Counting Capitalized</h2>
-<p>Next, compute how many unique capitalized and non-capitalized. You can do this by getting the keys of the <code>word_counts</code> dictionary as a list, and then looping through them all.</p>
-</section>
-<section id="counting-punctuated" class="level2">
-<h2 class="anchored" data-anchor-id="counting-punctuated">(5) Counting Punctuated</h2>
-<p>Compute how many unique punctuated and non-punctuated words there are. Use a similar process as you did for step (4).</p>
-</section>
-<section id="writing-the-information-file" class="level2">
-<h2 class="anchored" data-anchor-id="writing-the-information-file">(6) Writing the information file</h2>
-<p>You should write a text file with three sections on the information you compiled. Here’s an example of what the file should look like for the contents of the file in section <code>(1)</code>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Total number of unique words: 8</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>Most frequent words by size:</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>* Small: one</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>* Medium: knife.</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>* Large: glasses.</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>Length:</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>* Small: 3 (37.5%)</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>* Medium: 4 (50.0%)</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>* Large: 1 (12.5%)</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>###################%%%%%%%%%%%%%%%%%%%%%%%%%******</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>Capitalization:</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>* Capitalized: 0 (0.0%)</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>* Non-capitalized: 8 (100.0%)</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>Punctuation:</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>* Punctuated: 5 (62.5%)</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>* Non-punctuated: 3 (37.5%)</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>###############################%%%%%%%%%%%%%%%%%%%</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>To calculate how many characters in each bar use the formula:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>(category_item_count<span class="op">/</span>total_item_count) <span class="op">*</span> <span class="dv">50</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</section>
-<section id="resource-files" class="level1">
-<h1>Resource Files</h1>
-<p>Below are some resource files you might find interesting to run your program with.</p>
-<ul>
-<li><a href="data/poem.txt">poem.txt</a></li>
-<li><a href="data/Cat_in_the_Hat.txt">Cat_in_the_Hat.txt</a></li>
-</ul>
-<p>If you’d like to try the program on other books, you can visit <a href="https://gutenberg.org/">gutenberg.org</a>.</p>
-</section>
-<section id="test-case" class="level1">
-<h1>Test case</h1>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    word_list <span class="op">=</span> text_to_list(<span class="st">"test.txt"</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> word_list <span class="op">==</span> [<span class="st">'two'</span>, <span class="st">'forks.'</span>, <span class="st">'one'</span>, <span class="st">'knife.'</span>, <span class="st">'two'</span>, <span class="st">'glasses.'</span>, <span class="op">\</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>         <span class="st">'one'</span>, <span class="st">'plate.'</span>, <span class="st">'one'</span>, <span class="st">'napkin.'</span>, <span class="st">'his'</span>, <span class="st">'glasses.'</span>, <span class="st">'his'</span>, <span class="st">'knife.'</span>]</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    word_counts <span class="op">=</span> count_words(word_list)    </span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> word_counts <span class="op">==</span> {<span class="st">'two'</span>:<span class="dv">2</span>, <span class="st">'one'</span>:<span class="dv">3</span>, <span class="st">'forks.'</span>:<span class="dv">1</span>, <span class="st">'knife.'</span>:<span class="dv">2</span>, <span class="op">\</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>               <span class="st">'glasses.'</span>:<span class="dv">2</span>, <span class="st">'plate.'</span>:<span class="dv">1</span>, <span class="st">'napkin.'</span>:<span class="dv">1</span>, <span class="st">'his'</span>:<span class="dv">2</span>}</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> most_frequent(word_counts) <span class="op">==</span> (<span class="st">'one'</span>, <span class="st">'knife.'</span>, <span class="st">'glasses.'</span>)</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> count_capitalized(word_counts) <span class="op">==</span> (<span class="dv">0</span>, <span class="dv">8</span>)</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> count_punctuated(word_counts) <span class="op">==</span> (<span class="dv">5</span>, <span class="dv">3</span>)</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> count_sizes(word_counts) <span class="op">==</span> (<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">1</span>)</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    write_results(word_counts, filename)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<p>Name the program <code>mappings.py</code>. Make sure that gradescope gives you the points for passing the test case.</p>
 
 
 </section>

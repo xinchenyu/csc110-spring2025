@@ -141,7 +141,8 @@ All online communication will be conducted through my official UA e-mail address
 
 All readings, videos, and assignment instructions will be available in the course website.
 
--   Course D2L: <>
+-   Course D2L: <https://d2l.arizona.edu/d2l/home/1386086>
+-   Course Gradescope: <https://www.gradescope.com/courses/676322>
 -   Course website: <>
 
 # Assignments and Examinations: Schedule/Due Dates

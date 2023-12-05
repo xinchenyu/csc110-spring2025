@@ -114,6 +114,7 @@ website:
         contents:
         - slides-11-01.qmd
         - slides-11-02.qmd
+        - assignments-11.qmd
       - section: "Module 12 - Data Structures (sets)"
         contents:
         - data_structures_sets.md

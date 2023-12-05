@@ -720,8 +720,11 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">assignments-10.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./assignments-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 10 Programming Problems</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -743,6 +746,12 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
   <div class="sidebar-item-container"> 
   <a href="./slides-11-02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">nested for loops (class slides)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./assignments-11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 11 Programming Problems</span></a>
   </div>
 </li>
       </ul>
@@ -902,8 +911,17 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#house-hunting" id="toc-house-hunting" class="nav-link active" data-scroll-target="#house-hunting">House Hunting</a></li>
-  <li><a href="#test-cases" id="toc-test-cases" class="nav-link" data-scroll-target="#test-cases">Test cases</a></li>
+  <li><a href="#house-hunting" id="toc-house-hunting" class="nav-link active" data-scroll-target="#house-hunting">House Hunting</a>
+  <ul class="collapse">
+  <li><a href="#part-1" id="toc-part-1" class="nav-link" data-scroll-target="#part-1">Part 1</a>
+  <ul class="collapse">
+  <li><a href="#test-cases-part-1" id="toc-test-cases-part-1" class="nav-link" data-scroll-target="#test-cases-part-1">Test cases – Part 1</a></li>
+  </ul></li>
+  <li><a href="#part-2" id="toc-part-2" class="nav-link" data-scroll-target="#part-2">Part 2</a>
+  <ul class="collapse">
+  <li><a href="#test-cases-part-2" id="toc-test-cases-part-2" class="nav-link" data-scroll-target="#test-cases-part-2">Test cases – Part 2</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -927,15 +945,17 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 
 </header>
 
-<p>Programming Projects are to be submitted to <a href="">gradescope</a>.</p>
+<p>Programming Projects are to be submitted to <a href="https://www.gradescope.com/courses/676322">gradescope</a>.</p>
 <p><strong>Due date: Friday, February 16, 2024 at 7pm</strong></p>
-<p>This assignment is an adaptation of the <a href="https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/resources/ps2/">MIT’s 6.0001 Introduction to Computer Science and Programming in Python programming set 1</a>.</p>
+<p>This assignment is an adaptation of the <a href="https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/resources/mit6_0001f16_ps1/">MIT’s 6.0001 Introduction to Computer Science and Programming in Python programming set 1</a>.</p>
 <p>Make sure you follow the provided <a href="style.html">style guide</a> (you will be graded on it!).</p>
 <p>Also make sure you check the <a href="academic-integrity.html">Academic Integrity</a> and <a href="gradescope-errors.html">Common Gradescope Errors</a> pages.</p>
-<p>Name the program <code>house_hunting.py</code>. Make sure that gradescope gives you the points for passing the test cases.</p>
 <section id="house-hunting" class="level1">
 <h1>House Hunting</h1>
 <p>You have graduated and now have a great job and decide that you want to start saving to buy a house. As housing prices are very high in the US right now, you realize you are going to have to save for several years before you can afford to make the down payment on a house.</p>
+<section id="part-1" class="level2">
+<h2 class="anchored" data-anchor-id="part-1">Part 1</h2>
+<p>Name the program <code>house_hunting_1.py</code>. Make sure that gradescope gives you the points for passing the test cases.</p>
 <p>I this assignment we are going to determine how long it will take you to save enough money to make the down payment given the following assumptions:</p>
 <ol type="1">
 <li>Call the cost of your first home <code>total_cost</code>.</li>
@@ -948,9 +968,8 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 </ol>
 <p>Write a program to calculate how many months it will take you to save up enough money for a down payment.</p>
 <p>Your program should ask the user to enter the following variables: 1. The starting annual salary (annual_salary) 2. The portion of salary to be saved (portion_saved) 3. The cost of your dream home (total_cost)</p>
-</section>
-<section id="test-cases" class="level1">
-<h1>Test cases</h1>
+<section id="test-cases-part-1" class="level3">
+<h3 class="anchored" data-anchor-id="test-cases-part-1">Test cases – Part 1</h3>
 <p>Try different inputs and see how long it takes to save for a down payment. Please make your program print results in the format shown in the test cases below.</p>
 <p>Test Case 1</p>
 <div class="cell">
@@ -972,8 +991,59 @@ gtag('config', 'G-X5E6TNHNQ5', { 'anonymize_ip': true});
 </div>
 <pre>Number of months: 105
 </pre>
+</section>
+</section>
+<section id="part-2" class="level2">
+<h2 class="anchored" data-anchor-id="part-2">Part 2</h2>
+<p>Name the program <code>house_hunting_2.py</code>. Make sure that gradescope gives you the points for passing the test cases.</p>
+<p>In Part 1, we unrealistically assumed that your salary didn’t change. So we are going to build on your solution to Part 1 by factoring in a raise every six months.</p>
+<p>In <code>house_hunting_2.py</code>, copy your solution to Part 1 (as we are going to reuse much of that machinery). Modify your program to include the following:</p>
+<ol type="1">
+<li>Have the user input a semi-annual salary raise semi_annual_raise (as a decimal percentage)</li>
+<li>After the 6th month, increase your salary by that percentage. Do the same after the 12th month, the 18 month, and so on.</li>
+</ol>
+<p>Write a program to calculate how many months it will take you save up enough money for a down payment. Like before, assume that your investments earn a return of r = 0.04 (or 4%) and the required down payment percentage is 0.25 (or 25%). Have the user enter the following variables:</p>
+<p>Be careful about when you increase your salary – this should only happen after the 6th, 12th, 18th month, and so on.</p>
+<section id="test-cases-part-2" class="level3">
+<h3 class="anchored" data-anchor-id="test-cases-part-2">Test cases – Part 2</h3>
+<p>Try different inputs and see how long it takes to save for a down payment. Please make your program print results in the format shown in the test cases below.</p>
+<p>Test Case 1</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>annual_salary <span class="op">=</span> <span class="dv">120000</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>portion_saved <span class="op">=</span> <span class="fl">.05</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>total_cost <span class="op">=</span>  <span class="dv">500000</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>semi_annual_raise <span class="op">=</span> <span class="fl">.03</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>total_months <span class="op">=</span> calculate_months(annual_salary, portion_saved, total_cost, semi_annual_raise)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Number of months:"</span>, total_months)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre>Number of months: 142
+</pre>
+<p>Test Case 2</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>annual_salary <span class="op">=</span>  <span class="dv">80000</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>portion_saved <span class="op">=</span> <span class="fl">.1</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>total_cost <span class="op">=</span>   <span class="dv">800000</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>semi_annual_raise <span class="op">=</span> <span class="fl">.03</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>total_months <span class="op">=</span> calculate_months(annual_salary, portion_saved, total_cost, semi_annual_raise)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Number of months:"</span>, total_months)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre>Number of months: 159
+</pre>
+<p>Test Case 3</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>annual_salary <span class="op">=</span>   <span class="dv">75000</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>portion_saved <span class="op">=</span> <span class="fl">.05</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>total_cost <span class="op">=</span>    <span class="dv">1500000</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>semi_annual_raise <span class="op">=</span> <span class="fl">.05</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>total_months <span class="op">=</span> calculate_months(annual_salary, portion_saved, total_cost, semi_annual_raise)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Number of months:"</span>, total_months)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre>Number of months: 261
+</pre>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->

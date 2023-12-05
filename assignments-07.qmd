@@ -14,7 +14,7 @@ assignments <- read_excel("assessment_schedule.xlsx") %>%
 ```
 
 
-Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/568720).
+Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/676322).
 
 # Programming Problem 13
 
@@ -42,7 +42,7 @@ print( stop_ascending([1, 2, 3, 1, 5]) ) # 3
 
 # Programming Problem 14
 
-**Due date: `r assignments %>% filter(number == 11) %>% pull(formatted_date)` at 7pm**
+**Due date: `r assignments %>% filter(assessment == "Module 7 Programming Problems") %>% pull(formatted_date)` at 7pm**
 
 Write a Python function that does the following:
 

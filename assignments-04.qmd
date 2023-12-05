@@ -12,7 +12,7 @@ assignments <- read_excel("assessment_schedule.xlsx") %>%
   mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
 ```
 
-Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/568720).
+Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/676322).
 
 # Programming Problem 7
 
@@ -54,7 +54,7 @@ You can also download the [ready-to-run script](test_scripts/test_eligible.py) t
 
 # Programming Problem 8
 
-**Due date: `r assignments %>% filter(number == 6) %>% pull(formatted_date)` at 7pm**
+**Due date: `r assignments %>% filter(assessment == "Module 4 Programming Problems") %>% pull(formatted_date)` at 7pm**
 
 Write a function that does the following:
 

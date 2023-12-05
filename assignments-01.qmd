@@ -12,7 +12,7 @@ assignments <- read_excel("assessment_schedule.xlsx") %>%
   mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
 ```
 
-Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/568720).
+Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/676322).
 
 If you need instructions on how to submit your `.py` files to gradescope, watch the video at the end of this page.
 
@@ -42,7 +42,7 @@ Name the program `hello.py`. Make sure that gradescope (<https://www.gradescope.
 
 # Programming Problem 2
 
-**Due date: `r assignments %>% filter(number == 2) %>% pull(formatted_date)` at 7pm**
+**Due date: `r assignments %>% filter(assessment == "Module 1 Programming Problems") %>% pull(formatted_date)` at 7pm**
 
 Write a python program that prints out the following excerpt from Amanda Gorman's poem, "The Hill We Climb":
 
