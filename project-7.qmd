@@ -26,16 +26,38 @@ Benford's Law is a mathematical law that describes the behavior of naturally-occ
 
 {{< video https://youtu.be/XXjlR2OK1kM >}}
 
-Benford's law is useful for distinguishing naturally occurring data from randomized or made-up data. It has been used in the real world to detect election fraud (For example, in the 2009 Iranian election). It has also been used as evidence in criminal cases in the US. In this PA, you'll be writing a program that reads in a data set, and prints out the plot of first-digits. Then, you can look at the plot to determine if it conforms to the law or not! Name your file `benfords_law.py.` You should organize the code into several functions.
+Benford's law is useful for distinguishing naturally occurring data from randomized or made-up data. It has been used in the real world to detect election fraud (For example, in the 2009 Iranian election). It has also been used as evidence in criminal cases in the US. In this project, you'll be writing a program that reads in a data set, and prints out the plot of first-digits. Then, you can look at the plot to determine if it conforms to the law or not! Name your file `benfords_law.py.` You should organize the code into several functions.
 
-## Read input file
+# The Input File
 
-1.  Its name is `csv_to_list`
-2.  It takes a string argument, `file_name`
-3.  It opens the file in read mode
-4.  It iterates over the lines appending numeric values to a new list
-5.  Each line in the file is split on comma, for each element that you get from splitting check if the string represents an integer or a float -- if either an integer or a float, append the string to the new list
-6.  It returns a list of numbers found in the file
+Your program should accept an input file name as argument, which your program should expect to be formatted as CSV. 
+As a reminder, a CSV file is one that is organized into rows and columns, commas are typically used as the character that separates each entry in a row. Shown below is an example of the program prompting the user for a file name, then the user enters a file name (`places.csv`), and then the program prints out the resulting plot.
+
+```{python}
+#| eval: false
+#| echo: true
+list_of_numbers = csv_to_list("places.csv")
+assert list_of_numbers == ["1234", "145", "10", "1700", "1729", "1711", "219", \
+                           "231", "20001", "301", "3879", "404", "40123", "505",\
+                           "502", "601", "712", "81231", "91231"]
+counts = count_start_digits(list_of_numbers)
+assert counts ==  {1: 6, 2: 3, 3: 2, 4: 2, 5: 2, 6: 1, 7: 1, 8: 1, 9: 1}
+percentages = digit_percentages(counts)
+assert percentages == {1: 31.58, 2: 15.79, 3: 10.53, 4: 10.53, 5: 10.53, 6: 5.26, 7: 5.26, 8: 5.26, 9: 5.26}
+print_plot(percentages)
+```
+
+<pre>
+1 | ###############################
+2 | ##############
+3 | ##########
+4 | ########
+5 | #######
+6 | #####
+7 | ####
+8 | ####
+9 | ####
+</pre>
 
 Here's what `places.csv` looks like:
 
@@ -71,48 +93,42 @@ print( csv_to_list("places.csv") )
 ["1234", "145", "10", "1700", "1729", "1711", "219", "231", "20001", "301", "3879", "404", "40123", "505", "502", "601", "712", "81231", "91231"]
 ```
 
-## Count start digits
+## The plot
 
-1.  Its name is `count_start_digits`
-2.  It takes one argument, a list of strings that represent `numbers` (for example: `["1234", "145", "10", "1700", "1729"]`)
-3.  It creates a `dictionary` to keep counts of the digits (1 to 9) that start each number in the `numbers` list
-4.  It iterates over the values in `numbers` adding `1` to the respective value associated to each digit `key` (1 to 9) in the `dictionary`
-5.  Remember to convert the first character in each value in `numbers` to an integer (the dictionary keys are integers)
-6.  It returns the dictionary of counts
-
-Test case:
+In order to create the plot, you will first have to loop through the numbers list and count how many times a number starts with the digit `1`, the digit `2`, the digit `3`, and so on up to `9`. You should use a dictionary for this counting. If you have a floating-point number x, you can get the first digit as an int by doing `int(str(x)[0])`. Based on the `places.csv` data shown earlier, the counts dictionary should be as follows after counting:
 
 ```{python}
 #| eval: false
-list_of_numbers = csv_to_list("places.csv")
-counts = count_start_digits(list_of_numbers)
-print(counts) # {1: 6, 2: 3, 3: 2, 4: 2, 5: 2, 6: 1, 7: 1, 8: 1, 9: 1}
+#| echo: true
+counts = {1: 6, 2: 3, 3: 2, 4: 2, 5: 2, 6: 1, 7: 1, 8: 1, 9: 1}
 ```
 
-## Calculate percentages
 
-1.  Its name is `digit_percentages`
-2.  It takes a dictionary with digit `counts`
-3.  It creates a new dictionary with the `percentage` for each digit
-4.  To calculate percentage, first calculate the sum of all the counts, then divide each value in `counts` by the calculated total (round it to two decimals)
-5.  It returns the new dictionary
-
-Test case:
+After counting, loop through the numbers 1 through 9 and figure out the percentage that each occurs. You will use these percentages both to print out the bar chart, and to check if the data follows the law. The way that you would calculate the percentage for a particular digit, as an integer, is:
 
 ```{python}
 #| eval: false
-list_of_numbers = csv_to_list("places.csv")
-counts = count_start_digits(list_of_numbers)
-percentages = digit_percentages(counts)
-print(percentages) # {1: 31.58, 2: 15.79, 3: 10.53, 4: 10.53, 5: 10.53, 6: 5.26, 7: 5.26, 8: 5.26, 9: 5.26}
+#| echo: true
+(count_for_digit / length_of_numbers_list) * 100
 ```
+
+The number of `#` for a digit in the plot should be the same as the percentage of the data that digit appears first. For example, in the places.csv data, there were 3 numbers that started with the digit 2 and there were a total of 19 numbers from the data set, then you should print out `int((3 / 19) * 100) = 15%`. Thus, `15` pound sign characters for `2`. For each row of the plot, print out the digit, a vertical bar (pipe character), and then the pound sign characters (`#`). The plot that should print based on the `places.csv` example is:
+
+<pre>
+1 | ###############################
+2 | ###############
+3 | ##########
+4 | ##########
+5 | ##########
+6 | #####
+7 | #####
+8 | #####
+9 | #####
+</pre>
 
 ## Does it follow the law?
 
-1.  Its name is `check_benfords_law`
-2.  It takes one argument, a dictionary with `percentages` per digit
-3.  A data set follows Benford's law if the percentage of occurrences of each digits follows the percentages below (plus 10% or minus 5%)
-4.  If every digit percentage falls within the specified rage, return `True`, otherwise return `False`
+The other thing you should determine is if the data follows Benford's Law. For the purposes of this PA, a data set will follow Benford’s law if the percentage of occurrences of each digits follows the following percentages, plus 10% or minus 5%.
 
 | digit | percent (-5, +10) |
 |-------|-------------------|
