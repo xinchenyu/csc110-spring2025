@@ -64,7 +64,7 @@ Your program should ask the user to enter the following variables:
 Try different inputs and see how long it takes to save for a down payment. Please make your
 program print results in the format shown in the test cases below.
 
-Test Case 1
+#### Test Case 1
 ```{python}
 #| eval: false
 #| echo: true
@@ -79,7 +79,7 @@ print("Number of months:", total_months)
 Number of months: 183
 </pre>
 
-Test Case 2
+#### Test Case 2
 ```{python}
 #| eval: false
 #| echo: true
@@ -120,7 +120,7 @@ month, and so on.
 Try different inputs and see how long it takes to save for a down payment. Please make your
 program print results in the format shown in the test cases below.
 
-Test Case 1
+#### Test Case 1
 ```{python}
 #| eval: false
 #| echo: true
@@ -136,7 +136,7 @@ print("Number of months:", total_months)
 Number of months: 142
 </pre>
 
-Test Case 2
+#### Test Case 2
 ```{python}
 #| eval: false
 #| echo: true
@@ -152,7 +152,7 @@ print("Number of months:", total_months)
 Number of months: 159
 </pre>
 
-Test Case 3
+#### Test Case 3
 ```{python}
 #| eval: false
 #| echo: true
