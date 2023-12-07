@@ -244,8 +244,8 @@ schedule %>%
 
 ```{r}
 assignments %>% 
-  select(assessment, formatted_date) %>% 
-  kable(col.names = c("Assessment", "Date"))
+  select(assessment, formatted_date, due_time) %>% 
+  kable(col.names = c("Assessment", "Date", "Time/Location"))
 ```
 
 
