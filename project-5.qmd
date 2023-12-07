@@ -40,9 +40,7 @@ Kings and Knights move and kill their opponents differently. Knights can move ei
 
 ## Start Game
 
-1.  Its name is `create_board`
-2.  It takes no arguments
-3.  It returns a list with the initial state of the board (as shown in the test case below)
+Write a function called `create_board` that takes no arguments. It returns a list with the initial state of the board (as shown in the test case below)
 
 Test case:
 
@@ -55,9 +53,7 @@ print( create_board() ) # ["WKi", "WKn", "WKn",
 
 ## Print Board
 
-1.  Its name is `printable_board`
-2.  It takes one argument, the `board` list
-3.  It returns a string that is the graphical representation of the board
+This functions should have one parameter variable, the board list. The job of this function is to simply print out the board to standard output. If the board is passed in and in the initial game state, the output should look like so:
 
 Test case for initial board state:
 
@@ -77,10 +73,7 @@ print( printable_board(board) ) # "+--------------------------------------------
 
 ## Check move validity
 
-1.  Its name is `is_valid_move`
-2.  It has three parameters: the `board` (list), the `position` (index) of the player to move, and `player` (`"WHITE"` or `"BLACK"`)
-3.  It returns a boolean (`True` or `False`) -- it returns `True` if the desired move is valid, an `False` otherwise
-4.  A move is valid if:
+This function has three parameter variables. The board (a list, representing the 1 by 9 board), the position (index) of the player to move, and player (WHITE or BLACK). This function should return a boolean (`True` or `False`). True if the desired move is valid, False otherwise. A move is valid if:
 
 -   The position (index) is a valid index in the `board` list
 -   The position is an index of one of the current player's pieces on the board
@@ -103,21 +96,18 @@ print( printable_board(board) )
 
 ```{python}
 #| eval: false
-print( is_valid_move(board, 1, "BLACK" ) ) # False
-print( is_valid_move(board, 9, "BLACK" ) ) # False
-print( is_valid_move(board, -1, "BLACK" ) ) # False
-print( is_valid_move(board, 6, "BLACK" ) ) # True
-print( is_valid_move(board, 2, "WHITE" ) ) # True
+assert is_valid_move(board, 1, "BLACK" ) == False
+assert is_valid_move(board, 9, "BLACK" ) == False
+assert is_valid_move(board, -1, "BLACK" ) == False
+assert is_valid_move(board, 6, "BLACK" ) == True
+assert is_valid_move(board, 2, "WHITE" ) == True
 ```
 
 ## Move a king
 
-1.  Its name is `move_king`
-2.  It takes three arguments: the `board` list, the `position` (index) of the player to move, and a `direction` (either `"LEFT"` or `"RIGHT"`)
-3.  It changes the position of a king in the board list
-4.  A king can move either left or right
-5.  The king will move until either it reaches another piece (killing that piece and taking its place), or an end of the board
-6.  It uses a for-loop or while-loop to iterate through the elements in the list and determine the spot it should end up at
+This function has the same three parameters as the move function. `move_king` should actually move a king on the board (thus, it should change the board list). In 110 1d Chess, a king can move either left or right. The king will move until either it reaches another piece (killing that piece and taking it’s place), or an end of the board.
+
+This function should move the king at the provided position in the correct direction. You should use a for-loop or while-loop to iterate through the elements in the list and determine the spot it should end up at.
 
 Test cases:
 
@@ -159,17 +149,11 @@ print( printable_board(board) )
 
 ## Move a knight
 
-1.  Its name is `move_knight`
-2.  It takes three arguments: the `board` list, the `position` (index) of the player to move, and a `direction` (either `"LEFT"` or `"RIGHT"`)
-3.  It changes the position of the moving knight in the board list\
-4.  A knight can move either left or right
-5.  A knight moves two locations
-6.  If the moving knight lands on a space that another piece occupies, then it kills that piece
-7.  Knights can jump over other pieces
-8.  If the moving knight cannot move due to the ending position of the move being out-of-bounds of the board, the knight should stay in its place
+This function has the same three parameters as the `move` function. `move_knight` should actually move a knight on the board (thus, it should change the board list). In 110 1d Chess, a knight can move either left or right. A knight moves 2 locations. If it lands on a space that another piece occupies, then it kills that piece. It can jump over other pieces. If it cannot move due to the ending position of the move being out-of-bounds of the board, the knight should stay in its place.
+
+This function should move the knight at the provided position in the correct direction.
 
 Test cases:
-
 ```{python}
 #| eval: false
 board = create_board()
@@ -208,9 +192,8 @@ print( printable_board(board) )
 
 ## Make a move
 
-1.  Its name is `move`
-2.  It takes three arguments: the `board` list, the `position` (index) of the player to move, and a `direction` (either `"LEFT"` or `"RIGHT"`)
-3.  It determines if the piece to be moved is a king or a knight -- if it is a king, call the `move_king` function; if a knight, call `move_knight`
+Function name is `move` and it has three parameter variables. The board (a list, representing the 1 by 9 board), the position (index) of the player to move, and a direction (either `"LEFT"` or `"RIGHT"`). This function should determine if the piece to be moved is a king or a knight. If it is a king, call the `move_king` function. If a knight, call `move_knight.`
+
 
 Test case:
 
@@ -252,13 +235,7 @@ print( printable_board(board) )
 
 ## Game over
 
-1.  Its name is `is_game_over`
-2.  It takes the `board` list as an argument
-3.  It determines if the game is over or not
-4.  It returns a boolean (`True` or `False`)
-5.  If the white king does not exist on the board, then the game is over (it returns `True`)
-6.  If the black king does not exist on the board, then the game is over (it returns `True`)
-7.  If both kings are still in the board list, it returns `False`
+This function should be named `is_game_over` and it takes the board list as its only parameter, and should determine if the game is over or not. If the white king does not exist on the board, then the game is over, and black wins. In this case, the function should print the board, print `Black wins!` and return `True`. If the black king does not exist on the board, then the game is over, and white wins. In this case, the function should print the board, print `White wins!` and return `True`. If both kings are still in the board list, then the function should print nothing, and return `False`.
 
 Test case:
 
@@ -276,7 +253,7 @@ print( printable_board(board) )
 
 ```{python}
 #| eval: false
-print( is_game_over(board) ) # False
+assert is_game_over(board) == False
 move(board, 2, "RIGHT")
 print( printable_board(board) )
 ```
@@ -289,7 +266,7 @@ print( printable_board(board) )
 
 ```{python}
 #| eval: false
-print( is_game_over(board) ) # False
+assert is_game_over(board) == False
 move(board, 6, "LEFT")
 print( printable_board(board) )
 ```
@@ -302,7 +279,7 @@ print( printable_board(board) )
 
 ```{python}
 #| eval: false
-print( is_game_over(board) ) # False
+assert is_game_over(board) == False
 move(board, 1, "RIGHT")
 print( printable_board(board) )
 ```
@@ -315,7 +292,7 @@ print( printable_board(board) )
 
 ```{python}
 #| eval: false
-print( is_game_over(board) ) # False
+assert is_game_over(board) == False
 move(board, 4, "LEFT")
 print( printable_board(board) )
 ```
@@ -328,7 +305,7 @@ print( printable_board(board) )
 
 ```{python}
 #| eval: false
-print( is_game_over(board) ) # False
+assert is_game_over(board) == False
 move(board, 0, "RIGHT")
 print( printable_board(board) )
 ```
@@ -341,7 +318,7 @@ print( printable_board(board) )
 
 ```{python}
 #| eval: false
-print( is_game_over(board) ) # False
+assert is_game_over(board) == False
 move(board, 7, "LEFT")
 print( printable_board(board) )
 ```
@@ -354,7 +331,7 @@ print( printable_board(board) )
 
 ```{python}
 #| eval: false
-print( is_game_over(board) ) # False
+assert is_game_over(board) == False
 move(board, 3, "RIGHT")
 print( printable_board(board) )
 ```
@@ -367,7 +344,7 @@ print( printable_board(board) )
 
 ```{python}
 #| eval: false
-print( is_game_over(board) ) # False
+assert is_game_over(board) == False
 move(board, 8, "LEFT")
 print( printable_board(board) )
 ```
@@ -380,7 +357,7 @@ print( printable_board(board) )
 
 ```{python}
 #| eval: false
-print( is_game_over(board) ) # False
+assert is_game_over(board) == False
 move(board, 2, "RIGHT")
 print( printable_board(board) )
 ```
@@ -393,163 +370,13 @@ print( printable_board(board) )
 
 ```{python}
 #| eval: false
-print( is_game_over(board) ) # True
+assert is_game_over(board) == True
 ```
 
-## Determine the winner
-
-1.  Its name is `whos_the_winner`
-2.  It takes the `board` list as an argument
-3.  If the white king does not exist on the board, it returns "Black"
-4.  If the black king does not exist on the board, it returns "White"
-5.  Return `None` if both kings are on the board
-
-Test case:
-
-```{python}
-#| eval: false
-board = create_board()
-print( printable_board(board) )
-```
 
 ```{html}
-+-----------------------------------------------------+
-| WKi | WKn | WKn |     |     |     | BKn | BKn | BKi |
-+-----------------------------------------------------+
-```
-
-```{python}
-#| eval: false
-print( whos_the_winner(board) ) # None
-move(board, 2, "RIGHT")
-print( printable_board(board) )
-```
-
-```{html}
-+-----------------------------------------------------+
-| WKi | WKn |     |     | WKn |     | BKn | BKn | BKi |
-+-----------------------------------------------------+
-```
-
-```{python}
-#| eval: false
-print( whos_the_winner(board) ) # None
-move(board, 6, "LEFT")
-print( printable_board(board) )
-```
-
-```{html}
-+-----------------------------------------------------+
-| WKi | WKn |     |     | BKn |     |     | BKn | BKi |
-+-----------------------------------------------------+
-```
-
-```{python}
-#| eval: false
-print( whos_the_winner(board) ) # None
-move(board, 1, "RIGHT")
-print( printable_board(board) )
-```
-
-```{html}
-+-----------------------------------------------------+
-| WKi | WKn |     |     | BKn |     |     | BKn | BKi |
-+-----------------------------------------------------+
-```
-
-```{python}
-#| eval: false
-print( whos_the_winner(board) ) # None
-move(board, 1, "RIGHT")
-print( printable_board(board) )
-```
-
-```{html}
-+-----------------------------------------------------+
-| WKi |     |     | WKn | BKn |     |     | BKn | BKi |
-+-----------------------------------------------------+
-```
-
-```{python}
-#| eval: false
-print( whos_the_winner(board) ) # None
-move(board, 4, "LEFT")
-print( printable_board(board) )
-```
-
-```{html}
-+-----------------------------------------------------+
-| WKi |     | BKn | WKn |     |     |     | BKn | BKi |
-+-----------------------------------------------------+
-```
-
-```{python}
-#| eval: false
-print( whos_the_winner(board) ) # None
-move(board, 0, "RIGHT")
-print( printable_board(board) )
-```
-
-```{html}
-+-----------------------------------------------------+
-|     |     | WKi | WKn |     |     |     | BKn | BKi |
-+-----------------------------------------------------+
-```
-
-```{python}
-#| eval: false
-print( whos_the_winner(board) ) # None
-move(board, 7, "LEFT")
-print( printable_board(board) )
-```
-
-```{html}
-+-----------------------------------------------------+
-|     |     | WKi | WKn |     | BKn |     |     | BKi |
-+-----------------------------------------------------+
-```
-
-```{python}
-#| eval: false
-print( whos_the_winner(board) ) # None
-move(board, 3, "RIGHT")
-print( printable_board(board) )
-```
-
-```{html}
-+-----------------------------------------------------+
-|     |     | WKi |     |     | WKn |     |     | BKi |
-+-----------------------------------------------------+
-```
-
-```{python}
-#| eval: false
-print( whos_the_winner(board) ) # None
-move(board, 8, "LEFT")
-print( printable_board(board) )
-```
-
-```{html}
-+-----------------------------------------------------+
-|     |     | WKi |     |     | BKi |     |     |     |
-+-----------------------------------------------------+
-```
-
-```{python}
-#| eval: false
-print( whos_the_winner(board) ) # None
-move(board, 2, "RIGHT")
-print( printable_board(board) )
-```
-
-```{html}
+White wins!
 +-----------------------------------------------------+
 |     |     |     |     |     | WKi |     |     |     |
 +-----------------------------------------------------+
-```
-
-```{python}
-#| eval: false
-print( is_game_over(board) ) # True
-print( whos_the_winner(board) ) # WHITE
 ```
