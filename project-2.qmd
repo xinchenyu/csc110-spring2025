@@ -55,29 +55,29 @@ This function takes two `score` and `total_points`, and it calls the previous fu
 #| echo: true
 def main():
   # test letter_grade function
-  print( letter_grade(90) ) # A
-  print( letter_grade(80) ) # B
-  print( letter_grade(70) ) # C
-  print( letter_grade(60) ) # D
-  print( letter_grade(59) ) # E
-  print( letter_grade(-59) ) # X
-  print( letter_grade(110) ) # X
+  assert letter_grade(90) == "A"
+  assert letter_grade(80) == "B"
+  assert letter_grade(70) == "C"
+  assert letter_grade(60) == "D"
+  assert letter_grade(59) == "E"
+  assert letter_grade(-59) == "X"
+  assert letter_grade(110) == "X"
   
   # test pass_or_fail function
-  print( pass_or_fail("B") ) # Pass
-  print( pass_or_fail("E") ) # Fail
-  print( pass_or_fail("ABCD") ) # Error
+  assert pass_or_fail("B") == "Pass"
+  assert pass_or_fail("E") == "Fail"
+  assert pass_or_fail("ABCD") == "Error"
   
   # test point_grade function
-  print( point_grade(0, 100) ) # 0.0
-  print( point_grade(100, 100) ) # 100.0
-  print( point_grade(45, 80) ) # 56.25
-  print( point_grade(37, 40) ) # 92.5
+  assert point_grade(0, 100) == 0.0
+  assert point_grade(100, 100) == 100.0
+  assert point_grade(45, 80) == 56.25
+  assert point_grade(37, 40) == 92.5
   
   # test get_grade_results function
-  print( get_grade_results(0, 100) ) # Your grade is 0.0 (E - Fail)
-  print( get_grade_results(45, 80) ) # Your grade is 56.25 (E - Fail)
-  print( get_grade_results(37, 40) ) # Your grade is 92.5 (A - Pass)
+  assert get_grade_results(0, 100) == "Your grade is 0.0 (E - Fail)"
+  assert get_grade_results(45, 80) == "Your grade is 56.25 (E - Fail)"
+  assert get_grade_results(37, 40) == "Your grade is 92.5 (A - Pass)"
   
 main()
 ```
