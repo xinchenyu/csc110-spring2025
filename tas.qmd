@@ -10,7 +10,7 @@ The best way to talk with a particular TA is via office hours, so check the sche
 
 Course coordinators are experienced UGTAs that assist the instructor with course management and will have a supervisory role with the course UGTAs.
 
--   Miro Vanek (mirovanek)
+-   Cole Perry
 
 # Senior TAs
 
@@ -22,18 +22,15 @@ Senior UGTAs in the Department of Computer Science are experienced UGTAs (with a
 
 Undergraduate Teaching Assistants (UGTAs) in the Department of Computer Science assist instructors in delivering undergraduate computer science courses. CS introductory courses utilize active learning and collaborative learning spaces to provide a collaborative and supportive environment for students learning programming skills. All teaching assistants have taken and excelled in the courses they support and are familiar with the material to mentor new students as they learn.
 
-## 1pm Section
 
 -   TBA
 
-## 2pm Section
 
--   TBA
 
 Interested in becoming a TA in the future? Check out [more information about what TAs do and how to apply](https://www.cs.arizona.edu/ugta).
 
 # Office Hours
 
-Shown below is the office hours schedule. The in-person office hours are hosted in Gould-Simpson 837. Adriana's office hours are in GS 811 (everyone else will be in GS 837). An (O) next to a name indicates that the office hour is online. For these office hours, log in to the class [discord](discord.html) server, put your name in the #office-hours text channel, and join the #office-hour voice channel.
+Shown below is the office hours schedule. The in-person office hours are hosted in Gould-Simpson 837. Adriana's office hours are in GS 811 (everyone else will be in GS 837). An (O) next to a name indicates that the office hour is online. For these office hours, check D2L for details.
 
-TBA
+-   TBA

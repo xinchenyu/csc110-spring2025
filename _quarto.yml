@@ -15,7 +15,7 @@ website:
         - syllabus.Rmd
         - schedule.qmd
         - tas.qmd
-        - discord.qmd
+        - zoom.qmd
         - academic-integrity.qmd
         - about.qmd
         - about_python.md

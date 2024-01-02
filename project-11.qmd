@@ -37,11 +37,10 @@ science
 
 Your program should open and read the input text file into the program and store the mapping between forwards and backwards words in a dictionary. The keys of the dictionary should be the forward version of the word, and the value the keys map to, should be the backward version of that word. Given the example content of words.txt shown above, the words dictionary should have the keys and values shown below:
 
+
 ```{python}
-words = { 
-    "computer":"retupmoc",
-    "science":"ecneics",
-}
+#| eval: false
+words = {"computer":"retupmoc", "science":"ecneics"}
 ```
 
 After you have read in the file and constructed this dictionary, you can use it to determine your word bank, which words you will need to look for within the puzzle.
