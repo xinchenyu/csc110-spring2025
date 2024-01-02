@@ -13,9 +13,9 @@ assignments <- read_excel("assessment_schedule.xlsx") %>%
   mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
 ```
 
-Programming Projects are to be submitted to [gradescope](https://www.gradescope.com/courses/676322).
+Programming Projects are to be submitted to [gradescope](https://www.gradescope.com/courses/691034).
 
-**Due date: `r assignments %>% filter(assessment == "Programming Project 1") %>% pull(formatted_date)` at 7pm**
+**Due date: `r assignments %>% filter(assessment == "Programming Project 1") %>% pull(formatted_date)` at 9pm**
 
 In this PA, you will be writing two simple programs that print out text. Note that this programming project is relatively straightforward. Not all of the future assignments will be this way. It is simple because we have not yet covered a wide variety of programming concepts, so there's only so much I can reasonably expect you to be able to program. The programming projects will get more challenging, but also, hopefully, more interesting!
 
