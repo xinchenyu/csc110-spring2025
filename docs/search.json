@@ -1544,7 +1544,7 @@
     "href": "about.html",
     "title": "About these materials",
     "section": "",
-    "text": "Slides, programming problems and projects are based on previous iterations of this course. These materials are derived from ones developed by Ben Dicken and Todd Proebsting and other UArizona CS faculty.\nSelling class notes and/or other course materials to other students or to a third party for resale is not permitted without the instructor’s express written consent. Violations to this and other course rules are subject to the Code of Academic Integrity and may result in course sanctions. Additionally, students who use D2L or UA e-mail to sell or buy these copyrighted materials are subject to Code of Conduct Violations for misuse of student e-mail addresses. This conduct may also constitute copyright infringement."
+    "text": "Slides, programming problems and projects are based on previous iterations of this course. These materials are derived from ones developed by Ben Dicken, Todd Proebsting, Adriana Picoral and other UArizona CS faculty.\nSelling class notes and/or other course materials to other students or to a third party for resale is not permitted without the instructor’s express written consent. Violations to this and other course rules are subject to the Code of Academic Integrity and may result in course sanctions. Additionally, students who use D2L or UA e-mail to sell or buy these copyrighted materials are subject to Code of Conduct Violations for misuse of student e-mail addresses. This conduct may also constitute copyright infringement."
   },
   {
     "objectID": "about.html#license",
@@ -1649,7 +1649,7 @@
     "href": "index.html",
     "title": "CSc 110 Computer Programming I",
     "section": "",
-    "text": "Welcome to CSc 110!\nThis is an introduction to programming with an emphasis on solving problems drawn from a variety of domains. Topics include basic control and data structures, problem solving strategies, and software development tools and techniques. Specifically, the Python programming language will be taught.\n\nCourse D2L: d2l\nCourse Gradescope: Gradescope\n\nWhere to start:\n\nSyllabus\nSchedule\n\n\n\nInstructor Information\n\nXinchen Yu\n\nOffice: Gould-Simpson 854\nEmail: xinchenyu@arizona.edu\nInstructor Website: xinchenyu.github.io\nOffice hours (open door, drop in, my office GS 854):\n\nWednesday 12:00pm to 2:00pm"
+    "text": "Welcome to CSc 110!\nThis is an introduction to programming with an emphasis on solving problems drawn from a variety of domains. Topics include basic control and data structures, problem solving strategies, and software development tools and techniques. Specifically, the Python programming language will be taught.\n\nD2L: d2l\nGradescope: Gradescope\nPiazza: Piazza (Access code: wildcats)\n\nWhere to start:\n\nSyllabus\nSchedule\n\n\n\nInstructor Information\n\nXinchen Yu\n\nOffice: Gould-Simpson 854\nEmail: xinchenyu@arizona.edu\nInstructor Website: xinchenyu.github.io\nOffice hours (open door, drop in, my office GS 854):\n\nWednesday 12:00pm to 2:00pm"
   },
   {
     "objectID": "slides-13-02.html#announcements",
@@ -2307,7 +2307,7 @@
     "href": "slides-07-03.html#random-module",
     "title": "random (class slides)",
     "section": "random module",
-    "text": "random module\nRemember to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random()\nprint(n)\n\nn = random.randint(0, 9)\nprint(n)\n\n0.9574093109683484\n8"
+    "text": "random module\nRemember to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random()\nprint(n)\n\nn = random.randint(0, 9)\nprint(n)\n\n0.6321474785326138\n8"
   },
   {
     "objectID": "slides-07-03.html#write-a-function",
@@ -2321,7 +2321,7 @@
     "href": "slides-07-03.html#write-a-function-solution",
     "title": "random (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nMary"
+    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nJune"
   },
   {
     "objectID": "slides-07-03.html#setting-a-seed",
@@ -2384,7 +2384,7 @@
     "href": "tas.html",
     "title": "TAs and Office Hours",
     "section": "",
-    "text": "The Undergraduate Teaching Assistants (UGTAs or TAs) in this class are here to help. You are also welcome to send an email.\nThe best way to talk with a particular TA is via office hours, so check the schedule (scroll down this page).\n\nCourse Coordinators\nCourse coordinators are experienced UGTAs that assist the instructor with course management and will have a supervisory role with the course UGTAs.\n\nCole Perry\n\n\n\nSenior TAs\nSenior UGTAs in the Department of Computer Science are experienced UGTAs (with at least 2 semesters of CS UGTA experience), who take on a leadership role. They will assist with UGTA hiring, work closely with the course coordinator on various tasks, lead UGTA training, and mentor new UGTAs. If you are interested in becoming a TA in the future, reach out to the senior TAs.\n\nTBA\n\n\n\nTAs\nUndergraduate Teaching Assistants (UGTAs) in the Department of Computer Science assist instructors in delivering undergraduate computer science courses. CS introductory courses utilize active learning and collaborative learning spaces to provide a collaborative and supportive environment for students learning programming skills. All teaching assistants have taken and excelled in the courses they support and are familiar with the material to mentor new students as they learn.\n\nTBA\n\nInterested in becoming a TA in the future? Check out more information about what TAs do and how to apply.\n\n\nOffice Hours\nShown below is the office hours schedule. The in-person office hours are hosted in Gould-Simpson 837. Adriana’s office hours are in GS 811 (everyone else will be in GS 837). An (O) next to a name indicates that the office hour is online. For these office hours, check D2L for details.\n\nTBA"
+    "text": "The Undergraduate Teaching Assistants (UGTAs or TAs) in this class are here to help. You are also welcome to send an email.\nThe best way to talk with a particular TA is via office hours, so check the schedule (scroll down this page).\n\nCourse Coordinators\nCourse coordinators are experienced UGTAs that assist the instructor with course management and will have a supervisory role with the course UGTAs.\n\nCole Perry\n\n\n\nSenior TAs\nSenior UGTAs in the Department of Computer Science are experienced UGTAs (with at least 2 semesters of CS UGTA experience), who take on a leadership role. They will assist with UGTA hiring, work closely with the course coordinator on various tasks, lead UGTA training, and mentor new UGTAs. If you are interested in becoming a TA in the future, reach out to the senior TAs.\n\nTBA\n\n\n\nTAs\nUndergraduate Teaching Assistants (UGTAs) in the Department of Computer Science assist instructors in delivering undergraduate computer science courses. CS introductory courses utilize active learning and collaborative learning spaces to provide a collaborative and supportive environment for students learning programming skills. All teaching assistants have taken and excelled in the courses they support and are familiar with the material to mentor new students as they learn.\n\nTBA\n\nInterested in becoming a TA in the future? Check out more information about what TAs do and how to apply.\n\n\nOffice Hours\nShown below is the office hours schedule. The in-person office hours are hosted in Gould-Simpson 837. Xinchen’s office hours are in GS 854 (everyone else will be in GS 837). An (O) next to a name indicates that the office hour is online. For these office hours, check D2L for details.\n\nTBA"
   },
   {
     "objectID": "slides-05-02.html#announcements",
@@ -3707,7 +3707,7 @@
     "href": "zoom.html",
     "title": "Online discussion and office hours",
     "section": "",
-    "text": "Link to join our Discord server: https://discord.gg/wZrMTMG7v\nREAD THE INFORMATION BELOW, IT’S VERY IMPORTANT.\n\nDiscord Rules\n\nChange your user name for the CSC 110 Spring 2023 server so that your name on this server matches your name on the roster/D2L. TAs, coords, and instructors will be checking if your name is in the roster before answering your questions or adding you to the office hours voice channels.\nDo not direct message (DM) TAs.\nDo not share code solutions. You are free to share error messages, but not code. TAs and instructors can access your submission on gradescope.\nIt is expected that everyone will participate in the online discussion in a mature and respectful manner. Do not demean or embarrass others. Do not make sexist, racist, xenophobic, homophobic, transphobic, or victim-blaming comments. Immature, aggressive, or disrespectful behavior will not be tolerated. If you see anyone breaking this rule, report that person to me (adrianaps@arizona.edu)\nBe cautious of how you use humor in sessions and online. Be aware of the potential impact of your words, regardless of the intentions. Think through and reread your comments before you say/post them."
+    "text": "READ THE INFORMATION BELOW, IT’S VERY IMPORTANT.\n\nQ & A: Piazza\n\nOff-class discussions among students and questions to the instructors/TAs will be conducted via Piazza.\n\nPiazza link\nAccess code: wildcats\n\nDo not direct message (DM) TAs.\nDo not share code solutions. You are free to share error messages, but not code. TAs and instructors can access your submission on gradescope.\nIt is expected that everyone will participate in the online discussion in a mature and respectful manner. Do not demean or embarrass others. Do not make sexist, racist, xenophobic, homophobic, transphobic, or victim-blaming comments. Immature, aggressive, or disrespectful behavior will not be tolerated. If you see anyone breaking this rule, report that person to me (xinchenyu@arizona.edu)\n\n\n\nOnline office hours\n\nOnline office hours with the instructor or the TAs will be a) announced over Piazza and b) conducted remotely over Zoom. Please check D2L for the zoom links."
   },
   {
     "objectID": "slides-01-02.html#announcements",

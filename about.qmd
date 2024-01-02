@@ -4,7 +4,7 @@ title: "About these materials"
 
 # Class Materials
 
-Slides, programming problems and projects are based on previous iterations of this course. These materials are derived from ones developed by [Ben Dicken](https://benjdd.com/) and [Todd Proebsting](http://proebsting.cs.arizona.edu/) and other UArizona CS faculty.
+Slides, programming problems and projects are based on previous iterations of this course. These materials are derived from ones developed by [Ben Dicken](https://benjdd.com/), [Todd Proebsting](http://proebsting.cs.arizona.edu/), [Adriana Picoral](https://adrianapicoral.com/) and other UArizona CS faculty.
 
 Selling class notes and/or other course materials to other students or to a third party for resale is not permitted without the instructor's express written consent. Violations to this and other course rules are subject to the Code of Academic Integrity and may result in course sanctions. Additionally, students who use D2L or UA e-mail to sell or buy these copyrighted materials are subject to Code of Conduct Violations for misuse of student e-mail addresses. This conduct may also constitute copyright infringement.
 
