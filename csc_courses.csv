@@ -1,0 +1,37 @@
+﻿course_code,course_number,section,units,title,days,start,end,facility,mode
+CSC ,101,1,3,Intro to Computer Science ,MWF ,3:00:00 PM,3:50:00 PM,GITT-129B ,In Person 
+CSC ,101,2,3,Intro to Computer Science ,MWF ,3:00:00 PM,3:50:00 PM,GITT-129B ,In Person 
+CSC ,110,1,4,Computer Programming I ,MWF ,1:00:00 PM,1:50:00 PM,GITT-129B ,Hybrid 
+CSC ,110,2,4,Computer Programming I ,MWF ,2:00:00 PM,2:50:00 PM,GITT-129B ,Hybrid 
+CSC ,120,1,4,Intro to Computer Prog II ,MWF ,4:00:00 PM,4:50:00 PM,GITT-129B ,Hybrid 
+CSC ,144,1,3,Discrete Math for Comp Sci I ,MWF ,3:00:00 PM,3:50:00 PM,KOFFL-204 ,In Person 
+CSC ,144,2,3,Discrete Math for Comp Sci I ,MWF ,2:00:00 PM,2:50:00 PM,ILC-150 ,In Person 
+CSC ,210,1,4,Software Development ,MWF ,9:00:00 AM,9:50:00 AM,GITT-129B ,Hybrid 
+CSC ,244,1,3,Discrete Math for Comp Sci II ,MWF ,1:00:00 PM,1:50:00 PM,ILC-120 ,In Person 
+CSC ,252,1,3,Computer Organization ,TR ,12:30:00 PM,1:45:00 PM,EDUC-211 ,In Person 
+CSC ,335,1,3,Object-Ornt Prgm+Dsgn ,TR ,9:30:00 AM,10:45:00 AM,CHEM-105 ,In Person 
+CSC ,337,1,3,Web Programming ,TR ,3:30:00 PM,4:15:00 PM,EDUC-211 ,In Person 
+CSC ,343,1,3,Human Computer Interaction ,MW ,9:30:00 AM,10:45:00 AM,GLD-S-906 ,In Person 
+CSC ,345,1,3,Analysis Discrete Struct ,MW ,3:00:00 PM,4:15:00 PM,SLIB-200SW ,In Person 
+CSC ,352,1,3,System Programming+Unix ,TR ,2:00:00 PM,3:15:00 PM,ILC-150 ,In Person 
+CSC ,372,1,3,Compar Programming Lang ,MW ,12:30:00 PM,1:45:00 PM,HARV-305 ,In Person 
+CSC ,380,1,3,Principles of Data Science ,TR ,3:30:00 PM,4:45:00 PM,CHVEZ-111 ,In Person 
+CSC ,436,1,3,Software Engineering ,MW ,12:30:00 PM,1:45:00 PM,Live Onln ,Live Onln 
+CSC ,437,1,3,Geometric Algorithms ,MW ,5:00:00 PM,6:15:00 PM,GLD-S-906 ,In Person 
+CSC ,445,1,3,Algorithms ,MW ,3:30:00 PM,4:45:00 PM,GLD-S-906 ,In Person 
+CSC ,452,1,3,Prin Operating Systems ,MW ,2:00:00 PM,3:15:00 PM,SAGHA-101 ,In Person 
+CSC ,453,1,3,Compilers+Systems Sftwr ,TR ,8:00:00 AM,9:15:00 AM,GLD-S-906 ,In Person 
+CSC ,460,1,3,Database Design ,TR ,3:30:00 PM,4:45:00 PM,GLD-S-906 ,In Person 
+CSC ,466,1,3,Computer Security ,TR ,9:30:00 AM,10:45:00 AM,GLD-S-906 ,In Person 
+CSC ,473,1,3,"Automata,Grammars+Lang ",TR ,12:30:00 PM,1:45:00 PM,SPH-205 ,In Person 
+CSC ,477,1,3,Intro. Computer Vision ,MW ,8:00:00 AM,9:15:00 AM,GLD-S-906 ,In Person 
+CSC ,480,1,3,Prin Machine Learning ,TR ,5:00:00 PM,6:15:00 PM,GLD-S-906 ,In Person 
+CSC ,522,1,3,Parallel+Distribut Compt ,TR ,8:00:00 AM,9:15:00 AM,GLD-S-701 ,In Person 
+CSC ,525,1,3,Prin Computer Networking ,MW ,2:00:00 PM,3:15:00 PM,GLD-S-701 ,In Person 
+CSC ,535,1,3,Probabilistic Graphical Models ,MW ,9:30:00 AM,10:45:00 AM,GLD-S-701 ,In Person 
+CSC ,544,1,3,Adv Data Visualization ,MW ,3:30:00 PM,4:45:00 PM,GLD-S-701 ,In Person 
+CSC ,553,1,3,Principle Of Compilation ,TR ,12:30:00 PM,1:45:00 PM,GLD-S-701 ,In Person 
+CSC ,573,1,3,Theory of Computation ,TR ,9:30:00 AM,10:45:00 AM,GLD-S-701 ,In Person 
+CSC ,585,1,3,Algorithms for NLP ,TR ,2:00:00 PM,3:15:00 PM,GLD-S-701 ,In Person 
+CSC ,696,1,3,AdvTpc Artificial Intelligence ,MW ,12:30:00 PM,1:45:00 PM,GLD-S-701 ,In Person 
+CSC ,696,2,3,AdvTpc Artificial Intelligence ,TR ,3:30:00 PM,4:45:00 PM,GLD-S-701 ,In Person 

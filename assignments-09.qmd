@@ -1,0 +1,110 @@
+---
+title: "Module 9 Programming Problems"
+---
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(readxl)
+assignments <- read_excel("assessment_schedule.xlsx") %>% 
+  mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
+```
+
+
+Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/676322).
+
+# Programming Problem 17
+
+**Due date: `r assignments %>% filter(assessment == "Module 9 Programming Problems") %>% pull(formatted_date)` at 7pm**
+
+Write a Python function that does the following:
+
+1.  Its name is `read_csv`
+2.  It takes a string as argument called `file_name`
+3.  It opens the file with `file_name` in read mode
+4.  It iterates over each line in the file, splitting each line by `","`
+5.  It creates a dictionary where the keys are the first item in each line, and the values are the other values (in a list)
+6.  It returns the dictionary
+
+Test cases:
+
+contents of *stipends.csv*:
+
+```{HTML}
+Peter,1000
+Joan,50500
+Mary,2400
+```
+
+```{python}
+#| echo: true
+#| eval: false
+print( read_csv("stipends.csv") ) # {"Peter": [1000], 
+                                  #  "Joan": [50500],
+                                  #  "Mary": [2400]}
+```
+
+contents of *population.csv*:
+
+```{HTML}
+Country,United States,Brazil,Mexico,Canada
+Population (in mil),331.00,212.56,128.93,37.74
+```
+
+```{python}
+#| echo: true
+#| eval: false
+print( read_csv("population.csv") ) # {"Country": ["United States", "Brazil", "Mexico", "Canada"],
+                                    #  "Population (in mil)": [331.00, 212.56, 128.93, 37.74]}
+```
+
+Name the program `read_data_file.py`. Make sure that gradescope gives you the points for passing the test case.
+
+# Programming Problem 18
+
+**Due date: `r assignments %>% filter(assessment == "Module 9 Programming Problems") %>% pull(formatted_date)` at 7pm**
+
+Write a Python function that does the following:
+
+1.  Its name is `write_csv`
+2.  It takes a `dictionary` and a string `file_name` as arguments
+3.  It opens the file with `file_name` in write mode
+4.  It iterates over the `dictionary` to write lines to the opened `.csv`
+5.  Each key is the first element of the line, the values are lists that contain the other values in the line
+
+Test cases:
+
+```{python}
+#| echo: true
+#| eval: false
+my_data = {"Peter": [1000], "Joan": [50500], "Mary": [2400]}
+write_csv(my_data, "stipends.csv")
+```
+
+This is what *stipends.csv* should contain:
+
+```{HTML}
+Peter,1000
+Joan,50500
+Mary,2400
+```
+
+```{python}
+#| echo: true
+#| eval: false
+my_data = {"Country": ["United States", "Brazil", "Mexico", "Canada"],
+           "Population (in mil)": [331.00, 212.56, 128.93, 37.74]}
+write_csv(my_data, "population.csv")
+```
+
+This is what *population.csv* should contain:
+
+```{HTML}
+Country,United States,Brazil,Mexico,Canada
+Population (in mil),331.0,212.56,128.93,37.74
+```
+
+Name the program `write_data_file.py`. Make sure that gradescope gives you the points for passing the test case.

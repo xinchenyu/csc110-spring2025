@@ -1,0 +1,149 @@
+---
+title: "Programming Project 7"
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(readxl)
+assignments <- read_excel("assessment_schedule.xlsx") %>% 
+  mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
+```
+
+Programming Projects are to be submitted to [gradescope](https://www.gradescope.com/courses/676322).
+
+**Due date: `r assignments %>% filter(assessment == "Programming Project 7") %>% pull(formatted_date)` at 7pm**
+
+In this programming project you will implement a number of Python functions to implement a Benford's Law analysis. Make sure you follow the provided [style guide](https://adrianapicoral.com/csc-110/style.html) (you will be graded on it!).
+
+Name your program `benfords_law.py` to submit to gradescope. Make sure that gradescope gives you the points for passing the test cases.
+
+This programming project is an adaptation of Ben Dicken's Benford's Law Programming Assignment.
+
+Benford's Law is a mathematical law that describes the behavior of naturally-occurring numbers in some kinds of numerical data sets. I recommend that you watch this video before proceeding to get an explanation:
+
+{{< video https://youtu.be/XXjlR2OK1kM >}}
+
+Benford's law is useful for distinguishing naturally occurring data from randomized or made-up data. It has been used in the real world to detect election fraud (For example, in the 2009 Iranian election). It has also been used as evidence in criminal cases in the US. In this project, you'll be writing a program that reads in a data set, and prints out the plot of first-digits. Then, you can look at the plot to determine if it conforms to the law or not! Name your file `benfords_law.py.` You should organize the code into several functions.
+
+# The Input File
+
+Your program should accept an input file name as argument, which your program should expect to be formatted as CSV. 
+As a reminder, a CSV file is one that is organized into rows and columns, commas are typically used as the character that separates each entry in a row. Shown below is an example of the program prompting the user for a file name, then the user enters a file name (`places.csv`), and then the program prints out the resulting plot.
+
+```{python}
+#| eval: false
+#| echo: true
+list_of_numbers = csv_to_list("places.csv")
+assert list_of_numbers == ["1234", "145", "10", "1700", "1729", "1711", "219", \
+                           "231", "20001", "301", "3879", "404", "40123", "505",\
+                           "502", "601", "712", "81231", "91231"]
+counts = count_start_digits(list_of_numbers)
+assert counts ==  {1: 6, 2: 3, 3: 2, 4: 2, 5: 2, 6: 1, 7: 1, 8: 1, 9: 1}
+percentages = digit_percentages(counts)
+assert percentages == {1: 31.58, 2: 15.79, 3: 10.53, 4: 10.53, 5: 10.53, 6: 5.26, 7: 5.26, 8: 5.26, 9: 5.26}
+print_plot(percentages)
+```
+
+<pre>
+1 | ###############################
+2 | ##############
+3 | ##########
+4 | ########
+5 | #######
+6 | #####
+7 | ####
+8 | ####
+9 | ####
+</pre>
+
+Here's what `places.csv` looks like:
+
+```{HTML}
+region,population
+pima,1234
+georgia,145
+steele,10
+tampa,1700
+greece,1729
+rome,1711
+milan,219
+tucson,231
+tuscany,20001
+florence,301
+nigeria,3879
+newyork,404
+phoenix,40123
+belgium,505
+madrid,502
+nogales,601
+brussels,712
+tempe,81231
+anthem,91231
+```
+
+```{python}
+#| eval: false
+print( csv_to_list("places.csv") )
+```
+
+```{HTML}
+["1234", "145", "10", "1700", "1729", "1711", "219", "231", "20001", "301", "3879", "404", "40123", "505", "502", "601", "712", "81231", "91231"]
+```
+
+## The plot
+
+In order to create the plot, you will first have to loop through the numbers list and count how many times a number starts with the digit `1`, the digit `2`, the digit `3`, and so on up to `9`. You should use a dictionary for this counting. If you have a floating-point number x, you can get the first digit as an int by doing `int(str(x)[0])`. Based on the `places.csv` data shown earlier, the counts dictionary should be as follows after counting:
+
+```{python}
+#| eval: false
+#| echo: true
+counts = {1: 6, 2: 3, 3: 2, 4: 2, 5: 2, 6: 1, 7: 1, 8: 1, 9: 1}
+```
+
+
+After counting, loop through the numbers 1 through 9 and figure out the percentage that each occurs. You will use these percentages both to print out the bar chart, and to check if the data follows the law. The way that you would calculate the percentage for a particular digit, as an integer, is:
+
+```{python}
+#| eval: false
+#| echo: true
+(count_for_digit / length_of_numbers_list) * 100
+```
+
+The number of `#` for a digit in the plot should be the same as the percentage of the data that digit appears first. For example, in the places.csv data, there were 3 numbers that started with the digit 2 and there were a total of 19 numbers from the data set, then you should print out `int((3 / 19) * 100) = 15%`. Thus, `15` pound sign characters for `2`. For each row of the plot, print out the digit, a vertical bar (pipe character), and then the pound sign characters (`#`). The plot that should print based on the `places.csv` example is:
+
+<pre>
+1 | ###############################
+2 | ###############
+3 | ##########
+4 | ##########
+5 | ##########
+6 | #####
+7 | #####
+8 | #####
+9 | #####
+</pre>
+
+## Does it follow the law?
+
+The other thing you should determine is if the data follows Benford's Law. For the purposes of this PA, a data set will follow Benford’s law if the percentage of occurrences of each digits follows the following percentages, plus 10% or minus 5%.
+
+| digit | percent (-5, +10) |
+|-------|-------------------|
+| 1     | 30%               |
+| 2     | 17%               |
+| 3     | 12%               |
+| 4     | 9%                |
+| 5     | 7%                |
+| 6     | 6%                |
+| 7     | 5%                |
+| 8     | 5%                |
+| 9     | 4%                |
+
+### Test cases
+
+-   [populations.csv](data/populations.csv) does follow Benford's Law
+-   [stocks.csv](data/stocks.csv) does follow Benford's Law
+-   [random_numbers.csv](data/random_numbers.csv) does NOT follow Benford's Law

@@ -1,0 +1,324 @@
+---
+title: "Programming Project 10"
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(readxl)
+assignments <- read_excel("assessment_schedule.xlsx") %>% 
+  mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
+```
+
+Programming Projects are to be submitted to [gradescope](https://www.gradescope.com/courses/676322).
+
+**Due date: `r assignments %>% filter(assessment == "Programming Project 10") %>% pull(formatted_date)` at 7pm**
+
+This programming project is an adaptation of Ben Dicken's Minesweeper Programming Assignment.
+
+You should name the file `minesweeper.py`. 
+
+# Minesweeper
+
+Minesweeper is a one player puzzle game that was often preinstalled with older versions of Windows. The goal of the game is to clear a grid of squares, one at a time, trying to avoid any squares that have hidden mines. Upon clearing a square, a number may appear which tells how many mines are adjacent to the given square. Selecting a square containing a mine results in an instant loss, while revealing all non-mine squares results in a win. There are still versions of this game around, like [this one made by Google](https://www.google.com/fbx?fbx=minesweeper).
+
+## Minesweeper Rules
+
+For this assignment, we are going to simplify some of the rules of the original game while still keeping the core of the game intact. Instead of clicking on squares your program will be given coordinates. The primary gameplay loop is going to be generating coordinates to a square on the board upon which the square is revealed. There are two possibilities for what a square can contain.
+
+If a "X" is revealed, this is a mine which results in an instant loss.
+
+Otherwise, an integer is revealed, which is the number of adjacent (including diagonally) mines from the revealed square (including 0, which is handled differently by the original game). All integers around the given coordinates are also revealed (the mines remain hidden).
+
+For example, let's say a player is provided the given board:
+
+<pre>
+ 2 [ ][ ][ ]
+ 1 [ ][ ][ ]
+ 0 [ ][ ][ ]
+    a  b  c
+</pre>
+
+If the the coordinates `(0, "a") `are provided, a result may be:
+
+<pre>
+ 2 [ ][ ][ ]
+ 1 [1][ ][ ]
+ 0 [1][2][ ]
+    a  b  c
+</pre>
+
+This means that at `(0, "a")` there is not a mine, however there is one nearby. We know there's no mine in `(1, "a")` because the integer `1` was also revealed. Specifically there is probably a mine in `(1, "b")`. Suppose the player's next move is c0, which would produce:
+
+<pre>
+ 2 [ ][ ][ ]
+ 1 [1][ ][ ]
+ 0 [1][2][2]
+    a  b  c
+</pre>
+
+The 2 revealed means that there would be 2 mines somewhere among `(1, "b")`, `(1, "c")` and `(0, "c")`. After this let's say the coordinates `(1, "b")` are provided.
+
+<pre>
+ 2 [ ][ ][ ]
+ 1 [1][X][ ]
+ 0 [1][2][2]
+    a  b  c
+</pre>
+
+Since this reveals an X the game has ended and the player loss. If all non-mine squares were revealed, the player would have won.
+
+## Input File Format
+
+All files used for testing are going to follow the same formatting. The first line will contain an integer which is the width of the board. Similarly, the second line will contain the height. There will then be N (Height of the board) more lines. Each of these lines will contain X (Width of the board) elements separated by commas. Each element may be either a 1 or 0. Provided below is what an example file would look like:
+
+
+```{html}
+2
+3
+0, 1
+1, 0
+0, 1
+```
+
+# Development Strategy
+
+In order to get the game working, you must implement several functions. Descriptions for what every function should do are provided below. Implementing and testing these functions is up to you.
+
+## Functions to Implement
+
+### read_file
+
+For this file, for example:
+
+```{html}
+5
+5
+1, 0, 0, 0, 0
+1, 0, 0, 0, 0
+0, 1, 0, 0, 0
+0, 0, 0, 0, 1
+1, 0, 0 ,0, 1
+```
+
+Your function should return:
+
+```{python}
+#| eval: false
+#| echo: true
+[['X', '0', '0', '0', '0'],
+ ['X', '0', '0', '0', '0'],
+ ['0', 'X', '0', '0', '0'],
+ ['0', '0', '0', '0', 'X'],
+ ['X', '0', '0', '0', 'X']]
+```
+
+
+### make_empty_grid
+
+Return a 2D list that has the same dimensions of a passed in 2D list where every inner element is an empty space. For example, if the passed in the grid is:
+
+```{python}
+#| echo: true
+#| eval: false
+[['X', '3', 'X'], ['2', 'X', '2']]
+```
+
+Return:
+
+```{python}
+#| echo: true
+#| eval: false
+[[' ', ' ', ' '], [' ', ' ', ' ']]
+```
+
+### update_grid
+
+Takes in a single 2D list where every value is either "X" or "0" (Note the formatting is going to be the same as the list returned by read_file). The function should then replace all the 0’s with the number of adjacent mines, which is some cases will still be 0. As we are modifying an already existing list nothing is to be returned by the function. For example, if passed in the result of reading [fiveByFive.txt](data/fiveByFive.txt)
+
+Which is:
+
+
+```{python}
+#| echo: true
+#| eval: false
+[['X', '0', '0', '0', '0'], 
+ ['X', '0', '0', '0', '0'], 
+ ['0', 'X', '0', '0', '0'], 
+ ['0', '0', '0', '0', 'X'], 
+ ['X', '0', '0', '0', 'X']]
+```
+
+
+The function should modify it to become:
+
+```{python}
+#| echo: true
+#| eval: false
+[['X', '2', '0', '0', '0'], 
+ ['X', '3', '1', '0', '0'], 
+ ['2', 'X', '1', '1', '1'], 
+ ['2', '2', '1', '2', 'X'], 
+ ['X', '1', '0', '2', 'X']]
+```
+
+### dig
+
+It handles the actual making of a move.
+
+Takes in three parameters:
+
+* The first is a 2D list that follows the formatting of the grid returned from `update_grid.` This 2D list serves as an answer key of sorts that contains what to reveal to the user. As squares are revealed the values are copied from here to the user's view.
+* The second parameter is a string which is the coordinate to reveal. Not that this is formatted so that the first character is a letter, which is the x position to reveal. The rest of the string is going to be a number which is the y position to reveal. "a0" For example would reveal the bottom left corner of the grid.
+* The third parameter is a 2D list, which is used to show which squares the player has revealed. Initially, this grid will be formatted as the return value from `make_empty_grid`, however, as the player reveals more squares those corresponding values from the answer key list are going to be moved into this grid we are going to refer to as the user view.
+
+To actually make a move requires translating the string into two integers which are the corresponding values to use as indices to get the value at that point on the grid. Then, copy the value from that location (using those new values) on the answer key grid into the same spot of the user view grid.
+
+The next step is to check all the squares around the given coordinates, revealing only the integers for those squares, keeping the mines hidden.
+
+### count_total_moves
+
+It returns the number of spots on the grid that have not been revealed by the player and do not contain a mine.
+
+### print_grid
+
+Takes in a 2D list and prints it out to standard output. For example printing the initial user view (remember the user view is the blank grid made from `make_empty_grid`) of the grid from [tenSquare.txt](data/tenSquare.txt) should output:
+
+<pre>
+10 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 9 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 8 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 7 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 6 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 5 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 4 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 3 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 2 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 1 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 0 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+    a  b  c  d  e  f  g  h  i  j  k
+</pre>
+
+Take note of how the number labels are right-aligned. For the letter labels you can assume that the width will be at most 26 (One for each lower case letter) and the height will be 100 or less. You may also assume that every element in the 2D list will be only a single character string.
+
+### determine_game_status
+
+This function should return a boolean which is `True` if the game should continue or `False` if the game is over. `False` is returned if a mine has been revealed or count is `0` meaning there are no squares without mines that are not revealed.
+
+# Test cases
+
+Files:
+
+* [fiveByFive.txt](data/fiveByFive.txt)
+* [tenSquare.txt](data/tenSquare.txt)
+
+
+## Full game win
+
+```{python}
+#| echo: true
+#| eval: false
+if __name__ == '__main__':
+    grid = read_file("fiveByFive.txt")
+    user_view = make_empty_grid(grid)
+    update_grid(grid)
+    moves = ["b0", "c2", "e4", "c4", "e2", "a2", "d0"]
+    index = 0
+    while determine_game_status(grid, user_view) and index < len(moves):
+        dig(grid, moves[index], user_view)
+        index += 1
+```
+
+Should print to the standard output the following:
+
+<pre>
+ 4[ ][ ][ ][ ][ ]
+ 3[ ][ ][ ][ ][ ]
+ 2[ ][ ][ ][ ][ ]
+ 1[2][2][1][ ][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][ ][ ][ ][ ]
+ 3[ ][3][1][0][ ]
+ 2[ ][ ][1][1][ ]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][ ][ ][0][0]
+ 3[ ][3][1][0][0]
+ 2[ ][ ][1][1][ ]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][2][0][0][0]
+ 3[ ][3][1][0][0]
+ 2[ ][ ][1][1][ ]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][2][0][0][0]
+ 3[ ][3][1][0][0]
+ 2[ ][ ][1][1][1]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][2][0][0][0]
+ 3[ ][3][1][0][0]
+ 2[2][ ][1][1][1]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][2][0][0][0]
+ 3[ ][3][1][0][0]
+ 2[2][ ][1][1][1]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][2][ ]
+   a  b  c  d  e  
+</pre>
+
+## Full game lose
+
+```{python}
+#| echo: true
+#| eval: false
+if __name__ == '__main__':
+    grid = read_file("fiveByFive.txt")
+    user_view = make_empty_grid(grid)
+    update_grid(grid)
+    moves = ["b0", "c2", "e4", "b2", "e2", "a2", "d0"]
+    index = 0
+    while determine_game_status(grid, user_view) and index < len(moves):
+        dig(grid, moves[index], user_view)
+        index += 1
+```
+
+Should output:
+
+<pre>
+ 4[ ][ ][ ][ ][ ]
+ 3[ ][ ][ ][ ][ ]
+ 2[ ][ ][ ][ ][ ]
+ 1[2][2][1][ ][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][ ][ ][ ][ ]
+ 3[ ][3][1][0][ ]
+ 2[ ][ ][1][1][ ]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][ ][ ][0][0]
+ 3[ ][3][1][0][0]
+ 2[ ][ ][1][1][ ]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+ 4[ ][ ][ ][0][0]
+ 3[ ][3][1][0][0]
+ 2[ ][X][1][1][ ]
+ 1[2][2][1][2][ ]
+ 0[ ][1][0][ ][ ]
+   a  b  c  d  e  
+</pre>

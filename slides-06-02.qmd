@@ -1,0 +1,145 @@
+---
+title: "lists (class slides)"
+format: revealjs
+slide-number: true
+df-print: kable
+---
+
+
+# CSc 110 - Lists and while loops
+
+# Quiz 06
+
+You have 10 minutes to complete the quiz
+
+* No need for comments, no need for a `main()`, no need for test cases
+
+* USE A `WHILE` LOOP -- you will be awarded a ZERO if you solve the quiz with another type of loop
+
+Built-in functions you can use: `round()`, `input()`, `float()`, `str()`, `int()`, `len()` — you don't have to use all of these
+
+## Write a function
+
+1. Its name is `double`
+1. It takes a list of numeric variables as argument
+1. It iterates over the list (use `while`) doubling (multiplying by two) each value in the list
+1. It returns the modified list
+
+```{python}
+#| eval: false
+#| echo: true
+assert double([0, 1, 2, 3]) == [0, 2, 4, 6]
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: false
+#| echo: true
+def double(numbers):
+  index = 0
+  while index < len(numbers):
+    numbers[index] *= 2
+    index += 1
+  return numbers
+
+def main():
+  original_list = [0, 1, 2, 3]
+  new_list = double(original_list)
+  assert original_list == new_list
+  assert original_list == [0, 2, 4, 6]
+  
+  print("Passed all tests")
+  
+main()
+```
+
+
+Let's visualize this on [Python Tutor](https://pythontutor.com/visualize.html#mode=edit)
+
+## Write a function
+
+1. Its name is `shift_left`
+1. It takes a list as argument
+1. It copies the next item in the list to the current position (item at index 1 is copied to item at index 0, item at position 2 is copied to item at index 1 and so on). The last item in the list will be `None`, the first item is discarded (don't change size of the list)
+1. It uses a `while` loop
+1. It returns the modified list
+
+
+```{python}
+#| eval: false
+#| echo: true
+assert shift_left(["a", "b", "c", "d"]) == ["b", "c", "d", None]
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def shift_left(items):
+  index = 0
+  while index < len(items)-1:
+    items[index] = items[index+1]
+    index += 1
+  items[index] = None
+  return items
+
+def main():
+  original_list = ["a", "b", "c", "d"]
+  new_list = shift_left(original_list)
+  assert new_list == ["b", "c", "d", None]
+  assert original_list == new_list
+  
+  print("Passes all tests")
+  
+main()
+```
+
+
+## Write a function
+
+1. Its name is `shift_right`
+1. It takes a list as argument
+1. It copies the previous item in the list to the current position (item at index 0 is copied to item at index 1, item at position 1 is copied to item at index 2 and so on). The last item in the list is discarded (don't change size of the list)
+1. It uses a `while` loop
+1. It returns the modified list
+
+
+```{python}
+#| eval: false
+#| echo: true
+assert shift_right(["a", "b", "c", "d"]) == [None, "a", "b", "c"]
+```
+
+## Write a function -- solution
+ 
+```{python}
+#| eval: true
+#| echo: true
+def shift_right(items):
+  index = len(items) - 1
+  while index > 0:
+    items[index] = items[index-1]
+    index -= 1
+  items[0] = None
+  return items
+
+def main():
+  original_list = ["a", "b", "c", "d"]
+  new_list = shift_right(original_list)
+  assert new_list == [None, "a", "b", "c"]
+  assert original_list == new_list
+  
+  print("Passed all tests")
+  
+main()
+```
+
+
+# Submit code for attendance
+
+Submit your `shift_right` function to Gradescope for attendance.
+
+Name your file `shift.py`
+

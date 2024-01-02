@@ -1,0 +1,70 @@
+---
+title: "Module 8 Programming Problems"
+---
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(readxl)
+assignments <- read_excel("assessment_schedule.xlsx") %>% 
+  mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
+```
+
+
+Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/676322).
+
+# Programming Problem 15
+
+**Due date: `r assignments %>% filter(assessment == "Module 8 Programming Problems") %>% pull(formatted_date)` at 7pm**
+
+Write a Python function that does the following:
+
+1.  Its name is `count_vowels`
+2.  It takes as argument a `string`
+3.  It iterates over the `string` (either with a `while` or `for` loop) counting how many lowercase and uppercase vowels the `string` has
+4.  It returns a **dictionary** with vowels are the keys, and integer counts as the values
+
+Test cases:
+
+```{python}
+#| echo: true
+#| eval: false
+print( count_vowels("") ) # {"a": 0, "e": 0, "i": 0, "o": 0, "u": 0,
+                          #  "A": 0, "E": 0, "I": 0, "O": 0, "U": 0}
+                
+print( count_vowels("banana") ) # {"a": 3, "e": 0, "i": 0, "o": 0, "u": 0,
+                                #  "A": 0, "E": 0, "I": 0, "O": 0, "U": 0}
+                                
+print( count_vowels("Adriana") ) # {"a": 2, "e": 0, "i": 1, "o": 0, "u": 0,
+                                 #  "A": 1, "E": 0, "I": 0, "O": 0, "U": 0}
+                                 
+print( count_vowels("Hello World!") ) # {"a": 0, "e": 1, "i": 0, "o": 2, "u": 0,
+                                      #  "A": 0, "E": 0, "I": 0, "O": 0, "U": 0}
+```
+
+Name the program `vowel_counting.py`. Make sure that gradescope gives you the points for passing the test case.
+
+# Programming Problem 16
+
+**Due date: `r assignments %>% filter(assessment == "Module 8 Programming Problems") %>% pull(formatted_date)` at 7pm**
+
+Write a Python function that does the following:
+
+1.  Its name is `invert_dictionary`
+2.  It takes a single `dictionary` as a parameter
+3.  It returns a new dictionary with the original `dictionary` values mapped as keys, and its original keys mapped as lists of values
+
+Test cases:
+
+```{python}
+#| echo: true
+#| eval: false
+print( invert_dictionary({"a": 7, "b": 8}) ) # { 7: ["a"], 8: ["b"] }
+print( invert_dictionary({"a": 2, "b": 2}) ) # { 2: ["a", "b"] }
+print( invert_dictionary({}) ) # {}
+```
+
+Name the program `inversion.py`. Make sure that gradescope gives you the points for passing the test case.

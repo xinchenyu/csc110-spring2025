@@ -1,0 +1,103 @@
+---
+title: "Programming Project 1"
+---
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(readxl)
+assignments <- read_excel("assessment_schedule.xlsx") %>% 
+  mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
+```
+
+Programming Projects are to be submitted to [gradescope](https://www.gradescope.com/courses/676322).
+
+**Due date: `r assignments %>% filter(assessment == "Programming Project 1") %>% pull(formatted_date)` at 7pm**
+
+In this PA, you will be writing two simple programs that print out text. Note that this programming project is relatively straightforward. Not all of the future assignments will be this way. It is simple because we have not yet covered a wide variety of programming concepts, so there's only so much I can reasonably expect you to be able to program. The programming projects will get more challenging, but also, hopefully, more interesting!
+
+Make sure you follow the provided [style guide](style.html) (you will be graded on it!). You are **not** allowed to use any built-in method or function for any Python library.
+
+Also make sure you check the [Academic Integrity](academic-integrity.html) and [Common Gradescope Errors](gradescope-errors.html) pages.
+
+# Mad Libs
+
+Mad Libs is a simple game/activity where the host player prompts other participant(s) for words of various types. For instance, the host might ask the other participants for various words that fall into categories such as nouns, places, names, verbs, etc. These words are filled in to blanks in a story, and after the host has gotten all of the words filled in, the story is read aloud. For instance, here is a printable mad lib from [madlibs.com](https://www.madlibs.com/).
+
+In this programming exercise, you'll write two mad lib program, that act as the host of the game. The program will take as argument various strings (words), and then it will return a single string with a story using these words.
+
+## Move Mad Lib
+
+The first program should be named `move.py`. The outline of the story is shown below:
+
+<pre>
+??? decided to move from their apartment on 5th
+to a condo on ???. They called their friend ???
+for help. However, they could not fit ??? into
+the moving truck, so they had to rent a ??? ???
+in order to move it!
+</pre>
+
+The locations with `???` indicate that these should be replaced with a word specified by the computer user. Your `create_story` function should take 6 arguments, and fill them in to the story. An example of running the program would look like so:
+
+```{python}
+#| eval: false
+#| echo: true
+person_one = "Janet"
+street_name = "Loopdydoo Avenue"
+person_two = "Richard"
+object_name = "Christmas tree"
+vehicle = "Horse-drawn carriage"
+adjective = "Off-road"
+story = create_story(person_one, street_name, person_two, \
+                     object_name, vehicle, adjective)
+print(story)
+```
+
+
+<pre>
+Janet decided to move from their apartment on 5th
+to a condo on Loopdydoo Avenue. They called their friend Richard
+for help. However, they could not fit Christmas tree into
+the moving truck, so they had to rent a Off-road Horse-drawn carriage
+in order to move it!
+</pre>
+
+## Vacation Mad Lib
+The second program should be named `vacation.py`. The outline of the story is shown below:
+
+<pre>
+??? and ??? were best friends.
+One day ??? and ??? decided to go on a
+vacation to ???. However, they didn't know
+what to do with their ??? pet ??? named ???.
+??? had been causing problems, due to constant ???ing.
+??? found a sitter for their pet, and ??? went on the trip.
+</pre>
+
+Again, locations with `???` indicate that these should be replaced with a word specified by the computer user. Your `create_story` function should take 8 arguments. An example of running the program would look like so:
+
+```{python}
+#| eval: false
+#| echo: true
+person_one = "Joe"
+person_two = "Lily"
+pet = "Poncho"
+place = "Madagascar"
+adjective = "Ridiculous"
+verb = "plank"
+adverb = "spastically"
+```
+
+
+<pre>
+Joe and Lily were best friends.
+One day Joe and Lily decided to go on a
+vacation to Madagascar. However, they didn't know
+what to do with their Ridiculous pet polar bear named Poncho.
+Poncho had been causing problems, due to constant planking.
+Joe found a sitter for their pet, and spastically went on the trip.
+</pre>

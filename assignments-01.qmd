@@ -1,0 +1,73 @@
+---
+title: "Module 1 Programming Problems"
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(readxl)
+assignments <- read_excel("assessment_schedule.xlsx") %>% 
+  mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
+```
+
+Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/676322).
+
+If you need instructions on how to submit your `.py` files to gradescope, watch the video at the end of this page.
+
+# Survey
+
+**Due date: `r assignments %>% filter(assessment == "Survey") %>% pull(formatted_date)` at 7pm**
+
+<>
+
+This is a survey to collect information on your expectations for CSc 110 Computer Programming I. The completion of this survey is required and will be used for grading purposes.
+
+# Programming Problem 1
+
+**Due date: `r assignments %>% filter(assessment == "Module 1 Programming Problems") %>% pull(formatted_date)` at 7pm**
+
+Write a python program that prints out the string "Hello World!". Be careful with capitalization and punctuation.
+
+The exact output of the program should be:
+
+```{=html}
+<pre>
+Hello World!
+</pre>
+```
+
+Name the program `hello.py`. Make sure that gradescope (<https://www.gradescope.com/courses/487587/assignments/2554285>) gives you the points for passing the test case.
+
+# Programming Problem 2
+
+**Due date: `r assignments %>% filter(assessment == "Module 1 Programming Problems") %>% pull(formatted_date)` at 7pm**
+
+Write a python program that prints out the following excerpt from Amanda Gorman's poem, "The Hill We Climb":
+
+```{=html}
+<pre>
+When day comes, we ask ourselves, where can we find light in this never-ending shade?
+
+The loss we carry. A sea we must wade.
+We braved the belly of the beast.
+
+We've learned that quiet isn't always peace, 
+and the norms and notions of what "just" is isn't always justice.
+
+And yet the dawn is ours before we knew it.
+
+Somehow we do it.
+</pre>
+```
+
+Name the program `poem.py`. Make sure that gradescope gives you the points for passing the test case. You can submit your solution to gradescope as many times as you want before the deadline.
+
+HINT: `print()` has a parameter called `end` which is set as `end="\n"` by default -- change that to `end=""` to remove the last newline character.
+
+Make sure you [do the reading](basics.html) for this module, especially the section on [Escape Sequences](basics.html#escape-sequences)
+
+# How to submit to gradescope video
+
+{{< video https://youtu.be/ZxM2n2FLguI >}}
