@@ -20,7 +20,7 @@ Where to start:
 
 # Instructor Information
 
--   Xinchen Yu [🔈](https://xinchenyu.github.io/)
+-   Xinchen Yu 
 
     -   Office: [Gould-Simpson](https://goo.gl/maps/h8Vyf7RNQiMAScDY6) 854
 
@@ -30,6 +30,4 @@ Where to start:
 
     -   Office hours (open door, drop in, my office [GS](https://goo.gl/maps/h8Vyf7RNQiMAScDY6) 854):
 
-        -   Tuesday 1pm to 3pm
-
-        -   Wednesday 11:30am to 12:30pm
+        -   Wednesday 12:00pm to 2:00pm

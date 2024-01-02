@@ -1,6 +1,6 @@
 ---
 title: "Syllabus"
-author: "Adriana Picoral (she/her/hers)"
+author: "Xinchen Yu (she/her/hers)"
 date: "Spring 2024"
 output:
   pdf_document: default
@@ -24,10 +24,9 @@ opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
 # Location and Times
 
-This course is scheduled to be an in-person course, meeting in-person three times a week. There are multiple sections of the course with various meeting times. Your meeting time should be one of the following:
+This course is scheduled to be an in-person course, meeting in-person three times a week. Your meeting time should be:
 
--   [Gittings](https://goo.gl/maps/LpwVaL8JVxxRVDfA8) Room 129b, 1:00-1:50pm, MWF
--   [Gittings](https://goo.gl/maps/LpwVaL8JVxxRVDfA8) Room 129b, 2:00-2:50pm, MWF
+-   [Gittings](https://goo.gl/maps/LpwVaL8JVxxRVDfA8) Room 129b, 3:00-3:50pm, MWF
 
 Take a look on UAccess for your designated section. Attendance is expected and required.
 
@@ -43,14 +42,13 @@ The prerequisite is a C or better in College Algebra or CSc 101 or appropriate m
 
 # Instructor, Teaching Staff, and Contact Information
 
--   Instructors:
-    -   Adriana Picoral
-        -   Office: [Gould-Simpson](https://goo.gl/maps/h8Vyf7RNQiMAScDY6) 811
-        -   Email: adrianaps\@arizona.edu
-        -   Instructor Website: adrianapicoral.com
-        -   Office hours (open door, drop in, my office [GS](https://goo.gl/maps/h8Vyf7RNQiMAScDY6) 811):
-            -   Tuesday 1:00pm to 3:00pm
-            -   Wednesday 11:30am to 12:30pm
+-   Instructor:
+    -   Xinchen Yu
+        -   Office: [Gould-Simpson](https://goo.gl/maps/h8Vyf7RNQiMAScDY6) 854
+        -   Email: xinchenyu\@arizona.edu
+        -   Instructor Website: xinchenyu.github.io/
+        -   Office hours (open door, drop in, my office [GS](https://goo.gl/maps/h8Vyf7RNQiMAScDY6) 854):
+            -   Wednesday 12:00pm to 2:00pm
 
 There will also be many undergraduate TAs. See the class website for their contact info!
 
@@ -88,7 +86,7 @@ This successful CSc 110 student will be able to:
 -   Follow a provided style guide to write clean, well-structured, and readable code.
 -   Explain the conceptual memory model underlying the data types covered in class, and demonstrate the ability to convert integers and text to and from binary.
 
-(These learning outcomes are derived from ones developed by Allison Obourn, Ben Dicken and other faculty at the UA).
+(These learning outcomes are derived from ones developed by Allison Obourn, Ben Dicken, Adriana Picoral and other faculty at the UA).
 
 # Absence and Class Participation Policy
 
@@ -135,15 +133,15 @@ If you register after the first class meeting you may make up missed assignments
 
 # Course Communications
 
-All online communication will be conducted through my official UA e-mail address (adrianaps\@arizona.edu) D2L, and Discord.
+All online communication will be conducted through my official UA e-mail address (xinchenyu\@arizona.edu) D2L, and Piazza.
 
 # Required Texts or Readings
 
 All readings, videos, and assignment instructions will be available in the course website.
 
--   Course D2L: <https://d2l.arizona.edu/d2l/home/1386086>
--   Course Gradescope: <https://www.gradescope.com/courses/676322>
--   Course website: <>
+-   Course D2L: <https://d2l.arizona.edu/d2l/home/1403933>
+-   Course Gradescope: <https://www.gradescope.com/courses/691034>
+-   Course website: <https://xinchenyu.github.io/csc110-spring2024/>
 
 # Assignments and Examinations: Schedule/Due Dates
 
@@ -173,7 +171,7 @@ For programming problems and projects, late work is not accepted
 
 ## Extra Credit
 
-Up to 1 point of extra credit will be awarded to students who come to office hours in person. Check our office hours schedule on the website <https://adrianapicoral.com/csc-110/tas.html> and ask the TA or instructor to submit your points to gradescope. 
+Up to 1 point of extra credit will be awarded to students who come to office hours in person. Check our office hours schedule on the website <https://xinchenyu.github.io/csc110-spring2024/tas.html> and ask the TA or instructor to submit your points to gradescope. 
 
 You are required to ask a question and/or work on an assignment or practice problem with the TA or instructor to receive 0.5 points for each office hour attendance. It is your responsibility to ensure the TA or instructor enter your 0.5 points on gradescope during the session. Instructors will not award you these points at a later date, do not email instructors about getting points at a later date (for example, if you forget to ask the TA to enter your office hour points on gradescope). 
 
@@ -292,7 +290,7 @@ Our classroom is a place where everyone is encouraged to express well-formed opi
 
 # Additional Resources for Students
 
-UA Academic policies and procedures are available at <http://catalog.arizona.edu/policies> Visit the UArizona COVID-19 page for regular updates.
+UA Academic policies and procedures are available at <http://catalog.arizona.edu/policies>. Visit the UArizona COVID-19 page for regular updates.
 
 ## Campus Health
 
