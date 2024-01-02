@@ -1,4 +1,0 @@
-Tucson -- high temperature: 89.5
-Tucson -- low temperature: 50.2
-Phoenix -- high temperature: 93.4
-Phoenix -- low temperature: 69.0
