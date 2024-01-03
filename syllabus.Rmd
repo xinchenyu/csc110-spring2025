@@ -3,7 +3,7 @@ title: "Syllabus"
 author: "Xinchen Yu (she/her/hers)"
 date: "Spring 2024"
 output:
-  html_document: default
+  pdf_document: default
 subtitle: CSc 110 Computer Programming I
 ---
 
@@ -27,7 +27,7 @@ This course is scheduled to be an in-person course, meeting in-person three time
 
 -   [Gittings](https://goo.gl/maps/LpwVaL8JVxxRVDfA8) Room 129b, 3:00-3:50pm, MWF
 
-Take a look on UAccess for your designated section. Attendance is expected and required.
+Attendance is expected and required.
 
 If you need an exception due to a medical or visa issue, please reach out to the DRC or instructor.
 
@@ -47,7 +47,7 @@ The prerequisite is a C or better in College Algebra or CSc 101 or appropriate m
         -   Email: xinchenyu\@arizona.edu
         -   Instructor Website: [xinchenyu.github.io](https://xinchenyu.github.io/)
         -   Office hours (open door, drop in, my office [GS](https://goo.gl/maps/h8Vyf7RNQiMAScDY6) 854):
-            -   Wednesday 12:00pm to 2:00pm
+            -   Wednesday 12:30pm to 2:00pm
 
 There will also be many undergraduate TAs. See the class website for their contact info!
 
