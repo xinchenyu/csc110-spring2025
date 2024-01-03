@@ -858,7 +858,7 @@
     "href": "project-10.html",
     "title": "Programming Project 10",
     "section": "",
-    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Thursday, April 18, 2024 at 7pm\nThis programming project is an adaptation of Ben Dicken’s Minesweeper Programming Assignment.\nYou should name the file minesweeper.py."
+    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Thursday, April 18, 2024 at 9pm\nThis programming project is an adaptation of Ben Dicken’s Minesweeper Programming Assignment.\nYou should name the file minesweeper.py."
   },
   {
     "objectID": "project-10.html#minesweeper-rules",
@@ -984,7 +984,7 @@
     "href": "project-11.html",
     "title": "Programming Project 11",
     "section": "",
-    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Wednesday, May 01, 2024 at 7pm\nThis programming project is an adaptation of Ben Dicken’s WordSearch Programming Assignment."
+    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Wednesday, May 01, 2024 at 9pm\nThis programming project is an adaptation of Ben Dicken’s WordSearch Programming Assignment."
   },
   {
     "objectID": "project-11.html#words-text-file",
@@ -1761,7 +1761,7 @@
     "href": "project-2.html",
     "title": "Programming Project 2",
     "section": "",
-    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Thursday, February 01, 2024 at 7pm\nIn this programming project you will implement a number of Python functions to validate or transform values conditionally. Make sure you follow the provided style guide (you will be graded on it!). You are allowed to use round(), str() and len(), but other than that you are not allowed to use any other built-in method or function from any Python library.\nAlso make sure you check the Academic Integrity and Common Gradescope Errors pages.\nName the program grades.py. Make sure that gradescope gives you the points for passing the test cases."
+    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Thursday, February 01, 2024 at 9pm\nIn this programming project you will implement a number of Python functions to validate or transform values conditionally. Make sure you follow the provided style guide (you will be graded on it!). You are allowed to use round(), str() and len(), but other than that you are not allowed to use any other built-in method or function from any Python library.\nAlso make sure you check the Academic Integrity and Common Gradescope Errors pages.\nName the program grades.py. Make sure that gradescope gives you the points for passing the test cases."
   },
   {
     "objectID": "project-2.html#letter_grade",
@@ -2132,7 +2132,7 @@
     "href": "project-6.html",
     "title": "Programming Project 6",
     "section": "",
-    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Thursday, March 14, 2024 at 7pm\nThis programming project is an adaptation of Ben Dicken’s Encrypter / Decrypter Programming Assignment."
+    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Thursday, March 14, 2024 at 9pm\nThis programming project is an adaptation of Ben Dicken’s Encrypter / Decrypter Programming Assignment."
   },
   {
     "objectID": "project-6.html#encrypter",
@@ -2160,7 +2160,7 @@
     "href": "project-4.html",
     "title": "Programming Project 4",
     "section": "",
-    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Friday, February 16, 2024 at 7pm\nThis assignment is an adaptation of the MIT’s 6.0001 Introduction to Computer Science and Programming in Python programming set 1.\nMake sure you follow the provided style guide (you will be graded on it!).\nAlso make sure you check the Academic Integrity and Common Gradescope Errors pages."
+    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Friday, February 16, 2024 at 9pm\nThis assignment is an adaptation of the MIT’s 6.0001 Introduction to Computer Science and Programming in Python programming set 1.\nMake sure you follow the provided style guide (you will be graded on it!).\nAlso make sure you check the Academic Integrity and Common Gradescope Errors pages."
   },
   {
     "objectID": "project-4.html#part-1",
@@ -2181,7 +2181,7 @@
     "href": "project-5.html",
     "title": "Programming Project 5",
     "section": "",
-    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Thursday, February 22, 2024 at 7pm\nIn this programming project you will implement a number of Python functions to implement a simplified version of chess. Make sure you follow the provided style guide (you will be graded on it!).\nName your program one_d_chess.py to submit to gradescope. Make sure that gradescope gives you the points for passing the test cases.\nThis programming project is an adaptation of Ben Dicken’s 1 Dimensional Chess Programming Assignment.\nIn this programming project, you will be implementing a simpler variant of chess: 1D Chess! 1D chess is a variant of the game that is played on a board that has only one column of spaces, rather than a grid of spaces, as in typical chess. There are actually multiple variants of 1D chess. In this PA, you should implement a custom variant of 1D chess, which I’ll refer to as “110 1D chess”."
+    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Thursday, February 22, 2024 at 9pm\nIn this programming project you will implement a number of Python functions to implement a simplified version of chess. Make sure you follow the provided style guide (you will be graded on it!).\nName your program one_d_chess.py to submit to gradescope. Make sure that gradescope gives you the points for passing the test cases.\nThis programming project is an adaptation of Ben Dicken’s 1 Dimensional Chess Programming Assignment.\nIn this programming project, you will be implementing a simpler variant of chess: 1D Chess! 1D chess is a variant of the game that is played on a board that has only one column of spaces, rather than a grid of spaces, as in typical chess. There are actually multiple variants of 1D chess. In this PA, you should implement a custom variant of 1D chess, which I’ll refer to as “110 1D chess”."
   },
   {
     "objectID": "project-5.html#d-chess-rules",
@@ -3665,7 +3665,7 @@
     "href": "project-7.html",
     "title": "Programming Project 7",
     "section": "",
-    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Thursday, March 21, 2024 at 7pm\nIn this programming project you will implement a number of Python functions to implement a Benford’s Law analysis. Make sure you follow the provided style guide (you will be graded on it!).\nName your program benfords_law.py to submit to gradescope. Make sure that gradescope gives you the points for passing the test cases.\nThis programming project is an adaptation of Ben Dicken’s Benford’s Law Programming Assignment.\nBenford’s Law is a mathematical law that describes the behavior of naturally-occurring numbers in some kinds of numerical data sets. I recommend that you watch this video before proceeding to get an explanation:\nBenford’s law is useful for distinguishing naturally occurring data from randomized or made-up data. It has been used in the real world to detect election fraud (For example, in the 2009 Iranian election). It has also been used as evidence in criminal cases in the US. In this project, you’ll be writing a program that reads in a data set, and prints out the plot of first-digits. Then, you can look at the plot to determine if it conforms to the law or not! Name your file benfords_law.py. You should organize the code into several functions."
+    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Thursday, March 21, 2024 at 9pm\nIn this programming project you will implement a number of Python functions to implement a Benford’s Law analysis. Make sure you follow the provided style guide (you will be graded on it!).\nName your program benfords_law.py to submit to gradescope. Make sure that gradescope gives you the points for passing the test cases.\nThis programming project is an adaptation of Ben Dicken’s Benford’s Law Programming Assignment.\nBenford’s Law is a mathematical law that describes the behavior of naturally-occurring numbers in some kinds of numerical data sets. I recommend that you watch this video before proceeding to get an explanation:\nBenford’s law is useful for distinguishing naturally occurring data from randomized or made-up data. It has been used in the real world to detect election fraud (For example, in the 2009 Iranian election). It has also been used as evidence in criminal cases in the US. In this project, you’ll be writing a program that reads in a data set, and prints out the plot of first-digits. Then, you can look at the plot to determine if it conforms to the law or not! Name your file benfords_law.py. You should organize the code into several functions."
   },
   {
     "objectID": "project-7.html#the-plot",
@@ -3686,7 +3686,7 @@
     "href": "project-3.html",
     "title": "Programming Project 3",
     "section": "",
-    "text": "Programming Projects are to be submitted to gradescope\nDue date: Thursday, February 08, 2024 at 7pm\nThis programming project is an adaptation of Ben Dicken’s Where’s the Money Programming Assignment."
+    "text": "Programming Projects are to be submitted to gradescope\nDue date: Thursday, February 08, 2024 at 9pm\nThis programming project is an adaptation of Ben Dicken’s Where’s the Money Programming Assignment."
   },
   {
     "objectID": "project-3.html#add-a-comma",
@@ -4295,7 +4295,7 @@
     "href": "project-9.html",
     "title": "Programming Project 9",
     "section": "",
-    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Thursday, April 11, 2024 at 7pm\nThis programming project is an adaptation of Ben Dicken’s Infographic Programming Assignment."
+    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Thursday, April 11, 2024 at 9pm\nThis programming project is an adaptation of Ben Dicken’s Infographic Programming Assignment."
   },
   {
     "objectID": "project-9.html#reading-and-processing-the-file",
@@ -4365,7 +4365,7 @@
     "href": "project-8.html",
     "title": "Programming Project 8",
     "section": "",
-    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Thursday, April 04, 2024 at 7pm This programming project is an adaptation of Ben Dicken’s Spell Check Programming Assignment.\nYou should name the file spellcheck.py and have a function named correct_spelling to write out the ouput file."
+    "text": "Programming Projects are to be submitted to gradescope.\nDue date: Thursday, April 04, 2024 at 9pm This programming project is an adaptation of Ben Dicken’s Spell Check Programming Assignment.\nYou should name the file spellcheck.py and have a function named correct_spelling to write out the ouput file."
   },
   {
     "objectID": "project-8.html#reading-in-misspellings.txt",

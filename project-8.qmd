@@ -13,9 +13,9 @@ assignments <- read_excel("assessment_schedule.xlsx") %>%
   mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
 ```
 
-Programming Projects are to be submitted to [gradescope](https://www.gradescope.com/courses/676322).
+Programming Projects are to be submitted to [gradescope](https://www.gradescope.com/courses/691034).
 
-**Due date: `r assignments %>% filter(assessment == "Programming Project 8") %>% pull(formatted_date)` at 7pm**
+**Due date: `r assignments %>% filter(assessment == "Programming Project 8") %>% pull(formatted_date)` at 9pm**
 This programming project is an adaptation of Ben Dicken's Spell Check Programming Assignment.
 
 You should name the file `spellcheck.py` and have a function named `correct_spelling` to write out the ouput file.

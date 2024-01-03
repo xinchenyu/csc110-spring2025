@@ -12,9 +12,9 @@ assignments <- read_excel("assessment_schedule.xlsx") %>%
   mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
 ```
 
-Programming Projects are to be submitted to [gradescope](https://www.gradescope.com/courses/676322).
+Programming Projects are to be submitted to [gradescope](https://www.gradescope.com/courses/691034).
 
-**Due date: `r assignments %>% filter(assessment == "Programming Project 7") %>% pull(formatted_date)` at 7pm**
+**Due date: `r assignments %>% filter(assessment == "Programming Project 7") %>% pull(formatted_date)` at 9pm**
 
 In this programming project you will implement a number of Python functions to implement a Benford's Law analysis. Make sure you follow the provided [style guide](https://adrianapicoral.com/csc-110/style.html) (you will be graded on it!).
 
