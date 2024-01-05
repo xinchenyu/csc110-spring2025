@@ -1,5 +1,5 @@
 ---
-title: "Module 13 Programming Problems"
+title: "Module 13 Assignments"
 ---
 
 
@@ -13,12 +13,13 @@ assignments <- read_excel("assessment_schedule.xlsx") %>%
   mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
 ```
 
+# Programming Problems
 
-Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/676322).
+Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/691034).
 
-# Programming Problem 23
+## Programming Problem 23
 
-**Due date: `r assignments %>% filter(assessment == "Module 13 Programming Problems") %>% pull(formatted_date)` at 7pm**
+**Due date: `r assignments %>% filter(assessment == "Module 13 Programming Problems") %>% pull(formatted_date)` at 9pm**
 
 Write a Python function that does the following:
 
@@ -40,9 +41,9 @@ print( sum_nums([], 10) ) # 0
 
 Name the program `sums.py`. Make sure that gradescope gives you the points for passing the test case.
 
-# Programming Problem 24
+## Programming Problem 24
 
-**Due date: `r assignments %>% filter(assessment == "Module 13 Programming Problems") %>% pull(formatted_date)` at 7pm**
+**Due date: `r assignments %>% filter(assessment == "Module 13 Programming Problems") %>% pull(formatted_date)` at 9pm**
 
 Write a Python function that does the following:
 

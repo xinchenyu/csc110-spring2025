@@ -1,5 +1,5 @@
 ---
-title: "Module 9 Programming Problems"
+title: "Module 9 Assignments"
 ---
 
 
@@ -13,12 +13,13 @@ assignments <- read_excel("assessment_schedule.xlsx") %>%
   mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
 ```
 
+# Programming Problems
 
-Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/676322).
+Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/691034).
 
-# Programming Problem 17
+## Programming Problem 17
 
-**Due date: `r assignments %>% filter(assessment == "Module 9 Programming Problems") %>% pull(formatted_date)` at 7pm**
+**Due date: `r assignments %>% filter(assessment == "Module 9 Programming Problems") %>% pull(formatted_date)` at 9pm**
 
 Write a Python function that does the following:
 
@@ -63,9 +64,9 @@ print( read_csv("population.csv") ) # {"Country": ["United States", "Brazil", "M
 
 Name the program `read_data_file.py`. Make sure that gradescope gives you the points for passing the test case.
 
-# Programming Problem 18
+## Programming Problem 18
 
-**Due date: `r assignments %>% filter(assessment == "Module 9 Programming Problems") %>% pull(formatted_date)` at 7pm**
+**Due date: `r assignments %>% filter(assessment == "Module 9 Programming Problems") %>% pull(formatted_date)` at 9pm**
 
 Write a Python function that does the following:
 
