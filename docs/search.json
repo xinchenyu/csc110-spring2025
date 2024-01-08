@@ -2013,7 +2013,7 @@
     "href": "slides-01-01.html#who-am-i",
     "title": "Course Introduction (class slides)",
     "section": "Who am I?",
-    "text": "Who am I?\n\nAdriana Picoral (you can call me Adriana or Dr. Picoral)\nOffice: Gould-Simpson 829\nEmail: adrianaps@arizona.edu"
+    "text": "Who am I?\n\nXinchen Yu (you can call me Xinchen or Dr. Yu)\nOffice: Gould-Simpson 854\nEmail: xinchenyu@arizona.edu"
   },
   {
     "objectID": "slides-01-01.html#instructors",
@@ -2062,7 +2062,7 @@
     "href": "slides-01-01.html#what-do-you-need-to-succeed-in-this-class",
     "title": "Course Introduction (class slides)",
     "section": "What do you need to succeed in this class?",
-    "text": "What do you need to succeed in this class?\n\nAccess to a computer with internet (you can get one from the library)\nInstall Python and an IDE/editor (Visual Studio Code is recommended)\nDo the readings, watch the videos, come to class, come to office hours, do the assignments yourself (you can work in groups, but do not copy work from others)"
+    "text": "What do you need to succeed in this class?\n\nAccess to a computer with internet (you can get one from the library)\nInstall Python and an IDE/editor (Visual Studio Code is recommended)\nDo the readings, watch the videos, come to class, come to lab sessions, come to office hours, do the assignments yourself"
   },
   {
     "objectID": "slides-01-01.html#what-do-you-need-to-succeed-in-this-class-1",
@@ -2076,14 +2076,14 @@
     "href": "slides-01-01.html#how-is-the-structure-of-this-class-designed-to-help-you-succeed",
     "title": "Course Introduction (class slides)",
     "section": "How is the structure of this class designed to help you succeed?",
-    "text": "How is the structure of this class designed to help you succeed?\n\nActive learning – you are expected to engage in the in-class activities\nDeep processing – I will elicit knowledge from you and help you make connections to new content\nSmall sequential steps – each week we build on top of the content of the previous week, make sure you are following along\nSpaced repetition – this is not the type of course you can cram for 2 hours before the exam\nMastery checks – frequent assessment"
+    "text": "How is the structure of this class designed to help you succeed?\n\nActive learning – you are expected to engage in the in-class activities\nSmall sequential steps – each week we build on top of the content of the previous week, make sure you are following along\nSpaced repetition – this is not the type of course you can cram for 2 hours before the exam\nMastery checks – frequent assessment"
   },
   {
     "objectID": "slides-01-01.html#assessment-structure",
     "href": "slides-01-01.html#assessment-structure",
     "title": "Course Introduction (class slides)",
     "section": "Assessment structure",
-    "text": "Assessment structure\n\nProgramming Problems\nProjects\nExams and Quizzes"
+    "text": "Assessment structure\n\nProgramming Problems\nShort Projects\nProjects\nExams and Quizzes"
   },
   {
     "objectID": "slides-01-01.html#exams-and-quizzes",
@@ -2097,7 +2097,7 @@
     "href": "slides-01-01.html#exams-and-quizzes-1",
     "title": "Course Introduction (class slides)",
     "section": "Exams and Quizzes",
-    "text": "Exams and Quizzes\n\nMidterm exams and weekly quizzes are always on Wednesday (same room as our lectures)\nOur first quiz will be on this Wednesday (the day after tomorrow)\nNo preparation is required for this first quiz\nCompletion only grade for quiz 1"
+    "text": "Exams and Quizzes\n\nMidterm exams and biweekly quizzes are always on Wednesday (same room as our lectures)\nOur first quiz will be on next Wednesday, Jan 17"
   },
   {
     "objectID": "slides-01-01.html#syllabus-activity",
@@ -2111,7 +2111,7 @@
     "href": "slides-01-01.html#other-important-dates",
     "title": "Course Introduction (class slides)",
     "section": "Other Important Dates",
-    "text": "Other Important Dates\n\nLast day for students to add themselves to a course using UAccess is August 28\nLast day for students to drop without a grade of W (withdraw) is September 3"
+    "text": "Other Important Dates\n\nLast day for students to add themselves to a course using UAccess is January 17\nLast day for students to drop without a grade of W (withdraw) is January 23"
   },
   {
     "objectID": "slides-01-01.html#academic-integrity",
@@ -2125,7 +2125,7 @@
     "href": "slides-01-01.html#academic-integrity-1",
     "title": "Course Introduction (class slides)",
     "section": "Academic integrity",
-    "text": "Academic integrity\n\nTAs are not to give answers, but work with you\nRun things on their computer (it will help you with debugging)\nSharing code is cheating"
+    "text": "Academic integrity\n\nTAs are not to debug and give answers\nTAs work with you and answer clarification questions\nRun things on your computer (it will help you with debugging)\nSharing code is cheating"
   },
   {
     "objectID": "slides-01-01.html#materials",
@@ -2139,7 +2139,7 @@
     "href": "slides-01-01.html#how-to-get-help",
     "title": "Course Introduction (class slides)",
     "section": "How to get help?",
-    "text": "How to get help?\n\nCome to office hours!\n\nBut come prepared – do not expect the TAs to solve problems for you (you wouldn’t learn to solve them yourself if you are always asking other people to do it for you)\n\n1 point of extra credit if you show up to office hours (read the syllabus for specifics on this)"
+    "text": "How to get help?\n\nCome to office hours!\n\nBut come prepared – do not expect the TAs to solve problems or debug for you (you wouldn’t learn to solve them yourself if you are always asking other people to do it for you)\n\n1 point of extra credit if you show up to office hours (read the syllabus for specifics on this)"
   },
   {
     "objectID": "slides-01-01.html#how-to-get-help-1",
@@ -2174,7 +2174,7 @@
     "href": "slides-01-01.html#how-to-get-help-6",
     "title": "Course Introduction (class slides)",
     "section": "How to get help?",
-    "text": "How to get help?\n\nCome to office hours!\nJoin Discord and ask questions there\nDepartmental Tutors (free)\nEmail me (it will take longer than coming to office hours)"
+    "text": "How to get help?\n\nCome to office hours!\nJoin Piazza and ask questions there\nIf you have private questions, generally please make a private Piazza post\nDepartmental Tutors (free)\nDo Not email me or TAs"
   },
   {
     "objectID": "slides-01-01.html#visitor",
