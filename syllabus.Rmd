@@ -106,17 +106,15 @@ Absences pre-approved by the UA Dean of Students (or dean's designee) will be ho
 
 ## Administrative Drops
 
-Every semester, students enroll in introductory CS classes but do not submit any work, resulting in a grade of `E` at the end of the term. To prevent this, at the end of the **second week** (January 19), all students who have not submitted/completed **five or more** of the following will be administratively dropped:
+Every semester, students enroll in introductory CS classes but do not submit any work, resulting in a grade of `E` at the end of the term. To prevent this, at the end of the **second week** (January 19), all students who have not submitted/completed **four or more** of the following will be administratively dropped:
 
-1.  Class presence on January 10
-2.  January 10 quiz
-3.  Class presence on January 12
-4.  [Beginning of semester survey]()
-5.  Class presence on January 15
-6.  January 17 quiz
-7.  [Module 1 Programming Problem 1]()
-8.  [Module 1 Programming Problem 2]()
-9.  Class presence on January 19
+1.  Class presence on January 12
+2.  [Beginning of semester survey](https://uarizona.co1.qualtrics.com/jfe/form/SV_0q8KC0FwVhCiYD4)
+3.  Class presence on January 15
+4.  January 17 quiz
+5.  [Module 1 Programming Problem 1](assignments-01.html)
+6.  [Module 1 Programming Problem 2](assignments-01.html)
+7.  Class presence on January 19
 
 In addition, to ensure your success in this course, and that you are on top of the work that is due every week, administrative drops will be in place throughout the semester. Students who miss coursework for two weeks or more often get an E at the end of the term in this course. After the second week of class, at any point during the semester if you fail to attend class and submit assignments for two consecutive weeks you will be administratively dropped.
 
@@ -150,7 +148,7 @@ All readings, videos, and assignment instructions will be available in the cours
 The breakdown of grades in this course is as follows:
 
 -   45% exams
--   25% weekly quizzes
+-   25% biweekly quizzes
 -   5% programming problems
 -   10% short programming projects
 -   15% programming projects
@@ -165,7 +163,7 @@ The midterm exams will be on:
 
 You must keep theses dates available. Do not schedule any flights, travel plans, or other conflicts with these exams.
 
-Weekly quizzes will be held every Wednesday (unless otherwise noted). The 2 (two) lowest grades for quizzes will be dropped from final grade calculations.
+Biweekly quizzes will be held on Wednesday every two weeks (unless otherwise noted). The 1 (one) lowest grades for quizzes will be dropped from final grade calculations.
 
 ## Late Work
 
@@ -185,7 +183,7 @@ The final exam is worth 15%.
 
 The final exam will be on:
 
--   `r schedule %>% filter(exam == "Final Exam" & term == "spring 2024") %>% pull(formatted_date)` -- `r schedule %>% filter(exam == "Final Exam" & term == "spring 2024") %>% pull(time)` in  [ENR2](https://maps.app.goo.gl/RiDaC9Np7M8LVPYZ7) room N120
+-   `r schedule %>% filter(exam == "Final Exam" & term == "spring 2024") %>% pull(formatted_date)` -- `r schedule %>% filter(exam == "Final Exam" & term == "spring 2024") %>% pull(time)`. 
 
 You must keep this time available. Do not schedule any flights, travel plans, or other conflicts with these exams.
 

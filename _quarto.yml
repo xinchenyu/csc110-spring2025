@@ -4,7 +4,7 @@ project:
 
 website:
   title: "CSc 110 Computer Programming I"
-  google-analytics: "G-X5E6TNHNQ5"
+  google-analytics: ""
   sidebar:
     style: "docked"
     background: primary
@@ -143,7 +143,7 @@ website:
 
 format:
   html:
-    theme: lumen
+    theme: sandstone
     css: styles.css
     toc: true
     number-sections: false
