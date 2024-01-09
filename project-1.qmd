@@ -46,15 +46,18 @@ The locations with `???` indicate that these should be replaced with a word spec
 ```{python}
 #| eval: false
 #| echo: true
-person_one = "Janet"
-street_name = "Loopdydoo Avenue"
-person_two = "Richard"
-object_name = "Christmas tree"
-vehicle = "Horse-drawn carriage"
-adjective = "Off-road"
-story = create_story(person_one, street_name, person_two, \
-                     object_name, vehicle, adjective)
-print(story)
+def main():
+  person_one = "Janet"
+  street_name = "Loopdydoo Avenue"
+  person_two = "Richard"
+  object_name = "Christmas tree"
+  vehicle = "Horse-drawn carriage"
+  adjective = "Off-road"
+  story = create_story(person_one, street_name, person_two, \
+                       object_name, vehicle, adjective)
+  print(story)
+  
+main()
 ```
 
 
@@ -83,13 +86,20 @@ Again, locations with `???` indicate that these should be replaced with a word s
 ```{python}
 #| eval: false
 #| echo: true
-person_one = "Joe"
-person_two = "Lily"
-pet = "Poncho"
-place = "Madagascar"
-adjective = "Ridiculous"
-verb = "plank"
-adverb = "spastically"
+def main():
+    person_one = "Joe" 
+    person_two = "Lily" 
+    pet_name = "Poncho"
+    animal = "polar bear"
+    place = "Madagascar"
+    adjective = "Ridiculous"
+    verb = "plank"
+    adverb = "spastically"
+    story = create_story(person_one, person_two, pet_name, \
+                        animal, place, adjective, verb, adverb)
+    print(story)
+    
+main()
 ```
 
 

@@ -950,15 +950,18 @@ in order to move it!
 </pre>
 <p>The locations with <code>???</code> indicate that these should be replaced with a word specified by the computer user. Your <code>create_story</code> function should take 6 arguments, and fill them in to the story. An example of running the program would look like so:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>person_one <span class="op">=</span> <span class="st">"Janet"</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>street_name <span class="op">=</span> <span class="st">"Loopdydoo Avenue"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>person_two <span class="op">=</span> <span class="st">"Richard"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>object_name <span class="op">=</span> <span class="st">"Christmas tree"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>vehicle <span class="op">=</span> <span class="st">"Horse-drawn carriage"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>adjective <span class="op">=</span> <span class="st">"Off-road"</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>story <span class="op">=</span> create_story(person_one, street_name, person_two, <span class="op">\</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                     object_name, vehicle, adjective)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(story)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  person_one <span class="op">=</span> <span class="st">"Janet"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  street_name <span class="op">=</span> <span class="st">"Loopdydoo Avenue"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  person_two <span class="op">=</span> <span class="st">"Richard"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  object_name <span class="op">=</span> <span class="st">"Christmas tree"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  vehicle <span class="op">=</span> <span class="st">"Horse-drawn carriage"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  adjective <span class="op">=</span> <span class="st">"Off-road"</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  story <span class="op">=</span> create_story(person_one, street_name, person_two, <span class="op">\</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                       object_name, vehicle, adjective)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(story)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre>Janet decided to move from their apartment on 5th
 to a condo on Loopdydoo Avenue. They called their friend Richard
@@ -979,13 +982,20 @@ what to do with their ??? pet ??? named ???.
 </pre>
 <p>Again, locations with <code>???</code> indicate that these should be replaced with a word specified by the computer user. Your <code>create_story</code> function should take 8 arguments. An example of running the program would look like so:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>person_one <span class="op">=</span> <span class="st">"Joe"</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>person_two <span class="op">=</span> <span class="st">"Lily"</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>pet <span class="op">=</span> <span class="st">"Poncho"</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>place <span class="op">=</span> <span class="st">"Madagascar"</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>adjective <span class="op">=</span> <span class="st">"Ridiculous"</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>verb <span class="op">=</span> <span class="st">"plank"</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>adverb <span class="op">=</span> <span class="st">"spastically"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    person_one <span class="op">=</span> <span class="st">"Joe"</span> </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    person_two <span class="op">=</span> <span class="st">"Lily"</span> </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    pet_name <span class="op">=</span> <span class="st">"Poncho"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    animal <span class="op">=</span> <span class="st">"polar bear"</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    place <span class="op">=</span> <span class="st">"Madagascar"</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    adjective <span class="op">=</span> <span class="st">"Ridiculous"</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    verb <span class="op">=</span> <span class="st">"plank"</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    adverb <span class="op">=</span> <span class="st">"spastically"</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    story <span class="op">=</span> create_story(person_one, person_two, pet_name, <span class="op">\</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>                        animal, place, adjective, verb, adverb)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(story)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre>Joe and Lily were best friends.
 One day Joe and Lily decided to go on a

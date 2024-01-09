@@ -10,7 +10,7 @@ slide-number: true
 
 -   Trouble accessing Gradescope? Use the link on D2L
 -   D2L grades are going to be used to calculate your final grade
--   Full schedule for office hours can be found at [adrianapicoral.com/csc-110/tas.html](https://adrianapicoral.com/csc-110/tas.html)
+-   Full schedule for office hours can be found at [xinchenyu.github.io/csc110-spring2024/tas.html](https://xinchenyu.github.io/csc110-spring2024/tas.html)
 
 ## Did you set up your workspace?
 
