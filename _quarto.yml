@@ -33,6 +33,10 @@ website:
         - project-9.qmd
         - project-10.qmd
         - project-11.qmd
+      - section: "Short Projects"
+        contents: 
+        - short-projects.qmd
+        - resources-short-projects.qmd
       - section: "Extra Resources"
         contents: 
         - practice-01.qmd

@@ -78,17 +78,18 @@ This is the intro course sequence for the CS department:
 
 ## What do you need to succeed in this class?
 
--   Access to a computer with internet (you can get one from the library)
--   Install Python and an IDE/editor (Visual Studio Code is recommended)
--   Do the readings, watch the videos, come to class, come to lab sessions, come to office hours, do the assignments yourself 
-
-## What do you need to succeed in this class?
-
 A willingness to:
 
 -   try and fail
 -   get frustrated and bored
 -   be curious about how things work
+
+## What do you need to succeed in this class?
+
+-   Access to a computer with internet (you can get one from the library)
+-   Install Python and an IDE/editor (Visual Studio Code is recommended)
+-   Do the readings, watch the videos, come to class, come to lab sessions, come to office hours, do the assignments yourself 
+
 
 ## How is the structure of this class designed to help you succeed?
 
@@ -101,7 +102,7 @@ A willingness to:
 
 -   Programming Problems
 
--   Short Projects
+-   Short Projects (to be completed in the lab sessions)
 
 -   Projects
 
@@ -157,18 +158,6 @@ Examples of breaches of academic integrity:
 
 ## How to get help?
 
--   Come to office hours!
-
-But come prepared -- do not expect the TAs to solve problems or debug for you (you wouldn't learn to solve them yourself if you are always asking other people to do it for you)
-
--   1 point of extra credit if you show up to office hours (read the syllabus for specifics on this)
-
-## How to get help?
-
-We'll see in this course that a key skill that you should develop as coder is the ability to find solutions to problems. Knowing how to get help is part of that skill.
-
-## How to get help?
-
 **Before you ask for help:**
 
 -   Check for typos (read your error messages)
@@ -176,9 +165,15 @@ We'll see in this course that a key skill that you should develop as coder is th
 
 ## How to get help?
 
-**Before you ask for help:**
+**Before you ask for help:** try [rubber duck debugging](https://rubberduckdebugging.com/)
+![duck](images/duck.jpeg)
 
--   If you are still stuck, you an always try [rubber duck debugging](https://rubberduckdebugging.com/). Describe the problem aloud, explaining it line-by-line, to a rubber duck or another person (who might not have any experience with programming). This is also a good preparation step to asking other people for help (next section).
+## How to get help?
+
+**Before you ask for help:**
+-   Try [rubber duck debugging](https://rubberduckdebugging.com/). 
+
+Describe the problem aloud, explaining it line-by-line, to a rubber duck or another person (who might not have any experience with programming). This is also a good preparation step to asking other people for help (next section).
 
 ## How to get help?
 
@@ -190,7 +185,14 @@ The more context you can provide about what you're trying to do and what errors 
 
 Also describe the steps you took to try to solve the problem yourself.
 
-# How to get help?
+## How to get help?
+
+-   Come to office hours!
+
+But come prepared -- do not expect the TAs to solve problems or debug for you (you wouldn't learn to solve them yourself if you are always asking other people to do it for you)
+
+-   1 point of extra credit if you show up to office hours (read the syllabus for specifics on this)
+
 
 ## How to get help?
 

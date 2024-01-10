@@ -1,0 +1,40 @@
+---
+title: "Resources for Short Projects"
+---
+
+Short programming projects are due on the same day as programming problems. While the instructions for programming problems are on the website, instructions for short projects will be available only during our weekly 50-minute in-person lab sessions. 
+
+The lowest grade for short programming projects will be dropped at the end of the semester. There will be one lab session (the week of March 25) for you to work on a maximum of two short programming project submissions you have missed.
+
+# Short Project 01
+
+```{html}
+.-----------.
+| ### ||  ###\
+| ### ||  ####\.
+D     ||  <>    |------+
+|  ______      /______ |
+ \/ /..\ \_____/ /..\ \|
+    \__/         \__/
+```
+
+# Short Project 02
+
+```{python}
+#| echo: true
+#| eval: false
+def main():
+    assert rectangle_area(4, 4.5) == 18.0
+    assert triangle_area(3, 4, 5) == 6.0
+    assert trapezoid_area(4, 20, 10) == 120.0
+    assert circle_area(20) == 1256.6
+
+    message = calculate_area("trapezoid", 11, 25, 5)
+    assert message == "The area of the trapezoid is 90.0"
+    
+    message = calculate_area("circle", 4, 0, 0)
+    assert message == "The area of the circle is 50.26"
+  
+main()
+```
+

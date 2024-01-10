@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CSc 110 Computer Programming I – palindrome</title>
+<title>CSc 110 Computer Programming I - What are Short Projects?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -107,9 +73,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      CSc 110 Computer Programming I
-      </li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./short-projects.html">Short Projects</a></li><li class="breadcrumb-item"><a href="./short-projects.html">What are Short Projects?</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -281,7 +245,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./short-projects.html" class="sidebar-item-text sidebar-link">
+  <a href="./short-projects.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">What are Short Projects?</span></a>
   </div>
 </li>
@@ -927,68 +891,333 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#io" id="toc-io" class="nav-link active" data-scroll-target="#io">Input from user</a>
-  <ul class="collapse">
-  <li><a href="#homework-exercise" id="toc-homework-exercise" class="nav-link" data-scroll-target="#homework-exercise">Homework exercise</a></li>
-  </ul></li>
+  <li><a href="#lab-schedule" id="toc-lab-schedule" class="nav-link active" data-scroll-target="#lab-schedule">Lab Schedule</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">What are Short Projects?</h1>
+</div>
 
 
-<section id="io" class="level1">
-<h1>Input from user</h1>
-<p>There will be situations where your program has to interact with the user. For example, you would want to take input from the user and then print some results back. We can achieve this using the <code>input()</code> function and <code>print</code> function respectively.</p>
-<p>Example:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> reverse(text):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> text[::<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_palindrome(text):</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> text <span class="op">==</span> reverse(text)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>something <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Enter text: "</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> is_palindrome(something):</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Yes, it is a palindrome"</span>)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"No, it is not a palindrome"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Output:</p>
-<pre><code>
-Enter text: sir
-No, it is not a palindrome
 
-$ python3 io_input.py
-Enter text: madam
-Yes, it is a palindrome
+<div class="quarto-title-meta">
 
-$ python3 io_input.py
-Enter text: racecar
-Yes, it is a palindrome
-</code></pre>
-<p><strong>How It Works</strong></p>
-<p>We use the slicing feature to reverse the text. We’ve already seen how we can make slices from sequences using the <code>seq[a:b]</code> code starting from position <code>a</code> to position <code>b</code>. We can also provide a third argument that determines the <em>step</em> by which the slicing is done. The default step is <code>1</code> because of which it returns a continuous part of the text. Giving a negative step, i.e., <code>-1</code> will return the text in reverse.</p>
-<p>The <code>input()</code> function takes a string as argument and displays it to the user. Then it waits for the user to type something and press the return key. Once the user has entered and pressed the return key, the <code>input()</code> function will then return that text the user has entered.</p>
-<p>We take that text and reverse it. If the original text and reversed text are equal, then the text is a <a href="http://en.wiktionary.org/wiki/palindrome">palindrome</a>.</p>
-<section id="homework-exercise" class="level3">
-<h3 class="anchored" data-anchor-id="homework-exercise">Homework exercise</h3>
-<p>Checking whether a text is a palindrome should also ignore punctuation, spaces and case. For example, “Rise to vote, sir.” is also a palindrome but our current program doesn’t say it is. Can you improve the above program to recognize this palindrome?</p>
-<p>If you need a hint, the idea is that…<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Short programming projects are due on the same day as programming problems. While the instructions for programming problems are on the website, instructions for short projects will be available only during our weekly 50-minute in-person lab sessions.</p>
+<p>The lowest grade for short programming projects will be dropped at the end of the semester. There will be one lab session (the week of March 25) for you to work on a maximum of two short programming project submissions you have missed.</p>
+<p>To schedule your lab session go to <a href="https://docs.google.com/spreadsheets/d/1mS3H-8GyLHb__rZaf9j66khmkncQgeqEXfyVk2l0sNo/edit?usp=sharing">the weekly lab session spreadsheet</a>.</p>
+<section id="lab-schedule" class="level1">
+<h1>Lab Schedule</h1>
+<p>This is for information only. You need to <a href="https://docs.google.com/spreadsheets/d/1mS3H-8GyLHb__rZaf9j66khmkncQgeqEXfyVk2l0sNo/edit?usp=sharing">sign up for a specific lab session</a> to be able to attend it.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 14%">
+<col style="width: 18%">
+<col style="width: 46%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Assignment</th>
+<th style="text-align: left;">Date</th>
+<th style="text-align: left;">Week Day</th>
+<th style="text-align: left;">Lab Leaders</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Short Project 01</td>
+<td style="text-align: left;">January 16</td>
+<td style="text-align: left;">TUESDAY 10am</td>
+<td style="text-align: left;">Adriana Picoral</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Short Project 01</td>
+<td style="text-align: left;">January 16</td>
+<td style="text-align: left;">TUESDAY 11am</td>
+<td style="text-align: left;">Adan Baca and Waldo Guzman</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Short Project 01</td>
+<td style="text-align: left;">January 16</td>
+<td style="text-align: left;">TUESDAY 2pm</td>
+<td style="text-align: left;">Nees Abusaada and Mustafa Alnidawi</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Short Project 01</td>
+<td style="text-align: left;">January 16</td>
+<td style="text-align: left;">TUESDAY 4pm</td>
+<td style="text-align: left;">Samarie Tavenner and Elias Zheng</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Short Project 01</td>
+<td style="text-align: left;">January 17</td>
+<td style="text-align: left;">WEDNESDAY 11am</td>
+<td style="text-align: left;">Miro Vanek and Aidan Linder</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Short Project 01</td>
+<td style="text-align: left;">January 17</td>
+<td style="text-align: left;">WEDNESDAY 4pm</td>
+<td style="text-align: left;">Pri Vaghela and Apurbo Barua</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Short Project 01</td>
+<td style="text-align: left;">January 18</td>
+<td style="text-align: left;">THURSDAY 1pm</td>
+<td style="text-align: left;">Khojiakbar Yokubjonov and Taoseef Aziz</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Short Project 01</td>
+<td style="text-align: left;">January 18</td>
+<td style="text-align: left;">THURSDAY 4pm</td>
+<td style="text-align: left;">Ethan Holley and Pearl McNabb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Short Project 01</td>
+<td style="text-align: left;">January 19</td>
+<td style="text-align: left;">FRIDAY 10am</td>
+<td style="text-align: left;">Owen Chambers and Garegin Mazmanyan</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Short Project 01</td>
+<td style="text-align: left;">January 19</td>
+<td style="text-align: left;">FRIDAY 11am</td>
+<td style="text-align: left;">Owen Chambers and Garegin Mazmanyan</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Short Project 01</td>
+<td style="text-align: left;">January 19</td>
+<td style="text-align: left;">FRIDAY 12pm</td>
+<td style="text-align: left;">Cole Perry and Zachary Nicolosi</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Short Project 01</td>
+<td style="text-align: left;">January 19</td>
+<td style="text-align: left;">FRIDAY 3pm</td>
+<td style="text-align: left;">Steven Truong and Ali Khan</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Short Project 01</td>
+<td style="text-align: left;">January 22</td>
+<td style="text-align: left;">MONDAY 11am</td>
+<td style="text-align: left;">Amyra White and Anthony Hsu</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Short Project 01</td>
+<td style="text-align: left;">January 22</td>
+<td style="text-align: left;">MONDAY 12pm</td>
+<td style="text-align: left;">Caeden Motley and Gabriel Hernandez</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Short Project 01</td>
+<td style="text-align: left;">January 22</td>
+<td style="text-align: left;">MONDAY 4pm</td>
+<td style="text-align: left;">Maddie DeLeon and Emma Elliott</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Short Project 02</td>
+<td style="text-align: left;">January 23</td>
+<td style="text-align: left;">TUESDAY 10am</td>
+<td style="text-align: left;">Adriana Picoral</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Short Project 02</td>
+<td style="text-align: left;">January 23</td>
+<td style="text-align: left;">TUESDAY 11am</td>
+<td style="text-align: left;">Adan Baca and Waldo Guzman</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Short Project 02</td>
+<td style="text-align: left;">January 23</td>
+<td style="text-align: left;">TUESDAY 2pm</td>
+<td style="text-align: left;">Nees Abusaada and Mustafa Alnidawi</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Short Project 02</td>
+<td style="text-align: left;">January 23</td>
+<td style="text-align: left;">TUESDAY 4pm</td>
+<td style="text-align: left;">Samarie Tavenner and Elias Zheng</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Short Project 02</td>
+<td style="text-align: left;">January 24</td>
+<td style="text-align: left;">WEDNESDAY 11am</td>
+<td style="text-align: left;">Miro Vanek and Aidan Linder</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Short Project 02</td>
+<td style="text-align: left;">January 24</td>
+<td style="text-align: left;">WEDNESDAY 4pm</td>
+<td style="text-align: left;">Pri Vaghela and Apurbo Barua</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Short Project 02</td>
+<td style="text-align: left;">January 25</td>
+<td style="text-align: left;">THURSDAY 1pm</td>
+<td style="text-align: left;">Khojiakbar Yokubjonov and Taoseef Aziz</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Short Project 02</td>
+<td style="text-align: left;">January 25</td>
+<td style="text-align: left;">THURSDAY 4pm</td>
+<td style="text-align: left;">Ethan Holley and Pearl McNabb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Short Project 02</td>
+<td style="text-align: left;">January 26</td>
+<td style="text-align: left;">FRIDAY 10am</td>
+<td style="text-align: left;">Owen Chambers and Garegin Mazmanyan</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Short Project 02</td>
+<td style="text-align: left;">January 26</td>
+<td style="text-align: left;">FRIDAY 11am</td>
+<td style="text-align: left;">Owen Chambers and Garegin Mazmanyan</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Short Project 02</td>
+<td style="text-align: left;">January 26</td>
+<td style="text-align: left;">FRIDAY 12pm</td>
+<td style="text-align: left;">Cole Perry and Zachary Nicolosi</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Short Project 02</td>
+<td style="text-align: left;">January 26</td>
+<td style="text-align: left;">FRIDAY 3pm</td>
+<td style="text-align: left;">Steven Truong and Ali Khan</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Short Project 02</td>
+<td style="text-align: left;">January 29</td>
+<td style="text-align: left;">MONDAY 11am</td>
+<td style="text-align: left;">Amyra White and Anthony Hsu</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Short Project 02</td>
+<td style="text-align: left;">January 29</td>
+<td style="text-align: left;">MONDAY 12pm</td>
+<td style="text-align: left;">Caeden Motley and Gabriel Hernandez</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Short Project 02</td>
+<td style="text-align: left;">January 29</td>
+<td style="text-align: left;">MONDAY 4pm</td>
+<td style="text-align: left;">Maddie DeLeon and Emma Elliott</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Short Project 03</td>
+<td style="text-align: left;">January 30</td>
+<td style="text-align: left;">TUESDAY 10am</td>
+<td style="text-align: left;">Adriana Picoral</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Short Project 03</td>
+<td style="text-align: left;">January 30</td>
+<td style="text-align: left;">TUESDAY 11am</td>
+<td style="text-align: left;">Adan Baca and Waldo Guzman</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Short Project 03</td>
+<td style="text-align: left;">January 30</td>
+<td style="text-align: left;">TUESDAY 2pm</td>
+<td style="text-align: left;">Nees Abusaada and Mustafa Alnidawi</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Short Project 03</td>
+<td style="text-align: left;">January 30</td>
+<td style="text-align: left;">TUESDAY 4pm</td>
+<td style="text-align: left;">Samarie Tavenner and Elias Zheng</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Short Project 03</td>
+<td style="text-align: left;">January 31</td>
+<td style="text-align: left;">WEDNESDAY 11am</td>
+<td style="text-align: left;">Miro Vanek and Aidan Linder</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Short Project 03</td>
+<td style="text-align: left;">January 31</td>
+<td style="text-align: left;">WEDNESDAY 4pm</td>
+<td style="text-align: left;">Pri Vaghela and Apurbo Barua</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Short Project 03</td>
+<td style="text-align: left;">February 01</td>
+<td style="text-align: left;">THURSDAY 1pm</td>
+<td style="text-align: left;">Khojiakbar Yokubjonov and Taoseef Aziz</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Short Project 03</td>
+<td style="text-align: left;">February 01</td>
+<td style="text-align: left;">THURSDAY 4pm</td>
+<td style="text-align: left;">Ethan Holley and Pearl McNabb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Short Project 03</td>
+<td style="text-align: left;">February 01</td>
+<td style="text-align: left;">FRIDAY 10am</td>
+<td style="text-align: left;">Owen Chambers and Garegin Mazmanyan</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Short Project 03</td>
+<td style="text-align: left;">February 01</td>
+<td style="text-align: left;">FRIDAY 11am</td>
+<td style="text-align: left;">Owen Chambers and Garegin Mazmanyan</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Short Project 03</td>
+<td style="text-align: left;">February 01</td>
+<td style="text-align: left;">FRIDAY 12pm</td>
+<td style="text-align: left;">Cole Perry and Zachary Nicolosi</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Short Project 03</td>
+<td style="text-align: left;">February 01</td>
+<td style="text-align: left;">FRIDAY 3pm</td>
+<td style="text-align: left;">Steven Truong and Ali Khan</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Short Project 03</td>
+<td style="text-align: left;">February 04</td>
+<td style="text-align: left;">MONDAY 11am</td>
+<td style="text-align: left;">Amyra White and Anthony Hsu</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Short Project 03</td>
+<td style="text-align: left;">February 04</td>
+<td style="text-align: left;">MONDAY 12pm</td>
+<td style="text-align: left;">Caeden Motley and Gabriel Hernandez</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Short Project 03</td>
+<td style="text-align: left;">February 04</td>
+<td style="text-align: left;">MONDAY 4pm</td>
+<td style="text-align: left;">Maddie DeLeon and Emma Elliott</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 
 
 </section>
-</section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Use a tuple (you can find a list of <em>all</em> <a href="http://grammar.ccc.commnet.edu/grammar/marks/marks.htm">punctuation marks here</a>) to hold all the forbidden characters, then use the membership test to determine whether a character should be removed or not, i.e.&nbsp;forbidden = (<code>!</code>, <code>?</code>, <code>.</code>, …).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
