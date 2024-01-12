@@ -38,7 +38,7 @@ Hello World!
 </pre>
 ```
 
-Name the program `hello.py`. Make sure that gradescope (<>) gives you the points for passing the test case.
+Name the program `hello.py`. Make sure that gradescope gives you the points for passing the test case.
 
 # Programming Problem 2
 
