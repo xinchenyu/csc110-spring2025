@@ -47,7 +47,7 @@ All assignments that are submitted on Gradescope are due at 9pm (Tuesdays for pr
 
 ## Assignments
 
--   [Survey](https://uarizona.co1.qualtrics.com/jfe/form/SV_e3QarvVnEiImQ4K) -- Due date: `r assignments %>% filter(number == 1) %>% pull(formatted_date)` at 9pm
+-   [Survey](https://uarizona.co1.qualtrics.com/jfe/form/SV_0q8KC0FwVhCiYD4) -- Due date: `r assignments %>% filter(number == 1) %>% pull(formatted_date)` at 9pm
 -   [Module 1 Programming Problems](assignments-01.html) -- Due date: `r assignments %>% filter(assessment == "Module 1 Programming Problems") %>% pull(formatted_date)` at 9pm
 
 # Week 2 (`r schedule %>% filter(week_number == 2 & term == "spring 2024") %>% pull(formatted_start)`)
