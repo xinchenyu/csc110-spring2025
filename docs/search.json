@@ -1054,7 +1054,7 @@
     "href": "slides-02-01.html#submit-simple-function-to-gradescope",
     "title": "Functions (class slides)",
     "section": "Submit simple function to Gradescope",
-    "text": "Submit simple function to Gradescope\n\nName your python script with the add_one function first_function.py\nGo to Gradescope and submit your .py file\nYou can resubmit as many times as you need (up to the deadline)\nYou can look at your Submission History and activate a previous submission"
+    "text": "Submit simple function to Gradescope\n\nName your python script with the volume function first_function.py\nGo to Gradescope and submit your .py file\nYou can resubmit as many times as you need (up to the deadline)\nYou can look at your Submission History and activate a previous submission"
   },
   {
     "objectID": "slides-02-01.html#function-to-calculate-area-of-a-circle",
@@ -5178,5 +5178,19 @@
     "title": "Course Introduction (class slides)",
     "section": "How to get help?",
     "text": "How to get help?\n\nCome to office hours!\nJoin Piazza and ask questions there\nIf you have private questions, generally please make a private Piazza post\nDepartmental Tutors (free)\nDo Not email me or TAs"
+  },
+  {
+    "objectID": "slides-02-01.html#quiz-01",
+    "href": "slides-02-01.html#quiz-01",
+    "title": "Functions (class slides)",
+    "section": "Quiz 01",
+    "text": "Quiz 01\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz\n\nNo need for comments, no need for a main(), no need for test cases\n\nAllowed built-in functions: print()"
+  },
+  {
+    "objectID": "slides-02-01.html#function-to-calculate-area-of-a-circle-1",
+    "href": "slides-02-01.html#function-to-calculate-area-of-a-circle-1",
+    "title": "Functions (class slides)",
+    "section": "Function to calculate area of a circle",
+    "text": "Function to calculate area of a circle\n\ndef calculate_area(radius):\n  # calculate the area first\n  area = 3.1415 * radius ** 2\n  \n  # return calculated area\n  return area\n\n\nprint(area(3)) # 28.27\nprint(area(6)) # 113.09"
   }
 ]

@@ -396,16 +396,26 @@
 
 </section>
 <section>
-<section id="csc-110-functions-adriana-picoral" class="title-slide slide level1 center">
-<h1>CSc 110 Functions <br> <small> Adriana Picoral </small></h1>
+<section id="csc-110---functions" class="title-slide slide level1 center">
+<h1>CSc 110 - Functions</h1>
 
 </section>
-<section id="announcements" class="slide level2">
-<h2>Announcements</h2>
+<section id="quiz-01" class="slide level2">
+<h2>Quiz 01</h2>
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;">
+<a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time
+<div id="clock_block_cb650886c4849ee">
+
+</div>
+</div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async=""></script>
+</center>
+<p>You have 10 minutes to complete the quiz</p>
 <ul>
-<li>Check your D2L gradebook</li>
-<li>Access your submissions and original grading on Gradescope</li>
+<li>No need for comments, no need for a <code>main()</code>, no need for test cases</li>
 </ul>
+<p>Allowed built-in functions: <code>print()</code></p>
 </section>
 <section id="functions" class="slide level2">
 <h2>Functions</h2>
@@ -443,15 +453,6 @@
 <li><code>return n + 1</code> is a statement that causes the function to cease and produce the value n + 1</li>
 </ul>
 </section>
-<section id="submit-simple-function-to-gradescope" class="slide level2">
-<h2>Submit simple function to Gradescope</h2>
-<ul>
-<li>Name your python script with the <code>add_one</code> function <code>first_function.py</code></li>
-<li>Go to <a href="https://www.gradescope.com/courses/568720/assignments/3184749/configure_autograder">Gradescope</a> and submit your <code>.py</code> file</li>
-<li>You can resubmit as many times as you need (up to the deadline)</li>
-<li>You can look at your <code>Submission History</code> and activate a previous submission</li>
-</ul>
-</section>
 <section id="function-to-calculate-area-of-a-circle" class="slide level2">
 <h2>Function to calculate area of a circle</h2>
 <p>Remember this from the last set of slides?</p>
@@ -466,6 +467,21 @@
 <p>In the code above, that is done by a variable <em>assignment</em> with a variable named <code>area</code>.</p>
 <p>Let’s create a function called <code>area</code>, that given a <code>radius</code> parameter, it returns the <code>area</code> of the circle.</p>
 </section>
+<section id="function-to-calculate-area-of-a-circle-1" class="slide level2">
+<h2>Function to calculate area of a circle</h2>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">def</span> calculate_area(radius):</span>
+<span id="cb4-2"><a href="#cb4-2"></a>  <span class="co"># calculate the area first</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>  area <span class="op">=</span> <span class="fl">3.1415</span> <span class="op">*</span> radius <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a>  </span>
+<span id="cb4-5"><a href="#cb4-5"></a>  <span class="co"># return calculated area</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a>  <span class="cf">return</span> area</span>
+<span id="cb4-7"><a href="#cb4-7"></a></span>
+<span id="cb4-8"><a href="#cb4-8"></a></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="bu">print</span>(area(<span class="dv">3</span>)) <span class="co"># 28.27</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="bu">print</span>(area(<span class="dv">6</span>)) <span class="co"># 113.09</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
 <section id="function-to-calculate-the-volume-of-a-cylinder" class="slide level2">
 <h2>Function to calculate the volume of a cylinder</h2>
 <p>Write a function that does the following:</p>
@@ -478,22 +494,31 @@
 </section>
 <section id="function-to-calculate-the-volume-of-a-cylinder-1" class="slide level2">
 <h2>Function to calculate the volume of a cylinder</h2>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">def</span> volume(radius, height):</span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="co"># calculate the area first</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>  area <span class="op">=</span> <span class="fl">3.1415</span> <span class="op">*</span> radius <span class="op">**</span> <span class="dv">2</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a>  </span>
-<span id="cb4-5"><a href="#cb4-5"></a>  <span class="co"># multiply area by height</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a>  vol <span class="op">=</span> area <span class="op">*</span> height</span>
-<span id="cb4-7"><a href="#cb4-7"></a>  </span>
-<span id="cb4-8"><a href="#cb4-8"></a>  <span class="co"># return calculated volume</span></span>
-<span id="cb4-9"><a href="#cb4-9"></a>  <span class="cf">return</span> vol</span>
-<span id="cb4-10"><a href="#cb4-10"></a></span>
-<span id="cb4-11"><a href="#cb4-11"></a></span>
-<span id="cb4-12"><a href="#cb4-12"></a><span class="bu">print</span>(volume(<span class="dv">1</span>, <span class="dv">2</span>)) <span class="co"># 6.283</span></span>
-<span id="cb4-13"><a href="#cb4-13"></a><span class="bu">print</span>(volume(<span class="dv">6</span>, <span class="dv">10</span>)) <span class="co"># 1130.94</span></span>
-<span id="cb4-14"><a href="#cb4-14"></a><span class="bu">print</span>(volume(<span class="dv">5</span>, <span class="dv">5</span>)) <span class="co"># 392.68750000000006</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">def</span> volume(radius, height):</span>
+<span id="cb5-2"><a href="#cb5-2"></a>  <span class="co"># calculate the area first</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>  area <span class="op">=</span> <span class="fl">3.1415</span> <span class="op">*</span> radius <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a>  </span>
+<span id="cb5-5"><a href="#cb5-5"></a>  <span class="co"># multiply area by height</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a>  vol <span class="op">=</span> area <span class="op">*</span> height</span>
+<span id="cb5-7"><a href="#cb5-7"></a>  </span>
+<span id="cb5-8"><a href="#cb5-8"></a>  <span class="co"># return calculated volume</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a>  <span class="cf">return</span> vol</span>
+<span id="cb5-10"><a href="#cb5-10"></a></span>
+<span id="cb5-11"><a href="#cb5-11"></a></span>
+<span id="cb5-12"><a href="#cb5-12"></a><span class="bu">print</span>(volume(<span class="dv">1</span>, <span class="dv">2</span>)) <span class="co"># 6.283</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a><span class="bu">print</span>(volume(<span class="dv">6</span>, <span class="dv">10</span>)) <span class="co"># 1130.94</span></span>
+<span id="cb5-14"><a href="#cb5-14"></a><span class="bu">print</span>(volume(<span class="dv">5</span>, <span class="dv">5</span>)) <span class="co"># 392.68750000000006</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="submit-simple-function-to-gradescope" class="slide level2">
+<h2>Submit simple function to Gradescope</h2>
+<ul>
+<li>Name your python script with the <code>volume</code> function <code>first_function.py</code></li>
+<li>Go to <a href="">Gradescope</a> and submit your <code>.py</code> file</li>
+<li>You can resubmit as many times as you need (up to the deadline)</li>
+<li>You can look at your <code>Submission History</code> and activate a previous submission</li>
+</ul>
 </section></section>
 <section>
 <section id="order-of-operations" class="title-slide slide level1 center">
@@ -527,19 +552,19 @@ c = (3 // (4 // 5)) + 1
 </section>
 <section id="pemdas-answer" class="slide level2">
 <h2>PEMDAS – answer</h2>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>a1 <span class="op">=</span> <span class="dv">5</span> <span class="op">/</span>  <span class="dv">5</span> <span class="op">*</span> <span class="dv">10</span>  <span class="op">*</span> <span class="dv">5</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>a2 <span class="op">=</span> <span class="dv">5</span> <span class="op">/</span> (<span class="dv">5</span> <span class="op">*</span> <span class="dv">10</span>) <span class="op">*</span> <span class="dv">5</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a></span>
-<span id="cb5-4"><a href="#cb5-4"></a>b1 <span class="op">=</span> <span class="dv">5</span> <span class="op">*</span>  <span class="dv">10</span> <span class="op">-</span> <span class="dv">2</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a>b2 <span class="op">=</span> <span class="dv">5</span> <span class="op">*</span> (<span class="dv">10</span> <span class="op">-</span> <span class="dv">2</span>)</span>
-<span id="cb5-6"><a href="#cb5-6"></a></span>
-<span id="cb5-7"><a href="#cb5-7"></a><span class="co"># c = (3 // (4 // 5)) + 1 ERROR -- Zero Division</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a></span>
-<span id="cb5-9"><a href="#cb5-9"></a><span class="bu">print</span>(a1)</span>
-<span id="cb5-10"><a href="#cb5-10"></a><span class="bu">print</span>(a2)</span>
-<span id="cb5-11"><a href="#cb5-11"></a><span class="bu">print</span>(b1)</span>
-<span id="cb5-12"><a href="#cb5-12"></a><span class="bu">print</span>(b2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>a1 <span class="op">=</span> <span class="dv">5</span> <span class="op">/</span>  <span class="dv">5</span> <span class="op">*</span> <span class="dv">10</span>  <span class="op">*</span> <span class="dv">5</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>a2 <span class="op">=</span> <span class="dv">5</span> <span class="op">/</span> (<span class="dv">5</span> <span class="op">*</span> <span class="dv">10</span>) <span class="op">*</span> <span class="dv">5</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a></span>
+<span id="cb6-4"><a href="#cb6-4"></a>b1 <span class="op">=</span> <span class="dv">5</span> <span class="op">*</span>  <span class="dv">10</span> <span class="op">-</span> <span class="dv">2</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a>b2 <span class="op">=</span> <span class="dv">5</span> <span class="op">*</span> (<span class="dv">10</span> <span class="op">-</span> <span class="dv">2</span>)</span>
+<span id="cb6-6"><a href="#cb6-6"></a></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="co"># c = (3 // (4 // 5)) + 1 ERROR -- Zero Division</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a></span>
+<span id="cb6-9"><a href="#cb6-9"></a><span class="bu">print</span>(a1)</span>
+<span id="cb6-10"><a href="#cb6-10"></a><span class="bu">print</span>(a2)</span>
+<span id="cb6-11"><a href="#cb6-11"></a><span class="bu">print</span>(b1)</span>
+<span id="cb6-12"><a href="#cb6-12"></a><span class="bu">print</span>(b2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>50.0
 0.5
