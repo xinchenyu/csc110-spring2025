@@ -5192,5 +5192,12 @@
     "title": "Functions (class slides)",
     "section": "Function to calculate area of a circle",
     "text": "Function to calculate area of a circle\n\ndef calculate_area(radius):\n  # calculate the area first\n  area = 3.1415 * radius ** 2\n  \n  # return calculated area\n  return area\n\nprint(calculate_area(3)) # 28.27\nprint(calculate_area(6)) # 113.09"
+  },
+  {
+    "objectID": "slides-02-01.html#submit-function-to-gradescope",
+    "href": "slides-02-01.html#submit-function-to-gradescope",
+    "title": "Functions (class slides)",
+    "section": "Submit function to Gradescope",
+    "text": "Submit function to Gradescope\n\nName your python script with the volume function cylinder.py\nGo to Gradescope and submit your .py file\nYou can resubmit as many times as you need (up to the deadline)\nYou can look at your Submission History and activate a previous submission"
   }
 ]
