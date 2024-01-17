@@ -858,14 +858,14 @@
     "href": "slides-02-02.html#round-1",
     "title": "Math in Python (class slides)",
     "section": "round()",
-    "text": "round()\nUse the round() function to get a floating-point number rounded to the specified number of decimals.\nSyntax:\n\nround(number, ndigits*)\n\nRounding is done toward the even choice. What would these round to? (discuss with your group)\n\nround(51.6)\nround(51.5)\nround(50.5)\nround(51.4)"
+    "text": "round()\nUse the round() function to get a floating-point number rounded to the specified number of decimals.\nSyntax:\n\nround(number, ndigits*)\n\nRounding is done toward the nearest even choice. What would these round to? (discuss with your group)\n\nround(51.6)\nround(51.5)\nround(50.5)\nround(51.4)"
   },
   {
     "objectID": "slides-02-02.html#round-2",
     "href": "slides-02-02.html#round-2",
     "title": "Math in Python (class slides)",
     "section": "round()",
-    "text": "round()\nUse the round() function to get a floating-point number rounded to the specified number of decimals.\nSyntax:\n\nround(number, ndigits*)\n\nRounding is done toward the even choice. What would these round to:\n\nprint(round(51.6))\nprint(round(51.5))\nprint(round(50.5))\nprint(round(51.4))\n\n52\n52\n50\n51"
+    "text": "round()\nUse the round() function to get a floating-point number rounded to the specified number of decimals.\nSyntax:\n\nround(number, ndigits*)\n\nRounding is done toward the nearest even choice. What would these round to:\n\nprint(round(51.6))\nprint(round(51.5))\nprint(round(50.5))\nprint(round(51.4))\n\n52\n52\n50\n51"
   },
   {
     "objectID": "slides-02-02.html#write-a-function-1",

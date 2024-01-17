@@ -95,7 +95,7 @@ Syntax:
 round(number, ndigits*)
 ```
 
-Rounding is done toward the even choice. What would these round to? (discuss with your group)
+Rounding is done toward the nearest even choice. What would these round to? (discuss with your group)
 
 ```{python}
 #| echo: true
@@ -118,7 +118,7 @@ Syntax:
 round(number, ndigits*)
 ```
 
-Rounding is done toward the even choice. What would these round to:
+Rounding is done toward the nearest even choice. What would these round to:
 
 ```{python}
 #| echo: true
