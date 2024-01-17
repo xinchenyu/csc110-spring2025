@@ -1,0 +1,114 @@
+---
+title: "tuples (class slides)"
+format: revealjs
+slide-number: true
+df-print: kable
+---
+
+# CSc 110 - tuples
+
+## Variable length parameter
+
+Sometimes you want to handle a variable number of parameters (like `print` does)
+
+```{python}
+#| eval: true
+#| echo: true
+print(1, 2, 3)
+```
+
+## Variable length parameter
+
+You can add a `*` before your parameter name so that it accepts a variable number of arguments, gathering them into a tuple
+
+```{python}
+#| eval: true
+#| echo: true
+def concatenate(*values):
+  new_string = ""
+  for v in values:
+    new_string += str(v) + " "
+  return new_string[:-1]
+
+def main():
+  print( concatenate("The", "temperature", "is", 82, "degrees"))
+  
+main()
+```
+
+## Write a function
+
+1.  Its name is `maximum`
+2.  It takes a variable number of arguments: `*values`
+3.  It returns the highest value in `values`
+
+```{python}
+#| eval: false
+#| echo: true
+assert maximum(1) == 1
+assert maximum(3,1) == 3
+assert maximum(2,4,6) == 6
+assert maximum() == None
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def maximum(*values):
+  result = None
+  for v in values:
+    if result == None or v > result:
+      result = v
+  return result
+
+def main():
+  assert maximum(1) == 1
+  assert maximum(3,1) == 3
+  assert maximum(2,4,6) == 6
+  assert maximum() == None
+  print("Passed all tests")
+  
+main()
+```
+
+## Write a function
+
+1.  Its name is `min_max`
+2.  It takes a variable number of arguments: `*values`
+3.  It returns the highest and lowest values in `values`
+
+```{python}
+#| eval: false
+#| echo: true
+assert min_max(1) == (1, 1)
+assert min_max(3,1) == (1, 3)
+assert min_max(2,4,6) == (2, 6)
+assert min_max() == (None, None)
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def min_max(*values):
+  max = None
+  min = None
+  for v in values:
+    if max == None or v > max:
+      max = v
+    if min == None or v < min:
+      min = v
+  return min, max
+
+def main():
+  assert min_max(1) == (1, 1)
+  assert min_max(3,1) == (1, 3)
+  assert min_max(2,4,6) == (2, 6)
+  assert min_max() == (None, None)
+  print("Passed all tests")
+  
+main()
+```

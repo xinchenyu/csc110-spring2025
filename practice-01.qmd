@@ -1,0 +1,58 @@
+---
+title: "Practice Problems"
+---
+
+I've created a Google colab notebook with practice exercises, and test cases. Here are the instructions to use the notebook:
+
+1.  Access [notebook on google colab](https://colab.research.google.com/drive/1MbDAENQkgXuCXwZWkb7ru589U-0pWEuf?usp=sharing) -- you need to be signed in with a google account
+2.  If a black screen shows up, click on the "open with Google colab" at the top of the screen
+3.  Run the first chunk of code. No need to change it, just make sure you run it by hovering over the `[ ]` on the left upper corner of the code chunk and then pressing the ► button that appears
+4.  Scroll down and follow the instructions to write different functions. Make sure you run your code by hovering over the `[ ]` on the left upper corner of the code chunk and then pressing the ► button that appears
+5.  Run the following chunk with the testing (the one that calls the `pass_or_fail` function)
+
+Notebooks:
+
+1.  [Practice Problems Module 2 ](https://colab.research.google.com/drive/1MbDAENQkgXuCXwZWkb7ru589U-0pWEuf?usp=sharing)
+2.  [Practice Problems Module 3 ](https://colab.research.google.com/drive/1xiy29NCz8eDEj6oUka1R3ClZLlbDGQU6?usp=sharing)
+3.  [Practice Problems Module 4](https://colab.research.google.com/drive/1kvtwM7BI0oRe4SQwPseEPGHZBNGSPfC_?usp=sharing)
+4.  [Practice Problems Module 5](https://colab.research.google.com/drive/1t6KM7sWKXAocI6voVTJUohL701lgUrka#scrollTo=fRl8yxnyOtQh)
+5.  [Practice Problems Module 6](https://colab.research.google.com/drive/1VPJpoTznvYNmbYtgutE-oH2EH05uB-0z?usp=sharing)
+6.  [Practice Problems Module 7 I ](https://colab.research.google.com/drive/1UYy4lNegTp0P-A2pRCiJTsEHr2sXBfgY?usp=sharing)
+7.  [Practice Problems Module 7 II ](https://colab.research.google.com/drive/1mVFmcnLB8Gh10YC-jCHII6h5hQosZL60?usp=sharing)
+8.  [Extra Practice Problems](https://colab.research.google.com/drive/11AgR-vi5nAxHvZIKrJF9AwHmzOjZe7IC?usp=sharing)
+9.  [Practice Problems Module 7](https://colab.research.google.com/drive/1c4puLIos5zlCQn6I-W5hjb6wKRZmqCc9?usp=sharing)
+10.  [Practice Problems Module 8 I](https://colab.research.google.com/drive/1ZVT8M3FE9G9AHhoRs9uxpYan6gCzoTFr?usp=sharing)
+11.  [Practice Problems Module 8 II](https://colab.research.google.com/drive/1PGFcwTIU-z6wWq2Yk9iZodiiExssZIXE?usp=sharing)
+12. [Practice Problems Module 9](https://colab.research.google.com/drive/1TaQ3qQH7GLiJ_3TyO7cnP3gWJgKLPewl?usp=sharing)
+13. [Practice Problems Module 10 ](https://colab.research.google.com/drive/1kiOrOrbqIDpk251VvT7c6au9_HDAsI40?usp=sharing)
+14. [Practice Problems Module 11](https://colab.research.google.com/drive/1qR0y_vaAkk21v_PdK1aVzpBzC9o7cEl-?usp=sharing)
+15. [Practice Problems Module 12](https://colab.research.google.com/drive/1_eVARSVE203JFI7xe1YvEEeZCPMpaDSS?usp=sharing)
+16. [Practice problems Module 12 II](https://colab.research.google.com/drive/1-mSE4alNCXCef4RrcOOhg1pQH4xvs47l?usp=sharing)
+16. [Practice Problems Module 13](https://colab.research.google.com/drive/1ut8vRtGFOR-fRL82zyOyhTXgcybelyz4?usp=sharing)
+
+
+# Video demonstration
+
+{{< video https://youtu.be/LYzAjSG7wyU >}}
+
+# Solutions
+
+I highly recommend you do not look at the solutions before you try writing the practice functions yourself. Once you wrote your functions, you can compare yours with my solutions:
+
+1.  [Solutions for practice problems Module 2](https://colab.research.google.com/drive/1jlywr21JkF71BGbUjWywj9V4MIMVZx5B?usp=sharing)
+2.  [Solutions for practice problems Module 3](https://colab.research.google.com/drive/1WIKWdyn0A5ZZdbDmEmNcHYcMz4z5u9PN?usp=sharing)
+3.  [Solutions for practice problems Module 4](https://drive.google.com/file/d/1YEHH9MtxRDY8yE3MpXpH6CqvVwCe-0U0/view?usp=sharing)
+4.  [Solutions for practice problems Module 5](https://colab.research.google.com/drive/187uSylp7MKz-IEJcz0lCfvs15dU7h0Tj#scrollTo=mgg7n-LuOfRQ)
+5.  [Solutions for practice problems Module 6](https://colab.research.google.com/drive/1-PNhESrktHLv_qjoVPNHaxu1tsMrVih3?usp=sharing)
+6.  [Solutions for practice problems Module 7 I](https://colab.research.google.com/drive/1QIyd4m30wahwwNLlER1XH_geR6DCgAEW?usp=sharing)
+7.  [Solutions for practice problems Module 7 II](https://colab.research.google.com/drive/19B1QBcdHIejQTAUPywcdHP98sOy4ym9Z?usp=sharing)
+8. [Solutions for practice problems](https://colab.research.google.com/drive/12r-TZ0Tb7hjuJmQ5CL4Tz9ibSwp48jht?usp=sharing)
+9.  [Solutions for practice problems Module 7 III](https://colab.research.google.com/drive/10Xd842SCvVmH750lkNts-A0vrM9ZEahF?usp=sharing)
+10.  [Solutions for practice problems Module 8 I](https://colab.research.google.com/drive/1ve_JnJ8iDUYBkJw_dfD168S67RdLVNdC?usp=sharing)
+11.  [Solutions for practice problems Module 8 II ](https://colab.research.google.com/drive/10wXYz9rIC1ztE_3tjxlTd3oGSeiboeSZ?usp=sharing)
+12. [Solutions for practice problems Module 9 ](https://colab.research.google.com/drive/15W4u4MTV2ycvsi1-uwSnP_W5zVClyZ8l?usp=sharing)
+13. [Solutions for practice problems Module 10](https://colab.research.google.com/drive/1Ksl6e-IqA4vBbW2FKO1m-2El3OHdjYWZ?usp=sharing)
+14. [Solutions for practice problems Module 11](https://colab.research.google.com/drive/15oIYSIcy_Gmy7G3fjT3euTs88iKB0uEW?usp=sharing)
+15. [Solutions for practice problems Module 12](https://colab.research.google.com/drive/16CrcBq0jrk6Ch5Bpno_kIEiIIWcuhzKh?usp=sharing)
+16. [Solutions for practice problems Module 12 II](https://colab.research.google.com/drive/1EcqLHFg-VC5domigMQvaLz1TUbD6LBNX?usp=sharing)
+17. [Solutions for practice problems Module 13](https://colab.research.google.com/drive/17TlFnRj9689JAK1KzvmLT_qWm8lQVJeH?usp=sharing)

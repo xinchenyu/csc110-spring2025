@@ -1,0 +1,113 @@
+---
+title: "Mutability"
+---
+
+There are two types of objects in Python, **mutable** and **immutable**. When we assign a variable, we are creating a **reference** to the object. In other words, the *variable name* "points" to the object in memory.
+
+A variable does not actually hold the value of the object within it. Instead, a variable is a **reference** to the object. The object "lives" somewhere in your computer's memory (RAM). When you assign a value to a *new* variable, the variable references that object. If you assign the same variable name to a new object, the new object is created, placed in memory, and the the variable references it.
+
+Most values in Python (strings, lists, integers, floats, booleans) are objects. Mutable objects can be changed once they are created. Immutable objects cannot be changed once they are created.
+
+Immutable objects in Python include integers, floats, strings, and tuples (we will work with tuples in the future, no need to worry about them now). Lists are mutable. (so are dictionaries, which we will also be working with in the future)
+
+Here's how we can change a list:
+
+```{python}
+songs = ["Lavender Haze", "Calm Down", "As It Was", "About Damn Time"]
+songs
+```
+
+```{python}
+songs[0] = "Flowers"
+songs
+```
+
+Note that although we can retrieve values from a string using `[ ]`, we are unable to change a character inside a string using indexing because strings are immutable.
+
+## List methods
+
+Mutability is very useful with lists. There are a number of built-in list *methods* we can use:
+
+-   `.append()` adds an element at the end of the list: `list.append(value)`
+-   `.insert()` adds an element at the provided index: `list.insert(index, value)`
+-   `.pop()` removes a specific element at the provided index: `list.pop(index)`
+-   `.remove()` removes the first element with the provided value: `list.remove(value)`
+
+Here's how `.append()` works:
+
+```{python}
+songs = ["Lavender Haze", "Calm Down", "As It Was", "About Damn Time"]
+songs
+```
+
+```{python}
+songs.append("Flowers")
+songs
+```
+
+Here's how `.insert()` works:
+
+```{python}
+songs = ["Lavender Haze", "Calm Down", "As It Was", "About Damn Time"]
+songs
+```
+
+```{python}
+songs.insert(0, "Flowers")
+songs
+```
+
+Here's how `.pop()` works:
+
+```{python}
+songs = ["Lavender Haze", "Calm Down", "As It Was", "About Damn Time"]
+songs.pop(0)
+```
+
+```{python}
+songs
+```
+
+Here's how `.remove()` works:
+
+```{python}
+songs = ["Lavender Haze", "Calm Down", "As It Was", "About Damn Time"]
+songs.remove("Lavender Haze")
+```
+
+```{python}
+songs
+```
+
+# Modifying a list inside a function
+
+Since lists are `mutable`, any changes to lists inside a function persist once the function finishes running (which is not the case with `immutable` objects). So there's no need for a `return` from a function if all you are doing is modifying a list.
+
+```{python}
+def make_adverbs(words):
+  index = 0
+  while index < len(words):
+    new_word = words[index] + "ly"
+    words[index] = new_word
+    index += 1
+    
+def main():
+  # create list of adjectives
+  my_words = ["slow", "glad", "blad"]
+  
+  # transform words into adverbs
+  make_adverbs(my_words)
+  
+  # print list
+  print(my_words)
+  
+main()
+```
+
+Note how there's no `return` inside the `make_adverbs(words)` function -- yet, in `main()` the list `my_words` has been modified.
+
+# Garbage collection
+
+Remember that when you assign a value to a *new* variable, the variable references that object. If you assign the same variable name to a new object, the new object is created, placed in memory, and the the variable references it. What happens to the original object then? There's no variable name referencing it anymore, so it just sits in memory without means to access it.
+
+These dangling (reference-less) objects are taken care by the **Garbage Collector**, which is a part of Python that automatically cleans up these stray objects as the program executes. You don't really have to worry about Gargabe Collecting in Python, since it's built-in and it does the work for you. In some languages (like C), there's no built-in automatic Garbage Collection so the programmer is responsible for managing memory. That is not the case for Python.
