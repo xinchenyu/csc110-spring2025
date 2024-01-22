@@ -3413,7 +3413,7 @@
     "href": "slides-03-02.html#write-a-function",
     "title": "Built-in Python Functions (class slides)",
     "section": "Write a function",
-    "text": "Write a function\nWrite a Python function that does the following:\n\nIts name is greeting\nIt takes two arguments, first_name and last_name\nIt returns a string with a greeting using first_name and last_name\n\n\nprint( greeting(\"Adriana\", \"Picoral\") ) # Hello, Adriana Picoral!"
+    "text": "Write a function\nWrite a Python function that does the following:\n\nIts name is greeting\nIt takes two arguments, first_name and last_name\nIt returns a string with a greeting using first_name and last_name\n\n\nprint( greeting(\"Xinchen\", \"Yu\") ) # Hello, Xinchen Yu!"
   },
   {
     "objectID": "slides-03-02.html#reading-the-documentation",
@@ -3427,14 +3427,14 @@
     "href": "slides-03-02.html#len-function",
     "title": "Built-in Python Functions (class slides)",
     "section": "len() function",
-    "text": "len() function\n\nThe len() function can be used with many types – we will be using it with string for now\nIt returns the number of characters in a string\n\n\ncharacter_count = len(\"Adriana\")\nprint(character_count)\n\n7"
+    "text": "len() function\n\nThe len() function can be used with many types – we will be using it with string for now\nIt returns the number of characters in a string\n\n\ncharacter_count = len(\"Xinchen\")\nprint(character_count)\n\n7"
   },
   {
     "objectID": "slides-03-02.html#write-a-function-1",
     "href": "slides-03-02.html#write-a-function-1",
     "title": "Built-in Python Functions (class slides)",
     "section": "Write a function",
-    "text": "Write a function\nWrite a Python function that does the following:\n\nIts name is count_characters\nIt takes a string argument, name\nIt returns the total number of characters in name\n\n\nprint( count_characters(\"Adriana\") ) # 7\nprint( count_characters(\"\") ) # 0\nprint( count_characters(\" \") ) # 1\nprint( count_characters(\"10\") ) # 2"
+    "text": "Write a function\nWrite a Python function that does the following:\n\nIts name is count_characters\nIt takes a string argument, name\nIt returns the total number of characters in name\n\n\nprint( count_characters(\"Xinchen\") ) # 7\nprint( count_characters(\"\") ) # 0\nprint( count_characters(\" \") ) # 1\nprint( count_characters(\"10\") ) # 2"
   },
   {
     "objectID": "slides-03-02.html#input-function",
@@ -3462,7 +3462,7 @@
     "href": "slides-03-02.html#announcements",
     "title": "Built-in Python Functions (class slides)",
     "section": "Announcements",
-    "text": "Announcements\n\nMidterm 1 on September 20 (this room)\nModules 1-4 (practice problems on the website)\nReview session TBA\nBRING PHOTO ID TO THE EXAM\nBRING PHOTO ID TO QUIZ 04 (this Wednesday, Sept 13)"
+    "text": "Announcements\n\nMidterm 1 on February 14 (this room)\nModules 1-5 (practice problems on the website)\nReview session TBA\nBRING PHOTO ID TO THE EXAM"
   },
   {
     "objectID": "slides-03-02.html#input-function-1",

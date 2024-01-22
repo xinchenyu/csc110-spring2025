@@ -17,7 +17,7 @@ Write a Python function that does the following:
 ```{python}
 #| echo: true
 #| eval: false
-print( greeting("Adriana", "Picoral") ) # Hello, Adriana Picoral!
+print( greeting("Xinchen", "Yu") ) # Hello, Xinchen Yu!
 ```
 
 
@@ -35,7 +35,7 @@ With your table members, write a short definition for each of the built-in funct
 ```{python}
 #| echo: true
 #| eval: true
-character_count = len("Adriana")
+character_count = len("Xinchen")
 print(character_count)
 ```
 
@@ -51,7 +51,7 @@ Write a Python function that does the following:
 ```{python}
 #| echo: true
 #| eval: false
-print( count_characters("Adriana") ) # 7
+print( count_characters("Xinchen") ) # 7
 print( count_characters("") ) # 0
 print( count_characters(" ") ) # 1
 print( count_characters("10") ) # 2
@@ -90,11 +90,10 @@ In the same script, write `main()`:
 
 ## Announcements
 
-* Midterm 1 on September 20 (this room)
-* Modules 1-4 (practice problems on the website)
+* Midterm 1 on February 14 (this room)
+* Modules 1-5 (practice problems on the website)
 * Review session TBA
 * BRING PHOTO ID TO THE EXAM
-* BRING PHOTO ID TO QUIZ 04 (this Wednesday, Sept 13)
 
 
 ## `input()` function
