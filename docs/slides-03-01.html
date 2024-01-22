@@ -411,7 +411,7 @@
 <h2>Function Comments</h2>
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">'''</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="co">Adriana Picoral</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="co">Xinchen Yu</span></span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="co">CSC110</span></span>
 <span id="cb1-4"><a href="#cb1-4"></a><span class="co">Class Demonstration</span></span>
 <span id="cb1-5"><a href="#cb1-5"></a><span class="co">This program has two functions: one to calculate the area of a sphere,</span></span>
@@ -518,6 +518,17 @@
 <li>When the function is then called, the values you pass to the function are called <strong>arguments</strong></li>
 </ul>
 </section>
+<section id="argument-or-parameter" class="slide level2">
+<h2>Argument or Parameter?</h2>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># The parameters are a and b</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="kw">def</span> add(a, b):</span>
+<span id="cb5-3"><a href="#cb5-3"></a>    <span class="cf">return</span> a<span class="op">+</span>b</span>
+<span id="cb5-4"><a href="#cb5-4"></a>  </span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="co"># The arguments being passed through are 5 and 4</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a>add(<span class="dv">5</span>, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
 <section id="write-a-function" class="slide level2">
 <h2>Write a function</h2>
 <p>Write a Python function that does the following:</p>
@@ -531,42 +542,42 @@
 </section>
 <section id="write-a-function-1" class="slide level2">
 <h2>Write a function</h2>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">def</span> sqrt(n):</span>
-<span id="cb5-2"><a href="#cb5-2"></a>  <span class="co">'''</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="co">  This function calculates the square root of a number</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="co">  Args:</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a><span class="co">    n: integer or float</span></span>
-<span id="cb5-6"><a href="#cb5-6"></a><span class="co">  Returns:</span></span>
-<span id="cb5-7"><a href="#cb5-7"></a><span class="co">    The square root of n</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a><span class="co">  '''</span></span>
-<span id="cb5-9"><a href="#cb5-9"></a>  <span class="cf">return</span> n<span class="op">**</span><span class="fl">.5</span></span>
-<span id="cb5-10"><a href="#cb5-10"></a></span>
-<span id="cb5-11"><a href="#cb5-11"></a><span class="kw">def</span> hypotenuse(a, b):</span>
-<span id="cb5-12"><a href="#cb5-12"></a>  <span class="co">'''</span></span>
-<span id="cb5-13"><a href="#cb5-13"></a><span class="co">  This function calculates the hypotenuse of a right angle triangle.</span></span>
-<span id="cb5-14"><a href="#cb5-14"></a><span class="co">  Args:</span></span>
-<span id="cb5-15"><a href="#cb5-15"></a><span class="co">    a: number (integer or float) representing one of the non-hypotenuse sides</span></span>
-<span id="cb5-16"><a href="#cb5-16"></a><span class="co">    b: number (integer or float) representing one of the non-hypotenuse sides</span></span>
-<span id="cb5-17"><a href="#cb5-17"></a><span class="co">  Returns:</span></span>
-<span id="cb5-18"><a href="#cb5-18"></a><span class="co">    Float representing the length of the hypotenuse given a and b</span></span>
-<span id="cb5-19"><a href="#cb5-19"></a><span class="co">  '''</span> </span>
-<span id="cb5-20"><a href="#cb5-20"></a>  h <span class="op">=</span> sqrt(a<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> b<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb5-21"><a href="#cb5-21"></a>  <span class="cf">return</span> <span class="bu">round</span>(h, <span class="dv">2</span>)</span>
-<span id="cb5-22"><a href="#cb5-22"></a></span>
-<span id="cb5-23"><a href="#cb5-23"></a><span class="kw">def</span> main():</span>
-<span id="cb5-24"><a href="#cb5-24"></a>  <span class="co">'''</span></span>
-<span id="cb5-25"><a href="#cb5-25"></a><span class="co">  This function calls the hypotenuse function to calculate and then</span></span>
-<span id="cb5-26"><a href="#cb5-26"></a><span class="co">  print out the hypotenuse of a right angle triangle of sides 3 and 4</span></span>
-<span id="cb5-27"><a href="#cb5-27"></a><span class="co">  and the hypotenuse of a right angle triange of sides 10 and 10</span></span>
-<span id="cb5-28"><a href="#cb5-28"></a><span class="co">  '''</span></span>
-<span id="cb5-29"><a href="#cb5-29"></a>  result <span class="op">=</span> hypotenuse(<span class="dv">3</span>, <span class="dv">4</span>)</span>
-<span id="cb5-30"><a href="#cb5-30"></a>  <span class="bu">print</span>(result)</span>
-<span id="cb5-31"><a href="#cb5-31"></a>  </span>
-<span id="cb5-32"><a href="#cb5-32"></a>  result <span class="op">=</span> hypotenuse(<span class="dv">10</span>, <span class="dv">10</span>)</span>
-<span id="cb5-33"><a href="#cb5-33"></a>  <span class="bu">print</span>(result)</span>
-<span id="cb5-34"><a href="#cb5-34"></a>  </span>
-<span id="cb5-35"><a href="#cb5-35"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">def</span> sqrt(n):</span>
+<span id="cb6-2"><a href="#cb6-2"></a>  <span class="co">'''</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="co">  This function calculates the square root of a number</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="co">  Args:</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="co">    n: integer or float</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="co">  Returns:</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="co">    The square root of n</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a><span class="co">  '''</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a>  <span class="cf">return</span> n<span class="op">**</span><span class="fl">.5</span></span>
+<span id="cb6-10"><a href="#cb6-10"></a></span>
+<span id="cb6-11"><a href="#cb6-11"></a><span class="kw">def</span> hypotenuse(a, b):</span>
+<span id="cb6-12"><a href="#cb6-12"></a>  <span class="co">'''</span></span>
+<span id="cb6-13"><a href="#cb6-13"></a><span class="co">  This function calculates the hypotenuse of a right angle triangle.</span></span>
+<span id="cb6-14"><a href="#cb6-14"></a><span class="co">  Args:</span></span>
+<span id="cb6-15"><a href="#cb6-15"></a><span class="co">    a: number (integer or float) representing one of the non-hypotenuse sides</span></span>
+<span id="cb6-16"><a href="#cb6-16"></a><span class="co">    b: number (integer or float) representing one of the non-hypotenuse sides</span></span>
+<span id="cb6-17"><a href="#cb6-17"></a><span class="co">  Returns:</span></span>
+<span id="cb6-18"><a href="#cb6-18"></a><span class="co">    Float representing the length of the hypotenuse given a and b</span></span>
+<span id="cb6-19"><a href="#cb6-19"></a><span class="co">  '''</span> </span>
+<span id="cb6-20"><a href="#cb6-20"></a>  h <span class="op">=</span> sqrt(a<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> b<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb6-21"><a href="#cb6-21"></a>  <span class="cf">return</span> <span class="bu">round</span>(h, <span class="dv">2</span>)</span>
+<span id="cb6-22"><a href="#cb6-22"></a></span>
+<span id="cb6-23"><a href="#cb6-23"></a><span class="kw">def</span> main():</span>
+<span id="cb6-24"><a href="#cb6-24"></a>  <span class="co">'''</span></span>
+<span id="cb6-25"><a href="#cb6-25"></a><span class="co">  This function calls the hypotenuse function to calculate and then</span></span>
+<span id="cb6-26"><a href="#cb6-26"></a><span class="co">  print out the hypotenuse of a right angle triangle of sides 3 and 4</span></span>
+<span id="cb6-27"><a href="#cb6-27"></a><span class="co">  and the hypotenuse of a right angle triange of sides 10 and 10</span></span>
+<span id="cb6-28"><a href="#cb6-28"></a><span class="co">  '''</span></span>
+<span id="cb6-29"><a href="#cb6-29"></a>  result <span class="op">=</span> hypotenuse(<span class="dv">3</span>, <span class="dv">4</span>)</span>
+<span id="cb6-30"><a href="#cb6-30"></a>  <span class="bu">print</span>(result)</span>
+<span id="cb6-31"><a href="#cb6-31"></a>  </span>
+<span id="cb6-32"><a href="#cb6-32"></a>  result <span class="op">=</span> hypotenuse(<span class="dv">10</span>, <span class="dv">10</span>)</span>
+<span id="cb6-33"><a href="#cb6-33"></a>  <span class="bu">print</span>(result)</span>
+<span id="cb6-34"><a href="#cb6-34"></a>  </span>
+<span id="cb6-35"><a href="#cb6-35"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>5.0
 14.14</code></pre>

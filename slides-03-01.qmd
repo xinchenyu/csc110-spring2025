@@ -17,7 +17,7 @@ slide-number: true
 #| echo: true
 #| eval: true
 '''
-Adriana Picoral
+Xinchen Yu
 CSC110
 Class Demonstration
 This program has two functions: one to calculate the area of a sphere,
@@ -118,6 +118,19 @@ main()
 -   Never set variables as global variables, pass values to functions when called
 -   When a function is defined, the values you want to pass to the function are called **parameter variables**
 -   When the function is then called, the values you pass to the function are called **arguments**
+
+## Argument or Parameter?
+
+```{python}
+#| eval: false
+#| echo: true
+# The parameters are a and b
+def add(a, b):
+    return a+b
+  
+# The arguments being passed through are 5 and 4
+add(5, 4)
+```
 
 ## Write a function
 

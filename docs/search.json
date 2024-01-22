@@ -3637,7 +3637,7 @@
     "href": "slides-03-01.html#function-comments-1",
     "title": "More on Functions (class slides)",
     "section": "Function Comments",
-    "text": "Function Comments\n\n'''\nAdriana Picoral\nCSC110\nClass Demonstration\nThis program has two functions: one to calculate the area of a sphere,\nthe other to calculate the volume of a sphere.\nThe main() function is called to print to the standard output the\narea and volume of a sphere of radius .75\n'''\n\ndef sphere_volume(radius):\n  '''\n  This function calculates the volume of a sphere of given radius.\n  Args:\n    radius: integer representing the radius of the sphere\n  Returns:\n    The float representing the volume of a sphere of the given radius\n  '''\n  volume = (1 / 3) * sphere_area(radius) * radius\n  return round(volume, 2)\n\n\ndef sphere_area(radius):\n  '''\n  This function calculates the area of a sphere of given radius.\n  Args:\n    radius: integer representing the radius of the sphere\n  Returns:\n    The float representing the area of a sphere of the given radius\n  '''\n  area = 4 * 3.1415 * radius**2\n  return round(area, 2)\n\n\ndef main():\n  '''\n  This function prints the volume and area of a sphere of radius .75.\n  Args:\n    None\n  Returns:\n    None\n  '''\n  r = .75\n  v = sphere_volume(r)\n  a = sphere_area(r)\n  print(v, a)\n  \nmain()\n\n1.77 7.07"
+    "text": "Function Comments\n\n'''\nXinchen Yu\nCSC110\nClass Demonstration\nThis program has two functions: one to calculate the area of a sphere,\nthe other to calculate the volume of a sphere.\nThe main() function is called to print to the standard output the\narea and volume of a sphere of radius .75\n'''\n\ndef sphere_volume(radius):\n  '''\n  This function calculates the volume of a sphere of given radius.\n  Args:\n    radius: integer representing the radius of the sphere\n  Returns:\n    The float representing the volume of a sphere of the given radius\n  '''\n  volume = (1 / 3) * sphere_area(radius) * radius\n  return round(volume, 2)\n\n\ndef sphere_area(radius):\n  '''\n  This function calculates the area of a sphere of given radius.\n  Args:\n    radius: integer representing the radius of the sphere\n  Returns:\n    The float representing the area of a sphere of the given radius\n  '''\n  area = 4 * 3.1415 * radius**2\n  return round(area, 2)\n\n\ndef main():\n  '''\n  This function prints the volume and area of a sphere of radius .75.\n  Args:\n    None\n  Returns:\n    None\n  '''\n  r = .75\n  v = sphere_volume(r)\n  a = sphere_area(r)\n  print(v, a)\n  \nmain()\n\n1.77 7.07"
   },
   {
     "objectID": "slides-03-01.html#global-vs.-local-variables-scope",
@@ -5199,5 +5199,12 @@
     "title": "Functions (class slides)",
     "section": "Submit function to Gradescope",
     "text": "Submit function to Gradescope\n\nName your python script with the volume function cylinder.py\nGo to Gradescope and submit your .py file\nYou can resubmit as many times as you need (up to the deadline)\nYou can look at your Submission History and activate a previous submission"
+  },
+  {
+    "objectID": "slides-03-01.html#argument-or-parameter",
+    "href": "slides-03-01.html#argument-or-parameter",
+    "title": "More on Functions (class slides)",
+    "section": "Argument or Parameter?",
+    "text": "Argument or Parameter?\n\n# The parameters are a and b\ndef add(a, b):\n    return a+b\n  \n# The arguments being passed through are 5 and 4\nadd(5, 4)"
   }
 ]
