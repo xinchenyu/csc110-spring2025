@@ -1,0 +1,182 @@
+---
+title: "Hello World!"
+---
+
+## Installing Python
+
+Before we begin writing Python code, you need to install Python3 in your computer (alternatively you can run your code in the cloud on replit.com for example -- see videos later on this page for more info on how to do that).
+
+1.  Go to <https://www.python.org/downloads/> and follow the instructions to install python for your specific Operating System (Mac, Windows, etc.)
+2.  I recommend you use Visual Studio Code for your IDE (Integrated Development Environment). Download and install VS code: <https://code.visualstudio.com/download>
+3.  If you are unable to install anything in your machine (you use a Chromebook, for example), you can use a cloud-based IDE such as <https://replit.com/>
+
+## How to write Python programs
+
+Traditionally, the first program you write in any programming language is code to print *hello world*, which in Python is the following:
+
+``` python
+print('hello world')
+```
+
+We will experiment with this one line of code in this lesson.
+
+There are a number of ways to set up your coding environment, and with time and experience you will develop your own preferences. Minimally, you need a plain text editor (for example, TextEdit for Macs and Notepad++ for Windows) and a terminal/command prompt to run python.
+
+Ideally, you will be using an IDE (Integrated Development Environment) which facilitates coding by integrating a **text editor**, a **console** and other tools into one window. IDEs offer great tools like autocomplete and debugging.
+
+### Basic Steps
+
+1.  Open your editor of choice.
+2.  Type the program code given in the example.
+3.  Save it as a file with the filename mentioned.
+4.  Run the interpreter with the command `python program.py` to run the program.
+
+## Videos
+
+{{< video https://youtu.be/Ut1maJMufBk >}}
+
+{{< video https://youtu.be/T4V-9qn-azI >}}
+
+{{< video https://www.youtube.com/embed/cfS7v8nqsuY >}}
+
+### Example: Using Variables And Literal Constants
+
+Type and run the following program:
+
+``` python
+# Filename : var.py
+i = 5
+print(i)
+i = i + 1
+print(i)
+
+s = '''This is a multi-line string.
+This is the second line.'''
+print(s)
+```
+
+Output:
+
+```         
+5
+6
+This is a multi-line string.
+This is the second line.
+```
+
+**How It Works**
+
+Here's how this program works. First, we assign the literal constant value `5` to the variable `i` using the assignment operator (`=`). This line is called a statement because it states that something should be done and in this case, we connect the variable name `i` to the value `5`. Next, we print the value of `i` using the `print` statement which, unsurprisingly, just prints the value of the variable to the screen.
+
+Then we add `1` to the value stored in `i` and store it back. We then print it and expectedly, we get the value `6`.
+
+Similarly, we assign the literal string to the variable `s` and then print it.
+
+> **Note for static language programmers**
+>
+> Variables are used by just assigning them a value. No declaration or data type definition is needed/used.
+
+## Logical And Physical Line
+
+A physical line is what you *see* when you write the program. A logical line is what *Python sees* as a single statement. Python implicitly assumes that each *physical line* corresponds to a *logical line*.
+
+An example of a logical line is a statement like `print('hello world')` - if this was on a line by itself (as you see it in an editor), then this also corresponds to a physical line.
+
+Implicitly, Python encourages the use of a single statement per line which makes code more readable.
+
+If you want to specify more than one logical line on a single physical line, then you have to explicitly specify this using a semicolon (`;`) which indicates the end of a logical line/statement. For example:
+
+``` python
+i = 5
+print(i)
+```
+
+is effectively same as
+
+``` python
+i = 5;
+print(i);
+```
+
+which is also same as
+
+``` python
+i = 5; print(i);
+```
+
+and same as
+
+``` python
+i = 5; print(i)
+```
+
+However, I *strongly recommend* that you stick to *writing a maximum of a single logical line on each single physical line*. The idea is that you should never use the semicolon. In fact, I have *never* used or even seen a semicolon in a Python program.
+
+There is one kind of situation where this concept is really useful: if you have a long line of code, you can break it into multiple physical lines by using the backslash. This is referred to as *explicit line joining*:
+
+``` python
+s = 'This is a string. \
+This continues the string.'
+print(s)
+```
+
+Output:
+
+```         
+This is a string. This continues the string.
+```
+
+Similarly,
+
+``` python
+i = \
+5
+```
+
+is the same as
+
+``` python
+i = 5
+```
+
+Sometimes, there is an implicit assumption where you don't need to use a backslash. This is the case where the logical line has a starting parentheses, starting square brackets or a starting curly braces but not an ending one. This is called *implicit line joining*.
+
+## Indentation
+
+Whitespace is important in Python. Actually, *whitespace at the beginning of the line is important*. This is called *indentation*. Leading whitespace (spaces and tabs) at the beginning of the logical line is used to determine the indentation level of the logical line, which in turn is used to determine the grouping of statements.
+
+This means that statements which go together *must* have the same indentation. Each such set of statements is called a *block*. We will see examples of how blocks are important in later chapters.
+
+One thing you should remember is that wrong indentation can give rise to errors. For example:
+
+``` python
+i = 5
+# Error below! Notice a single space at the start of the line
+ print('Value is', i)
+print('I repeat, the value is', i)
+```
+
+When you run this, you get the following error:
+
+```         
+  File "whitespace.py", line 3
+    print('Value is', i)
+    ^
+IndentationError: unexpected indent
+```
+
+Notice that there is a single space at the beginning of the second line. The error indicated by Python tells us that the syntax of the program is invalid i.e. the program was not properly written. What this means to you is that *you cannot arbitrarily start new blocks of statements* (except for the default main block which you have been using all along, of course). Cases where you can use new blocks will be detailed in later chapters such as the [control flow](./control_flow.md#control_flow).
+
+> **How to indent**
+>
+> Use four spaces for indentation. This is the official Python language recommendation. Good editors will automatically do this for you. Make sure you use a consistent number of spaces for indentation, otherwise your program will not run or will have unexpected behavior.
+
+<!-- -->
+
+> **Note to static language programmers**
+>
+> Python will always use indentation for blocks and will never use braces.
+
+## Video
+
+{{< video https://youtu.be/TS8TWgg4U1U >}}

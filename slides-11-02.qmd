@@ -1,0 +1,364 @@
+---
+title: "nested for loops (class slides)"
+format: revealjs
+slide-number: true
+df-print: kable
+---
+
+# CSc 110 - nested for loops
+
+## Announcements
+
+* Project 3 due this Wednesday 7pm
+* Midterm 2 on October 25 (Wednesday), in this room (BRING PHOTO ID)
+* Review session on October 24 (Tuesday), in this room
+* Last day to withdraw is October 29 (<https://registrar.arizona.edu/dates-and-deadlines>) -- you will have ~70% of your grade in by then
+* Check grades on D2L
+* Quiz 9-12, Nov 1, Nov 8, Nov 29, Dec 6
+
+## 2D lists
+
+```{python}
+#| eval: true
+#| echo: true
+people = [["Ana", 34, "B"],
+          ["Peter", 23, "A"]]
+```
+
+How to retrieve first name `"Ana"`?
+
+How to retrieve first name `"Peter"`?
+
+How to retrieve integer `23`?
+
+## 2D lists
+
+```{python}
+#| eval: true
+#| echo: true
+people = [["Ana", 34, "B"],
+          ["Peter", 23, "A"]]
+```
+
+How to retrieve first name `"Ana"`?
+
+```{python}
+#| eval: true
+#| echo: true
+people[0][0]
+```
+
+How to retrieve first name `"Peter"`?
+
+```{python}
+#| eval: true
+#| echo: true
+people[1][0]
+```
+
+How to retrieve integer `23`?
+
+```{python}
+#| eval: true
+#| echo: true
+people[1][1]
+```
+
+## Nested `for` loops
+
+```{python}
+#| eval: true
+#| echo: true
+people = [["Ana", 34, "B"],
+          ["Peter", 23, "A"]]
+          
+for i in range(len(people)):
+  for j in range(len(people[i])):
+    print(people[i][j])
+```
+
+## Write a function
+
+1. Function name is `nested_max`
+1. It takes a 2D list of numbers as argument
+1. It iterates over every item in each sublist to find the highest number
+1. It returns the highest number in all lists
+
+Test cases
+```{python}
+#| eval: false
+#| echo: true
+assert nested_max([[], []]) == None
+assert nested_max([[1, 2, 3, 2, 1],
+                   [2, 3, 2, 1, 5],
+                   [0, 1]]) == 5
+```
+
+## Write a function -- solution 1
+
+
+```{python}
+#| eval: true
+#| echo: true
+def nested_max(lists):
+  max = None
+  for i in range(len(lists)):
+    for j in range(len(lists[i])):
+      if max == None or lists[i][j] > max:
+        max = lists[i][j]
+  return max
+
+def main():
+  assert nested_max([[], []]) == None
+  assert nested_max([[1, 2, 3, 2, 1],
+                     [2, 3, 2, 1, 5],
+                     [0, 1]]) == 5
+  print("Passed all tests")
+main()
+```
+
+## Write a function -- solution 2
+
+
+```{python}
+#| eval: true
+#| echo: true
+def max_list(numbers):
+  max = None
+  for i in range(len(numbers)):
+    if max == None or numbers[i] > max:
+      max = numbers[i]
+  return max
+
+def nested_max(lists):
+  max = None
+  for i in range(len(lists)):
+    max_of_sublist = max_list(lists[i])
+    if max == None or  max_of_sublist> max:
+      max = max_of_sublist
+  return max
+
+def main():
+  assert nested_max([[], []]) == None
+  assert nested_max([[1, 2, 3, 2, 1],
+                     [2, 3, 2, 1, 5],
+                     [0, 1]]) == 5
+  print("Passed all tests")
+main()
+```
+
+# Submit code for attendance
+
+Submit your `nested_max` functions to Gradescope for attendance.
+
+Name your file `nested_max.py`
+
+## Write a function
+
+1. Function name is `nested_min`
+1. It takes a 2D list of numbers as argument
+1. It iterates over every item in each sublist to find the lowest number
+1. It returns the lowest number in all lists
+
+Test cases
+```{python}
+#| eval: false
+#| echo: true
+assert nested_min([[], []]) == None
+assert nested_min([[1, 2, 3, 2, 1],
+                   [2, 3, 2, 1, 5],
+                   [0, 1]]) == 0
+```
+
+## Write a function -- solution
+
+
+```{python}
+#| eval: true
+#| echo: true
+def nested_min(lists):
+  min = None
+  for i in range(len(lists)):
+    for j in range(len(lists[i])):
+      if min == None or lists[i][j] < min:
+        min = lists[i][j]
+  return min
+
+def main():
+  assert nested_min([[], []]) == None
+  assert nested_min([[1, 2, 3, 2, 1],
+                     [2, 3, 2, 1, 5],
+                     [0, 1]]) == 0
+  print("Passed all tests")
+main()
+```
+
+## Mutate nested lists
+
+In addition to retrieving a value from nested lists, we can also mutate a value in a sublist.
+
+```{python}
+#| eval: true
+#| echo: true
+people = [["Ana", 34, "B"],
+          ["Peter", 23, "A"]]
+people
+```
+
+
+```{python}
+#| eval: true
+#| echo: true
+people[0][1] = 24
+people
+```
+
+## Write a function
+
+1. Function name is `double_nested`
+1. It takes a 2D list of numbers as argument
+1. It mutates the sublist items by multiplying each number in each sublist by 2
+1. It returns the argument list
+
+Test cases
+```{python}
+#| eval: false
+#| echo: true
+assert double_nested([[], []]) == [[], []]
+assert double_nested([[1, 2, 3, 2, 1],
+                     [0, 1]]) == [[2, 4, 6, 4, 2],
+                                  [0, 2]]
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def double_nested(lists):
+  for i in range(len(lists)):
+    for j in range(len(lists[i])):
+      lists[i][j] *= 2
+  return lists
+
+def main():
+  assert double_nested([[], []]) == [[], []]
+  assert double_nested([[1, 2, 3, 2, 1],
+                        [0, 1]]) == [[2, 4, 6, 4, 2],
+                                     [0, 2]]
+  print("Passed all tests")
+main()
+```
+
+## Quiz 08
+
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+</center>
+
+You have 10 minutes to complete the quiz
+
+* No need for comments, no need for a `main()`, no need for test cases
+
+Allowed built-in functions: `round()`, `input()`, `float()`, `str()`, `int()`, `len()` 
+
+
+## Write a function
+
+1. Function name is `len_strings_nested`
+1. It takes a 2D list of strings as argument
+1. It mutates the sublist items by replacing each string with its length
+1. It returns the argument list
+
+Test cases:
+
+```{python}
+#| eval: false
+#| echo: true
+assert len_strings_nested([["desserts", "raw", "live"],
+                            ["smart", "knits"]]) == [[8, 3, 4], [5, 5]]
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def len_strings_nested(strings):
+  for i in range(len(strings)):
+    for j in range(len(strings[i])):
+      strings[i][j] = len(strings[i][j])
+  return strings
+
+def main():
+  original_list = [["desserts", "raw", "live"],
+                               ["smart", "knits"]]
+  assert len_strings_nested(original_list) == [[8, 3, 4], [5, 5]]
+  print(original_list)
+  
+main()
+```
+
+## Write a function
+
+1. Function name is `reverse_strings_nested`
+1. It takes a 2D list of strings as argument
+1. It mutates the sublist items by reversing each string (you can use `string[::-1]` to reverse it)
+1. It returns the argument list
+
+Test cases:
+
+```{python}
+#| eval: false
+#| echo: true
+assert reverse_strings_nested([["desserts", "raw", "live"],
+                               ["smart", "knits"]]) == [["stressed", "war", "evil"],
+                                                        ["trams", "stink"]]
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def reverse_strings_nested(strings):
+  for i in range(len(strings)):
+    for j in range(len(strings[i])):
+      strings[i][j] = strings[i][j][::-1]
+  return strings
+
+def main():
+  original_strings = [["desserts", "raw", "live"],
+                      ["smart", "knits"]]
+  reverse_strings_nested(original_strings)   
+  assert  original_strings == [["stressed", "war", "evil"],
+                               ["trams", "stink"]]
+  
+  print(original_strings)
+  print("Passed test")
+  
+main()
+```
+
+## Extra Activity -- Loop Table
+
+```{python}
+#| eval: false
+#| echo: true
+def nested_max(lists):
+  max = None
+  for i in range(len(lists)):
+    for j in range(len(lists[i])):
+      if max == None or lists[i][j] > max:
+        max = lists[i][j]
+  return max
+
+max_nested([[], [], [2, 1], [0, 5, 2], [3]])
+```
+
+Draw a loop table with:
+
+* value of `max` before loop, and in each iteration of the nested loops
+* values of `i`, `j`, and `lists[i][j]` for each nested loop iteration
+

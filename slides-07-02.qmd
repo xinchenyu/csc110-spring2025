@@ -1,0 +1,200 @@
+---
+title: "for loops with range (class slides)"
+format: revealjs
+slide-number: true
+df-print: kable
+---
+
+# CSc 110 - for loops with range
+
+## Announcements
+
+* Problems 13 and 14 deadline pushed to tomorrow due to campus internet outage
+* Project 3 pushed to next Wednesday 7pm
+* Midterm 2 on October 25 (Wednesday), in this room (BRING PHOTO ID)
+* Review session on October 24 (Tuesday)
+* Last day to withdraw is October 29 (<https://registrar.arizona.edu/dates-and-deadlines>) -- you will have ~70% of your grade in by then
+
+## Quiz 07
+
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+</center>
+
+You have 10 minutes to complete the quiz
+
+* No need for comments, no need for a `main()`, no need for test cases
+
+* USE A `WHILE` LOOP -- you will be awarded a ZERO if you solve the quiz with another type of loop
+
+Allowed built-in functions: `round()`, `input()`, `float()`, `str()`, `int()`, `len()` 
+
+## `while` vs. `for` loops
+
+In addition to `while`, we can use `for` to create loops
+
+```{python}
+#| eval: true
+#| echo: true
+values = [70, 20, 30]
+index = 0
+while index < len(values):
+  print(values[index])
+  index += 1
+```
+
+```{python}
+#| eval: true
+#| echo: true
+values = [70, 20, 30]
+for index in range(len(values)):
+  print(values[index])
+```
+
+## Write a function
+
+1.  Its name is `make_all_even`
+2.  It takes one argument, a list of `integers`
+3.  It iterates over the list, changing odd numbers to even number (even up)
+4.  Use a `for` loop
+
+```{python}
+#| eval: false
+#| echo: true 
+test_integers = [1, 2, 3, 4]
+assert make_all_even(test_integers) == [2, 2, 4, 4]
+```
+
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def make_all_even(integers):
+  # for each index in list
+  for index in range(len(integers)):
+    integers[index] += integers[index] % 2 # add zero if even, one if odd
+  return integers
+      
+def main():
+  test_integers = [1, 2, 3, 4]
+  assert make_all_even(test_integers) == [2, 2, 4, 4]
+  print(test_integers) # we print the list we created before function call
+  
+main()
+```
+
+## Write a function
+
+1.  Its name is `indices_of_vowels`
+2.  It takes a single `string` as its parameter.
+3.  It returns a list of integers that represent the indices of the vowels in the original list
+4.  Use a `for` loop
+
+Test cases:
+
+```{python}
+#| echo: true
+#| eval: false
+assert indices_of_vowels("hello") == [1, 4]
+assert indices_of_vowels("") == []
+assert indices_of_vowels("aeiou") == [0, 1, 2, 3, 4]
+```
+
+## Write a function -- solution
+
+```{python}
+#| echo: true
+#| eval: true
+def indices_of_vowels(string):
+  result = [] # initialize empty list to hold indices
+  # for every index in list
+  for index in range(len(string)):
+    if string[index] in "aeiou": # check if character is vowel
+      result.append(index) # append index to result
+  return result
+
+def main():
+  assert indices_of_vowels("hello") == [1, 4]
+  assert indices_of_vowels("") == []
+  assert indices_of_vowels("aeiou") == [0, 1, 2, 3, 4]
+
+main()
+```
+
+
+## More on how to use `range()`
+
+Syntax: `range(start, stop, step)`
+
+-   `start` Optional. An integer number specifying at which position to start. Default is 0
+-   `stop` Required. An integer number specifying at which position to stop (not included).
+-   `step` Optional. An integer number specifying the incrementation. Default is 1
+
+## More on how to use `range()`
+
+```{python}
+#| eval: true
+#| echo: true
+for n in range(5):
+  print(n)
+```
+
+```{python}
+#| eval: true
+#| echo: true
+for n in range(0, 5, 1):
+  print(n)
+```
+
+```{python}
+#| eval: true
+#| echo: true
+for n in range(0, 5, 2):
+  print(n)
+```
+
+## Write a function
+
+1.  Its name is `every_two_together`
+2.  It takes one argument, a list of `characters`
+3.  It creates a new string with items at even indices in `characters` concatenated together
+4.  It returns the string created
+5.  Use a `for` loop
+
+Test cases:
+
+```{python}
+#| eval: false
+#| echo: true
+characters = ["a", "e", "p", "o", "p", "w", "l", "i", "e", "f"]
+assert every_two_together(characters) == "apple"
+```
+
+## Write a function -- solution
+
+What other test cases should we run?
+
+```{python}
+#| eval: true
+#| echo: true
+def every_two_together(chars):
+  new_string = ""
+  for i in range(0, len(chars), 2):
+    new_string += chars[i]
+  return new_string
+
+def main():
+  characters = ["a", "e", "p", "o", "p", "w", "l", "i", "e", "f"]
+  assert every_two_together(characters) == "apple"
+  
+main()
+```
+
+# Submit code for attendance
+
+Submit your `every_two_together` functions to Gradescope for attendance.
+
+Name your file `even_indices_string.py`

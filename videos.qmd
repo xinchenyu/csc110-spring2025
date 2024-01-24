@@ -1,0 +1,23 @@
+---
+title: "Video Lessons"
+---
+
+Module 3:
+
+* [Hypotenuse](https://youtu.be/d4yOssIBqjc)
+
+Module 4:
+
+* [Odd function](https://youtu.be/PjjE7ZItRqc)
+* [String method .isnumeric()](https://youtu.be/zbBkM-xIECk)
+* [Fizz Buzz problem (if conditionals)](https://youtu.be/doQvqvPqqyU)
+
+Module 5:
+
+* [String manipulation](https://youtu.be/OJbmpxgC_aQ)
+* [Introduction to while loops](https://youtu.be/XZghU6ekpMw)
+
+Module 6:
+
+* [Review while loops and strings](https://youtu.be/T1DHyPYt8nc)
+* [While loops and lists](https://youtu.be/yUAWrvXDh0E)

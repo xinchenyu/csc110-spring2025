@@ -1,0 +1,26 @@
+---
+title: "What are Short Projects?"
+---
+
+Short programming projects are due on the same day as programming problems. While the instructions for programming problems are on the website, instructions for short projects will be available only during our weekly 50-minute in-person lab sessions. 
+
+The lowest grade for short programming projects will be dropped at the end of the semester. There will be one lab session (the week of March 25) for you to work on a maximum of two short programming project submissions you have missed.
+
+To schedule your lab session go to [the weekly lab session spreadsheet](https://docs.google.com/spreadsheets/d/1mS3H-8GyLHb__rZaf9j66khmkncQgeqEXfyVk2l0sNo/edit?usp=sharing).
+
+# Lab Schedule
+
+This is for information only. You need to [sign up for a specific lab session](https://docs.google.com/spreadsheets/d/1mS3H-8GyLHb__rZaf9j66khmkncQgeqEXfyVk2l0sNo/edit?usp=sharing) to be able to attend it.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(readxl)
+library(knitr)
+lab_schedule <- read_excel("lab_sessions.xlsx")
+lab_schedule %>% 
+  kable()
+```
+

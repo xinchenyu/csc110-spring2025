@@ -1,0 +1,91 @@
+---
+title: "Module 4 Assignments"
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(readxl)
+assignments <- read_excel("assessment_schedule.xlsx") %>% 
+  mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
+```
+
+
+# Short Project 03
+
+**Due date: `r assignments %>% filter(assessment == "Module 4 Programming Problems") %>% pull(formatted_date)` at 9pm**
+
+Short Programming projects are submitted during our weekly 45-minute in-person lab sessions. Each lab sessions is guided by two TAs. The instructions for the short project will be available only during the lab sessions. To schedule your lab session go to [the weekly lab session spreadsheet](https://docs.google.com/spreadsheets/d/1mS3H-8GyLHb__rZaf9j66khmkncQgeqEXfyVk2l0sNo/edit?usp=sharing).
+
+# Programming Problems 
+
+Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/691034).
+
+## Programming Problem 7
+
+**Due date: `r assignments %>% filter(assessment == "Module 4 Programming Problems") %>% pull(formatted_date)` at 9pm**
+
+Write a program to check whether a person is eligible for voting or not.
+
+Your program should validate the input from the user (although you don't have to ask for the input, in other words, no need to call input()). So you should write two functions: `validate_age` and `check_eligibility`.
+
+One of the functions does the following:
+
+1.  Its name is `validate_age`
+2.  It takes a `string` argument, called `age`
+3.  It checks if `age` is valid by checking that: it contains only 0 to 9 digits (in other words, it determines if `age` can be transformed to an integer), and that the integer is between 0 and 110 (inclusive).
+4.  It returns `True` if `age` is a valid integer, and `False` otherwise
+
+The second function does the following:
+
+1.  Its name is `check_eligibility`
+2.  It takes an integer argument, called `age`
+3.  If the age is greater or equal to 18, return `True`, otherwise return `False`
+
+Name the program `eligible.py`. Make sure that gradescope gives you the points for passing the test cases.
+
+Development test cases:
+
+```{r}
+#| echo: true
+#| eval: false
+print( validate_age("20") ) # True
+print( validate_age("20.5") ) # False
+print( validate_age("20a") ) # False
+print( validate_age("300") ) # False
+print( check_eligibility(20) ) # True
+print( check_eligibility(15) ) # False
+```
+
+You can also download the [ready-to-run script](test_scripts/test_eligible.py) to test your solution.
+
+## Programming Problem 8
+
+**Due date: `r assignments %>% filter(assessment == "Module 4 Programming Problems") %>% pull(formatted_date)` at 9pm**
+
+Write a function that does the following:
+
+1.  Its name is `max3`.
+2.  It has 3 parameters, `x`, `y` and `z`.
+3.  It returns the greatest value of the three.
+4.  Do not use any built-in functions like max.
+
+Name the program `max_of_three.py`. Make sure that gradescope gives you the points for passing the test cases.
+
+Development test cases:
+
+```{r}
+#| echo: true
+#| eval: false
+print( max3(1, 1, 1) ) # 1
+print( max3(1, 2, 1) ) # 2
+print( max3(-1, -1, 0) ) # 0
+print( max3(100, 0, 0) ) # 100
+print( max3(19, 19, 0) ) # 19
+print( max3(2, 0, 2) ) # 2
+print( max3(-100, 0, 0) ) # 0
+```
+
+You can also download the [ready-to-run script](test_scripts/test_max_of_three.py) to test your solution.
