@@ -3497,7 +3497,7 @@
     "href": "slides-03-02.html#write-a-function-3",
     "title": "Built-in Python Functions (class slides)",
     "section": "Write a function",
-    "text": "Write a function\nWrite a Python function that does the following:\n\nIts name is calculate_year_born, with no parameters\nIt prompts user to enter their age input()\nIt converts user’s age to integer (since input() always returns a string)\nIt calculates (imperfectly) the year a person of age was born by subtracting age from 2023\nIt returns an integer representing the approximate year person of age was born\n\n\nprint( calculate_year_born() ) # user enters 42, function returns 1981"
+    "text": "Write a function\nWrite a Python function that does the following:\n\nIts name is calculate_year_born, with no parameters\nIt prompts user to enter their age input()\nIt converts user’s age to integer (since input() always returns a string)\nIt calculates (imperfectly) the year a person of age was born by subtracting age from 2024\nIt returns an integer representing the approximate year person of age was born\n\n\nprint( calculate_year_born() ) # user enters 60, function returns 1964"
   },
   {
     "objectID": "slides-03-02.html#organizing-your-code",
@@ -4169,7 +4169,7 @@
     "href": "slides-04-01.html#write-a-function-solution",
     "title": "More expressions (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef odd(n):\n  return n % 2 == 1\n\ndef main():\n  print( odd(10) ) # False\n  print( odd(5) ) # True\n  print( odd(0) ) # False\n  \nmain()\n\nFalse\nTrue\nFalse\n\n\nSave your .py file as odd.py and submit it to Gradescope for attendance."
+    "text": "Write a function – solution\n\ndef odd(n):\n  return n % 2 == 1\n\ndef main():\n  print( odd(10) ) # False\n  print( odd(5) ) # True\n  print( odd(0) ) # False\n  \nmain()\n\nFalse\nTrue\nFalse"
   },
   {
     "objectID": "slides-04-01.html#comparisons-2",
@@ -5178,5 +5178,12 @@
     "title": "Module 1 Assignments",
     "section": "",
     "text": "Programming Problems should be submitted to gradescope.\nIf you need instructions on how to submit your .py files to gradescope, watch the video at the end of this page.\n\nSurvey\nDue date: Friday, January 12, 2024 at 9pm\nhttps://uarizona.co1.qualtrics.com/jfe/form/SV_0q8KC0FwVhCiYD4\nThis is a survey to collect information on your expectations for CSc 110 Computer Programming I. The completion of this survey is required and will be used for grading purposes.\n\n\nProgramming Problem 1\nDue date: Thursday, January 18, 2024 at 9pm\nWrite a python program that prints out the string “Hello World!”. Be careful with capitalization and punctuation. Remember to write code inside a function called main().\nThe exact output of the program should be:\nHello World!\n\nName the program hello.py. Make sure that gradescope gives you the points for passing the test case.\n\n\nProgramming Problem 2\nDue date: Thursday, January 18, 2024 at 9pm\nWrite a python program that prints out the following excerpt from Amanda Gorman’s poem, “The Hill We Climb”:\nWhen day comes, we ask ourselves, where can we find light in this never-ending shade?\n\nThe loss we carry. A sea we must wade.\nWe braved the belly of the beast.\n\nWe've learned that quiet isn't always peace, \nand the norms and notions of what \"just\" is isn't always justice.\n\nAnd yet the dawn is ours before we knew it.\n\nSomehow we do it.\n\nName the program poem.py. Remember to write code inside a function called main(). Make sure that gradescope gives you the points for passing the test case. You can submit your solution to gradescope as many times as you want before the deadline.\nHINT: print() has a parameter called end which is set as end=\"\\n\" by default – change that to end=\"\" to remove the last newline character.\nMake sure you do the reading for this module, especially the section on Escape Sequences\n\n\nHow to submit to gradescope video"
+  },
+  {
+    "objectID": "slides-03-02.html#attendence",
+    "href": "slides-03-02.html#attendence",
+    "title": "Built-in Python Functions (class slides)",
+    "section": "Attendence",
+    "text": "Attendence\nSubmit your calculate_year_born solution as attendance on Gradescope.\nName your file get_input.py"
   }
 ]

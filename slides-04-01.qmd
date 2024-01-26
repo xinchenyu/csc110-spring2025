@@ -106,7 +106,6 @@ def main():
 main()
 ```
 
-Save your .py file as `odd.py` and submit it to Gradescope for attendance.
 
 ## Comparisons
 
@@ -317,13 +316,3 @@ not 0
 not 1
 ```
 
-## Quiz 04
-
-You have 10 minutes to complete the quiz
-
-* No need for comments
-* No need for a `main()`
-* No need to print test cases
-* Just write your function and what's inside the function
-
-Built-in functions you can use: `round()`, `input()`, `float()`, `str()`, `int()` — you don’t have to use these at all
