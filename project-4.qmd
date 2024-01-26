@@ -52,16 +52,9 @@ plus a percentage of your monthly salary (annual salary / 12).
 Write a program to calculate how many months it will take you to save up enough money for a down
 payment.
 
-
-Your program should ask the user to enter the following variables:
-1. The starting annual salary (annual_salary)
-2. The portion of salary to be saved (portion_saved)
-3. The cost of your dream home (total_cost)
-
-
 ### Test cases -- Part 1
 
-Try different inputs and see how long it takes to save for a down payment. Please make your
+Try different arguments and see how long it takes to save for a down payment. Please make your
 program print results in the format shown in the test cases below.
 
 #### Test Case 1
@@ -103,24 +96,24 @@ solution to Part 1 by factoring in a raise every six months.
 
 In `house_hunting_2.py`, copy your solution to Part 1 (as we are going to reuse much of that machinery).  Modify your program to include the following:
 
-1. Have the user input a semi-annual salary raise semi_annual_raise (as a decimal percentage)
+1. Use a variable for a semi-annual salary raise semi_annual_raise (as a decimal percentage)
 2. After the 6th month, increase your salary by that percentage.  Do the same after the 12th
 month, the 18  month, and so on. 
 
 Write a program to calculate how many months it will take you save up enough money for a down
 payment.  Like before, assume that your investments earn a return of r = 0.04 (or 4%) and the
-required down payment percentage is 0.25 (or 25%).  Have the user enter the following variables:
+required down payment percentage is 0.25 (or 25%). 
 
-Be careful about when you increase your salary – this should only happen after the 6th, 12th, 18th
-month, and so on. 
+Be careful about when you increase your salary – this should only happen after the 6th, 12th, 18th month, and so on. 
 
 
 ### Test cases -- Part 2
 
-Try different inputs and see how long it takes to save for a down payment. Please make your
+Try different arguments and see how long it takes to save for a down payment. Please make your
 program print results in the format shown in the test cases below.
 
 #### Test Case 1
+
 ```{python}
 #| eval: false
 #| echo: true

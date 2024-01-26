@@ -93,6 +93,7 @@ assert calculate_tax(10000) == 1000
 assert calculate_tax(20000) == 4000
 ```
 
+
 After calculating all of these values programmatically, you should generate the output table.
 
 There is also a tax limit of `$75,000`. The tax should be capped at this value, and if the limit is reached, a message indicating this should be printed out after the chart. The message should say:
@@ -124,13 +125,13 @@ See the financial breakdown below, based on a salary of $40000
 |         extra | $  -7,400.00 | -18.5% |
 ------------------------------------------------------------------------------------------------------
 >>> WARNING: DEFICIT <<<
-
 </pre>
 
 
 # Formatting a Number
 
-Notice that the numbers are formatted in a particular way in the output table. You must match this formatting exactly. In order to do so, you can use the format() function. This function was mentioned in chapter two of the textbook. I will provide one example of how you can use this function to match the formatting in the spec.
+Notice that the numbers are formatted in a particular way in the output table. You must match this formatting exactly. In order to do so, you can use the format() function. This function was mentioned in the [Constants, variables, and comments
+ reading](https://adrianapicoral.com/csc-110/basics.html#the-format-method). Here's an example of how you can use this function to match the formatting in the spec.
 
 Say we have a floating point number, like below:
 
@@ -146,3 +147,40 @@ Perhaps this is a result you get for one of the dollar values after doing the ne
 
 * Set to stop at two decimal points
 * Add necessary spacing before the number, so that the table lines up
+
+## Examples for string method `.format()`
+
+Using the comma as a thousands separator:
+
+```{python}
+#| eval: true
+#| echo: true
+'{:,}'.format(1234567890)
+```
+
+Establishing numbers of digits to hold space for:
+
+```{python}
+#| eval: true
+#| echo: true
+'{:15,}'.format(10000)
+```
+
+Expressing floats with four decimals (the `4` is number of digits after the decimal point, the `f` means it's formatting a float):
+
+```{python}
+#| eval: true
+#| echo: true
+'{:.4f}'.format(4.2353635234)
+```
+
+
+Expressing a percentage with two decimals:
+
+```{python}
+#| eval: true
+#| echo: true
+points = 19
+total = 22
+'Correct answers: {:.2%}'.format(points/total)
+```
