@@ -90,6 +90,12 @@ print( odd(5) ) # True
 print( odd(0) ) # False
 ```
 
+## Attendence
+
+Submit your odd function as attendance on Gradescope.
+
+Name your file `odd.py`
+
 ## Write a function -- solution
 
 ```{python}
