@@ -540,7 +540,7 @@ Not greater than zero</code></pre>
 <span id="cb8-14"><a href="#cb8-14"></a>  <span class="cf">if</span> age <span class="op">&gt;=</span> <span class="dv">21</span>:</span>
 <span id="cb8-15"><a href="#cb8-15"></a>      message <span class="op">+=</span> <span class="st">' You may drink.'</span></span>
 <span id="cb8-16"><a href="#cb8-16"></a>     </span>
-<span id="cb8-17"><a href="#cb8-17"></a>  <span class="cf">if</span> age <span class="op">&gt;</span> <span class="dv">35</span>:</span>
+<span id="cb8-17"><a href="#cb8-17"></a>  <span class="cf">if</span> age <span class="op">&gt;=</span> <span class="dv">35</span>:</span>
 <span id="cb8-18"><a href="#cb8-18"></a>      message <span class="op">+=</span> <span class="st">' You may run for president.'</span></span>
 <span id="cb8-19"><a href="#cb8-19"></a>      </span>
 <span id="cb8-20"><a href="#cb8-20"></a>  <span class="cf">return</span> message</span>
@@ -572,27 +572,20 @@ You may apply to join the military. You may drink.
 <h2>Validating numbers</h2>
 <ul>
 <li>The <code>input()</code> function always returns a <code>string</code></li>
-<li>We can use the string built-in method <code>.isnumeric()</code> to determine if a string represents a number</li>
-<li>The idea is to ensure the input string only contains digits</li>
+<li>We can use the string built-in method <code>.isnumeric()</code> to determine if a string represents an integer</li>
+<li><code>.isnumeric()</code> returns True if all the characters are numeric (0-9)</li>
 </ul>
 <p>Try these out:</p>
 <div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>name <span class="op">=</span> <span class="st">"Jimmy"</span></span>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>name <span class="op">=</span> <span class="st">"Jimmy42"</span></span>
 <span id="cb10-2"><a href="#cb10-2"></a>name.isnumeric()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
+<div class="cell-output cell-output-display" data-execution_count="14">
 <pre><code>False</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a>name <span class="op">=</span> <span class="st">"42"</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a>name.isnumeric()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<pre><code>True</code></pre>
-</div>
-</div>
-<div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a>age <span class="op">=</span> <span class="dv">37</span></span>
-<span id="cb14-2"><a href="#cb14-2"></a>age.isnumeric() <span class="co"># this throws an error</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a>age <span class="op">=</span> <span class="dv">37</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>age.isnumeric() <span class="co"># this throws an error</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-validation-function" class="slide level2">
@@ -607,43 +600,43 @@ You may apply to join the military. You may drink.
 </section>
 <section id="age-milestones-1" class="slide level2">
 <h2>Age milestones</h2>
-<div class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw">def</span> age_milestones(age):</span>
-<span id="cb15-2"><a href="#cb15-2"></a>  <span class="co">'''</span></span>
-<span id="cb15-3"><a href="#cb15-3"></a><span class="co">  This function prints an informative message based on,</span></span>
-<span id="cb15-4"><a href="#cb15-4"></a><span class="co">  a person's age.</span></span>
-<span id="cb15-5"><a href="#cb15-5"></a><span class="co">  Args:</span></span>
-<span id="cb15-6"><a href="#cb15-6"></a><span class="co">    age: integer representing a person's age</span></span>
-<span id="cb15-7"><a href="#cb15-7"></a><span class="co">  Returns:</span></span>
-<span id="cb15-8"><a href="#cb15-8"></a><span class="co">    A string with a message to the user</span></span>
-<span id="cb15-9"><a href="#cb15-9"></a><span class="co">  '''</span></span>
-<span id="cb15-10"><a href="#cb15-10"></a>  message <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb15-11"><a href="#cb15-11"></a>  <span class="cf">if</span> age <span class="op">&gt;=</span> <span class="dv">18</span>:</span>
-<span id="cb15-12"><a href="#cb15-12"></a>      message <span class="op">+=</span> <span class="st">'You may apply to join the military'</span></span>
-<span id="cb15-13"><a href="#cb15-13"></a>     </span>
-<span id="cb15-14"><a href="#cb15-14"></a>  <span class="cf">if</span> age <span class="op">&gt;=</span> <span class="dv">21</span>:</span>
-<span id="cb15-15"><a href="#cb15-15"></a>      message <span class="op">+=</span> <span class="st">'You may drink'</span></span>
-<span id="cb15-16"><a href="#cb15-16"></a>     </span>
-<span id="cb15-17"><a href="#cb15-17"></a>  <span class="cf">if</span> age <span class="op">&gt;</span> <span class="dv">35</span>:</span>
-<span id="cb15-18"><a href="#cb15-18"></a>      message <span class="op">+=</span> <span class="st">'You may run for president'</span></span>
-<span id="cb15-19"><a href="#cb15-19"></a>      </span>
-<span id="cb15-20"><a href="#cb15-20"></a>  <span class="cf">return</span> message</span>
-<span id="cb15-21"><a href="#cb15-21"></a></span>
-<span id="cb15-22"><a href="#cb15-22"></a><span class="kw">def</span> validate_age(age):</span>
-<span id="cb15-23"><a href="#cb15-23"></a>  <span class="cf">return</span> age.isnumeric()</span>
-<span id="cb15-24"><a href="#cb15-24"></a>     </span>
-<span id="cb15-25"><a href="#cb15-25"></a><span class="kw">def</span> main():</span>
-<span id="cb15-26"><a href="#cb15-26"></a>  <span class="co">'''</span></span>
-<span id="cb15-27"><a href="#cb15-27"></a><span class="co">  This functions takes input from the user and calls the</span></span>
-<span id="cb15-28"><a href="#cb15-28"></a><span class="co">  check_age() functiont to print a message</span></span>
-<span id="cb15-29"><a href="#cb15-29"></a><span class="co">  '''</span></span>
-<span id="cb15-30"><a href="#cb15-30"></a>  age <span class="op">=</span> <span class="bu">input</span>(<span class="st">'How old are you?</span><span class="ch">\n</span><span class="st">'</span>)</span>
-<span id="cb15-31"><a href="#cb15-31"></a>  <span class="cf">if</span> validate_age(age):</span>
-<span id="cb15-32"><a href="#cb15-32"></a>    <span class="bu">print</span>(age_milestones(age))</span>
-<span id="cb15-33"><a href="#cb15-33"></a>  <span class="cf">else</span>:</span>
-<span id="cb15-34"><a href="#cb15-34"></a>    <span class="bu">print</span>(<span class="st">"Invalid age entered"</span>)</span>
-<span id="cb15-35"><a href="#cb15-35"></a> </span>
-<span id="cb15-36"><a href="#cb15-36"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">def</span> age_milestones(age):</span>
+<span id="cb13-2"><a href="#cb13-2"></a>  <span class="co">'''</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="co">  This function prints an informative message based on,</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a><span class="co">  a person's age.</span></span>
+<span id="cb13-5"><a href="#cb13-5"></a><span class="co">  Args:</span></span>
+<span id="cb13-6"><a href="#cb13-6"></a><span class="co">    age: integer representing a person's age</span></span>
+<span id="cb13-7"><a href="#cb13-7"></a><span class="co">  Returns:</span></span>
+<span id="cb13-8"><a href="#cb13-8"></a><span class="co">    A string with a message to the user</span></span>
+<span id="cb13-9"><a href="#cb13-9"></a><span class="co">  '''</span></span>
+<span id="cb13-10"><a href="#cb13-10"></a>  message <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb13-11"><a href="#cb13-11"></a>  <span class="cf">if</span> age <span class="op">&gt;=</span> <span class="dv">18</span>:</span>
+<span id="cb13-12"><a href="#cb13-12"></a>      message <span class="op">+=</span> <span class="st">'You may apply to join the military'</span></span>
+<span id="cb13-13"><a href="#cb13-13"></a>     </span>
+<span id="cb13-14"><a href="#cb13-14"></a>  <span class="cf">if</span> age <span class="op">&gt;=</span> <span class="dv">21</span>:</span>
+<span id="cb13-15"><a href="#cb13-15"></a>      message <span class="op">+=</span> <span class="st">'You may drink'</span></span>
+<span id="cb13-16"><a href="#cb13-16"></a>     </span>
+<span id="cb13-17"><a href="#cb13-17"></a>  <span class="cf">if</span> age <span class="op">&gt;=</span> <span class="dv">35</span>:</span>
+<span id="cb13-18"><a href="#cb13-18"></a>      message <span class="op">+=</span> <span class="st">'You may run for president'</span></span>
+<span id="cb13-19"><a href="#cb13-19"></a>      </span>
+<span id="cb13-20"><a href="#cb13-20"></a>  <span class="cf">return</span> message</span>
+<span id="cb13-21"><a href="#cb13-21"></a></span>
+<span id="cb13-22"><a href="#cb13-22"></a><span class="kw">def</span> validate_age(age):</span>
+<span id="cb13-23"><a href="#cb13-23"></a>  <span class="cf">return</span> age.isnumeric()</span>
+<span id="cb13-24"><a href="#cb13-24"></a>     </span>
+<span id="cb13-25"><a href="#cb13-25"></a><span class="kw">def</span> main():</span>
+<span id="cb13-26"><a href="#cb13-26"></a>  <span class="co">'''</span></span>
+<span id="cb13-27"><a href="#cb13-27"></a><span class="co">  This functions takes input from the user and calls the</span></span>
+<span id="cb13-28"><a href="#cb13-28"></a><span class="co">  check_age() functiont to print a message</span></span>
+<span id="cb13-29"><a href="#cb13-29"></a><span class="co">  '''</span></span>
+<span id="cb13-30"><a href="#cb13-30"></a>  age <span class="op">=</span> <span class="bu">input</span>(<span class="st">'How old are you?</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb13-31"><a href="#cb13-31"></a>  <span class="cf">if</span> validate_age(age):</span>
+<span id="cb13-32"><a href="#cb13-32"></a>    <span class="bu">print</span>(age_milestones(<span class="bu">int</span>(age)))</span>
+<span id="cb13-33"><a href="#cb13-33"></a>  <span class="cf">else</span>:</span>
+<span id="cb13-34"><a href="#cb13-34"></a>    <span class="bu">print</span>(<span class="st">"Invalid age entered"</span>)</span>
+<span id="cb13-35"><a href="#cb13-35"></a> </span>
+<span id="cb13-36"><a href="#cb13-36"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="quiz-02" class="slide level2">

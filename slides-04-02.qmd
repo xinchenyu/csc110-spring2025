@@ -153,7 +153,7 @@ def age_milestones(age):
   if age >= 21:
       message += ' You may drink.'
      
-  if age > 35:
+  if age >= 35:
       message += ' You may run for president.'
       
   return message
@@ -177,24 +177,18 @@ Check the [documentation](https://docs.python.org/3/library/stdtypes.html#str.is
 ## Validating numbers
 
 -   The `input()` function always returns a `string`
--   We can use the string built-in method `.isnumeric()` to determine if a string represents a number
--   The idea is to ensure the input string only contains digits
+-   We can use the string built-in method `.isnumeric()` to determine if a string represents an integer
+-   `.isnumeric()` returns True if all the characters are numeric (0-9)
 
 Try these out:
 
 ```{python}
 #| eval: true
 #| echo: true
-name = "Jimmy"
+name = "Jimmy42"
 name.isnumeric()
 ```
 
-```{python}
-#| eval: true
-#| echo: true
-name = "42"
-name.isnumeric()
-```
 
 ```{python}
 #| eval: false
@@ -234,7 +228,7 @@ def age_milestones(age):
   if age >= 21:
       message += 'You may drink'
      
-  if age > 35:
+  if age >= 35:
       message += 'You may run for president'
       
   return message
@@ -249,7 +243,7 @@ def main():
   '''
   age = input('How old are you?\n')
   if validate_age(age):
-    print(age_milestones(age))
+    print(age_milestones(int(age)))
   else:
     print("Invalid age entered")
  

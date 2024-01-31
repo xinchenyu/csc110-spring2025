@@ -3973,7 +3973,7 @@
     "href": "slides-04-02.html#age-milestones",
     "title": "If statements (class slides)",
     "section": "Age milestones",
-    "text": "Age milestones\n\ndef age_milestones(age):\n  '''\n  This function prints an informative message based on,\n  a person's age.\n  Args:\n    age: integer representing a person's age\n  Returns:\n    A string with a message to the user\n  '''\n  message = \"\"\n  if age &gt;= 18:\n      message += 'You may apply to join the military.'\n     \n  if age &gt;= 21:\n      message += ' You may drink.'\n     \n  if age &gt; 35:\n      message += ' You may run for president.'\n      \n  return message\n     \ndef main():\n  print( age_milestones(18) ) # You may apply to join the military.\n  print( age_milestones(30) ) # You may apply to join the military. You may drink.\n  print( age_milestones(0) ) # \n \nmain()\n\nYou may apply to join the military.\nYou may apply to join the military. You may drink."
+    "text": "Age milestones\n\ndef age_milestones(age):\n  '''\n  This function prints an informative message based on,\n  a person's age.\n  Args:\n    age: integer representing a person's age\n  Returns:\n    A string with a message to the user\n  '''\n  message = \"\"\n  if age &gt;= 18:\n      message += 'You may apply to join the military.'\n     \n  if age &gt;= 21:\n      message += ' You may drink.'\n     \n  if age &gt;= 35:\n      message += ' You may run for president.'\n      \n  return message\n     \ndef main():\n  print( age_milestones(18) ) # You may apply to join the military.\n  print( age_milestones(30) ) # You may apply to join the military. You may drink.\n  print( age_milestones(0) ) # \n \nmain()\n\nYou may apply to join the military.\nYou may apply to join the military. You may drink."
   },
   {
     "objectID": "slides-04-02.html#string-methods",
@@ -3987,7 +3987,7 @@
     "href": "slides-04-02.html#validating-numbers",
     "title": "If statements (class slides)",
     "section": "Validating numbers",
-    "text": "Validating numbers\n\nThe input() function always returns a string\nWe can use the string built-in method .isnumeric() to determine if a string represents a number\nThe idea is to ensure the input string only contains digits\n\nTry these out:\n\nname = \"Jimmy\"\nname.isnumeric()\n\nFalse\n\n\n\nname = \"42\"\nname.isnumeric()\n\nTrue\n\n\n\nage = 37\nage.isnumeric() # this throws an error"
+    "text": "Validating numbers\n\nThe input() function always returns a string\nWe can use the string built-in method .isnumeric() to determine if a string represents an integer\n.isnumeric() returns True if all the characters are numeric (0-9)\n\nTry these out:\n\nname = \"Jimmy42\"\nname.isnumeric()\n\nFalse\n\n\n\nage = 37\nage.isnumeric() # this throws an error"
   },
   {
     "objectID": "slides-04-02.html#write-a-validation-function",
@@ -4001,7 +4001,7 @@
     "href": "slides-04-02.html#age-milestones-1",
     "title": "If statements (class slides)",
     "section": "Age milestones",
-    "text": "Age milestones\n\ndef age_milestones(age):\n  '''\n  This function prints an informative message based on,\n  a person's age.\n  Args:\n    age: integer representing a person's age\n  Returns:\n    A string with a message to the user\n  '''\n  message = \"\"\n  if age &gt;= 18:\n      message += 'You may apply to join the military'\n     \n  if age &gt;= 21:\n      message += 'You may drink'\n     \n  if age &gt; 35:\n      message += 'You may run for president'\n      \n  return message\n\ndef validate_age(age):\n  return age.isnumeric()\n     \ndef main():\n  '''\n  This functions takes input from the user and calls the\n  check_age() functiont to print a message\n  '''\n  age = input('How old are you?\\n')\n  if validate_age(age):\n    print(age_milestones(age))\n  else:\n    print(\"Invalid age entered\")\n \nmain()"
+    "text": "Age milestones\n\ndef age_milestones(age):\n  '''\n  This function prints an informative message based on,\n  a person's age.\n  Args:\n    age: integer representing a person's age\n  Returns:\n    A string with a message to the user\n  '''\n  message = \"\"\n  if age &gt;= 18:\n      message += 'You may apply to join the military'\n     \n  if age &gt;= 21:\n      message += 'You may drink'\n     \n  if age &gt;= 35:\n      message += 'You may run for president'\n      \n  return message\n\ndef validate_age(age):\n  return age.isnumeric()\n     \ndef main():\n  '''\n  This functions takes input from the user and calls the\n  check_age() functiont to print a message\n  '''\n  age = input('How old are you?\\n')\n  if validate_age(age):\n    print(age_milestones(int(age)))\n  else:\n    print(\"Invalid age entered\")\n \nmain()"
   },
   {
     "objectID": "slides-04-02.html#quiz-02",
