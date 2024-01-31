@@ -6,6 +6,10 @@ slide-number: true
 
 # CSc 110 if elif else statements
 
+## Announcements
+
+* Office hours are now in GS 856 (same floor, the other side of the building)
+
 ## if elif else
 
 While the if condition is required, the elif and else statements are not

@@ -10,7 +10,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
-  <title>CSc 110 Computer Programming I - string manipulation (class slides)</title>
+  <title>CSc 110 Computer Programming I - while loop intro (class slides)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -389,198 +389,124 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">string manipulation (class slides)</h1>
+  <h1 class="title">while loop intro (class slides)</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
 <section>
-<section id="csc-110---string-manipulation" class="title-slide slide level1 center">
-<h1>CSc 110 - String Manipulation</h1>
+<section id="csc-110---intro-to-while-loops-adriana-picoral" class="title-slide slide level1 center">
+<h1>CSc 110 - Intro to While Loops <br> Adriana Picoral</h1>
 
 </section>
-<section id="announcements" class="slide level2">
-<h2>Announcements</h2>
+<section id="while-loops" class="slide level2">
+<h2>While loops</h2>
 <ul>
-<li>Midterm grades will be published Monday morning</li>
-<li>Project 2 due Wednesday (September 27)</li>
-<li>Quiz 05 is about Module 4</li>
-</ul>
-
-<img data-src="images/midterm1bonus.gif" class="r-stretch quarto-figure-center"><p class="caption">Midterm 1 Bonus Question</p></section>
-<section id="string-indexing" class="slide level2">
-<h2>String indexing</h2>
-<ul>
-<li>Strings are sequences in Python</li>
-<li>We can retrieve values in a sequence using <code>[ ]</code></li>
+<li>A <strong>while</strong> loop allows a programmer to repeat code</li>
+<li>You can think of it as an if-statement with the potential to repeat</li>
 </ul>
 <div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>name <span class="op">=</span> <span class="st">"Adriana"</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>name[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
-<pre><code>'A'</code></pre>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>statements . . .</span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="cf">while</span> conditionA:</span>
+<span id="cb1-4"><a href="#cb1-4"></a>    statementA</span>
+<span id="cb1-5"><a href="#cb1-5"></a>    statementB</span>
+<span id="cb1-6"><a href="#cb1-6"></a>    . . .</span>
+<span id="cb1-7"><a href="#cb1-7"></a>    statementN</span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a>statements . . .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<p>Note that the first index in a sequence is always <code>zero</code>.</p>
 </section>
-<section id="string-indexing-1" class="slide level2">
-<h2>String indexing</h2>
-<p>Since the first index of a sequence is <code>zero</code>, the last index is going to be the length of the string <code>minus 1</code></p>
+<section id="what-will-happen" class="slide level2">
+<h2>What will happen?</h2>
 <div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>name <span class="op">=</span> <span class="st">"Adriana"</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="bu">len</span>(name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
-<pre><code>7</code></pre>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>number <span class="op">=</span> <span class="dv">15</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="cf">while</span> number <span class="op">&lt;</span> <span class="dv">50</span>:</span>
+<span id="cb2-3"><a href="#cb2-3"></a>    <span class="bu">print</span>(<span class="st">'number is less than 50'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
+</section>
+<section id="while-loops-1" class="slide level2">
+<h2>While loops</h2>
+<ul>
+<li>What if the condition never evaluates to <code>False</code>?
+<ul>
+<li>Infinite loop!</li>
+</ul></li>
+<li>There are two ways around this:
+<ul>
+<li>Break (do not use in this class!)</li>
+<li>Designing the code such that the condition will eventually become <code>False</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="what-will-happen-1" class="slide level2">
+<h2>What will happen?</h2>
+<p>To ensure our condition (<code>number &lt; 50</code>) will eventually be evaluated as <code>False</code>, we need to updated <code>number</code> inside our loop:</p>
 <div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>name <span class="op">=</span> <span class="st">"Adriana"</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>name[<span class="dv">6</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<pre><code>'a'</code></pre>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>number <span class="op">=</span> <span class="dv">15</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="cf">while</span> number <span class="op">&lt;</span> <span class="dv">50</span>:</span>
+<span id="cb3-3"><a href="#cb3-3"></a>    <span class="bu">print</span>(<span class="st">'number is less than 50'</span>)</span>
+<span id="cb3-4"><a href="#cb3-4"></a>    number <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
+</section>
+<section id="while-loops-visualization" class="slide level2">
+<h2>While loops – visualization</h2>
+<p>Go to <a href="https://pythontutor.com/visualize.html#mode=edit">Python Tutor</a> to visualize how the <code>while</code> loop runs.</p>
+</section>
+<section id="while-loop-example" class="slide level2">
+<h2>While loop – example</h2>
 <div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>name <span class="op">=</span> <span class="st">"Adriana"</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a>name[<span class="dv">7</span>] <span class="co"># this will throw an error</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="evaluate-expressions" class="slide level2">
-<h2>Evaluate expressions</h2>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>my_str <span class="op">=</span> <span class="st">"Clint Eastwood"</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a>my_str[<span class="dv">11</span>] <span class="op">+</span> my_str[<span class="dv">1</span>] <span class="op">+</span> my_str[<span class="dv">13</span>]</span>
-<span id="cb8-3"><a href="#cb8-3"></a></span>
-<span id="cb8-4"><a href="#cb8-4"></a>my_str <span class="op">=</span> <span class="st">"cider"</span></span>
-<span id="cb8-5"><a href="#cb8-5"></a>my_str[<span class="dv">0</span>] <span class="op">+</span> my_str[<span class="dv">4</span>] <span class="op">+</span> my_str[<span class="dv">1</span>] <span class="op">+</span> my_str[<span class="dv">3</span>] <span class="op">+</span> my_str[<span class="dv">2</span>]</span>
-<span id="cb8-6"><a href="#cb8-6"></a></span>
-<span id="cb8-7"><a href="#cb8-7"></a>my_str <span class="op">=</span> <span class="st">"dusty"</span></span>
-<span id="cb8-8"><a href="#cb8-8"></a>my_str[<span class="dv">2</span>] <span class="op">+</span> my_str[<span class="dv">3</span>] <span class="op">+</span> my_str[<span class="dv">1</span>] <span class="op">+</span> my_str[<span class="dv">0</span>] <span class="op">+</span> my_str[<span class="dv">4</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="evaluate-expressions-1" class="slide level2">
-<h2>Evaluate expressions</h2>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>my_str <span class="op">=</span> <span class="st">"Clint Eastwood"</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a>my_str[<span class="dv">11</span>] <span class="op">+</span> my_str[<span class="dv">1</span>] <span class="op">+</span> my_str[<span class="dv">13</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
-<pre><code>'old'</code></pre>
-</div>
-</div>
-<div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>my_str <span class="op">=</span> <span class="st">"cider"</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a>my_str[<span class="dv">0</span>] <span class="op">+</span> my_str[<span class="dv">4</span>] <span class="op">+</span> my_str[<span class="dv">1</span>] <span class="op">+</span> my_str[<span class="dv">3</span>] <span class="op">+</span> my_str[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<pre><code>'cried'</code></pre>
-</div>
-</div>
-<div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>my_str <span class="op">=</span> <span class="st">"dusty"</span></span>
-<span id="cb13-2"><a href="#cb13-2"></a>my_str[<span class="dv">2</span>] <span class="op">+</span> my_str[<span class="dv">3</span>] <span class="op">+</span> my_str[<span class="dv">1</span>] <span class="op">+</span> my_str[<span class="dv">0</span>] <span class="op">+</span> my_str[<span class="dv">4</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
-<pre><code>'study'</code></pre>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">def</span> multiply(n, m):</span>
+<span id="cb4-2"><a href="#cb4-2"></a>  result <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>  count <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a>  <span class="cf">while</span> count <span class="op">&lt;</span> m:</span>
+<span id="cb4-5"><a href="#cb4-5"></a>    result <span class="op">+=</span> n</span>
+<span id="cb4-6"><a href="#cb4-6"></a>    count <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a>  <span class="cf">return</span> result</span>
+<span id="cb4-8"><a href="#cb4-8"></a></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="kw">def</span> main():</span>
+<span id="cb4-10"><a href="#cb4-10"></a>  <span class="bu">print</span>( multiply(<span class="dv">2</span>, <span class="dv">3</span>) )</span>
+<span id="cb4-11"><a href="#cb4-11"></a>  <span class="bu">print</span>( multiply(<span class="dv">5</span>, <span class="dv">2</span>) )</span>
+<span id="cb4-12"><a href="#cb4-12"></a>  </span>
+<span id="cb4-13"><a href="#cb4-13"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>6
+10</code></pre>
 </div>
 </div>
 </section>
 <section id="write-a-function" class="slide level2">
 <h2>Write a function</h2>
 <ol type="1">
-<li>Its name is <code>four_letter_anagram</code></li>
-<li>Its parameters are a <code>string</code>, and four integers <code>a</code>, <code>b</code>, <code>c</code> and <code>d</code></li>
-<li>It returns the anagram of the string according to the indices <code>a</code>, <code>b</code>, <code>c</code> and <code>d</code> – concatenate the individual characters</li>
-<li>Test case: <code>four_letter_anagram("balm", 2, 1, 3, 0)</code> should return <code>lamb</code></li>
+<li>Write a function called <code>add_up_to</code> that takes an numeric argument <code>n</code>.</li>
+<li>The function should add all numbers from 1 to <code>n</code> in a while loop</li>
+<li>Return sum</li>
 </ol>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="bu">print</span>( add_up_to(<span class="dv">5</span>) ) <span class="co"># 15</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="bu">print</span>( add_up_to(<span class="dv">10</span>) ) <span class="co"># 55</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="write-a-function---solution-add-to-it" class="slide level2">
-<h2>Write a function - solution + add to it</h2>
-<p>Add the following test cases to the code below:</p>
-<ul>
-<li><code>loin</code> returns <code>lion</code></li>
-<li><code>lugs</code> returns <code>slug</code></li>
-<li><code>reap</code> returns <code>pear</code></li>
-</ul>
-<div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw">def</span> four_letter_anagram(word, a, b, c, d):</span>
-<span id="cb15-2"><a href="#cb15-2"></a>  <span class="cf">return</span> word[a] <span class="op">+</span> word[b] <span class="op">+</span> word[c] <span class="op">+</span> word[d]</span>
-<span id="cb15-3"><a href="#cb15-3"></a></span>
-<span id="cb15-4"><a href="#cb15-4"></a><span class="kw">def</span> main():</span>
-<span id="cb15-5"><a href="#cb15-5"></a>  <span class="bu">print</span>( four_letter_anagram(<span class="st">"balm"</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">0</span>) )</span>
-<span id="cb15-6"><a href="#cb15-6"></a></span>
-<span id="cb15-7"><a href="#cb15-7"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="write-a-function-solution" class="slide level2">
+<h2>Write a function – solution</h2>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">def</span> add_up_to(n):</span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="bu">sum</span> <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a>  current_number <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>  <span class="cf">while</span> current_number <span class="op">&lt;=</span> n:</span>
+<span id="cb7-5"><a href="#cb7-5"></a>    <span class="bu">sum</span> <span class="op">+=</span> current_number</span>
+<span id="cb7-6"><a href="#cb7-6"></a>    current_number <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a>  <span class="cf">return</span> <span class="bu">sum</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a></span>
+<span id="cb7-9"><a href="#cb7-9"></a><span class="kw">def</span> main():</span>
+<span id="cb7-10"><a href="#cb7-10"></a>  <span class="bu">print</span>( add_up_to(<span class="dv">5</span>) )</span>
+<span id="cb7-11"><a href="#cb7-11"></a>  <span class="bu">print</span>( add_up_to(<span class="dv">10</span>) )</span>
+<span id="cb7-12"><a href="#cb7-12"></a>  </span>
+<span id="cb7-13"><a href="#cb7-13"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>lamb</code></pre>
-</div>
-</div>
-</section></section>
-<section>
-<section id="submit-code-for-attendance" class="title-slide slide level1 center">
-<h1>Submit code for attendance</h1>
-<p>Submit your <code>four_letter_anagram</code> function to Gradescope for attendance.</p>
-<p>Name your file <code>anagram.py</code></p>
-</section>
-<section id="in-operator" class="slide level2">
-<h2><code>in</code> operator</h2>
-<p>The <code>in</code> operator determines whether a given value is a constituent element of a sequence (such as a string)</p>
-<div class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="co">"a"</span> <span class="kw">in</span> <span class="st">"Adriana"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
-<pre><code>True</code></pre>
-</div>
-</div>
-<div class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="co">"ana"</span> <span class="kw">in</span> <span class="st">"Adriana"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="9">
-<pre><code>True</code></pre>
-</div>
-</div>
-<div class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a><span class="co">"i"</span> <span class="kw">in</span> <span class="st">"aeiou"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="10">
-<pre><code>True</code></pre>
-</div>
-</div>
-</section>
-<section id="evaluate-the-expressions" class="slide level2">
-<h2>Evaluate the expressions</h2>
-<div class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a><span class="co">"a"</span> <span class="kw">in</span> <span class="st">"aeiou"</span></span>
-<span id="cb23-2"><a href="#cb23-2"></a><span class="co">"b"</span> <span class="kw">in</span> <span class="st">"aeiou"</span></span>
-<span id="cb23-3"><a href="#cb23-3"></a><span class="kw">not</span> <span class="st">"b"</span> <span class="kw">in</span> <span class="st">"aeiou"</span></span>
-<span id="cb23-4"><a href="#cb23-4"></a><span class="co">"0"</span> <span class="kw">in</span> <span class="st">"0987654321."</span></span>
-<span id="cb23-5"><a href="#cb23-5"></a><span class="co">"10.0"</span> <span class="kw">in</span>  <span class="st">"0987654321."</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="evaluate-the-expressions-1" class="slide level2">
-<h2>Evaluate the expressions</h2>
-<div class="cell" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1"></a><span class="co">"a"</span> <span class="kw">in</span> <span class="st">"aeiou"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="11">
-<pre><code>True</code></pre>
-</div>
-</div>
-<div class="cell" data-execution_count="15">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1"></a><span class="co">"b"</span> <span class="kw">in</span> <span class="st">"aeiou"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="12">
-<pre><code>False</code></pre>
-</div>
-</div>
-<div class="cell" data-execution_count="16">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1"></a><span class="kw">not</span> <span class="st">"b"</span> <span class="kw">in</span> <span class="st">"aeiou"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="13">
-<pre><code>True</code></pre>
-</div>
-</div>
-<div class="cell" data-execution_count="17">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1"></a><span class="co">"0"</span> <span class="kw">in</span> <span class="st">"0987654321."</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="14">
-<pre><code>True</code></pre>
-</div>
-</div>
-<div class="cell" data-execution_count="18">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1"></a><span class="co">"10.0"</span> <span class="kw">in</span>  <span class="st">"0987654321."</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="15">
-<pre><code>False</code></pre>
+<pre><code>15
+55</code></pre>
 </div>
 </div>
 

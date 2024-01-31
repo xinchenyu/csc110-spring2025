@@ -87,3 +87,30 @@ main()
 
 [Instructions for Short Project 03](https://adrianapicoral.com/csc-110/dwuUKUGbU7.html)
 
+# Short Project 04
+
+```{python}
+#| eval: false
+#| echo: true
+def main():
+    # X amount of dollars is $10,000
+  initial_amount = 10000
+
+  # times Y is 2
+  goal_of_investment = 2
+
+  message = investment_years(initial_amount, goal_of_investment)
+  print(message) 
+  # The investment of $10,000 will be 2 times larger in 15 years.
+
+  print(investment_years(50000, 10))
+  # The investment of $50,000 will be 10 times larger in 48 years.
+  
+main()
+```
+
+[Instructions for Short Project 04](https://adrianapicoral.com/csc-110/pBT6ULZ1Lk.html)
+
+# Short Project 05
+
+[Instructions for Short Project 05]()
