@@ -78,13 +78,6 @@ def main():
 main()
 ```
 
-# Submit code for attendance
-
-**One submission per group, add your TA's name in a comment**
-
-Submit your `max_of_two` function to Gradescope for attendance.
-
-Name your file `max_of_two.py`
 
 ## Write a function
 
@@ -171,6 +164,14 @@ def main():
 
 main()
 ```
+
+# Submit code for attendance
+
+**One submission per group, add your TA's name in a comment**
+
+Submit your `max_of_three` function to Gradescope for attendance.
+
+Name your file `max_of_three.py`
 
 ## Write a function
 
