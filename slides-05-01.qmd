@@ -4,7 +4,7 @@ format: revealjs
 slide-number: true
 ---
 
-# CSc 110 - Intro to While Loops <br> Adriana Picoral
+# CSc 110 - Intro to While Loops
 
 ## While loops
 
