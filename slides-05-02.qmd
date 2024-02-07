@@ -6,6 +6,14 @@ slide-number: true
 
 # CSc 110 - looping through strings
 
+## Announcements
+
+* Midterm 1 February 14 -- BRING PHOTO ID
+* Modules 1 to 5 -- study guide under practice problems page on website
+* Review session:
+  * February 13, 5pm to 7pm
+  * CMNS 105 (Highland Commons, The Commons on 6th street)
+  
 # String Manipulation
 
 ## String indexing
