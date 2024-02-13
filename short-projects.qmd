@@ -12,15 +12,47 @@ To schedule your lab session go to [the weekly lab session spreadsheet](https://
 
 This is for information only. You need to [sign up for a specific lab session](https://docs.google.com/spreadsheets/d/1mS3H-8GyLHb__rZaf9j66khmkncQgeqEXfyVk2l0sNo/edit?usp=sharing) to be able to attend it.
 
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-library(tidyverse)
-library(readxl)
-library(knitr)
-lab_schedule <- read_excel("lab_sessions.xlsx")
-lab_schedule %>% 
-  kable()
-```
+## Lab 04
 
+February 6 to February 12 -- work on Short Project 04
+
+[Instructions for Short Project 04](https://adrianapicoral.com/csc-110/pBT6ULZ1Lk.html)
+
+## Lab 05
+
+February 13 to February 19 -- work on Short Project 05
+
+
+[Instructions for Short Project 05](https://adrianapicoral.com/csc-110/WA7aUvXjfV.html)
+
+## Lab 06
+
+February 20 to February 25 -- work on Short Project 06
+
+## Lab 07
+
+March 11 to March 15 -- work on Short Project 07
+
+## Lab 08
+
+March 18 to March 22 --  work on one previous short project (optional lab)
+
+## Lab 9
+
+March 15 to March 29 -- work on Short Project 08
+
+## Lab 10
+
+April 1 to April 5 -- work on Short Project 09
+
+## Lab 11
+
+April 8 to April 12 -- work on Short Project 10
+
+## Lab 12
+
+April 15 to April 19 --  work on one previous short project (optional lab)
+
+## Lab 13
+
+April 22 to April 26 -- work on Short Project 11
