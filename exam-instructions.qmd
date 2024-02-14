@@ -14,7 +14,7 @@ This exam starts at 3:00pm and it ends at 3:50pm
 
 * When you need to write a loop, use WHILE
 * Write with a blue or black pen, or pencil. If you have a question, please raise your hand.
-* Raise your hand when you are done, a TA will check your ID and add their initials to the your exam cover.
+* Raise your hand when you are done, a TA will check your ID.
 
 ## Exam Instructions
 
