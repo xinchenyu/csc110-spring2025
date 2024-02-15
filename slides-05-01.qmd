@@ -1,0 +1,114 @@
+---
+title: "while loop intro (class slides)"
+format: revealjs
+slide-number: true
+---
+
+# CSc 110 - Intro to While Loops
+
+## While loops
+
+-   A **while** loop allows a programmer to repeat code
+-   You can think of it as an if-statement with the potential to repeat
+
+```{python}
+#| eval: false
+#| echo: true
+statements . . .
+
+while conditionA:
+    statementA
+    statementB
+    . . .
+    statementN
+
+statements . . .
+```
+
+## What will happen?
+
+```{python}
+#| eval: false
+#| echo: true
+number = 15
+while number < 50:
+    print('number is less than 50')
+```
+
+## While loops
+
+-   What if the condition never evaluates to `False`?
+    -   Infinite loop!
+-   There are two ways around this:
+    -   Break (do not use in this class!)
+    -   Designing the code such that the condition will eventually become `False`
+
+## What will happen?
+
+To ensure our condition (`number < 50`) will eventually be evaluated as `False`, we need to updated `number` inside our loop:
+
+```{python}
+#| eval: false
+#| echo: true
+number = 15
+while number < 50:
+    print('number is less than 50')
+    number += 1
+```
+
+## While loops -- visualization
+
+Go to [Python Tutor](https://pythontutor.com/visualize.html#mode=edit) to visualize how the `while` loop runs.
+
+## While loop -- example
+
+```{python}
+#| eval: true
+#| echo: true
+def multiply(n, m):
+  result = 0
+  count = 0
+  while count < m:
+    result += n
+    count += 1
+  return result
+
+def main():
+  print( multiply(2, 3) )
+  print( multiply(5, 2) )
+  
+main()
+```
+
+## Write a function
+
+1. Write a function called `add_up_to` that takes an numeric argument `n`.
+1. The function should add all numbers from 1 to `n` in a while loop
+1. Return sum
+
+```{python}
+#| eval: false
+#| echo: true
+print( add_up_to(5) ) # 15
+print( add_up_to(10) ) # 55
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def add_up_to(n):
+  sum = 0
+  current_number = 0
+  while current_number <= n:
+    sum += current_number
+    current_number += 1
+  return sum
+
+def main():
+  print( add_up_to(5) )
+  print( add_up_to(10) )
+  
+main()
+```
