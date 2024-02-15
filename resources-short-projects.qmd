@@ -114,3 +114,8 @@ main()
 # Short Project 05
 
 [Instructions for Short Project 05](https://adrianapicoral.com/csc-110/WA7aUvXjfV.html)
+
+# Short Project 06
+
+[Instructions for Short Project 06](https://adrianapicoral.com/csc-110/IWjLyyIYd1.html)
+
