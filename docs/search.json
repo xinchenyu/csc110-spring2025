@@ -4421,21 +4421,21 @@
     "href": "slides-06-01.html#loop-table",
     "title": "lists (class slides)",
     "section": "Loop Table",
-    "text": "Loop Table\n\nsum_all([2, 1, 5, 2, 3])"
+    "text": "Loop Table\n\nsum_all([2, 1, 5, 2, 3])\n\n\n\n\n\n\nindex\nindex &lt; len(numbers)\nnumbers[index]\ntotal\n\n\n\n\n0\nTrue\n2\n0 + 2 = 2\n\n\n1\nTrue\n1\n2 + 1 = 3\n\n\n2\nTrue\n5\n3 + 5 = 8\n\n\n3\nTrue\n2\n8 + 2 = 10\n\n\n4\nTrue\n3\n10 + 3 = 13\n\n\n5\nFalse\n-\n13"
   },
   {
     "objectID": "slides-06-01.html#loop-table-1",
     "href": "slides-06-01.html#loop-table-1",
     "title": "lists (class slides)",
     "section": "Loop Table",
-    "text": "Loop Table\n\nsum_all([2, 1, 3, 4])"
+    "text": "Loop Table\n\nsum_all([2, 1, 3, 4])\n\n\n\n\n\n\nindex\nindex &lt; len(numbers)\nnumbers[index]\ntotal\n\n\n\n\n|\n\n\n\n\n\n|\n\n\n\n\n\n|\n\n\n\n\n\n|\n\n\n\n\n\n|\n\n\n\n\n\n|"
   },
   {
     "objectID": "slides-06-01.html#loop-table-solution",
     "href": "slides-06-01.html#loop-table-solution",
     "title": "lists (class slides)",
     "section": "Loop Table – solution",
-    "text": "Loop Table – solution\n\nsum_all([2, 1, 3, 4])"
+    "text": "Loop Table – solution\n\nsum_all([2, 1, 3, 4])\n\n\n\n\n\n\nindex\nindex &lt; len(numbers)\nnumbers[index]\ntotal\n\n\n\n\n0\nTrue\n2\n2\n\n\n1\nTrue\n1\n3\n\n\n2\nTrue\n3\n6\n\n\n3\nTrue\n4\n10\n\n\n4\nFalse\n-\n10"
   },
   {
     "objectID": "slides-06-01.html#using-a-control-variable",
@@ -4456,14 +4456,14 @@
     "href": "slides-06-01.html#loop-table-2",
     "title": "lists (class slides)",
     "section": "Loop table",
-    "text": "Loop table\n\nmax_list([2, 1, 3, 1])"
+    "text": "Loop table\n\nmax_list([2, 1, 3, 1])\n\n\n\n\n\n\nindex\nindex &lt; len(numbers)\nnumbers[index]\nmax\n\n\n\n\n|\n\n\n\n\n\n|\n\n\n\n\n\n|\n\n\n\n\n\n|\n\n\n\n\n\n|\n\n\n\n\n\n|"
   },
   {
     "objectID": "slides-06-01.html#loop-table-solution-1",
     "href": "slides-06-01.html#loop-table-solution-1",
     "title": "lists (class slides)",
     "section": "Loop table – solution",
-    "text": "Loop table – solution\n\nmax_list([2, 1, 3, 1])"
+    "text": "Loop table – solution\n\nmax_list([2, 1, 3, 1])\n\n\n\n\n\n\nindex\nindex &lt; len(numbers)\nnumbers[index]\nmax\n\n\n\n\n1\nTrue\n1\n2\n\n\n2\nTrue\n3\n3\n\n\n3\nTrue\n1\n3\n\n\n4\nFalse\n-\n3"
   },
   {
     "objectID": "slides-06-01.html#max-solution",
@@ -5311,5 +5311,40 @@
     "title": "Module 1 Assignments",
     "section": "",
     "text": "Programming Problems should be submitted to gradescope.\nIf you need instructions on how to submit your .py files to gradescope, watch the video at the end of this page.\n\nSurvey\nDue date: Friday, January 12, 2024 at 9pm\nhttps://uarizona.co1.qualtrics.com/jfe/form/SV_0q8KC0FwVhCiYD4\nThis is a survey to collect information on your expectations for CSc 110 Computer Programming I. The completion of this survey is required and will be used for grading purposes.\n\n\nProgramming Problem 1\nDue date: Thursday, January 18, 2024 at 9pm\nWrite a python program that prints out the string “Hello World!”. Be careful with capitalization and punctuation. Remember to write code inside a function called main().\nThe exact output of the program should be:\nHello World!\n\nName the program hello.py. Make sure that gradescope gives you the points for passing the test case.\n\n\nProgramming Problem 2\nDue date: Thursday, January 18, 2024 at 9pm\nWrite a python program that prints out the following excerpt from Amanda Gorman’s poem, “The Hill We Climb”:\nWhen day comes, we ask ourselves, where can we find light in this never-ending shade?\n\nThe loss we carry. A sea we must wade.\nWe braved the belly of the beast.\n\nWe've learned that quiet isn't always peace, \nand the norms and notions of what \"just\" is isn't always justice.\n\nAnd yet the dawn is ours before we knew it.\n\nSomehow we do it.\n\nName the program poem.py. Remember to write code inside a function called main(). Make sure that gradescope gives you the points for passing the test case. You can submit your solution to gradescope as many times as you want before the deadline.\nHINT: print() has a parameter called end which is set as end=\"\\n\" by default – change that to end=\"\" to remove the last newline character.\nMake sure you do the reading for this module, especially the section on Escape Sequences\n\n\nHow to submit to gradescope video"
+  },
+  {
+    "objectID": "slides-06-01.html#announcements",
+    "href": "slides-06-01.html#announcements",
+    "title": "lists (class slides)",
+    "section": "Announcements",
+    "text": "Announcements\n\nProblems 9 and 10, and Short Project 04 due today\nProject 04 due Monday"
+  },
+  {
+    "objectID": "slides-06-01.html#write-a-function-1",
+    "href": "slides-06-01.html#write-a-function-1",
+    "title": "lists (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\n\nIts name is double\nIt takes a list of numeric variables as argument\nIt iterates over the list (use while) doubling (multiplying by two) each value in the list\nIt returns the modified list\n\n\nassert double([0, 1, 2, 3]) == [0, 2, 4, 6]"
+  },
+  {
+    "objectID": "slides-06-01.html#write-a-function-solution-1",
+    "href": "slides-06-01.html#write-a-function-solution-1",
+    "title": "lists (class slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\n\ndef double(numbers):\n  index = 0\n  while index &lt; len(numbers):\n    numbers[index] *= 2\n    index += 1\n  return numbers\n\ndef main():\n  original_list = [0, 1, 2, 3]\n  new_list = double(original_list)\n  assert original_list == new_list\n  assert original_list == [0, 2, 4, 6]\n  \n  print(\"Passed all tests\")\n  \nmain()"
+  },
+  {
+    "objectID": "slides-06-01.html#submit-attendance",
+    "href": "slides-06-01.html#submit-attendance",
+    "title": "lists (class slides)",
+    "section": "Submit attendance",
+    "text": "Submit attendance\nName your file double.py and submit it to gradescope."
+  },
+  {
+    "objectID": "slides-06-01.html#slicing-lists",
+    "href": "slides-06-01.html#slicing-lists",
+    "title": "lists (class slides)",
+    "section": "Slicing lists",
+    "text": "Slicing lists\n\nRange – list[2:4]\nWhole list – list[:]\nEverything but last character – list[:-1]\n\nThe same slicing can be done with strings"
   }
 ]
