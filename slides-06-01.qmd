@@ -339,6 +339,28 @@ data.frame(index = c(1:4),
 -   What about empty lists?
 -   How to get the min instead?
 
+## Max solution - empty lists
+
+```{python}
+#| eval: true
+#| echo: true
+def max_list(numbers):
+  max = None
+  index = 0
+  while index < len(numbers):
+    if max == None or numbers[index] > max:
+      max = numbers[index]
+    index += 1
+  return max
+
+def main():
+  print( max_list([2, 1, 3, 1]) ) # 3
+  print( max_list([]) ) # None
+
+main()
+```
+
+
 ## Write a function
 
 1. Its name is `double`

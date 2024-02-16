@@ -890,6 +890,29 @@
 <li>How to get the min instead?</li>
 </ul>
 </section>
+<section id="max-solution---empty-lists" class="slide level2">
+<h2>Max solution - empty lists</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1"></a><span class="kw">def</span> max_list(numbers):</span>
+<span id="cb28-2"><a href="#cb28-2"></a>  <span class="bu">max</span> <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb28-3"><a href="#cb28-3"></a>  index <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb28-4"><a href="#cb28-4"></a>  <span class="cf">while</span> index <span class="op">&lt;</span> <span class="bu">len</span>(numbers):</span>
+<span id="cb28-5"><a href="#cb28-5"></a>    <span class="cf">if</span> <span class="bu">max</span> <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span> numbers[index] <span class="op">&gt;</span> <span class="bu">max</span>:</span>
+<span id="cb28-6"><a href="#cb28-6"></a>      <span class="bu">max</span> <span class="op">=</span> numbers[index]</span>
+<span id="cb28-7"><a href="#cb28-7"></a>    index <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb28-8"><a href="#cb28-8"></a>  <span class="cf">return</span> <span class="bu">max</span></span>
+<span id="cb28-9"><a href="#cb28-9"></a></span>
+<span id="cb28-10"><a href="#cb28-10"></a><span class="kw">def</span> main():</span>
+<span id="cb28-11"><a href="#cb28-11"></a>  <span class="bu">print</span>( max_list([<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">1</span>]) ) <span class="co"># 3</span></span>
+<span id="cb28-12"><a href="#cb28-12"></a>  <span class="bu">print</span>( max_list([]) ) <span class="co"># None</span></span>
+<span id="cb28-13"><a href="#cb28-13"></a></span>
+<span id="cb28-14"><a href="#cb28-14"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>3
+None</code></pre>
+</div>
+</div>
+</section>
 <section id="write-a-function-1" class="slide level2">
 <h2>Write a function</h2>
 <ol type="1">
@@ -899,28 +922,28 @@
 <li>It returns the modified list</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1"></a><span class="cf">assert</span> double([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]) <span class="op">==</span> [<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1"></a><span class="cf">assert</span> double([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]) <span class="op">==</span> [<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-solution-1" class="slide level2">
 <h2>Write a function – solution</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1"></a><span class="kw">def</span> double(numbers):</span>
-<span id="cb29-2"><a href="#cb29-2"></a>  index <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb29-3"><a href="#cb29-3"></a>  <span class="cf">while</span> index <span class="op">&lt;</span> <span class="bu">len</span>(numbers):</span>
-<span id="cb29-4"><a href="#cb29-4"></a>    numbers[index] <span class="op">*=</span> <span class="dv">2</span></span>
-<span id="cb29-5"><a href="#cb29-5"></a>    index <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb29-6"><a href="#cb29-6"></a>  <span class="cf">return</span> numbers</span>
-<span id="cb29-7"><a href="#cb29-7"></a></span>
-<span id="cb29-8"><a href="#cb29-8"></a><span class="kw">def</span> main():</span>
-<span id="cb29-9"><a href="#cb29-9"></a>  original_list <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
-<span id="cb29-10"><a href="#cb29-10"></a>  new_list <span class="op">=</span> double(original_list)</span>
-<span id="cb29-11"><a href="#cb29-11"></a>  <span class="cf">assert</span> original_list <span class="op">==</span> new_list</span>
-<span id="cb29-12"><a href="#cb29-12"></a>  <span class="cf">assert</span> original_list <span class="op">==</span> [<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>]</span>
-<span id="cb29-13"><a href="#cb29-13"></a>  </span>
-<span id="cb29-14"><a href="#cb29-14"></a>  <span class="bu">print</span>(<span class="st">"Passed all tests"</span>)</span>
-<span id="cb29-15"><a href="#cb29-15"></a>  </span>
-<span id="cb29-16"><a href="#cb29-16"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1"></a><span class="kw">def</span> double(numbers):</span>
+<span id="cb31-2"><a href="#cb31-2"></a>  index <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb31-3"><a href="#cb31-3"></a>  <span class="cf">while</span> index <span class="op">&lt;</span> <span class="bu">len</span>(numbers):</span>
+<span id="cb31-4"><a href="#cb31-4"></a>    numbers[index] <span class="op">*=</span> <span class="dv">2</span></span>
+<span id="cb31-5"><a href="#cb31-5"></a>    index <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb31-6"><a href="#cb31-6"></a>  <span class="cf">return</span> numbers</span>
+<span id="cb31-7"><a href="#cb31-7"></a></span>
+<span id="cb31-8"><a href="#cb31-8"></a><span class="kw">def</span> main():</span>
+<span id="cb31-9"><a href="#cb31-9"></a>  original_list <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb31-10"><a href="#cb31-10"></a>  new_list <span class="op">=</span> double(original_list)</span>
+<span id="cb31-11"><a href="#cb31-11"></a>  <span class="cf">assert</span> original_list <span class="op">==</span> new_list</span>
+<span id="cb31-12"><a href="#cb31-12"></a>  <span class="cf">assert</span> original_list <span class="op">==</span> [<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>]</span>
+<span id="cb31-13"><a href="#cb31-13"></a>  </span>
+<span id="cb31-14"><a href="#cb31-14"></a>  <span class="bu">print</span>(<span class="st">"Passed all tests"</span>)</span>
+<span id="cb31-15"><a href="#cb31-15"></a>  </span>
+<span id="cb31-16"><a href="#cb31-16"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="submit-attendance" class="slide level2">
