@@ -2471,95 +2471,431 @@
     "text": "The FizzBuzz Problem is a common coding problem given during interviews where candidates are asked to write a solution to the problem. The problem states the following:\n\nAn integer divisible by 3 should be labeled “Fizz”\nAn integer divisible by 5 should be labeled “Buzz”\nAn integer divisible by both 3 and 5 should be labeled “FizzBuzz”\n\nYou should try to solve this on your own, before watching my solution:"
   },
   {
-    "objectID": "slides-07-03.html#announcements",
-    "href": "slides-07-03.html#announcements",
-    "title": "random (class slides)",
+    "objectID": "slides-09-02.html#announcements",
+    "href": "slides-09-02.html#announcements",
+    "title": "files and strings (class slides)",
     "section": "Announcements",
-    "text": "Announcements"
+    "text": "Announcements\n\nCheck grades on D2L\nProject 5 due this Wednesday (Nov 8)\nNo class Friday November 10\nMidterm 3 on Wednesday November 15\n\ncontent: Midterm 2 + dictionaries + files + tuples (Modules 1-11)\n\nContact your TA if you want to go over your Midterm 2 answers (no extra credit for meetings anymore)"
   },
   {
-    "objectID": "slides-07-03.html#random-module",
-    "href": "slides-07-03.html#random-module",
-    "title": "random (class slides)",
-    "section": "random module",
-    "text": "random module\nRemember to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random()\nprint(n)\n\nn = random.randint(0, 9)\nprint(n)\n\n0.31253502739013606\n6"
+    "objectID": "slides-09-02.html#string-methods",
+    "href": "slides-09-02.html#string-methods",
+    "title": "files and strings (class slides)",
+    "section": "String methods",
+    "text": "String methods\n\nstring.strip(chars) – removes any of the characters in chars from the beginning or end of string, returns a string\nstring.split(chars) – splits string at the chars, returns a list\nstring.lower(string) – forces all characters to lowercase, returns a string"
   },
   {
-    "objectID": "slides-07-03.html#write-a-function",
-    "href": "slides-07-03.html#write-a-function",
-    "title": "random (class slides)",
+    "objectID": "slides-09-02.html#write-a-function",
+    "href": "slides-09-02.html#write-a-function",
+    "title": "files and strings (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nFunction name is pick_winner\nIt takes a list as argument\nIt generates a random index, and returns the item at that position\n\n\nwinner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\nprint(winner)"
+    "text": "Write a function\n\nIts name is sum_all\nIt takes a string file_name as argument\nIt reads the file with file_name in read mode\nIt iterates over each line in the file, stripping the line breaks, casting each line as integer (assume each line is a single number), summing each number to a total variable\nReturn the total\nDownload the text file for the test case below\n\n\nassert sum_all(\"numbers.txt\") == 15"
   },
   {
-    "objectID": "slides-07-03.html#write-a-function-solution",
-    "href": "slides-07-03.html#write-a-function-solution",
-    "title": "random (class slides)",
+    "objectID": "slides-09-02.html#write-a-function-solution",
+    "href": "slides-09-02.html#write-a-function-solution",
+    "title": "files and strings (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nMary"
+    "text": "Write a function – solution\n\ndef sum_all(file_name):\n  total = 0\n  for line in open(file_name, \"r\"):\n    number = int(line.strip(\"\\n\"))\n    total += number\n  return total\n\ndef main():\n  assert sum_all(\"numbers.txt\") == 15\n\nmain()"
   },
   {
-    "objectID": "slides-07-03.html#setting-a-seed",
-    "href": "slides-07-03.html#setting-a-seed",
-    "title": "random (class slides)",
-    "section": "Setting a seed",
-    "text": "Setting a seed\nWhat happens when you run pick_winner multiple times?\nTo get always the same result (for autograding purposes, for example) we can set a seed.\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  random.seed(42)\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nPeter"
+    "objectID": "slides-09-02.html#modes",
+    "href": "slides-09-02.html#modes",
+    "title": "files and strings (class slides)",
+    "section": "Modes",
+    "text": "Modes\n\nTo read a file:\n\nUse ‘r’ for reading the contents of a file\n\nTo write to a file: use\n\nUse ‘a’ to append to the existing file content\nUse ‘w’ to write to a file, and replace existing content"
   },
   {
-    "objectID": "slides-07-03.html#write-a-function-1",
-    "href": "slides-07-03.html#write-a-function-1",
-    "title": "random (class slides)",
+    "objectID": "slides-09-02.html#writing-to-a-file",
+    "href": "slides-09-02.html#writing-to-a-file",
+    "title": "files and strings (class slides)",
+    "section": "Writing to a file",
+    "text": "Writing to a file\n\nAfter you have opened the file in either ‘a’ or ‘w’ mode\na_file = open(file_name, mode)\nUse the write function to write text content to the file\na_file.write('put this content in a file')\nWhen finished writing, close the file a_file.close()"
+  },
+  {
+    "objectID": "slides-09-02.html#evaluate-the-code",
+    "href": "slides-09-02.html#evaluate-the-code",
+    "title": "files and strings (class slides)",
+    "section": "Evaluate the code",
+    "text": "Evaluate the code\n\nwords = open('words.txt', 'w')\nwords.write('The slow wolf')\nwords.write('jumped over')\nwords.write('the bear')\nwords.close()"
+  },
+  {
+    "objectID": "slides-09-02.html#evaluate-the-code-1",
+    "href": "slides-09-02.html#evaluate-the-code-1",
+    "title": "files and strings (class slides)",
+    "section": "Evaluate the code",
+    "text": "Evaluate the code\n\nwords = open('words.txt', 'w')\nwords.write('The slow wolf\\n')\nwords.write('jumped over\\n')\nwords.write('the bear\\n')\nwords.close()"
+  },
+  {
+    "objectID": "slides-09-02.html#evaluate-the-code-2",
+    "href": "slides-09-02.html#evaluate-the-code-2",
+    "title": "files and strings (class slides)",
+    "section": "Evaluate the code",
+    "text": "Evaluate the code\n\nwords = open('words.txt', 'a')\nwords.write('The slow wolf\\n')\nwords.write('jumped over\\n')\nwords.write('the bear\\n')\nwords.close()"
+  },
+  {
+    "objectID": "slides-09-02.html#write-a-function-1",
+    "href": "slides-09-02.html#write-a-function-1",
+    "title": "files and strings (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nFunction name is pick_winners\nIt takes a list as argument\nIt generates n-2 random indices, and returns a new list with the items at those positions in the original argument list – make sure to remove names that have already been selected\n\n\nwinner = pick_winners([\"Peter\", \"Joan\", \"Mary\", \"June\"])\nprint(winner) # it prints out a list of two items"
+    "text": "Write a function\n\nIts name is write_word_count\nIt takes a string file_name as argument, it opens the file in read mode\nIt writes a comma separated file (“out_” + original filename), with the lowercase word as first value and count second\nDownload test file\n\nTest case:\n\nwrite_word_count(\"alien.txt\")\n# writes out out_alien.txt with word counts"
   },
   {
-    "objectID": "slides-07-03.html#write-a-function-solution-1",
-    "href": "slides-07-03.html#write-a-function-solution-1",
-    "title": "random (class slides)",
+    "objectID": "slides-09-02.html#write-a-function-solution-1",
+    "href": "slides-09-02.html#write-a-function-solution-1",
+    "title": "files and strings (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\nimport random\n\ndef pick_winners(names):\n  new_list = []\n  for i in range(len(names)-2): # note how i here just controls how many iterations\n    index = random.randint(0, len(names) - 1)\n    new_list.append(names[index])\n    names.pop(index)\n  return new_list\n\nif __name__ == \"__main__\":\n  random.seed(42)\n  winners = pick_winners([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winners)\n\n['Peter', 'Joan']"
+    "text": "Write a function – solution\n\ndef count_words(file_name):\n  f = open(file_name, \"r\")\n  counts = {}\n  for line in f:\n    words = line.strip(\"\\n\").split(\" \")\n    for w in words:\n      lower_case_w = w.lower()\n      if lower_case_w not in counts:\n        counts[lower_case_w] = 1\n      else:\n        counts[lower_case_w] += 1\n  return counts\n\ndef write_word_count(file_name):\n  count_dict = count_words(file_name)\n  output_file = open(\"out_\" + file_name, \"w\")\n  for key, value in count_dict.items():\n    output_file.write(key + \",\" + str(value) + \"\\n\")\n  output_file.close()\n  \ndef main(): \n  write_word_count(\"alien.txt\")\n  \nmain()"
   },
   {
-    "objectID": "slides-07-03.html#ascii",
-    "href": "slides-07-03.html#ascii",
-    "title": "random (class slides)",
-    "section": "ASCII",
-    "text": "ASCII\nASCII stands for American Standard Code for Information Interchange, and it represents all characters in English. Nowadays we usually use UTF-8 encoding instead os ASCII because we use more characters (emojis, for example).\nCheck the ascii table that contains the main characters in English."
-  },
-  {
-    "objectID": "slides-07-03.html#ord-function",
-    "href": "slides-07-03.html#ord-function",
-    "title": "random (class slides)",
-    "section": "ord() function",
-    "text": "ord() function\nYou can use the ord() function with a single character (that is, a string of length 1) to get the decimal value of that character. Check the ascii table that contains the main characters in English.\n\nord(\"A\")\n\n65"
-  },
-  {
-    "objectID": "slides-07-03.html#write-a-function-2",
-    "href": "slides-07-03.html#write-a-function-2",
-    "title": "random (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\n\nFunction name is pick_winners\nIt takes a list as argument\nIt generates n-2 random indices, and returns a new list with the items at those positions in the original argument list – make sure to remove names that have already been selected\nIt only selects names that start with a lowercase character (use the built-in function ord()).\n\n\nwinner = pick_winners([\"peter\", \"Joan\", \"mary\", \"June\", \"john\"])\nprint(winner) # it prints out a list of two items"
-  },
-  {
-    "objectID": "slides-07-03.html#write-a-function-solution-2",
-    "href": "slides-07-03.html#write-a-function-solution-2",
-    "title": "random (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\n\nimport random\n\ndef pick_winners(names):\n  new_list = []\n  while len(new_list) &lt; 2 and len(names) &gt; 0:\n    index = random.randint(0, len(names) - 1)\n    if 97 &lt;= ord(names[index][0]) &lt;= 122:\n      new_list.append(names[index])\n    names.pop(index)\n  return new_list\n\nif __name__ == \"__main__\":\n  random.seed(42)\n  winners = pick_winners([\"peter\", \"Joan\", \"mary\", \"June\", \"john\"])\n  print(winners)\n\n['peter', 'john']"
-  },
-  {
-    "objectID": "slides-07-03.html#isupper-and-.islower-string-methods",
-    "href": "slides-07-03.html#isupper-and-.islower-string-methods",
-    "title": "random (class slides)",
-    "section": ".isupper() and .islower() string methods",
-    "text": ".isupper() and .islower() string methods\n.isupper() is a string method that returns True if all the characters in the string are in upper case, otherwise it returns False.\n.islower() is checks for lowercase"
-  },
-  {
-    "objectID": "tas.html",
-    "href": "tas.html",
-    "title": "TAs and Office Hours",
+    "objectID": "basics.html",
+    "href": "basics.html",
+    "title": "Constants, variables, and comments",
     "section": "",
-    "text": "The Undergraduate Teaching Assistants (UGTAs or TAs) in this class are here to help. You are also welcome to send an email.\nThe best way to talk with a particular TA is via office hours, so check the schedule (scroll down this page).\n\nCourse Coordinators\nCourse coordinators are experienced UGTAs that assist the instructor with course management and will have a supervisory role with the course UGTAs.\n\nCole Perry\nEmma Elliott\n\n\n\nTAs\nUndergraduate Teaching Assistants (UGTAs) in the Department of Computer Science assist instructors in delivering undergraduate computer science courses. CS introductory courses utilize active learning and collaborative learning spaces to provide a collaborative and supportive environment for students learning programming skills. All teaching assistants have taken and excelled in the courses they support and are familiar with the material to mentor new students as they learn.\n\nAdan Baca\nAidan Linder\nCaeden Motley\nKhojiakbar Yokubjonov\nEthan Holley\nApurbo Barua\nLilian Wei\n\nInterested in becoming a TA in the future? Check out more information about what TAs do and how to apply.\n\n\nOffice Hours\nShown below is the office hours schedule. The in-person office hours are hosted in Gould-Simpson 856. Xinchen’s office hours are in GS 854. An (O) next to a name indicates that the office hour is online. For these office hours, check D2L for details."
+    "text": "Just printing hello world is not enough, is it? You want to do more than that - you want to take some input, manipulate it and get something out of it. We can achieve this in Python using constants and variables, and we’ll learn some other concepts as well in this chapter.\n\n\nComments are any text to the right of the # symbol and is mainly useful as notes for the reader of the program.\nFor example:\nprint('hello world') # Note that print is a function\nor:\n# Note that print is a function\nprint('hello world')\nUse as many useful comments as you can in your program to:\n\nexplain assumptions\nexplain important decisions\nexplain important details\nexplain problems you’re trying to solve\nexplain problems you’re trying to overcome in your program, etc.\n\nCode tells you how, comments should tell you why.\nThis is useful for readers of your program so that they can easily understand what the program is doing. Remember, that person can be yourself after six months!\n\n\n\nAn example of a literal constant is a number like 5, 1.23, or a string like 'This is a string' or \"It's a string!\".\nIt is called a literal because it is literal - you use its value literally. The number 2 always represents itself and nothing else - it is a constant because its value cannot be changed. Hence, all these are referred to as literal constants.\n\n\n\nNumbers are mainly of two types - integers and floats.\nAn example of an integer is 2 which is just a whole number.\nExamples of floating point numbers (or floats for short) are 3.23 and 52.3E-4. The E notation indicates powers of 10. In this case, 52.3E-4 means 52.3 * 10^-4^.\n\nNote for Experienced Programmers\nThere is no separate long type. The int type can be an integer of any size.\n\n\n\n\nA string is a sequence of characters. Strings are basically just a bunch of words.\nYou will be using strings in almost every Python program that you write, so pay attention to the following part.\n\n\nYou can specify strings using single quotes such as 'Quote me on this'.\nAll white space i.e. spaces and tabs, within the quotes, are preserved as-is.\n\n\n\nStrings in double quotes work exactly the same way as strings in single quotes. An example is \"What's your name?\".\n\n\n\nYou can specify multi-line strings using triple quotes - (\"\"\" or '''). You can use single quotes and double quotes freely within the triple quotes. An example is:\n'''This is a multi-line string. This is the first line.\nThis is the second line.\n\"What's your name?,\" I asked.\nHe said \"Bond, James Bond.\"\n'''\n\n\n\nThis means that once you have created a string, you cannot change it. Although this might seem like a bad thing, it really isn’t. We will see why this is not a limitation in the various programs that we see later on.\n\nNote for C/C++ Programmers\nThere is no separate char data type in Python. There is no real need for it and I am sure you won’t miss it.\n\n\n\nNote for Perl/PHP Programmers\nRemember that single-quoted strings and double-quoted strings are the same - they do not differ in any way.\n\n\n\n\nSometimes we may want to construct strings from other information. This is where the format() method is useful.\nSave the following lines as a file str_format.py:\nage = 20\nname = 'Swaroop'\n\nprint('{0} was {1} years old when he wrote this book'.format(name, age))\nprint('Why is {0} playing with that python?'.format(name))\nOutput:\n$ python str_format.py\nSwaroop was 20 years old when he wrote this book\nWhy is Swaroop playing with that python?\nHow It Works\nA string can use certain specifications and subsequently, the format method can be called to substitute those specifications with corresponding arguments to the format method.\nObserve the first usage where we use {0} and this corresponds to the variable name which is the first argument to the format method. Similarly, the second specification is {1} corresponding to age which is the second argument to the format method. Note that Python starts counting from 0 which means that first position is at index 0, second position is at index 1, and so on.\nNotice that we could have achieved the same using string concatenation:\nname + ' is ' + str(age) + ' years old'\nbut that is much uglier and more error-prone. Second, the conversion to string would be done automatically by the format method instead of the explicit conversion to strings needed in this case. Third, when using the format method, we can change the message without having to deal with the variables used and vice-versa.\nAlso note that the numbers are optional, so you could have also written as:\nage = 20\nname = 'Swaroop'\n\nprint('{} was {} years old when he wrote this book'.format(name, age))\nprint('Why is {} playing with that python?'.format(name))\nwhich will give the same exact output as the previous program.\nWe can also name the parameters:\nage = 20\nname = 'Swaroop'\n\nprint('{name} was {age} years old when he wrote this book'.format(name=name, age=age))\nprint('Why is {name} playing with that python?'.format(name=name))\nwhich will give the same exact output as the previous program.\nPython 3.6 introduced a shorter way to do named parameters, called “f-strings”:\nage = 20\nname = 'Swaroop'\n\nprint(f'{name} was {age} years old when he wrote this book')  # notice the 'f' before the string\nprint(f'Why is {name} playing with that python?')  # notice the 'f' before the string\nwhich will give the same exact output as the previous program.\nWhat Python does in the format method is that it substitutes each argument value into the place of the specification. There can be more detailed specifications such as:\n# decimal (.) precision of 3 for float '0.333'\nprint('{0:.3f}'.format(1.0/3))\n# fill with underscores (_) with the text centered\n# (^) to 11 width '___hello___'\nprint('{0:_^11}'.format('hello'))\n# keyword-based 'Swaroop wrote A Byte of Python'\nprint('{name} wrote {book}'.format(name='Swaroop', book='A Byte of Python'))\nOutput:\n0.333\n___hello___\nSwaroop wrote A Byte of Python\nSince we are discussing formatting, note that print always ends with an invisible “new line” character (\\n) so that repeated calls to print will all print on a separate line each. To prevent this newline character from being printed, you can specify that it should end with a blank:\nprint('a', end='')\nprint('b', end='')\nOutput is:\nab\nOr you can end with a space:\nprint('a', end=' ')\nprint('b', end=' ')\nprint('c')\nOutput is:\na b c\n\n\n\nSince the default end parameter is set to \\n it always prints one line break by default. We can change end to \\n\\n to print two line breaks – that creates an empty line after whatever the print statement output.\nprint(\"This is a line\", end = \"\\n\\n\") \nWe can also use print with no arguments to print just an empty line:\nprint() # prints an empty line \n\n\n\nSuppose, you want to have a string which contains a single quote ('), how will you specify this string? For example, the string is \"What's your name?\". You cannot specify 'What's your name?' because Python will be confused as to where the string starts and ends. So, you will have to specify that this single quote does not indicate the end of the string. This can be done with the help of what is called an escape sequence. You specify the single quote as \\' : notice the backslash. Now, you can specify the string as 'What\\'s your name?'.\nAnother way of specifying this specific string would be \"What's your name?\" i.e. using double quotes. Similarly, you have to use an escape sequence for using a double quote itself in a double quoted string. Also, you have to indicate the backslash itself using the escape sequence \\\\.\nWhat if you wanted to specify a two-line string? One way is to use a triple-quoted string as shown previously or you can use an escape sequence for the newline character - \\n to indicate the start of a new line. An example is:\n'This is the first line\\nThis is the second line'\nAnother useful escape sequence to know is the tab: \\t. There are many more escape sequences but I have mentioned only the most useful ones here.\nOne thing to note is that in a string, a single backslash at the end of the line indicates that the string is continued in the next line, but no newline is added. For example:\n\"This is the first sentence. \\\nThis is the second sentence.\"\nis equivalent to\n\"This is the first sentence. This is the second sentence.\"\n\n\n\nIf you need to specify some strings where no special processing such as escape sequences are handled, then what you need is to specify a raw string by prefixing r or R to the string. An example is:\nr\"Newlines are indicated by \\n\"\n\nNote for Regular Expression Users\nAlways use raw strings when dealing with regular expressions. Otherwise, a lot of backwhacking may be required. For example, backreferences can be referred to as '\\\\1' or r'\\1'.\n\n\n\n\n\nUsing just literal constants can soon become boring - we need some way of storing any information and manipulate them as well. This is where variables come into the picture. Variables are exactly what the name implies - their value can vary, i.e., you can store anything using a variable. Variables are just parts of your computer’s memory where you store some information. Unlike literal constants, you need some method of accessing these variables and hence you give them names.\n\n\n\nVariables are examples of identifiers. Identifiers are names given to identify something. There are some rules you have to follow for naming identifiers:\n\nThe first character of the identifier must be a letter of the alphabet (uppercase ASCII or lowercase ASCII or Unicode character) or an underscore (_).\nThe rest of the identifier name can consist of letters (uppercase ASCII or lowercase ASCII or Unicode character), underscores (_) or digits (0-9).\nIdentifier names are case-sensitive. For example, myname and myName are not the same. Note the lowercase n in the former and the uppercase N in the latter.\nExamples of valid identifier names are i, name_2_3. Examples of invalid identifier names are 2things, this is spaced out, my-name and &gt;a1b2_c3.\n\n\n\n\nVariables can hold values of different types called data types. The basic types are numbers and strings, which we have already discussed.\n\n\n\nRemember, Python refers to anything used in a program as an object. This is meant in the generic sense. Instead of saying “the something”’, we say “the object”.\n\nNote for Object Oriented Programming users:\nPython is strongly object-oriented in the sense that everything is an object including numbers, strings and functions.\n\nWe will now see how to use variables along with literal constants. Save the following example and run the program.\n\n\n\nNow that we have gone through many nitty-gritty details, we can move on to more interesting stuff such as functions. Be sure to become comfortable with what you have read in this chapter."
+  },
+  {
+    "objectID": "basics.html#comments",
+    "href": "basics.html#comments",
+    "title": "Constants, variables, and comments",
+    "section": "",
+    "text": "Comments are any text to the right of the # symbol and is mainly useful as notes for the reader of the program.\nFor example:\nprint('hello world') # Note that print is a function\nor:\n# Note that print is a function\nprint('hello world')\nUse as many useful comments as you can in your program to:\n\nexplain assumptions\nexplain important decisions\nexplain important details\nexplain problems you’re trying to solve\nexplain problems you’re trying to overcome in your program, etc.\n\nCode tells you how, comments should tell you why.\nThis is useful for readers of your program so that they can easily understand what the program is doing. Remember, that person can be yourself after six months!"
+  },
+  {
+    "objectID": "basics.html#literal-constants",
+    "href": "basics.html#literal-constants",
+    "title": "Constants, variables, and comments",
+    "section": "",
+    "text": "An example of a literal constant is a number like 5, 1.23, or a string like 'This is a string' or \"It's a string!\".\nIt is called a literal because it is literal - you use its value literally. The number 2 always represents itself and nothing else - it is a constant because its value cannot be changed. Hence, all these are referred to as literal constants."
+  },
+  {
+    "objectID": "basics.html#numbers",
+    "href": "basics.html#numbers",
+    "title": "Constants, variables, and comments",
+    "section": "",
+    "text": "Numbers are mainly of two types - integers and floats.\nAn example of an integer is 2 which is just a whole number.\nExamples of floating point numbers (or floats for short) are 3.23 and 52.3E-4. The E notation indicates powers of 10. In this case, 52.3E-4 means 52.3 * 10^-4^.\n\nNote for Experienced Programmers\nThere is no separate long type. The int type can be an integer of any size."
+  },
+  {
+    "objectID": "basics.html#strings",
+    "href": "basics.html#strings",
+    "title": "Constants, variables, and comments",
+    "section": "",
+    "text": "A string is a sequence of characters. Strings are basically just a bunch of words.\nYou will be using strings in almost every Python program that you write, so pay attention to the following part.\n\n\nYou can specify strings using single quotes such as 'Quote me on this'.\nAll white space i.e. spaces and tabs, within the quotes, are preserved as-is.\n\n\n\nStrings in double quotes work exactly the same way as strings in single quotes. An example is \"What's your name?\".\n\n\n\nYou can specify multi-line strings using triple quotes - (\"\"\" or '''). You can use single quotes and double quotes freely within the triple quotes. An example is:\n'''This is a multi-line string. This is the first line.\nThis is the second line.\n\"What's your name?,\" I asked.\nHe said \"Bond, James Bond.\"\n'''\n\n\n\nThis means that once you have created a string, you cannot change it. Although this might seem like a bad thing, it really isn’t. We will see why this is not a limitation in the various programs that we see later on.\n\nNote for C/C++ Programmers\nThere is no separate char data type in Python. There is no real need for it and I am sure you won’t miss it.\n\n\n\nNote for Perl/PHP Programmers\nRemember that single-quoted strings and double-quoted strings are the same - they do not differ in any way.\n\n\n\n\nSometimes we may want to construct strings from other information. This is where the format() method is useful.\nSave the following lines as a file str_format.py:\nage = 20\nname = 'Swaroop'\n\nprint('{0} was {1} years old when he wrote this book'.format(name, age))\nprint('Why is {0} playing with that python?'.format(name))\nOutput:\n$ python str_format.py\nSwaroop was 20 years old when he wrote this book\nWhy is Swaroop playing with that python?\nHow It Works\nA string can use certain specifications and subsequently, the format method can be called to substitute those specifications with corresponding arguments to the format method.\nObserve the first usage where we use {0} and this corresponds to the variable name which is the first argument to the format method. Similarly, the second specification is {1} corresponding to age which is the second argument to the format method. Note that Python starts counting from 0 which means that first position is at index 0, second position is at index 1, and so on.\nNotice that we could have achieved the same using string concatenation:\nname + ' is ' + str(age) + ' years old'\nbut that is much uglier and more error-prone. Second, the conversion to string would be done automatically by the format method instead of the explicit conversion to strings needed in this case. Third, when using the format method, we can change the message without having to deal with the variables used and vice-versa.\nAlso note that the numbers are optional, so you could have also written as:\nage = 20\nname = 'Swaroop'\n\nprint('{} was {} years old when he wrote this book'.format(name, age))\nprint('Why is {} playing with that python?'.format(name))\nwhich will give the same exact output as the previous program.\nWe can also name the parameters:\nage = 20\nname = 'Swaroop'\n\nprint('{name} was {age} years old when he wrote this book'.format(name=name, age=age))\nprint('Why is {name} playing with that python?'.format(name=name))\nwhich will give the same exact output as the previous program.\nPython 3.6 introduced a shorter way to do named parameters, called “f-strings”:\nage = 20\nname = 'Swaroop'\n\nprint(f'{name} was {age} years old when he wrote this book')  # notice the 'f' before the string\nprint(f'Why is {name} playing with that python?')  # notice the 'f' before the string\nwhich will give the same exact output as the previous program.\nWhat Python does in the format method is that it substitutes each argument value into the place of the specification. There can be more detailed specifications such as:\n# decimal (.) precision of 3 for float '0.333'\nprint('{0:.3f}'.format(1.0/3))\n# fill with underscores (_) with the text centered\n# (^) to 11 width '___hello___'\nprint('{0:_^11}'.format('hello'))\n# keyword-based 'Swaroop wrote A Byte of Python'\nprint('{name} wrote {book}'.format(name='Swaroop', book='A Byte of Python'))\nOutput:\n0.333\n___hello___\nSwaroop wrote A Byte of Python\nSince we are discussing formatting, note that print always ends with an invisible “new line” character (\\n) so that repeated calls to print will all print on a separate line each. To prevent this newline character from being printed, you can specify that it should end with a blank:\nprint('a', end='')\nprint('b', end='')\nOutput is:\nab\nOr you can end with a space:\nprint('a', end=' ')\nprint('b', end=' ')\nprint('c')\nOutput is:\na b c\n\n\n\nSince the default end parameter is set to \\n it always prints one line break by default. We can change end to \\n\\n to print two line breaks – that creates an empty line after whatever the print statement output.\nprint(\"This is a line\", end = \"\\n\\n\") \nWe can also use print with no arguments to print just an empty line:\nprint() # prints an empty line \n\n\n\nSuppose, you want to have a string which contains a single quote ('), how will you specify this string? For example, the string is \"What's your name?\". You cannot specify 'What's your name?' because Python will be confused as to where the string starts and ends. So, you will have to specify that this single quote does not indicate the end of the string. This can be done with the help of what is called an escape sequence. You specify the single quote as \\' : notice the backslash. Now, you can specify the string as 'What\\'s your name?'.\nAnother way of specifying this specific string would be \"What's your name?\" i.e. using double quotes. Similarly, you have to use an escape sequence for using a double quote itself in a double quoted string. Also, you have to indicate the backslash itself using the escape sequence \\\\.\nWhat if you wanted to specify a two-line string? One way is to use a triple-quoted string as shown previously or you can use an escape sequence for the newline character - \\n to indicate the start of a new line. An example is:\n'This is the first line\\nThis is the second line'\nAnother useful escape sequence to know is the tab: \\t. There are many more escape sequences but I have mentioned only the most useful ones here.\nOne thing to note is that in a string, a single backslash at the end of the line indicates that the string is continued in the next line, but no newline is added. For example:\n\"This is the first sentence. \\\nThis is the second sentence.\"\nis equivalent to\n\"This is the first sentence. This is the second sentence.\"\n\n\n\nIf you need to specify some strings where no special processing such as escape sequences are handled, then what you need is to specify a raw string by prefixing r or R to the string. An example is:\nr\"Newlines are indicated by \\n\"\n\nNote for Regular Expression Users\nAlways use raw strings when dealing with regular expressions. Otherwise, a lot of backwhacking may be required. For example, backreferences can be referred to as '\\\\1' or r'\\1'."
+  },
+  {
+    "objectID": "basics.html#variable",
+    "href": "basics.html#variable",
+    "title": "Constants, variables, and comments",
+    "section": "",
+    "text": "Using just literal constants can soon become boring - we need some way of storing any information and manipulate them as well. This is where variables come into the picture. Variables are exactly what the name implies - their value can vary, i.e., you can store anything using a variable. Variables are just parts of your computer’s memory where you store some information. Unlike literal constants, you need some method of accessing these variables and hence you give them names."
+  },
+  {
+    "objectID": "basics.html#identifier-naming",
+    "href": "basics.html#identifier-naming",
+    "title": "Constants, variables, and comments",
+    "section": "",
+    "text": "Variables are examples of identifiers. Identifiers are names given to identify something. There are some rules you have to follow for naming identifiers:\n\nThe first character of the identifier must be a letter of the alphabet (uppercase ASCII or lowercase ASCII or Unicode character) or an underscore (_).\nThe rest of the identifier name can consist of letters (uppercase ASCII or lowercase ASCII or Unicode character), underscores (_) or digits (0-9).\nIdentifier names are case-sensitive. For example, myname and myName are not the same. Note the lowercase n in the former and the uppercase N in the latter.\nExamples of valid identifier names are i, name_2_3. Examples of invalid identifier names are 2things, this is spaced out, my-name and &gt;a1b2_c3."
+  },
+  {
+    "objectID": "basics.html#data-types",
+    "href": "basics.html#data-types",
+    "title": "Constants, variables, and comments",
+    "section": "",
+    "text": "Variables can hold values of different types called data types. The basic types are numbers and strings, which we have already discussed."
+  },
+  {
+    "objectID": "basics.html#object",
+    "href": "basics.html#object",
+    "title": "Constants, variables, and comments",
+    "section": "",
+    "text": "Remember, Python refers to anything used in a program as an object. This is meant in the generic sense. Instead of saying “the something”’, we say “the object”.\n\nNote for Object Oriented Programming users:\nPython is strongly object-oriented in the sense that everything is an object including numbers, strings and functions.\n\nWe will now see how to use variables along with literal constants. Save the following example and run the program."
+  },
+  {
+    "objectID": "basics.html#summary",
+    "href": "basics.html#summary",
+    "title": "Constants, variables, and comments",
+    "section": "",
+    "text": "Now that we have gone through many nitty-gritty details, we can move on to more interesting stuff such as functions. Be sure to become comfortable with what you have read in this chapter."
+  },
+  {
+    "objectID": "slides-05-03.html#while-loops",
+    "href": "slides-05-03.html#while-loops",
+    "title": "while loop aggregation (class slides)",
+    "section": "while loops",
+    "text": "while loops\n\nUsing an index variable:\n\nDefined before the loop\nUsed in the condition of the loop\nChanged within the loop\n\nUsing a temporary variable for aggregation:\n\nDefined before the loop\nChanged within the loop\nReturned outside the loop"
+  },
+  {
+    "objectID": "slides-05-03.html#while-loops-with-aggregation",
+    "href": "slides-05-03.html#while-loops-with-aggregation",
+    "title": "while loop aggregation (class slides)",
+    "section": "while loops with aggregation",
+    "text": "while loops with aggregation\n\ntotal = 0\nindex = 1\nwhile index &lt;= 5:\n    print('adding ' + str(index))\n    total = total + index\n    index = index + 1\n    \nprint(total)\n\nadding 1\nadding 2\nadding 3\nadding 4\nadding 5\n15"
+  },
+  {
+    "objectID": "slides-05-03.html#write-a-function",
+    "href": "slides-05-03.html#write-a-function",
+    "title": "while loop aggregation (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\n\nIts name is sum_all\nIt takes two numeric arguments: low and high\nIt runs a loop that iterates through the values low and high summing all values (HINT: you need to create a variable that will aggregate or accumulate the sum)\nIt returns the sum of all values between low and high\nUse while (define an index before the loop, use index in the while condition, change the index inside the loop)"
+  },
+  {
+    "objectID": "slides-05-03.html#write-a-function-solution",
+    "href": "slides-05-03.html#write-a-function-solution",
+    "title": "while loop aggregation (class slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\nWrite more test cases for this function.\n\ndef sum_all(low, high):\n  total = 0\n  current_number = low\n  while current_number &lt;= high:\n    total += current_number\n    current_number += 1\n  return total\n    \ndef main():\n  print( sum_all(1, 2) ) # 3\n  print( sum_all(0, 5) ) # 15\n  \nmain()\n\n3\n15"
+  },
+  {
+    "objectID": "slides-05-03.html#write-a-function-1",
+    "href": "slides-05-03.html#write-a-function-1",
+    "title": "while loop aggregation (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\n\nIts name is vowels_only\nIt takes a string argument\nIt builds a new string containing only the vowels in the string argument\nIt returns new string with vowels only (define an index before the loop, use index in the while condition, change index inside the loop)\n\n\nprint( vowels_only(\"banana\") ) # \"aaa\"\nprint( vowels_only(\"fly\") ) # \"\""
+  },
+  {
+    "objectID": "slides-05-03.html#write-a-function-solution-1",
+    "href": "slides-05-03.html#write-a-function-solution-1",
+    "title": "while loop aggregation (class slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\nWrite more test cases for this function.\n\ndef vowels_only(string):\n  new_string = \"\"\n  index = 0\n  while index &lt; len(string):\n    if string[index] in \"aeiou\":\n      new_string += string[index]\n    index += 1\n  return new_string\n\ndef main():\n  print( vowels_only(\"banana\") ) # \"aaa\"\n  \nmain()\n\naaa"
+  },
+  {
+    "objectID": "slides-05-03.html#write-a-function-2",
+    "href": "slides-05-03.html#write-a-function-2",
+    "title": "while loop aggregation (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\n\nIts name is factorial\nIt takes a numeric argument number\nIt returns the factorial of number\nThe factorial of a number is the product of itself and all the integers below it – factorial of 4 = 1 * 2 * 3 * 4 = 24\nUse while\n\n\nprint( factorial(4) ) # 24\nprint( factorial(5) ) # 120\nprint( factorial(0) ) # 1"
+  },
+  {
+    "objectID": "slides-05-03.html#write-a-function-solution-2",
+    "href": "slides-05-03.html#write-a-function-solution-2",
+    "title": "while loop aggregation (class slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\nWrite more test cases for this function.\n\ndef factorial(number):\n  result = 1\n  index = 1\n  while index &lt;= number:\n    result *= index\n    index += 1\n  return result\n\ndef main():\n  assert factorial(4) == 24\n  assert factorial(5) == 120\n  assert factorial(0) == 1\n  \nmain()"
+  },
+  {
+    "objectID": "slides-05-03.html#write-a-function-3",
+    "href": "slides-05-03.html#write-a-function-3",
+    "title": "while loop aggregation (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\n\nIts name is power\nIt takes two numeric arguments: base and exp\nIt returns the base to the power of exp\nDon’t use the ** operator, use a while loop (define an index before the loop, use index in the while condition, change index inside the loop)\n\n\nassert power(2, 3) == 8\nassert power(3, 3) == 27"
+  },
+  {
+    "objectID": "slides-05-03.html#write-a-function-solution-3",
+    "href": "slides-05-03.html#write-a-function-solution-3",
+    "title": "while loop aggregation (class slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\nWrite more test cases for this function.\n\ndef power(base, exp):\n  result = 1\n  index = 1\n  while index &lt;= exp:\n    result *= base\n    index += 1\n  return result\n\ndef main():\n  print( power(2, 3) ) # 8\n  print( power(3, 3) ) # 27\n  \nmain()\n\n8\n27"
+  },
+  {
+    "objectID": "slides-09-01.html#announcements",
+    "href": "slides-09-01.html#announcements",
+    "title": "files (class slides)",
+    "section": "Announcements",
+    "text": "Announcements\n\nCheck grades on D2L\nProject 4 due today at 7pm\nNo class Friday November 10\nMidterm 3 on Wednesday November 15\n\ncontent: Midterm 2 + dictionaries + files + tuples (Modules 1-11)\n\nContact your TA if you want to go over your Midterm 2 answers (no extra credit for meetings anymore)"
+  },
+  {
+    "objectID": "slides-09-01.html#files-and-file-systems",
+    "href": "slides-09-01.html#files-and-file-systems",
+    "title": "files (class slides)",
+    "section": "Files and file systems",
+    "text": "Files and file systems\n\nOn (at least most of) our computers, there is a file system via which we can create, save, modify, and remove files\n\nOn Mac: can browse with Finder\nOn Windows: can browse with windows explorer\n\nFile systems are often hierarchical"
+  },
+  {
+    "objectID": "slides-09-01.html#opening-a-file",
+    "href": "slides-09-01.html#opening-a-file",
+    "title": "files (class slides)",
+    "section": "Opening a file",
+    "text": "Opening a file\n\nTo open a file in a python program:\na_file = open(file_name, mode)\nfile_name should be the name of the file to open\n\nIt can also be a path\n\nmode should be the mode in which to open in\n\n‘a’    ‘r’    ‘w’\n\n\nAfter opening, use the a_file object to read from or write to the file"
+  },
+  {
+    "objectID": "slides-09-01.html#absolute-vs-relative-path",
+    "href": "slides-09-01.html#absolute-vs-relative-path",
+    "title": "files (class slides)",
+    "section": "Absolute vs Relative path",
+    "text": "Absolute vs Relative path\n\nA path describes a location.\n\n/home/doc/example.txt\n\nAn absolute path describes the location from the root directory.\nA relative path describes the location of a file relative to the current (working) directory."
+  },
+  {
+    "objectID": "slides-09-01.html#opening-and-closing-a-file",
+    "href": "slides-09-01.html#opening-and-closing-a-file",
+    "title": "files (class slides)",
+    "section": "Opening and closing a file",
+    "text": "Opening and closing a file\ninfo.txt\nThe quick brown fox\njumped over\nthe lazy\nbear\nsitting by the tree\nread_file.py\n\ninfo = open('info.txt', 'r')\ninfo.close()"
+  },
+  {
+    "objectID": "slides-09-01.html#reading-a-line",
+    "href": "slides-09-01.html#reading-a-line",
+    "title": "files (class slides)",
+    "section": "Reading a line",
+    "text": "Reading a line\n\nfile.readline()\n\nreads one line from a file, returns a string\nreturns an empty string if it has reached the end of the content\n\nfile.readlines()\n\nreads all of the lines\nreturns a list of strings\n\nfile.read()\n\nreturns one string"
+  },
+  {
+    "objectID": "slides-09-01.html#reading-a-line-example",
+    "href": "slides-09-01.html#reading-a-line-example",
+    "title": "files (class slides)",
+    "section": "Reading a line example",
+    "text": "Reading a line example\ninfo.txt\nThe quick brown fox\njumped over\nthe lazy\nbear\nsitting by the tree\nread_line.py\n\ndef read_first_line(filename):\n  info = open(filename, 'r')\n  line = info.readline()\n  info.close()\n  return line\n\nassert read_first_line('info.txt') == \"The quick brown fox\\n\""
+  },
+  {
+    "objectID": "slides-09-01.html#iterating-over-a-file-directly",
+    "href": "slides-09-01.html#iterating-over-a-file-directly",
+    "title": "files (class slides)",
+    "section": "Iterating over a file directly",
+    "text": "Iterating over a file directly\nThe type file is iterable so we can use a for x in file loop:\n\ninfo = open('info.txt', 'r')\nfor line in info:\n    print(line)\ninfo.close()\n\nThe quick brown fox\n\njumped over\n\nthe lazy\n\nbear\n\nsitting by the tree"
+  },
+  {
+    "objectID": "slides-09-01.html#more-string-methods",
+    "href": "slides-09-01.html#more-string-methods",
+    "title": "files (class slides)",
+    "section": "More string methods",
+    "text": "More string methods\nWe worked with .isnumeric(), a string method to check if a string contains only digit characters\nHere are some other useful string methods:\n\nstring.strip(chars) – removes any of the characters in chars from the beginning or end of string, returns a string\nstring.split(chars) – splits string at the chars, returns a list"
+  },
+  {
+    "objectID": "slides-09-01.html#more-string-methods-.strip",
+    "href": "slides-09-01.html#more-string-methods-.strip",
+    "title": "files (class slides)",
+    "section": "More string methods – .strip()",
+    "text": "More string methods – .strip()\n\ninfo = open('info.txt', 'r')\n\nfirst_line = info.readline()\nsecond_line = info.readline()\nprint(first_line)\nprint(second_line)\n\n\nfirst_line = first_line.strip(\"\\n\")\nsecond_line = second_line.strip(\"\\n\")\nprint(first_line)\nprint(second_line)\n\ninfo.close()\n\nThe quick brown fox\n\njumped over\n\nThe quick brown fox\njumped over"
+  },
+  {
+    "objectID": "slides-09-01.html#more-string-methods-.split",
+    "href": "slides-09-01.html#more-string-methods-.split",
+    "title": "files (class slides)",
+    "section": "More string methods – .split(\" \")",
+    "text": "More string methods – .split(\" \")\n\ninfo = open('info.txt', 'r')\n\nfirst_line = info.readline().strip(\"\\n\")\nsecond_line = info.readline().strip(\"\\n\")\n\nfirst_line_words = first_line.split(\" \")\nsecond_line_words = second_line.split(\" \")\n\nprint(first_line_words)\nprint(second_line_words)\n\ninfo.close()\n\n['The', 'quick', 'brown', 'fox']\n['jumped', 'over']"
+  },
+  {
+    "objectID": "slides-09-01.html#write-a-function",
+    "href": "slides-09-01.html#write-a-function",
+    "title": "files (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\n\nIts name is lines_and_words\nIt takes a string called file_name\nIt opens the file with file_name in read mode\nIt iterates over the file’s lines, splitting each line by space (remember to strip the line breaks)\nIt returns a list of lists, where each inner-list is a line containing all the words in that line\n\nTest case (download text file):\n\nassert lines_and_words(\"info.txt\") == [ ['The', 'quick', 'brown', 'fox'], \n                                        ['jumped', 'over'], ['the', 'lazy'],\n                                        ['bear'], ['sitting', 'by', 'the', 'tree'] ]"
+  },
+  {
+    "objectID": "slides-09-01.html#write-a-function-solution",
+    "href": "slides-09-01.html#write-a-function-solution",
+    "title": "files (class slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\n\ndef lines_and_words(file_name):\n  f = open(file_name, \"r\")\n  all_words = []\n  for line in f:\n    all_words.append(line.strip(\"\\n\").split(\" \"))\n  f.close()\n  return all_words\n  \n  \ndef main():\n  assert lines_and_words(\"info.txt\") == [ ['The', 'quick', 'brown', 'fox'], \n                                          ['jumped', 'over'], ['the', 'lazy'],\n                                          ['bear'], ['sitting', 'by', 'the', 'tree'] ]\n                                     \nmain()"
+  },
+  {
+    "objectID": "slides-09-01.html#write-a-function-1",
+    "href": "slides-09-01.html#write-a-function-1",
+    "title": "files (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\n\nIts name is count_words\nIt takes a string file_name as argument\nIt returns a dictionary with word counts\n\nTest case:\n\nassert count_words(\"info.txt\") == {\"the\": 3, \"quick\": 1, \"brown\": 1,\n                                   \"fox\": 1 , \"jumped\": 1, \"over\": 1, \n                                   \"lazy\": 1, \"bear\": 1, \"sitting\": 1,\n                                   \"by\": 1, \"tree\": 1}"
+  },
+  {
+    "objectID": "slides-09-01.html#write-a-function-solution-1",
+    "href": "slides-09-01.html#write-a-function-solution-1",
+    "title": "files (class slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\n\ndef count_words(file_name):\n  f = open(file_name, \"r\")\n  counts = {}\n  for line in f:\n    words = line.strip(\"\\n\").split(\" \")\n    for w in words:\n      lower_case_w = w.lower()\n      if lower_case_w not in counts:\n        counts[lower_case_w] = 1\n      else:\n        counts[lower_case_w] += 1\n  return counts\n\ndef main():\n  assert count_words(\"info.txt\") == {\"the\": 3, \"quick\": 1, \"brown\": 1,\n                                     \"fox\": 1 , \"jumped\": 1, \"over\": 1, \n                                     \"lazy\": 1, \"bear\": 1, \"sitting\": 1,\n                                     \"by\": 1, \"tree\": 1}\n                                 \nmain()"
+  },
+  {
+    "objectID": "slides-09-01.html#quiz-09",
+    "href": "slides-09-01.html#quiz-09",
+    "title": "files (class slides)",
+    "section": "Quiz 09",
+    "text": "Quiz 09\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz\n\nNo need for comments, no need for a main(), no need for test cases\n\nAllowed built-in functions: round(), input(), float(), str(), int(), len(), range()"
+  },
+  {
+    "objectID": "input.html",
+    "href": "input.html",
+    "title": "Input from user",
+    "section": "",
+    "text": "Input from user\nThere will be situations where your program has to interact with the user. For example, you would want to take input from the user and then print some results back. We can achieve this using the input() function and print function respectively.\nExample:\ndef say_hi(name):\n  print(\"Hello,\", name + \"!\")\n  \nname = input(\"What's your name?\\n\")\nsay_hi(name)\nOutput:\n\nWhat's your name?\nAdriana\nHello, Adriana!\n\nHow It Works\nThe input() function takes a string as argument and saves it to a variable called name. Then it calls the function say_hi() with the name entered by the user as the argument. The function say_hi() prints the name argument concatenated with a Hello message.\n\n\nChanging types\nThe input() function will always return a string. But many times we will want the user to enter other information, such as a number.\nWe can use functions like int() to transform a type into an integer and float() to transform a type into a float number.\nExample:\ndef calculate_future(years, age):\n  print(\"In\", years, \"you will be\", age + years, \"years old.\")\n\n\nage = input(\"What's your age?\\n\")\nage_int = int(age)\ncalculate_future(10, age_int)\nOutput:\n\nWhat's your age?\n41\nIn 10 you will be 51 years old.\n\nHow It Works\nThe input() function takes a string as argument and saves it to a variable called age. Then it calls the function int() to convert the age entered by the user from string to integer and saves the value to a variable called age_int. The function calculate_future() is called with arguments 10 and the age entered by the user converted to integer, it then prints the age argument concatenated with a message saying how old the person will be in the number of years passed as argument to the function."
+  },
+  {
+    "objectID": "slides-05-01.html#while-loops",
+    "href": "slides-05-01.html#while-loops",
+    "title": "while loop intro (class slides)",
+    "section": "While loops",
+    "text": "While loops\n\nA while loop allows a programmer to repeat code\nYou can think of it as an if-statement with the potential to repeat\n\n\nstatements . . .\n\nwhile conditionA:\n    statementA\n    statementB\n    . . .\n    statementN\n\nstatements . . ."
+  },
+  {
+    "objectID": "slides-05-01.html#what-will-happen",
+    "href": "slides-05-01.html#what-will-happen",
+    "title": "while loop intro (class slides)",
+    "section": "What will happen?",
+    "text": "What will happen?\n\nnumber = 15\nwhile number &lt; 50:\n    print('number is less than 50')"
+  },
+  {
+    "objectID": "slides-05-01.html#while-loops-1",
+    "href": "slides-05-01.html#while-loops-1",
+    "title": "while loop intro (class slides)",
+    "section": "While loops",
+    "text": "While loops\n\nWhat if the condition never evaluates to False?\n\nInfinite loop!\n\nThere are two ways around this:\n\nBreak (do not use in this class!)\nDesigning the code such that the condition will eventually become False"
+  },
+  {
+    "objectID": "slides-05-01.html#what-will-happen-1",
+    "href": "slides-05-01.html#what-will-happen-1",
+    "title": "while loop intro (class slides)",
+    "section": "What will happen?",
+    "text": "What will happen?\nTo ensure our condition (number &lt; 50) will eventually be evaluated as False, we need to updated number inside our loop:\n\nnumber = 15\nwhile number &lt; 50:\n    print('number is less than 50')\n    number += 1"
+  },
+  {
+    "objectID": "slides-05-01.html#while-loops-visualization",
+    "href": "slides-05-01.html#while-loops-visualization",
+    "title": "while loop intro (class slides)",
+    "section": "While loops – visualization",
+    "text": "While loops – visualization\nGo to Python Tutor to visualize how the while loop runs."
+  },
+  {
+    "objectID": "slides-05-01.html#while-loop-example",
+    "href": "slides-05-01.html#while-loop-example",
+    "title": "while loop intro (class slides)",
+    "section": "While loop – example",
+    "text": "While loop – example\n\ndef multiply(n, m):\n  result = 0\n  count = 0\n  while count &lt; m:\n    result += n\n    count += 1\n  return result\n\ndef main():\n  print( multiply(2, 3) )\n  print( multiply(5, 2) )\n  \nmain()\n\n6\n10"
+  },
+  {
+    "objectID": "slides-05-01.html#write-a-function",
+    "href": "slides-05-01.html#write-a-function",
+    "title": "while loop intro (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\n\nWrite a function called add_up_to that takes an numeric argument n.\nThe function should add all numbers from 1 to n in a while loop\nReturn sum\n\n\nprint( add_up_to(5) ) # 15\nprint( add_up_to(10) ) # 55"
+  },
+  {
+    "objectID": "slides-05-01.html#write-a-function-solution",
+    "href": "slides-05-01.html#write-a-function-solution",
+    "title": "while loop intro (class slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\n\ndef add_up_to(n):\n  sum = 0\n  current_number = 0\n  while current_number &lt;= n:\n    sum += current_number\n    current_number += 1\n  return sum\n\ndef main():\n  print( add_up_to(5) )\n  print( add_up_to(10) )\n  \nmain()\n\n15\n55"
+  },
+  {
+    "objectID": "exceptions.html",
+    "href": "exceptions.html",
+    "title": "Exceptions",
+    "section": "",
+    "text": "Exceptions occur when exceptional situations occur in your program. For example, what if you are going to read a file and the file does not exist? Or what if you accidentally deleted it when the program was running? Such situations are handled using exceptions.\nSimilarly, what if your program had some invalid statements? This is handled by Python which raises its hands and tells you there is an error.\n\n\nConsider a simple print function call. What if we misspelt print as Print? Note the capitalization. In this case, Python raises a syntax error.\n&gt;&gt;&gt; Print(\"Hello World\")\nTraceback (most recent call last):\n  File \"&lt;stdin&gt;\", line 1, in &lt;module&gt;\nNameError: name 'Print' is not defined\n&gt;&gt;&gt; print(\"Hello World\")\nHello World\nObserve that a NameError is raised and also the location where the error was detected is printed. This is what an error handler for this error does.\n\n\n\nWe will try to read input from the user. Enter the first line below and hit the Enter key. When your computer prompts you for input, instead press [ctrl-d] on a Mac or [ctrl-z] with Windows and see what happens. (If you’re using Windows and neither option works, you can try [ctrl-c] in the Command Prompt to generate a KeyboardInterrupt error instead).\n&gt;&gt;&gt; s = input('Enter something --&gt; ')\nEnter something --&gt; Traceback (most recent call last):\n  File \"&lt;stdin&gt;\", line 1, in &lt;module&gt;\nEOFError\nPython raises an error called EOFError which basically means it found an end of file symbol (which is represented by ctrl-d) when it did not expect to see it.\n\n\n\nWe can handle exceptions using the try..except statement. We basically put our usual statements within the try-block and put all our error handlers in the except-block.\nExample (save as exceptions_handle.py):\nExample:\ntry:\n    text = input('Enter something --&gt; ')\nexcept EOFError:\n    print('Why did you do an EOF on me?')\nexcept KeyboardInterrupt:\n    print('You cancelled the operation.')\nelse:\n    print('You entered', text)\nOutput:\n\n# Press ctrl + d\n$ python exceptions_handle.py\nEnter something --&gt; Why did you do an EOF on me?\n\n# Press ctrl + c\n$ python exceptions_handle.py\nEnter something --&gt; ^CYou cancelled the operation.\n\n$ python exceptions_handle.py\nEnter something --&gt; No exceptions\nYou entered No exceptions\n\nHow It Works\nWe put all the statements that might raise exceptions/errors inside the try block and then put handlers for the appropriate errors/exceptions in the except clause/block. The except clause can handle a single specified error or exception, or a parenthesized list of errors/exceptions. If no names of errors or exceptions are supplied, it will handle all errors and exceptions.\nNote that there has to be at least one except clause associated with every try clause. Otherwise, what’s the point of having a try block?\nIf any error or exception is not handled, then the default Python handler is called which just stops the execution of the program and prints an error message. We have already seen this in action above.\nYou can also have an else clause associated with a try..except block. The else clause is executed if no exception occurs.\nIn the next example, we will also see how to get the exception object so that we can retrieve additional information.\n\n\n\nAcquiring a resource in the try block and subsequently releasing the resource in the finally block is a common pattern. Hence, there is also a with statement that enables this to be done in a clean manner:\nwith open(\"poem.txt\") as f:\n    for line in f:\n        print(line, end='')\nHow It Works\nWe are using here the open function with the with statement - we leave the closing of the file to be done automatically by with open.\nWhat happens behind the scenes is that there is a protocol used by the with statement. It fetches the object returned by the open statement, let’s call it “thefile” in this case."
+  },
+  {
+    "objectID": "exceptions.html#errors",
+    "href": "exceptions.html#errors",
+    "title": "Exceptions",
+    "section": "",
+    "text": "Consider a simple print function call. What if we misspelt print as Print? Note the capitalization. In this case, Python raises a syntax error.\n&gt;&gt;&gt; Print(\"Hello World\")\nTraceback (most recent call last):\n  File \"&lt;stdin&gt;\", line 1, in &lt;module&gt;\nNameError: name 'Print' is not defined\n&gt;&gt;&gt; print(\"Hello World\")\nHello World\nObserve that a NameError is raised and also the location where the error was detected is printed. This is what an error handler for this error does."
+  },
+  {
+    "objectID": "exceptions.html#exceptions-1",
+    "href": "exceptions.html#exceptions-1",
+    "title": "Exceptions",
+    "section": "",
+    "text": "We will try to read input from the user. Enter the first line below and hit the Enter key. When your computer prompts you for input, instead press [ctrl-d] on a Mac or [ctrl-z] with Windows and see what happens. (If you’re using Windows and neither option works, you can try [ctrl-c] in the Command Prompt to generate a KeyboardInterrupt error instead).\n&gt;&gt;&gt; s = input('Enter something --&gt; ')\nEnter something --&gt; Traceback (most recent call last):\n  File \"&lt;stdin&gt;\", line 1, in &lt;module&gt;\nEOFError\nPython raises an error called EOFError which basically means it found an end of file symbol (which is represented by ctrl-d) when it did not expect to see it."
+  },
+  {
+    "objectID": "exceptions.html#handling-exceptions",
+    "href": "exceptions.html#handling-exceptions",
+    "title": "Exceptions",
+    "section": "",
+    "text": "We can handle exceptions using the try..except statement. We basically put our usual statements within the try-block and put all our error handlers in the except-block.\nExample (save as exceptions_handle.py):\nExample:\ntry:\n    text = input('Enter something --&gt; ')\nexcept EOFError:\n    print('Why did you do an EOF on me?')\nexcept KeyboardInterrupt:\n    print('You cancelled the operation.')\nelse:\n    print('You entered', text)\nOutput:\n\n# Press ctrl + d\n$ python exceptions_handle.py\nEnter something --&gt; Why did you do an EOF on me?\n\n# Press ctrl + c\n$ python exceptions_handle.py\nEnter something --&gt; ^CYou cancelled the operation.\n\n$ python exceptions_handle.py\nEnter something --&gt; No exceptions\nYou entered No exceptions\n\nHow It Works\nWe put all the statements that might raise exceptions/errors inside the try block and then put handlers for the appropriate errors/exceptions in the except clause/block. The except clause can handle a single specified error or exception, or a parenthesized list of errors/exceptions. If no names of errors or exceptions are supplied, it will handle all errors and exceptions.\nNote that there has to be at least one except clause associated with every try clause. Otherwise, what’s the point of having a try block?\nIf any error or exception is not handled, then the default Python handler is called which just stops the execution of the program and prints an error message. We have already seen this in action above.\nYou can also have an else clause associated with a try..except block. The else clause is executed if no exception occurs.\nIn the next example, we will also see how to get the exception object so that we can retrieve additional information."
+  },
+  {
+    "objectID": "exceptions.html#with",
+    "href": "exceptions.html#with",
+    "title": "Exceptions",
+    "section": "",
+    "text": "Acquiring a resource in the try block and subsequently releasing the resource in the finally block is a common pattern. Hence, there is also a with statement that enables this to be done in a clean manner:\nwith open(\"poem.txt\") as f:\n    for line in f:\n        print(line, end='')\nHow It Works\nWe are using here the open function with the with statement - we leave the closing of the file to be done automatically by with open.\nWhat happens behind the scenes is that there is a protocol used by the with statement. It fetches the object returned by the open statement, let’s call it “thefile” in this case."
   },
   {
     "objectID": "slides-05-02.html#announcements",
@@ -2723,431 +3059,11 @@
     "text": "is_numeric() solution\n\ndef is_numeric(my_string):\n  # create control variable for one decimal point\n  decimal_point = False\n  # create index variable\n  index = 0\n  while index &lt; len(my_string):\n    # first check, can character be found in a number?\n    if my_string[index] not in \"0123456789.\":\n      return False\n    # second check, if a period, has a period been found before?\n    if my_string[index] == \".\":\n      if decimal_point: # a previous period was detected\n        return False\n      else: # first period detected\n        decimal_point = True\n    # increment index  \n    index += 1\n  # while loop executed without returning False\n  # that means every character is valid, so return True\n  return True\n\ndef main():\n  print( is_numeric(\"234\") ) # True\n  print( is_numeric(\"abc\") ) # False\n  print( is_numeric(\"12c\") ) # False\n  print( is_numeric(\"12.3\") ) # True\n  print( is_numeric(\"1.2.3\") ) # False\n  \nmain()\n\nTrue\nFalse\nFalse\nTrue\nFalse"
   },
   {
-    "objectID": "exceptions.html",
-    "href": "exceptions.html",
-    "title": "Exceptions",
+    "objectID": "tas.html",
+    "href": "tas.html",
+    "title": "TAs and Office Hours",
     "section": "",
-    "text": "Exceptions occur when exceptional situations occur in your program. For example, what if you are going to read a file and the file does not exist? Or what if you accidentally deleted it when the program was running? Such situations are handled using exceptions.\nSimilarly, what if your program had some invalid statements? This is handled by Python which raises its hands and tells you there is an error.\n\n\nConsider a simple print function call. What if we misspelt print as Print? Note the capitalization. In this case, Python raises a syntax error.\n&gt;&gt;&gt; Print(\"Hello World\")\nTraceback (most recent call last):\n  File \"&lt;stdin&gt;\", line 1, in &lt;module&gt;\nNameError: name 'Print' is not defined\n&gt;&gt;&gt; print(\"Hello World\")\nHello World\nObserve that a NameError is raised and also the location where the error was detected is printed. This is what an error handler for this error does.\n\n\n\nWe will try to read input from the user. Enter the first line below and hit the Enter key. When your computer prompts you for input, instead press [ctrl-d] on a Mac or [ctrl-z] with Windows and see what happens. (If you’re using Windows and neither option works, you can try [ctrl-c] in the Command Prompt to generate a KeyboardInterrupt error instead).\n&gt;&gt;&gt; s = input('Enter something --&gt; ')\nEnter something --&gt; Traceback (most recent call last):\n  File \"&lt;stdin&gt;\", line 1, in &lt;module&gt;\nEOFError\nPython raises an error called EOFError which basically means it found an end of file symbol (which is represented by ctrl-d) when it did not expect to see it.\n\n\n\nWe can handle exceptions using the try..except statement. We basically put our usual statements within the try-block and put all our error handlers in the except-block.\nExample (save as exceptions_handle.py):\nExample:\ntry:\n    text = input('Enter something --&gt; ')\nexcept EOFError:\n    print('Why did you do an EOF on me?')\nexcept KeyboardInterrupt:\n    print('You cancelled the operation.')\nelse:\n    print('You entered', text)\nOutput:\n\n# Press ctrl + d\n$ python exceptions_handle.py\nEnter something --&gt; Why did you do an EOF on me?\n\n# Press ctrl + c\n$ python exceptions_handle.py\nEnter something --&gt; ^CYou cancelled the operation.\n\n$ python exceptions_handle.py\nEnter something --&gt; No exceptions\nYou entered No exceptions\n\nHow It Works\nWe put all the statements that might raise exceptions/errors inside the try block and then put handlers for the appropriate errors/exceptions in the except clause/block. The except clause can handle a single specified error or exception, or a parenthesized list of errors/exceptions. If no names of errors or exceptions are supplied, it will handle all errors and exceptions.\nNote that there has to be at least one except clause associated with every try clause. Otherwise, what’s the point of having a try block?\nIf any error or exception is not handled, then the default Python handler is called which just stops the execution of the program and prints an error message. We have already seen this in action above.\nYou can also have an else clause associated with a try..except block. The else clause is executed if no exception occurs.\nIn the next example, we will also see how to get the exception object so that we can retrieve additional information.\n\n\n\nAcquiring a resource in the try block and subsequently releasing the resource in the finally block is a common pattern. Hence, there is also a with statement that enables this to be done in a clean manner:\nwith open(\"poem.txt\") as f:\n    for line in f:\n        print(line, end='')\nHow It Works\nWe are using here the open function with the with statement - we leave the closing of the file to be done automatically by with open.\nWhat happens behind the scenes is that there is a protocol used by the with statement. It fetches the object returned by the open statement, let’s call it “thefile” in this case."
-  },
-  {
-    "objectID": "exceptions.html#errors",
-    "href": "exceptions.html#errors",
-    "title": "Exceptions",
-    "section": "",
-    "text": "Consider a simple print function call. What if we misspelt print as Print? Note the capitalization. In this case, Python raises a syntax error.\n&gt;&gt;&gt; Print(\"Hello World\")\nTraceback (most recent call last):\n  File \"&lt;stdin&gt;\", line 1, in &lt;module&gt;\nNameError: name 'Print' is not defined\n&gt;&gt;&gt; print(\"Hello World\")\nHello World\nObserve that a NameError is raised and also the location where the error was detected is printed. This is what an error handler for this error does."
-  },
-  {
-    "objectID": "exceptions.html#exceptions-1",
-    "href": "exceptions.html#exceptions-1",
-    "title": "Exceptions",
-    "section": "",
-    "text": "We will try to read input from the user. Enter the first line below and hit the Enter key. When your computer prompts you for input, instead press [ctrl-d] on a Mac or [ctrl-z] with Windows and see what happens. (If you’re using Windows and neither option works, you can try [ctrl-c] in the Command Prompt to generate a KeyboardInterrupt error instead).\n&gt;&gt;&gt; s = input('Enter something --&gt; ')\nEnter something --&gt; Traceback (most recent call last):\n  File \"&lt;stdin&gt;\", line 1, in &lt;module&gt;\nEOFError\nPython raises an error called EOFError which basically means it found an end of file symbol (which is represented by ctrl-d) when it did not expect to see it."
-  },
-  {
-    "objectID": "exceptions.html#handling-exceptions",
-    "href": "exceptions.html#handling-exceptions",
-    "title": "Exceptions",
-    "section": "",
-    "text": "We can handle exceptions using the try..except statement. We basically put our usual statements within the try-block and put all our error handlers in the except-block.\nExample (save as exceptions_handle.py):\nExample:\ntry:\n    text = input('Enter something --&gt; ')\nexcept EOFError:\n    print('Why did you do an EOF on me?')\nexcept KeyboardInterrupt:\n    print('You cancelled the operation.')\nelse:\n    print('You entered', text)\nOutput:\n\n# Press ctrl + d\n$ python exceptions_handle.py\nEnter something --&gt; Why did you do an EOF on me?\n\n# Press ctrl + c\n$ python exceptions_handle.py\nEnter something --&gt; ^CYou cancelled the operation.\n\n$ python exceptions_handle.py\nEnter something --&gt; No exceptions\nYou entered No exceptions\n\nHow It Works\nWe put all the statements that might raise exceptions/errors inside the try block and then put handlers for the appropriate errors/exceptions in the except clause/block. The except clause can handle a single specified error or exception, or a parenthesized list of errors/exceptions. If no names of errors or exceptions are supplied, it will handle all errors and exceptions.\nNote that there has to be at least one except clause associated with every try clause. Otherwise, what’s the point of having a try block?\nIf any error or exception is not handled, then the default Python handler is called which just stops the execution of the program and prints an error message. We have already seen this in action above.\nYou can also have an else clause associated with a try..except block. The else clause is executed if no exception occurs.\nIn the next example, we will also see how to get the exception object so that we can retrieve additional information."
-  },
-  {
-    "objectID": "exceptions.html#with",
-    "href": "exceptions.html#with",
-    "title": "Exceptions",
-    "section": "",
-    "text": "Acquiring a resource in the try block and subsequently releasing the resource in the finally block is a common pattern. Hence, there is also a with statement that enables this to be done in a clean manner:\nwith open(\"poem.txt\") as f:\n    for line in f:\n        print(line, end='')\nHow It Works\nWe are using here the open function with the with statement - we leave the closing of the file to be done automatically by with open.\nWhat happens behind the scenes is that there is a protocol used by the with statement. It fetches the object returned by the open statement, let’s call it “thefile” in this case."
-  },
-  {
-    "objectID": "slides-05-01.html#while-loops",
-    "href": "slides-05-01.html#while-loops",
-    "title": "while loop intro (class slides)",
-    "section": "While loops",
-    "text": "While loops\n\nA while loop allows a programmer to repeat code\nYou can think of it as an if-statement with the potential to repeat\n\n\nstatements . . .\n\nwhile conditionA:\n    statementA\n    statementB\n    . . .\n    statementN\n\nstatements . . ."
-  },
-  {
-    "objectID": "slides-05-01.html#what-will-happen",
-    "href": "slides-05-01.html#what-will-happen",
-    "title": "while loop intro (class slides)",
-    "section": "What will happen?",
-    "text": "What will happen?\n\nnumber = 15\nwhile number &lt; 50:\n    print('number is less than 50')"
-  },
-  {
-    "objectID": "slides-05-01.html#while-loops-1",
-    "href": "slides-05-01.html#while-loops-1",
-    "title": "while loop intro (class slides)",
-    "section": "While loops",
-    "text": "While loops\n\nWhat if the condition never evaluates to False?\n\nInfinite loop!\n\nThere are two ways around this:\n\nBreak (do not use in this class!)\nDesigning the code such that the condition will eventually become False"
-  },
-  {
-    "objectID": "slides-05-01.html#what-will-happen-1",
-    "href": "slides-05-01.html#what-will-happen-1",
-    "title": "while loop intro (class slides)",
-    "section": "What will happen?",
-    "text": "What will happen?\nTo ensure our condition (number &lt; 50) will eventually be evaluated as False, we need to updated number inside our loop:\n\nnumber = 15\nwhile number &lt; 50:\n    print('number is less than 50')\n    number += 1"
-  },
-  {
-    "objectID": "slides-05-01.html#while-loops-visualization",
-    "href": "slides-05-01.html#while-loops-visualization",
-    "title": "while loop intro (class slides)",
-    "section": "While loops – visualization",
-    "text": "While loops – visualization\nGo to Python Tutor to visualize how the while loop runs."
-  },
-  {
-    "objectID": "slides-05-01.html#while-loop-example",
-    "href": "slides-05-01.html#while-loop-example",
-    "title": "while loop intro (class slides)",
-    "section": "While loop – example",
-    "text": "While loop – example\n\ndef multiply(n, m):\n  result = 0\n  count = 0\n  while count &lt; m:\n    result += n\n    count += 1\n  return result\n\ndef main():\n  print( multiply(2, 3) )\n  print( multiply(5, 2) )\n  \nmain()\n\n6\n10"
-  },
-  {
-    "objectID": "slides-05-01.html#write-a-function",
-    "href": "slides-05-01.html#write-a-function",
-    "title": "while loop intro (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\n\nWrite a function called add_up_to that takes an numeric argument n.\nThe function should add all numbers from 1 to n in a while loop\nReturn sum\n\n\nprint( add_up_to(5) ) # 15\nprint( add_up_to(10) ) # 55"
-  },
-  {
-    "objectID": "slides-05-01.html#write-a-function-solution",
-    "href": "slides-05-01.html#write-a-function-solution",
-    "title": "while loop intro (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef add_up_to(n):\n  sum = 0\n  current_number = 0\n  while current_number &lt;= n:\n    sum += current_number\n    current_number += 1\n  return sum\n\ndef main():\n  print( add_up_to(5) )\n  print( add_up_to(10) )\n  \nmain()\n\n15\n55"
-  },
-  {
-    "objectID": "input.html",
-    "href": "input.html",
-    "title": "Input from user",
-    "section": "",
-    "text": "Input from user\nThere will be situations where your program has to interact with the user. For example, you would want to take input from the user and then print some results back. We can achieve this using the input() function and print function respectively.\nExample:\ndef say_hi(name):\n  print(\"Hello,\", name + \"!\")\n  \nname = input(\"What's your name?\\n\")\nsay_hi(name)\nOutput:\n\nWhat's your name?\nAdriana\nHello, Adriana!\n\nHow It Works\nThe input() function takes a string as argument and saves it to a variable called name. Then it calls the function say_hi() with the name entered by the user as the argument. The function say_hi() prints the name argument concatenated with a Hello message.\n\n\nChanging types\nThe input() function will always return a string. But many times we will want the user to enter other information, such as a number.\nWe can use functions like int() to transform a type into an integer and float() to transform a type into a float number.\nExample:\ndef calculate_future(years, age):\n  print(\"In\", years, \"you will be\", age + years, \"years old.\")\n\n\nage = input(\"What's your age?\\n\")\nage_int = int(age)\ncalculate_future(10, age_int)\nOutput:\n\nWhat's your age?\n41\nIn 10 you will be 51 years old.\n\nHow It Works\nThe input() function takes a string as argument and saves it to a variable called age. Then it calls the function int() to convert the age entered by the user from string to integer and saves the value to a variable called age_int. The function calculate_future() is called with arguments 10 and the age entered by the user converted to integer, it then prints the age argument concatenated with a message saying how old the person will be in the number of years passed as argument to the function."
-  },
-  {
-    "objectID": "slides-09-01.html#announcements",
-    "href": "slides-09-01.html#announcements",
-    "title": "files (class slides)",
-    "section": "Announcements",
-    "text": "Announcements\n\nCheck grades on D2L\nProject 4 due today at 7pm\nNo class Friday November 10\nMidterm 3 on Wednesday November 15\n\ncontent: Midterm 2 + dictionaries + files + tuples (Modules 1-11)\n\nContact your TA if you want to go over your Midterm 2 answers (no extra credit for meetings anymore)"
-  },
-  {
-    "objectID": "slides-09-01.html#files-and-file-systems",
-    "href": "slides-09-01.html#files-and-file-systems",
-    "title": "files (class slides)",
-    "section": "Files and file systems",
-    "text": "Files and file systems\n\nOn (at least most of) our computers, there is a file system via which we can create, save, modify, and remove files\n\nOn Mac: can browse with Finder\nOn Windows: can browse with windows explorer\n\nFile systems are often hierarchical"
-  },
-  {
-    "objectID": "slides-09-01.html#opening-a-file",
-    "href": "slides-09-01.html#opening-a-file",
-    "title": "files (class slides)",
-    "section": "Opening a file",
-    "text": "Opening a file\n\nTo open a file in a python program:\na_file = open(file_name, mode)\nfile_name should be the name of the file to open\n\nIt can also be a path\n\nmode should be the mode in which to open in\n\n‘a’    ‘r’    ‘w’\n\n\nAfter opening, use the a_file object to read from or write to the file"
-  },
-  {
-    "objectID": "slides-09-01.html#absolute-vs-relative-path",
-    "href": "slides-09-01.html#absolute-vs-relative-path",
-    "title": "files (class slides)",
-    "section": "Absolute vs Relative path",
-    "text": "Absolute vs Relative path\n\nA path describes a location.\n\n/home/doc/example.txt\n\nAn absolute path describes the location from the root directory.\nA relative path describes the location of a file relative to the current (working) directory."
-  },
-  {
-    "objectID": "slides-09-01.html#opening-and-closing-a-file",
-    "href": "slides-09-01.html#opening-and-closing-a-file",
-    "title": "files (class slides)",
-    "section": "Opening and closing a file",
-    "text": "Opening and closing a file\ninfo.txt\nThe quick brown fox\njumped over\nthe lazy\nbear\nsitting by the tree\nread_file.py\n\ninfo = open('info.txt', 'r')\ninfo.close()"
-  },
-  {
-    "objectID": "slides-09-01.html#reading-a-line",
-    "href": "slides-09-01.html#reading-a-line",
-    "title": "files (class slides)",
-    "section": "Reading a line",
-    "text": "Reading a line\n\nfile.readline()\n\nreads one line from a file, returns a string\nreturns an empty string if it has reached the end of the content\n\nfile.readlines()\n\nreads all of the lines\nreturns a list of strings\n\nfile.read()\n\nreturns one string"
-  },
-  {
-    "objectID": "slides-09-01.html#reading-a-line-example",
-    "href": "slides-09-01.html#reading-a-line-example",
-    "title": "files (class slides)",
-    "section": "Reading a line example",
-    "text": "Reading a line example\ninfo.txt\nThe quick brown fox\njumped over\nthe lazy\nbear\nsitting by the tree\nread_line.py\n\ndef read_first_line(filename):\n  info = open(filename, 'r')\n  line = info.readline()\n  info.close()\n  return line\n\nassert read_first_line('info.txt') == \"The quick brown fox\\n\""
-  },
-  {
-    "objectID": "slides-09-01.html#iterating-over-a-file-directly",
-    "href": "slides-09-01.html#iterating-over-a-file-directly",
-    "title": "files (class slides)",
-    "section": "Iterating over a file directly",
-    "text": "Iterating over a file directly\nThe type file is iterable so we can use a for x in file loop:\n\ninfo = open('info.txt', 'r')\nfor line in info:\n    print(line)\ninfo.close()\n\nThe quick brown fox\n\njumped over\n\nthe lazy\n\nbear\n\nsitting by the tree"
-  },
-  {
-    "objectID": "slides-09-01.html#more-string-methods",
-    "href": "slides-09-01.html#more-string-methods",
-    "title": "files (class slides)",
-    "section": "More string methods",
-    "text": "More string methods\nWe worked with .isnumeric(), a string method to check if a string contains only digit characters\nHere are some other useful string methods:\n\nstring.strip(chars) – removes any of the characters in chars from the beginning or end of string, returns a string\nstring.split(chars) – splits string at the chars, returns a list"
-  },
-  {
-    "objectID": "slides-09-01.html#more-string-methods-.strip",
-    "href": "slides-09-01.html#more-string-methods-.strip",
-    "title": "files (class slides)",
-    "section": "More string methods – .strip()",
-    "text": "More string methods – .strip()\n\ninfo = open('info.txt', 'r')\n\nfirst_line = info.readline()\nsecond_line = info.readline()\nprint(first_line)\nprint(second_line)\n\n\nfirst_line = first_line.strip(\"\\n\")\nsecond_line = second_line.strip(\"\\n\")\nprint(first_line)\nprint(second_line)\n\ninfo.close()\n\nThe quick brown fox\n\njumped over\n\nThe quick brown fox\njumped over"
-  },
-  {
-    "objectID": "slides-09-01.html#more-string-methods-.split",
-    "href": "slides-09-01.html#more-string-methods-.split",
-    "title": "files (class slides)",
-    "section": "More string methods – .split(\" \")",
-    "text": "More string methods – .split(\" \")\n\ninfo = open('info.txt', 'r')\n\nfirst_line = info.readline().strip(\"\\n\")\nsecond_line = info.readline().strip(\"\\n\")\n\nfirst_line_words = first_line.split(\" \")\nsecond_line_words = second_line.split(\" \")\n\nprint(first_line_words)\nprint(second_line_words)\n\ninfo.close()\n\n['The', 'quick', 'brown', 'fox']\n['jumped', 'over']"
-  },
-  {
-    "objectID": "slides-09-01.html#write-a-function",
-    "href": "slides-09-01.html#write-a-function",
-    "title": "files (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\n\nIts name is lines_and_words\nIt takes a string called file_name\nIt opens the file with file_name in read mode\nIt iterates over the file’s lines, splitting each line by space (remember to strip the line breaks)\nIt returns a list of lists, where each inner-list is a line containing all the words in that line\n\nTest case (download text file):\n\nassert lines_and_words(\"info.txt\") == [ ['The', 'quick', 'brown', 'fox'], \n                                        ['jumped', 'over'], ['the', 'lazy'],\n                                        ['bear'], ['sitting', 'by', 'the', 'tree'] ]"
-  },
-  {
-    "objectID": "slides-09-01.html#write-a-function-solution",
-    "href": "slides-09-01.html#write-a-function-solution",
-    "title": "files (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef lines_and_words(file_name):\n  f = open(file_name, \"r\")\n  all_words = []\n  for line in f:\n    all_words.append(line.strip(\"\\n\").split(\" \"))\n  f.close()\n  return all_words\n  \n  \ndef main():\n  assert lines_and_words(\"info.txt\") == [ ['The', 'quick', 'brown', 'fox'], \n                                          ['jumped', 'over'], ['the', 'lazy'],\n                                          ['bear'], ['sitting', 'by', 'the', 'tree'] ]\n                                     \nmain()"
-  },
-  {
-    "objectID": "slides-09-01.html#write-a-function-1",
-    "href": "slides-09-01.html#write-a-function-1",
-    "title": "files (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\n\nIts name is count_words\nIt takes a string file_name as argument\nIt returns a dictionary with word counts\n\nTest case:\n\nassert count_words(\"info.txt\") == {\"the\": 3, \"quick\": 1, \"brown\": 1,\n                                   \"fox\": 1 , \"jumped\": 1, \"over\": 1, \n                                   \"lazy\": 1, \"bear\": 1, \"sitting\": 1,\n                                   \"by\": 1, \"tree\": 1}"
-  },
-  {
-    "objectID": "slides-09-01.html#write-a-function-solution-1",
-    "href": "slides-09-01.html#write-a-function-solution-1",
-    "title": "files (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef count_words(file_name):\n  f = open(file_name, \"r\")\n  counts = {}\n  for line in f:\n    words = line.strip(\"\\n\").split(\" \")\n    for w in words:\n      lower_case_w = w.lower()\n      if lower_case_w not in counts:\n        counts[lower_case_w] = 1\n      else:\n        counts[lower_case_w] += 1\n  return counts\n\ndef main():\n  assert count_words(\"info.txt\") == {\"the\": 3, \"quick\": 1, \"brown\": 1,\n                                     \"fox\": 1 , \"jumped\": 1, \"over\": 1, \n                                     \"lazy\": 1, \"bear\": 1, \"sitting\": 1,\n                                     \"by\": 1, \"tree\": 1}\n                                 \nmain()"
-  },
-  {
-    "objectID": "slides-09-01.html#quiz-09",
-    "href": "slides-09-01.html#quiz-09",
-    "title": "files (class slides)",
-    "section": "Quiz 09",
-    "text": "Quiz 09\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz\n\nNo need for comments, no need for a main(), no need for test cases\n\nAllowed built-in functions: round(), input(), float(), str(), int(), len(), range()"
-  },
-  {
-    "objectID": "slides-05-03.html#while-loops",
-    "href": "slides-05-03.html#while-loops",
-    "title": "while loop aggregation (class slides)",
-    "section": "while loops",
-    "text": "while loops\n\nUsing an index variable:\n\nDefined before the loop\nUsed in the condition of the loop\nChanged within the loop\n\nUsing a temporary variable for aggregation:\n\nDefined before the loop\nChanged within the loop\nReturned outside the loop"
-  },
-  {
-    "objectID": "slides-05-03.html#while-loops-with-aggregation",
-    "href": "slides-05-03.html#while-loops-with-aggregation",
-    "title": "while loop aggregation (class slides)",
-    "section": "while loops with aggregation",
-    "text": "while loops with aggregation\n\ntotal = 0\nindex = 1\nwhile index &lt;= 5:\n    print('adding ' + str(index))\n    total = total + index\n    index = index + 1\n    \nprint(total)\n\nadding 1\nadding 2\nadding 3\nadding 4\nadding 5\n15"
-  },
-  {
-    "objectID": "slides-05-03.html#write-a-function",
-    "href": "slides-05-03.html#write-a-function",
-    "title": "while loop aggregation (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\n\nIts name is sum_all\nIt takes two numeric arguments: low and high\nIt runs a loop that iterates through the values low and high summing all values (HINT: you need to create a variable that will aggregate or accumulate the sum)\nIt returns the sum of all values between low and high\nUse while (define an index before the loop, use index in the while condition, change the index inside the loop)"
-  },
-  {
-    "objectID": "slides-05-03.html#write-a-function-solution",
-    "href": "slides-05-03.html#write-a-function-solution",
-    "title": "while loop aggregation (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\nWrite more test cases for this function.\n\ndef sum_all(low, high):\n  total = 0\n  current_number = low\n  while current_number &lt;= high:\n    total += current_number\n    current_number += 1\n  return total\n    \ndef main():\n  print( sum_all(1, 2) ) # 3\n  print( sum_all(0, 5) ) # 15\n  \nmain()\n\n3\n15"
-  },
-  {
-    "objectID": "slides-05-03.html#write-a-function-1",
-    "href": "slides-05-03.html#write-a-function-1",
-    "title": "while loop aggregation (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\n\nIts name is vowels_only\nIt takes a string argument\nIt builds a new string containing only the vowels in the string argument\nIt returns new string with vowels only (define an index before the loop, use index in the while condition, change index inside the loop)\n\n\nprint( vowels_only(\"banana\") ) # \"aaa\"\nprint( vowels_only(\"fly\") ) # \"\""
-  },
-  {
-    "objectID": "slides-05-03.html#write-a-function-solution-1",
-    "href": "slides-05-03.html#write-a-function-solution-1",
-    "title": "while loop aggregation (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\nWrite more test cases for this function.\n\ndef vowels_only(string):\n  new_string = \"\"\n  index = 0\n  while index &lt; len(string):\n    if string[index] in \"aeiou\":\n      new_string += string[index]\n    index += 1\n  return new_string\n\ndef main():\n  print( vowels_only(\"banana\") ) # \"aaa\"\n  \nmain()\n\naaa"
-  },
-  {
-    "objectID": "slides-05-03.html#write-a-function-2",
-    "href": "slides-05-03.html#write-a-function-2",
-    "title": "while loop aggregation (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\n\nIts name is factorial\nIt takes a numeric argument number\nIt returns the factorial of number\nThe factorial of a number is the product of itself and all the integers below it – factorial of 4 = 1 * 2 * 3 * 4 = 24\nUse while\n\n\nprint( factorial(4) ) # 24\nprint( factorial(5) ) # 120\nprint( factorial(0) ) # 1"
-  },
-  {
-    "objectID": "slides-05-03.html#write-a-function-solution-2",
-    "href": "slides-05-03.html#write-a-function-solution-2",
-    "title": "while loop aggregation (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\nWrite more test cases for this function.\n\ndef factorial(number):\n  result = 1\n  index = 1\n  while index &lt;= number:\n    result *= index\n    index += 1\n  return result\n\ndef main():\n  assert factorial(4) == 24\n  assert factorial(5) == 120\n  assert factorial(0) == 1\n  \nmain()"
-  },
-  {
-    "objectID": "slides-05-03.html#write-a-function-3",
-    "href": "slides-05-03.html#write-a-function-3",
-    "title": "while loop aggregation (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\n\nIts name is power\nIt takes two numeric arguments: base and exp\nIt returns the base to the power of exp\nDon’t use the ** operator, use a while loop (define an index before the loop, use index in the while condition, change index inside the loop)\n\n\nassert power(2, 3) == 8\nassert power(3, 3) == 27"
-  },
-  {
-    "objectID": "slides-05-03.html#write-a-function-solution-3",
-    "href": "slides-05-03.html#write-a-function-solution-3",
-    "title": "while loop aggregation (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\nWrite more test cases for this function.\n\ndef power(base, exp):\n  result = 1\n  index = 1\n  while index &lt;= exp:\n    result *= base\n    index += 1\n  return result\n\ndef main():\n  print( power(2, 3) ) # 8\n  print( power(3, 3) ) # 27\n  \nmain()\n\n8\n27"
-  },
-  {
-    "objectID": "basics.html",
-    "href": "basics.html",
-    "title": "Constants, variables, and comments",
-    "section": "",
-    "text": "Just printing hello world is not enough, is it? You want to do more than that - you want to take some input, manipulate it and get something out of it. We can achieve this in Python using constants and variables, and we’ll learn some other concepts as well in this chapter.\n\n\nComments are any text to the right of the # symbol and is mainly useful as notes for the reader of the program.\nFor example:\nprint('hello world') # Note that print is a function\nor:\n# Note that print is a function\nprint('hello world')\nUse as many useful comments as you can in your program to:\n\nexplain assumptions\nexplain important decisions\nexplain important details\nexplain problems you’re trying to solve\nexplain problems you’re trying to overcome in your program, etc.\n\nCode tells you how, comments should tell you why.\nThis is useful for readers of your program so that they can easily understand what the program is doing. Remember, that person can be yourself after six months!\n\n\n\nAn example of a literal constant is a number like 5, 1.23, or a string like 'This is a string' or \"It's a string!\".\nIt is called a literal because it is literal - you use its value literally. The number 2 always represents itself and nothing else - it is a constant because its value cannot be changed. Hence, all these are referred to as literal constants.\n\n\n\nNumbers are mainly of two types - integers and floats.\nAn example of an integer is 2 which is just a whole number.\nExamples of floating point numbers (or floats for short) are 3.23 and 52.3E-4. The E notation indicates powers of 10. In this case, 52.3E-4 means 52.3 * 10^-4^.\n\nNote for Experienced Programmers\nThere is no separate long type. The int type can be an integer of any size.\n\n\n\n\nA string is a sequence of characters. Strings are basically just a bunch of words.\nYou will be using strings in almost every Python program that you write, so pay attention to the following part.\n\n\nYou can specify strings using single quotes such as 'Quote me on this'.\nAll white space i.e. spaces and tabs, within the quotes, are preserved as-is.\n\n\n\nStrings in double quotes work exactly the same way as strings in single quotes. An example is \"What's your name?\".\n\n\n\nYou can specify multi-line strings using triple quotes - (\"\"\" or '''). You can use single quotes and double quotes freely within the triple quotes. An example is:\n'''This is a multi-line string. This is the first line.\nThis is the second line.\n\"What's your name?,\" I asked.\nHe said \"Bond, James Bond.\"\n'''\n\n\n\nThis means that once you have created a string, you cannot change it. Although this might seem like a bad thing, it really isn’t. We will see why this is not a limitation in the various programs that we see later on.\n\nNote for C/C++ Programmers\nThere is no separate char data type in Python. There is no real need for it and I am sure you won’t miss it.\n\n\n\nNote for Perl/PHP Programmers\nRemember that single-quoted strings and double-quoted strings are the same - they do not differ in any way.\n\n\n\n\nSometimes we may want to construct strings from other information. This is where the format() method is useful.\nSave the following lines as a file str_format.py:\nage = 20\nname = 'Swaroop'\n\nprint('{0} was {1} years old when he wrote this book'.format(name, age))\nprint('Why is {0} playing with that python?'.format(name))\nOutput:\n$ python str_format.py\nSwaroop was 20 years old when he wrote this book\nWhy is Swaroop playing with that python?\nHow It Works\nA string can use certain specifications and subsequently, the format method can be called to substitute those specifications with corresponding arguments to the format method.\nObserve the first usage where we use {0} and this corresponds to the variable name which is the first argument to the format method. Similarly, the second specification is {1} corresponding to age which is the second argument to the format method. Note that Python starts counting from 0 which means that first position is at index 0, second position is at index 1, and so on.\nNotice that we could have achieved the same using string concatenation:\nname + ' is ' + str(age) + ' years old'\nbut that is much uglier and more error-prone. Second, the conversion to string would be done automatically by the format method instead of the explicit conversion to strings needed in this case. Third, when using the format method, we can change the message without having to deal with the variables used and vice-versa.\nAlso note that the numbers are optional, so you could have also written as:\nage = 20\nname = 'Swaroop'\n\nprint('{} was {} years old when he wrote this book'.format(name, age))\nprint('Why is {} playing with that python?'.format(name))\nwhich will give the same exact output as the previous program.\nWe can also name the parameters:\nage = 20\nname = 'Swaroop'\n\nprint('{name} was {age} years old when he wrote this book'.format(name=name, age=age))\nprint('Why is {name} playing with that python?'.format(name=name))\nwhich will give the same exact output as the previous program.\nPython 3.6 introduced a shorter way to do named parameters, called “f-strings”:\nage = 20\nname = 'Swaroop'\n\nprint(f'{name} was {age} years old when he wrote this book')  # notice the 'f' before the string\nprint(f'Why is {name} playing with that python?')  # notice the 'f' before the string\nwhich will give the same exact output as the previous program.\nWhat Python does in the format method is that it substitutes each argument value into the place of the specification. There can be more detailed specifications such as:\n# decimal (.) precision of 3 for float '0.333'\nprint('{0:.3f}'.format(1.0/3))\n# fill with underscores (_) with the text centered\n# (^) to 11 width '___hello___'\nprint('{0:_^11}'.format('hello'))\n# keyword-based 'Swaroop wrote A Byte of Python'\nprint('{name} wrote {book}'.format(name='Swaroop', book='A Byte of Python'))\nOutput:\n0.333\n___hello___\nSwaroop wrote A Byte of Python\nSince we are discussing formatting, note that print always ends with an invisible “new line” character (\\n) so that repeated calls to print will all print on a separate line each. To prevent this newline character from being printed, you can specify that it should end with a blank:\nprint('a', end='')\nprint('b', end='')\nOutput is:\nab\nOr you can end with a space:\nprint('a', end=' ')\nprint('b', end=' ')\nprint('c')\nOutput is:\na b c\n\n\n\nSince the default end parameter is set to \\n it always prints one line break by default. We can change end to \\n\\n to print two line breaks – that creates an empty line after whatever the print statement output.\nprint(\"This is a line\", end = \"\\n\\n\") \nWe can also use print with no arguments to print just an empty line:\nprint() # prints an empty line \n\n\n\nSuppose, you want to have a string which contains a single quote ('), how will you specify this string? For example, the string is \"What's your name?\". You cannot specify 'What's your name?' because Python will be confused as to where the string starts and ends. So, you will have to specify that this single quote does not indicate the end of the string. This can be done with the help of what is called an escape sequence. You specify the single quote as \\' : notice the backslash. Now, you can specify the string as 'What\\'s your name?'.\nAnother way of specifying this specific string would be \"What's your name?\" i.e. using double quotes. Similarly, you have to use an escape sequence for using a double quote itself in a double quoted string. Also, you have to indicate the backslash itself using the escape sequence \\\\.\nWhat if you wanted to specify a two-line string? One way is to use a triple-quoted string as shown previously or you can use an escape sequence for the newline character - \\n to indicate the start of a new line. An example is:\n'This is the first line\\nThis is the second line'\nAnother useful escape sequence to know is the tab: \\t. There are many more escape sequences but I have mentioned only the most useful ones here.\nOne thing to note is that in a string, a single backslash at the end of the line indicates that the string is continued in the next line, but no newline is added. For example:\n\"This is the first sentence. \\\nThis is the second sentence.\"\nis equivalent to\n\"This is the first sentence. This is the second sentence.\"\n\n\n\nIf you need to specify some strings where no special processing such as escape sequences are handled, then what you need is to specify a raw string by prefixing r or R to the string. An example is:\nr\"Newlines are indicated by \\n\"\n\nNote for Regular Expression Users\nAlways use raw strings when dealing with regular expressions. Otherwise, a lot of backwhacking may be required. For example, backreferences can be referred to as '\\\\1' or r'\\1'.\n\n\n\n\n\nUsing just literal constants can soon become boring - we need some way of storing any information and manipulate them as well. This is where variables come into the picture. Variables are exactly what the name implies - their value can vary, i.e., you can store anything using a variable. Variables are just parts of your computer’s memory where you store some information. Unlike literal constants, you need some method of accessing these variables and hence you give them names.\n\n\n\nVariables are examples of identifiers. Identifiers are names given to identify something. There are some rules you have to follow for naming identifiers:\n\nThe first character of the identifier must be a letter of the alphabet (uppercase ASCII or lowercase ASCII or Unicode character) or an underscore (_).\nThe rest of the identifier name can consist of letters (uppercase ASCII or lowercase ASCII or Unicode character), underscores (_) or digits (0-9).\nIdentifier names are case-sensitive. For example, myname and myName are not the same. Note the lowercase n in the former and the uppercase N in the latter.\nExamples of valid identifier names are i, name_2_3. Examples of invalid identifier names are 2things, this is spaced out, my-name and &gt;a1b2_c3.\n\n\n\n\nVariables can hold values of different types called data types. The basic types are numbers and strings, which we have already discussed.\n\n\n\nRemember, Python refers to anything used in a program as an object. This is meant in the generic sense. Instead of saying “the something”’, we say “the object”.\n\nNote for Object Oriented Programming users:\nPython is strongly object-oriented in the sense that everything is an object including numbers, strings and functions.\n\nWe will now see how to use variables along with literal constants. Save the following example and run the program.\n\n\n\nNow that we have gone through many nitty-gritty details, we can move on to more interesting stuff such as functions. Be sure to become comfortable with what you have read in this chapter."
-  },
-  {
-    "objectID": "basics.html#comments",
-    "href": "basics.html#comments",
-    "title": "Constants, variables, and comments",
-    "section": "",
-    "text": "Comments are any text to the right of the # symbol and is mainly useful as notes for the reader of the program.\nFor example:\nprint('hello world') # Note that print is a function\nor:\n# Note that print is a function\nprint('hello world')\nUse as many useful comments as you can in your program to:\n\nexplain assumptions\nexplain important decisions\nexplain important details\nexplain problems you’re trying to solve\nexplain problems you’re trying to overcome in your program, etc.\n\nCode tells you how, comments should tell you why.\nThis is useful for readers of your program so that they can easily understand what the program is doing. Remember, that person can be yourself after six months!"
-  },
-  {
-    "objectID": "basics.html#literal-constants",
-    "href": "basics.html#literal-constants",
-    "title": "Constants, variables, and comments",
-    "section": "",
-    "text": "An example of a literal constant is a number like 5, 1.23, or a string like 'This is a string' or \"It's a string!\".\nIt is called a literal because it is literal - you use its value literally. The number 2 always represents itself and nothing else - it is a constant because its value cannot be changed. Hence, all these are referred to as literal constants."
-  },
-  {
-    "objectID": "basics.html#numbers",
-    "href": "basics.html#numbers",
-    "title": "Constants, variables, and comments",
-    "section": "",
-    "text": "Numbers are mainly of two types - integers and floats.\nAn example of an integer is 2 which is just a whole number.\nExamples of floating point numbers (or floats for short) are 3.23 and 52.3E-4. The E notation indicates powers of 10. In this case, 52.3E-4 means 52.3 * 10^-4^.\n\nNote for Experienced Programmers\nThere is no separate long type. The int type can be an integer of any size."
-  },
-  {
-    "objectID": "basics.html#strings",
-    "href": "basics.html#strings",
-    "title": "Constants, variables, and comments",
-    "section": "",
-    "text": "A string is a sequence of characters. Strings are basically just a bunch of words.\nYou will be using strings in almost every Python program that you write, so pay attention to the following part.\n\n\nYou can specify strings using single quotes such as 'Quote me on this'.\nAll white space i.e. spaces and tabs, within the quotes, are preserved as-is.\n\n\n\nStrings in double quotes work exactly the same way as strings in single quotes. An example is \"What's your name?\".\n\n\n\nYou can specify multi-line strings using triple quotes - (\"\"\" or '''). You can use single quotes and double quotes freely within the triple quotes. An example is:\n'''This is a multi-line string. This is the first line.\nThis is the second line.\n\"What's your name?,\" I asked.\nHe said \"Bond, James Bond.\"\n'''\n\n\n\nThis means that once you have created a string, you cannot change it. Although this might seem like a bad thing, it really isn’t. We will see why this is not a limitation in the various programs that we see later on.\n\nNote for C/C++ Programmers\nThere is no separate char data type in Python. There is no real need for it and I am sure you won’t miss it.\n\n\n\nNote for Perl/PHP Programmers\nRemember that single-quoted strings and double-quoted strings are the same - they do not differ in any way.\n\n\n\n\nSometimes we may want to construct strings from other information. This is where the format() method is useful.\nSave the following lines as a file str_format.py:\nage = 20\nname = 'Swaroop'\n\nprint('{0} was {1} years old when he wrote this book'.format(name, age))\nprint('Why is {0} playing with that python?'.format(name))\nOutput:\n$ python str_format.py\nSwaroop was 20 years old when he wrote this book\nWhy is Swaroop playing with that python?\nHow It Works\nA string can use certain specifications and subsequently, the format method can be called to substitute those specifications with corresponding arguments to the format method.\nObserve the first usage where we use {0} and this corresponds to the variable name which is the first argument to the format method. Similarly, the second specification is {1} corresponding to age which is the second argument to the format method. Note that Python starts counting from 0 which means that first position is at index 0, second position is at index 1, and so on.\nNotice that we could have achieved the same using string concatenation:\nname + ' is ' + str(age) + ' years old'\nbut that is much uglier and more error-prone. Second, the conversion to string would be done automatically by the format method instead of the explicit conversion to strings needed in this case. Third, when using the format method, we can change the message without having to deal with the variables used and vice-versa.\nAlso note that the numbers are optional, so you could have also written as:\nage = 20\nname = 'Swaroop'\n\nprint('{} was {} years old when he wrote this book'.format(name, age))\nprint('Why is {} playing with that python?'.format(name))\nwhich will give the same exact output as the previous program.\nWe can also name the parameters:\nage = 20\nname = 'Swaroop'\n\nprint('{name} was {age} years old when he wrote this book'.format(name=name, age=age))\nprint('Why is {name} playing with that python?'.format(name=name))\nwhich will give the same exact output as the previous program.\nPython 3.6 introduced a shorter way to do named parameters, called “f-strings”:\nage = 20\nname = 'Swaroop'\n\nprint(f'{name} was {age} years old when he wrote this book')  # notice the 'f' before the string\nprint(f'Why is {name} playing with that python?')  # notice the 'f' before the string\nwhich will give the same exact output as the previous program.\nWhat Python does in the format method is that it substitutes each argument value into the place of the specification. There can be more detailed specifications such as:\n# decimal (.) precision of 3 for float '0.333'\nprint('{0:.3f}'.format(1.0/3))\n# fill with underscores (_) with the text centered\n# (^) to 11 width '___hello___'\nprint('{0:_^11}'.format('hello'))\n# keyword-based 'Swaroop wrote A Byte of Python'\nprint('{name} wrote {book}'.format(name='Swaroop', book='A Byte of Python'))\nOutput:\n0.333\n___hello___\nSwaroop wrote A Byte of Python\nSince we are discussing formatting, note that print always ends with an invisible “new line” character (\\n) so that repeated calls to print will all print on a separate line each. To prevent this newline character from being printed, you can specify that it should end with a blank:\nprint('a', end='')\nprint('b', end='')\nOutput is:\nab\nOr you can end with a space:\nprint('a', end=' ')\nprint('b', end=' ')\nprint('c')\nOutput is:\na b c\n\n\n\nSince the default end parameter is set to \\n it always prints one line break by default. We can change end to \\n\\n to print two line breaks – that creates an empty line after whatever the print statement output.\nprint(\"This is a line\", end = \"\\n\\n\") \nWe can also use print with no arguments to print just an empty line:\nprint() # prints an empty line \n\n\n\nSuppose, you want to have a string which contains a single quote ('), how will you specify this string? For example, the string is \"What's your name?\". You cannot specify 'What's your name?' because Python will be confused as to where the string starts and ends. So, you will have to specify that this single quote does not indicate the end of the string. This can be done with the help of what is called an escape sequence. You specify the single quote as \\' : notice the backslash. Now, you can specify the string as 'What\\'s your name?'.\nAnother way of specifying this specific string would be \"What's your name?\" i.e. using double quotes. Similarly, you have to use an escape sequence for using a double quote itself in a double quoted string. Also, you have to indicate the backslash itself using the escape sequence \\\\.\nWhat if you wanted to specify a two-line string? One way is to use a triple-quoted string as shown previously or you can use an escape sequence for the newline character - \\n to indicate the start of a new line. An example is:\n'This is the first line\\nThis is the second line'\nAnother useful escape sequence to know is the tab: \\t. There are many more escape sequences but I have mentioned only the most useful ones here.\nOne thing to note is that in a string, a single backslash at the end of the line indicates that the string is continued in the next line, but no newline is added. For example:\n\"This is the first sentence. \\\nThis is the second sentence.\"\nis equivalent to\n\"This is the first sentence. This is the second sentence.\"\n\n\n\nIf you need to specify some strings where no special processing such as escape sequences are handled, then what you need is to specify a raw string by prefixing r or R to the string. An example is:\nr\"Newlines are indicated by \\n\"\n\nNote for Regular Expression Users\nAlways use raw strings when dealing with regular expressions. Otherwise, a lot of backwhacking may be required. For example, backreferences can be referred to as '\\\\1' or r'\\1'."
-  },
-  {
-    "objectID": "basics.html#variable",
-    "href": "basics.html#variable",
-    "title": "Constants, variables, and comments",
-    "section": "",
-    "text": "Using just literal constants can soon become boring - we need some way of storing any information and manipulate them as well. This is where variables come into the picture. Variables are exactly what the name implies - their value can vary, i.e., you can store anything using a variable. Variables are just parts of your computer’s memory where you store some information. Unlike literal constants, you need some method of accessing these variables and hence you give them names."
-  },
-  {
-    "objectID": "basics.html#identifier-naming",
-    "href": "basics.html#identifier-naming",
-    "title": "Constants, variables, and comments",
-    "section": "",
-    "text": "Variables are examples of identifiers. Identifiers are names given to identify something. There are some rules you have to follow for naming identifiers:\n\nThe first character of the identifier must be a letter of the alphabet (uppercase ASCII or lowercase ASCII or Unicode character) or an underscore (_).\nThe rest of the identifier name can consist of letters (uppercase ASCII or lowercase ASCII or Unicode character), underscores (_) or digits (0-9).\nIdentifier names are case-sensitive. For example, myname and myName are not the same. Note the lowercase n in the former and the uppercase N in the latter.\nExamples of valid identifier names are i, name_2_3. Examples of invalid identifier names are 2things, this is spaced out, my-name and &gt;a1b2_c3."
-  },
-  {
-    "objectID": "basics.html#data-types",
-    "href": "basics.html#data-types",
-    "title": "Constants, variables, and comments",
-    "section": "",
-    "text": "Variables can hold values of different types called data types. The basic types are numbers and strings, which we have already discussed."
-  },
-  {
-    "objectID": "basics.html#object",
-    "href": "basics.html#object",
-    "title": "Constants, variables, and comments",
-    "section": "",
-    "text": "Remember, Python refers to anything used in a program as an object. This is meant in the generic sense. Instead of saying “the something”’, we say “the object”.\n\nNote for Object Oriented Programming users:\nPython is strongly object-oriented in the sense that everything is an object including numbers, strings and functions.\n\nWe will now see how to use variables along with literal constants. Save the following example and run the program."
-  },
-  {
-    "objectID": "basics.html#summary",
-    "href": "basics.html#summary",
-    "title": "Constants, variables, and comments",
-    "section": "",
-    "text": "Now that we have gone through many nitty-gritty details, we can move on to more interesting stuff such as functions. Be sure to become comfortable with what you have read in this chapter."
-  },
-  {
-    "objectID": "slides-09-02.html#announcements",
-    "href": "slides-09-02.html#announcements",
-    "title": "files and strings (class slides)",
-    "section": "Announcements",
-    "text": "Announcements\n\nCheck grades on D2L\nProject 5 due this Wednesday (Nov 8)\nNo class Friday November 10\nMidterm 3 on Wednesday November 15\n\ncontent: Midterm 2 + dictionaries + files + tuples (Modules 1-11)\n\nContact your TA if you want to go over your Midterm 2 answers (no extra credit for meetings anymore)"
-  },
-  {
-    "objectID": "slides-09-02.html#string-methods",
-    "href": "slides-09-02.html#string-methods",
-    "title": "files and strings (class slides)",
-    "section": "String methods",
-    "text": "String methods\n\nstring.strip(chars) – removes any of the characters in chars from the beginning or end of string, returns a string\nstring.split(chars) – splits string at the chars, returns a list\nstring.lower(string) – forces all characters to lowercase, returns a string"
-  },
-  {
-    "objectID": "slides-09-02.html#write-a-function",
-    "href": "slides-09-02.html#write-a-function",
-    "title": "files and strings (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\n\nIts name is sum_all\nIt takes a string file_name as argument\nIt reads the file with file_name in read mode\nIt iterates over each line in the file, stripping the line breaks, casting each line as integer (assume each line is a single number), summing each number to a total variable\nReturn the total\nDownload the text file for the test case below\n\n\nassert sum_all(\"numbers.txt\") == 15"
-  },
-  {
-    "objectID": "slides-09-02.html#write-a-function-solution",
-    "href": "slides-09-02.html#write-a-function-solution",
-    "title": "files and strings (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef sum_all(file_name):\n  total = 0\n  for line in open(file_name, \"r\"):\n    number = int(line.strip(\"\\n\"))\n    total += number\n  return total\n\ndef main():\n  assert sum_all(\"numbers.txt\") == 15\n\nmain()"
-  },
-  {
-    "objectID": "slides-09-02.html#modes",
-    "href": "slides-09-02.html#modes",
-    "title": "files and strings (class slides)",
-    "section": "Modes",
-    "text": "Modes\n\nTo read a file:\n\nUse ‘r’ for reading the contents of a file\n\nTo write to a file: use\n\nUse ‘a’ to append to the existing file content\nUse ‘w’ to write to a file, and replace existing content"
-  },
-  {
-    "objectID": "slides-09-02.html#writing-to-a-file",
-    "href": "slides-09-02.html#writing-to-a-file",
-    "title": "files and strings (class slides)",
-    "section": "Writing to a file",
-    "text": "Writing to a file\n\nAfter you have opened the file in either ‘a’ or ‘w’ mode\na_file = open(file_name, mode)\nUse the write function to write text content to the file\na_file.write('put this content in a file')\nWhen finished writing, close the file a_file.close()"
-  },
-  {
-    "objectID": "slides-09-02.html#evaluate-the-code",
-    "href": "slides-09-02.html#evaluate-the-code",
-    "title": "files and strings (class slides)",
-    "section": "Evaluate the code",
-    "text": "Evaluate the code\n\nwords = open('words.txt', 'w')\nwords.write('The slow wolf')\nwords.write('jumped over')\nwords.write('the bear')\nwords.close()"
-  },
-  {
-    "objectID": "slides-09-02.html#evaluate-the-code-1",
-    "href": "slides-09-02.html#evaluate-the-code-1",
-    "title": "files and strings (class slides)",
-    "section": "Evaluate the code",
-    "text": "Evaluate the code\n\nwords = open('words.txt', 'w')\nwords.write('The slow wolf\\n')\nwords.write('jumped over\\n')\nwords.write('the bear\\n')\nwords.close()"
-  },
-  {
-    "objectID": "slides-09-02.html#evaluate-the-code-2",
-    "href": "slides-09-02.html#evaluate-the-code-2",
-    "title": "files and strings (class slides)",
-    "section": "Evaluate the code",
-    "text": "Evaluate the code\n\nwords = open('words.txt', 'a')\nwords.write('The slow wolf\\n')\nwords.write('jumped over\\n')\nwords.write('the bear\\n')\nwords.close()"
-  },
-  {
-    "objectID": "slides-09-02.html#write-a-function-1",
-    "href": "slides-09-02.html#write-a-function-1",
-    "title": "files and strings (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\n\nIts name is write_word_count\nIt takes a string file_name as argument, it opens the file in read mode\nIt writes a comma separated file (“out_” + original filename), with the lowercase word as first value and count second\nDownload test file\n\nTest case:\n\nwrite_word_count(\"alien.txt\")\n# writes out out_alien.txt with word counts"
-  },
-  {
-    "objectID": "slides-09-02.html#write-a-function-solution-1",
-    "href": "slides-09-02.html#write-a-function-solution-1",
-    "title": "files and strings (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef count_words(file_name):\n  f = open(file_name, \"r\")\n  counts = {}\n  for line in f:\n    words = line.strip(\"\\n\").split(\" \")\n    for w in words:\n      lower_case_w = w.lower()\n      if lower_case_w not in counts:\n        counts[lower_case_w] = 1\n      else:\n        counts[lower_case_w] += 1\n  return counts\n\ndef write_word_count(file_name):\n  count_dict = count_words(file_name)\n  output_file = open(\"out_\" + file_name, \"w\")\n  for key, value in count_dict.items():\n    output_file.write(key + \",\" + str(value) + \"\\n\")\n  output_file.close()\n  \ndef main(): \n  write_word_count(\"alien.txt\")\n  \nmain()"
+    "text": "The Undergraduate Teaching Assistants (UGTAs or TAs) in this class are here to help. You are also welcome to send an email.\nThe best way to talk with a particular TA is via office hours, so check the schedule (scroll down this page).\n\nCourse Coordinators\nCourse coordinators are experienced UGTAs that assist the instructor with course management and will have a supervisory role with the course UGTAs.\n\nCole Perry\nEmma Elliott\n\n\n\nTAs\nUndergraduate Teaching Assistants (UGTAs) in the Department of Computer Science assist instructors in delivering undergraduate computer science courses. CS introductory courses utilize active learning and collaborative learning spaces to provide a collaborative and supportive environment for students learning programming skills. All teaching assistants have taken and excelled in the courses they support and are familiar with the material to mentor new students as they learn.\n\nAdan Baca\nAidan Linder\nCaeden Motley\nKhojiakbar Yokubjonov\nEthan Holley\nApurbo Barua\nLilian Wei\n\nInterested in becoming a TA in the future? Check out more information about what TAs do and how to apply.\n\n\nOffice Hours\nShown below is the office hours schedule. The in-person office hours are hosted in Gould-Simpson 856. Xinchen’s office hours are in GS 854. An (O) next to a name indicates that the office hour is online. For these office hours, check D2L for details."
   },
   {
     "objectID": "mutability.html",
@@ -4368,6 +4284,13 @@
     "text": "Write a function – solution\n\ndef remove_and_append(original_list, to_remove_list, to_append_list):\n  for item in to_remove_list:\n    if item in original_list:\n      original_list.remove(item)\n  original_list.extend(to_append_list)\n  return original_list\n\nif __name__ == \"__main__\":\n  test_list = [1, 2, 3]\n  remove_and_append(test_list, [2, 3, 4], [10, 11])\n  assert test_list == [1, 10, 11]\n  print(test_list) # [1, 10, 11]\n\n[1, 10, 11]"
   },
   {
+    "objectID": "slides-06-01.html#announcements",
+    "href": "slides-06-01.html#announcements",
+    "title": "lists (class slides)",
+    "section": "Announcements",
+    "text": "Announcements\n\nProblems 9 and 10, and Short Project 04 due today\nProject 04 due Monday"
+  },
+  {
     "objectID": "slides-06-01.html#sequences",
     "href": "slides-06-01.html#sequences",
     "title": "lists (class slides)",
@@ -4473,11 +4396,32 @@
     "text": "Max solution\n\nWhat about empty lists?\nHow to get the min instead?"
   },
   {
-    "objectID": "slides-06-01.html#removing-last-item-in-a-list",
-    "href": "slides-06-01.html#removing-last-item-in-a-list",
+    "objectID": "slides-06-01.html#write-a-function-1",
+    "href": "slides-06-01.html#write-a-function-1",
     "title": "lists (class slides)",
-    "section": "Removing last item in a list",
-    "text": "Removing last item in a list\n\nRange – list[2:4]\nWhole list – list[:]\nEverything but last character – list[:-1]\n\nThe same slicing can be done with strings"
+    "section": "Write a function",
+    "text": "Write a function\n\nIts name is double\nIt takes a list of numeric variables as argument\nIt iterates over the list (use while) doubling (multiplying by two) each value in the list\nIt returns the modified list\n\n\nassert double([0, 1, 2, 3]) == [0, 2, 4, 6]"
+  },
+  {
+    "objectID": "slides-06-01.html#write-a-function-solution-1",
+    "href": "slides-06-01.html#write-a-function-solution-1",
+    "title": "lists (class slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\n\ndef double(numbers):\n  index = 0\n  while index &lt; len(numbers):\n    numbers[index] *= 2\n    index += 1\n  return numbers\n\ndef main():\n  original_list = [0, 1, 2, 3]\n  new_list = double(original_list)\n  assert original_list == new_list\n  assert original_list == [0, 2, 4, 6]\n  \n  print(\"Passed all tests\")\n  \nmain()"
+  },
+  {
+    "objectID": "slides-06-01.html#submit-attendance",
+    "href": "slides-06-01.html#submit-attendance",
+    "title": "lists (class slides)",
+    "section": "Submit attendance",
+    "text": "Submit attendance\nName your file double.py and submit it to gradescope."
+  },
+  {
+    "objectID": "slides-06-01.html#slicing-lists",
+    "href": "slides-06-01.html#slicing-lists",
+    "title": "lists (class slides)",
+    "section": "Slicing lists",
+    "text": "Slicing lists\n\nRange – list[2:4]\nWhole list – list[:]\nEverything but last character – list[:-1]\n\nThe same slicing can be done with strings"
   },
   {
     "objectID": "slides-14-02.html#announcements",
@@ -4704,46 +4648,39 @@
     "text": "(2) Word search\nHorizontal search is a bit easier than vertical mode, so I recommend that you work on this first. Create a function for this, and pass it the word dictionary, the grid file, and the mode. Iterate through the lines of the file one-at-a-time. For each line you encounter, you can search for all of the words in the word dictionary to see if you can find it.\nIf you try to do all of this in one function, you will probably end up with 3 or 4 levels of nested loops, which can get rather disorganized. I recommend that you create another function, perhaps called something like search_within_line that handles processing one line of searching. The horizontal function can call this for each line that it encounters.\nThere will be separate test cases for horizontal and for vertical. I recommend that you get the horizontal ones to pass before moving on to vertical.\nIn vertical search, you have to search for the words in the columns of the grid, rather than the rows. This is a bit more complex, but still very do-able. The way you should go about this is create a loop where you iterate through the column indexes. Within this loop, create another loop that goes through every character in that column and creates a list of those characters. Then, you can treat this column as if it is a row."
   },
   {
+    "objectID": "slides-06-02.html#random-module",
+    "href": "slides-06-02.html#random-module",
+    "title": "random (class slides)",
+    "section": "random module",
+    "text": "random module\nWe need to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random()\nprint(n)\n\nn = random.randint(0, 9)\nprint(n)\n\n0.6671687421875748\n9"
+  },
+  {
     "objectID": "slides-06-02.html#write-a-function",
     "href": "slides-06-02.html#write-a-function",
-    "title": "lists (class slides)",
+    "title": "random (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is double\nIt takes a list of numeric variables as argument\nIt iterates over the list (use while) doubling (multiplying by two) each value in the list\nIt returns the modified list\n\n\nassert double([0, 1, 2, 3]) == [0, 2, 4, 6]"
+    "text": "Write a function\n\nFunction name is pick_winner\nIt takes a list as argument\nIt generates a random index, and returns the item at that position\n\n\nwinner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\nprint(winner)"
   },
   {
     "objectID": "slides-06-02.html#write-a-function-solution",
     "href": "slides-06-02.html#write-a-function-solution",
-    "title": "lists (class slides)",
+    "title": "random (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef double(numbers):\n  index = 0\n  while index &lt; len(numbers):\n    numbers[index] *= 2\n    index += 1\n  return numbers\n\ndef main():\n  original_list = [0, 1, 2, 3]\n  new_list = double(original_list)\n  assert original_list == new_list\n  assert original_list == [0, 2, 4, 6]\n  \n  print(\"Passed all tests\")\n  \nmain()\n\nLet’s visualize this on Python Tutor"
+    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nMary"
   },
   {
-    "objectID": "slides-06-02.html#write-a-function-1",
-    "href": "slides-06-02.html#write-a-function-1",
-    "title": "lists (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\n\nIts name is shift_left\nIt takes a list as argument\nIt copies the next item in the list to the current position (item at index 1 is copied to item at index 0, item at position 2 is copied to item at index 1 and so on). The last item in the list will be None, the first item is discarded (don’t change size of the list)\nIt uses a while loop\nIt returns the modified list\n\n\nassert shift_left([\"a\", \"b\", \"c\", \"d\"]) == [\"b\", \"c\", \"d\", None]"
+    "objectID": "slides-06-02.html#setting-a-seed",
+    "href": "slides-06-02.html#setting-a-seed",
+    "title": "random (class slides)",
+    "section": "Setting a seed",
+    "text": "Setting a seed\nWhat happens when you run pick_winner multiple times?\nTo get always the same result (for autograding purposes, for example) we can set a seed.\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  random.seed(123)\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nPeter"
   },
   {
-    "objectID": "slides-06-02.html#write-a-function-solution-1",
-    "href": "slides-06-02.html#write-a-function-solution-1",
-    "title": "lists (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef shift_left(items):\n  index = 0\n  while index &lt; len(items)-1:\n    items[index] = items[index+1]\n    index += 1\n  items[index] = None\n  return items\n\ndef main():\n  original_list = [\"a\", \"b\", \"c\", \"d\"]\n  new_list = shift_left(original_list)\n  assert new_list == [\"b\", \"c\", \"d\", None]\n  assert original_list == new_list\n  \n  print(\"Passes all tests\")\n  \nmain()\n\nPasses all tests"
-  },
-  {
-    "objectID": "slides-06-02.html#write-a-function-2",
-    "href": "slides-06-02.html#write-a-function-2",
-    "title": "lists (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\n\nIts name is shift_right\nIt takes a list as argument\nIt copies the previous item in the list to the current position (item at index 0 is copied to item at index 1, item at position 1 is copied to item at index 2 and so on). The last item in the list is discarded (don’t change size of the list)\nIt uses a while loop\nIt returns the modified list\n\n\nassert shift_right([\"a\", \"b\", \"c\", \"d\"]) == [None, \"a\", \"b\", \"c\"]"
-  },
-  {
-    "objectID": "slides-06-02.html#write-a-function-solution-2",
-    "href": "slides-06-02.html#write-a-function-solution-2",
-    "title": "lists (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef shift_right(items):\n  index = len(items) - 1\n  while index &gt; 0:\n    items[index] = items[index-1]\n    index -= 1\n  items[0] = None\n  return items\n\ndef main():\n  original_list = [\"a\", \"b\", \"c\", \"d\"]\n  new_list = shift_right(original_list)\n  assert new_list == [None, \"a\", \"b\", \"c\"]\n  assert original_list == new_list\n  \n  print(\"Passed all tests\")\n  \nmain()\n\nPassed all tests"
+    "objectID": "slides-06-02.html#changing-a-list-with-random-numbers",
+    "href": "slides-06-02.html#changing-a-list-with-random-numbers",
+    "title": "random (class slides)",
+    "section": "Changing a list with random numbers",
+    "text": "Changing a list with random numbers\nWrite a function that takes as argument a list of integers. Iterate over each list element (with a while loop), replacing each integer with a random number between zero and the original integer.\nTest case:\n\nnumbers = [3, 2, 1, 3, 5]\nnumbers = random_list(numbers)\nprint(numbers)\n\n[0, 1, 0, 3, 2]"
   },
   {
     "objectID": "slides-14-02-old.html#tuples-as-dictionary-keys",
@@ -5311,40 +5248,5 @@
     "title": "Module 1 Assignments",
     "section": "",
     "text": "Programming Problems should be submitted to gradescope.\nIf you need instructions on how to submit your .py files to gradescope, watch the video at the end of this page.\n\nSurvey\nDue date: Friday, January 12, 2024 at 9pm\nhttps://uarizona.co1.qualtrics.com/jfe/form/SV_0q8KC0FwVhCiYD4\nThis is a survey to collect information on your expectations for CSc 110 Computer Programming I. The completion of this survey is required and will be used for grading purposes.\n\n\nProgramming Problem 1\nDue date: Thursday, January 18, 2024 at 9pm\nWrite a python program that prints out the string “Hello World!”. Be careful with capitalization and punctuation. Remember to write code inside a function called main().\nThe exact output of the program should be:\nHello World!\n\nName the program hello.py. Make sure that gradescope gives you the points for passing the test case.\n\n\nProgramming Problem 2\nDue date: Thursday, January 18, 2024 at 9pm\nWrite a python program that prints out the following excerpt from Amanda Gorman’s poem, “The Hill We Climb”:\nWhen day comes, we ask ourselves, where can we find light in this never-ending shade?\n\nThe loss we carry. A sea we must wade.\nWe braved the belly of the beast.\n\nWe've learned that quiet isn't always peace, \nand the norms and notions of what \"just\" is isn't always justice.\n\nAnd yet the dawn is ours before we knew it.\n\nSomehow we do it.\n\nName the program poem.py. Remember to write code inside a function called main(). Make sure that gradescope gives you the points for passing the test case. You can submit your solution to gradescope as many times as you want before the deadline.\nHINT: print() has a parameter called end which is set as end=\"\\n\" by default – change that to end=\"\" to remove the last newline character.\nMake sure you do the reading for this module, especially the section on Escape Sequences\n\n\nHow to submit to gradescope video"
-  },
-  {
-    "objectID": "slides-06-01.html#announcements",
-    "href": "slides-06-01.html#announcements",
-    "title": "lists (class slides)",
-    "section": "Announcements",
-    "text": "Announcements\n\nProblems 9 and 10, and Short Project 04 due today\nProject 04 due Monday"
-  },
-  {
-    "objectID": "slides-06-01.html#write-a-function-1",
-    "href": "slides-06-01.html#write-a-function-1",
-    "title": "lists (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\n\nIts name is double\nIt takes a list of numeric variables as argument\nIt iterates over the list (use while) doubling (multiplying by two) each value in the list\nIt returns the modified list\n\n\nassert double([0, 1, 2, 3]) == [0, 2, 4, 6]"
-  },
-  {
-    "objectID": "slides-06-01.html#write-a-function-solution-1",
-    "href": "slides-06-01.html#write-a-function-solution-1",
-    "title": "lists (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef double(numbers):\n  index = 0\n  while index &lt; len(numbers):\n    numbers[index] *= 2\n    index += 1\n  return numbers\n\ndef main():\n  original_list = [0, 1, 2, 3]\n  new_list = double(original_list)\n  assert original_list == new_list\n  assert original_list == [0, 2, 4, 6]\n  \n  print(\"Passed all tests\")\n  \nmain()"
-  },
-  {
-    "objectID": "slides-06-01.html#submit-attendance",
-    "href": "slides-06-01.html#submit-attendance",
-    "title": "lists (class slides)",
-    "section": "Submit attendance",
-    "text": "Submit attendance\nName your file double.py and submit it to gradescope."
-  },
-  {
-    "objectID": "slides-06-01.html#slicing-lists",
-    "href": "slides-06-01.html#slicing-lists",
-    "title": "lists (class slides)",
-    "section": "Slicing lists",
-    "text": "Slicing lists\n\nRange – list[2:4]\nWhole list – list[:]\nEverything but last character – list[:-1]\n\nThe same slicing can be done with strings"
   }
 ]

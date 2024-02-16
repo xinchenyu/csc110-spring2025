@@ -95,7 +95,6 @@ website:
         - control_flow_for.md
         - slides-07-01.qmd
         - slides-07-02.qmd
-        - slides-07-03.qmd
         - assignments-07.qmd
       - section: "Module 8 - Data Structures (dictionaries)"
         contents:
