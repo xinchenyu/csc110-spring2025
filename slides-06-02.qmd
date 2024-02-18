@@ -106,3 +106,9 @@ numbers = [3, 2, 1, 3, 5]
 numbers = random_list(numbers)
 print(numbers)
 ```
+
+# Submit for gradescope attendance
+
+Submit your `random_list` to gradescope.
+
+Name your file `random_list.py` and remember to set a seed.
