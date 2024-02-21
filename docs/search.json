@@ -3238,7 +3238,7 @@
     "href": "slides-07-01.html#write-a-function-solution",
     "title": "mutability (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef make_all_even(integers):\n  index = 0\n  while index &lt; len(integers):\n    if integers[index] % 2 == 1:\n      integers[index] += 1\n    index += 1\n  return integers\n      \ndef main():\n  test_integers = [1, 2, 3, 4]\n  assert make_all_even(test_integers) == test_integers\n  assert test_integers == [2, 2, 4, 4]\n  print(test_integers) # we print the list we created before function call\n  \nmain()\n\n[2, 2, 4, 4]\n\n\nLet’s visualize this on Python Tutor"
+    "text": "Write a function – solution\n\ndef indices_of_vowels(string):\n  result = [] # initialize empty list to hold indices\n  index = 0 # initialize index\n  while index &lt; len(string):\n    if string[index] in \"aeiou\": # check if character is vowel\n      result.append(index) # append index to result\n    index += 1 # increment index\n    \n  return result\n\ndef main():\n  assert indices_of_vowels(\"hello\") == [1, 4]\n  assert indices_of_vowels(\"\") == []\n  assert indices_of_vowels(\"aeiou\") == [0, 1, 2, 3, 4]\n  print(\"Passed all tests.\")\n\nmain()\n\nPassed all tests."
   },
   {
     "objectID": "slides-07-01.html#object-references",
@@ -3342,8 +3342,8 @@
     "objectID": "slides-07-01.html#write-a-function-solution-1",
     "href": "slides-07-01.html#write-a-function-solution-1",
     "title": "mutability (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef indices_of_vowels(string):\n  result = [] # initialize empty list to hold indices\n  index = 0 # initialize index\n  while index &lt; len(string):\n    if string[index] in \"aeiou\": # check if character is vowel\n      result.append(index) # append index to result\n    index += 1 # increment index\n    \n  return result\n\ndef main():\n  assert indices_of_vowels(\"hello\") == [1, 4]\n  assert indices_of_vowels(\"\") == []\n  assert indices_of_vowels(\"aeiou\") == [0, 1, 2, 3, 4]\n  print(\"Passed all tests.\")\n\nmain()\n\nPassed all tests."
+    "section": "Write a function – solution 1",
+    "text": "Write a function – solution 1\n\ndef make_all_even(integers):\n  index = 0\n  while index &lt; len(integers):\n    if integers[index] % 2 == 1:\n      integers[index] += 1\n    index += 1\n  return integers\n      \ndef main():\n  test_integers = [1, 2, 3, 4]\n  assert make_all_even(test_integers) == test_integers\n  assert test_integers == [2, 2, 4, 4]\n  print(test_integers) # we print the list we created before function call\n  \nmain()\n\n[2, 2, 4, 4]\n\n\nLet’s visualize this on Python Tutor"
   },
   {
     "objectID": "slides-07-01.html#write-a-function-2",
@@ -3356,8 +3356,8 @@
     "objectID": "slides-07-01.html#write-a-function-solution-2",
     "href": "slides-07-01.html#write-a-function-solution-2",
     "title": "mutability (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef reverse_list(items):\n  index = len(items) - 1 # initialize index\n  inverted_list = []\n  while index &gt;= 0:\n    inverted_list.append(items[index])\n    index -= 1\n  return inverted_list\n    \ndef main():\n  test_strings = [\"banana\", \"apple\", \"grape\"]\n  assert reverse_list(test_strings) == [\"grape\", \"apple\", \"banana\"]\n  print(\"Passed test\")\n  \nmain()\n\nPassed test"
+    "section": "Write a function – solution 2",
+    "text": "Write a function – solution 2\n\ndef make_all_even(integers):\n  index = 0\n  while index &lt; len(integers):\n    integers[index] += integers[index] % 2\n    index += 1\n  return integers\n      \ndef main():\n  test_integers = [1, 2, 3, 4]\n  assert make_all_even(test_integers) == test_integers\n  assert test_integers == [2, 2, 4, 4]\n  print(test_integers) # we print the list we created before function call\n  \nmain()\n\n[2, 2, 4, 4]"
   },
   {
     "objectID": "slides-03-02.html#write-a-function",
@@ -5255,5 +5255,19 @@
     "title": "lists (class slides)",
     "section": "Max solution - empty lists",
     "text": "Max solution - empty lists\n\ndef max_list(numbers):\n  max = None\n  index = 0\n  while index &lt; len(numbers):\n    if max == None or numbers[index] &gt; max:\n      max = numbers[index]\n    index += 1\n  return max\n\ndef main():\n  print( max_list([2, 1, 3, 1]) ) # 3\n  print( max_list([]) ) # None\n\nmain()\n\n3\nNone"
+  },
+  {
+    "objectID": "slides-07-01.html#write-a-function-solution-3",
+    "href": "slides-07-01.html#write-a-function-solution-3",
+    "title": "mutability (class slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\n\ndef reverse_list(items):\n  index = len(items) - 1 # initialize index\n  inverted_list = []\n  while index &gt;= 0:\n    inverted_list.append(items[index])\n    index -= 1\n  return inverted_list\n    \ndef main():\n  test_strings = [\"banana\", \"apple\", \"grape\"]\n  assert reverse_list(test_strings) == [\"grape\", \"apple\", \"banana\"]\n  print(\"Passed test\")\n  \nmain()\n\nPassed test"
+  },
+  {
+    "objectID": "slides-07-01.html#quiz-03",
+    "href": "slides-07-01.html#quiz-03",
+    "title": "mutability (class slides)",
+    "section": "Quiz 03",
+    "text": "Quiz 03\n\n\ncurrent time\n\n\n\n\n\n\nYou have 15 minutes to complete. There are 2 problems.\n\nNo need for comments and a main.py\nJust write your function\nDO NOT USE NESTED CONDITIONALS\n\nBuilt-in functions you can choose to use: round(), input(), float(), str(), int()"
   }
 ]
