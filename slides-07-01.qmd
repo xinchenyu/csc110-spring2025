@@ -7,6 +7,13 @@ df-print: kable
 
 # CSc 110 - Mutability
 
+## Announcements
+
+* Academic integrity 
+* Extra 0.5 point - meet with TAs to go through the questions where you got wrong in midterm 1 by next Friday.
+* TAs of your section will reach out to you this week.
+
+
 ## Lists vs strings
 
 -   Lists are **mutable**

@@ -5269,5 +5269,12 @@
     "title": "mutability (class slides)",
     "section": "Quiz 03",
     "text": "Quiz 03\n\n\ncurrent time\n\n\n\n\n\n\nYou have 15 minutes to complete. There are 2 problems.\n\nNo need for comments and a main.py\nJust write your function\nDO NOT USE NESTED CONDITIONALS\n\nBuilt-in functions you can choose to use: round(), input(), float(), str(), int()"
+  },
+  {
+    "objectID": "slides-07-01.html#announcements",
+    "href": "slides-07-01.html#announcements",
+    "title": "mutability (class slides)",
+    "section": "Announcements",
+    "text": "Announcements\n\nAcademic integrity\nExtra 0.5 point - meet with TAs to go through the questions where you got wrong in midterm 1 by next Friday.\nTAs of your section will reach out to you this week."
   }
 ]
