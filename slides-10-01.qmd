@@ -1,0 +1,216 @@
+---
+title: "returning tuples (class slides)"
+format: revealjs
+slide-number: true
+df-print: kable
+---
+
+# CSc 110 - returning tuples
+
+
+## Announcements
+
+* No class Friday November 10
+* Midterm 3 on Wednesday November 15 (bring PHOTO ID)
+  * content: Midterm 2 + dictionaries + files + tuples (Modules 1-10)
+  * Review session: Tuesday, Nov 14, 5pm to 7pm, same room as lecture
+
+## What are tuples?
+
+-   **immutable** lists
+
+-   a sequence of zero or more values (just like lists)
+
+-   addressable by index (just like lists)
+
+-   iterable (just like lists)
+
+## tuple syntax
+
+Use `()` to create a new tuple:
+
+```{python}
+#| eval: true
+#| echo: true
+my_tuple = (2, 4, 6)
+my_tuple[0]
+```
+
+```{python}
+#| eval: true
+#| echo: true
+my_tuple[2]
+```
+
+Empty tuple:
+
+```{python}
+#| eval: true
+#| echo: true
+empty = ()
+empty
+```
+
+## `tuples` are immutable
+
+No assignment is allowed
+
+```{python}
+#| eval: false
+#| echo: true
+my_tuple = (2, 4, 6)
+my_tuple[1] = 99 # will fail and cause an exception
+```
+
+## Why use tuples?
+
+* They are a little more efficient than lists
+* They can be used as dictionary keys (**important**)
+* They are used in Python a lot, so you need to understand them, even if you don't use them
+* When functions return multiple values, it returns a tuple
+
+## Returning multiple values in a function
+
+```{python}
+#| eval: true
+#| echo: true
+def descr_stats(numbers):
+  total = 0
+  for n in numbers:
+    total += n
+  return total, total/len(numbers)
+
+def main():
+  grades = [90, 87, 83, 95, 100]
+  total, mean = descr_stats(grades)
+  assert total == 455
+  assert mean == 91.0
+
+main()
+```
+
+## Write a function
+
+1. Its name is `low_high`
+1. It takes two numbers as argument: `x` and `y`
+1. It returns a tuple with the lowest number first, the highest number second
+
+```{python}
+#| eval: false
+#| echo: true
+assert low_high(4, 2) == (2, 4)
+assert low_high(1, 5) == (1, 5)
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def low_high(x, y):
+  if x < y:
+    return x, y
+  else:
+    return y, x
+  
+def main():
+  assert low_high(4, 2) == (2, 4)
+  assert low_high(1, 5) == (1, 5)
+  
+  print("Passed tests.")
+  
+main()
+```
+
+# Submit code for attendance
+
+Submit your `low_high` functions to Gradescope for attendance.
+
+Name your file `low_high.py`
+
+## Write a function
+
+1. Its name is `sum_and_multiplication`
+1. It takes a `dictionary` as argument
+1. It iterates over the dictionary values, summing all the values and multiplying all the values (create two separate variables, one for the addition and another for the multiplication)
+1. It returns the sum and the multiplication of the values in the dictionary
+
+```{python}
+#| eval: false
+#| echo: true
+test_dict = {"a": 2, "b": 3, "c": 5}
+total, mult = sum_and_multiplication(test_dict)
+assert total == 10
+assert mult == 30
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def sum_and_multiplication(dictionary):
+  total = 0
+  multiplication = 1
+  for key in dictionary:
+    total += dictionary[key]
+    multiplication *= dictionary[key]
+    
+  return total, multiplication
+
+def main():
+  test_dict = {"a": 2, "b": 3, "c": 5}
+  total, mult = sum_and_multiplication(test_dict)
+  assert total == 10
+  assert mult == 30
+  
+main()
+```
+
+## Write a function
+
+1. Its name is `odds_and_evens`
+1. It takes one list of `integers` as argument
+1. It returns two lists: one with all the odd numbers in `integers`, and another with all the even numbers in `integers`
+
+```{python}
+#| eval: false
+#| echo: true
+print( odds_and_evens([2,6,1]) ) # ([1], [2,6])
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def odds_and_evens(integers):
+  odds = []
+  evens = []
+  for n in integers:
+    if n % 2 == 0:
+      evens.append(n)
+    else:
+      odds.append(n)
+  return odds, evens
+      
+def main():
+  print( odds_and_evens([2,6,1]) ) # ([1], [2,6])
+  
+main()
+```
+
+## Quiz 10
+
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+</center>
+
+You have 10 minutes to complete the quiz
+
+Version A: key first (typo)
+
+* No need for comments, no need for a `main()`, no need for test cases
+
+Allowed built-in functions: `round()`, `input()`, `float()`, `str()`, `int()`, `len()`, `range()`, `open()` 

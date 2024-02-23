@@ -1,0 +1,33 @@
+---
+title: "About these materials"
+---
+
+# Class Materials
+
+Slides, programming problems and projects are based on previous iterations of this course. These materials are derived from ones developed by [Ben Dicken](https://benjdd.com/), [Todd Proebsting](http://proebsting.cs.arizona.edu/), [Adriana Picoral](https://adrianapicoral.com/) and other UArizona CS faculty.
+
+Selling class notes and/or other course materials to other students or to a third party for resale is not permitted without the instructor's express written consent. Violations to this and other course rules are subject to the Code of Academic Integrity and may result in course sanctions. Additionally, students who use D2L or UA e-mail to sell or buy these copyrighted materials are subject to Code of Conduct Violations for misuse of student e-mail addresses. This conduct may also constitute copyright infringement.
+
+# Readings
+
+The readings for this course are a modified version of ["A Byte of Python"](https://python.swaroopch.com/)-- a free book on programming using the Python language. This texbook is good for beginners as well as for experts, and more importantly, is fun to program with. The book originally aims to help you learn this wonderful language and show how to get things done quickly and painlessly.
+
+## **License**
+
+This book is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+
+This means:
+
+-   You are free to Share i.e. to copy, distribute and transmit this book
+
+-   You are free to Remix i.e. to make changes to this book (especially translations)
+
+-   You are free to use it for commercial purposes
+
+Please note:
+
+-   Please do *not* sell electronic or printed copies of the book unless you have clearly and prominently mentioned in the description that these copies are *not* from the original author of this book.
+
+-   Attribution *must* be shown in the introductory description and front page of the document by linking back to [https://python.swaroopch.com](https://python.swaroopch.com/) and clearly indicating that the original text can be fetched from this location.
+
+-   All the code/scripts provided in this book is licensed under the [3-clause BSD License](http://www.opensource.org/licenses/bsd-license.php) unless otherwise noted.
