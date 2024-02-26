@@ -9,12 +9,7 @@ df-print: kable
 
 ## Announcements
 
-* Midterm 2 on October 25 (Wednesday), in this room (BRING PHOTO ID)
-  * Content of Midterm 2: modules 1-7
-* Review session on October 24 (Tuesday), in this room
-* Last day to withdraw is October 29 (<https://registrar.arizona.edu/dates-and-deadlines>) -- you will have ~70% of your grade in by then
-* Check grades on D2L
-* Quiz 9-12, Nov 1, Nov 8, Nov 29, Dec 6
+* Last lab for short project 06 is Today -- no lab for the rest of the week, we re-start lab sessions Monday March 11
 
 
 # Dictionaries
@@ -41,13 +36,13 @@ df-print: kable
 
 ## Mapping
 
--   Lists (sort of) map **keys** to **values** too!
+-   Lists map **keys** to **values** too!
 
-    -   Indexes **of** the list are the **keys**
+    -   Indices **of** the list are the **keys**
 
     -   Elements **in** the list are the **values**
 
--   Keys (indexes) are used to accessing or modifying the elements in the list
+-   Keys (indices) are used to acess or modify the elements in the list
 
 ![](images/list_key_value.png)
 
@@ -61,7 +56,7 @@ numbers = [12, 49, -2, 26, 5, 17, -6]
 
 -   What are the keys?
 -   What are the values?
--   Which keys "map" to which values?
+-   Which keys map to which values?
 
 ## Mapping and Lists
 
@@ -227,7 +222,7 @@ scores['B'] = 20     # Changes value associated with a key
 
 scores['C']    # Retrieves a value, given a key
 
-del scores['E']      # Removes a key/value pair
+scores.pop('E')      # Removes a key/value pair
 ```
 
 ## The `in` operator
@@ -263,7 +258,7 @@ word_count = {"and": 324, "why": 134, "cannot": 76, "Sanded": 13}
 1.  Its name is `count_vowels`
 2.  It takes a `string` argument
 3.  It creates a `dictionary`
-4.  It returns the `dictionary` with the count of every lowercase vowel in `string`
+4.  It returns the `dictionary` with the count of every lowercase vowel in `string` (iterate over the string with a for loop)
 
 ```{python}
 #| eval: false
@@ -292,11 +287,6 @@ def main():
 main()
 ```
 
-# Submit code for attendance
-
-Submit your `count_vowels` function to Gradescope for attendance.
-
-Name your file `count_vowel_dict.py`
 
 ## Write a function
 

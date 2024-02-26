@@ -403,14 +403,7 @@
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li>Midterm 2 on October 25 (Wednesday), in this room (BRING PHOTO ID)
-<ul>
-<li>Content of Midterm 2: modules 1-7</li>
-</ul></li>
-<li>Review session on October 24 (Tuesday), in this room</li>
-<li>Last day to withdraw is October 29 (<a href="https://registrar.arizona.edu/dates-and-deadlines" class="uri">https://registrar.arizona.edu/dates-and-deadlines</a>) – you will have ~70% of your grade in by then</li>
-<li>Check grades on D2L</li>
-<li>Quiz 9-12, Nov 1, Nov 8, Nov 29, Dec 6</li>
+<li>Last lab for short project 06 is Today – no lab for the rest of the week, we re-start lab sessions Monday March 11</li>
 </ul>
 </section></section>
 <section>
@@ -442,12 +435,12 @@
 <section id="mapping-1" class="slide level2">
 <h2>Mapping</h2>
 <ul>
-<li><p>Lists (sort of) map <strong>keys</strong> to <strong>values</strong> too!</p>
+<li><p>Lists map <strong>keys</strong> to <strong>values</strong> too!</p>
 <ul>
-<li><p>Indexes <strong>of</strong> the list are the <strong>keys</strong></p></li>
+<li><p>Indices <strong>of</strong> the list are the <strong>keys</strong></p></li>
 <li><p>Elements <strong>in</strong> the list are the <strong>values</strong></p></li>
 </ul></li>
-<li><p>Keys (indexes) are used to accessing or modifying the elements in the list</p></li>
+<li><p>Keys (indices) are used to acess or modify the elements in the list</p></li>
 </ul>
 
 <img data-src="images/list_key_value.png" class="r-stretch"></section>
@@ -459,7 +452,7 @@
 <ul>
 <li>What are the keys?</li>
 <li>What are the values?</li>
-<li>Which keys “map” to which values?</li>
+<li>Which keys map to which values?</li>
 </ul>
 </section>
 <section id="mapping-and-lists-1" class="slide level2">
@@ -623,7 +616,7 @@
 <span id="cb20-6"><a href="#cb20-6"></a></span>
 <span id="cb20-7"><a href="#cb20-7"></a>scores[<span class="st">'C'</span>]    <span class="co"># Retrieves a value, given a key</span></span>
 <span id="cb20-8"><a href="#cb20-8"></a></span>
-<span id="cb20-9"><a href="#cb20-9"></a><span class="kw">del</span> scores[<span class="st">'E'</span>]      <span class="co"># Removes a key/value pair</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb20-9"><a href="#cb20-9"></a>scores.pop(<span class="st">'E'</span>)      <span class="co"># Removes a key/value pair</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="the-in-operator" class="slide level2">
@@ -657,7 +650,7 @@
 <li>Its name is <code>count_vowels</code></li>
 <li>It takes a <code>string</code> argument</li>
 <li>It creates a <code>dictionary</code></li>
-<li>It returns the <code>dictionary</code> with the count of every lowercase vowel in <code>string</code></li>
+<li>It returns the <code>dictionary</code> with the count of every lowercase vowel in <code>string</code> (iterate over the string with a for loop)</li>
 </ol>
 <div class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1"></a><span class="bu">print</span>( count_vowels(<span class="st">""</span>) ) <span class="co"># {"a": 0, "e": 0, "i": 0, "o": 0, "u": 0}</span></span>
@@ -685,12 +678,6 @@
 {'a': 1, 'e': 2, 'i': 1, 'o': 0, 'u': 0}</code></pre>
 </div>
 </div>
-</section></section>
-<section>
-<section id="submit-code-for-attendance" class="title-slide slide level1 center">
-<h1>Submit code for attendance</h1>
-<p>Submit your <code>count_vowels</code> function to Gradescope for attendance.</p>
-<p>Name your file <code>count_vowel_dict.py</code></p>
 </section>
 <section id="write-a-function-1" class="slide level2">
 <h2>Write a function</h2>
