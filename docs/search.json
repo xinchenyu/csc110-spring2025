@@ -5290,5 +5290,12 @@
     "title": "for loops with range (class slides)",
     "section": "Write a function – solution",
     "text": "Write a function – solution\n\ndef add_every_two(numbers):\n  result = 0\n  for i in range(0, len(numbers), 2):\n    result += numbers[i]\n  return result\n\ndef main():\n  my_numbers = [0, 1, 0, 3, 0]\n  assert add_every_two(my_numbers) == 0\n  \nmain()"
+  },
+  {
+    "objectID": "slides-08-02.html#introducing-for-x-in-string",
+    "href": "slides-08-02.html#introducing-for-x-in-string",
+    "title": "for loops – iterating over items (class slides)",
+    "section": "Introducing for x in string:",
+    "text": "Introducing for x in string:\n\nstring = \"hello\"\nfor n in string:\n  print(n)\n\nh\ne\nl\nl\no"
   }
 ]

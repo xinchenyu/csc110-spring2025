@@ -24,6 +24,16 @@ for i in range(len(numbers)):
   print(numbers[i])
 ```
 
+## Introducing `for x in string:`
+
+```{python}
+#| echo: true
+#| eval: true
+string = "hello"
+for n in string:
+  print(n)
+```
+
 ## Introducing `for x in list:`
 
 ```{python}
