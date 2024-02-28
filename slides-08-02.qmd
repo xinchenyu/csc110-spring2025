@@ -7,6 +7,12 @@ df-print: kable
 
 # CSc 110 - the other type of `for` loop
 
+## Announcements
+
+* We will add one more quiz. The quiz 04 will be on Mar 13 (list and dictionary).
+
+* Midterm 2 will be on Mar 27.
+
 ## Review of `for in range():`
 
 ```{python}

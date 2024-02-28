@@ -28,7 +28,7 @@ Midterm (individual) exams (pencil and paper format):
 
 The final exam (pencil and paper format) for all sections will be on:
 
--   `r schedule %>% filter(exam == "Final Exam" & term == "spring 2024") %>% pull(formatted_date)` -- `r schedule %>% filter(exam == "Final Exam" & term == "spring 2024") %>% pull(time)`.
+-   `r schedule %>% filter(exam == "Final Exam" & term == "spring 2024") %>% pull(formatted_date)` -- `r schedule %>% filter(exam == "Final Exam" & term == "spring 2024") %>% pull(time)` in [ENR2 N120](https://maps.app.goo.gl/Rx3se1ArtPWDPnEN7).
 
 All assignments that are submitted on Gradescope are due at 9pm (Tuesdays for programming problems, and Wednesdays for Programming Projects).
 
@@ -151,6 +151,8 @@ All assignments that are submitted on Gradescope are due at 9pm (Tuesdays for pr
 
 # Week 7 (`r schedule %>% filter(week_number == 7 & term == "spring 2024") %>% pull(formatted_start)`)
 
+## Quiz 03 (`r assignments %>% filter(assessment == "Quiz 03") %>% pull(formatted_date)`)
+
 ## Readings
 
 -   [Mutability](mutability.html)
@@ -170,8 +172,6 @@ All assignments that are submitted on Gradescope are due at 9pm (Tuesdays for pr
 
 # Week 8 (`r schedule %>% filter(week_number == 8 & term == "spring 2024") %>% pull(formatted_start)`)
 
-## Quiz 03 (`r assignments %>% filter(assessment == "Quiz 03") %>% pull(formatted_date)`)
-
 ## Readings
 
 -   [Dictionaries](data_structures_dict.html)
@@ -187,6 +187,8 @@ All assignments that are submitted on Gradescope are due at 9pm (Tuesdays for pr
 -   [Programming Project 7](project-7.html) -- Due date: `r assignments %>% filter(assessment == "Programming Project 7") %>% pull(formatted_date)` at 9pm
 
 # Week 9 (`r schedule %>% filter(week_number == 9 & term == "spring 2024") %>% pull(formatted_start)`)
+
+## Quiz 04 (`r assignments %>% filter(assessment == "Quiz 04") %>% pull(formatted_date)`)
 
 ## Readings
 
@@ -205,7 +207,7 @@ All assignments that are submitted on Gradescope are due at 9pm (Tuesdays for pr
 
 # Week 10 (`r schedule %>% filter(week_number == 10 & term == "spring 2024") %>% pull(formatted_start)`)
 
-## Quiz 04 (`r assignments %>% filter(assessment == "Quiz 04") %>% pull(formatted_date)`)
+## Quiz 05 (`r assignments %>% filter(assessment == "Quiz 05") %>% pull(formatted_date)`)
 
 ## Readings
 
@@ -256,7 +258,7 @@ All assignments that are submitted on Gradescope are due at 9pm (Tuesdays for pr
 
 # Week 13 (`r schedule %>% filter(week_number == 13 & term == "spring 2024") %>% pull(formatted_start)`)
 
-## Quiz 05 (`r assignments %>% filter(assessment == "Quiz 05") %>% pull(formatted_date)`)
+## Quiz 06 (`r assignments %>% filter(assessment == "Quiz 06") %>% pull(formatted_date)`)
 
 
 ## Readings
@@ -276,7 +278,7 @@ All assignments that are submitted on Gradescope are due at 9pm (Tuesdays for pr
 
 # Week 14 (`r schedule %>% filter(week_number == 14 & term == "spring 2024") %>% pull(formatted_start)`)
 
-## Quiz 06 (`r assignments %>% filter(assessment == "Quiz 06") %>% pull(formatted_date)`)
+## Quiz 07 (`r assignments %>% filter(assessment == "Quiz 07") %>% pull(formatted_date)`)
 
 ## Class slides
 
