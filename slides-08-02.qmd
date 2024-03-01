@@ -159,6 +159,12 @@ def main():
 main()
 ```
 
+## Attendance
+
+Submit your `tally_negatives` function to Gradescope for attendance.
+
+Name your file `tally_negatives.py`
+
 ## What happens when we do `for k in dictionary:`
 
 ```{python}
@@ -300,8 +306,4 @@ def main():
 main()
 ```
 
-# Submit code for attendance
 
-Submit your `merge_dictionaries` functions to Gradescope for attendance.
-
-Name your file `two_dictionaries.py`
