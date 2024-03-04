@@ -20,7 +20,7 @@ For this programming project, you will create and manipulate 2D lists -- which a
 
 # Cross stitch pattern creator
 
-This assignment exercises the use of the random module, lists, and loops.  You are going to write a Python script called `cross-stitch.py`.
+This assignment exercises the use of the random module, lists, and loops.  You are going to write a Python script called `cross_stitch.py`.
 
 Cross stitch designs are usually depicted on a grid, with each square on the grid corresponding to a stitch. 
 
