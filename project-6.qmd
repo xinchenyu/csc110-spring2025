@@ -28,7 +28,7 @@ For the grid, x refers to the row number (starting at zero) and y refers to the 
 
 You can learn more about [how to read a cross stitch pattern](https://stitchedmodern.com/blogs/news/how-to-read-a-cross-stitch-pattern). For this assignment, you will be creating different functions to create a random background and to add different shapes to the pattern.
 
-This assignment has [starter code](starter-code/cross-stitch.py), which contains a global constant for a list of symbols to be used and a function to print the pattern called `print_pattern(pattern)`. The started code also imports the library random, and sets the seed to 123. Do not make changes to the starter code (changes might cause gradescope test fails).
+This assignment has [starter code](starter-code/cross_stitch.py), which contains a global constant for a list of symbols to be used and a function to print the pattern called `print_pattern(pattern)`. The started code also imports the library random, and sets the seed to 123. Do not make changes to the starter code (changes might cause gradescope test fails).
 
 ## Create the random background
 
