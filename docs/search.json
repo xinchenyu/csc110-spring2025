@@ -786,77 +786,77 @@
   {
     "objectID": "short-projects.html",
     "href": "short-projects.html",
-    "title": "What are Short Projects?",
+    "title": "Short Projects Dates and Instructions",
     "section": "",
     "text": "Short programming projects are due on the same day as programming problems. While the instructions for programming problems are on the website, instructions for short projects will be available only during our weekly 50-minute in-person lab sessions.\nThe lowest grade for short programming projects will be dropped at the end of the semester. There will be one lab session (the week of March 25) for you to work on a maximum of two short programming project submissions you have missed.\nTo schedule your lab session go to the weekly lab session spreadsheet."
   },
   {
     "objectID": "short-projects.html#lab-04",
     "href": "short-projects.html#lab-04",
-    "title": "What are Short Projects?",
+    "title": "Short Projects Dates and Instructions",
     "section": "Lab 04",
     "text": "Lab 04\nFebruary 6 to February 12 – work on Short Project 04\nInstructions for Short Project 04"
   },
   {
     "objectID": "short-projects.html#lab-05",
     "href": "short-projects.html#lab-05",
-    "title": "What are Short Projects?",
+    "title": "Short Projects Dates and Instructions",
     "section": "Lab 05",
     "text": "Lab 05\nFebruary 13 to February 19 – work on Short Project 05\nInstructions for Short Project 05"
   },
   {
     "objectID": "short-projects.html#lab-06",
     "href": "short-projects.html#lab-06",
-    "title": "What are Short Projects?",
+    "title": "Short Projects Dates and Instructions",
     "section": "Lab 06",
     "text": "Lab 06\nFebruary 20 to February 25 – work on Short Project 06\nInstructions for Short Project 06"
   },
   {
     "objectID": "short-projects.html#lab-07",
     "href": "short-projects.html#lab-07",
-    "title": "What are Short Projects?",
+    "title": "Short Projects Dates and Instructions",
     "section": "Lab 07",
     "text": "Lab 07\nMarch 11 to March 15 – work on Short Project 07\nInstructions for Short Project 07"
   },
   {
     "objectID": "short-projects.html#lab-08",
     "href": "short-projects.html#lab-08",
-    "title": "What are Short Projects?",
+    "title": "Short Projects Dates and Instructions",
     "section": "Lab 08",
     "text": "Lab 08\nMarch 18 to March 22 – work on one previous short project (optional lab)"
   },
   {
     "objectID": "short-projects.html#lab-9",
     "href": "short-projects.html#lab-9",
-    "title": "What are Short Projects?",
+    "title": "Short Projects Dates and Instructions",
     "section": "Lab 9",
     "text": "Lab 9\nMarch 15 to March 29 – work on Short Project 08"
   },
   {
     "objectID": "short-projects.html#lab-10",
     "href": "short-projects.html#lab-10",
-    "title": "What are Short Projects?",
+    "title": "Short Projects Dates and Instructions",
     "section": "Lab 10",
     "text": "Lab 10\nApril 1 to April 5 – work on Short Project 09"
   },
   {
     "objectID": "short-projects.html#lab-11",
     "href": "short-projects.html#lab-11",
-    "title": "What are Short Projects?",
+    "title": "Short Projects Dates and Instructions",
     "section": "Lab 11",
     "text": "Lab 11\nApril 8 to April 12 – work on Short Project 10"
   },
   {
     "objectID": "short-projects.html#lab-12",
     "href": "short-projects.html#lab-12",
-    "title": "What are Short Projects?",
+    "title": "Short Projects Dates and Instructions",
     "section": "Lab 12",
     "text": "Lab 12\nApril 15 to April 19 – work on one previous short project (optional lab)"
   },
   {
     "objectID": "short-projects.html#lab-13",
     "href": "short-projects.html#lab-13",
-    "title": "What are Short Projects?",
+    "title": "Short Projects Dates and Instructions",
     "section": "Lab 13",
     "text": "Lab 13\nApril 22 to April 26 – work on Short Project 11"
   },
@@ -1755,6 +1755,13 @@
     "title": "for loops – iterating over items (class slides)",
     "section": "Write a function – solution",
     "text": "Write a function – solution\n\ndef tally_negatives(numbers):\n  tally = {}\n  for n in numbers:\n    if n &lt; 0:\n      if n not in tally:\n        tally[n] = 0\n      tally[n] += 1\n  return tally\n\ndef main():\n  assert  tally_negatives([1, -2, 0, -4, -2]) == {-2: 2, -4: 1}\n  assert tally_negatives([]) == {}\n  print(\"Passed all tests.\")\n  \nmain()\n\nPassed all tests."
+  },
+  {
+    "objectID": "slides-08-02.html#attendance",
+    "href": "slides-08-02.html#attendance",
+    "title": "for loops – iterating over items (class slides)",
+    "section": "Attendance",
+    "text": "Attendance\nSubmit your tally_negatives function to Gradescope for attendance.\nName your file tally_negatives.py"
   },
   {
     "objectID": "slides-08-02.html#what-happens-when-we-do-for-k-in-dictionary",
@@ -2709,13 +2716,6 @@
     "text": "Write a function – solution\nWrite more test cases for this function.\n\ndef power(base, exp):\n  result = 1\n  index = 1\n  while index &lt;= exp:\n    result *= base\n    index += 1\n  return result\n\ndef main():\n  print( power(2, 3) ) # 8\n  print( power(3, 3) ) # 27\n  \nmain()\n\n8\n27"
   },
   {
-    "objectID": "slides-09-01.html#announcements",
-    "href": "slides-09-01.html#announcements",
-    "title": "files (class slides)",
-    "section": "Announcements",
-    "text": "Announcements\n\nCheck grades on D2L\nProject 4 due today at 7pm\nNo class Friday November 10\nMidterm 3 on Wednesday November 15\n\ncontent: Midterm 2 + dictionaries + files + tuples (Modules 1-11)\n\nContact your TA if you want to go over your Midterm 2 answers (no extra credit for meetings anymore)"
-  },
-  {
     "objectID": "slides-09-01.html#files-and-file-systems",
     "href": "slides-09-01.html#files-and-file-systems",
     "title": "files (class slides)",
@@ -2826,118 +2826,6 @@
     "title": "Input from user",
     "section": "",
     "text": "Input from user\nThere will be situations where your program has to interact with the user. For example, you would want to take input from the user and then print some results back. We can achieve this using the input() function and print function respectively.\nExample:\ndef say_hi(name):\n  print(\"Hello,\", name + \"!\")\n  \nname = input(\"What's your name?\\n\")\nsay_hi(name)\nOutput:\n\nWhat's your name?\nAdriana\nHello, Adriana!\n\nHow It Works\nThe input() function takes a string as argument and saves it to a variable called name. Then it calls the function say_hi() with the name entered by the user as the argument. The function say_hi() prints the name argument concatenated with a Hello message.\n\n\nChanging types\nThe input() function will always return a string. But many times we will want the user to enter other information, such as a number.\nWe can use functions like int() to transform a type into an integer and float() to transform a type into a float number.\nExample:\ndef calculate_future(years, age):\n  print(\"In\", years, \"you will be\", age + years, \"years old.\")\n\n\nage = input(\"What's your age?\\n\")\nage_int = int(age)\ncalculate_future(10, age_int)\nOutput:\n\nWhat's your age?\n41\nIn 10 you will be 51 years old.\n\nHow It Works\nThe input() function takes a string as argument and saves it to a variable called age. Then it calls the function int() to convert the age entered by the user from string to integer and saves the value to a variable called age_int. The function calculate_future() is called with arguments 10 and the age entered by the user converted to integer, it then prints the age argument concatenated with a message saying how old the person will be in the number of years passed as argument to the function."
-  },
-  {
-    "objectID": "slides-09-01 2.html#announcements",
-    "href": "slides-09-01 2.html#announcements",
-    "title": "files (class slides)",
-    "section": "Announcements",
-    "text": "Announcements\n\nCheck grades on D2L\nProject 4 due today at 7pm\nNo class Friday November 10\nMidterm 3 on Wednesday November 15\n\ncontent: Midterm 2 + dictionaries + files + tuples (Modules 1-11)\n\nContact your TA if you want to go over your Midterm 2 answers (no extra credit for meetings anymore)"
-  },
-  {
-    "objectID": "slides-09-01 2.html#files-and-file-systems",
-    "href": "slides-09-01 2.html#files-and-file-systems",
-    "title": "files (class slides)",
-    "section": "Files and file systems",
-    "text": "Files and file systems\n\nOn (at least most of) our computers, there is a file system via which we can create, save, modify, and remove files\n\nOn Mac: can browse with Finder\nOn Windows: can browse with windows explorer\n\nFile systems are often hierarchical"
-  },
-  {
-    "objectID": "slides-09-01 2.html#opening-a-file",
-    "href": "slides-09-01 2.html#opening-a-file",
-    "title": "files (class slides)",
-    "section": "Opening a file",
-    "text": "Opening a file\n\nTo open a file in a python program:\na_file = open(file_name, mode)\nfile_name should be the name of the file to open\n\nIt can also be a path\n\nmode should be the mode in which to open in\n\n‘a’    ‘r’    ‘w’\n\n\nAfter opening, use the a_file object to read from or write to the file"
-  },
-  {
-    "objectID": "slides-09-01 2.html#absolute-vs-relative-path",
-    "href": "slides-09-01 2.html#absolute-vs-relative-path",
-    "title": "files (class slides)",
-    "section": "Absolute vs Relative path",
-    "text": "Absolute vs Relative path\n\nA path describes a location.\n\n/home/doc/example.txt\n\nAn absolute path describes the location from the root directory.\nA relative path describes the location of a file relative to the current (working) directory."
-  },
-  {
-    "objectID": "slides-09-01 2.html#opening-and-closing-a-file",
-    "href": "slides-09-01 2.html#opening-and-closing-a-file",
-    "title": "files (class slides)",
-    "section": "Opening and closing a file",
-    "text": "Opening and closing a file\ninfo.txt\nThe quick brown fox\njumped over\nthe lazy\nbear\nsitting by the tree\nread_file.py\n\ninfo = open('info.txt', 'r')\ninfo.close()"
-  },
-  {
-    "objectID": "slides-09-01 2.html#reading-a-line",
-    "href": "slides-09-01 2.html#reading-a-line",
-    "title": "files (class slides)",
-    "section": "Reading a line",
-    "text": "Reading a line\n\nfile.readline()\n\nreads one line from a file, returns a string\nreturns an empty string if it has reached the end of the content\n\nfile.readlines()\n\nreads all of the lines\nreturns a list of strings\n\nfile.read()\n\nreturns one string"
-  },
-  {
-    "objectID": "slides-09-01 2.html#reading-a-line-example",
-    "href": "slides-09-01 2.html#reading-a-line-example",
-    "title": "files (class slides)",
-    "section": "Reading a line example",
-    "text": "Reading a line example\ninfo.txt\nThe quick brown fox\njumped over\nthe lazy\nbear\nsitting by the tree\nread_line.py\n\ndef read_first_line(filename):\n  info = open(filename, 'r')\n  line = info.readline()\n  info.close()\n  return line\n\nassert read_first_line('info.txt') == \"The quick brown fox\\n\""
-  },
-  {
-    "objectID": "slides-09-01 2.html#iterating-over-a-file-directly",
-    "href": "slides-09-01 2.html#iterating-over-a-file-directly",
-    "title": "files (class slides)",
-    "section": "Iterating over a file directly",
-    "text": "Iterating over a file directly\nThe type file is iterable so we can use a for x in file loop:\n\ninfo = open('info.txt', 'r')\nfor line in info:\n    print(line)\ninfo.close()"
-  },
-  {
-    "objectID": "slides-09-01 2.html#more-string-methods",
-    "href": "slides-09-01 2.html#more-string-methods",
-    "title": "files (class slides)",
-    "section": "More string methods",
-    "text": "More string methods\nWe worked with .isnumeric(), a string method to check if a string contains only digit characters\nHere are some other useful string methods:\n\nstring.strip(chars) – removes any of the characters in chars from the beginning or end of string, returns a string\nstring.split(chars) – splits string at the chars, returns a list"
-  },
-  {
-    "objectID": "slides-09-01 2.html#more-string-methods-.strip",
-    "href": "slides-09-01 2.html#more-string-methods-.strip",
-    "title": "files (class slides)",
-    "section": "More string methods – .strip()",
-    "text": "More string methods – .strip()\n\ninfo = open('info.txt', 'r')\n\nfirst_line = info.readline()\nsecond_line = info.readline()\nprint(first_line)\nprint(second_line)\n\n\nfirst_line = first_line.strip(\"\\n\")\nsecond_line = second_line.strip(\"\\n\")\nprint(first_line)\nprint(second_line)\n\ninfo.close()"
-  },
-  {
-    "objectID": "slides-09-01 2.html#more-string-methods-.split",
-    "href": "slides-09-01 2.html#more-string-methods-.split",
-    "title": "files (class slides)",
-    "section": "More string methods – .split(\" \")",
-    "text": "More string methods – .split(\" \")\n\ninfo = open('info.txt', 'r')\n\nfirst_line = info.readline().strip(\"\\n\")\nsecond_line = info.readline().strip(\"\\n\")\n\nfirst_line_words = first_line.split(\" \")\nsecond_line_words = second_line.split(\" \")\n\nprint(first_line_words)\nprint(second_line_words)\n\ninfo.close()"
-  },
-  {
-    "objectID": "slides-09-01 2.html#write-a-function",
-    "href": "slides-09-01 2.html#write-a-function",
-    "title": "files (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\n\nIts name is lines_and_words\nIt takes a string called file_name\nIt opens the file with file_name in read mode\nIt iterates over the file’s lines, splitting each line by space (remember to strip the line breaks)\nIt returns a list of lists, where each inner-list is a line containing all the words in that line\n\nTest case (download text file):\n\nassert lines_and_words(\"info.txt\") == [ ['The', 'quick', 'brown', 'fox'], \n                                        ['jumped', 'over'], ['the', 'lazy'],\n                                        ['bear'], ['sitting', 'by', 'the', 'tree'] ]"
-  },
-  {
-    "objectID": "slides-09-01 2.html#write-a-function-solution",
-    "href": "slides-09-01 2.html#write-a-function-solution",
-    "title": "files (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef lines_and_words(file_name):\n  f = open(file_name, \"r\")\n  all_words = []\n  for line in f:\n    all_words.append(line.strip(\"\\n\").split(\" \"))\n  f.close()\n  return all_words\n  \n  \ndef main():\n  assert lines_and_words(\"info.txt\") == [ ['The', 'quick', 'brown', 'fox'], \n                                          ['jumped', 'over'], ['the', 'lazy'],\n                                          ['bear'], ['sitting', 'by', 'the', 'tree'] ]\n                                     \nmain()"
-  },
-  {
-    "objectID": "slides-09-01 2.html#write-a-function-1",
-    "href": "slides-09-01 2.html#write-a-function-1",
-    "title": "files (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\n\nIts name is count_words\nIt takes a string file_name as argument\nIt returns a dictionary with word counts\n\nTest case:\n\nassert count_words(\"info.txt\") == {\"the\": 3, \"quick\": 1, \"brown\": 1,\n                                   \"fox\": 1 , \"jumped\": 1, \"over\": 1, \n                                   \"lazy\": 1, \"bear\": 1, \"sitting\": 1,\n                                   \"by\": 1, \"tree\": 1}"
-  },
-  {
-    "objectID": "slides-09-01 2.html#write-a-function-solution-1",
-    "href": "slides-09-01 2.html#write-a-function-solution-1",
-    "title": "files (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef count_words(file_name):\n  f = open(file_name, \"r\")\n  counts = {}\n  for line in f:\n    words = line.strip(\"\\n\").split(\" \")\n    for w in words:\n      lower_case_w = w.lower()\n      if lower_case_w not in counts:\n        counts[lower_case_w] = 1\n      else:\n        counts[lower_case_w] += 1\n  return counts\n\ndef main():\n  assert count_words(\"info.txt\") == {\"the\": 3, \"quick\": 1, \"brown\": 1,\n                                     \"fox\": 1 , \"jumped\": 1, \"over\": 1, \n                                     \"lazy\": 1, \"bear\": 1, \"sitting\": 1,\n                                     \"by\": 1, \"tree\": 1}\n                                 \nmain()"
-  },
-  {
-    "objectID": "slides-09-01 2.html#quiz-09",
-    "href": "slides-09-01 2.html#quiz-09",
-    "title": "files (class slides)",
-    "section": "Quiz 09",
-    "text": "Quiz 09\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz\n\nNo need for comments, no need for a main(), no need for test cases\n\nAllowed built-in functions: round(), input(), float(), str(), int(), len(), range()"
   },
   {
     "objectID": "slides-05-01.html#while-loops",
@@ -4813,7 +4701,7 @@
     "href": "slides-06-02.html#random-module",
     "title": "random (class slides)",
     "section": "random module",
-    "text": "random module\nWe need to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random()\nprint(n)\n\nn = random.randint(0, 9)\nprint(n)\n\n0.5303935424345576\n1"
+    "text": "random module\nWe need to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random()\nprint(n)\n\nn = random.randint(0, 9)\nprint(n)\n\n0.44822756908496\n5"
   },
   {
     "objectID": "slides-06-02.html#write-a-function",
@@ -5409,12 +5297,5 @@
     "title": "Module 1 Assignments",
     "section": "",
     "text": "Programming Problems should be submitted to gradescope.\nIf you need instructions on how to submit your .py files to gradescope, watch the video at the end of this page.\n\nSurvey\nDue date: Friday, January 12, 2024 at 9pm\nhttps://uarizona.co1.qualtrics.com/jfe/form/SV_0q8KC0FwVhCiYD4\nThis is a survey to collect information on your expectations for CSc 110 Computer Programming I. The completion of this survey is required and will be used for grading purposes.\n\n\nProgramming Problem 1\nDue date: Thursday, January 18, 2024 at 9pm\nWrite a python program that prints out the string “Hello World!”. Be careful with capitalization and punctuation. Remember to write code inside a function called main().\nThe exact output of the program should be:\nHello World!\n\nName the program hello.py. Make sure that gradescope gives you the points for passing the test case.\n\n\nProgramming Problem 2\nDue date: Thursday, January 18, 2024 at 9pm\nWrite a python program that prints out the following excerpt from Amanda Gorman’s poem, “The Hill We Climb”:\nWhen day comes, we ask ourselves, where can we find light in this never-ending shade?\n\nThe loss we carry. A sea we must wade.\nWe braved the belly of the beast.\n\nWe've learned that quiet isn't always peace, \nand the norms and notions of what \"just\" is isn't always justice.\n\nAnd yet the dawn is ours before we knew it.\n\nSomehow we do it.\n\nName the program poem.py. Remember to write code inside a function called main(). Make sure that gradescope gives you the points for passing the test case. You can submit your solution to gradescope as many times as you want before the deadline.\nHINT: print() has a parameter called end which is set as end=\"\\n\" by default – change that to end=\"\" to remove the last newline character.\nMake sure you do the reading for this module, especially the section on Escape Sequences\n\n\nHow to submit to gradescope video"
-  },
-  {
-    "objectID": "slides-08-02.html#attendance",
-    "href": "slides-08-02.html#attendance",
-    "title": "for loops – iterating over items (class slides)",
-    "section": "Attendance",
-    "text": "Attendance\nSubmit your tally_negatives function to Gradescope for attendance.\nName your file tally_negatives.py"
   }
 ]

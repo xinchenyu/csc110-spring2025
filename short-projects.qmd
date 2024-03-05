@@ -1,5 +1,5 @@
 ---
-title: "What are Short Projects?"
+title: "Short Projects Dates and Instructions"
 ---
 
 Short programming projects are due on the same day as programming problems. While the instructions for programming problems are on the website, instructions for short projects will be available only during our weekly 50-minute in-person lab sessions. 
