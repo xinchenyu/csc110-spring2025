@@ -7,6 +7,15 @@ df-print: kable
 
 # CSc 110 - files
 
+## Announcements
+
+-   All CSC 110  TA office hours have moved to GS 813 
+
+-   Quiz 04 this Wednesday (lists)
+
+    -   when finding max or min, how to avoid error if the list is empty?
+
+
 ## Files and file systems
 
 -   On (at least most of) our computers, there is a **file system** via which we can create, save, modify, and remove files
@@ -69,7 +78,7 @@ info.close()
 
 -   **`file.readline()`**
 
-    -   reads one line from a file, returns a string
+    -   reads one line from a file, returns a string 
 
     -   returns an empty string if it has reached the end of the content
 
@@ -261,15 +270,17 @@ def main():
 main()
 ```
 
-## Quiz 09
+## Quiz 04
 
 <center>
 <div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
 <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
 </center>
 
-You have 10 minutes to complete the quiz
+You have 15 minutes. There are 2 problems.
 
-* No need for comments, no need for a `main()`, no need for test cases
+* No need for comments, no need for a `main()`, no test cases
+* Just write your function and what's inside the function
+* your choice of loop (for or while)
 
-Allowed built-in functions: `round()`, `input()`, `float()`, `str()`, `int()`, `len()`, `range()` 
+Built-in functions you can use: `round()`, `float()`, `str()`, `int()`, `len()` — no need to use all of these.

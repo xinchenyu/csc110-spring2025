@@ -7,15 +7,6 @@ df-print: kable
 
 # CSc 110 - files and strings
 
-## Announcements
-
-* Check grades on D2L
-* Project 5 due this Wednesday (Nov 8)
-* No class Friday November 10
-* Midterm 3 on Wednesday November 15
-  * content: Midterm 2 + dictionaries + files + tuples (Modules 1-11)
-* Contact your TA if you want to go over your Midterm 2 answers (no extra credit for meetings anymore)
-
 
 ## String methods
 
