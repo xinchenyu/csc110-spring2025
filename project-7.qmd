@@ -20,6 +20,8 @@ In this programming project you will implement a number of Python functions to i
 
 Name your program `benfords_law.py` to submit to gradescope. Make sure that gradescope gives you the points for passing the test cases.
 
+You are not allowed to use built in functions and methods not covered in class (for example, don't use `.count()`)
+
 This programming project is an adaptation of Ben Dicken's Benford's Law Programming Assignment.
 
 Benford's Law is a mathematical law that describes the behavior of naturally-occurring numbers in some kinds of numerical data sets. I recommend that you watch this video before proceeding to get an explanation:
@@ -49,14 +51,14 @@ print_plot(percentages)
 
 <pre>
 1 | ###############################
-2 | ##############
+2 | ###############
 3 | ##########
-4 | ########
-5 | #######
+4 | ##########
+5 | ##########
 6 | #####
-7 | ####
-8 | ####
-9 | ####
+7 | #####
+8 | #####
+9 | #####
 </pre>
 
 Here's what `places.csv` looks like:
