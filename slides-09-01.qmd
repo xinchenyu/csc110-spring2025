@@ -1,0 +1,286 @@
+---
+title: "files (class slides)"
+format: revealjs
+slide-number: true
+df-print: kable
+---
+
+# CSc 110 - files
+
+## Announcements
+
+-   All CSC 110  TA office hours have moved to GS 813 
+
+-   Quiz 04 this Wednesday (lists)
+
+    -   when finding max or min, how to avoid error if the list is empty?
+
+
+## Files and file systems
+
+-   On (at least most of) our computers, there is a **file system** via which we can create, save, modify, and remove files
+
+    -   On Mac: can browse with Finder
+
+    -   On Windows: can browse with windows explorer
+
+-   File systems are often hierarchical
+
+## Opening a file
+
+-   To open a file in a python program:
+
+    **`a_file = open(file_name, mode)`**
+
+-   **file_name** should be the name of the file to open
+
+    -   It can also be a path
+
+-   **mode should be the mode in which to open in**
+
+    -   **'a'    'r'    'w'**
+
+After opening, use the **a_file** object to read from or write to the file
+
+## Absolute vs Relative path
+
+- A path describes a location.
+    -   */home/doc/example.txt*
+    
+- An **absolute path** describes the location from the root directory. 
+
+- A **relative** path describes the location of a file relative to the current (working) directory.
+
+## Opening and closing a file
+
+info.txt
+
+```{html}
+The quick brown fox
+jumped over
+the lazy
+bear
+sitting by the tree
+```
+
+read_file.py
+
+```{python}
+#| eval: true
+#| echo: true
+info = open('info.txt', 'r')
+info.close()
+```
+
+
+
+## Reading a line
+
+-   **`file.readline()`**
+
+    -   reads one line from a file, returns a string 
+
+    -   returns an empty string if it has reached the end of the content
+
+-   **`file.readlines()`**
+
+    -   reads all of the lines
+
+    -   returns a list of strings
+
+-   **`file.read()`**
+
+    -   returns one string
+
+## Reading a line example
+
+info.txt
+
+```{html}
+The quick brown fox
+jumped over
+the lazy
+bear
+sitting by the tree
+```
+
+read_line.py
+
+```{python}
+#| eval: true
+#| echo: true
+def read_first_line(filename):
+  info = open(filename, 'r')
+  line = info.readline()
+  info.close()
+  return line
+
+assert read_first_line('info.txt') == "The quick brown fox\n"
+```
+
+# Submit code for attendance
+
+Submit the `read_first_line` function to Gradescope for attendance (given a file name string, open file in read mode, read first line, return that first line).
+
+Name your file `first_read.py`
+
+## Iterating over a file directly
+
+The type `file` is iterable so we can use a `for x in file` loop:
+
+```{python}
+#| eval: true
+#| echo: true
+info = open('info.txt', 'r')
+for line in info:
+    print(line)
+info.close()
+```
+
+## More string methods
+
+We worked with `.isnumeric()`, a string method to check if a string contains only digit characters
+
+Here are some other useful string methods:
+
+-   `string.strip(chars)` -- removes any of the characters in chars from the beginning or end of string, returns a string
+-   `string.split(chars)` -- splits string at the chars, returns a list
+
+## More string methods -- `.strip()`
+
+```{python}
+#| eval: true
+#| echo: true
+info = open('info.txt', 'r')
+
+first_line = info.readline()
+second_line = info.readline()
+print(first_line)
+print(second_line)
+
+
+first_line = first_line.strip("\n")
+second_line = second_line.strip("\n")
+print(first_line)
+print(second_line)
+
+info.close()
+```
+
+## More string methods -- `.split(" ")`
+
+```{python}
+#| eval: true
+#| echo: true
+info = open('info.txt', 'r')
+
+first_line = info.readline().strip("\n")
+second_line = info.readline().strip("\n")
+
+first_line_words = first_line.split(" ")
+second_line_words = second_line.split(" ")
+
+print(first_line_words)
+print(second_line_words)
+
+info.close()
+```
+
+## Write a function
+
+1.  Its name is `lines_and_words`
+2.  It takes a string called `file_name`
+3.  It opens the file with `file_name` in read mode
+4.  It iterates over the file's lines, splitting each line by space (remember to strip the line breaks)
+5.  It returns a list of lists, where each inner-list is a line containing all the words in that line
+
+Test case ([download text file](data/info.txt)):
+
+```{python}
+#| eval: false
+#| echo: true
+assert lines_and_words("info.txt") == [ ['The', 'quick', 'brown', 'fox'], 
+                                        ['jumped', 'over'], ['the', 'lazy'],
+                                        ['bear'], ['sitting', 'by', 'the', 'tree'] ]
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def lines_and_words(file_name):
+  f = open(file_name, "r")
+  all_words = []
+  for line in f:
+    all_words.append(line.strip("\n").split(" "))
+  f.close()
+  return all_words
+  
+  
+def main():
+  assert lines_and_words("info.txt") == [ ['The', 'quick', 'brown', 'fox'], 
+                                          ['jumped', 'over'], ['the', 'lazy'],
+                                          ['bear'], ['sitting', 'by', 'the', 'tree'] ]
+                                     
+main()
+```
+
+## Write a function
+
+1.  Its name is `count_words`
+2.  It takes a string `file_name` as argument
+3.  It returns a dictionary with word counts
+
+Test case:
+
+```{python}
+#| eval: false
+#| echo: true
+assert count_words("info.txt") == {"the": 3, "quick": 1, "brown": 1,
+                                   "fox": 1 , "jumped": 1, "over": 1, 
+                                   "lazy": 1, "bear": 1, "sitting": 1,
+                                   "by": 1, "tree": 1}
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def count_words(file_name):
+  f = open(file_name, "r")
+  counts = {}
+  for line in f:
+    words = line.strip("\n").split(" ")
+    for w in words:
+      lower_case_w = w.lower()
+      if lower_case_w not in counts:
+        counts[lower_case_w] = 1
+      else:
+        counts[lower_case_w] += 1
+  return counts
+
+def main():
+  assert count_words("info.txt") == {"the": 3, "quick": 1, "brown": 1,
+                                     "fox": 1 , "jumped": 1, "over": 1, 
+                                     "lazy": 1, "bear": 1, "sitting": 1,
+                                     "by": 1, "tree": 1}
+                                 
+main()
+```
+
+## Quiz 04
+
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+</center>
+
+You have 15 minutes. There are 2 problems.
+
+* No need for comments, no need for a `main()`, no test cases
+* Just write your function and what's inside the function
+* your choice of loop (for or while)
+
+Built-in functions you can use: `round()`, `float()`, `str()`, `int()`, `len()` — no need to use all of these.

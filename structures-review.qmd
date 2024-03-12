@@ -1,0 +1,238 @@
+---
+title: "Review of Data Structures"
+---
+
+Here are the four data structures that we've worked with in Python:
+
+-   lists (mutable)
+-   dictionaries (mutable)
+-   tuples (immutable)
+-   sets (mutable)
+
+# Lists
+
+-   store:
+    -   ordered elements (it keeps the original order)
+    -   elements of different types
+    -   repeated elements
+-   use square brackets (`[]`) syntax for creating a list
+-   allow indexing (integers starting at `0`) with square brackets (`[]`) as well
+-   are **mutable**
+
+Indexing to retrieve values:
+
+```{python}
+#| eval: true
+#| echo: true
+my_list = ["a", 1, "b", 2]
+my_list[0]
+```
+
+Indexing to mutate values:
+
+```{python}
+#| eval: true
+#| echo: true
+my_list[0] = 5
+my_list
+```
+
+## List methods
+
+-   `.append(value)`
+-   `.insert(index, value)`
+-   `.pop(index)`
+-   `.remove(value)`
+
+# Tuples
+
+-   store:
+    -   ordered elements (it keeps the original order)
+    -   elements of different types
+    -   repeated elements
+-   use parentheses (`()`) syntax for creating a tuple
+-   allow indexing (integers starting at `0`) with square brackets (`[]`)
+-   are **immutable**
+
+Indexing to retrieve values:
+
+```{python}
+#| eval: true
+#| echo: true
+my_tuple = ("a", 1, "b", 2)
+my_tuple[0]
+```
+
+Not possible to mutate/change values in tuples
+
+No methods to change it (because tuples are immutable)
+
+# Dictionaries
+
+-   store pairs of items `key: value`
+-   keys have to be unique (no repeated keys allowed)
+-   use curly brackets (`{}`) with key and value separated by colon (`:`)
+-   allow value retrieval through key with square brackets (`[]`)
+-   are **mutable**
+
+Use key to retrieve values:
+
+```{python}
+#| eval: true
+#| echo: true
+my_dict = {"banana": 10, "apple": 3, "orange": 40}
+my_dict["banana"]
+```
+
+Use key to add `key: value` pairs:
+
+```{python}
+#| eval: true
+#| echo: true
+my_dict["pear"] = 5
+my_dict
+```
+
+Use key to mutate value associated with key:
+
+```{python}
+#| eval: true
+#| echo: true
+my_dict["pear"] += 5
+my_dict
+```
+
+## Dictionary methods
+
+-   `.values()`
+-   `.items()`
+-   `.pop()`
+
+# Sets
+
+-   Do not store items in the order you created them
+-   Do not allow repeated items to be stored
+-   **Cannot** use square brackets to retrieve an item
+-   Use `for x in set` to iterate over the elements in a set
+
+## Set methods
+
+-   `.add(value)` adds an element to the set
+-   `.discard(value)` discards the specified value
+
+You can also use the operator `in` and the function `len()` with sets
+
+Use the function `set()` to convert a list to a set, and `list()` to convert a set into a list
+
+# Iterating over data structures
+
+Use `for x in data_structure` to retrieve values/keys (cannot make changes with this type of loop)
+
+```{python}
+#| eval: true
+#| echo: true
+my_list = [3, 5, 5]
+for value in my_list:
+  print(value)
+```
+
+```{python}
+#| eval: true
+#| echo: true
+my_tuple = (3, 5, 5)
+for value in my_tuple:
+  print(value)
+```
+
+```{python}
+#| eval: true
+#| echo: true
+my_set = {3, 2, 1, 30, 4}
+for value in my_set:
+  print(value)
+```
+
+## Iterating over dictionaries
+
+```{python}
+#| eval: true
+#| echo: true
+my_dictionary = {3: "a", 5: "b"}
+for key in my_dictionary:
+  print(key)
+```
+
+You can change values in a dictionary with `for key in dictionary`
+
+```{python}
+#| eval: true
+#| echo: true
+my_dictionary = {"a": 2, "b": 3}
+for key in my_dictionary:
+  my_dictionary[key] += 1
+my_dictionary
+```
+
+Use `for x in data_structure.method()` for dictionaries
+
+```{python}
+#| eval: true
+#| echo: true
+my_dictionary = {3: "a", 5: "b"}
+for value in my_dictionary.values():
+  print(value)
+```
+
+```{python}
+#| eval: true
+#| echo: true
+my_dictionary = {3: "a", 5: "b"}
+for key, value in my_dictionary.items():
+  print(value)
+  print(key)
+```
+
+## Cannot change size of data structure
+
+It is **not** possible to remove or add items to a list, a dictionary, or a set inside a `for x in data_structure` loop. This is what happens when you try to do so:
+
+Weird behavior:
+
+```{python}
+#| eval: true
+#| echo: true
+my_list = [2, 3, 1, 2]
+for value in my_list:
+  my_list.remove(value)
+my_list
+```
+
+Infinite loop:
+
+```{python}
+#| eval: false
+#| echo: true
+my_list = [2, 3, 1, 2]
+for value in my_list:
+  my_list.append(value + 1) # this causes an infinite loop
+```
+
+Error:
+
+```{python}
+#| eval: false
+#| echo: true
+my_dict = {2: 0, 3: 1, 1: 0}
+for key in my_dict:
+  my_dict.pop(key) # this causes an error
+```
+
+Error:
+
+```{python}
+#| eval: false
+#| echo: true
+my_set = {2, 1, 4, 5, 7, 10, 23, 44}
+for value in my_set:
+  my_set.discard(value) # this causes an error
+```
