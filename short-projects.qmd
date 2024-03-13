@@ -41,9 +41,11 @@ March 11 to March 15 -- work on Short Project 07
 
 March 18 to March 22 --  work on one previous short project (optional lab)
 
-## Lab 9
+## Lab 09
 
 March 15 to March 29 -- work on Short Project 08
+
+[Instructions for Short Project 08](https://adrianapicoral.com/csc-110/cINZGYO27Q.html)
 
 ## Lab 10
 

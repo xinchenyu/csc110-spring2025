@@ -997,7 +997,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Write the function <code>add_v_stripe</code> that modifies and returns the pattern, by adding a stripe of certain width, using a specific symbol. The stripe should start at the first row of symbols (y = 0) and end at the last row of symbols.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pattern <span class="op">=</span> create_background(<span class="dv">20</span>, <span class="dv">10</span>, <span class="dv">2</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># add vertical stripe at x = 2, of width = 4,</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># add vertical stripe at y = 2, of width = 4,</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># using the symbol at index 3 in the list of symbols</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>pattern <span class="op">=</span> add_v_stripe(pattern, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">3</span>)</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>print_pattern(pattern)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1030,7 +1030,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Write the function <code>add_h_stripe</code> that modifies and returns the pattern, by adding a stripe of certain height, using a specific symbol. The stripe should start at the first column of symbols (x = 0) and end at the last column of symbols.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pattern <span class="op">=</span> create_background(<span class="dv">20</span>, <span class="dv">10</span>, <span class="dv">2</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># add vertical stripe at y = 2, of height = 5,</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># add vertical stripe at x = 2, of height = 5,</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># using the symbol at index 6 in the list of symbols</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>pattern <span class="op">=</span> add_h_stripe(pattern, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">6</span>)</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>print_pattern(pattern)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

@@ -75,7 +75,7 @@ Write the function `add_v_stripe` that modifies and returns the pattern, by addi
 #| echo: true
 #| eval: false
 pattern = create_background(20, 10, 2)
-# add vertical stripe at x = 2, of width = 4,
+# add vertical stripe at y = 2, of width = 4,
 # using the symbol at index 3 in the list of symbols
 pattern = add_v_stripe(pattern, 2, 4, 3)
 print_pattern(pattern)
@@ -113,7 +113,7 @@ Write the function `add_h_stripe` that modifies and returns the pattern, by addi
 #| echo: true
 #| eval: false
 pattern = create_background(20, 10, 2)
-# add vertical stripe at y = 2, of height = 5,
+# add vertical stripe at x = 2, of height = 5,
 # using the symbol at index 6 in the list of symbols
 pattern = add_h_stripe(pattern, 2, 5, 6)
 print_pattern(pattern)
