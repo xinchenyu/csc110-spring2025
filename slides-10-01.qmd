@@ -10,10 +10,9 @@ df-print: kable
 
 ## Announcements
 
-* No class Friday November 10
-* Midterm 3 on Wednesday November 15 (bring PHOTO ID)
-  * content: Midterm 2 + dictionaries + files + tuples (Modules 1-10)
-  * Review session: Tuesday, Nov 14, 5pm to 7pm, same room as lecture
+* Midterm 2 on Wednesday March 27 (bring PHOTO ID)
+  * content: Modules 1 to 10
+  * Review session: Tuesday, March 26, 5pm to 7pm, Commons 105
 
 ## What are tuples?
 
