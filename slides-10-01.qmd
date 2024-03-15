@@ -10,6 +10,7 @@ df-print: kable
 
 ## Announcements
 
+* Quiz 05 next Wednesday (dictionary and list)
 * Midterm 2 on Wednesday March 27 (bring PHOTO ID)
   * content: Modules 1 to 10
   * Review session: Tuesday, March 26, 5pm to 7pm, Commons 105
