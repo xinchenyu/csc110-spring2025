@@ -164,3 +164,7 @@ def main():
   
 main()
 ```
+
+# Submit Attendance
+
+Name your previous solution `read_and_write.py` and submit it to attendance on Gradescope

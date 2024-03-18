@@ -1012,7 +1012,7 @@
     "href": "slides-10-01.html#announcements",
     "title": "returning tuples (class slides)",
     "section": "Announcements",
-    "text": "Announcements\n\nQuiz 05 next Wednesday (dictionary and list)\nMidterm 2 on Wednesday March 27 (bring PHOTO ID)\n\ncontent: Modules 1 to 10\nReview session: Tuesday, March 26, 5pm to 7pm, Commons 105"
+    "text": "Announcements\n\nQuiz 05 this Wednesday\n\ndictionary and list\nread and write to files\n\nMidterm 2 on Wednesday March 27 (bring PHOTO ID)\n\ncontent: Modules 1 to 10\nReview session: Tuesday, March 26, 5pm to 7pm, Commons 105"
   },
   {
     "objectID": "slides-10-01.html#what-are-tuples",
@@ -5318,5 +5318,12 @@
     "title": "Short Projects Dates and Instructions",
     "section": "Lab 09",
     "text": "Lab 09\nMarch 15 to March 29 – work on Short Project 08\nInstructions for Short Project 08"
+  },
+  {
+    "objectID": "slides-10-02.html#quiz-05",
+    "href": "slides-10-02.html#quiz-05",
+    "title": "tuples (class slides)",
+    "section": "Quiz 05",
+    "text": "Quiz 05\n\n\ncurrent time\n\n\n\n\n\n\n15 minutes to complete the quiz, two problems.\n\nNo need for comments, no need for a main(), no need for test cases\n\nAllowed built-in functions: round(), input(), float(), str(), int(), len(), range(), open(), close()"
   }
 ]
