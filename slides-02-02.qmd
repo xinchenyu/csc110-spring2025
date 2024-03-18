@@ -1,0 +1,204 @@
+---
+title: "Math in Python (class slides)"
+format: revealjs
+slide-number: true
+---
+
+# CSc 110 Math in Python
+
+## The Mathematical Operators
+
+-   `+` Addition
+-   `-` Subtraction
+-   `*` Multiplication
+-   `/` Division
+-   `//` Integer Division
+-   `**` Exponent
+-   `%` Modulus
+
+## The order of Operations (PEMDAS)
+
+1.  **P**arentheses,
+2.  **E**xponentiation
+3.  **M**ultiplication and **D**ivision have equal precedence
+4.  **A**ddition and **S**ubtraction have equal precedence
+
+## Write a function
+
+Write a function that calculates the area of a square:
+
+1.  Its name is `square_area`
+2.  It takes one argument: `side`
+3.  It calculates the area of a square (a quadrilateral with two sides parallel that are of equal length). The area of a square is calculated by multiplying the side by itself ($area = side^2$).
+4.  It returns the value for calculated square area.
+
+## Square Area
+
+```{python}
+#| echo: true
+#| eval: false
+def square_area(side):
+  # enter your code here
+
+print(square_area(5)) # 25
+print(square_area(6)) # 36
+print(square_area(10)) # 100
+
+```
+
+## Square Area
+
+```{python}
+#| echo: true
+#| eval: true
+def square_area(side):
+  "calculates the area of a square"
+  area = side * side
+  return area
+
+print(square_area(5)) # 25
+print(square_area(6)) # 36
+print(square_area(10)) # 100
+```
+
+# Rounding numbers with built-in function `round()`
+
+## `round()`
+
+Use the round() function to get a floating-point number rounded to the specified number of decimals.
+
+Syntax:
+
+```{python}
+#| echo: true
+#| eval: false
+round(number, ndigits*)
+```
+
+The number of digits (`ndigits`) is optional, but we will often round number to two decimals:
+
+```{python}
+#| echo: true
+#| eval: true
+round(392.68750000000006, 2)
+```
+
+## `round()`
+
+Use the round() function to get a floating-point number rounded to the specified number of decimals.
+
+Syntax:
+
+```{python}
+#| echo: true
+#| eval: false
+round(number, ndigits*)
+```
+
+Rounding is done toward the nearest even choice. What would these round to? (discuss with your group)
+
+```{python}
+#| echo: true
+#| eval: false
+round(51.6)
+round(51.5)
+round(50.5)
+round(51.4)
+```
+
+## `round()`
+
+Use the round() function to get a floating-point number rounded to the specified number of decimals.
+
+Syntax:
+
+```{python}
+#| echo: true
+#| eval: false
+round(number, ndigits*)
+```
+
+Rounding is done toward the nearest even choice. What would these round to:
+
+```{python}
+#| echo: true
+#| eval: true
+print(round(51.6))
+print(round(51.5))
+print(round(50.5))
+print(round(51.4))
+```
+
+## Write a function
+
+Write a function that calculates the volume of a sphere:
+
+1.  Its name is `sphere_volume`
+2.  It takes one argument: `radius`
+3.  It calculates the volume of the sphere (use `3.1415` for $\pi$):
+
+$$
+v = {4 / 3} \cdot \pi \cdot radius^3
+$$
+
+4.  It returns the value for the calculated sphere volume
+5.  Test case: `sphere_volume(.75)` should return `1.77`.
+
+## Write a function -- sphere volume
+
+```{python}
+#| echo: true
+#| eval: true
+def sphere_volume(radius):
+  "calculates the volume of a sphere of given radius"
+  volume = (4 / 3) * 3.1415 * radius**3
+  return round(volume, 2)
+
+print(sphere_volume(.75)) # 1.77
+print(sphere_volume(2)) # 33.51
+print(sphere_volume(5.5)) # 696.89
+```
+
+## Write a function
+
+Write a function that calculates the area of a sphere:
+
+1.  Its name is `sphere_area`
+2.  It takes one argument: `radius`
+3.  It calculates the volume of the sphere (use `3.1415` for $\pi$):
+
+$$
+a = 4 \cdot \pi \cdot radius^2
+$$
+
+4.  It returns the value for the calculated sphere area
+5.  Test case: `sphere_area(.75)` should return `7.07`.
+
+## Write a function -- solutions
+
+```{python}
+#| echo: true
+#| eval: true
+def sphere_volume(radius):
+  "calculates the volume of a sphere of given radius"
+  volume = (4 / 3) * 3.1415 * radius**3
+  return round(volume, 2)
+
+
+def sphere_area(radius):
+  "calculates the area of a sphere of given radius"
+  area = 4 * 3.1415 * radius**2
+  return round(area, 2)
+
+
+r = .75
+v = sphere_volume(r)
+a = sphere_area(r)
+print(v, a)
+```
+
+## Write a function -- sphere volume and area
+
+Submit your sphere volume and area solution as attendance on Gradescope.
+
+Name your file `sphere.py`
