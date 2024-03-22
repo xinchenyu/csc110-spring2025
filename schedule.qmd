@@ -211,10 +211,12 @@ All assignments that are submitted on Gradescope are due at 9pm (Tuesdays for pr
 
 ## Readings
 
+-   [Tuples](data_structures_tuples.html)
+
 ## Class slides 
 
--   [2D lists and nested for loops](slides-10-03.html)
--   [nested for loops](slides-10-04.html)
+-   [returning tuples](slides-10-01.html)
+-   [tuples](slides-10-02.html)
 
 ## Assignments
 
@@ -228,12 +230,10 @@ All assignments that are submitted on Gradescope are due at 9pm (Tuesdays for pr
 
 ## Readings
 
--   [Tuples](data_structures_tuples.html)
-
 ## Class slides
 
--   [returning tuples](slides-11-01.html)
--   [tuples](slides-11-02.html)
+-   [2D lists and nested for loops](slides-11-01.html)
+-   [nested for loops](slides-11-02.html)
 
 ## Assignments
 -   [Module 11 Programming Problems](assignments-11.html) -- Due date: `r assignments %>% filter(assessment == "Module 11 Programming Problems") %>% pull(formatted_date)` at 9pm
