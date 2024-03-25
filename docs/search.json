@@ -5325,5 +5325,19 @@
     "title": "tuples (class slides)",
     "section": "Quiz 05",
     "text": "Quiz 05\n\n\ncurrent time\n\n\n\n\n\n\n15 minutes to complete the quiz, two problems.\n\nNo need for comments, no need for a main(), no need for test cases\n\nAllowed built-in functions: round(), input(), float(), str(), int(), len(), range(), open(), close()"
+  },
+  {
+    "objectID": "slides-11-02.html#loop-table-solution-part-1",
+    "href": "slides-11-02.html#loop-table-solution-part-1",
+    "title": "nested for loops (class slides)",
+    "section": "Loop table – solution part 1",
+    "text": "Loop table – solution part 1\n\n\n\n\n\nijlen(lists[i])lists[i][j]max\n\n0-0-None\n\n1-0-None\n\n20222\n\n21212\n\n30302\n\n31355\n\n32325"
+  },
+  {
+    "objectID": "slides-11-02.html#loop-table-solution-part-2",
+    "href": "slides-11-02.html#loop-table-solution-part-2",
+    "title": "nested for loops (class slides)",
+    "section": "Loop table – solution part 2",
+    "text": "Loop table – solution part 2\n\n\n\n\n\nijlen(lists[i])lists[i][j]max\n\n40135"
   }
 ]

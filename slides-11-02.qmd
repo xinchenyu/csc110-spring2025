@@ -7,15 +7,6 @@ df-print: kable
 
 # CSc 110 - nested for loops
 
-## Announcements
-
-* Project 3 due this Wednesday 7pm
-* Midterm 2 on October 25 (Wednesday), in this room (BRING PHOTO ID)
-* Review session on October 24 (Tuesday), in this room
-* Last day to withdraw is October 29 (<https://registrar.arizona.edu/dates-and-deadlines>) -- you will have ~70% of your grade in by then
-* Check grades on D2L
-* Quiz 9-12, Nov 1, Nov 8, Nov 29, Dec 6
-
 ## 2D lists
 
 ```{python}
@@ -250,19 +241,6 @@ def main():
 main()
 ```
 
-## Quiz 08
-
-<center>
-<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
-<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
-</center>
-
-You have 10 minutes to complete the quiz
-
-* No need for comments, no need for a `main()`, no need for test cases
-
-Allowed built-in functions: `round()`, `input()`, `float()`, `str()`, `int()`, `len()` 
-
 
 ## Write a function
 
@@ -362,3 +340,52 @@ Draw a loop table with:
 * value of `max` before loop, and in each iteration of the nested loops
 * values of `i`, `j`, and `lists[i][j]` for each nested loop iteration
 
+## Loop table -- solution part 1
+
+```{r}
+#| eval: true
+#| echo: false
+#| warning: false
+#| message: false
+library(knitr)
+library(tidyverse)
+library(huxtable)
+df <- data.frame(a = c("0", "1", "2", "2", "3", "3", "3"),
+           b = c("-", "-", "0", "1", "0", "1", "2"),
+           c = c("0", "0", "2", "2", "3", "3", "3"),
+           d = c("-", "-", "2", "1", "0", "5", "2"),
+           e = c("None", "None", "2", "2", "2", "5", "5"))
+
+colnames(df) <-  c("i", "j", "len(lists[i])", "lists[i][j]", "max")
+
+as_hux(df, add_colnames = TRUE) %>%
+      set_right_border(1:8, everywhere, 0.4) %>%
+      set_left_border(1:8, everywhere, 0.4) %>%
+      set_top_border(1:8, everywhere, 0.4) %>% 
+      set_bottom_border(1:8, everywhere, 0.4)
+```
+
+## Loop table -- solution part 2
+
+```{r}
+#| eval: true
+#| echo: false
+#| warning: false
+#| message: false
+library(knitr)
+library(tidyverse)
+library(huxtable)
+df <- data.frame(a = c("4"),
+           b = c("0"),
+           c = c("1"),
+           d = c("3"),
+           e = c("5"))
+
+colnames(df) <-  c("i", "j", "len(lists[i])", "lists[i][j]", "max")
+
+as_hux(df, add_colnames = TRUE) %>%
+      set_right_border(1:2, everywhere, 0.4) %>%
+      set_left_border(1:2, everywhere, 0.4) %>%
+      set_top_border(1:2, everywhere, 0.4) %>% 
+      set_bottom_border(1:2, everywhere, 0.4)
+```
