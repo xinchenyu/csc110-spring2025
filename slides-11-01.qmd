@@ -1,0 +1,238 @@
+---
+title: "more on for loops (class slides)"
+format: revealjs
+slide-number: true
+df-print: kable
+---
+
+# CSc 110 - more on for loops lists
+
+
+## lists within lists
+
+We've worked with lists of integers, list of strings, and lists of floats -- but we can also have lists of lists:
+
+```{python}
+#| eval: true
+#| echo: true
+lists = [[9,  8,  7,  8],
+         [10, 20, 30, 4],
+         [5,  50, 55, 4]]
+lists[0]
+```
+
+```{python}
+#| eval: true
+#| echo: true
+lists[0][0]
+```
+
+## 2D lists
+
+-   The "first dimension" is the outer list
+-   The "second dimension" are the inner lists
+
+```{python}
+#| eval: true
+#| echo: true
+lists = [[9,  8,  7,  8], # index 0 of outer list
+         [10, 20, 30, 4], # index 1 of outer list
+         [5,  50, 55, 4]] # index 2 of outer list
+```
+
+# 2D lists
+
+-   When we draw pictures of 2D lists, the first dimension is the vertical axis, the second is the horizontal
+
+```{python}
+#| eval: true
+#| echo: true
+lists = [[9,  8,  7,  8],
+         [10, 20, 30, 4],
+         [5,  50, 55, 4]]
+```
+
+![](images/2d_list.png)
+
+## Evaluate the Expressions
+
+```{python}
+#| eval: false
+#| echo: true
+numbers = [[4, 2, 3],
+           [0, 2, 5]]
+numbers[1][2]   
+
+items = [[9, 7, 8],
+         [1, 2, 3, 4, 5, 6],
+         [5],
+         [10, 20, 30]]
+items[1][5]
+items[2][5]
+items[3][2]
+```
+
+## Evaluate the Expressions
+
+```{python}
+#| eval: true
+#| echo: true
+numbers = [[4, 2, 3],
+           [0, 2, 5]]
+numbers[1][2]
+```
+
+```{python}
+#| eval: true
+#| echo: true
+items = [[9, 7, 8],
+         [1, 2, 3, 4, 5, 6],
+         [5],
+         [10, 20, 30]]
+items[1][5]
+```
+
+```{python}
+#| eval: false
+#| echo: true
+items[2][5] # will throw error
+```
+
+```{python}
+#| eval: true
+#| echo: true
+items[3][2]
+```
+
+## `for` loops with lists of lists
+
+```{python}
+#| eval: true
+#| echo: true
+items = [[9, 7, 8],
+         [5],
+         [10, 20, 30]]
+         
+for i in range(len(items)):
+  for j in range(len(items[i])):
+    print( items[i][j] )
+```
+
+## Write a function
+
+1.  Its name is `flatten`
+2.  It takes one parameter, which is a list of lists of integers: `numbers`
+3.  It returns a single list that flattens that list of lists into a single list that contains exactly the same values
+4.  Do not use any list methods besides `.append()`
+
+```{python}
+#| eval: false
+#| echo: true
+assert flatten([]) == []
+assert flatten([[1, 2, 3], [4, 5, 6]]) == [1, 2, 3, 4, 5, 6]
+assert flatten([[1, 2, 3], [4]]) == [1, 2, 3, 4]
+```
+
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def flatten(numbers):
+  new_list = []
+  for i in range(len(numbers)):
+    for j in range(len(numbers[i])):
+      new_list.append(numbers[i][j])
+  return new_list
+
+def main():
+  assert flatten([]) == []
+  assert flatten([[1, 2, 3], [4, 5, 6]]) == [1, 2, 3, 4, 5, 6]
+  assert flatten([[1, 2, 3], [4]]) == [1, 2, 3, 4]
+
+main()
+```
+
+## Write a function
+
+1.  Its name is `get_highest_average`
+2.  It takes an argument, `lists`, which is a 2D list of numbers (floats or integers)
+3.  It calculates the mean of each sublist, and returns the highest average
+
+```{python}
+#| eval: false
+#| echo: true
+assert get_highest_average([[1, 1, 1], [2, 2]]) == 2
+```
+
+## Write a function
+
+An illustration:
+
+```{mermaid}
+flowchart LR
+  A["[[ ],  <br>  [2, 3, 7], <br> [15, 21, 3, 24], <br> [6, 4] ]"] --> B("len([]) > 0 ?") 
+  A --> SS("len([2, 3, 7]) > 0 ?") --> K["[2, 3, 7]"]
+  A --> SSS("len([15, 2, 3, 8]) > 0 ?") --> S["[15, 2, 3, 8]"]
+  A --> SSSS("len([6, 4]) > 0 ?") --> F["[6, 4]"]
+  K -->id1[calculate mean: 4]
+  S --> id2[calculate mean: 7]
+  F --> id3[calculate mean: 5]
+  id1 --> E["[4, 7, 5]"]
+  id2 --> E
+  id3 --> E
+  
+  L("len([4, 7, 5]) > 0 ?") --> id4[calculate highest mean: 7]
+  
+
+  style id1 fill:#ffd5f1,stroke:#333,stroke-width:2px
+  style id2 fill:#ffd5f1,stroke:#333,stroke-width:2px
+  style id3 fill:#ffd5f1,stroke:#333,stroke-width:2px
+  style id4 fill:#feffad,stroke:#333,stroke-width:2px
+```
+
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def get_highest_average(numbers):
+  means = []
+  for i in range(len(numbers)):
+    if len(numbers[i]) > 0:
+      total_sublist = 0
+      for j in range(len(numbers[i])):
+        total_sublist += numbers[i][j]
+      mean_sublist = total_sublist / len(numbers[i])
+      means.append(mean_sublist)
+  
+  if len(means) > 0:
+    highest_mean = means[0]
+    for i in range(len(means)):
+      if means[i] > highest_mean:
+        highest_mean = means[i]
+        
+    return highest_mean
+
+def main():
+  assert get_highest_average([[1, 1, 1], [2, 2]]) == 2
+  assert get_highest_average([[1, 1, 1], []]) == 1
+  assert get_highest_average([[], []]) == None
+  assert get_highest_average([]) == None
+  
+  weeks = [ [100, 100, 105, 105, 102, 102, 100],
+            [70, 71, 75, 72, 81, 80, 74],
+            [78, 72, 74, 71, 70, 70, 70],
+            [30, 32, 40, 38, 31, 32, 30] ]
+  average = get_highest_average(weeks)
+  assert average == 102
+  
+main()
+      
+```
+
+# Submit attendance
+
+Name your solution `two_d_highest_average.py` and submit it to gradescope

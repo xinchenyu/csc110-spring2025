@@ -1,0 +1,161 @@
+---
+title: "Style Guide"
+---
+
+*Coding style* refers to how you name your objects and functions, how you comment your code, how you use spacing throughout your code, etc. If your coding style is consistent, your code is easier to read and easier to debug as a result. Many companies enforce a specific coding style, and you won't be able to push your code to the code base if your code does not pass the style check.
+
+This style guide is a list of *dos and don'ts* for Python programs. In this course, style will be enforced (meaning you will be graded on it) only for programming projects.
+
+# CSc 110: Style Guide
+
+### *File Comments*
+
+File comments, also called header comments, are a **required** piece of your program. This belongs at the top of your code. Your name, the course title, the class section you are in, the assignment, and a brief description of your program should be located in the file comments. Below is an outline for reference.
+
+``` python
+'''
+Jane Doe
+CSC110
+Project -1
+This program has a single function that computes the sum of two numbers.
+'''
+```
+
+-   Note that three double-quotes surround the header comments (you can also use three single-quotes).
+
+-   These are docstrings; they are utilized in Python to document your code.
+
+-   Docstrings should be organized and easy to read.
+
+-   **Remember:** you are writing code for others and your future self to read!
+
+### *Function Comments*
+
+Every function created is required to have a function comment, including main. Function comments serve to describe the task the function performs. The function arguments and return should be included. Please follow the example below for reference.
+
+``` python
+def divide(x, y):
+    '''
+    This function returns the integer division of its two parameters.
+    Args:
+        x: the integer dividend.
+        y: the integer divisor.
+    Returns:
+        The integer division of x and y.
+    '''
+    return x // y
+```
+
+-   Note the triple-quotes (docstrings) that surround the function comments.
+
+-   The function comments are located inside the function they describe, before any code.
+
+-   Function comments **must** contain a description of the function, the arguments, and the return value.
+
+-   The description of parameters should include their types and purpose.
+
+-   The description of the return value should include its type and what it represents.
+
+-   If the function has no arguments or return, document that in the docstrings.
+
+``` python
+def func():
+    '''
+    This function prints the character char N times.
+    Args:
+        None.
+    Returns:
+        None.
+    '''
+    print("This is an example.")
+```
+
+-   The template above should be followed when there are no arguments or return values in a function.
+
+-   Please note that information about both arguments and return values are included in function comments, even if there are none in the function.
+
+### *In-line Comments*
+
+For any line of code that is more complex (for example, a conditional statement or for loop), add an in-line comment before that line of code. In-line comments start with `#` and have a space after `#`:
+
+``` python
+def func(n):
+    '''
+    This function prints the character char N times.
+    Args:
+        None.
+    Returns:
+        None.
+    '''
+    print("This is an example.")
+    
+    # checks if argument n is an even number
+    if n % 2 == 0:
+      print("even")
+```
+
+
+If you need multiple likes of code, use line breaks, and start each line with `#` followed by a space. Remember that all lines in your code, including comments, should be 80 characters or less.
+
+``` python
+def func(numbers):
+    '''
+    This function prints the character char N times.
+    Args:
+        None.
+    Returns:
+        None.
+    '''
+    print("This is an example.")
+    
+    # iterate over indices in numbers list backwards
+    # starting from the ending, all the all to zero
+    # with step -1
+    for i in range(len(numbers)-1, -1, -1):
+      # check if item at i position is even
+      if numbers[i] % 2 == 0:
+        numbers.pop(i) # remove even item at index i
+```
+
+If you need more information on when to comment your code, read this post on [Best practices for writing code comments](https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/).
+
+### *Other formatting*
+
+-   When formatting a docstring, follow the template above.
+
+-   Description of the function should be first.
+
+-   A function's description should describe the purpose of the function, not the implementation of it.
+
+-   Arguments and information about them should follow the description of the function.
+
+-   The return value is the last piece of information in the docstring.
+
+### *Variables and Line Length*
+
+Variable names should follow typical Python style requirements. Variables should only consist of lower-case letters, numbers, and underscores. Variables should be indicative of what they represent. Below are examples of good variable naming and poor variable naming.
+
+``` python
+# Good examples of variable names.
+count = 1
+product = count*3
+word = "Hello"
+name = "Zuko"
+employee_salary = "70000"
+
+# Poor examples of variable names.
+x = 1
+1proDUCT = count*3
+word_GREETING = "Hello"
+xyz = 2
+__name = "Zuko"
+employeeSalary = "70000"
+```
+
+Similarly to function comments, code should be easy to read. This can be done by breaking pieces of code into groups. If several lines of code relate to the same task, put them together with no spaces inbetween and use spacing to separate them from other groupings.
+
+All lines of code should be 80 characters or less. If there is a line of code that exceeds that length, it should be rewritten to be two statements. The backslash character (`\`) can also be used to continue the statement onto the next line.
+
+### Reference
+
+This guide is derived from [Todd Proebsting](http://proebsting.cs.arizona.edu/)'s CSc 110 style guide, which is very loosely based on [Google's Style Guide](https://google.github.io/styleguide/pyguide.html).

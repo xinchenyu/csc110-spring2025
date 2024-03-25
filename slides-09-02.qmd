@@ -1,0 +1,170 @@
+---
+title: "files and strings (class slides)"
+format: revealjs
+slide-number: true
+df-print: kable
+---
+
+# CSc 110 - files and strings
+
+
+## String methods
+
+-   `string.strip(chars)` -- removes any of the characters in chars from the beginning or end of string, returns a string
+-   `string.split(chars)` -- splits string at the chars, returns a list
+-   `string.lower(string)` -- forces all characters to lowercase, returns a string
+
+## Write a function
+
+1.  Its name is `sum_all`
+2.  It takes a string `file_name` as argument
+3.  It reads the file with `file_name` in read mode
+4.  It iterates over each line in [the file](data/numbers.txt), stripping the line breaks, casting each line as integer (assume each line is a single number), summing each number to a total variable
+5.  Return the total
+6.  [Download the text file](data/numbers.txt) for the test case below
+
+```{python}
+#| echo: true
+#| eval: false
+assert sum_all("numbers.txt") == 15
+```
+
+## Write a function -- solution
+
+```{python}
+#| echo: true
+#| eval: true
+def sum_all(file_name):
+  total = 0
+  for line in open(file_name, "r"):
+    number = int(line.strip("\n"))
+    total += number
+  return total
+
+def main():
+  assert sum_all("numbers.txt") == 15
+
+main()
+```
+
+
+# Submit code for attendance
+
+Submit your `sum_all` functions to Gradescope for attendance.
+
+Name your file `sum_numbers.py`
+
+## Modes
+
+-   To read a file:
+
+    -   Use **'r'** for reading the contents of a file
+
+-   To write to a file: use
+
+    -   Use **'a'** to append to the existing file content
+
+    -   Use **'w'** to write to a file, and replace existing content
+
+## Writing to a file
+
+-   After you have opened the file in either **'a'** or **'w'** mode
+
+    ```         
+    a_file = open(file_name, mode)
+    ```
+
+-   Use the **write** function to write text content to the file
+
+    ```         
+    a_file.write('put this content in a file')
+    ```
+
+-   When finished writing, **close** the file **a_file.close()**
+
+## Evaluate the code
+
+```{python}
+#| echo: true
+#| eval: true
+words = open('words.txt', 'w')
+words.write('The slow wolf')
+words.write('jumped over')
+words.write('the bear')
+words.close()
+```
+
+## Evaluate the code
+
+```{python}
+#| echo: true
+#| eval: true
+words = open('words.txt', 'w')
+words.write('The slow wolf\n')
+words.write('jumped over\n')
+words.write('the bear\n')
+words.close()
+```
+
+## Evaluate the code
+
+```{python}
+#| echo: true
+#| eval: true
+words = open('words.txt', 'a')
+words.write('The slow wolf\n')
+words.write('jumped over\n')
+words.write('the bear\n')
+words.close()
+```
+
+## Write a function
+
+1.  Its name is `write_word_count`
+2.  It takes a string `file_name` as argument, it opens the file in read mode
+3.  It writes a comma separated file ("out_" + original filename), with the lowercase word as first value and count second
+4.  [Download test file](data/alien.txt)
+
+Test case:
+
+```{python}
+#| eval: false
+#| echo: true
+write_word_count("alien.txt")
+# writes out out_alien.txt with word counts
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def count_words(file_name):
+  f = open(file_name, "r")
+  counts = {}
+  for line in f:
+    words = line.strip("\n").split(" ")
+    for w in words:
+      lower_case_w = w.lower()
+      if lower_case_w not in counts:
+        counts[lower_case_w] = 1
+      else:
+        counts[lower_case_w] += 1
+  return counts
+
+def write_word_count(file_name):
+  count_dict = count_words(file_name)
+  output_file = open("out_" + file_name, "w")
+  for key, value in count_dict.items():
+    output_file.write(key + "," + str(value) + "\n")
+  output_file.close()
+  
+def main(): 
+  write_word_count("alien.txt")
+  
+main()
+```
+
+# Submit Attendance
+
+Name your previous solution `read_and_write.py` and submit it to attendance on Gradescope

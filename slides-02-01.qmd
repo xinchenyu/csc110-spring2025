@@ -1,0 +1,181 @@
+---
+title: "Functions (class slides)"
+format: revealjs
+slide-number: true
+df-print: kable
+---
+
+# CSc 110 - Functions
+
+## Quiz 01
+
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+</center>
+
+You have 10 minutes to complete the quiz
+
+Print the exact characters shown in your quiz (there are different versions of the quiz)
+
+Changes to the characters (for example, not printing the quotes or apostrophe) will be considered as an incorrect solution (zero grade awarded).
+
+## Functions
+
+-   Functions are named operations that are available to do tasks
+-   Some functions are *built-in* functions that Python provides
+-   Programmers can also define their own functions
+-   Functions are **called** (or **invoked**)
+
+## Function definitions
+
+```{python}
+#| echo: true
+#| eval: false
+def two():
+  return 2
+```
+
+This function definition has many parts:
+
+-   `two` is the name of the function
+-   `()` is the **parameter** list (Here, it is empty)
+-   the body (or content) of the function is indented
+-   `return 2` is a statement that causes the function to cease and produce the value 2
+
+## Example of a simple function
+
+```{python}
+#| echo: true
+#| eval: false
+def add_one(n):
+  return n + 1
+```
+
+-   `add_one` is the name of the function
+-   `(n)` is the **parameter** list
+-   the body (or content) of the function is indented
+-   `return n + 1` is a statement that causes the function to cease and produce the value n + 1
+
+
+## Function to calculate area of a circle
+
+Remember this from the last set of slides?
+
+```{python}
+#| echo: true
+#| eval: false
+# assign a radius value
+radius = 3
+# compute the area of a circle
+area = 3.1415 * radius ** 2
+```
+
+<br />
+
+Calculating the `area` of a circle is an `abstraction`.
+
+In the code above, that is done by a variable *assignment* with a variable named `area`.
+
+Let's create a function called `area`, that given a `radius` parameter, it returns the `area` of the circle.
+
+
+## Function to calculate area of a circle
+
+```{python}
+#| echo: true
+#| eval: false
+def calculate_area(radius):
+  # calculate the area first
+  area = 3.1415 * radius ** 2
+  
+  # return calculated area
+  return area
+
+print(calculate_area(3)) # 28.27
+print(calculate_area(6)) # 113.09
+```
+
+## Function to calculate the volume of a cylinder
+
+Write a function that does the following:
+
+1.  Its name is `volume`
+2.  It takes two integer arguments: `radius` and `height`
+3.  It calculates the volume of a cylinder, based on `radius` and `height`. Volume is area multiplied by height.
+4.  It returns the float value for calculated volume.
+
+## Function to calculate the volume of a cylinder
+
+```{python}
+#| echo: true
+#| eval: false
+def volume(radius, height):
+  # calculate the area first
+  area = 3.1415 * radius ** 2
+  
+  # multiply area by height
+  vol = area * height
+  
+  # return calculated volume
+  return vol
+
+print(volume(1, 2)) # 6.283
+print(volume(6, 10)) # 1130.94
+print(volume(5, 5)) # 392.68750000000006
+```
+
+## Submit function to Gradescope
+
+-   Name your python script with the `volume` function `cylinder.py`
+-   Go to [Gradescope]() and submit your `.py` file
+-   You can resubmit as many times as you need (up to the deadline)
+-   You can look at your `Submission History` and activate a previous submission
+
+
+# Order of Operations
+
+## PEMDAS
+
+-   What does PEMDAS stand for?
+-   The operator precedence:
+    -   **P**arentheses
+    -   **E**xponentiation
+    -   **M**ultiplication and **D**ivision (including // and %)
+    -   **A**ddition and **S**ubtraction
+
+## PEMDAS
+
+What value will each of these variables take on? No computers!
+
+```{=html}
+<pre>
+a1 = 5 /  5 * 10  * 5
+a2 = 5 / (5 * 10) * 5
+
+b1 = 5 *  10 - 2
+b2 = 5 * (10 - 2)
+
+c = (3 // (4 // 5)) + 1
+</pre>
+```
+## PEMDAS -- answer
+
+```{python}
+#| echo: true
+#| eval: true
+a1 = 5 /  5 * 10  * 5
+a2 = 5 / (5 * 10) * 5
+
+b1 = 5 *  10 - 2
+b2 = 5 * (10 - 2)
+
+# c = (3 // (4 // 5)) + 1 ERROR -- Zero Division
+
+print(a1)
+print(a2)
+print(b1)
+print(b2)
+```
+
+Note that the division operator returns a float even when both numerator and denominator are integers
