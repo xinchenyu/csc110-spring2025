@@ -232,3 +232,7 @@ def main():
 main()
       
 ```
+
+# Submit attendance
+
+Name your solution `two_d_highest_average.py` and submit it to gradescope
