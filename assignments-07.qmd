@@ -1,0 +1,81 @@
+---
+title: "Module 7 Assignments"
+---
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(readxl)
+assignments <- read_excel("assessment_schedule.xlsx") %>% 
+  mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
+```
+
+
+# Short Project 06
+
+**Due date: `r assignments %>% filter(assessment == "Short Programming Project 6") %>% pull(formatted_date)` at 9pm**
+
+Short Programming projects are submitted during our weekly 45-minute in-person lab sessions. Each lab sessions is guided by two TAs. The instructions for the short project will be available only during the lab sessions. To schedule your lab session go to [the weekly lab session spreadsheet](https://docs.google.com/spreadsheets/d/1mS3H-8GyLHb__rZaf9j66khmkncQgeqEXfyVk2l0sNo/edit?usp=sharing).
+
+
+# Programming Problems
+Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/676322).
+
+## Programming Problem 13
+
+**Due date: `r assignments %>% filter(assessment == "Module 7 Programming Problems") %>% pull(formatted_date)` at 9pm**
+
+Write a Python function that does the following:
+
+1\. Its name is `stop_ascending`.\
+2. It takes a list of numbers as argument.\
+3. It returns the index of the first value that is not larger than the preceding value.\
+4. If the list is entirely ascending, then the function should return the length of the list.\
+5. Be very careful to return the correct index.
+
+Name the program `ascending.py`. Make sure that gradescope gives you the points for passing the test case.
+
+Test cases:
+
+```{python}
+#| echo: true
+#| eval: false
+print( stop_ascending([]) ) # None
+print( stop_ascending([1, 2, 3]) ) # 3
+print( stop_ascending([1, 2, 3, 1, 5]) ) # 3
+```
+
+## Programming Problem 14
+
+**Due date: `r assignments %>% filter(assessment == "Module 7 Programming Problems") %>% pull(formatted_date)` at 9pm**
+
+Write a Python function that does the following:
+
+1.  Its name is `combine`.
+2.  It takes two lists as parameter.
+3.  It combines the two lists into a single list that contains exactly the same values -- make sure you add the items from the second list into the first list (the first list needs to be modified)
+4.  Do not use any list methods besides `.append`.
+
+Name the program `combine_lists.py`. Make sure that gradescope gives you the points for passing the test case.
+
+Test cases:
+
+```{python}
+#| echo: true
+#| eval: false
+
+test_list = []
+combine(test_list, []) 
+print(test_list) # []
+
+test_list = [1, 2, 3]
+combine(test_list, [1, 1]) 
+print(test_list) # [1, 2, 3, 1, 1]
+
+test_list = [1, 2, 3, 1, 5]
+combine(test_list, [])
+print(test_list) # [1, 2, 3, 1, 5]
+```

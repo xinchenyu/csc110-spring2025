@@ -1,0 +1,156 @@
+---
+title: "Programming Project 9"
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(readxl)
+assignments <- read_excel("assessment_schedule.xlsx") %>% 
+  mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
+```
+
+Programming Projects are to be submitted to [gradescope](https://www.gradescope.com/courses/691034).
+
+**Due date: `r assignments %>% filter(assessment == "Programming Project 9") %>% pull(formatted_date)` at 9pm**
+
+This programming project is an adaptation of Ben Dicken's Infographic Programming Assignment.
+
+# Creating information files
+
+In this programming problem, you will be writing a program that reads in a text file (perhaps containing the contents of a book, poem, article, etc) and produces an information file based on the text. You will need to use one or more dictionaries to count words in the program. You may also use lists and / or sets. 
+
+The information file should contain the following information about the text:
+
+* The name of the text file
+* The total number of words.
+* The most used small, medium, and large words in the file. For the purposes of this project, the definitions of a small, medium, and large word is:
+    * small: length 0-4, inclusive.
+    * medium: length 5-7, inclusive.
+    * large: length 8+, inclusive.
+* The frequencies and percentages for each word length category
+* The frequencies and percentages for each capitalized word category
+* The frequencies and percentages for each punctuated word category
+
+Name your Python file `infofile.py`.
+
+# Development Strategy
+
+## (1) Reading and processing the file
+
+The first step is to open an input file and read in all of the lines and strip the newlines off of the ends. To get the words, all you have to do is split each line on whitespace. To accomplish this, just call `split()` on each line string, with no argument. You can then append each individual word to a python list. You do not need to strip off punctuation from the words or normalize the cases.
+
+For example, if you input file had the following content:
+
+```{html}
+two forks.
+one knife.
+two glasses.
+one plate.
+one napkin.
+his glasses.
+his knife.
+```
+
+The words list should have the following content after processing the file:
+
+```{python}
+#| echo: true
+#| eval: false
+words = ['two', 'forks.', 'one', 'knife.', 'two', 'glasses.', \
+         'one', 'plate.', 'one', 'napkin.', 'his,' 'glasses.', 'his', 'knife.']
+```
+
+## (2) Counting words
+
+Once you have a list of all of the words from the file, you can count the occurrences. You should use a dictionary for this. Continuing from the example of the last step, the dictionary should have the following contents:
+
+```{python}
+#| echo: true
+#| eval: false
+word_counts = {'two':2, 'one':3, 'forks.':1, 'knife.':2, \
+               'glasses.':2, 'plate.':1, 'napkin.':1, 'his':2}
+```
+
+## (3) Finding most occurrences
+
+Next, you can find the small, medium, and large words that occur the most. In the example, it would be `one` for small, `knife.` for medium, and `glasses.` for large. You can do this by iterating through the key and value pairs in the `word_counts` dictionary, and keeping track of which has the highest count. 
+
+## (4) Counting Capitalized
+
+Next, compute how many unique capitalized and non-capitalized. You can do this by getting the keys of the `word_counts` dictionary as a list, and then looping through them all.
+
+## (5) Counting Punctuated
+
+Compute how many unique punctuated and non-punctuated words there are. Use a similar process as you did for step (4).
+
+## (6) Writing the information file
+
+You should write a text file with three sections on the information you compiled. Here's an example of what the file should look like for the contents of the file in section `(1)`.
+
+```{html}
+Total number of unique words: 8
+Most frequent words by size:
+* Small: one
+* Medium: knife.
+* Large: glasses.
+
+Length:
+* Small: 3 (37.5%)
+* Medium: 4 (50.0%)
+* Large: 1 (12.5%)
+###################%%%%%%%%%%%%%%%%%%%%%%%%%******
+
+Capitalization:
+* Capitalized: 0 (0.0%)
+* Non-capitalized: 8 (100.0%)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Punctuation:
+* Punctuated: 5 (62.5%)
+* Non-punctuated: 3 (37.5%)
+###############################%%%%%%%%%%%%%%%%%%%
+```
+
+
+To calculate how many characters in each bar use the formula:
+
+```{python}
+#| eval: false
+#| echo: true
+(category_item_count/total_item_count) * 50
+```
+
+# Resource Files
+
+Below are some resource files you might find interesting to run your program with.
+
+* [poem.txt](data/poem.txt)
+* [Cat_in_the_Hat.txt](data/Cat_in_the_Hat.txt)
+
+If you'd like to try the program on other books, you can visit [gutenberg.org](https://gutenberg.org/).
+
+# Test case
+
+```{python}
+#| eval: false
+#| echo: true
+if __name__ == '__main__':
+    word_list = text_to_list("test.txt")
+    assert word_list == ['two', 'forks.', 'one', 'knife.', 'two', 'glasses.', \
+         'one', 'plate.', 'one', 'napkin.', 'his', 'glasses.', 'his', 'knife.']
+    
+    word_counts = count_words(word_list)    
+    assert word_counts == {'two':2, 'one':3, 'forks.':1, 'knife.':2, \
+               'glasses.':2, 'plate.':1, 'napkin.':1, 'his':2}
+    
+    assert most_frequent(word_counts) == ('one', 'knife.', 'glasses.')
+    assert count_capitalized(word_counts) == (0, 8)
+    assert count_punctuated(word_counts) == (5, 3)
+    assert count_sizes(word_counts) == (3, 4, 1)
+    
+    write_results(word_counts, filename)
+```
+

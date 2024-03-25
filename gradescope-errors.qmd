@@ -1,0 +1,47 @@
+---
+title: "Common Gradescope Errors"
+---
+
+You might find that your code runs in your computer but it you get errors on Gradescope. Often the problem is not Gradescope, but your code.
+
+Here's some of these common problems and how to solve them:
+
+# Mismatch in file name
+
+```{html}
+ModuleNotFoundError: No module named 'misspeled file name'
+```
+
+Check the instructions and the error message for the right file name spelling. Remember that capitalization matters: `Hello.py` is different from `hello.py`
+
+# Mismatch in function name
+
+```{html}
+Test Failed: name 'farenheit' is not defined
+```
+
+Check the instructions for the correct function name. In the example above, the autograder is trying to call `fahrenheit()` and the function was written without the `h` after `a`.
+
+# Conversion function error
+
+```{html}
+Test Failed: invalid literal for int() with base 10: '3.5'
+```
+
+The autograder is providing the string "3.5" as an argument, and your code is trying to convert "3.5" to an integer using `int()`. You should convert the argument to a float instead.
+
+# EOF error
+
+```{html}
+EOF Error: EOF when reading a line
+```
+
+You are calling `input()` or a function that calls `input()` -- remove all function calls outside functions. For example, if you are calling `main()`, delete it.
+
+# Infinite loop
+
+```{html}
+Your submission timed out. It took longer than 600 seconds to run.
+```
+
+Your code has an infinite loop, so the autograder ran until it timed out. Make sure you are updating your index **inside** your while loop so that you eventually get out of that while loop.

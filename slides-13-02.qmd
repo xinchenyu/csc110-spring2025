@@ -1,0 +1,237 @@
+---
+title: "mutating dictionaries (class slides)"
+format: revealjs
+slide-number: true
+df-print: kable
+---
+
+# CSc 110 - mutating dictionaries
+
+## Announcements
+
+*	Fill out SCS (https://scsonline.oia.arizona.edu/) – if 80% response rate for whole class, one project grade gets dropped
+
+About the final exam:
+
+-   Thursday, December 14, 2023 – 6:00pm - 8:00pm in [ENR2](https://maps.app.goo.gl/RiDaC9Np7M8LVPYZ7) room N120 
+-   Find the room before final date
+-   Do not bring excess stuff – space is limited
+-   Practice writing on smaller desk
+
+## Dictionaries are mutable
+
+-   changes to a dictionary in a function will remain after the function finishes running
+-   you can change dictionary values using keys
+
+## Changing values in a dictionary
+
+You can change dictionary values using keys
+
+```{python}
+#| eval: true
+#| echo: true
+names_ages = {"Paul": 32, "Patricia": 44, "Eduardo": 27}
+for key in names_ages:
+  names_ages[key] += 1
+names_ages
+```
+
+## Write a function
+
+1.  Its name is `sales_tax`
+2.  It takes a dictionary as argument, with string keys and float values
+3.  It **mutates** the dictionary argument, multiplying each value by 0.056 and rounding the result to two decimals
+
+```{python}
+#| eval: false
+#| echo: true
+groceries = {"banana": 2.50, "milk": 4.25, "bread": 3.68}
+sales_tax(groceries)
+assert groceries == {'banana': 0.14, 'milk': 0.24, 'bread': 0.21}
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def sales_tax(dictionary):
+  for key in dictionary:
+    dictionary[key] = round(dictionary[key] * 0.056, 2)
+  return dictionary
+
+def main():
+  groceries = {"banana": 2.50, "milk": 4.25, "bread": 3.68}
+  sales_tax(groceries)
+  assert groceries == {'banana': 0.14, 'milk': 0.24, 'bread': 0.21}
+  print(groceries)
+  
+main()
+    
+```
+
+## Write a function
+
+1.  Its name is `sales_tax`
+2.  It takes a dictionary as argument, with string keys and float values
+3.  It returns a new dictionary, multiplying each value by 0.056 and rounding the result to two decimals
+
+```{python}
+#| eval: false
+#| echo: true
+groceries = {"banana": 2.50, "milk": 4.25, "bread": 3.68}
+assert sales_tax(groceries) == {'banana': 0.14, 'milk': 0.24, 'bread': 0.21}
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def sales_tax(dictionary):
+  result = {}
+  for key, value in dictionary.items():
+    result[key] = round(value * 0.056, 2)
+  return result
+
+def main():
+  groceries = {"banana": 2.50, "milk": 4.25, "bread": 3.68}
+  assert sales_tax(groceries) == {'banana': 0.14, 'milk': 0.24, 'bread': 0.21}
+  print( sales_tax(groceries) )
+
+main()
+```
+
+## Removing `key: value` from a dictionary
+
+Cannot iterate over a dictionary and change its size:
+
+```{python}
+#| eval: false
+#| echo: true
+counts = {"a": 10, "e": 4, "i": 3}
+for key in counts:
+  counts.pop(key)
+```
+
+RuntimeError: dictionary changed size during iteration
+
+## Removing `key: value` from a dictionary
+
+Use another data structure (like a set) instead
+
+```{python}
+#| eval: true
+#| echo: true
+counts = {"a": 10, "e": 4, "i": 3}
+keys = set(counts)
+for k in keys:
+  counts.pop(k)
+counts
+```
+
+## Write a function
+
+1.  Its name is `remove_records`
+2.  It takes a dictionary as argument, with string keys
+3.  It **mutates** and returns the dictionary argument removing keys that start and end with the same character
+
+```{python}
+#| eval: false
+#| echo: true
+students = {"Anna": "A", "Peter": "B", "Bob": "D", "Cedric": "A"}
+remove_records(students)
+assert students == {"Peter": "B"}
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def remove_records(dictionary):
+  for k in set(dictionary):
+    if len(k) > 0 and k[0].lower() == k[-1].lower():
+      dictionary.pop(k)
+  return dictionary
+      
+def main():
+  students = {"Anna": "A", "Peter": "B", "Bob": "D", "Cedric": "A"}
+  remove_records(students)
+  assert students == {"Peter": "B"}
+  print(students)
+  
+main()
+```
+
+## Write a function
+
+1.  Its name is `repetition`
+2.  It takes a dictionary as argument, with strings as keys and integers as values (you can assume the values are never negative)
+3.  It **mutates** and returns the dictionary, replacing each value with a list of the key repeated by the value
+
+```{python}
+#| eval: false
+#| echo: true
+test_dictionary = {"a": 5, "b": 2, "c": 3}
+repetition(test_dictionary)
+assert test_dictionary == {"a": ["a", "a", "a", "a", "a"], 
+                           "b": ["b", "b"], "c": ["c", "c", "c"] }
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def repetition(dictionary):
+  for key, value in dictionary.items():
+    dictionary[key] = [key] * value
+  return dictionary
+
+def main():
+  test_dictionary = {"a": 5, "b": 2, "c": 3}
+  repetition(test_dictionary)
+  assert test_dictionary == {"a": ["a", "a", "a", "a", "a"], 
+                           "b": ["b", "b"], "c": ["c", "c", "c"] }
+  print(test_dictionary) # {"a": ["a", "a", "a", "a", "a"], 
+                         #  "b": ["b", "b"], "c": ["c", "c", "c"] }
+main()
+```
+
+## Write a function
+
+1.  Its name is `get_names`
+2.  It has two parameters: a `dictionary` that maps one_letter strings to lists of strings, an a `string`
+3.  It returns a list with strings (names) from the lists in the dictionary that include the second parameter (`string`) as a substring (this search is not case sensitive)
+
+Test case:
+
+```{python}
+#| eval: false
+#| echo: true
+names = {"R": ["Randy", "Roger"], "S": ["Steve", "Sally"], "T": ["Tanner"]}
+assert get_names(names, "er") == ["Roger", "Tanner"]
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def get_names(dictionary, string):
+  new_list = []
+  for name_list in dictionary.values():
+    for name in name_list:
+      if string.lower() in name.lower():
+        new_list.append(name)
+  return new_list
+
+def main():
+  names = { "R": ["Randy", "Roger"], 
+            "S": ["Steve", "Sally"], 
+            "T": ["Tanner"] }
+  print( get_names(names, "er") ) # ["Roger", "Tanner"]
+  
+main()
+```
