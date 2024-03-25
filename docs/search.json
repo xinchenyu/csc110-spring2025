@@ -1201,14 +1201,14 @@
     "href": "assignments-11.html#programming-problem-21",
     "title": "Module 11 Assignments",
     "section": "Programming Problem 21",
-    "text": "Programming Problem 21\nDue date: Tuesday, April 09, 2024 at 9pm"
+    "text": "Programming Problem 21\nDue date: Tuesday, April 09, 2024 at 9pm\nWrite a remove_zero_sides function that given a 2D list as argument, it mutates and returns the list removing any first and last values that are equal to zero. Name your file filter.py.\nTest cases:\n\nnumbers = [[0, 1, 2], [0], [], [2, 4, 0], [0, 0], [0, 20, 3, 10, 0]]\nremove_zero_sides(numbers)\nassert numbers ==  [[1, 2], [], [], [2, 4], [], [20, 3, 10]]\n\nmore_numbers = [[0], [], [0, 0], [0, 1], [2, 0]]\nassert remove_zero_sides(more_numbers) == [[], [], [], [1], [2]]"
   },
   {
     "objectID": "assignments-11.html#programming-problem-22",
     "href": "assignments-11.html#programming-problem-22",
     "title": "Module 11 Assignments",
     "section": "Programming Problem 22",
-    "text": "Programming Problem 22\nDue date: Tuesday, April 09, 2024 at 9pm"
+    "text": "Programming Problem 22\nDue date: Tuesday, April 09, 2024 at 9pm\nWrite a lowercase_items function that given a 2D list of strings as argument, it mutates and returns the list lowercasing all strings in each sublist. You can assume all items in the lists are strings. You can use the .lower() string method. Name your file lowercasing.py\nTest cases:\n\nwords = [[\"A\", \"B\", \"C\"], [], [\"BANANA\", \"Apple\", \"pineapple\"]]\nlowercase_items(words)\nassert words == [[\"a\", \"b\", \"c\"], [], [\"banana\", \"apple\", \"pineapple\"]]\n\nmore_words = [[\"A\"], [\"Monica\"]]\nassert lowercase_items(more_words) == [[\"a\"], [\"monica\"]]"
   },
   {
     "objectID": "op_exp-a.html",
