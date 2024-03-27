@@ -32,7 +32,7 @@ The information file should contain the following information about the text:
     * large: length 8+, inclusive.
 * The frequencies and percentages for each word length category
 * The frequencies and percentages for each capitalized word category
-* The frequencies and percentages for each punctuated word category
+* The frequencies and percentages for each punctuated word category (consider only `.` and `,`)
 
 Name your Python file `infofile.py`.
 
