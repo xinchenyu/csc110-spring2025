@@ -683,7 +683,7 @@
     "href": "slides-12-02.html#sets-1",
     "title": "intro to sets (class slides)",
     "section": "Sets",
-    "text": "Sets\n\nDo not store items in the order you created them\nDo not allow repeated items to be stored\nCannot use square brackets to retrieve an item\nUse set() to initiate an empty set\nUse for x in set to iterate over the elements in a set"
+    "text": "Sets\n\nDo not store items in the order you created them\nDo not allow repeated items to be stored\nCannot use square brackets to retrieve an item\nUse set() to initiate an empty set\nUse len() to get number of items\nUse for x in set to iterate over the elements in a set"
   },
   {
     "objectID": "slides-12-02.html#set-methods",
@@ -739,14 +739,14 @@
     "href": "slides-12-02.html#write-a-function-1",
     "title": "intro to sets (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is has_duplicates\nIt takes a variable number of arguments: *values\nIt returns True if there are repeated elements in *values, False otherwise\n\n\nassert has_duplicates(3, 2, 1, 2, 3) == True\nassert has_duplicates(3, 20, 1, 2, 13) == False"
+    "text": "Write a function\n\nIts name is has_duplicates\nIt takes a variable number of arguments: *values\nIt returns True if there are repeated elements in values, False otherwise\n\n\nassert has_duplicates(3, 2, 1, 2, 3) == True\nassert has_duplicates(3, 20, 1, 2, 13) == False"
   },
   {
     "objectID": "slides-12-02.html#write-a-function-solution-1",
     "href": "slides-12-02.html#write-a-function-solution-1",
     "title": "intro to sets (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef has_duplicates(*values):\n  values_set = set(values)\n  return not len(values) == len(values_set)\n\ndef main():\n  assert has_duplicates(3, 2, 1, 2, 3) == True\n  assert has_duplicates(3, 20, 1, 2, 13) == False\n  \nmain()"
+    "text": "Write a function – solution\n\ndef has_duplicates(*values):\n  unique_values = set()\n  for v in values:\n    if v not in unique_values:\n      unique_values.add(v)\n    else:\n      return True\n  return False\n\ndef main():\n  assert has_duplicates(3, 2, 1, 2, 3) == True\n  assert has_duplicates(3, 20, 1, 2, 13) == False\n  \nmain()"
   },
   {
     "objectID": "final-review.html",
@@ -5346,5 +5346,12 @@
     "title": "more on for loops (class slides)",
     "section": "Write a function – solution 2",
     "text": "Write a function – solution 2\n\ndef get_highest_average(number_lists):\n    max_average = None\n    for i in range(len(number_lists)):\n        if len(number_lists[i]) &gt; 0:\n            total_sublist = 0\n            for j in range(len(number_lists[i])):\n                total_sublist += number_lists[i][j]\n            average = total_sublist/len(number_lists[i])\n            if max_average == None or average &gt; max_average:\n                max_average = average\n    return max_average\n\ndef main():\n  assert get_highest_average([[1, 1, 1], [2, 2]]) == 2\n  assert get_highest_average([[1, 1, 1], []]) == 1\n  assert get_highest_average([[], []]) == None\n  assert get_highest_average([]) == None\n  \n  weeks = [ [100, 100, 105, 105, 102, 102, 100],\n            [70, 71, 75, 72, 81, 80, 74],\n            [78, 72, 74, 71, 70, 70, 70],\n            [30, 32, 40, 38, 31, 32, 30] ]\n  average = get_highest_average(weeks)\n  assert average == 102\n  \nmain()"
+  },
+  {
+    "objectID": "slides-12-02.html#write-a-function-solution-2",
+    "href": "slides-12-02.html#write-a-function-solution-2",
+    "title": "intro to sets (class slides)",
+    "section": "Write a function – solution 2",
+    "text": "Write a function – solution 2\n\ndef has_duplicates(*values):\n  values_set = set(values)\n  return not len(values) == len(values_set)\n\ndef main():\n  assert has_duplicates(3, 2, 1, 2, 3) == True\n  assert has_duplicates(3, 20, 1, 2, 13) == False\n  \nmain()"
   }
 ]

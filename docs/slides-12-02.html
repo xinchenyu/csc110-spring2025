@@ -465,6 +465,7 @@
 <li><p>Do not allow repeated items to be stored</p></li>
 <li><p><strong>Cannot</strong> use square brackets to retrieve an item</p></li>
 <li><p>Use <code>set()</code> to initiate an empty set</p></li>
+<li><p>Use <code>len()</code> to get number of items</p></li>
 <li><p>Use <code>for x in set</code> to iterate over the elements in a set</p></li>
 </ul>
 </section>
@@ -574,6 +575,11 @@
 <pre><code>{2, 3, 4, 5}</code></pre>
 </div>
 </div>
+</section></section>
+<section>
+<section id="submit-attendance" class="title-slide slide level1 center">
+<h1>Submit attendance</h1>
+<p>Go to gradescope and evaluate the code for today’s attendance question</p>
 </section>
 <section id="write-a-function" class="slide level2">
 <h2>Write a function</h2>
@@ -604,19 +610,13 @@
 <span id="cb20-11"><a href="#cb20-11"></a>  </span>
 <span id="cb20-12"><a href="#cb20-12"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section>
-<section>
-<section id="submit-code-for-attendance" class="title-slide slide level1 center">
-<h1>Submit code for attendance</h1>
-<p>Submit your <code>count_names</code> functions to Gradescope for attendance.</p>
-<p>Name your file <code>set_names.py</code></p>
 </section>
 <section id="write-a-function-1" class="slide level2">
 <h2>Write a function</h2>
 <ol type="1">
 <li>Its name is <code>has_duplicates</code></li>
 <li>It takes a variable number of arguments: <code>*values</code></li>
-<li>It returns <code>True</code> if there are repeated elements in <code>*values</code>, <code>False</code> otherwise</li>
+<li>It returns <code>True</code> if there are repeated elements in <code>values</code>, <code>False</code> otherwise</li>
 </ol>
 <div class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a><span class="cf">assert</span> has_duplicates(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>) <span class="op">==</span> <span class="va">True</span></span>
@@ -627,14 +627,33 @@
 <h2>Write a function – solution</h2>
 <div class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a><span class="kw">def</span> has_duplicates(<span class="op">*</span>values):</span>
-<span id="cb22-2"><a href="#cb22-2"></a>  values_set <span class="op">=</span> <span class="bu">set</span>(values)</span>
-<span id="cb22-3"><a href="#cb22-3"></a>  <span class="cf">return</span> <span class="kw">not</span> <span class="bu">len</span>(values) <span class="op">==</span> <span class="bu">len</span>(values_set)</span>
-<span id="cb22-4"><a href="#cb22-4"></a></span>
-<span id="cb22-5"><a href="#cb22-5"></a><span class="kw">def</span> main():</span>
-<span id="cb22-6"><a href="#cb22-6"></a>  <span class="cf">assert</span> has_duplicates(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>) <span class="op">==</span> <span class="va">True</span></span>
-<span id="cb22-7"><a href="#cb22-7"></a>  <span class="cf">assert</span> has_duplicates(<span class="dv">3</span>, <span class="dv">20</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">13</span>) <span class="op">==</span> <span class="va">False</span></span>
-<span id="cb22-8"><a href="#cb22-8"></a>  </span>
-<span id="cb22-9"><a href="#cb22-9"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb22-2"><a href="#cb22-2"></a>  unique_values <span class="op">=</span> <span class="bu">set</span>()</span>
+<span id="cb22-3"><a href="#cb22-3"></a>  <span class="cf">for</span> v <span class="kw">in</span> values:</span>
+<span id="cb22-4"><a href="#cb22-4"></a>    <span class="cf">if</span> v <span class="kw">not</span> <span class="kw">in</span> unique_values:</span>
+<span id="cb22-5"><a href="#cb22-5"></a>      unique_values.add(v)</span>
+<span id="cb22-6"><a href="#cb22-6"></a>    <span class="cf">else</span>:</span>
+<span id="cb22-7"><a href="#cb22-7"></a>      <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb22-8"><a href="#cb22-8"></a>  <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb22-9"><a href="#cb22-9"></a></span>
+<span id="cb22-10"><a href="#cb22-10"></a><span class="kw">def</span> main():</span>
+<span id="cb22-11"><a href="#cb22-11"></a>  <span class="cf">assert</span> has_duplicates(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>) <span class="op">==</span> <span class="va">True</span></span>
+<span id="cb22-12"><a href="#cb22-12"></a>  <span class="cf">assert</span> has_duplicates(<span class="dv">3</span>, <span class="dv">20</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">13</span>) <span class="op">==</span> <span class="va">False</span></span>
+<span id="cb22-13"><a href="#cb22-13"></a>  </span>
+<span id="cb22-14"><a href="#cb22-14"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-a-function-solution-2" class="slide level2">
+<h2>Write a function – solution 2</h2>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a><span class="kw">def</span> has_duplicates(<span class="op">*</span>values):</span>
+<span id="cb23-2"><a href="#cb23-2"></a>  values_set <span class="op">=</span> <span class="bu">set</span>(values)</span>
+<span id="cb23-3"><a href="#cb23-3"></a>  <span class="cf">return</span> <span class="kw">not</span> <span class="bu">len</span>(values) <span class="op">==</span> <span class="bu">len</span>(values_set)</span>
+<span id="cb23-4"><a href="#cb23-4"></a></span>
+<span id="cb23-5"><a href="#cb23-5"></a><span class="kw">def</span> main():</span>
+<span id="cb23-6"><a href="#cb23-6"></a>  <span class="cf">assert</span> has_duplicates(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>) <span class="op">==</span> <span class="va">True</span></span>
+<span id="cb23-7"><a href="#cb23-7"></a>  <span class="cf">assert</span> has_duplicates(<span class="dv">3</span>, <span class="dv">20</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">13</span>) <span class="op">==</span> <span class="va">False</span></span>
+<span id="cb23-8"><a href="#cb23-8"></a>  </span>
+<span id="cb23-9"><a href="#cb23-9"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 <div class="footer footer-default">
