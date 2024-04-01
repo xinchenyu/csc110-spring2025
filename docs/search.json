@@ -5352,6 +5352,6 @@
     "href": "slides-12-02.html#write-a-function-solution-2",
     "title": "intro to sets (class slides)",
     "section": "Write a function – solution 2",
-    "text": "Write a function – solution 2\n\ndef has_duplicates(*values):\n  values_set = set(values)\n  return not len(values) == len(values_set)\n\ndef main():\n  assert has_duplicates(3, 2, 1, 2, 3) == True\n  assert has_duplicates(3, 20, 1, 2, 13) == False\n  \nmain()"
+    "text": "Write a function – solution 2\n\ndef has_duplicates(*values):\n  values_set = set(values)\n  return len(values) &gt; len(values_set)\n\ndef main():\n  assert has_duplicates(3, 2, 1, 2, 3) == True\n  assert has_duplicates(3, 20, 1, 2, 13) == False\n  \nmain()"
   }
 ]

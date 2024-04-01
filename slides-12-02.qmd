@@ -264,7 +264,7 @@ main()
 #| echo: true
 def has_duplicates(*values):
   values_set = set(values)
-  return not len(values) == len(values_set)
+  return len(values) > len(values_set)
 
 def main():
   assert has_duplicates(3, 2, 1, 2, 3) == True

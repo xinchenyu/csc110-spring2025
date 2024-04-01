@@ -647,7 +647,7 @@
 <div class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a><span class="kw">def</span> has_duplicates(<span class="op">*</span>values):</span>
 <span id="cb23-2"><a href="#cb23-2"></a>  values_set <span class="op">=</span> <span class="bu">set</span>(values)</span>
-<span id="cb23-3"><a href="#cb23-3"></a>  <span class="cf">return</span> <span class="kw">not</span> <span class="bu">len</span>(values) <span class="op">==</span> <span class="bu">len</span>(values_set)</span>
+<span id="cb23-3"><a href="#cb23-3"></a>  <span class="cf">return</span> <span class="bu">len</span>(values) <span class="op">&gt;</span> <span class="bu">len</span>(values_set)</span>
 <span id="cb23-4"><a href="#cb23-4"></a></span>
 <span id="cb23-5"><a href="#cb23-5"></a><span class="kw">def</span> main():</span>
 <span id="cb23-6"><a href="#cb23-6"></a>  <span class="cf">assert</span> has_duplicates(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>) <span class="op">==</span> <span class="va">True</span></span>

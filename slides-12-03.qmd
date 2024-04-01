@@ -7,26 +7,6 @@ df-print: kable
 
 # CSc 110 - Sets
 
-## Announcements
-
-*	Fill out SCS (https://scsonline.oia.arizona.edu/) – if 80% response rate for whole class, one project grade gets dropped
-
-About the final exam:
-
--   Thursday, December 14, 2023 – 6:00pm - 8:00pm in [ENR2](https://maps.app.goo.gl/RiDaC9Np7M8LVPYZ7) room N120 
--   Find the room before final date
--   Do not bring excess stuff – space is limited
--   Practice writing on smaller desk
-
-## Survey
-
-Take 10 minutes to fill out survey:
-
-<https://bit.ly/ua-ta-students>
-
-![](images/ta-felix-survey.png)
-
-
 ## Set methods
 
 -   `.add(value)` adds an element to the set
