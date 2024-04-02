@@ -5353,5 +5353,47 @@
     "title": "intro to sets (class slides)",
     "section": "Write a function – solution 2",
     "text": "Write a function – solution 2\n\ndef has_duplicates(*values):\n  values_set = set(values)\n  return len(values) &gt; len(values_set)\n\ndef main():\n  assert has_duplicates(3, 2, 1, 2, 3) == True\n  assert has_duplicates(3, 20, 1, 2, 13) == False\n  \nmain()"
+  },
+  {
+    "objectID": "assignments-12.html#programming-problem-23",
+    "href": "assignments-12.html#programming-problem-23",
+    "title": "Module 12 Assignments",
+    "section": "Programming Problem 23",
+    "text": "Programming Problem 23\nDue date: Tuesday, April 16, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is differences\nIt takes two sets as arguments: set_1 and set_2\nIt calculates and returns the number of elements that are different (not in common) between the two parameter sets\nIt returns an integer with the number of different elements\n\nTest cases:\n\nprint( differences({1, 2, 3}, {2, 3, 4, 5}) ) # 3\nprint( differences({'john', 'mark', 'paul'}, {'john', 'mark'}) ) # 1\n\nName the program differences.py. Make sure that gradescope gives you the points for passing the test case."
+  },
+  {
+    "objectID": "assignments-12.html#programming-problem-24",
+    "href": "assignments-12.html#programming-problem-24",
+    "title": "Module 12 Assignments",
+    "section": "Programming Problem 24",
+    "text": "Programming Problem 24\nDue date: Tuesday, April 16, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is has_duplicate\nIt takes a single list as argument\nIt returns True if the list contains any duplicate values, False if all values are unique\n\nTest cases:\n\nprint( has_duplicate([]) ) # False\nprint( has_duplicate([1, 2, 3, 1]) ) # True\nprint( has_duplicate([1, \"a\", \"b\", 4, 5]) ) # False\nprint( has_duplicate([1, \"a\", \"a\", 2, 3, 4]) ) # True\n\nName the program detect_duplicates.py. Make sure that gradescope gives you the points for passing the test case."
+  },
+  {
+    "objectID": "assignments-13.html#programming-problem-25",
+    "href": "assignments-13.html#programming-problem-25",
+    "title": "Module 13 Assignments",
+    "section": "",
+    "text": "Due date: Thursday, April 25, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is sum_nums\nIt takes two arguments: a list of list (2D list) of integers and n an integers\nIt iterates through all of the numbers, and sum all of the ones whose value is less than n\nIt returns the sum\n\nTest cases:\n\nprint( sum_nums([[2, 12, 2], [12, 5, 100, 9]], 10) ) # 18\nprint( sum_nums([[2, 12, 2], [10, 5, 10, 9]], 10) ) # 18\nprint( sum_nums([[2, 12, 2], [10, 5, 10, 9]], 0) ) # 0\nprint( sum_nums([], 10) ) # 0\n\nName the program sums.py. Make sure that gradescope gives you the points for passing the test case."
+  },
+  {
+    "objectID": "assignments-13.html#programming-problem-26",
+    "href": "assignments-13.html#programming-problem-26",
+    "title": "Module 13 Assignments",
+    "section": "",
+    "text": "Due date: Thursday, April 25, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is longest_string\nIt takes one argument: a list of dictionaries\nThe keys in each dictionary could be of various types, but you may assume that the values will be strings\nIt returns the longest string value from all of the dictionaries in the list\n\nTest cases:\n\ndata = [{'a':'horse', 'b':'caterpillar'}, {'a':'camp', 'c':'joker'}]\nprint( longest_string(data) ) # caterpillar\n\ndata = [{1:'abc', 5:'onetwothree'}, {2:'abcd'}, {7:'one two three'}]\nprint( longest_string(data) ) # one two three\n\nName the program longest.py. Make sure that gradescope gives you the points for passing the test case."
+  },
+  {
+    "objectID": "assignments-14.html#programming-problem-27",
+    "href": "assignments-14.html#programming-problem-27",
+    "title": "Module 14 Assignments",
+    "section": "Programming Problem 27",
+    "text": "Programming Problem 27\nDue date: Tuesday, April 30, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is swap\nIt takes two arguments: a dictionary and a set\nIt swaps the key and value for all of the keys that exist in the dictionary that also exist in the set\nIt does not return anything\n\nTest cases:\n\ndict_data = {'a':'b', 'c':'d', 'e':'f'}\nset_data = {'c', 'e'}\nswap(dict_data, set_data)\nprint(dict_data) # {'a': 'b', 'd': 'c', 'f': 'e'}\n\ndict_data = {23:24, 110:120, 50:45, 70:50, 57:1}\nset_data = {23, 110, 57}\nswap(dict_data, set_data)\nprint(dict_data) # {50: 45, 70: 50, 24: 23, 120: 110, 1: 57}\n\ndict_data = {23:24, 110:120, 50:45, 70:50, 57:1}\nset_data = {100}\nswap(dict_data, set_data)\nprint(dict_data) # {23:24, 110:120, 50:45, 70:50, 57:1}\n\nName the program swap_structures.py. Make sure that gradescope gives you the points for passing the test case."
+  },
+  {
+    "objectID": "assignments-14.html#programming-problem-28",
+    "href": "assignments-14.html#programming-problem-28",
+    "title": "Module 14 Assignments",
+    "section": "Programming Problem 28",
+    "text": "Programming Problem 28\nDue date: Thursday, February 29, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is get_elements\nIt two arguments: a dictionary with strings as keys and integers as values, and an integer n\nIt returns a list containing all of the values who fall into at least one of these three categories:\n\nThe corresponding key starts with an upper-case letter\nThe corresponding key ends with an upper-case letter\nThe value is greater than or equal to the second parameter integer\n\n\nTest cases:\n\ndata = {'Alpha':10, 'bravo':25, 'charliE':15, 'dELTa':2}\nprint( get_elements(data, 12) ) # [10, 25, 15]\n\nName the program get_specific.py. Make sure that gradescope gives you the points for passing the test case."
   }
 ]

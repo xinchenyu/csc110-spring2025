@@ -17,7 +17,7 @@ assignments <- read_excel("assessment_schedule.xlsx") %>%
 
 Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/691034).
 
-## Programming Problem 23
+## Programming Problem 25
 
 **Due date: `r assignments %>% filter(assessment == "Module 13 Programming Problems") %>% pull(formatted_date)` at 9pm**
 
@@ -41,7 +41,7 @@ print( sum_nums([], 10) ) # 0
 
 Name the program `sums.py`. Make sure that gradescope gives you the points for passing the test case.
 
-## Programming Problem 24
+## Programming Problem 26
 
 **Due date: `r assignments %>% filter(assessment == "Module 13 Programming Problems") %>% pull(formatted_date)` at 9pm**
 

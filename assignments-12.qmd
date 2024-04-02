@@ -23,7 +23,7 @@ Short Programming projects are submitted during our weekly 45-minute in-person l
 
 Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/691034).
 
-## Programming Problem 21
+## Programming Problem 23
 
 **Due date: `r assignments %>% filter(assessment == "Module 12 Programming Problems") %>% pull(formatted_date)` at 9pm**
 
@@ -45,7 +45,7 @@ print( differences({'john', 'mark', 'paul'}, {'john', 'mark'}) ) # 1
 
 Name the program `differences.py`. Make sure that gradescope gives you the points for passing the test case.
 
-## Programming Problem 22
+## Programming Problem 24
 
 **Due date: `r assignments %>% filter(assessment == "Module 12 Programming Problems") %>% pull(formatted_date)` at 9pm**
 

@@ -22,7 +22,7 @@ Short Programming projects are submitted during our weekly 45-minute in-person l
 
 Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/691034).
 
-## Programming Problem 25
+## Programming Problem 27
 
 **Due date: `r assignments %>% filter(assessment == "Module 14 Programming Problems") %>% pull(formatted_date)` at 9pm**
 
@@ -56,7 +56,7 @@ print(dict_data) # {23:24, 110:120, 50:45, 70:50, 57:1}
 
 Name the program `swap_structures.py`. Make sure that gradescope gives you the points for passing the test case.
 
-## Programming Problem 26
+## Programming Problem 28
 
 **Due date: `r assignments %>% filter(number == 22) %>% pull(formatted_date)` at 9pm**
 
