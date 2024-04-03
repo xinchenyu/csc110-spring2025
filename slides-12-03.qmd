@@ -118,11 +118,6 @@ if __name__ == "__main__":
   print("Passed tests.")
 ```
 
-# Submit code for attendance
-
-Submit your `common_values` function to Gradescope for attendance.
-
-Name your file `common_values.py`
 
 ## Write a function
 
