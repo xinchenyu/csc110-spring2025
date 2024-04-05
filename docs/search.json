@@ -2187,8 +2187,8 @@
     "objectID": "slides-13-01.html#write-a-function-solution-1",
     "href": "slides-13-01.html#write-a-function-solution-1",
     "title": "mutating lists (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef remove_names(string_list):\n  i = 0\n  while i &lt; len(string_list):\n    if string_list[i][-1] in \"aeiou\":\n      string_list.pop(i)\n    else:\n      i += 1\n  return string_list\n      \ndef main():\n  names = [\"Beatrice\", \"Philip\", \"Anna\", \"Peter\"]\n  remove_names(names)\n  assert names == [\"Philip\", \"Peter\"]\n  print(names) # [\"Philip\", \"Peter\"]\n\nmain()\n\n['Philip', 'Peter']"
+    "section": "Write a function – solution 1",
+    "text": "Write a function – solution 1\n\ndef remove_names(string_list):\n  i = 0\n  while i &lt; len(string_list):\n    if string_list[i][-1] in \"aeiou\":\n      string_list.pop(i)\n    else:\n      i += 1\n  return string_list\n      \ndef main():\n  names = [\"Beatrice\", \"Philip\", \"Anna\", \"Peter\"]\n  remove_names(names)\n  assert names == [\"Philip\", \"Peter\"]\n  print(names) # [\"Philip\", \"Peter\"]\n\nmain()\n\n['Philip', 'Peter']"
   },
   {
     "objectID": "slides-13-01.html#removing-elements-from-inner-lists-in-2d-lists",
@@ -2208,8 +2208,8 @@
     "objectID": "slides-13-01.html#write-a-function-solution-2",
     "href": "slides-13-01.html#write-a-function-solution-2",
     "title": "mutating lists (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef remove_odds(lists_of_numbers):\n  for inner_list in lists_of_numbers:\n    for i in range(len(inner_list)-1, -1, -1):\n      if inner_list[i] % 2 != 0:\n        inner_list.pop(i)\n  return lists_of_numbers\n\ndef main():\n  test_list = [ [2, 3, 1, 2], [4, 5, 2, 1] ]\n  remove_odds(test_list)\n  assert test_list == [ [2, 2], [4, 2] ]\n  print(test_list) # [ [2, 2], [4, 2] ]\n  \nmain()\n\n[[2, 2], [4, 2]]"
+    "section": "Write a function – solution 2",
+    "text": "Write a function – solution 2\n\ndef remove_names(string_list):\n  for i in range(len(string_list)-1, -1, -1):\n    if string_list[i][-1] in \"aeiou\":\n      string_list.pop(i)\n  return string_list\n      \ndef main():\n  names = [\"Beatrice\", \"Philip\", \"Anna\", \"Peter\"]\n  remove_names(names)\n  assert names == [\"Philip\", \"Peter\"]\n  print(names) # [\"Philip\", \"Peter\"]\n\nmain()\n\n['Philip', 'Peter']"
   },
   {
     "objectID": "slides-11-01.html#lists-within-lists",
@@ -5402,5 +5402,12 @@
     "title": "mutating lists (class slides)",
     "section": "Announcements",
     "text": "Announcements\n\nQuiz 06 will be on next Wednesday, Apr 10 (mutate nested lists & sets)\nReview Module 11 and 12"
+  },
+  {
+    "objectID": "slides-13-01.html#write-a-function-solution-3",
+    "href": "slides-13-01.html#write-a-function-solution-3",
+    "title": "mutating lists (class slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\n\ndef remove_odds(lists_of_numbers):\n  for inner_list in lists_of_numbers:\n    for i in range(len(inner_list)-1, -1, -1):\n      if inner_list[i] % 2 != 0:\n        inner_list.pop(i)\n  return lists_of_numbers\n\ndef main():\n  test_list = [ [2, 3, 1, 2], [4, 5, 2, 1] ]\n  remove_odds(test_list)\n  assert test_list == [ [2, 2], [4, 2] ]\n  print(test_list) # [ [2, 2], [4, 2] ]\n  \nmain()\n\n[[2, 2], [4, 2]]"
   }
 ]

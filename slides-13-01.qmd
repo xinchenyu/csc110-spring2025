@@ -134,7 +134,7 @@ remove_names(names)
 assert names == ["Philip", "Peter"]
 ```
 
-## Write a function -- solution
+## Write a function -- solution 1
 
 ```{python}
 #| echo: true
@@ -157,6 +157,25 @@ def main():
 main()
 ```
 
+## Write a function -- solution 2
+
+```{python}
+#| echo: true
+#| eval: true
+def remove_names(string_list):
+  for i in range(len(string_list)-1, -1, -1):
+    if string_list[i][-1] in "aeiou":
+      string_list.pop(i)
+  return string_list
+      
+def main():
+  names = ["Beatrice", "Philip", "Anna", "Peter"]
+  remove_names(names)
+  assert names == ["Philip", "Peter"]
+  print(names) # ["Philip", "Peter"]
+
+main()
+```
 
 ## Removing elements from inner lists in 2D lists
 
