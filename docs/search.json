@@ -5395,5 +5395,12 @@
     "title": "Module 14 Assignments",
     "section": "Programming Problem 28",
     "text": "Programming Problem 28\nDue date: Thursday, February 29, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is get_elements\nIt two arguments: a dictionary with strings as keys and integers as values, and an integer n\nIt returns a list containing all of the values who fall into at least one of these three categories:\n\nThe corresponding key starts with an upper-case letter\nThe corresponding key ends with an upper-case letter\nThe value is greater than or equal to the second parameter integer\n\n\nTest cases:\n\ndata = {'Alpha':10, 'bravo':25, 'charliE':15, 'dELTa':2}\nprint( get_elements(data, 12) ) # [10, 25, 15]\n\nName the program get_specific.py. Make sure that gradescope gives you the points for passing the test case."
+  },
+  {
+    "objectID": "slides-13-01.html#announcements",
+    "href": "slides-13-01.html#announcements",
+    "title": "mutating lists (class slides)",
+    "section": "Announcements",
+    "text": "Announcements\n\nQuiz 06 will be on next Wednesday, Apr 10 (mutate nested lists & sets)\nReview Module 11 and 12"
   }
 ]

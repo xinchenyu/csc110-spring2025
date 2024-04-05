@@ -7,6 +7,12 @@ df-print: kable
 
 # CSc 110 - mutating lists
 
+## Announcements
+
+* Quiz 06 will be on next Wednesday, Apr 10 (mutate nested lists & sets)
+* Review Module 11 and 12
+
+
 ## Lists are mutable
 
 * changes to a list in a function will remain after the function finishes running
