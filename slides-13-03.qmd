@@ -1,0 +1,184 @@
+---
+title: "more on lists (class slides)"
+format: revealjs
+slide-number: true
+df-print: kable
+---
+
+# CSc 110 -- More lists
+
+
+## Combining lists
+
+What will happen? Run this code on your computer and on [Python Tutor](https://pythontutor.com/visualize.html)
+
+```{python}
+#| eval: false
+#| echo: true
+vegetables = ["kale", "carrot", "peas", "celery"]
+fruits = ["banana", "tomato", "pear"]
+vegetables + fruits
+```
+
+What will happen below? Will vegetables be mutated?
+
+```{python}
+#| eval: false
+#| echo: true
+def combine_lists(list_1, list_2):
+  list_1 = list_1 + list_2
+  return list_1
+  
+if __name__ == "__main__":
+  vegetables = ["kale", "carrot", "peas", "celery"]
+  fruits = ["banana", "tomato", "pear"]
+  combine_lists(vegetables, fruits)
+  vegetables
+```
+
+## Combining lists
+
+What will happen? Run this code on your computer and on [Python Tutor](https://pythontutor.com/visualize.html) the difference between the two chunks of code (the one above and the one below)?
+
+```{python}
+#| eval: true
+#| echo: true
+def combine_lists(list_1, list_2):
+  for item in list_2:
+    list_1.append(item)
+  return list_1
+  
+if __name__ == "__main__":
+  vegetables = ["kale", "carrot", "peas", "celery"]
+  fruits = ["banana", "tomato", "pear"]
+  combine_lists(vegetables, fruits)
+  print(vegetables)
+```
+
+## Combining lists
+
+What will happen? Run this code on your computer and on [Python Tutor](https://pythontutor.com/visualize.html) the difference between the two chunks of code (the one above and the one below)?
+
+```{python}
+#| eval: true
+#| echo: true
+def combine_lists(list_1, list_2):
+  list_1.extend(list_2)
+  return list_1
+  
+if __name__ == "__main__":
+  vegetables = ["kale", "carrot", "peas", "celery"]
+  fruits = ["banana", "tomato", "pear"]
+  combine_lists(vegetables, fruits)
+  print(vegetables)
+```
+
+## list methods
+
+* `.append(value)`
+* `.insert(index, value)`
+* `.pop(index)`
+* `.remove(value)`
+* `.extend(list)`
+
+## Evaluate the code
+
+Indicate when an **error** occurs.
+
+```{python}
+#| eval: false
+#| echo: true
+numbers = [1, 2, 31, 0, 2]
+numbers.append(40)
+numbers # evaluate this at this point
+
+numbers.insert(3, 10)
+numbers # evaluate this at this point
+
+numbers.remove(2)
+numbers # evaluate this at this point
+
+numbers.pop(2)
+numbers # evaluate this at this point
+
+new_list = [40, 50, 60]
+numbers.extend(new_list)
+numbers # evaluate this at this point
+```
+
+## Evaluate the code -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+numbers = [1, 2, 31, 0, 2]
+numbers.append(40)
+numbers # evaluate this at this point
+```
+
+
+```{python}
+#| eval: true
+#| echo: true
+numbers.insert(3, 10)
+numbers # evaluate this at this point
+```
+
+
+```{python}
+#| eval: true
+#| echo: true
+numbers.remove(2)
+numbers # evaluate this at this point
+```
+
+
+```{python}
+#| eval: true
+#| echo: true
+numbers.pop(2)
+numbers # evaluate this at this point
+```
+
+
+```{python}
+#| eval: true
+#| echo: true
+new_list = [40, 50, 60]
+numbers.extend(new_list)
+numbers # evaluate this at this point
+```
+
+## Write a function
+
+1. Its name is `remove_and_append`
+1. It has three parameters, all lists: `original_list`, `to_remove_list`, `to_append_list`
+1. It **mutates** the `original_list` removing values found in `to_remove_list` and then appending the values in `to_append_list`
+
+Test case:
+```{python}
+#| eval: false
+#| echo: true
+test_list = [1, 2, 3]
+remove_and_append(test_list, [2, 3, 4], [10, 11])
+assert test_list == [1, 10, 11]
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def remove_and_append(original_list, to_remove_list, to_append_list):
+  for item in to_remove_list:
+    if item in original_list:
+      original_list.remove(item)
+  original_list.extend(to_append_list)
+  return original_list
+
+if __name__ == "__main__":
+  test_list = [1, 2, 3]
+  remove_and_append(test_list, [2, 3, 4], [10, 11])
+  assert test_list == [1, 10, 11]
+  print(test_list) # [1, 10, 11]
+```

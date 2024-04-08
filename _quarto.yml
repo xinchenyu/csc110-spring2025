@@ -130,6 +130,7 @@ website:
         - structures-review.qmd
         - slides-13-01.qmd
         - slides-13-02.qmd
+        - slides-13-03.qmd
         - assignments-13.qmd
       - section: "Module 14 - Combining Data Structures and Sorting Lists"
         contents:

@@ -10,7 +10,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
-  <title>CSc 110 Computer Programming I - random (class slides)</title>
+  <title>CSc 110 Computer Programming I - more on lists (class slides)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -389,106 +389,185 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">random (class slides)</h1>
+  <h1 class="title">more on lists (class slides)</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
 <section>
-<section id="csc-110-generating-random-numbers-and-other-important-functions-and-methods" class="title-slide slide level1 center">
-<h1>CSC 110 – Generating Random Numbers and Other Important Functions and Methods</h1>
+<section id="csc-110-more-lists" class="title-slide slide level1 center">
+<h1>CSc 110 – More lists</h1>
 
 </section>
-<section id="random-module" class="slide level2">
-<h2>random module</h2>
-<p>We need to <code>import</code> the module <code>random</code></p>
-<p>What do the functions <code>.random()</code> and <code>.randint()</code> return?</p>
+<section id="combining-lists" class="slide level2">
+<h2>Combining lists</h2>
+<p>What will happen? Run this code on your computer and on <a href="https://pythontutor.com/visualize.html">Python Tutor</a></p>
 <div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> random</span>
-<span id="cb1-2"><a href="#cb1-2"></a></span>
-<span id="cb1-3"><a href="#cb1-3"></a>n <span class="op">=</span> random.random()</span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="bu">print</span>(n)</span>
-<span id="cb1-5"><a href="#cb1-5"></a></span>
-<span id="cb1-6"><a href="#cb1-6"></a>n <span class="op">=</span> random.randint(<span class="dv">0</span>, <span class="dv">9</span>)</span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="bu">print</span>(n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>vegetables <span class="op">=</span> [<span class="st">"kale"</span>, <span class="st">"carrot"</span>, <span class="st">"peas"</span>, <span class="st">"celery"</span>]</span>
+<span id="cb1-2"><a href="#cb1-2"></a>fruits <span class="op">=</span> [<span class="st">"banana"</span>, <span class="st">"tomato"</span>, <span class="st">"pear"</span>]</span>
+<span id="cb1-3"><a href="#cb1-3"></a>vegetables <span class="op">+</span> fruits</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>What will happen below? Will vegetables be mutated?</p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">def</span> combine_lists(list_1, list_2):</span>
+<span id="cb2-2"><a href="#cb2-2"></a>  list_1 <span class="op">=</span> list_1 <span class="op">+</span> list_2</span>
+<span id="cb2-3"><a href="#cb2-3"></a>  <span class="cf">return</span> list_1</span>
+<span id="cb2-4"><a href="#cb2-4"></a>  </span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb2-6"><a href="#cb2-6"></a>  vegetables <span class="op">=</span> [<span class="st">"kale"</span>, <span class="st">"carrot"</span>, <span class="st">"peas"</span>, <span class="st">"celery"</span>]</span>
+<span id="cb2-7"><a href="#cb2-7"></a>  fruits <span class="op">=</span> [<span class="st">"banana"</span>, <span class="st">"tomato"</span>, <span class="st">"pear"</span>]</span>
+<span id="cb2-8"><a href="#cb2-8"></a>  combine_lists(vegetables, fruits)</span>
+<span id="cb2-9"><a href="#cb2-9"></a>  vegetables</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="combining-lists-1" class="slide level2">
+<h2>Combining lists</h2>
+<p>What will happen? Run this code on your computer and on <a href="https://pythontutor.com/visualize.html">Python Tutor</a> the difference between the two chunks of code (the one above and the one below)?</p>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">def</span> combine_lists(list_1, list_2):</span>
+<span id="cb3-2"><a href="#cb3-2"></a>  <span class="cf">for</span> item <span class="kw">in</span> list_2:</span>
+<span id="cb3-3"><a href="#cb3-3"></a>    list_1.append(item)</span>
+<span id="cb3-4"><a href="#cb3-4"></a>  <span class="cf">return</span> list_1</span>
+<span id="cb3-5"><a href="#cb3-5"></a>  </span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb3-7"><a href="#cb3-7"></a>  vegetables <span class="op">=</span> [<span class="st">"kale"</span>, <span class="st">"carrot"</span>, <span class="st">"peas"</span>, <span class="st">"celery"</span>]</span>
+<span id="cb3-8"><a href="#cb3-8"></a>  fruits <span class="op">=</span> [<span class="st">"banana"</span>, <span class="st">"tomato"</span>, <span class="st">"pear"</span>]</span>
+<span id="cb3-9"><a href="#cb3-9"></a>  combine_lists(vegetables, fruits)</span>
+<span id="cb3-10"><a href="#cb3-10"></a>  <span class="bu">print</span>(vegetables)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>0.7949073341596947
-1</code></pre>
+<pre><code>['kale', 'carrot', 'peas', 'celery', 'banana', 'tomato', 'pear']</code></pre>
+</div>
+</div>
+</section>
+<section id="combining-lists-2" class="slide level2">
+<h2>Combining lists</h2>
+<p>What will happen? Run this code on your computer and on <a href="https://pythontutor.com/visualize.html">Python Tutor</a> the difference between the two chunks of code (the one above and the one below)?</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">def</span> combine_lists(list_1, list_2):</span>
+<span id="cb5-2"><a href="#cb5-2"></a>  list_1.extend(list_2)</span>
+<span id="cb5-3"><a href="#cb5-3"></a>  <span class="cf">return</span> list_1</span>
+<span id="cb5-4"><a href="#cb5-4"></a>  </span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb5-6"><a href="#cb5-6"></a>  vegetables <span class="op">=</span> [<span class="st">"kale"</span>, <span class="st">"carrot"</span>, <span class="st">"peas"</span>, <span class="st">"celery"</span>]</span>
+<span id="cb5-7"><a href="#cb5-7"></a>  fruits <span class="op">=</span> [<span class="st">"banana"</span>, <span class="st">"tomato"</span>, <span class="st">"pear"</span>]</span>
+<span id="cb5-8"><a href="#cb5-8"></a>  combine_lists(vegetables, fruits)</span>
+<span id="cb5-9"><a href="#cb5-9"></a>  <span class="bu">print</span>(vegetables)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['kale', 'carrot', 'peas', 'celery', 'banana', 'tomato', 'pear']</code></pre>
+</div>
+</div>
+</section>
+<section id="list-methods" class="slide level2">
+<h2>list methods</h2>
+<ul>
+<li><code>.append(value)</code></li>
+<li><code>.insert(index, value)</code></li>
+<li><code>.pop(index)</code></li>
+<li><code>.remove(value)</code></li>
+<li><code>.extend(list)</code></li>
+</ul>
+</section>
+<section id="evaluate-the-code" class="slide level2">
+<h2>Evaluate the code</h2>
+<p>Indicate when an <strong>error</strong> occurs.</p>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">31</span>, <span class="dv">0</span>, <span class="dv">2</span>]</span>
+<span id="cb7-2"><a href="#cb7-2"></a>numbers.append(<span class="dv">40</span>)</span>
+<span id="cb7-3"><a href="#cb7-3"></a>numbers <span class="co"># evaluate this at this point</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a></span>
+<span id="cb7-5"><a href="#cb7-5"></a>numbers.insert(<span class="dv">3</span>, <span class="dv">10</span>)</span>
+<span id="cb7-6"><a href="#cb7-6"></a>numbers <span class="co"># evaluate this at this point</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a></span>
+<span id="cb7-8"><a href="#cb7-8"></a>numbers.remove(<span class="dv">2</span>)</span>
+<span id="cb7-9"><a href="#cb7-9"></a>numbers <span class="co"># evaluate this at this point</span></span>
+<span id="cb7-10"><a href="#cb7-10"></a></span>
+<span id="cb7-11"><a href="#cb7-11"></a>numbers.pop(<span class="dv">2</span>)</span>
+<span id="cb7-12"><a href="#cb7-12"></a>numbers <span class="co"># evaluate this at this point</span></span>
+<span id="cb7-13"><a href="#cb7-13"></a></span>
+<span id="cb7-14"><a href="#cb7-14"></a>new_list <span class="op">=</span> [<span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">60</span>]</span>
+<span id="cb7-15"><a href="#cb7-15"></a>numbers.extend(new_list)</span>
+<span id="cb7-16"><a href="#cb7-16"></a>numbers <span class="co"># evaluate this at this point</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="evaluate-the-code-solution" class="slide level2">
+<h2>Evaluate the code – solution</h2>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">31</span>, <span class="dv">0</span>, <span class="dv">2</span>]</span>
+<span id="cb8-2"><a href="#cb8-2"></a>numbers.append(<span class="dv">40</span>)</span>
+<span id="cb8-3"><a href="#cb8-3"></a>numbers <span class="co"># evaluate this at this point</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>[1, 2, 31, 0, 2, 40]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>numbers.insert(<span class="dv">3</span>, <span class="dv">10</span>)</span>
+<span id="cb10-2"><a href="#cb10-2"></a>numbers <span class="co"># evaluate this at this point</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>[1, 2, 31, 10, 0, 2, 40]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a>numbers.remove(<span class="dv">2</span>)</span>
+<span id="cb12-2"><a href="#cb12-2"></a>numbers <span class="co"># evaluate this at this point</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>[1, 31, 10, 0, 2, 40]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a>numbers.pop(<span class="dv">2</span>)</span>
+<span id="cb14-2"><a href="#cb14-2"></a>numbers <span class="co"># evaluate this at this point</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<pre><code>[1, 31, 0, 2, 40]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a>new_list <span class="op">=</span> [<span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">60</span>]</span>
+<span id="cb16-2"><a href="#cb16-2"></a>numbers.extend(new_list)</span>
+<span id="cb16-3"><a href="#cb16-3"></a>numbers <span class="co"># evaluate this at this point</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>[1, 31, 0, 2, 40, 40, 50, 60]</code></pre>
 </div>
 </div>
 </section>
 <section id="write-a-function" class="slide level2">
 <h2>Write a function</h2>
 <ol type="1">
-<li>Function name is <code>pick_winner</code></li>
-<li>It takes a list as argument</li>
-<li>It generates a random index, and returns the item at that position</li>
+<li>Its name is <code>remove_and_append</code></li>
+<li>It has three parameters, all lists: <code>original_list</code>, <code>to_remove_list</code>, <code>to_append_list</code></li>
+<li>It <strong>mutates</strong> the <code>original_list</code> removing values found in <code>to_remove_list</code> and then appending the values in <code>to_append_list</code></li>
 </ol>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>winner <span class="op">=</span> pick_winner([<span class="st">"Peter"</span>, <span class="st">"Joan"</span>, <span class="st">"Mary"</span>, <span class="st">"June"</span>])</span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="bu">print</span>(winner)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Test case:</p>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a>test_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb18-2"><a href="#cb18-2"></a>remove_and_append(test_list, [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>], [<span class="dv">10</span>, <span class="dv">11</span>])</span>
+<span id="cb18-3"><a href="#cb18-3"></a><span class="cf">assert</span> test_list <span class="op">==</span> [<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">11</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> random</span>
-<span id="cb4-2"><a href="#cb4-2"></a></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="kw">def</span> pick_winner(names):</span>
-<span id="cb4-4"><a href="#cb4-4"></a>  index <span class="op">=</span> random.randint(<span class="dv">0</span>, <span class="bu">len</span>(names) <span class="op">-</span> <span class="dv">1</span>)</span>
-<span id="cb4-5"><a href="#cb4-5"></a>  <span class="cf">return</span> names[index]</span>
-<span id="cb4-6"><a href="#cb4-6"></a></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
-<span id="cb4-8"><a href="#cb4-8"></a>  winner <span class="op">=</span> pick_winner([<span class="st">"Peter"</span>, <span class="st">"Joan"</span>, <span class="st">"Mary"</span>, <span class="st">"June"</span>])</span>
-<span id="cb4-9"><a href="#cb4-9"></a>  <span class="bu">print</span>(winner)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="kw">def</span> remove_and_append(original_list, to_remove_list, to_append_list):</span>
+<span id="cb19-2"><a href="#cb19-2"></a>  <span class="cf">for</span> item <span class="kw">in</span> to_remove_list:</span>
+<span id="cb19-3"><a href="#cb19-3"></a>    <span class="cf">if</span> item <span class="kw">in</span> original_list:</span>
+<span id="cb19-4"><a href="#cb19-4"></a>      original_list.remove(item)</span>
+<span id="cb19-5"><a href="#cb19-5"></a>  original_list.extend(to_append_list)</span>
+<span id="cb19-6"><a href="#cb19-6"></a>  <span class="cf">return</span> original_list</span>
+<span id="cb19-7"><a href="#cb19-7"></a></span>
+<span id="cb19-8"><a href="#cb19-8"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb19-9"><a href="#cb19-9"></a>  test_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb19-10"><a href="#cb19-10"></a>  remove_and_append(test_list, [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>], [<span class="dv">10</span>, <span class="dv">11</span>])</span>
+<span id="cb19-11"><a href="#cb19-11"></a>  <span class="cf">assert</span> test_list <span class="op">==</span> [<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">11</span>]</span>
+<span id="cb19-12"><a href="#cb19-12"></a>  <span class="bu">print</span>(test_list) <span class="co"># [1, 10, 11]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>June</code></pre>
+<pre><code>[1, 10, 11]</code></pre>
 </div>
 </div>
-</section>
-<section id="setting-a-seed" class="slide level2">
-<h2>Setting a seed</h2>
-<p>What happens when you run <code>pick_winner</code> multiple times?</p>
-<p>To get always the same result (for autograding purposes, for example) we can set a seed.</p>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> random</span>
-<span id="cb6-2"><a href="#cb6-2"></a></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="kw">def</span> pick_winner(names):</span>
-<span id="cb6-4"><a href="#cb6-4"></a>  index <span class="op">=</span> random.randint(<span class="dv">0</span>, <span class="bu">len</span>(names) <span class="op">-</span> <span class="dv">1</span>)</span>
-<span id="cb6-5"><a href="#cb6-5"></a>  <span class="cf">return</span> names[index]</span>
-<span id="cb6-6"><a href="#cb6-6"></a></span>
-<span id="cb6-7"><a href="#cb6-7"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
-<span id="cb6-8"><a href="#cb6-8"></a>  random.seed(<span class="dv">123</span>)</span>
-<span id="cb6-9"><a href="#cb6-9"></a>  winner <span class="op">=</span> pick_winner([<span class="st">"Peter"</span>, <span class="st">"Joan"</span>, <span class="st">"Mary"</span>, <span class="st">"June"</span>])</span>
-<span id="cb6-10"><a href="#cb6-10"></a>  <span class="bu">print</span>(winner)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Peter</code></pre>
-</div>
-</div>
-</section>
-<section id="changing-a-list-with-random-numbers" class="slide level2">
-<h2>Changing a list with random numbers</h2>
-<p>Write a function that takes as argument a list of integers. Iterate over each list element (with a <code>while</code> loop), replacing each integer with a random number between zero and the original integer.</p>
-<p>Test case:</p>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>numbers <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>]</span>
-<span id="cb8-2"><a href="#cb8-2"></a>numbers <span class="op">=</span> random_list(numbers)</span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="bu">print</span>(numbers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[0, 1, 0, 3, 2]</code></pre>
-</div>
-</div>
-</section></section>
-<section id="submit-for-gradescope-attendance" class="title-slide slide level1 center">
-<h1>Submit for gradescope attendance</h1>
-<p>Submit your <code>random_list</code> to gradescope.</p>
-<p>Name your file <code>random_list.py</code> and remember to set a seed.</p>
 
 <div class="footer footer-default">
 
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
