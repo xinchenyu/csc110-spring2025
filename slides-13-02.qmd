@@ -9,14 +9,8 @@ df-print: kable
 
 ## Announcements
 
-*	Fill out SCS (https://scsonline.oia.arizona.edu/) – if 80% response rate for whole class, one project grade gets dropped
-
-About the final exam:
-
--   Thursday, December 14, 2023 – 6:00pm - 8:00pm in [ENR2](https://maps.app.goo.gl/RiDaC9Np7M8LVPYZ7) room N120 
--   Find the room before final date
--   Do not bring excess stuff – space is limited
--   Practice writing on smaller desk
+*	Check your grades on D2L
+* Quiz 06 this Wednesday
 
 ## Dictionaries are mutable
 
@@ -101,6 +95,10 @@ def main():
 
 main()
 ```
+
+# Attendance
+
+Submit your solution as `sales_tax.py` for attendance on gradescope
 
 ## Removing `key: value` from a dictionary
 
