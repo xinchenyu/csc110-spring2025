@@ -10,7 +10,7 @@ df-print: kable
 ## Announcements
 
 *	Check your grades on D2L
-* Quiz 06 this Wednesday
+* Quiz 06 this Wednesday (check practice problems Module 11 and 12)
 
 ## Dictionaries are mutable
 
