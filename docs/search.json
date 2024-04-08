@@ -3889,7 +3889,7 @@
     "href": "slides-13-02.html#write-a-function-4",
     "title": "mutating dictionaries (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is get_names\nIt has two parameters: a dictionary that maps one_letter strings to lists of strings, an a string\nIt returns a list with strings (names) from the lists in the dictionary that include the second parameter (string) as a substring (this search is not case sensitive)\n\nTest case:\n\nnames = {\"R\": [\"Randy\", \"Roger\"], \"S\": [\"Steve\", \"Sally\"], \"T\": [\"Tanner\"]}\nassert get_names(names, \"er\") == [\"Roger\", \"Tanner\"]"
+    "text": "Write a function\n\nIts name is get_names\nIt has two parameters: a dictionary that maps one_letter strings to lists of strings, and a string\nIt returns a list with strings (names) from the lists in the dictionary that include the second parameter (string) as a substring (this search is not case sensitive)\n\nTest case:\n\nnames = {\"R\": [\"Randy\", \"Roger\"], \"S\": [\"Steve\", \"Sally\"], \"T\": [\"Tanner\"]}\nassert get_names(names, \"er\") == [\"Roger\", \"Tanner\"]"
   },
   {
     "objectID": "slides-13-02.html#write-a-function-solution-4",

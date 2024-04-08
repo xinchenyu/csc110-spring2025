@@ -64,6 +64,10 @@ main()
     
 ```
 
+# Attendance
+
+Submit your solution as `sales_tax.py` for attendance on gradescope
+
 ## Write a function
 
 1.  Its name is `sales_tax`
@@ -96,9 +100,6 @@ def main():
 main()
 ```
 
-# Attendance
-
-Submit your solution as `sales_tax.py` for attendance on gradescope
 
 ## Removing `key: value` from a dictionary
 
@@ -200,7 +201,7 @@ main()
 ## Write a function
 
 1.  Its name is `get_names`
-2.  It has two parameters: a `dictionary` that maps one_letter strings to lists of strings, an a `string`
+2.  It has two parameters: a `dictionary` that maps one_letter strings to lists of strings, and a `string`
 3.  It returns a list with strings (names) from the lists in the dictionary that include the second parameter (`string`) as a substring (this search is not case sensitive)
 
 Test case:
