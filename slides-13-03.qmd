@@ -33,7 +33,7 @@ if __name__ == "__main__":
   vegetables = ["kale", "carrot", "peas", "celery"]
   fruits = ["banana", "tomato", "pear"]
   combine_lists(vegetables, fruits)
-  vegetables
+  print(vegetables)
 ```
 
 ## Combining lists

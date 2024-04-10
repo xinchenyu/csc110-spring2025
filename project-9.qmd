@@ -90,6 +90,8 @@ Compute how many unique punctuated and non-punctuated words there are. Use a sim
 
 You should write a text file with three sections on the information you compiled. Here's an example of what the file should look like for the contents of the file in section `(1)`.
 
+Your output file name should be the original file name plus `"_results"` -- for example, if the file name is `"foo.txt"` the output file you create should be names `"foo_results.txt"`
+
 ```{html}
 Total number of unique words: 8
 Most frequent words by size:
@@ -153,4 +155,3 @@ if __name__ == '__main__':
     
     write_results(word_counts, filename)
 ```
-

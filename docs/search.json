@@ -1425,7 +1425,7 @@
     "href": "project-9.html#writing-the-information-file",
     "title": "Programming Project 9",
     "section": "(6) Writing the information file",
-    "text": "(6) Writing the information file\nYou should write a text file with three sections on the information you compiled. Here’s an example of what the file should look like for the contents of the file in section (1).\n\nTotal number of unique words: 8\nMost frequent words by size:\n* Small: one\n* Medium: knife.\n* Large: glasses.\n\nLength:\n* Small: 3 (37.5%)\n* Medium: 4 (50.0%)\n* Large: 1 (12.5%)\n###################%%%%%%%%%%%%%%%%%%%%%%%%%******\n\nCapitalization:\n* Capitalized: 0 (0.0%)\n* Non-capitalized: 8 (100.0%)\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\nPunctuation:\n* Punctuated: 5 (62.5%)\n* Non-punctuated: 3 (37.5%)\n###############################%%%%%%%%%%%%%%%%%%%\n\nTo calculate how many characters in each bar use the formula:\n\n(category_item_count/total_item_count) * 50"
+    "text": "(6) Writing the information file\nYou should write a text file with three sections on the information you compiled. Here’s an example of what the file should look like for the contents of the file in section (1).\nYour output file name should be the original file name plus \"_results\" – for example, if the file name is \"foo.txt\" the output file you create should be names \"foo_results.txt\"\n\nTotal number of unique words: 8\nMost frequent words by size:\n* Small: one\n* Medium: knife.\n* Large: glasses.\n\nLength:\n* Small: 3 (37.5%)\n* Medium: 4 (50.0%)\n* Large: 1 (12.5%)\n###################%%%%%%%%%%%%%%%%%%%%%%%%%******\n\nCapitalization:\n* Capitalized: 0 (0.0%)\n* Non-capitalized: 8 (100.0%)\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\nPunctuation:\n* Punctuated: 5 (62.5%)\n* Non-punctuated: 3 (37.5%)\n###############################%%%%%%%%%%%%%%%%%%%\n\nTo calculate how many characters in each bar use the formula:\n\n(category_item_count/total_item_count) * 50"
   },
   {
     "objectID": "functions.html",
@@ -1824,7 +1824,7 @@
     "href": "slides-13-03.html#combining-lists",
     "title": "more on lists (class slides)",
     "section": "Combining lists",
-    "text": "Combining lists\nWhat will happen? Run this code on your computer and on Python Tutor\n\nvegetables = [\"kale\", \"carrot\", \"peas\", \"celery\"]\nfruits = [\"banana\", \"tomato\", \"pear\"]\nvegetables + fruits\n\nWhat will happen below? Will vegetables be mutated?\n\ndef combine_lists(list_1, list_2):\n  list_1 = list_1 + list_2\n  return list_1\n  \nif __name__ == \"__main__\":\n  vegetables = [\"kale\", \"carrot\", \"peas\", \"celery\"]\n  fruits = [\"banana\", \"tomato\", \"pear\"]\n  combine_lists(vegetables, fruits)\n  vegetables"
+    "text": "Combining lists\nWhat will happen? Run this code on your computer and on Python Tutor\n\nvegetables = [\"kale\", \"carrot\", \"peas\", \"celery\"]\nfruits = [\"banana\", \"tomato\", \"pear\"]\nvegetables + fruits\n\nWhat will happen below? Will vegetables be mutated?\n\ndef combine_lists(list_1, list_2):\n  list_1 = list_1 + list_2\n  return list_1\n  \nif __name__ == \"__main__\":\n  vegetables = [\"kale\", \"carrot\", \"peas\", \"celery\"]\n  fruits = [\"banana\", \"tomato\", \"pear\"]\n  combine_lists(vegetables, fruits)\n  print(vegetables)"
   },
   {
     "objectID": "slides-13-03.html#combining-lists-1",
@@ -5346,5 +5346,12 @@
     "title": "Module 1 Assignments",
     "section": "",
     "text": "Programming Problems should be submitted to gradescope.\nIf you need instructions on how to submit your .py files to gradescope, watch the video at the end of this page.\n\nSurvey\nDue date: Friday, January 12, 2024 at 9pm\nhttps://uarizona.co1.qualtrics.com/jfe/form/SV_0q8KC0FwVhCiYD4\nThis is a survey to collect information on your expectations for CSc 110 Computer Programming I. The completion of this survey is required and will be used for grading purposes.\n\n\nProgramming Problem 1\nDue date: Thursday, January 18, 2024 at 9pm\nWrite a python program that prints out the string “Hello World!”. Be careful with capitalization and punctuation. Remember to write code inside a function called main().\nThe exact output of the program should be:\nHello World!\n\nName the program hello.py. Make sure that gradescope gives you the points for passing the test case.\n\n\nProgramming Problem 2\nDue date: Thursday, January 18, 2024 at 9pm\nWrite a python program that prints out the following excerpt from Amanda Gorman’s poem, “The Hill We Climb”:\nWhen day comes, we ask ourselves, where can we find light in this never-ending shade?\n\nThe loss we carry. A sea we must wade.\nWe braved the belly of the beast.\n\nWe've learned that quiet isn't always peace, \nand the norms and notions of what \"just\" is isn't always justice.\n\nAnd yet the dawn is ours before we knew it.\n\nSomehow we do it.\n\nName the program poem.py. Remember to write code inside a function called main(). Make sure that gradescope gives you the points for passing the test case. You can submit your solution to gradescope as many times as you want before the deadline.\nHINT: print() has a parameter called end which is set as end=\"\\n\" by default – change that to end=\"\" to remove the last newline character.\nMake sure you do the reading for this module, especially the section on Escape Sequences\n\n\nHow to submit to gradescope video"
+  },
+  {
+    "objectID": "slides-13-02.html#quiz-06",
+    "href": "slides-13-02.html#quiz-06",
+    "title": "mutating dictionaries (class slides)",
+    "section": "Quiz 06",
+    "text": "Quiz 06\n\n\ncurrent time\n\n\n\n\n\n\nYou have 15 minutes to complete. There are 2 problems.\n\nNo need for comments and a main.py\nJust write your function\nDO NOT USE NESTED CONDITIONALS\n\nBuilt-in functions you can use: round(), input(), float(), str(), int(), len(), range(), set(), list() — you don’t have to use all of these"
   }
 ]

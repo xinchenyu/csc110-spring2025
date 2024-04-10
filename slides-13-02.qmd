@@ -234,3 +234,18 @@ def main():
   
 main()
 ```
+
+## Quiz 06
+
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+</center>
+
+You have 15 minutes to complete. There are 2 problems.
+
+-   No need for comments and a `main.py`
+-   Just write your function
+-   DO NOT USE NESTED CONDITIONALS
+
+Built-in functions you can use: `round()`, `input()`, `float()`, `str()`, `int()`, `len()`, `range()`, `set()`, `list()` — you don’t have to use all of these
