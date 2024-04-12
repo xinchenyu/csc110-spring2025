@@ -195,6 +195,23 @@ The integer 1 is not a prime number.
 
 Your code should have different functions to deal with lists of numbers in different ways (see test cases on next slide)
 
+## Determining prime number - solution
+
+```{python}
+#| echo: true
+#| eval: false
+def is_prime(n):
+    if n == 1:
+         return False
+    # If num is divisible by any number between
+    # 2 and n / 2, it is not prime
+    for denominator in range(2, int(n/2 + 1)):
+          if n % denominator == 0:
+               return False
+    return True
+```
+
+
 ## Write python code
 
 Test cases:
@@ -224,3 +241,26 @@ if __name__ == "__main__":
 # Attendance
 
 Submit your code to gradescope for attendance. Name your file `prime_numbers.py`
+
+## Write a function -- solution
+
+```{python}
+#| echo: true
+#| eval: false
+def create_dictionary(numbers):
+    result = {}
+    for n in numbers:
+        result[n] = is_prime(n)
+    return result
+
+def mutate_list(numbers):
+    for i in range(len(numbers)):
+        numbers[i] = is_prime(numbers[i])
+    return numbers
+          
+def remove_primes(numbers):
+    for i in range(len(numbers)-1, -1, -1):
+        if is_prime(numbers[i]):
+            numbers.pop(i)
+    return numbers
+```

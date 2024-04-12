@@ -5381,5 +5381,33 @@
     "title": "combining data structures (class slides)",
     "section": "Announcements",
     "text": "Announcements\n\nFill out SCS at scsonline.ucatt.arizona.edu\nIf 80% of students complete the survey, I’ll replace one of your lowest quizzes grade with full points (5/5 pts)\nQuiz 07 next Wednesday (combining data structures)"
+  },
+  {
+    "objectID": "slides-13-03.html#detering-a-prime-number---solution",
+    "href": "slides-13-03.html#detering-a-prime-number---solution",
+    "title": "more on lists (class slides)",
+    "section": "Detering a prime number - solution",
+    "text": "Detering a prime number - solution\n\ndef is_prime(n):\n    if n == 1:\n         return False\n    # If num is divisible by any number between\n    # 2 and n / 2, it is not prime\n    for denominator in range(2, int(n/2 + 1)):\n          if n % denominator == 0:\n               return False\n    return True"
+  },
+  {
+    "objectID": "slides-13-03.html#determining-a-prime-number---solution",
+    "href": "slides-13-03.html#determining-a-prime-number---solution",
+    "title": "more on lists (class slides)",
+    "section": "Determining a prime number - solution",
+    "text": "Determining a prime number - solution\n\ndef is_prime(n):\n    if n == 1:\n         return False\n    # If num is divisible by any number between\n    # 2 and n / 2, it is not prime\n    for denominator in range(2, int(n/2 + 1)):\n          if n % denominator == 0:\n               return False\n    return True"
+  },
+  {
+    "objectID": "slides-13-03.html#determining-prime-number---solution",
+    "href": "slides-13-03.html#determining-prime-number---solution",
+    "title": "more on lists (class slides)",
+    "section": "Determining prime number - solution",
+    "text": "Determining prime number - solution\n\ndef is_prime(n):\n    if n == 1:\n         return False\n    # If num is divisible by any number between\n    # 2 and n / 2, it is not prime\n    for denominator in range(2, int(n/2 + 1)):\n          if n % denominator == 0:\n               return False\n    return True"
+  },
+  {
+    "objectID": "slides-13-03.html#write-a-function-solution-1",
+    "href": "slides-13-03.html#write-a-function-solution-1",
+    "title": "more on lists (class slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\n\ndef create_dictionary(numbers):\n    result = {}\n    for n in numbers:\n        result[n] = is_prime(n)\n    return result\n\ndef mutate_list(numbers):\n    for i in range(len(numbers)):\n        numbers[i] = is_prime(numbers[i])\n    return numbers\n          \ndef remove_primes(numbers):\n    for i in range(len(numbers)-1, -1, -1):\n        if is_prime(numbers[i]):\n            numbers.pop(i)\n    return numbers"
   }
 ]

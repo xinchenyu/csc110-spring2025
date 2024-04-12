@@ -496,28 +496,28 @@
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">31</span>, <span class="dv">0</span>, <span class="dv">2</span>]</span>
 <span id="cb8-2"><a href="#cb8-2"></a>numbers.append(<span class="dv">40</span>)</span>
 <span id="cb8-3"><a href="#cb8-3"></a>numbers <span class="co"># evaluate this at this point</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="37">
 <pre><code>[1, 2, 31, 0, 2, 40]</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>numbers.insert(<span class="dv">3</span>, <span class="dv">10</span>)</span>
 <span id="cb10-2"><a href="#cb10-2"></a>numbers <span class="co"># evaluate this at this point</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
+<div class="cell-output cell-output-display" data-execution_count="38">
 <pre><code>[1, 2, 31, 10, 0, 2, 40]</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a>numbers.remove(<span class="dv">2</span>)</span>
 <span id="cb12-2"><a href="#cb12-2"></a>numbers <span class="co"># evaluate this at this point</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="39">
 <pre><code>[1, 31, 10, 0, 2, 40]</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a>numbers.pop(<span class="dv">2</span>)</span>
 <span id="cb14-2"><a href="#cb14-2"></a>numbers <span class="co"># evaluate this at this point</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
+<div class="cell-output cell-output-display" data-execution_count="40">
 <pre><code>[1, 31, 0, 2, 40]</code></pre>
 </div>
 </div>
@@ -525,7 +525,7 @@
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a>new_list <span class="op">=</span> [<span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">60</span>]</span>
 <span id="cb16-2"><a href="#cb16-2"></a>numbers.extend(new_list)</span>
 <span id="cb16-3"><a href="#cb16-3"></a>numbers <span class="co"># evaluate this at this point</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
+<div class="cell-output cell-output-display" data-execution_count="41">
 <pre><code>[1, 31, 0, 2, 40, 40, 50, 60]</code></pre>
 </div>
 </div>
@@ -574,37 +574,73 @@
 <p>The integer 1 is not a prime number.</p>
 <p>Your code should have different functions to deal with lists of numbers in different ways (see test cases on next slide)</p>
 </section>
+<section id="determining-prime-number---solution" class="slide level2">
+<h2>Determining prime number - solution</h2>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a><span class="kw">def</span> is_prime(n):</span>
+<span id="cb21-2"><a href="#cb21-2"></a>    <span class="cf">if</span> n <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb21-3"><a href="#cb21-3"></a>         <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb21-4"><a href="#cb21-4"></a>    <span class="co"># If num is divisible by any number between</span></span>
+<span id="cb21-5"><a href="#cb21-5"></a>    <span class="co"># 2 and n / 2, it is not prime</span></span>
+<span id="cb21-6"><a href="#cb21-6"></a>    <span class="cf">for</span> denominator <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="bu">int</span>(n<span class="op">/</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span>)):</span>
+<span id="cb21-7"><a href="#cb21-7"></a>          <span class="cf">if</span> n <span class="op">%</span> denominator <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb21-8"><a href="#cb21-8"></a>               <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb21-9"><a href="#cb21-9"></a>    <span class="cf">return</span> <span class="va">True</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
 <section id="write-python-code-2" class="slide level2">
 <h2>Write python code</h2>
 <p>Test cases:</p>
-<div class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
-<span id="cb21-2"><a href="#cb21-2"></a>    original_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">453</span>, <span class="dv">3</span>, <span class="dv">32</span>, <span class="dv">5</span>, <span class="dv">7</span>]</span>
-<span id="cb21-3"><a href="#cb21-3"></a>    result <span class="op">=</span> create_dictionary(original_list)</span>
-<span id="cb21-4"><a href="#cb21-4"></a>    <span class="cf">assert</span> result <span class="op">==</span> {<span class="dv">1</span>: <span class="va">False</span>, <span class="dv">2</span>: <span class="va">True</span>, <span class="dv">453</span>: <span class="va">False</span>, <span class="dv">3</span>: <span class="va">True</span>, <span class="dv">32</span>: <span class="va">False</span>, <span class="dv">5</span>: <span class="va">True</span>, <span class="dv">7</span>: <span class="va">True</span>}</span>
-<span id="cb21-5"><a href="#cb21-5"></a></span>
-<span id="cb21-6"><a href="#cb21-6"></a>    original_list <span class="op">=</span> [<span class="dv">102</span>, <span class="dv">250</span>, <span class="dv">509</span>, <span class="dv">345</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">547</span>, <span class="dv">563</span>]</span>
-<span id="cb21-7"><a href="#cb21-7"></a>    result <span class="op">=</span> create_dictionary(original_list)</span>
-<span id="cb21-8"><a href="#cb21-8"></a>    <span class="cf">assert</span> result <span class="op">==</span> {<span class="dv">102</span>: <span class="va">False</span>, <span class="dv">250</span>: <span class="va">False</span>, <span class="dv">509</span>: <span class="va">True</span>, <span class="dv">345</span>: <span class="va">False</span>, <span class="dv">2</span>: <span class="va">True</span>,</span>
-<span id="cb21-9"><a href="#cb21-9"></a>                      <span class="dv">4</span>: <span class="va">False</span>, <span class="dv">547</span>: <span class="va">True</span>, <span class="dv">563</span>: <span class="va">True</span>}</span>
-<span id="cb21-10"><a href="#cb21-10"></a></span>
-<span id="cb21-11"><a href="#cb21-11"></a>    original_list <span class="op">=</span> [<span class="dv">102</span>, <span class="dv">250</span>, <span class="dv">509</span>, <span class="dv">345</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">547</span>, <span class="dv">563</span>]</span>
-<span id="cb21-12"><a href="#cb21-12"></a>    mutate_list(original_list)</span>
-<span id="cb21-13"><a href="#cb21-13"></a>    <span class="cf">assert</span> original_list <span class="op">==</span> [<span class="va">False</span>, <span class="va">False</span>, <span class="va">True</span>, <span class="va">False</span>, <span class="va">True</span>, <span class="va">False</span>, <span class="va">True</span>, <span class="va">True</span>]</span>
-<span id="cb21-14"><a href="#cb21-14"></a></span>
-<span id="cb21-15"><a href="#cb21-15"></a>    original_list <span class="op">=</span> [<span class="dv">102</span>, <span class="dv">250</span>, <span class="dv">509</span>, <span class="dv">345</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">547</span>, <span class="dv">563</span>]</span>
-<span id="cb21-16"><a href="#cb21-16"></a>    remove_primes(original_list)</span>
-<span id="cb21-17"><a href="#cb21-17"></a>    <span class="cf">assert</span> original_list <span class="op">==</span> [<span class="dv">102</span>, <span class="dv">250</span>, <span class="dv">345</span>, <span class="dv">4</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb22-2"><a href="#cb22-2"></a>    original_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">453</span>, <span class="dv">3</span>, <span class="dv">32</span>, <span class="dv">5</span>, <span class="dv">7</span>]</span>
+<span id="cb22-3"><a href="#cb22-3"></a>    result <span class="op">=</span> create_dictionary(original_list)</span>
+<span id="cb22-4"><a href="#cb22-4"></a>    <span class="cf">assert</span> result <span class="op">==</span> {<span class="dv">1</span>: <span class="va">False</span>, <span class="dv">2</span>: <span class="va">True</span>, <span class="dv">453</span>: <span class="va">False</span>, <span class="dv">3</span>: <span class="va">True</span>, <span class="dv">32</span>: <span class="va">False</span>, <span class="dv">5</span>: <span class="va">True</span>, <span class="dv">7</span>: <span class="va">True</span>}</span>
+<span id="cb22-5"><a href="#cb22-5"></a></span>
+<span id="cb22-6"><a href="#cb22-6"></a>    original_list <span class="op">=</span> [<span class="dv">102</span>, <span class="dv">250</span>, <span class="dv">509</span>, <span class="dv">345</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">547</span>, <span class="dv">563</span>]</span>
+<span id="cb22-7"><a href="#cb22-7"></a>    result <span class="op">=</span> create_dictionary(original_list)</span>
+<span id="cb22-8"><a href="#cb22-8"></a>    <span class="cf">assert</span> result <span class="op">==</span> {<span class="dv">102</span>: <span class="va">False</span>, <span class="dv">250</span>: <span class="va">False</span>, <span class="dv">509</span>: <span class="va">True</span>, <span class="dv">345</span>: <span class="va">False</span>, <span class="dv">2</span>: <span class="va">True</span>,</span>
+<span id="cb22-9"><a href="#cb22-9"></a>                      <span class="dv">4</span>: <span class="va">False</span>, <span class="dv">547</span>: <span class="va">True</span>, <span class="dv">563</span>: <span class="va">True</span>}</span>
+<span id="cb22-10"><a href="#cb22-10"></a></span>
+<span id="cb22-11"><a href="#cb22-11"></a>    original_list <span class="op">=</span> [<span class="dv">102</span>, <span class="dv">250</span>, <span class="dv">509</span>, <span class="dv">345</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">547</span>, <span class="dv">563</span>]</span>
+<span id="cb22-12"><a href="#cb22-12"></a>    mutate_list(original_list)</span>
+<span id="cb22-13"><a href="#cb22-13"></a>    <span class="cf">assert</span> original_list <span class="op">==</span> [<span class="va">False</span>, <span class="va">False</span>, <span class="va">True</span>, <span class="va">False</span>, <span class="va">True</span>, <span class="va">False</span>, <span class="va">True</span>, <span class="va">True</span>]</span>
+<span id="cb22-14"><a href="#cb22-14"></a></span>
+<span id="cb22-15"><a href="#cb22-15"></a>    original_list <span class="op">=</span> [<span class="dv">102</span>, <span class="dv">250</span>, <span class="dv">509</span>, <span class="dv">345</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">547</span>, <span class="dv">563</span>]</span>
+<span id="cb22-16"><a href="#cb22-16"></a>    remove_primes(original_list)</span>
+<span id="cb22-17"><a href="#cb22-17"></a>    <span class="cf">assert</span> original_list <span class="op">==</span> [<span class="dv">102</span>, <span class="dv">250</span>, <span class="dv">345</span>, <span class="dv">4</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
+<section>
 <section id="attendance" class="title-slide slide level1 center">
 <h1>Attendance</h1>
 <p>Submit your code to gradescope for attendance. Name your file <code>prime_numbers.py</code></p>
+</section>
+<section id="write-a-function-solution-1" class="slide level2">
+<h2>Write a function – solution</h2>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a><span class="kw">def</span> create_dictionary(numbers):</span>
+<span id="cb23-2"><a href="#cb23-2"></a>    result <span class="op">=</span> {}</span>
+<span id="cb23-3"><a href="#cb23-3"></a>    <span class="cf">for</span> n <span class="kw">in</span> numbers:</span>
+<span id="cb23-4"><a href="#cb23-4"></a>        result[n] <span class="op">=</span> is_prime(n)</span>
+<span id="cb23-5"><a href="#cb23-5"></a>    <span class="cf">return</span> result</span>
+<span id="cb23-6"><a href="#cb23-6"></a></span>
+<span id="cb23-7"><a href="#cb23-7"></a><span class="kw">def</span> mutate_list(numbers):</span>
+<span id="cb23-8"><a href="#cb23-8"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(numbers)):</span>
+<span id="cb23-9"><a href="#cb23-9"></a>        numbers[i] <span class="op">=</span> is_prime(numbers[i])</span>
+<span id="cb23-10"><a href="#cb23-10"></a>    <span class="cf">return</span> numbers</span>
+<span id="cb23-11"><a href="#cb23-11"></a>          </span>
+<span id="cb23-12"><a href="#cb23-12"></a><span class="kw">def</span> remove_primes(numbers):</span>
+<span id="cb23-13"><a href="#cb23-13"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(numbers)<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>):</span>
+<span id="cb23-14"><a href="#cb23-14"></a>        <span class="cf">if</span> is_prime(numbers[i]):</span>
+<span id="cb23-15"><a href="#cb23-15"></a>            numbers.pop(i)</span>
+<span id="cb23-16"><a href="#cb23-16"></a>    <span class="cf">return</span> numbers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 <div class="footer footer-default">
 
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
