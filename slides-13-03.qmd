@@ -182,3 +182,45 @@ if __name__ == "__main__":
   assert test_list == [1, 10, 11]
   print(test_list) # [1, 10, 11]
 ```
+
+## Write python code
+
+Write python code that determines if a number is prime or not. 
+
+## Write python code
+
+A number `n` is NOT prime if it is divisible by any number between 2 and `n / 2`.
+
+The integer 1 is not a prime number.
+
+Your code should have different functions to deal with lists of numbers in different ways (see test cases on next slide)
+
+## Write python code
+
+Test cases:
+
+```{python}
+#| echo: true
+#| eval: false
+if __name__ == "__main__":
+    original_list = [1, 2, 453, 3, 32, 5, 7]
+    result = create_dictionary(original_list)
+    assert result == {1: False, 2: True, 453: False, 3: True, 32: False, 5: True, 7: True}
+
+    original_list = [102, 250, 509, 345, 2, 4, 547, 563]
+    result = create_dictionary(original_list)
+    assert result == {102: False, 250: False, 509: True, 345: False, 2: True,
+                      4: False, 547: True, 563: True}
+
+    original_list = [102, 250, 509, 345, 2, 4, 547, 563]
+    mutate_list(original_list)
+    assert original_list == [False, False, True, False, True, False, True, True]
+
+    original_list = [102, 250, 509, 345, 2, 4, 547, 563]
+    remove_primes(original_list)
+    assert original_list == [102, 250, 345, 4]
+```
+
+# Attendance
+
+Submit your code to gradescope for attendance. Name your file `prime_numbers.py`

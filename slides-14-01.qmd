@@ -7,6 +7,12 @@ df-print: kable
 
 # CSC 110 -- Combining data structures
 
+## Announcements
+
+* Fill out SCS at [scsonline.ucatt.arizona.edu](https://scsonline.ucatt.arizona.edu/index.php)
+* If 80% of students complete the survey, I'll replace one of your lowest quizzes grade with full points (5/5 pts)
+* Quiz 07 next Wednesday (combining data structures)
+
 ## Tuples as dictionary keys
 
 -   We can only use immutable types as dictionary keys (strings, integers, and tuples)
@@ -21,10 +27,10 @@ Tuples are useful as keys since keys need to be unique (no repeated key is allow
 #| echo: true
 course_schedule = { ("CSC 110", "section 1") : ("Gittings", "129b"),
                     ("CSC 110", "section 2") : ("Gittings", "129b"),
+                    ("CSC 110", "section 3") : ("Gittings", "129b"),
                     ("CSC 120", "section 1") : ("Gittings", "129b"),
-                    ("CSC 120", "section 2") : ("Gittings", "129b"),
                     ("CSC 144", "section 1") : ("Social Sciences", "100"),
-                    ("CSC 210", "section 1") : ("Gittings", "129b")}
+                    ("CSC 120", "section 2") : ("Gittings", "129b")}
 ```
 
 -   How would you retrieve the room where CSC 144, section 1 takes place?
@@ -33,13 +39,15 @@ course_schedule = { ("CSC 110", "section 1") : ("Gittings", "129b"),
 ## Write a function
 
 1.  Its name is `retrieve_room`
-2.  It takes three arguments: a dictionary with course information, a string for course code and number (e.g., `"CSC 110"`) and a string for section (e.g., `"section 1"`)
+2.  It takes three arguments: a dictionary with course information, a string for course code and number (e.g., `"CSC 110"`) and a string for section (e.g., `"section 3"`)
 3.  It returns a string with the building and room numbers (concatenated)
 
 ```{python}
 #| eval: false
 #| echo: true
-print( retrieve_room(course_schedule, "CSC 110", "section 1") ) 
+course = "CSC 110"
+section = "section 3"
+print( retrieve_room(course_schedule, course, section) ) 
 # "Gittings 129b"
 ```
 
@@ -54,13 +62,13 @@ def retrieve_room(course_dict, course, section):
 
 def main():
   course_schedule = { ("CSC 110", "section 1") : ("Gittings", "129b"),
-                    ("CSC 110", "section 2") : ("Gittings", "129b"),
-                    ("CSC 120", "section 1") : ("Gittings", "129b"),
-                    ("CSC 120", "section 2") : ("Gittings", "129b"),
-                    ("CSC 144", "section 1") : ("Social Sciences", "100"),
-                    ("CSC 210", "section 1") : ("Gittings", "129b")}
+                      ("CSC 110", "section 2") : ("Gittings", "129b"),
+                      ("CSC 110", "section 3") : ("Gittings", "129b"),
+                      ("CSC 120", "section 1") : ("Gittings", "129b"),
+                      ("CSC 144", "section 1") : ("Social Sciences", "100"),
+                      ("CSC 120", "section 2") : ("Gittings", "129b")}
   print( retrieve_room(course_schedule, 
-                       "CSC 110", "section 1")) # "Gittings 129b"
+                       "CSC 110", "section 3")) # "Gittings 129b"
   
 main()
 ```
@@ -72,17 +80,18 @@ main()
 #| echo: true
 course_schedule = { "CSC 110": 
                       {1: {"building": "Gittings", "room": "129b"},
-                       2: {"building": "Gittings", "room": "129b"} },
+                       2: {"building": "Gittings", "room": "129b"},
+                       3: {"building": "Gittings", "room": "129b"} },
                     "CSC 120":
                        {1: {"building": "Gittings", "room": "129b"},
                         2: {"building": "Gittings", "room": "129b"} },
                     "CSC 144":
                        {1: {"building": "Social Sciences", "room": "100"}}}
                        
-course_schedule["CSC 110"][1]["building"]
+course_schedule["CSC 110"][3]["building"]
 ```
 
--   How would you retrieve the room for the section 1 of CSC 120?
+-   How would you retrieve the room for the section 3 of CSC 120?
 
 ## How to organize data?
 

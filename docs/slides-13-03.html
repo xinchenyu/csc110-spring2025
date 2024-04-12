@@ -563,11 +563,48 @@
 <pre><code>[1, 10, 11]</code></pre>
 </div>
 </div>
+</section>
+<section id="write-python-code" class="slide level2">
+<h2>Write python code</h2>
+<p>Write python code that determines if a number is prime or not.</p>
+</section>
+<section id="write-python-code-1" class="slide level2">
+<h2>Write python code</h2>
+<p>A number <code>n</code> is NOT prime if it is divisible by any number between 2 and <code>n / 2</code>.</p>
+<p>The integer 1 is not a prime number.</p>
+<p>Your code should have different functions to deal with lists of numbers in different ways (see test cases on next slide)</p>
+</section>
+<section id="write-python-code-2" class="slide level2">
+<h2>Write python code</h2>
+<p>Test cases:</p>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb21-2"><a href="#cb21-2"></a>    original_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">453</span>, <span class="dv">3</span>, <span class="dv">32</span>, <span class="dv">5</span>, <span class="dv">7</span>]</span>
+<span id="cb21-3"><a href="#cb21-3"></a>    result <span class="op">=</span> create_dictionary(original_list)</span>
+<span id="cb21-4"><a href="#cb21-4"></a>    <span class="cf">assert</span> result <span class="op">==</span> {<span class="dv">1</span>: <span class="va">False</span>, <span class="dv">2</span>: <span class="va">True</span>, <span class="dv">453</span>: <span class="va">False</span>, <span class="dv">3</span>: <span class="va">True</span>, <span class="dv">32</span>: <span class="va">False</span>, <span class="dv">5</span>: <span class="va">True</span>, <span class="dv">7</span>: <span class="va">True</span>}</span>
+<span id="cb21-5"><a href="#cb21-5"></a></span>
+<span id="cb21-6"><a href="#cb21-6"></a>    original_list <span class="op">=</span> [<span class="dv">102</span>, <span class="dv">250</span>, <span class="dv">509</span>, <span class="dv">345</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">547</span>, <span class="dv">563</span>]</span>
+<span id="cb21-7"><a href="#cb21-7"></a>    result <span class="op">=</span> create_dictionary(original_list)</span>
+<span id="cb21-8"><a href="#cb21-8"></a>    <span class="cf">assert</span> result <span class="op">==</span> {<span class="dv">102</span>: <span class="va">False</span>, <span class="dv">250</span>: <span class="va">False</span>, <span class="dv">509</span>: <span class="va">True</span>, <span class="dv">345</span>: <span class="va">False</span>, <span class="dv">2</span>: <span class="va">True</span>,</span>
+<span id="cb21-9"><a href="#cb21-9"></a>                      <span class="dv">4</span>: <span class="va">False</span>, <span class="dv">547</span>: <span class="va">True</span>, <span class="dv">563</span>: <span class="va">True</span>}</span>
+<span id="cb21-10"><a href="#cb21-10"></a></span>
+<span id="cb21-11"><a href="#cb21-11"></a>    original_list <span class="op">=</span> [<span class="dv">102</span>, <span class="dv">250</span>, <span class="dv">509</span>, <span class="dv">345</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">547</span>, <span class="dv">563</span>]</span>
+<span id="cb21-12"><a href="#cb21-12"></a>    mutate_list(original_list)</span>
+<span id="cb21-13"><a href="#cb21-13"></a>    <span class="cf">assert</span> original_list <span class="op">==</span> [<span class="va">False</span>, <span class="va">False</span>, <span class="va">True</span>, <span class="va">False</span>, <span class="va">True</span>, <span class="va">False</span>, <span class="va">True</span>, <span class="va">True</span>]</span>
+<span id="cb21-14"><a href="#cb21-14"></a></span>
+<span id="cb21-15"><a href="#cb21-15"></a>    original_list <span class="op">=</span> [<span class="dv">102</span>, <span class="dv">250</span>, <span class="dv">509</span>, <span class="dv">345</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">547</span>, <span class="dv">563</span>]</span>
+<span id="cb21-16"><a href="#cb21-16"></a>    remove_primes(original_list)</span>
+<span id="cb21-17"><a href="#cb21-17"></a>    <span class="cf">assert</span> original_list <span class="op">==</span> [<span class="dv">102</span>, <span class="dv">250</span>, <span class="dv">345</span>, <span class="dv">4</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section>
+<section id="attendance" class="title-slide slide level1 center">
+<h1>Attendance</h1>
+<p>Submit your code to gradescope for attendance. Name your file <code>prime_numbers.py</code></p>
 
 <div class="footer footer-default">
 
 </div>
-</section></section>
+</section>
     </div>
   </div>
 

@@ -4351,28 +4351,28 @@
     "href": "slides-14-01.html#tuples-as-dictionary-keys-1",
     "title": "combining data structures (class slides)",
     "section": "Tuples as dictionary keys",
-    "text": "Tuples as dictionary keys\nTuples are useful as keys since keys need to be unique (no repeated key is allowed)\n\ncourse_schedule = { (\"CSC 110\", \"section 1\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 110\", \"section 2\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 120\", \"section 1\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 120\", \"section 2\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 144\", \"section 1\") : (\"Social Sciences\", \"100\"),\n                    (\"CSC 210\", \"section 1\") : (\"Gittings\", \"129b\")}\n\n\nHow would you retrieve the room where CSC 144, section 1 takes place?\nHow would you retrieve all rooms for CSC 120?"
+    "text": "Tuples as dictionary keys\nTuples are useful as keys since keys need to be unique (no repeated key is allowed)\n\ncourse_schedule = { (\"CSC 110\", \"section 1\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 110\", \"section 2\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 110\", \"section 3\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 120\", \"section 1\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 144\", \"section 1\") : (\"Social Sciences\", \"100\"),\n                    (\"CSC 120\", \"section 2\") : (\"Gittings\", \"129b\")}\n\n\nHow would you retrieve the room where CSC 144, section 1 takes place?\nHow would you retrieve all rooms for CSC 120?"
   },
   {
     "objectID": "slides-14-01.html#write-a-function",
     "href": "slides-14-01.html#write-a-function",
     "title": "combining data structures (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is retrieve_room\nIt takes three arguments: a dictionary with course information, a string for course code and number (e.g., \"CSC 110\") and a string for section (e.g., \"section 1\")\nIt returns a string with the building and room numbers (concatenated)\n\n\nprint( retrieve_room(course_schedule, \"CSC 110\", \"section 1\") ) \n# \"Gittings 129b\""
+    "text": "Write a function\n\nIts name is retrieve_room\nIt takes three arguments: a dictionary with course information, a string for course code and number (e.g., \"CSC 110\") and a string for section (e.g., \"section 3\")\nIt returns a string with the building and room numbers (concatenated)\n\n\ncourse = \"CSC 110\"\nsection = \"section 3\"\nprint( retrieve_room(course_schedule, course, section) ) \n# \"Gittings 129b\""
   },
   {
     "objectID": "slides-14-01.html#write-a-function-solution",
     "href": "slides-14-01.html#write-a-function-solution",
     "title": "combining data structures (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef retrieve_room(course_dict, course, section):\n  c, s =  course_dict[(course, section)]\n  return c + \" \" + s\n\ndef main():\n  course_schedule = { (\"CSC 110\", \"section 1\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 110\", \"section 2\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 120\", \"section 1\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 120\", \"section 2\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 144\", \"section 1\") : (\"Social Sciences\", \"100\"),\n                    (\"CSC 210\", \"section 1\") : (\"Gittings\", \"129b\")}\n  print( retrieve_room(course_schedule, \n                       \"CSC 110\", \"section 1\")) # \"Gittings 129b\"\n  \nmain()\n\nGittings 129b"
+    "text": "Write a function – solution\n\ndef retrieve_room(course_dict, course, section):\n  c, s =  course_dict[(course, section)]\n  return c + \" \" + s\n\ndef main():\n  course_schedule = { (\"CSC 110\", \"section 1\") : (\"Gittings\", \"129b\"),\n                      (\"CSC 110\", \"section 2\") : (\"Gittings\", \"129b\"),\n                      (\"CSC 110\", \"section 3\") : (\"Gittings\", \"129b\"),\n                      (\"CSC 120\", \"section 1\") : (\"Gittings\", \"129b\"),\n                      (\"CSC 144\", \"section 1\") : (\"Social Sciences\", \"100\"),\n                      (\"CSC 120\", \"section 2\") : (\"Gittings\", \"129b\")}\n  print( retrieve_room(course_schedule, \n                       \"CSC 110\", \"section 3\")) # \"Gittings 129b\"\n  \nmain()\n\nGittings 129b"
   },
   {
     "objectID": "slides-14-01.html#dictionaries-as-values",
     "href": "slides-14-01.html#dictionaries-as-values",
     "title": "combining data structures (class slides)",
     "section": "Dictionaries as values",
-    "text": "Dictionaries as values\n\ncourse_schedule = { \"CSC 110\": \n                      {1: {\"building\": \"Gittings\", \"room\": \"129b\"},\n                       2: {\"building\": \"Gittings\", \"room\": \"129b\"} },\n                    \"CSC 120\":\n                       {1: {\"building\": \"Gittings\", \"room\": \"129b\"},\n                        2: {\"building\": \"Gittings\", \"room\": \"129b\"} },\n                    \"CSC 144\":\n                       {1: {\"building\": \"Social Sciences\", \"room\": \"100\"}}}\n                       \ncourse_schedule[\"CSC 110\"][1][\"building\"]\n\n'Gittings'\n\n\n\nHow would you retrieve the room for the section 1 of CSC 120?"
+    "text": "Dictionaries as values\n\ncourse_schedule = { \"CSC 110\": \n                      {1: {\"building\": \"Gittings\", \"room\": \"129b\"},\n                       2: {\"building\": \"Gittings\", \"room\": \"129b\"},\n                       3: {\"building\": \"Gittings\", \"room\": \"129b\"} },\n                    \"CSC 120\":\n                       {1: {\"building\": \"Gittings\", \"room\": \"129b\"},\n                        2: {\"building\": \"Gittings\", \"room\": \"129b\"} },\n                    \"CSC 144\":\n                       {1: {\"building\": \"Social Sciences\", \"room\": \"100\"}}}\n                       \ncourse_schedule[\"CSC 110\"][3][\"building\"]\n\n'Gittings'\n\n\n\nHow would you retrieve the room for the section 3 of CSC 120?"
   },
   {
     "objectID": "slides-14-01.html#how-to-organize-data",
@@ -5353,5 +5353,33 @@
     "title": "mutating dictionaries (class slides)",
     "section": "Quiz 06",
     "text": "Quiz 06\n\n\ncurrent time\n\n\n\n\n\n\nYou have 15 minutes to complete. There are 2 problems.\n\nNo need for comments and a main.py\nJust write your function\nDO NOT USE NESTED CONDITIONALS\n\nBuilt-in functions you can use: round(), input(), float(), str(), int(), len(), range(), set(), list() — you don’t have to use all of these"
+  },
+  {
+    "objectID": "slides-13-03.html#write-python-code",
+    "href": "slides-13-03.html#write-python-code",
+    "title": "more on lists (class slides)",
+    "section": "Write python code",
+    "text": "Write python code\nWrite python code that determines if a number is prime or not."
+  },
+  {
+    "objectID": "slides-13-03.html#write-python-code-1",
+    "href": "slides-13-03.html#write-python-code-1",
+    "title": "more on lists (class slides)",
+    "section": "Write python code",
+    "text": "Write python code\nA number n is NOT prime if it is divisible by any number between 2 and n / 2.\nThe integer 1 is not a prime number.\nYour code should have different functions to deal with lists of numbers in different ways (see test cases on next slide)"
+  },
+  {
+    "objectID": "slides-13-03.html#write-python-code-2",
+    "href": "slides-13-03.html#write-python-code-2",
+    "title": "more on lists (class slides)",
+    "section": "Write python code",
+    "text": "Write python code\nTest cases:\n\nif __name__ == \"__main__\":\n    original_list = [1, 2, 453, 3, 32, 5, 7]\n    result = create_dictionary(original_list)\n    assert result == {1: False, 2: True, 453: False, 3: True, 32: False, 5: True, 7: True}\n\n    original_list = [102, 250, 509, 345, 2, 4, 547, 563]\n    result = create_dictionary(original_list)\n    assert result == {102: False, 250: False, 509: True, 345: False, 2: True,\n                      4: False, 547: True, 563: True}\n\n    original_list = [102, 250, 509, 345, 2, 4, 547, 563]\n    mutate_list(original_list)\n    assert original_list == [False, False, True, False, True, False, True, True]\n\n    original_list = [102, 250, 509, 345, 2, 4, 547, 563]\n    remove_primes(original_list)\n    assert original_list == [102, 250, 345, 4]"
+  },
+  {
+    "objectID": "slides-14-01.html#announcements",
+    "href": "slides-14-01.html#announcements",
+    "title": "combining data structures (class slides)",
+    "section": "Announcements",
+    "text": "Announcements\n\nFill out SCS at scsonline.ucatt.arizona.edu\nIf 80% of students complete the survey, I’ll replace one of your lowest quizzes grade with full points (5/5 pts)\nQuiz 07 next Wednesday (combining data structures)"
   }
 ]
