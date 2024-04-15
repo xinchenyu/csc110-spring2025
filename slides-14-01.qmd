@@ -97,10 +97,5 @@ course_schedule = { "CSC 110":
 course_schedule["CSC 110"][3]["building"]
 ```
 
--   How would you retrieve the room for the section 3 of CSC 120?
+-   How would you retrieve the room for the section 3 of CSC 110?
 
-## How to organize data?
-
-A common programming task is to read data from a file into some data structure in python -- how the data structure is structured is very much up to the developer.
-
-[Download the csv (comma separate value) file with course information](data/csc_courses.csv) and discuss with your table mates: How would you structure these data in Python?
