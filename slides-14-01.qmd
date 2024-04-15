@@ -11,7 +11,9 @@ df-print: kable
 
 * Fill out SCS at [scsonline.ucatt.arizona.edu](https://scsonline.ucatt.arizona.edu/index.php)
 * If 80% of students complete the survey, I'll replace one of your lowest quizzes grade with full points (5/5 pts)
-* Quiz 07 next Wednesday (combining data structures)
+* Quiz 07 this Wednesday (combining data structures)
+* Midterm 3 on April 24, Final exam on May 3
+
 
 ## Tuples as dictionary keys
 
@@ -35,6 +37,10 @@ course_schedule = { ("CSC 110", "section 1") : ("Gittings", "129b"),
 
 -   How would you retrieve the room where CSC 144, section 1 takes place?
 -   How would you retrieve all rooms for CSC 120?
+
+# Attendance
+
+Go to gradescope and answer today's attendance question
 
 ## Write a function
 

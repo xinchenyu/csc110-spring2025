@@ -37,6 +37,7 @@ Notebooks:
 
 * [Midterm 1 Study Guide](pdfs/midterm-1-study-guide.pdf)
 * [Midterm 2 Study Guide](pdfs/midterm-2-study-guide.pdf)
+* [Midterm 3 Study Guide](pdfs/midterm-3-study-guide.pdf)
 
 # Video demonstration
 

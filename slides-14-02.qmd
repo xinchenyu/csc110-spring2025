@@ -7,10 +7,6 @@ df-print: kable
 
 # CSC 110 -- Sorting
 
-## Announcements
-
-* Final exams (BRING PHOTO ID):
-* Study guide on the practice problems page
 
 ## Sorting
 
@@ -97,13 +93,45 @@ Come up with a sorting algorithm
 
 -   <https://visualgo.net/en/sorting>
 
-## Write selection sort
+## Write selection sort - step 1
+1.  Function name is `find_min_index`
+2.  It takes a list of numbers as argument
+3.  It iterates over the list, scanning the list to find the smallest number
+4.  Return the index of the smallest number
+
+```{python}
+#| eval: false
+#| echo: true
+assert find_min_index([]) == None
+assert find_min_index([5, 10, 20, 1, 7, 9]) == 3
+```
+
+## Write selection sort -- step 1 solution
+
+```{python}
+#| eval: true
+#| echo: true
+def find_min_index(items):
+  min_index = None
+  for i in range(len(items)):
+    if min_index == None or items[min_index] > items[i]:
+      min_index = i
+  return min_index
+    
+def main():
+  test_list = [5, 10, 20, 1, 7, 9, 43, 10, 12]
+  print(find_min_index(test_list)) # 3
+  
+main()
+```
+
+## Write selection sort - step 2
 
 1.  Function name is `selection_sort`
 2.  It takes a list as argument
 3.  It **mutates** the list argument, sorting it
-4.  It iterates over the list, scanning the list to find the smallest element
-5.  It swaps the smallest element found in each iteration with the beginning element (start with beginning element at zero indes, add one to beginning index with each iteration)
+4.  It iterates over the list, call `find_min_index` to find the index of smallest element
+5.  It swaps the smallest element found in each iteration with the beginning element 
 
 ## Write selection sort -- solution
 
