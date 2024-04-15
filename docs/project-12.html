@@ -1024,7 +1024,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The steps of the algorithm are outlined below and you must implement these steps in python. Note that the below steps are just the steps for how to determine which lines to put where in the encrypted file. You also need to handle all of the file reading, writing, etc.</p>
 <ul>
 <li>Import the random python library</li>
-<li>Initialize the random library with a seed value of <code>42</code>. Just use the line of code <code>random.seed(42)</code>.</li>
+<li>Initialize the random library with a seed value of <code>125</code>. Just use the line of code <code>random.seed(125)</code>.</li>
 <li>However many lines there are in the input text file, repeat the following steps (line_count * 5) times.
 <ul>
 <li>Chose two random integers starting from zero and going up to the number of lines in the file minus 1</li>
@@ -1048,7 +1048,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Call for <code>decrypter.py</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    decrypt_file()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  decrypt_file(<span class="st">"encrypted.txt"</span>, <span class="st">"index.txt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

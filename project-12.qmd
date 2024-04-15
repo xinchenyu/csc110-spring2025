@@ -99,7 +99,7 @@ There will be multiple examples of running this program at the end of this speci
 The steps of the algorithm are outlined below and you must implement these steps in python. Note that the below steps are just the steps for how to determine which lines to put where in the encrypted file. You also need to handle all of the file reading, writing, etc.
 
 * Import the random python library
-* Initialize the random library with a seed value of `42`. Just use the line of code `random.seed(42)`.
+* Initialize the random library with a seed value of `125`. Just use the line of code `random.seed(125)`.
 * However many lines there are in the input text file, repeat the following steps (line_count * 5) times.
   * Chose two random integers starting from zero and going up to the number of lines in the file minus 1
   * Swap the content of the lines at these two indexes
@@ -129,5 +129,5 @@ Call for `decrypter.py`:
 #| eval: false
 #| echo: true
 if __name__ == "__main__":
-    decrypt_file()
+  decrypt_file("encrypted.txt", "index.txt")
 ```
