@@ -445,13 +445,13 @@
 </div>
 <h3 id="not-sorted">Not sorted</h3>
 <div class="cell" data-execution_count="2">
-<div class="cell-output cell-output-display" data-execution_count="63">
+<div class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>[5, 10, 20, 6, 7, 9, 43, 10, 12]</code></pre>
 </div>
 </div>
 <h3 id="sorted">Sorted</h3>
 <div class="cell" data-execution_count="3">
-<div class="cell-output cell-output-display" data-execution_count="64">
+<div class="cell-output cell-output-display" data-execution_count="14">
 <pre><code>[5, 6, 7, 9, 10, 10, 12, 20, 43]</code></pre>
 </div>
 </div>
@@ -606,81 +606,69 @@
 <li><p>This causes the large elements to “bubble up” to the top</p></li>
 </ul>
 </section>
-<section id="write-bubble-sort" class="slide level2">
-<h2>Write bubble sort</h2>
+<section id="write-bubble-sort---step-1" class="slide level2">
+<h2>Write bubble sort - step 1</h2>
+<ol type="1">
+<li>Function name is <code>single_sweep_swap</code></li>
+<li>It takes a list as argument</li>
+<li>It <strong>mutates</strong> the list, sorting it</li>
+<li>It iterates over the list, comparing each element with the next one, if the next one is smaller, swap elements</li>
+<li>It sweeps the list only once</li>
+</ol>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="cf">assert</span> single_sweep_swap([<span class="dv">8</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">1</span>]) <span class="op">==</span> [<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">1</span>, <span class="dv">8</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-bubble-sort-step-1-solution" class="slide level2">
+<h2>Write bubble sort – step 1 solution</h2>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw">def</span> single_sweep_swap(numbers):</span>
+<span id="cb12-2"><a href="#cb12-2"></a>    end <span class="op">=</span> <span class="bu">len</span>(numbers) <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(end):</span>
+<span id="cb12-4"><a href="#cb12-4"></a>        <span class="cf">if</span> numbers[i] <span class="op">&gt;</span> numbers[i<span class="op">+</span><span class="dv">1</span>]:</span>
+<span id="cb12-5"><a href="#cb12-5"></a>            numbers[i], numbers[i<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> numbers[i<span class="op">+</span><span class="dv">1</span>], numbers[i]</span>
+<span id="cb12-6"><a href="#cb12-6"></a>    <span class="cf">return</span> numbers</span>
+<span id="cb12-7"><a href="#cb12-7"></a></span>
+<span id="cb12-8"><a href="#cb12-8"></a><span class="kw">def</span> main():</span>
+<span id="cb12-9"><a href="#cb12-9"></a>    <span class="cf">assert</span> single_sweep_swap([<span class="dv">8</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">1</span>]) <span class="op">==</span> [<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">1</span>, <span class="dv">8</span>]</span>
+<span id="cb12-10"><a href="#cb12-10"></a>    <span class="cf">assert</span> single_sweep_swap([<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">1</span>, <span class="dv">9</span>]) <span class="op">==</span> [<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">1</span>, <span class="dv">7</span>, <span class="dv">9</span>]</span>
+<span id="cb12-11"><a href="#cb12-11"></a>    </span>
+<span id="cb12-12"><a href="#cb12-12"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-bubble-sort---step-2" class="slide level2">
+<h2>Write bubble sort - step 2</h2>
 <ol type="1">
 <li>Function name is <code>bubble_sort</code></li>
 <li>It takes a list as argument</li>
 <li>It <strong>mutates</strong> the list, sorting it</li>
 <li>It iterates over the list, comparing each element with the next one, if the next one is smaller, swap elements</li>
-<li>It continues these iterations until the whole list is sorted</li>
+<li>It sweeps the list in a iteration and stops until all items are sorted in that sweep.</li>
 </ol>
-</section>
-<section id="write-bubble-sort-solution-1" class="slide level2">
-<h2>Write bubble sort – solution 1</h2>
-<div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">def</span> bubble_sort(items):</span>
-<span id="cb11-2"><a href="#cb11-2"></a>  end <span class="op">=</span> <span class="bu">len</span>(items)<span class="op">-</span><span class="dv">1</span></span>
-<span id="cb11-3"><a href="#cb11-3"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(items)<span class="op">-</span><span class="dv">1</span>):</span>
-<span id="cb11-4"><a href="#cb11-4"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(end):</span>
-<span id="cb11-5"><a href="#cb11-5"></a>      <span class="cf">if</span> items[j] <span class="op">&gt;</span> items[j<span class="op">+</span><span class="dv">1</span>]:</span>
-<span id="cb11-6"><a href="#cb11-6"></a>        items[j], items[j<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> items[j<span class="op">+</span><span class="dv">1</span>], items[j]</span>
-<span id="cb11-7"><a href="#cb11-7"></a>    end <span class="op">-=</span><span class="dv">1</span></span>
-<span id="cb11-8"><a href="#cb11-8"></a>      </span>
-<span id="cb11-9"><a href="#cb11-9"></a><span class="kw">def</span> main():</span>
-<span id="cb11-10"><a href="#cb11-10"></a>  test_list <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">43</span>, <span class="dv">10</span>, <span class="dv">12</span>]</span>
-<span id="cb11-11"><a href="#cb11-11"></a>  bubble_sort(test_list)</span>
-<span id="cb11-12"><a href="#cb11-12"></a>  <span class="bu">print</span>(test_list)</span>
-<span id="cb11-13"><a href="#cb11-13"></a>  </span>
-<span id="cb11-14"><a href="#cb11-14"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[5, 6, 7, 9, 10, 10, 12, 20, 43]</code></pre>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="cf">assert</span> single_sweep_swap([<span class="dv">8</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">1</span>]) <span class="op">==</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">8</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<p>8 sweeps, 10 swaps</p>
 </section>
-<section id="swaps" class="slide level2">
-<h2>Swaps</h2>
-<blockquote>
-<p>[5, 10, 20, 6, 7, 9, 43, 10, 12]</p>
-</blockquote>
-<p>[5, 10, 6, 20, 7, 9, 43, 10, 12]</p>
-<p>[5, 10, 6, 7, 20, 9, 43, 10, 12]</p>
-<p>[5, 10, 6, 7, 9, 20, 43, 10, 12]</p>
-<p>[5, 10, 6, 7, 9, 20, 10, 43, 12]</p>
-<p>[5, 10, 6, 7, 9, 20, 10, 12, 43]</p>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>[5, 10, 6, 7, 9, 20, 10, 12, 43]</p>
-</blockquote>
-<p>[5, 6, 10, 7, 9, 20, 10, 12, 43]</p>
-<p>[5, 6, 7, 10, 9, 20, 10, 12, 43]</p>
-<p>[5, 6, 7, 9, 10, 20, 10, 12, 43]</p>
-<p>[5, 6, 7, 9, 10, 10, 20, 12, 43]</p>
-<p>[5, 6, 7, 9, 10, 10, 12, 20, 43]</p>
-</section>
-<section id="write-bubble-sort-solution-2" class="slide level2">
-<h2>Write bubble sort – solution 2</h2>
-<div class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">def</span> bubble_sort(items):</span>
-<span id="cb13-2"><a href="#cb13-2"></a>  is_sorted <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb13-3"><a href="#cb13-3"></a>  end <span class="op">=</span> <span class="bu">len</span>(items)<span class="op">-</span><span class="dv">1</span></span>
-<span id="cb13-4"><a href="#cb13-4"></a>  <span class="cf">while</span> <span class="kw">not</span> is_sorted:</span>
-<span id="cb13-5"><a href="#cb13-5"></a>    is_sorted <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb13-6"><a href="#cb13-6"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(end):</span>
-<span id="cb13-7"><a href="#cb13-7"></a>      <span class="cf">if</span> items[i] <span class="op">&gt;</span> items[i<span class="op">+</span><span class="dv">1</span>]:</span>
-<span id="cb13-8"><a href="#cb13-8"></a>        items[i], items[i<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> items[i<span class="op">+</span><span class="dv">1</span>], items[i]</span>
-<span id="cb13-9"><a href="#cb13-9"></a>        is_sorted <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb13-10"><a href="#cb13-10"></a>    end <span class="op">-=</span> <span class="dv">1</span></span>
-<span id="cb13-11"><a href="#cb13-11"></a>      </span>
-<span id="cb13-12"><a href="#cb13-12"></a><span class="kw">def</span> main():</span>
-<span id="cb13-13"><a href="#cb13-13"></a>  test_list <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">43</span>, <span class="dv">10</span>, <span class="dv">12</span>]</span>
-<span id="cb13-14"><a href="#cb13-14"></a>  bubble_sort(test_list)</span>
-<span id="cb13-15"><a href="#cb13-15"></a>  <span class="bu">print</span>(test_list)</span>
-<span id="cb13-16"><a href="#cb13-16"></a>  </span>
-<span id="cb13-17"><a href="#cb13-17"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="write-bubble-sort-solution" class="slide level2">
+<h2>Write bubble sort – solution</h2>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="kw">def</span> bubble_sort(items):</span>
+<span id="cb14-2"><a href="#cb14-2"></a>  is_sorted <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a>  end <span class="op">=</span> <span class="bu">len</span>(items)<span class="op">-</span><span class="dv">1</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a>  <span class="cf">while</span> <span class="kw">not</span> is_sorted:</span>
+<span id="cb14-5"><a href="#cb14-5"></a>    is_sorted <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb14-6"><a href="#cb14-6"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(end):</span>
+<span id="cb14-7"><a href="#cb14-7"></a>      <span class="cf">if</span> items[i] <span class="op">&gt;</span> items[i<span class="op">+</span><span class="dv">1</span>]:</span>
+<span id="cb14-8"><a href="#cb14-8"></a>        items[i], items[i<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> items[i<span class="op">+</span><span class="dv">1</span>], items[i]</span>
+<span id="cb14-9"><a href="#cb14-9"></a>        is_sorted <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb14-10"><a href="#cb14-10"></a>    end <span class="op">-=</span> <span class="dv">1</span></span>
+<span id="cb14-11"><a href="#cb14-11"></a>      </span>
+<span id="cb14-12"><a href="#cb14-12"></a><span class="kw">def</span> main():</span>
+<span id="cb14-13"><a href="#cb14-13"></a>  test_list <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">43</span>, <span class="dv">10</span>, <span class="dv">12</span>]</span>
+<span id="cb14-14"><a href="#cb14-14"></a>  bubble_sort(test_list)</span>
+<span id="cb14-15"><a href="#cb14-15"></a>  <span class="bu">print</span>(test_list)</span>
+<span id="cb14-16"><a href="#cb14-16"></a>  </span>
+<span id="cb14-17"><a href="#cb14-17"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[5, 6, 7, 9, 10, 10, 12, 20, 43]</code></pre>
 </div>
@@ -689,8 +677,8 @@
 </section>
 <section id="how-many-total-sweeps-and-swaps-to-sort-this-list-4" class="slide level2">
 <h2>How many total sweeps and swaps to sort this list?</h2>
-<div class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a>numbers <span class="op">=</span> [ <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">4</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a>numbers <span class="op">=</span> [ <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">4</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="how-many-total-sweeps-and-swaps-to-sort-this-list-5" class="slide level2">
@@ -711,8 +699,8 @@
 </section>
 <section id="how-many-total-sweeps-and-swaps" class="slide level2">
 <h2>How many total sweeps and swaps?</h2>
-<div class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a>numbers <span class="op">=</span> [ <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">5</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a>numbers <span class="op">=</span> [ <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">5</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="how-many-total-sweeps-and-swaps-1" class="slide level2">

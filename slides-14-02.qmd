@@ -224,66 +224,54 @@ numbers = [ 3, 1, 7, 2, 4, 8, 5 ]
 
 -   This causes the large elements to "bubble up" to the top
 
-## Write bubble sort
+## Write bubble sort - step 1
+
+1.  Function name is `single_sweep_swap`
+2.  It takes a list as argument
+3.  It **mutates** the list, sorting it
+4.  It iterates over the list, comparing each element with the next one, if the next one is smaller, swap elements
+5.  It sweeps the list only once
+
+```{python}
+#| echo: true
+#| eval: false
+assert single_sweep_swap([8, 3, 5, 7, 1]) == [3, 5, 7, 1, 8]
+```
+
+## Write bubble sort -- step 1 solution
+
+```{python}
+#| eval: true
+#| echo: true
+def single_sweep_swap(numbers):
+    end = len(numbers) - 1
+    for i in range(end):
+        if numbers[i] > numbers[i+1]:
+            numbers[i], numbers[i+1] = numbers[i+1], numbers[i]
+    return numbers
+
+def main():
+    assert single_sweep_swap([8, 3, 5, 7, 1]) == [3, 5, 7, 1, 8]
+    assert single_sweep_swap([3, 5, 7, 1, 9]) == [3, 5, 1, 7, 9]
+    
+main()
+```
+
+## Write bubble sort - step 2
 
 1.  Function name is `bubble_sort`
 2.  It takes a list as argument
 3.  It **mutates** the list, sorting it
 4.  It iterates over the list, comparing each element with the next one, if the next one is smaller, swap elements
-5.  It continues these iterations until the whole list is sorted
-
-## Write bubble sort -- solution 1
+5.  It sweeps the list in a iteration and stops until all items are sorted in that sweep.
 
 ```{python}
-#| eval: true
 #| echo: true
-def bubble_sort(items):
-  end = len(items)-1
-  for i in range(len(items)-1):
-    for j in range(end):
-      if items[j] > items[j+1]:
-        items[j], items[j+1] = items[j+1], items[j]
-    end -=1
-      
-def main():
-  test_list = [5, 10, 20, 6, 7, 9, 43, 10, 12]
-  bubble_sort(test_list)
-  print(test_list)
-  
-main()
+#| eval: false
+assert single_sweep_swap([8, 3, 5, 7, 1]) == [1, 3, 5, 7, 8]
 ```
 
-8 sweeps, 10 swaps
-
-## Swaps
-
-> \[5, 10, 20, 6, 7, 9, 43, 10, 12\]
-
-\[5, 10, 6, 20, 7, 9, 43, 10, 12\]
-
-\[5, 10, 6, 7, 20, 9, 43, 10, 12\]
-
-\[5, 10, 6, 7, 9, 20, 43, 10, 12\]
-
-\[5, 10, 6, 7, 9, 20, 10, 43, 12\]
-
-\[5, 10, 6, 7, 9, 20, 10, 12, 43\]
-
-------------------------------------------------------------------------
-
-> \[5, 10, 6, 7, 9, 20, 10, 12, 43\]
-
-\[5, 6, 10, 7, 9, 20, 10, 12, 43\]
-
-\[5, 6, 7, 10, 9, 20, 10, 12, 43\]
-
-\[5, 6, 7, 9, 10, 20, 10, 12, 43\]
-
-\[5, 6, 7, 9, 10, 10, 20, 12, 43\]
-
-\[5, 6, 7, 9, 10, 10, 12, 20, 43\]
-
-## Write bubble sort -- solution 2
+## Write bubble sort -- solution
 
 ```{python}
 #| eval: true
