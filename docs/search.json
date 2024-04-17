@@ -5422,7 +5422,7 @@
     "href": "slides-14-02.html#write-selection-sort---step-1",
     "title": "sorting (class slides)",
     "section": "Write selection sort - step 1",
-    "text": "Write selection sort - step 1\n\nFunction name is find_min_index\nIt takes a list of numbers as argument\nIt iterates over the list, scanning the list to find the smallest number\nReturn the index of the smallest number\n\n\nassert find_min_index([]) == None\nassert find_min_index([5, 10, 20, 1, 7, 9]) == 3"
+    "text": "Write selection sort - step 1\n\nFunction name is find_min_index\nIt takes a list of numbers as argument\nIt iterates over the list, scanning the list to find the smallest number\nReturn the index of the smallest number\n\n\nassert find_min_index([]) == None\nassert find_min_index([5, 10, 1, 20, 7, 3, 9]) == 2"
   },
   {
     "objectID": "slides-14-02.html#write-selection-sort---step-2",
@@ -5486,5 +5486,19 @@
     "title": "sorting (class slides)",
     "section": "Write bubble sort – solution",
     "text": "Write bubble sort – solution\n\ndef bubble_sort(items):\n  is_sorted = False\n  end = len(items)-1\n  while not is_sorted:\n    is_sorted = True\n    for i in range(end):\n      if items[i] &gt; items[i+1]:\n        items[i], items[i+1] = items[i+1], items[i]\n        is_sorted = False\n    end -= 1\n      \ndef main():\n  test_list = [5, 10, 20, 6, 7, 9, 43, 10, 12]\n  bubble_sort(test_list)\n  print(test_list)\n  \nmain()\n\n[5, 6, 7, 9, 10, 10, 12, 20, 43]\n\n\n3 sweeps, 10 swaps"
+  },
+  {
+    "objectID": "slides-14-02.html#write-selection-sort---step-1-continue",
+    "href": "slides-14-02.html#write-selection-sort---step-1-continue",
+    "title": "sorting (class slides)",
+    "section": "Write selection sort - step 1 continue",
+    "text": "Write selection sort - step 1 continue\n\nCall your find_min_index function\nFind the smallest number starting from a specified index\nReturn the index of that smallest number\n\n\nbegin_index = 3\nitems = [5, 10, 1, 20, 7, 3, 9]\n\nprint(items[begin_index:]) # [20, 7, 3, 9]\n\nprint(find_min_index(items[begin_index:])) # 2\nprint(find_min_index(items[begin_index:]) + begin_index) # 5"
+  },
+  {
+    "objectID": "slides-14-02.html#quiz-07",
+    "href": "slides-14-02.html#quiz-07",
+    "title": "sorting (class slides)",
+    "section": "Quiz 07",
+    "text": "Quiz 07\n\n\ncurrent time\n\n\n\n\n\n\nYou have 15 minutes to complete. There are 2 problems.\n\nNo need for comments and a main.py\nJust write your function\nDO NOT USE NESTED CONDITIONALS\n\nBuilt-in functions you can use: round(), input(), float(), str(), int(), len(), range(), set(), list() — you don’t have to use all of these"
   }
 ]
