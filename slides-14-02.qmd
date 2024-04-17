@@ -241,7 +241,6 @@ You have 15 minutes to complete. There are 2 problems.
 
 -   No need for comments and a `main.py`
 -   Just write your function
--   DO NOT USE NESTED CONDITIONALS
 
 Built-in functions you can use: `round()`, `input()`, `float()`, `str()`, `int()`, `len()`, `range()`, `set()`, `list()` — you don’t have to use all of these
 

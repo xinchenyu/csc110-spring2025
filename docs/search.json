@@ -5499,6 +5499,6 @@
     "href": "slides-14-02.html#quiz-07",
     "title": "sorting (class slides)",
     "section": "Quiz 07",
-    "text": "Quiz 07\n\n\ncurrent time\n\n\n\n\n\n\nYou have 15 minutes to complete. There are 2 problems.\n\nNo need for comments and a main.py\nJust write your function\nDO NOT USE NESTED CONDITIONALS\n\nBuilt-in functions you can use: round(), input(), float(), str(), int(), len(), range(), set(), list() — you don’t have to use all of these"
+    "text": "Quiz 07\n\n\ncurrent time\n\n\n\n\n\n\nYou have 15 minutes to complete. There are 2 problems.\n\nNo need for comments and a main.py\nJust write your function\n\nBuilt-in functions you can use: round(), input(), float(), str(), int(), len(), range(), set(), list() — you don’t have to use all of these"
   }
 ]
