@@ -209,40 +209,27 @@ numbers = [ 3, 1, 7, 2, 4 ]
 ```{python}
 #| eval: true
 #| echo: true
-numbers = [ 3, 1, 7, 2, 4, 8, 5 ]
+numbers = [ 3, 0, 7, 2, 4, 8 ]
 ```
+
+# Attendance
+
+Go to gradescope and answer today's attendance question
 
 ## How many total sweeps and swaps to sort this list?
 
-\[ 3, 1, 7, 2, 4, 8, 5 \] sweep
+\[ 3, 0, 7, 2, 4, 8 \] sweep
 
-\[ 1, 3, 7, 2, 4, 8, 5 \] swap and sweep
+\[ 0, 3, 7, 2, 4, 8\] swap and sweep
 
-\[ 1, 2, 7, 3, 4, 8, 5 \] swap and sweep
+\[ 0, 2, 7, 3, 4, 8 \] swap and sweep
 
-\[ 1, 2, 3, 7, 4, 8, 5 \] swap and sweep
+\[ 0, 2, 3, 7, 4, 8 \] swap and sweep
 
-\[ 1, 2, 3, 4, 7, 8, 5 \] swap and sweep
+\[ 0, 2, 3, 4, 7, 8 \] swap and sweep
 
-\[ 1, 2, 3, 4, 5, 8, 7 \] swap and sweep
 
-\[ 1, 2, 3, 4, 5, 7, 8 \] swap
-
-6 sweeps, 6 swaps
-
-## Quiz 07
-
-<center>
-<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
-<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
-</center>
-
-You have 15 minutes to complete. There are 2 problems.
-
--   No need for comments and a `main.py`
--   Just write your function
-
-Built-in functions you can use: `round()`, `input()`, `float()`, `str()`, `int()`, `len()`, `range()`, `set()`, `list()` — you don’t have to use all of these
+5 sweeps, 4 swaps
 
 
 ## Bubble sort

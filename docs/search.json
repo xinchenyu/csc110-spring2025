@@ -4624,14 +4624,14 @@
     "href": "slides-14-02.html#how-many-total-sweeps-and-swaps-to-sort-this-list-2",
     "title": "sorting (class slides)",
     "section": "How many total sweeps and swaps to sort this list?",
-    "text": "How many total sweeps and swaps to sort this list?\n\nnumbers = [ 3, 1, 7, 2, 4, 8, 5 ]"
+    "text": "How many total sweeps and swaps to sort this list?\n\nnumbers = [ 3, 0, 7, 2, 4, 8 ]"
   },
   {
     "objectID": "slides-14-02.html#how-many-total-sweeps-and-swaps-to-sort-this-list-3",
     "href": "slides-14-02.html#how-many-total-sweeps-and-swaps-to-sort-this-list-3",
     "title": "sorting (class slides)",
     "section": "How many total sweeps and swaps to sort this list?",
-    "text": "How many total sweeps and swaps to sort this list?\n[ 3, 1, 7, 2, 4, 8, 5 ] sweep\n[ 1, 3, 7, 2, 4, 8, 5 ] swap and sweep\n[ 1, 2, 7, 3, 4, 8, 5 ] swap and sweep\n[ 1, 2, 3, 7, 4, 8, 5 ] swap and sweep\n[ 1, 2, 3, 4, 7, 8, 5 ] swap and sweep\n[ 1, 2, 3, 4, 5, 8, 7 ] swap and sweep\n[ 1, 2, 3, 4, 5, 7, 8 ] swap\n6 sweeps, 6 swaps"
+    "text": "How many total sweeps and swaps to sort this list?\n[ 3, 0, 7, 2, 4, 8 ] sweep\n[ 0, 3, 7, 2, 4, 8] swap and sweep\n[ 0, 2, 7, 3, 4, 8 ] swap and sweep\n[ 0, 2, 3, 7, 4, 8 ] swap and sweep\n[ 0, 2, 3, 4, 7, 8 ] swap and sweep\n5 sweeps, 4 swaps"
   },
   {
     "objectID": "slides-14-02.html#bubble-sort",
