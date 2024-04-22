@@ -2,4 +2,5 @@
 title: "Mock Final Exam"
 ---
 
-...
+* [Mock Final Exam](pdfs/mock-final-exam.pdf)
+* [Answers for mock final exam](pdfs/mock-final-exam-answers.pdf)
