@@ -5542,5 +5542,33 @@
     "title": "sorting (class slides)",
     "section": "How many sweeps, swaps? (part 2)",
     "text": "How many sweeps, swaps? (part 2)\n\n[ 1, 3, 2, 4, 7, 5, 8 ] second sweep\n\n[ 1, 2, 3, 4, 7, 5, 8 ] swap\n[ 1, 2, 3, 4, 5, 7, 8 ] swap\n\n[ 1, 2, 3, 4, 5, 7, 8 ] third sweep"
+  },
+  {
+    "objectID": "slides-14-03.html#write-functions-side-by-side",
+    "href": "slides-14-03.html#write-functions-side-by-side",
+    "title": "review (class slides)",
+    "section": "Write functions side-by-side",
+    "text": "Write functions side-by-side\nWrite a function called remove_first that takes in a list of lists (2D list) and removes the first element of each sublist.\nWrite a function called remove_odds that takes in a list of list (2D list) of numbers and removes all values that are odd."
+  },
+  {
+    "objectID": "slides-14-03.html#solutions",
+    "href": "slides-14-03.html#solutions",
+    "title": "review (class slides)",
+    "section": "Solutions",
+    "text": "Solutions\n\ndef remove_first(list_of_lists):\n  for sublist in list_of_lists:\n    if len(sublist) &gt; 0:\n      sublist.pop(0)\n  return list_of_lists\n\ndef remove_odds(list_of_lists):\n  for sublist in list_of_lists:\n    for i in range(len(sublist)-1, -1, -1):\n      if sublist[i] % 2 == 1:\n        sublist.pop(i)\n  return list_of_lists\n\nif __name__ == \"__main__\":\n  original_list = [[\"banana\", \"apple\"], [], [\"pear\"]]\n  remove_first(original_list)\n  assert original_list == [[\"apple\"], [], []]\n  \n  numbers = [[1, 1, 1], [0, 0], []]\n  remove_odds(numbers)\n  assert numbers == [[], [0, 0], []]"
+  },
+  {
+    "objectID": "slides-14-03.html#write-functions-side-by-side-1",
+    "href": "slides-14-03.html#write-functions-side-by-side-1",
+    "title": "review (class slides)",
+    "section": "Write functions side-by-side",
+    "text": "Write functions side-by-side\nWrite a function called censor_consonants that takes as argument a string and returns the string with the consonants replaced with \"*\".\nWrite a function called replace_consonants that takes as argument a list of characters (strings of length one) and replaces the consonants with a \"*\"."
+  },
+  {
+    "objectID": "slides-14-03.html#solutions-1",
+    "href": "slides-14-03.html#solutions-1",
+    "title": "review (class slides)",
+    "section": "Solutions",
+    "text": "Solutions\n\ndef censor_consonants(string):\n  new_string = \"\"\n  for char in string:\n    if char not in \"aeiou\":\n      new_string += \"*\"\n    else:\n      new_string += char\n  return new_string\n\ndef replace_consonants(strings):\n  for i in range(len(strings)):\n    if strings[i] not in \"aeiou\":\n      strings[i] = \"*\"\n  return strings\n\nif __name__ == \"__main__\":\n  assert censor_consonants(\"abcd\") == \"a***\"\n  \n  letters = [\"a\", \"b\", \"c\", \"d\"]\n  replace_consonants(letters)\n  assert letters == [\"a\", \"*\", \"*\", \"*\"]"
   }
 ]

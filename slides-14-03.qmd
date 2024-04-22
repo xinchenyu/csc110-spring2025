@@ -1,0 +1,77 @@
+---
+title: "review (class slides)"
+format: revealjs
+slide-number: true
+df-print: kable
+---
+
+# CSC 110 -- Review
+
+## Write functions side-by-side
+
+Write a function called `remove_first` that takes in a list of lists (2D list) and removes the first element of each sublist.
+
+Write a function called `remove_odds` that takes in a list of list (2D list) of numbers and removes all values that are odd.
+
+## Solutions
+
+```{python}
+#| eval: true
+#| echo: true
+def remove_first(list_of_lists):
+  for sublist in list_of_lists:
+    if len(sublist) > 0:
+      sublist.pop(0)
+  return list_of_lists
+
+def remove_odds(list_of_lists):
+  for sublist in list_of_lists:
+    for i in range(len(sublist)-1, -1, -1):
+      if sublist[i] % 2 == 1:
+        sublist.pop(i)
+  return list_of_lists
+
+if __name__ == "__main__":
+  original_list = [["banana", "apple"], [], ["pear"]]
+  remove_first(original_list)
+  assert original_list == [["apple"], [], []]
+  
+  numbers = [[1, 1, 1], [0, 0], []]
+  remove_odds(numbers)
+  assert numbers == [[], [0, 0], []]
+```
+
+## Write functions side-by-side
+
+Write a function called `censor_consonants` that takes as argument a string and returns the string with the consonants replaced with `"*"`.
+
+Write a function called `replace_consonants` that takes as argument a list of characters (strings of length one) and replaces the consonants with a `"*"`.
+
+## Solutions
+
+```{python}
+#| eval: true
+#| echo: true
+def censor_consonants(string):
+  new_string = ""
+  for char in string:
+    if char not in "aeiou":
+      new_string += "*"
+    else:
+      new_string += char
+  return new_string
+
+def replace_consonants(strings):
+  for i in range(len(strings)):
+    if strings[i] not in "aeiou":
+      strings[i] = "*"
+  return strings
+
+if __name__ == "__main__":
+  assert censor_consonants("abcd") == "a***"
+  
+  letters = ["a", "b", "c", "d"]
+  replace_consonants(letters)
+  assert letters == ["a", "*", "*", "*"]
+
+```
