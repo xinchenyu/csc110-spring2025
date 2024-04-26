@@ -134,3 +134,31 @@ def main():
 main()
 ```
 
+## Write a function -- solution 2
+
+
+```{python}
+#| echo: true
+#| eval: true
+def read_numbers(file_name):
+  floats = []
+  not_floats = []
+  f = open(file_name, "r")
+  for line in f:
+    words = line.strip().split(" ")
+    for w in words:
+      try:
+        floats.append(float(w))
+      except Exception as err:
+        not_floats.append(w)
+        print(err)
+      else:
+        print("coverted", w, "successfully")
+  f.close()
+  return floats
+
+def main():
+  print( read_numbers("weather.txt") ) # [89.5, 50.2, 93.4, 69.0]
+  
+main()
+```

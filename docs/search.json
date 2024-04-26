@@ -5584,5 +5584,12 @@
     "title": "handling exceptions (class slides)",
     "section": "Attendance - solution",
     "text": "Attendance - solution\n\ndef valid_input(string):\n    if len(string) != 4:\n        return False\n    try:\n        int(string)\n        return True\n    except:\n        print(\"Invalid input. Please enter a valid year.\")\n        return False\n\ndef main():\n    print(valid_input(\"2023\"))\n    print(valid_input(\"20235\"))\n    print(valid_input(\"test\"))\n\nmain()\n\nTrue\nFalse\nInvalid input. Please enter a valid year.\nFalse"
+  },
+  {
+    "objectID": "slides-15-01.html#write-a-function-solution-2",
+    "href": "slides-15-01.html#write-a-function-solution-2",
+    "title": "handling exceptions (class slides)",
+    "section": "Write a function – solution 2",
+    "text": "Write a function – solution 2\n\ndef read_numbers(file_name):\n  floats = []\n  not_floats = []\n  f = open(file_name, \"r\")\n  for line in f:\n    words = line.strip().split(\" \")\n    for w in words:\n      try:\n        floats.append(float(w))\n      except Exception as err:\n        not_floats.append(w)\n        print(err)\n      else:\n        print(\"coverted\", w, \"successfully\")\n  f.close()\n  return floats\n\ndef main():\n  print( read_numbers(\"weather.txt\") ) # [89.5, 50.2, 93.4, 69.0]\n  \nmain()\n\ncould not convert string to float: 'Tucson'\ncould not convert string to float: '--'\ncould not convert string to float: 'high'\ncould not convert string to float: 'temperature:'\ncoverted 89.5 successfully\ncould not convert string to float: 'Tucson'\ncould not convert string to float: '--'\ncould not convert string to float: 'low'\ncould not convert string to float: 'temperature:'\ncoverted 50.2 successfully\ncould not convert string to float: 'Phoenix'\ncould not convert string to float: '--'\ncould not convert string to float: 'high'\ncould not convert string to float: 'temperature:'\ncoverted 93.4 successfully\ncould not convert string to float: 'Phoenix'\ncould not convert string to float: '--'\ncould not convert string to float: 'low'\ncould not convert string to float: 'temperature:'\ncoverted 69.0 successfully\n[89.5, 50.2, 93.4, 69.0]"
   }
 ]

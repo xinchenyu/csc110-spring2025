@@ -526,6 +526,55 @@ False</code></pre>
 <pre><code>[89.5, 50.2, 93.4, 69.0]</code></pre>
 </div>
 </div>
+</section>
+<section id="write-a-function-solution-2" class="slide level2">
+<h2>Write a function – solution 2</h2>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="kw">def</span> read_numbers(file_name):</span>
+<span id="cb14-2"><a href="#cb14-2"></a>  floats <span class="op">=</span> []</span>
+<span id="cb14-3"><a href="#cb14-3"></a>  not_floats <span class="op">=</span> []</span>
+<span id="cb14-4"><a href="#cb14-4"></a>  f <span class="op">=</span> <span class="bu">open</span>(file_name, <span class="st">"r"</span>)</span>
+<span id="cb14-5"><a href="#cb14-5"></a>  <span class="cf">for</span> line <span class="kw">in</span> f:</span>
+<span id="cb14-6"><a href="#cb14-6"></a>    words <span class="op">=</span> line.strip().split(<span class="st">" "</span>)</span>
+<span id="cb14-7"><a href="#cb14-7"></a>    <span class="cf">for</span> w <span class="kw">in</span> words:</span>
+<span id="cb14-8"><a href="#cb14-8"></a>      <span class="cf">try</span>:</span>
+<span id="cb14-9"><a href="#cb14-9"></a>        floats.append(<span class="bu">float</span>(w))</span>
+<span id="cb14-10"><a href="#cb14-10"></a>      <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> err:</span>
+<span id="cb14-11"><a href="#cb14-11"></a>        not_floats.append(w)</span>
+<span id="cb14-12"><a href="#cb14-12"></a>        <span class="bu">print</span>(err)</span>
+<span id="cb14-13"><a href="#cb14-13"></a>      <span class="cf">else</span>:</span>
+<span id="cb14-14"><a href="#cb14-14"></a>        <span class="bu">print</span>(<span class="st">"coverted"</span>, w, <span class="st">"successfully"</span>)</span>
+<span id="cb14-15"><a href="#cb14-15"></a>  f.close()</span>
+<span id="cb14-16"><a href="#cb14-16"></a>  <span class="cf">return</span> floats</span>
+<span id="cb14-17"><a href="#cb14-17"></a></span>
+<span id="cb14-18"><a href="#cb14-18"></a><span class="kw">def</span> main():</span>
+<span id="cb14-19"><a href="#cb14-19"></a>  <span class="bu">print</span>( read_numbers(<span class="st">"weather.txt"</span>) ) <span class="co"># [89.5, 50.2, 93.4, 69.0]</span></span>
+<span id="cb14-20"><a href="#cb14-20"></a>  </span>
+<span id="cb14-21"><a href="#cb14-21"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>could not convert string to float: 'Tucson'
+could not convert string to float: '--'
+could not convert string to float: 'high'
+could not convert string to float: 'temperature:'
+coverted 89.5 successfully
+could not convert string to float: 'Tucson'
+could not convert string to float: '--'
+could not convert string to float: 'low'
+could not convert string to float: 'temperature:'
+coverted 50.2 successfully
+could not convert string to float: 'Phoenix'
+could not convert string to float: '--'
+could not convert string to float: 'high'
+could not convert string to float: 'temperature:'
+coverted 93.4 successfully
+could not convert string to float: 'Phoenix'
+could not convert string to float: '--'
+could not convert string to float: 'low'
+could not convert string to float: 'temperature:'
+coverted 69.0 successfully
+[89.5, 50.2, 93.4, 69.0]</code></pre>
+</div>
+</div>
 
 <div class="footer footer-default">
 
