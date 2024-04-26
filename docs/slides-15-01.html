@@ -451,6 +451,43 @@ Tried to get a value from an index that does not exist in the list</code></pre>
 </div>
 <p>IndexError: list index out of range</p>
 </section>
+<section id="attendance" class="slide level2">
+<h2>Attendance</h2>
+<p>Write a python function called <code>valid_input</code> that takes a string as argument and returns False if the string is not a year (check if the length is 4, and if the string is an integer).</p>
+<p>Name your file <code>year_validation.py</code></p>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="bu">print</span>(valid_input(<span class="st">"2023"</span>)) <span class="co"># True</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="bu">print</span>(valid_input(<span class="st">"20235"</span>)) <span class="co"># False</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="bu">print</span>(valid_input(<span class="st">"test"</span>)) <span class="co"># False</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="attendance---solution" class="slide level2">
+<h2>Attendance - solution</h2>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">def</span> valid_input(string):</span>
+<span id="cb9-2"><a href="#cb9-2"></a>    <span class="cf">if</span> <span class="bu">len</span>(string) <span class="op">!=</span> <span class="dv">4</span>:</span>
+<span id="cb9-3"><a href="#cb9-3"></a>        <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a>    <span class="cf">try</span>:</span>
+<span id="cb9-5"><a href="#cb9-5"></a>        <span class="bu">int</span>(string)</span>
+<span id="cb9-6"><a href="#cb9-6"></a>        <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a>    <span class="cf">except</span>:</span>
+<span id="cb9-8"><a href="#cb9-8"></a>        <span class="bu">print</span>(<span class="st">"Invalid input. Please enter a valid year."</span>)</span>
+<span id="cb9-9"><a href="#cb9-9"></a>        <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb9-10"><a href="#cb9-10"></a></span>
+<span id="cb9-11"><a href="#cb9-11"></a><span class="kw">def</span> main():</span>
+<span id="cb9-12"><a href="#cb9-12"></a>    <span class="bu">print</span>(valid_input(<span class="st">"2023"</span>))</span>
+<span id="cb9-13"><a href="#cb9-13"></a>    <span class="bu">print</span>(valid_input(<span class="st">"20235"</span>))</span>
+<span id="cb9-14"><a href="#cb9-14"></a>    <span class="bu">print</span>(valid_input(<span class="st">"test"</span>))</span>
+<span id="cb9-15"><a href="#cb9-15"></a></span>
+<span id="cb9-16"><a href="#cb9-16"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>True
+False
+Invalid input. Please enter a valid year.
+False</code></pre>
+</div>
+</div>
+</section>
 <section id="write-a-function" class="slide level2">
 <h2>Write a function</h2>
 <ol type="1">
@@ -460,31 +497,31 @@ Tried to get a value from an index that does not exist in the list</code></pre>
 <li>It returns a list with all float numbers in the file</li>
 <li><a href="data/weather.txt">Download test file</a></li>
 </ol>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="bu">print</span>( read_numbers(<span class="st">"weather.txt"</span>) ) <span class="co"># [89.5, 50.2, 93.4, 69.0]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="bu">print</span>( read_numbers(<span class="st">"weather.txt"</span>) ) <span class="co"># [89.5, 50.2, 93.4, 69.0]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">def</span> read_numbers(file_name):</span>
-<span id="cb9-2"><a href="#cb9-2"></a>  floats <span class="op">=</span> []</span>
-<span id="cb9-3"><a href="#cb9-3"></a>  not_floats <span class="op">=</span> []</span>
-<span id="cb9-4"><a href="#cb9-4"></a>  f <span class="op">=</span> <span class="bu">open</span>(file_name, <span class="st">"r"</span>)</span>
-<span id="cb9-5"><a href="#cb9-5"></a>  <span class="cf">for</span> line <span class="kw">in</span> f:</span>
-<span id="cb9-6"><a href="#cb9-6"></a>    words <span class="op">=</span> line.strip().split(<span class="st">" "</span>)</span>
-<span id="cb9-7"><a href="#cb9-7"></a>    <span class="cf">for</span> w <span class="kw">in</span> words:</span>
-<span id="cb9-8"><a href="#cb9-8"></a>      <span class="cf">try</span>:</span>
-<span id="cb9-9"><a href="#cb9-9"></a>        floats.append(<span class="bu">float</span>(w))</span>
-<span id="cb9-10"><a href="#cb9-10"></a>      <span class="cf">except</span>:</span>
-<span id="cb9-11"><a href="#cb9-11"></a>        not_floats.append(w)</span>
-<span id="cb9-12"><a href="#cb9-12"></a>  f.close()</span>
-<span id="cb9-13"><a href="#cb9-13"></a>  <span class="cf">return</span> floats</span>
-<span id="cb9-14"><a href="#cb9-14"></a></span>
-<span id="cb9-15"><a href="#cb9-15"></a><span class="kw">def</span> main():</span>
-<span id="cb9-16"><a href="#cb9-16"></a>  <span class="bu">print</span>( read_numbers(<span class="st">"weather.txt"</span>) ) <span class="co"># [89.5, 50.2, 93.4, 69.0]</span></span>
-<span id="cb9-17"><a href="#cb9-17"></a>  </span>
-<span id="cb9-18"><a href="#cb9-18"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw">def</span> read_numbers(file_name):</span>
+<span id="cb12-2"><a href="#cb12-2"></a>  floats <span class="op">=</span> []</span>
+<span id="cb12-3"><a href="#cb12-3"></a>  not_floats <span class="op">=</span> []</span>
+<span id="cb12-4"><a href="#cb12-4"></a>  f <span class="op">=</span> <span class="bu">open</span>(file_name, <span class="st">"r"</span>)</span>
+<span id="cb12-5"><a href="#cb12-5"></a>  <span class="cf">for</span> line <span class="kw">in</span> f:</span>
+<span id="cb12-6"><a href="#cb12-6"></a>    words <span class="op">=</span> line.strip().split(<span class="st">" "</span>)</span>
+<span id="cb12-7"><a href="#cb12-7"></a>    <span class="cf">for</span> w <span class="kw">in</span> words:</span>
+<span id="cb12-8"><a href="#cb12-8"></a>      <span class="cf">try</span>:</span>
+<span id="cb12-9"><a href="#cb12-9"></a>        floats.append(<span class="bu">float</span>(w))</span>
+<span id="cb12-10"><a href="#cb12-10"></a>      <span class="cf">except</span>:</span>
+<span id="cb12-11"><a href="#cb12-11"></a>        not_floats.append(w)</span>
+<span id="cb12-12"><a href="#cb12-12"></a>  f.close()</span>
+<span id="cb12-13"><a href="#cb12-13"></a>  <span class="cf">return</span> floats</span>
+<span id="cb12-14"><a href="#cb12-14"></a></span>
+<span id="cb12-15"><a href="#cb12-15"></a><span class="kw">def</span> main():</span>
+<span id="cb12-16"><a href="#cb12-16"></a>  <span class="bu">print</span>( read_numbers(<span class="st">"weather.txt"</span>) ) <span class="co"># [89.5, 50.2, 93.4, 69.0]</span></span>
+<span id="cb12-17"><a href="#cb12-17"></a>  </span>
+<span id="cb12-18"><a href="#cb12-18"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[89.5, 50.2, 93.4, 69.0]</code></pre>
 </div>

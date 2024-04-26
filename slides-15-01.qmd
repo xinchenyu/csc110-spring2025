@@ -58,6 +58,43 @@ print(ages[0] + ages[7])
 
 IndexError: list index out of range
 
+## Attendance
+
+Write a python function called `valid_input` that takes a string as argument and returns False if the string is not a year (check if the length is 4, and if the string is an integer). 
+
+Name your file `year_validation.py`
+
+```{python}
+#| echo: true
+#| eval: false
+print(valid_input("2023")) # True
+print(valid_input("20235")) # False
+print(valid_input("test")) # False
+```
+
+## Attendance - solution
+
+```{python}
+#| echo: true
+#| eval: true
+def valid_input(string):
+    if len(string) != 4:
+        return False
+    try:
+        int(string)
+        return True
+    except:
+        print("Invalid input. Please enter a valid year.")
+        return False
+
+def main():
+    print(valid_input("2023"))
+    print(valid_input("20235"))
+    print(valid_input("test"))
+
+main()
+```
+
 ## Write a function
 
 1. Its name is `read_numbers`
@@ -73,7 +110,6 @@ print( read_numbers("weather.txt") ) # [89.5, 50.2, 93.4, 69.0]
 ```
 
 ## Write a function -- solution
-
 
 ```{python}
 #| echo: true

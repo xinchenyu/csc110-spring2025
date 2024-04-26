@@ -5570,5 +5570,19 @@
     "title": "review (class slides)",
     "section": "Solutions",
     "text": "Solutions\n\ndef censor_consonants(string):\n  new_string = \"\"\n  for char in string:\n    if char not in \"aeiou\":\n      new_string += \"*\"\n    else:\n      new_string += char\n  return new_string\n\ndef replace_consonants(strings):\n  for i in range(len(strings)):\n    if strings[i] not in \"aeiou\":\n      strings[i] = \"*\"\n  return strings\n\nif __name__ == \"__main__\":\n  assert censor_consonants(\"abcd\") == \"a***\"\n  \n  letters = [\"a\", \"b\", \"c\", \"d\"]\n  replace_consonants(letters)\n  assert letters == [\"a\", \"*\", \"*\", \"*\"]"
+  },
+  {
+    "objectID": "slides-15-01.html#attendance",
+    "href": "slides-15-01.html#attendance",
+    "title": "handling exceptions (class slides)",
+    "section": "Attendance",
+    "text": "Attendance\nWrite a python function called valid_input that takes a string as argument and returns False if the string is not a year (check if the length is 4, and if the string is an integer).\nName your file year_validation.py\n\nprint(valid_input(\"2023\")) # True\nprint(valid_input(\"20235\")) # False\nprint(valid_input(\"test\")) # False"
+  },
+  {
+    "objectID": "slides-15-01.html#attendance---solution",
+    "href": "slides-15-01.html#attendance---solution",
+    "title": "handling exceptions (class slides)",
+    "section": "Attendance - solution",
+    "text": "Attendance - solution\n\ndef valid_input(string):\n    if len(string) != 4:\n        return False\n    try:\n        int(string)\n        return True\n    except:\n        print(\"Invalid input. Please enter a valid year.\")\n        return False\n\ndef main():\n    print(valid_input(\"2023\"))\n    print(valid_input(\"20235\"))\n    print(valid_input(\"test\"))\n\nmain()\n\nTrue\nFalse\nInvalid input. Please enter a valid year.\nFalse"
   }
 ]
