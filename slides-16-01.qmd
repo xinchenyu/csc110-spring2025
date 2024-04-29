@@ -8,157 +8,176 @@ df-print: kable
 
 # CSC -- Final exam review
 
-## `try:` and `except:`
+## Announcements
 
-* Can be used to catch errors in a program without it having to crash!
-* The programmer can provide more information and/or context as to what happened
-* Can make debugging easier if you provide clear error messages
+-   No lecture this Wednesday, me and TAs will be here (Gittings 129b) to answer questions.
 
-## `try:` and `except:`
+-   Final exam will be on this Friday, May 03, 2024 – 6:00pm - 8:00pm in ENR2 N120.
 
-```{python}
-#| echo: true
-#| eval: true
-ages = [35, 35, 23, 18, 45, 18, 72]
-try:
-    print(ages[0] + ages[4])
-except:
-    print('Failed to print the sum of two ages')
-```
+-   Bring your photo ID
 
-```{python}
-#| echo: true
-#| eval: true
-ages = [35, 35, 23, 18, 45, 18, 72]
-try:
-    print(ages[0] + ages[7])
-except:
-    print('Failed to print the sum of two ages')
-```
-
-## `try:` and `except:`
-
-```{python}
-#| echo: true
-#| eval: true
-ages = [35, 35, 23, 18, 45, 18, 72]
-try:
-    print(ages[0] + ages[7])
-except:
-    print('Failed to print the sum of two ages')
-    print('Tried to get a value from an index that does not exist in the list')
-```
-
-```{python}
-#| echo: true
-#| eval: false
-ages = [35, 35, 23, 18, 45, 18, 72]
-print(ages[0] + ages[7])
-```
-
-IndexError: list index out of range
+-   Last day of office hour is May 1st. 
 
 ## Attendance
 
-Write a python function called `valid_input` that takes a string as argument and returns False if the string is not a year (check if the length is 4, and if the string is an integer). 
+Go to gradescope and answer attendance question.
 
-Name your file `year_validation.py`
+## Midterm 3 - question 5
+
+Write a function called `matches` that takes two string arguments, `s1` and `s2`, which you may assume have equal length. The function should return a string that is the same length as `s1` and `s2`.
+
+If the corresponding characters in `s1` and `s2` are the same, then the corresponding character in the result is that character. If they are different, then the corresponding character in the result is `"*"`.
+
+```{python}
+#| eval: false
+#| echo: true
+assert matches("abc", "abc") == "abc"
+assert matches("abc", "xyz") == "***"
+assert matches("abcd", "cbxe") == "*b**"
+assert matches("", "") == ""
+```
+
+## Midterm 3 - question 5 <span style="color:red">wrong</span> solution
 
 ```{python}
 #| echo: true
 #| eval: false
-print(valid_input("2023")) # True
-print(valid_input("20235")) # False
-print(valid_input("test")) # False
-```
-
-## Attendance - solution
-
-```{python}
-#| echo: true
-#| eval: true
-def valid_input(string):
-    if len(string) != 4:
-        return False
-    try:
-        int(string)
-        return True
-    except:
-        print("Invalid input. Please enter a valid year.")
-        return False
+def matches(s1, s2):
+    result = ""
+    for char in s1:
+        if char in s2:
+            result += char
+        else:
+            result += "*"
+    return result
 
 def main():
-    print(valid_input("2023"))
-    print(valid_input("20235"))
-    print(valid_input("test"))
+  assert matches("abc", "abc") == "abc"
+  assert matches("abc", "xyz") == "***"
+  assert matches("abcd", "cbxe") == "*b**" # Will fail this test case
+  assert matches("", "") == ""
 
 main()
 ```
 
-## Write a function
 
-1. Its name is `read_numbers`
-1. It takes a string for a file name
-1. It opens the file in read mode, it splits the lines by space
-1. It returns a list with all float numbers in the file
-1. [Download test file](data/weather.txt)
+## Midterm 3 - question 5 solution
+
+```{python}
+#| echo: true
+#| eval: true
+def matches(s1, s2):
+    result = ""
+    for index in range(len(s1)):
+        if s1[index] == s2[index]:
+            result += s1[index]
+        else:
+            result += "*"
+    return result
+
+def main():
+  assert matches("abc", "abc") == "abc"
+  assert matches("abc", "xyz") == "***"
+  assert matches("abcd", "cbxe") == "*b**"
+  assert matches("", "") == ""
+
+main()
+```
+
+
+## Midterm 3 - question 6 
+
+Given code for bubble sort:
+```{python}
+#| eval: false
+#| echo: true
+def bubble_sort(items):
+  swapped = False
+  end = len(items)-1
+  while not swapped:
+    swapped = True
+    for i in range(end):
+      if items[i] > items[i+1]:
+        items[i], items[i+1] = items[i+1], items[i]
+        swapped = False
+    end -= 1
+```
+
+How many sweeps and swaps of `[30, 13, 5, 1, 14]`?
+
+## Midterm 3 - question 6 solution
+
+1st sweep:
+
+-   1st swap: `[13, 30, 5, 1, 14]`
+
+-   2nd swap: `[13, 5, 30, 1, 14]`
+
+-   3rd swap: `[13, 5, 1, 30, 14]`
+
+-   4th swap: `[13, 5, 1, 14, 30]`
+
+2nd sweep:
+
+-   5th swap: `[5, 13, 1, 14, 30]`
+
+-   6th swap: `[5, 1, 13, 14, 30]`
+
+## Midterm 3 - question 6 solution (continued)
+
+3rd sweep:
+
+- 7th swap:   `[1, 5, 13, 14, 30]`
+
+4th sweep:
+
+List already sorted, no more swaps
+
+<br />
+
+**4 sweeps and 7 swaps**
+
+## Midterm 3 - question 8 (Bonus) 
+
+Write python code (multiple functions) that given a list of lists of integers as argument, it mutates the list by removing all **prime numbers** from each sublist.
 
 ```{python}
 #| echo: true
 #| eval: false
-print( read_numbers("weather.txt") ) # [89.5, 50.2, 93.4, 69.0]
+if __name__ == "__main__":
+  original_list = [[2, 3, 4, 4], [5, 7, 40, 50, 11, 13, 20], [17, 19, 23]]
+  remove_primes(original_list)
+  assert original_list == [[4, 4], [40, 50, 20], []]
 ```
 
-## Write a function -- solution
+## Midterm 3 - question 8 solution
 
 ```{python}
 #| echo: true
 #| eval: true
-def read_numbers(file_name):
-  floats = []
-  not_floats = []
-  f = open(file_name, "r")
-  for line in f:
-    words = line.strip().split(" ")
-    for w in words:
-      try:
-        floats.append(float(w))
-      except:
-        not_floats.append(w)
-  f.close()
-  return floats
+def is_prime(number):
+    if number == 1:
+         return False
+    # If num is divisible by any number between 2 and n / 2, it is not prime
+    for denominator in range(2, int(number/2 + 1)):
+          if number % denominator == 0:
+               return False
+    return True
 
-def main():
-  print( read_numbers("weather.txt") ) # [89.5, 50.2, 93.4, 69.0]
+def remove_primes(lists):
+    for sublist in lists:
+        for i in range(len(sublist)-1, -1, -1):
+            if is_prime(sublist[i]):
+                sublist.pop(i)
+    return lists
   
-main()
+if __name__ == "__main__":
+  original_list = [[2, 3, 4, 4], [5, 7, 40, 50, 11, 13, 20], [17, 19, 23]]
+  remove_primes(original_list)
+  assert original_list == [[4, 4], [40, 50, 20], []]
 ```
 
-## Write a function -- solution 2
 
 
-```{python}
-#| echo: true
-#| eval: true
-def read_numbers(file_name):
-  floats = []
-  not_floats = []
-  f = open(file_name, "r")
-  for line in f:
-    words = line.strip().split(" ")
-    for w in words:
-      try:
-        floats.append(float(w))
-      except Exception as err:
-        not_floats.append(w)
-        print(err)
-      else:
-        print("coverted", w, "successfully")
-  f.close()
-  return floats
 
-def main():
-  print( read_numbers("weather.txt") ) # [89.5, 50.2, 93.4, 69.0]
-  
-main()
-```
+

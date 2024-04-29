@@ -10,7 +10,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
-  <title>CSc 110 Computer Programming I - final exam review (class slides)</title>
+  <title>CSc 110 Computer Programming I - If statements (class slides)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -389,160 +389,274 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">final exam review (class slides)</h1>
+  <h1 class="title">If statements (class slides)</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
 <section>
-<section id="csc-final-exam-review" class="title-slide slide level1 center">
-<h1>CSC – Final exam review</h1>
+<section id="csc-110-if-statements" class="title-slide slide level1 center">
+<h1>CSc 110 If statements</h1>
 
 </section>
-<section id="announcements" class="slide level2">
-<h2>Announcements</h2>
+<section id="the-if-statement" class="slide level2">
+<h2>The if statement</h2>
 <ul>
-<li><p>No lecture this Wednesday, me and TAs will be here (Gittings 129b) to answer questions.</p></li>
-<li><p>Final exam will be on this Friday, May 03, 2024 – 6:00pm - 8:00pm in ENR2 N120.</p></li>
-<li><p>Bring your photo ID</p></li>
-<li><p>Last day of office hour is May 1st.</p></li>
+<li><p>If statements can be used to <strong>run code conditionally</strong></p>
+<ul>
+<li><p><strong>Before if-statements:</strong> Code has pretty much just run in a straight line</p></li>
+<li><p><strong>With ifs:</strong> Can run code optionally, depending on the value of a condition</p></li>
+</ul></li>
 </ul>
+<p>This means our code can <strong>branch</strong> in different directions</p>
 </section>
-<section id="attendance" class="slide level2">
-<h2>Attendance</h2>
-<p>Go to gradescope and answer attendance question.</p>
-</section>
-<section id="midterm-3---question-5" class="slide level2">
-<h2>Midterm 3 - question 5</h2>
-<p>Write a function called <code>matches</code> that takes two string arguments, <code>s1</code> and <code>s2</code>, which you may assume have equal length. The function should return a string that is the same length as <code>s1</code> and <code>s2</code>.</p>
-<p>If the corresponding characters in <code>s1</code> and <code>s2</code> are the same, then the corresponding character in the result is that character. If they are different, then the corresponding character in the result is <code>"*"</code>.</p>
+<section id="the-if-statement-1" class="slide level2">
+<h2>The if statement</h2>
+<pre>if condition:
+    statement 1
+    statement 2
+    . . .
+    statement N
+</pre>
+<p>The condition is an expression that is evaluated to a bool.</p>
+<p>Example:</p>
 <div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="cf">assert</span> matches(<span class="st">"abc"</span>, <span class="st">"abc"</span>) <span class="op">==</span> <span class="st">"abc"</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="cf">assert</span> matches(<span class="st">"abc"</span>, <span class="st">"xyz"</span>) <span class="op">==</span> <span class="st">"***"</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="cf">assert</span> matches(<span class="st">"abcd"</span>, <span class="st">"cbxe"</span>) <span class="op">==</span> <span class="st">"*b**"</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="cf">assert</span> matches(<span class="st">""</span>, <span class="st">""</span>) <span class="op">==</span> <span class="st">""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">def</span> greeting(name):</span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="cf">if</span> name <span class="op">==</span> <span class="st">"Bond"</span>:</span>
+<span id="cb1-3"><a href="#cb1-3"></a>    <span class="cf">return</span> <span class="st">"Welcome on board 007."</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>  <span class="cf">else</span>:</span>
+<span id="cb1-5"><a href="#cb1-5"></a>    <span class="cf">return</span> <span class="st">"Hello, "</span> <span class="op">+</span> name</span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="kw">def</span> main():</span>
+<span id="cb1-8"><a href="#cb1-8"></a>  user_name <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Enter your name:</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb1-9"><a href="#cb1-9"></a>  <span class="bu">print</span>( greeting(user_name) )</span>
+<span id="cb1-10"><a href="#cb1-10"></a></span>
+<span id="cb1-11"><a href="#cb1-11"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="midterm-3---question-5-wrong-solution" class="slide level2">
-<h2>Midterm 3 - question 5 <span style="color:red">wrong</span> solution</h2>
+<section id="improve-the-function" class="slide level2">
+<h2>Improve the function</h2>
+<p>Instead of checking if the name entered is “Bond”, also check whether the name is “James Bond”.</p>
+</section>
+<section id="conditional-execution" class="slide level2">
+<h2>Conditional execution</h2>
+<p>The computer program branches out, or makes decisions</p>
 <div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">def</span> matches(s1, s2):</span>
-<span id="cb2-2"><a href="#cb2-2"></a>    result <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a>    <span class="cf">for</span> char <span class="kw">in</span> s1:</span>
-<span id="cb2-4"><a href="#cb2-4"></a>        <span class="cf">if</span> char <span class="kw">in</span> s2:</span>
-<span id="cb2-5"><a href="#cb2-5"></a>            result <span class="op">+=</span> char</span>
-<span id="cb2-6"><a href="#cb2-6"></a>        <span class="cf">else</span>:</span>
-<span id="cb2-7"><a href="#cb2-7"></a>            result <span class="op">+=</span> <span class="st">"*"</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a>    <span class="cf">return</span> result</span>
-<span id="cb2-9"><a href="#cb2-9"></a></span>
-<span id="cb2-10"><a href="#cb2-10"></a><span class="kw">def</span> main():</span>
-<span id="cb2-11"><a href="#cb2-11"></a>  <span class="cf">assert</span> matches(<span class="st">"abc"</span>, <span class="st">"abc"</span>) <span class="op">==</span> <span class="st">"abc"</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a>  <span class="cf">assert</span> matches(<span class="st">"abc"</span>, <span class="st">"xyz"</span>) <span class="op">==</span> <span class="st">"***"</span></span>
-<span id="cb2-13"><a href="#cb2-13"></a>  <span class="cf">assert</span> matches(<span class="st">"abcd"</span>, <span class="st">"cbxe"</span>) <span class="op">==</span> <span class="st">"*b**"</span> <span class="co"># Will fail this test case</span></span>
-<span id="cb2-14"><a href="#cb2-14"></a>  <span class="cf">assert</span> matches(<span class="st">""</span>, <span class="st">""</span>) <span class="op">==</span> <span class="st">""</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a></span>
-<span id="cb2-16"><a href="#cb2-16"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">def</span> greater_than_zero(n):</span>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="cf">if</span> n <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb2-3"><a href="#cb2-3"></a>    <span class="cf">return</span> <span class="st">"Greater than zero"</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>  <span class="cf">else</span>:</span>
+<span id="cb2-5"><a href="#cb2-5"></a>    <span class="cf">return</span> <span class="st">"Not greater than zero"</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>  </span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="kw">def</span> main():</span>
+<span id="cb2-8"><a href="#cb2-8"></a>  result <span class="op">=</span> greater_than_zero(<span class="dv">4</span>)</span>
+<span id="cb2-9"><a href="#cb2-9"></a>  <span class="bu">print</span>(result)</span>
+<span id="cb2-10"><a href="#cb2-10"></a>  </span>
+<span id="cb2-11"><a href="#cb2-11"></a>  result <span class="op">=</span> greater_than_zero(<span class="dv">0</span>)</span>
+<span id="cb2-12"><a href="#cb2-12"></a>  <span class="bu">print</span>(result)</span>
+<span id="cb2-13"><a href="#cb2-13"></a>  </span>
+<span id="cb2-14"><a href="#cb2-14"></a>  result <span class="op">=</span> greater_than_zero(<span class="op">-</span><span class="dv">3</span>)</span>
+<span id="cb2-15"><a href="#cb2-15"></a>  <span class="bu">print</span>(result)</span>
+<span id="cb2-16"><a href="#cb2-16"></a>  </span>
+<span id="cb2-17"><a href="#cb2-17"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Greater than zero
+Not greater than zero
+Not greater than zero</code></pre>
+</div>
 </div>
 </section>
-<section id="midterm-3---question-5-solution" class="slide level2">
-<h2>Midterm 3 - question 5 solution</h2>
+<section id="write-a-function" class="slide level2">
+<h2>Write a function</h2>
+<p>Write a Python function that does the following:</p>
+<ol type="1">
+<li>Its name is <code>absolute</code></li>
+<li>It takes one numeric argument (integer or float) <code>n</code></li>
+<li>It returns the absolute value of <code>n</code>: if <code>n</code> is positive, it results <code>n</code>, if <code>n</code> is negative, it returns <code>n * -1</code></li>
+</ol>
+<p>Test cases:</p>
 <div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">def</span> matches(s1, s2):</span>
-<span id="cb3-2"><a href="#cb3-2"></a>    result <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>    <span class="cf">for</span> index <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(s1)):</span>
-<span id="cb3-4"><a href="#cb3-4"></a>        <span class="cf">if</span> s1[index] <span class="op">==</span> s2[index]:</span>
-<span id="cb3-5"><a href="#cb3-5"></a>            result <span class="op">+=</span> s1[index]</span>
-<span id="cb3-6"><a href="#cb3-6"></a>        <span class="cf">else</span>:</span>
-<span id="cb3-7"><a href="#cb3-7"></a>            result <span class="op">+=</span> <span class="st">"*"</span></span>
-<span id="cb3-8"><a href="#cb3-8"></a>    <span class="cf">return</span> result</span>
-<span id="cb3-9"><a href="#cb3-9"></a></span>
-<span id="cb3-10"><a href="#cb3-10"></a><span class="kw">def</span> main():</span>
-<span id="cb3-11"><a href="#cb3-11"></a>  <span class="cf">assert</span> matches(<span class="st">"abc"</span>, <span class="st">"abc"</span>) <span class="op">==</span> <span class="st">"abc"</span></span>
-<span id="cb3-12"><a href="#cb3-12"></a>  <span class="cf">assert</span> matches(<span class="st">"abc"</span>, <span class="st">"xyz"</span>) <span class="op">==</span> <span class="st">"***"</span></span>
-<span id="cb3-13"><a href="#cb3-13"></a>  <span class="cf">assert</span> matches(<span class="st">"abcd"</span>, <span class="st">"cbxe"</span>) <span class="op">==</span> <span class="st">"*b**"</span></span>
-<span id="cb3-14"><a href="#cb3-14"></a>  <span class="cf">assert</span> matches(<span class="st">""</span>, <span class="st">""</span>) <span class="op">==</span> <span class="st">""</span></span>
-<span id="cb3-15"><a href="#cb3-15"></a></span>
-<span id="cb3-16"><a href="#cb3-16"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="bu">print</span>( absolute(<span class="dv">4</span>) ) <span class="co"># 4</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="bu">print</span>( absolute(<span class="op">-</span><span class="dv">4</span>) ) <span class="co"># 4</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="bu">print</span>( absolute(<span class="dv">0</span>) ) <span class="co"># 0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="midterm-3---question-6" class="slide level2">
-<h2>Midterm 3 - question 6</h2>
-<p>Given code for bubble sort:</p>
+<section id="write-a-function-1" class="slide level2">
+<h2>Write a function</h2>
 <div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">def</span> bubble_sort(items):</span>
-<span id="cb4-2"><a href="#cb4-2"></a>  swapped <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>  end <span class="op">=</span> <span class="bu">len</span>(items)<span class="op">-</span><span class="dv">1</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a>  <span class="cf">while</span> <span class="kw">not</span> swapped:</span>
-<span id="cb4-5"><a href="#cb4-5"></a>    swapped <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(end):</span>
-<span id="cb4-7"><a href="#cb4-7"></a>      <span class="cf">if</span> items[i] <span class="op">&gt;</span> items[i<span class="op">+</span><span class="dv">1</span>]:</span>
-<span id="cb4-8"><a href="#cb4-8"></a>        items[i], items[i<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> items[i<span class="op">+</span><span class="dv">1</span>], items[i]</span>
-<span id="cb4-9"><a href="#cb4-9"></a>        swapped <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a>    end <span class="op">-=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">def</span> absolute(n):</span>
+<span id="cb5-2"><a href="#cb5-2"></a>  <span class="cf">if</span> n <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb5-3"><a href="#cb5-3"></a>    <span class="cf">return</span> n</span>
+<span id="cb5-4"><a href="#cb5-4"></a>  <span class="cf">else</span>:</span>
+<span id="cb5-5"><a href="#cb5-5"></a>    <span class="cf">return</span> <span class="op">-</span>n</span>
+<span id="cb5-6"><a href="#cb5-6"></a>  </span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="kw">def</span> main():</span>
+<span id="cb5-8"><a href="#cb5-8"></a>  <span class="bu">print</span>( absolute(<span class="dv">4</span>) )</span>
+<span id="cb5-9"><a href="#cb5-9"></a>  <span class="bu">print</span>( absolute(<span class="op">-</span><span class="dv">4</span>) )</span>
+<span id="cb5-10"><a href="#cb5-10"></a>  <span class="bu">print</span>( absolute(<span class="dv">0</span>) )</span>
+<span id="cb5-11"><a href="#cb5-11"></a>  </span>
+<span id="cb5-12"><a href="#cb5-12"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>4
+4
+0</code></pre>
 </div>
-<p>How many sweeps and swaps of <code>[30, 13, 5, 1, 14]</code>?</p>
+</div>
 </section>
-<section id="midterm-3---question-6-solution" class="slide level2">
-<h2>Midterm 3 - question 6 solution</h2>
-<p>1st sweep:</p>
+<section id="write-a-function-2" class="slide level2">
+<h2>Write a function</h2>
+<ol type="1">
+<li>Function name is <code>age_milestones</code> and it takes one integer argument: <code>age</code></li>
+<li>It returns:
 <ul>
-<li><p>1st swap: <code>[13, 30, 5, 1, 14]</code></p></li>
-<li><p>2nd swap: <code>[13, 5, 30, 1, 14]</code></p></li>
-<li><p>3rd swap: <code>[13, 5, 1, 30, 14]</code></p></li>
-<li><p>4th swap: <code>[13, 5, 1, 14, 30]</code></p></li>
-</ul>
-<p>2nd sweep:</p>
-<ul>
-<li><p>5th swap: <code>[5, 13, 1, 14, 30]</code></p></li>
-<li><p>6th swap: <code>[5, 1, 13, 14, 30]</code></p></li>
-</ul>
-</section>
-<section id="midterm-3---question-6-solution-continued" class="slide level2">
-<h2>Midterm 3 - question 6 solution (continued)</h2>
-<p>3rd sweep:</p>
-<ul>
-<li>7th swap: <code>[1, 5, 13, 14, 30]</code></li>
-</ul>
-<p>4th sweep:</p>
-<p>List already sorted, no more swaps</p>
-<p><br></p>
-<p><strong>4 sweeps and 7 swaps</strong></p>
-</section>
-<section id="midterm-3---question-8-bonus" class="slide level2">
-<h2>Midterm 3 - question 8 (Bonus)</h2>
-<p>Write python code (multiple functions) that given a list of lists of integers as argument, it mutates the list by removing all <strong>prime numbers</strong> from each sublist.</p>
+<li>‘You may apply to join the military’ if <code>age</code> is greater or equal to <code>18</code></li>
+<li>‘You may drink’ if <code>age</code> is greater or equal to <code>21</code></li>
+<li>‘You may run for president’ if <code>age</code> is greater or equal to <code>35</code></li>
+</ul></li>
+</ol>
 <div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
-<span id="cb5-2"><a href="#cb5-2"></a>  original_list <span class="op">=</span> [[<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">20</span>], [<span class="dv">17</span>, <span class="dv">19</span>, <span class="dv">23</span>]]</span>
-<span id="cb5-3"><a href="#cb5-3"></a>  remove_primes(original_list)</span>
-<span id="cb5-4"><a href="#cb5-4"></a>  <span class="cf">assert</span> original_list <span class="op">==</span> [[<span class="dv">4</span>, <span class="dv">4</span>], [<span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">20</span>], []]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="bu">print</span>( age_milestones(<span class="dv">18</span>) ) <span class="co"># You may apply to join the military.</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="bu">print</span>( age_milestones(<span class="dv">30</span>) ) <span class="co"># You may apply to join the military. You may drink.</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="bu">print</span>( age_milestones(<span class="dv">0</span>) ) <span class="co"># </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="midterm-3---question-8-solution" class="slide level2">
-<h2>Midterm 3 - question 8 solution</h2>
+<section id="age-milestones" class="slide level2">
+<h2>Age milestones</h2>
 <div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">def</span> is_prime(number):</span>
-<span id="cb6-2"><a href="#cb6-2"></a>    <span class="cf">if</span> number <span class="op">==</span> <span class="dv">1</span>:</span>
-<span id="cb6-3"><a href="#cb6-3"></a>         <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a>    <span class="co"># If num is divisible by any number between 2 and n / 2, it is not prime</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a>    <span class="cf">for</span> denominator <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="bu">int</span>(number<span class="op">/</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span>)):</span>
-<span id="cb6-6"><a href="#cb6-6"></a>          <span class="cf">if</span> number <span class="op">%</span> denominator <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb6-7"><a href="#cb6-7"></a>               <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb6-8"><a href="#cb6-8"></a>    <span class="cf">return</span> <span class="va">True</span></span>
-<span id="cb6-9"><a href="#cb6-9"></a></span>
-<span id="cb6-10"><a href="#cb6-10"></a><span class="kw">def</span> remove_primes(lists):</span>
-<span id="cb6-11"><a href="#cb6-11"></a>    <span class="cf">for</span> sublist <span class="kw">in</span> lists:</span>
-<span id="cb6-12"><a href="#cb6-12"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(sublist)<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>):</span>
-<span id="cb6-13"><a href="#cb6-13"></a>            <span class="cf">if</span> is_prime(sublist[i]):</span>
-<span id="cb6-14"><a href="#cb6-14"></a>                sublist.pop(i)</span>
-<span id="cb6-15"><a href="#cb6-15"></a>    <span class="cf">return</span> lists</span>
-<span id="cb6-16"><a href="#cb6-16"></a>  </span>
-<span id="cb6-17"><a href="#cb6-17"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
-<span id="cb6-18"><a href="#cb6-18"></a>  original_list <span class="op">=</span> [[<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">20</span>], [<span class="dv">17</span>, <span class="dv">19</span>, <span class="dv">23</span>]]</span>
-<span id="cb6-19"><a href="#cb6-19"></a>  remove_primes(original_list)</span>
-<span id="cb6-20"><a href="#cb6-20"></a>  <span class="cf">assert</span> original_list <span class="op">==</span> [[<span class="dv">4</span>, <span class="dv">4</span>], [<span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">20</span>], []]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">def</span> age_milestones(age):</span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="co">'''</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="co">  This function prints an informative message based on,</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="co">  a person's age.</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="co">  Args:</span></span>
+<span id="cb8-6"><a href="#cb8-6"></a><span class="co">    age: integer representing a person's age</span></span>
+<span id="cb8-7"><a href="#cb8-7"></a><span class="co">  Returns:</span></span>
+<span id="cb8-8"><a href="#cb8-8"></a><span class="co">    A string with a message to the user</span></span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="co">  '''</span></span>
+<span id="cb8-10"><a href="#cb8-10"></a>  message <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb8-11"><a href="#cb8-11"></a>  <span class="cf">if</span> age <span class="op">&gt;=</span> <span class="dv">18</span>:</span>
+<span id="cb8-12"><a href="#cb8-12"></a>      message <span class="op">+=</span> <span class="st">'You may apply to join the military.'</span></span>
+<span id="cb8-13"><a href="#cb8-13"></a>     </span>
+<span id="cb8-14"><a href="#cb8-14"></a>  <span class="cf">if</span> age <span class="op">&gt;=</span> <span class="dv">21</span>:</span>
+<span id="cb8-15"><a href="#cb8-15"></a>      message <span class="op">+=</span> <span class="st">' You may drink.'</span></span>
+<span id="cb8-16"><a href="#cb8-16"></a>     </span>
+<span id="cb8-17"><a href="#cb8-17"></a>  <span class="cf">if</span> age <span class="op">&gt;=</span> <span class="dv">35</span>:</span>
+<span id="cb8-18"><a href="#cb8-18"></a>      message <span class="op">+=</span> <span class="st">' You may run for president.'</span></span>
+<span id="cb8-19"><a href="#cb8-19"></a>      </span>
+<span id="cb8-20"><a href="#cb8-20"></a>  <span class="cf">return</span> message</span>
+<span id="cb8-21"><a href="#cb8-21"></a>     </span>
+<span id="cb8-22"><a href="#cb8-22"></a><span class="kw">def</span> main():</span>
+<span id="cb8-23"><a href="#cb8-23"></a>  <span class="bu">print</span>( age_milestones(<span class="dv">18</span>) ) <span class="co"># You may apply to join the military.</span></span>
+<span id="cb8-24"><a href="#cb8-24"></a>  <span class="bu">print</span>( age_milestones(<span class="dv">30</span>) ) <span class="co"># You may apply to join the military. You may drink.</span></span>
+<span id="cb8-25"><a href="#cb8-25"></a>  <span class="bu">print</span>( age_milestones(<span class="dv">0</span>) ) <span class="co"># </span></span>
+<span id="cb8-26"><a href="#cb8-26"></a> </span>
+<span id="cb8-27"><a href="#cb8-27"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>You may apply to join the military.
+You may apply to join the military. You may drink.
+</code></pre>
 </div>
+</div>
+</section></section>
+<section>
+<section id="input-validation" class="title-slide slide level1 center">
+<h1>Input validation</h1>
+
+</section>
+<section id="string-methods" class="slide level2">
+<h2>String methods</h2>
+<p>In addition to having built-in <strong>functions</strong> (<code>len()</code>, <code>print()</code>, <code>int()</code>, <code>float()</code>, etc.), Python also has a number of <strong>methods</strong> we will be using in this class.</p>
+<p>Check the <a href="https://docs.python.org/3/library/stdtypes.html#str.isnumeric">documentation</a> for string methods and read what <code>.isnumeric()</code> does.</p>
+</section>
+<section id="validating-numbers" class="slide level2">
+<h2>Validating numbers</h2>
+<ul>
+<li>The <code>input()</code> function always returns a <code>string</code></li>
+<li>We can use the string built-in method <code>.isnumeric()</code> to determine if a string represents an integer</li>
+<li><code>.isnumeric()</code> returns True if all the characters are numeric (0-9)</li>
+</ul>
+<p>Try these out:</p>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>name <span class="op">=</span> <span class="st">"Jimmy42"</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a>name.isnumeric()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>False</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a>age <span class="op">=</span> <span class="dv">37</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>age.isnumeric() <span class="co"># this throws an error</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-a-validation-function" class="slide level2">
+<h2>Write a validation function</h2>
+<p>Write a Python function that does the following:</p>
+<ol type="1">
+<li>Its name is <code>validate_age</code></li>
+<li>It takes a string argument: <code>age</code></li>
+<li>It returns <code>True</code> if <code>age</code> contains only 0-9 digit characters, and <code>False</code> otherwise</li>
+</ol>
+<p>Call this validation in your previous code for age milestones.</p>
+</section>
+<section id="age-milestones-1" class="slide level2">
+<h2>Age milestones</h2>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">def</span> age_milestones(age):</span>
+<span id="cb13-2"><a href="#cb13-2"></a>  <span class="co">'''</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="co">  This function prints an informative message based on,</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a><span class="co">  a person's age.</span></span>
+<span id="cb13-5"><a href="#cb13-5"></a><span class="co">  Args:</span></span>
+<span id="cb13-6"><a href="#cb13-6"></a><span class="co">    age: integer representing a person's age</span></span>
+<span id="cb13-7"><a href="#cb13-7"></a><span class="co">  Returns:</span></span>
+<span id="cb13-8"><a href="#cb13-8"></a><span class="co">    A string with a message to the user</span></span>
+<span id="cb13-9"><a href="#cb13-9"></a><span class="co">  '''</span></span>
+<span id="cb13-10"><a href="#cb13-10"></a>  message <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb13-11"><a href="#cb13-11"></a>  <span class="cf">if</span> age <span class="op">&gt;=</span> <span class="dv">18</span>:</span>
+<span id="cb13-12"><a href="#cb13-12"></a>      message <span class="op">+=</span> <span class="st">'You may apply to join the military'</span></span>
+<span id="cb13-13"><a href="#cb13-13"></a>     </span>
+<span id="cb13-14"><a href="#cb13-14"></a>  <span class="cf">if</span> age <span class="op">&gt;=</span> <span class="dv">21</span>:</span>
+<span id="cb13-15"><a href="#cb13-15"></a>      message <span class="op">+=</span> <span class="st">'You may drink'</span></span>
+<span id="cb13-16"><a href="#cb13-16"></a>     </span>
+<span id="cb13-17"><a href="#cb13-17"></a>  <span class="cf">if</span> age <span class="op">&gt;=</span> <span class="dv">35</span>:</span>
+<span id="cb13-18"><a href="#cb13-18"></a>      message <span class="op">+=</span> <span class="st">'You may run for president'</span></span>
+<span id="cb13-19"><a href="#cb13-19"></a>      </span>
+<span id="cb13-20"><a href="#cb13-20"></a>  <span class="cf">return</span> message</span>
+<span id="cb13-21"><a href="#cb13-21"></a></span>
+<span id="cb13-22"><a href="#cb13-22"></a><span class="kw">def</span> validate_age(age):</span>
+<span id="cb13-23"><a href="#cb13-23"></a>  <span class="cf">return</span> age.isnumeric()</span>
+<span id="cb13-24"><a href="#cb13-24"></a>     </span>
+<span id="cb13-25"><a href="#cb13-25"></a><span class="kw">def</span> main():</span>
+<span id="cb13-26"><a href="#cb13-26"></a>  <span class="co">'''</span></span>
+<span id="cb13-27"><a href="#cb13-27"></a><span class="co">  This functions takes input from the user and calls the</span></span>
+<span id="cb13-28"><a href="#cb13-28"></a><span class="co">  check_age() functiont to print a message</span></span>
+<span id="cb13-29"><a href="#cb13-29"></a><span class="co">  '''</span></span>
+<span id="cb13-30"><a href="#cb13-30"></a>  age <span class="op">=</span> <span class="bu">input</span>(<span class="st">'How old are you?</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb13-31"><a href="#cb13-31"></a>  <span class="cf">if</span> validate_age(age):</span>
+<span id="cb13-32"><a href="#cb13-32"></a>    <span class="bu">print</span>(age_milestones(<span class="bu">int</span>(age)))</span>
+<span id="cb13-33"><a href="#cb13-33"></a>  <span class="cf">else</span>:</span>
+<span id="cb13-34"><a href="#cb13-34"></a>    <span class="bu">print</span>(<span class="st">"Invalid age entered"</span>)</span>
+<span id="cb13-35"><a href="#cb13-35"></a> </span>
+<span id="cb13-36"><a href="#cb13-36"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="quiz-02" class="slide level2">
+<h2>Quiz 02</h2>
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;">
+<a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time
+<div id="clock_block_cb650886c4849ee">
+
+</div>
+</div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async=""></script>
+</center>
+<p>You have 15 minutes to complete. There are 2 problems.</p>
+<ul>
+<li>No need for comments</li>
+<li>No need for a <code>main.py</code></li>
+<li>Just write your function</li>
+</ul>
+<p>Built-in functions you can choose to use: <code>round()</code>, <code>input()</code>, <code>float()</code>, <code>str()</code>, <code>int()</code></p>
 
 <div class="footer footer-default">
 

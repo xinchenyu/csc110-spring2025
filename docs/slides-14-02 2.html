@@ -10,7 +10,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
-  <title>CSc 110 Computer Programming I - final exam review (class slides)</title>
+  <title>CSc 110 Computer Programming I - sorting (class slides)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -389,160 +389,383 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">final exam review (class slides)</h1>
+  <h1 class="title">sorting (class slides)</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
 <section>
-<section id="csc-final-exam-review" class="title-slide slide level1 center">
-<h1>CSC – Final exam review</h1>
+<section id="csc-110-sorting" class="title-slide slide level1 center">
+<h1>CSC 110 – Sorting</h1>
 
 </section>
-<section id="announcements" class="slide level2">
-<h2>Announcements</h2>
+<section id="sorting" class="slide level2">
+<h2>Sorting</h2>
 <ul>
-<li><p>No lecture this Wednesday, me and TAs will be here (Gittings 129b) to answer questions.</p></li>
-<li><p>Final exam will be on this Friday, May 03, 2024 – 6:00pm - 8:00pm in ENR2 N120.</p></li>
-<li><p>Bring your photo ID</p></li>
-<li><p>Last day of office hour is May 1st.</p></li>
+<li>A number of reasons to want sorted data
+<ul>
+<li>For doing binary search!</li>
+<li>Finding a median value</li>
+<li>Finding the min and max</li>
+<li>Others?</li>
+</ul></li>
 </ul>
 </section>
-<section id="attendance" class="slide level2">
-<h2>Attendance</h2>
-<p>Go to gradescope and answer attendance question.</p>
+<section id="sorting-1" class="slide level2">
+<h2>Sorting</h2>
+<ul>
+<li>lists have built-in functionality to rearrange the elements to be in sorted order
+<ul>
+<li><strong>list_var.sort()</strong></li>
+<li><strong>sorted(list_var)</strong></li>
+</ul></li>
+<li>But, someone at some point had to come up with an <strong>algorithm</strong> for this!</li>
+<li>How does sorting work, behind the scenes?</li>
+</ul>
 </section>
-<section id="midterm-3---question-5" class="slide level2">
-<h2>Midterm 3 - question 5</h2>
-<p>Write a function called <code>matches</code> that takes two string arguments, <code>s1</code> and <code>s2</code>, which you may assume have equal length. The function should return a string that is the same length as <code>s1</code> and <code>s2</code>.</p>
-<p>If the corresponding characters in <code>s1</code> and <code>s2</code> are the same, then the corresponding character in the result is that character. If they are different, then the corresponding character in the result is <code>"*"</code>.</p>
+<section id="what-is-a-sorted-list" class="slide level2">
+<h2>What is a sorted list?</h2>
+<ul>
+<li>A <strong>sorting algorithm</strong> is an algorithm that puts elements of a list in a certain order</li>
+<li>However, there are different types of “ordering”
+<ul>
+<li>Ascending numeric order (numbers)</li>
+<li>Descending numeric order (numbers)</li>
+<li>Lexicographic (strings)</li>
+<li>Others…</li>
+</ul></li>
+<li>We will mostly stick with Ascending numeric for the examples in this lecture</li>
+</ul>
+</section>
+<section id="what-is-a-sorted-list-1" class="slide level2">
+<h2>What is a sorted list?</h2>
 <div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="cf">assert</span> matches(<span class="st">"abc"</span>, <span class="st">"abc"</span>) <span class="op">==</span> <span class="st">"abc"</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="cf">assert</span> matches(<span class="st">"abc"</span>, <span class="st">"xyz"</span>) <span class="op">==</span> <span class="st">"***"</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="cf">assert</span> matches(<span class="st">"abcd"</span>, <span class="st">"cbxe"</span>) <span class="op">==</span> <span class="st">"*b**"</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="cf">assert</span> matches(<span class="st">""</span>, <span class="st">""</span>) <span class="op">==</span> <span class="st">""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>items <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">43</span>, <span class="dv">10</span>, <span class="dv">12</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="midterm-3---question-5-wrong-solution" class="slide level2">
-<h2>Midterm 3 - question 5 <span style="color:red">wrong</span> solution</h2>
+<h3 id="not-sorted">Not sorted</h3>
 <div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">def</span> matches(s1, s2):</span>
-<span id="cb2-2"><a href="#cb2-2"></a>    result <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a>    <span class="cf">for</span> char <span class="kw">in</span> s1:</span>
-<span id="cb2-4"><a href="#cb2-4"></a>        <span class="cf">if</span> char <span class="kw">in</span> s2:</span>
-<span id="cb2-5"><a href="#cb2-5"></a>            result <span class="op">+=</span> char</span>
-<span id="cb2-6"><a href="#cb2-6"></a>        <span class="cf">else</span>:</span>
-<span id="cb2-7"><a href="#cb2-7"></a>            result <span class="op">+=</span> <span class="st">"*"</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a>    <span class="cf">return</span> result</span>
-<span id="cb2-9"><a href="#cb2-9"></a></span>
-<span id="cb2-10"><a href="#cb2-10"></a><span class="kw">def</span> main():</span>
-<span id="cb2-11"><a href="#cb2-11"></a>  <span class="cf">assert</span> matches(<span class="st">"abc"</span>, <span class="st">"abc"</span>) <span class="op">==</span> <span class="st">"abc"</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a>  <span class="cf">assert</span> matches(<span class="st">"abc"</span>, <span class="st">"xyz"</span>) <span class="op">==</span> <span class="st">"***"</span></span>
-<span id="cb2-13"><a href="#cb2-13"></a>  <span class="cf">assert</span> matches(<span class="st">"abcd"</span>, <span class="st">"cbxe"</span>) <span class="op">==</span> <span class="st">"*b**"</span> <span class="co"># Will fail this test case</span></span>
-<span id="cb2-14"><a href="#cb2-14"></a>  <span class="cf">assert</span> matches(<span class="st">""</span>, <span class="st">""</span>) <span class="op">==</span> <span class="st">""</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a></span>
-<span id="cb2-16"><a href="#cb2-16"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<pre><code>[5, 10, 20, 6, 7, 9, 43, 10, 12]</code></pre>
 </div>
-</section>
-<section id="midterm-3---question-5-solution" class="slide level2">
-<h2>Midterm 3 - question 5 solution</h2>
+</div>
+<h3 id="sorted">Sorted</h3>
 <div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">def</span> matches(s1, s2):</span>
-<span id="cb3-2"><a href="#cb3-2"></a>    result <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>    <span class="cf">for</span> index <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(s1)):</span>
-<span id="cb3-4"><a href="#cb3-4"></a>        <span class="cf">if</span> s1[index] <span class="op">==</span> s2[index]:</span>
-<span id="cb3-5"><a href="#cb3-5"></a>            result <span class="op">+=</span> s1[index]</span>
-<span id="cb3-6"><a href="#cb3-6"></a>        <span class="cf">else</span>:</span>
-<span id="cb3-7"><a href="#cb3-7"></a>            result <span class="op">+=</span> <span class="st">"*"</span></span>
-<span id="cb3-8"><a href="#cb3-8"></a>    <span class="cf">return</span> result</span>
-<span id="cb3-9"><a href="#cb3-9"></a></span>
-<span id="cb3-10"><a href="#cb3-10"></a><span class="kw">def</span> main():</span>
-<span id="cb3-11"><a href="#cb3-11"></a>  <span class="cf">assert</span> matches(<span class="st">"abc"</span>, <span class="st">"abc"</span>) <span class="op">==</span> <span class="st">"abc"</span></span>
-<span id="cb3-12"><a href="#cb3-12"></a>  <span class="cf">assert</span> matches(<span class="st">"abc"</span>, <span class="st">"xyz"</span>) <span class="op">==</span> <span class="st">"***"</span></span>
-<span id="cb3-13"><a href="#cb3-13"></a>  <span class="cf">assert</span> matches(<span class="st">"abcd"</span>, <span class="st">"cbxe"</span>) <span class="op">==</span> <span class="st">"*b**"</span></span>
-<span id="cb3-14"><a href="#cb3-14"></a>  <span class="cf">assert</span> matches(<span class="st">""</span>, <span class="st">""</span>) <span class="op">==</span> <span class="st">""</span></span>
-<span id="cb3-15"><a href="#cb3-15"></a></span>
-<span id="cb3-16"><a href="#cb3-16"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>[5, 6, 7, 9, 10, 10, 12, 20, 43]</code></pre>
+</div>
 </div>
 </section>
-<section id="midterm-3---question-6" class="slide level2">
-<h2>Midterm 3 - question 6</h2>
-<p>Given code for bubble sort:</p>
+<section id="discuss" class="slide level2">
+<h2>Discuss</h2>
+<p>Come up with a sorting algorithm</p>
+<ul>
+<li><p>Discuss ideas for how to sort numbers</p></li>
+<li><p>Depict your algorithm with drawings/diagrams or with pseudocode</p></li>
+<li><p>Can’t use the <strong>.sort()</strong> method</p></li>
+</ul>
+</section>
+<section id="in-place-and-out-of-place" class="slide level2">
+<h2>In-place and out-of-place</h2>
+<ul>
+<li><p><strong>In-place sorting:</strong> does not require a secondary data structure</p></li>
+<li><p><strong>Out-of-place sorting:</strong> may require a secondary data structure</p></li>
+</ul>
+</section>
+<section id="selection-sort" class="slide level2">
+<h2>Selection sort</h2>
+<p><strong>Selection sort is a very simple sorting algorithm</strong></p>
+<ol type="1">
+<li><p>Scan the list and find the smallest element</p></li>
+<li><p>Swap this element with the beginning element</p></li>
+<li><p>Continue these steps for the remaining list, not including the element just swapped</p></li>
+<li><p>Repeat</p></li>
+</ol>
+</section>
+<section id="selection-sort-1" class="slide level2">
+<h2>Selection sort</h2>
+<ul>
+<li><p>Visualizing sorting algorithms with graphics can give one a better understanding</p></li>
+<li><p><a href="https://visualgo.net/en/sorting" class="uri">https://visualgo.net/en/sorting</a></p></li>
+</ul>
+</section>
+<section id="write-selection-sort---step-1" class="slide level2">
+<h2>Write selection sort - step 1</h2>
+<ol type="1">
+<li>Function name is <code>find_min_index</code></li>
+<li>It takes a list of numbers as argument</li>
+<li>It iterates over the list, scanning the list to find the smallest number</li>
+<li>Return the index of the smallest number</li>
+</ol>
 <div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">def</span> bubble_sort(items):</span>
-<span id="cb4-2"><a href="#cb4-2"></a>  swapped <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>  end <span class="op">=</span> <span class="bu">len</span>(items)<span class="op">-</span><span class="dv">1</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a>  <span class="cf">while</span> <span class="kw">not</span> swapped:</span>
-<span id="cb4-5"><a href="#cb4-5"></a>    swapped <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(end):</span>
-<span id="cb4-7"><a href="#cb4-7"></a>      <span class="cf">if</span> items[i] <span class="op">&gt;</span> items[i<span class="op">+</span><span class="dv">1</span>]:</span>
-<span id="cb4-8"><a href="#cb4-8"></a>        items[i], items[i<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> items[i<span class="op">+</span><span class="dv">1</span>], items[i]</span>
-<span id="cb4-9"><a href="#cb4-9"></a>        swapped <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a>    end <span class="op">-=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="cf">assert</span> find_min_index([]) <span class="op">==</span> <span class="va">None</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="cf">assert</span> find_min_index([<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">1</span>, <span class="dv">20</span>, <span class="dv">7</span>, <span class="dv">3</span>, <span class="dv">9</span>]) <span class="op">==</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>How many sweeps and swaps of <code>[30, 13, 5, 1, 14]</code>?</p>
 </section>
-<section id="midterm-3---question-6-solution" class="slide level2">
-<h2>Midterm 3 - question 6 solution</h2>
-<p>1st sweep:</p>
-<ul>
-<li><p>1st swap: <code>[13, 30, 5, 1, 14]</code></p></li>
-<li><p>2nd swap: <code>[13, 5, 30, 1, 14]</code></p></li>
-<li><p>3rd swap: <code>[13, 5, 1, 30, 14]</code></p></li>
-<li><p>4th swap: <code>[13, 5, 1, 14, 30]</code></p></li>
-</ul>
-<p>2nd sweep:</p>
-<ul>
-<li><p>5th swap: <code>[5, 13, 1, 14, 30]</code></p></li>
-<li><p>6th swap: <code>[5, 1, 13, 14, 30]</code></p></li>
-</ul>
-</section>
-<section id="midterm-3---question-6-solution-continued" class="slide level2">
-<h2>Midterm 3 - question 6 solution (continued)</h2>
-<p>3rd sweep:</p>
-<ul>
-<li>7th swap: <code>[1, 5, 13, 14, 30]</code></li>
-</ul>
-<p>4th sweep:</p>
-<p>List already sorted, no more swaps</p>
-<p><br></p>
-<p><strong>4 sweeps and 7 swaps</strong></p>
-</section>
-<section id="midterm-3---question-8-bonus" class="slide level2">
-<h2>Midterm 3 - question 8 (Bonus)</h2>
-<p>Write python code (multiple functions) that given a list of lists of integers as argument, it mutates the list by removing all <strong>prime numbers</strong> from each sublist.</p>
+<section id="write-selection-sort-step-1-solution" class="slide level2">
+<h2>Write selection sort – step 1 solution</h2>
 <div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
-<span id="cb5-2"><a href="#cb5-2"></a>  original_list <span class="op">=</span> [[<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">20</span>], [<span class="dv">17</span>, <span class="dv">19</span>, <span class="dv">23</span>]]</span>
-<span id="cb5-3"><a href="#cb5-3"></a>  remove_primes(original_list)</span>
-<span id="cb5-4"><a href="#cb5-4"></a>  <span class="cf">assert</span> original_list <span class="op">==</span> [[<span class="dv">4</span>, <span class="dv">4</span>], [<span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">20</span>], []]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">def</span> find_min_index(items):</span>
+<span id="cb5-2"><a href="#cb5-2"></a>  min_index <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(items)):</span>
+<span id="cb5-4"><a href="#cb5-4"></a>    <span class="cf">if</span> min_index <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span> items[min_index] <span class="op">&gt;</span> items[i]:</span>
+<span id="cb5-5"><a href="#cb5-5"></a>      min_index <span class="op">=</span> i</span>
+<span id="cb5-6"><a href="#cb5-6"></a>  <span class="cf">return</span> min_index</span>
+<span id="cb5-7"><a href="#cb5-7"></a>    </span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="kw">def</span> main():</span>
+<span id="cb5-9"><a href="#cb5-9"></a>  test_list <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">1</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">43</span>, <span class="dv">10</span>, <span class="dv">12</span>]</span>
+<span id="cb5-10"><a href="#cb5-10"></a>  <span class="bu">print</span>(find_min_index(test_list)) <span class="co"># 3</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a>  </span>
+<span id="cb5-12"><a href="#cb5-12"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>3</code></pre>
+</div>
 </div>
 </section>
-<section id="midterm-3---question-8-solution" class="slide level2">
-<h2>Midterm 3 - question 8 solution</h2>
+<section id="write-selection-sort---step-1-continue" class="slide level2">
+<h2>Write selection sort - step 1 continue</h2>
+<ol type="1">
+<li>Call your <code>find_min_index</code> function</li>
+<li>Find the smallest number starting from a specified index</li>
+<li>Return the index of that smallest number</li>
+</ol>
 <div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">def</span> is_prime(number):</span>
-<span id="cb6-2"><a href="#cb6-2"></a>    <span class="cf">if</span> number <span class="op">==</span> <span class="dv">1</span>:</span>
-<span id="cb6-3"><a href="#cb6-3"></a>         <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a>    <span class="co"># If num is divisible by any number between 2 and n / 2, it is not prime</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a>    <span class="cf">for</span> denominator <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="bu">int</span>(number<span class="op">/</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span>)):</span>
-<span id="cb6-6"><a href="#cb6-6"></a>          <span class="cf">if</span> number <span class="op">%</span> denominator <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb6-7"><a href="#cb6-7"></a>               <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb6-8"><a href="#cb6-8"></a>    <span class="cf">return</span> <span class="va">True</span></span>
-<span id="cb6-9"><a href="#cb6-9"></a></span>
-<span id="cb6-10"><a href="#cb6-10"></a><span class="kw">def</span> remove_primes(lists):</span>
-<span id="cb6-11"><a href="#cb6-11"></a>    <span class="cf">for</span> sublist <span class="kw">in</span> lists:</span>
-<span id="cb6-12"><a href="#cb6-12"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(sublist)<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>):</span>
-<span id="cb6-13"><a href="#cb6-13"></a>            <span class="cf">if</span> is_prime(sublist[i]):</span>
-<span id="cb6-14"><a href="#cb6-14"></a>                sublist.pop(i)</span>
-<span id="cb6-15"><a href="#cb6-15"></a>    <span class="cf">return</span> lists</span>
-<span id="cb6-16"><a href="#cb6-16"></a>  </span>
-<span id="cb6-17"><a href="#cb6-17"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
-<span id="cb6-18"><a href="#cb6-18"></a>  original_list <span class="op">=</span> [[<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">20</span>], [<span class="dv">17</span>, <span class="dv">19</span>, <span class="dv">23</span>]]</span>
-<span id="cb6-19"><a href="#cb6-19"></a>  remove_primes(original_list)</span>
-<span id="cb6-20"><a href="#cb6-20"></a>  <span class="cf">assert</span> original_list <span class="op">==</span> [[<span class="dv">4</span>, <span class="dv">4</span>], [<span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">20</span>], []]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>begin_index <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>items <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">1</span>, <span class="dv">20</span>, <span class="dv">7</span>, <span class="dv">3</span>, <span class="dv">9</span>]</span>
+<span id="cb7-3"><a href="#cb7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="bu">print</span>(items[begin_index:]) <span class="co"># [20, 7, 3, 9]</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a></span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="bu">print</span>(find_min_index(items[begin_index:])) <span class="co"># 2</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a><span class="bu">print</span>(find_min_index(items[begin_index:]) <span class="op">+</span> begin_index) <span class="co"># 5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="write-selection-sort---step-2" class="slide level2">
+<h2>Write selection sort - step 2</h2>
+<ol type="1">
+<li>Function name is <code>selection_sort</code></li>
+<li>It takes a list as argument</li>
+<li>It <strong>mutates</strong> the list argument, sorting it</li>
+<li>It iterates over the list, call <code>find_min_index</code> to find the index of smallest element</li>
+<li>It swaps the smallest element found in each iteration with the beginning element</li>
+</ol>
+</section>
+<section id="write-selection-sort-solution" class="slide level2">
+<h2>Write selection sort – solution</h2>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">def</span> find_min_index(items):</span>
+<span id="cb8-2"><a href="#cb8-2"></a>  min_index <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(items)):</span>
+<span id="cb8-4"><a href="#cb8-4"></a>    <span class="cf">if</span> min_index <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span> items[min_index] <span class="op">&gt;</span> items[i]:</span>
+<span id="cb8-5"><a href="#cb8-5"></a>      min_index <span class="op">=</span> i</span>
+<span id="cb8-6"><a href="#cb8-6"></a>  <span class="cf">return</span> min_index</span>
+<span id="cb8-7"><a href="#cb8-7"></a></span>
+<span id="cb8-8"><a href="#cb8-8"></a><span class="kw">def</span> selection_sort(items):</span>
+<span id="cb8-9"><a href="#cb8-9"></a>  begin_index <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb8-10"><a href="#cb8-10"></a>  <span class="cf">while</span> begin_index <span class="op">&lt;</span> <span class="bu">len</span>(items)<span class="op">-</span><span class="dv">1</span>:</span>
+<span id="cb8-11"><a href="#cb8-11"></a>    <span class="co"># get min of sublist, add begin_index to shift it</span></span>
+<span id="cb8-12"><a href="#cb8-12"></a>    min_index <span class="op">=</span> find_min_index(items[begin_index:]) <span class="op">+</span> begin_index</span>
+<span id="cb8-13"><a href="#cb8-13"></a>    items[begin_index], items[min_index] <span class="op">=</span> items[min_index], items[begin_index]</span>
+<span id="cb8-14"><a href="#cb8-14"></a>    begin_index <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb8-15"><a href="#cb8-15"></a>    </span>
+<span id="cb8-16"><a href="#cb8-16"></a><span class="kw">def</span> main():</span>
+<span id="cb8-17"><a href="#cb8-17"></a>  test_list <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">43</span>, <span class="dv">10</span>, <span class="dv">12</span>]</span>
+<span id="cb8-18"><a href="#cb8-18"></a>  selection_sort(test_list)</span>
+<span id="cb8-19"><a href="#cb8-19"></a>  <span class="bu">print</span>(test_list)</span>
+<span id="cb8-20"><a href="#cb8-20"></a>  </span>
+<span id="cb8-21"><a href="#cb8-21"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[5, 6, 7, 9, 10, 10, 12, 20, 43]</code></pre>
+</div>
+</div>
+</section>
+<section id="how-many-total-sweeps-and-swaps-to-sort-this-list" class="slide level2">
+<h2>How many total sweeps and swaps to sort this list?</h2>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>numbers <span class="op">=</span> [ <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">4</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="how-many-total-sweeps-and-swaps-to-sort-this-list-1" class="slide level2">
+<h2>How many total sweeps and swaps to sort this list?</h2>
+<p>[3, 1, 7, 2, 4] sweep</p>
+<p>[1, 3, 7, 2, 4] swap and sweep</p>
+<p>[1, 2, 7, 3, 4] swap and sweep</p>
+<p>[1, 2, 3, 7, 4] swap and sweep</p>
+<p>[1, 2, 3, 4, 7] swap</p>
+<p>4 sweeps</p>
+<p>4 swaps (worst case scenario)</p>
+</section>
+<section id="how-many-total-sweeps-and-swaps-to-sort-this-list-2" class="slide level2">
+<h2>How many total sweeps and swaps to sort this list?</h2>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>numbers <span class="op">=</span> [ <span class="dv">3</span>, <span class="dv">0</span>, <span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">8</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section>
+<section>
+<section id="attendance" class="title-slide slide level1 center">
+<h1>Attendance</h1>
+<p>Go to gradescope and answer today’s attendance question</p>
+</section>
+<section id="how-many-total-sweeps-and-swaps-to-sort-this-list-3" class="slide level2">
+<h2>How many total sweeps and swaps to sort this list?</h2>
+<p>[ 3, 0, 7, 2, 4, 8 ] sweep</p>
+<p>[ 0, 3, 7, 2, 4, 8] swap and sweep</p>
+<p>[ 0, 2, 7, 3, 4, 8 ] swap and sweep</p>
+<p>[ 0, 2, 3, 7, 4, 8 ] swap and sweep</p>
+<p>[ 0, 2, 3, 4, 7, 8 ] swap and sweep</p>
+<p>5 sweeps, 4 swaps</p>
+</section>
+<section id="bubble-sort" class="slide level2">
+<h2>Bubble sort</h2>
+<ul>
+<li><p><strong>Bubble Sort:</strong> another sorting algorithm</p>
+<ol type="1">
+<li><p>Scan through each element in the list, comparing the current element with the next one</p></li>
+<li><p>If the next one is smaller, swap the elements</p></li>
+<li><p>Continue these iterations until the whole list is sorted</p></li>
+</ol></li>
+<li><p>This causes the large elements to “bubble up” to the top</p></li>
+</ul>
+</section>
+<section id="write-bubble-sort---step-1" class="slide level2">
+<h2>Write bubble sort - step 1</h2>
+<ol type="1">
+<li>Function name is <code>single_sweep_swap</code></li>
+<li>It takes a list as argument</li>
+<li>It <strong>mutates</strong> the list, sorting it</li>
+<li>It iterates over the list, comparing each element with the next one, if the next one is smaller, swap elements</li>
+<li>It sweeps the list only once</li>
+</ol>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="cf">assert</span> single_sweep_swap([<span class="dv">8</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">1</span>]) <span class="op">==</span> [<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">1</span>, <span class="dv">8</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-bubble-sort-step-1-solution" class="slide level2">
+<h2>Write bubble sort – step 1 solution</h2>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">def</span> single_sweep_swap(numbers):</span>
+<span id="cb13-2"><a href="#cb13-2"></a>    end <span class="op">=</span> <span class="bu">len</span>(numbers) <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(end):</span>
+<span id="cb13-4"><a href="#cb13-4"></a>        <span class="cf">if</span> numbers[i] <span class="op">&gt;</span> numbers[i<span class="op">+</span><span class="dv">1</span>]:</span>
+<span id="cb13-5"><a href="#cb13-5"></a>            numbers[i], numbers[i<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> numbers[i<span class="op">+</span><span class="dv">1</span>], numbers[i]</span>
+<span id="cb13-6"><a href="#cb13-6"></a>    <span class="cf">return</span> numbers</span>
+<span id="cb13-7"><a href="#cb13-7"></a></span>
+<span id="cb13-8"><a href="#cb13-8"></a><span class="kw">def</span> main():</span>
+<span id="cb13-9"><a href="#cb13-9"></a>    <span class="cf">assert</span> single_sweep_swap([<span class="dv">8</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">1</span>]) <span class="op">==</span> [<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">1</span>, <span class="dv">8</span>]</span>
+<span id="cb13-10"><a href="#cb13-10"></a>    <span class="cf">assert</span> single_sweep_swap([<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">1</span>, <span class="dv">9</span>]) <span class="op">==</span> [<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">1</span>, <span class="dv">7</span>, <span class="dv">9</span>]</span>
+<span id="cb13-11"><a href="#cb13-11"></a>    </span>
+<span id="cb13-12"><a href="#cb13-12"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-bubble-sort---step-2" class="slide level2">
+<h2>Write bubble sort - step 2</h2>
+<ol type="1">
+<li>Function name is <code>bubble_sort</code></li>
+<li>It sweeps the list, comparing elements</li>
+<li>If it is sorted, return the list. Otherwise, swap elements</li>
+<li>It sweeps the list in a iteration. The <code>end</code> starts at <code>len(items)-1</code></li>
+<li>In each iteration, subtract 1 from the <code>end</code> index</li>
+</ol>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="cf">assert</span> bubble_sort([<span class="dv">8</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">1</span>]) <span class="op">==</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">8</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-bubble-sort-solution" class="slide level2">
+<h2>Write bubble sort – solution</h2>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw">def</span> bubble_sort(items):</span>
+<span id="cb15-2"><a href="#cb15-2"></a>  is_sorted <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a>  end <span class="op">=</span> <span class="bu">len</span>(items)<span class="op">-</span><span class="dv">1</span></span>
+<span id="cb15-4"><a href="#cb15-4"></a>  <span class="cf">while</span> <span class="kw">not</span> is_sorted:</span>
+<span id="cb15-5"><a href="#cb15-5"></a>    is_sorted <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb15-6"><a href="#cb15-6"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(end):</span>
+<span id="cb15-7"><a href="#cb15-7"></a>      <span class="cf">if</span> items[i] <span class="op">&gt;</span> items[i<span class="op">+</span><span class="dv">1</span>]:</span>
+<span id="cb15-8"><a href="#cb15-8"></a>        items[i], items[i<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> items[i<span class="op">+</span><span class="dv">1</span>], items[i]</span>
+<span id="cb15-9"><a href="#cb15-9"></a>        is_sorted <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb15-10"><a href="#cb15-10"></a>    end <span class="op">-=</span> <span class="dv">1</span></span>
+<span id="cb15-11"><a href="#cb15-11"></a>      </span>
+<span id="cb15-12"><a href="#cb15-12"></a><span class="kw">def</span> main():</span>
+<span id="cb15-13"><a href="#cb15-13"></a>  test_list <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">43</span>, <span class="dv">10</span>, <span class="dv">12</span>]</span>
+<span id="cb15-14"><a href="#cb15-14"></a>  bubble_sort(test_list)</span>
+<span id="cb15-15"><a href="#cb15-15"></a>  <span class="bu">print</span>(test_list)</span>
+<span id="cb15-16"><a href="#cb15-16"></a>  </span>
+<span id="cb15-17"><a href="#cb15-17"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[5, 6, 7, 9, 10, 10, 12, 20, 43]</code></pre>
+</div>
+</div>
+</section>
+<section id="how-many-total-sweeps-and-swaps-to-sort-this-list-4" class="slide level2">
+<h2>How many total sweeps and swaps to sort this list?</h2>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a>numbers <span class="op">=</span> [ <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">4</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="how-many-total-sweeps-and-swaps-to-sort-this-list-5" class="slide level2">
+<h2>How many total sweeps and swaps to sort this list?</h2>
+<blockquote>
+<p>[ 3, 1, 7, 2, 4 ] first sweep</p>
+</blockquote>
+<p>[ 1, 3, 7, 2, 4 ] swap</p>
+<p>[ 1, 3, 2, 7, 4 ] swap</p>
+<p>[ 1, 3, 2, 4, 7 ] swap</p>
+<blockquote>
+<p>[ 1, 3, 2, 4, 7 ] second sweep</p>
+</blockquote>
+<p>[ 1, 2, 3, 4, 7 ] swap</p>
+<blockquote>
+<p>[ 1, 2, 3, 4, 7 ] third sweep</p>
+</blockquote>
+</section>
+<section id="how-many-total-sweeps-and-swaps" class="slide level2">
+<h2>How many total sweeps and swaps?</h2>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a>numbers <span class="op">=</span> [ <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">5</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section>
+<section>
+<section id="attendance-1" class="title-slide slide level1 center">
+<h1>Attendance</h1>
+<p>Go to gradescope and answer today’s attendance question</p>
+</section>
+<section id="how-many-sweeps-swaps-part-1" class="slide level2">
+<h2>How many sweeps, swaps? (part 1)</h2>
+<blockquote>
+<p>[ 3, 1, 7, 2, 4, 8, 5 ] first sweep</p>
+</blockquote>
+<p>[ 1, 3, 7, 2, 4, 8, 5 ] swap</p>
+<p>[ 1, 3, 2, 7, 4, 8, 5 ] swap</p>
+<p>[ 1, 3, 2, 4, 7, 8, 5 ] swap</p>
+<p>[ 1, 3, 2, 4, 7, 5, 8 ] swap</p>
+</section>
+<section id="how-many-sweeps-swaps-part-2" class="slide level2">
+<h2>How many sweeps, swaps? (part 2)</h2>
+<blockquote>
+<p>[ 1, 3, 2, 4, 7, 5, 8 ] second sweep</p>
+</blockquote>
+<p>[ 1, 2, 3, 4, 7, 5, 8 ] swap</p>
+<p>[ 1, 2, 3, 4, 5, 7, 8 ] swap</p>
+<blockquote>
+<p>[ 1, 2, 3, 4, 5, 7, 8 ] third sweep</p>
+</blockquote>
+</section>
+<section id="lots-of-algorithms" class="slide level2">
+<h2>Lots of algorithms</h2>
+<ul>
+<li><p>There are many sorting algorithms</p>
+<ul>
+<li><p><strong>Bogo sort</strong></p></li>
+<li><p><strong>Selection sort</strong></p></li>
+<li><p><strong>Bubble sort</strong></p></li>
+<li><p><strong>Insertion sort</strong></p></li>
+<li><p><strong>Merge sort</strong></p></li>
+<li><p><strong>Quick sort</strong></p></li>
+<li><p>...more...</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="visualization" class="slide level2">
+<h2>Visualization</h2>
+<p><a href="https://www.youtube.com/watch?v=kPRA0W1kECg" class="uri">https://www.youtube.com/watch?v=kPRA0W1kECg</a></p>
 
 <div class="footer footer-default">
 

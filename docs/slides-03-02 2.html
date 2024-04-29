@@ -10,7 +10,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
-  <title>CSc 110 Computer Programming I - final exam review (class slides)</title>
+  <title>CSc 110 Computer Programming I - Built-in Python Functions (class slides)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -389,160 +389,160 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">final exam review (class slides)</h1>
+  <h1 class="title">Built-in Python Functions (class slides)</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
 <section>
-<section id="csc-final-exam-review" class="title-slide slide level1 center">
-<h1>CSC – Final exam review</h1>
+<section id="csc-110-python-functions" class="title-slide slide level1 center">
+<h1>CSC 110 Python Functions</h1>
 
+</section>
+<section id="write-a-function" class="slide level2">
+<h2>Write a function</h2>
+<p>Write a Python function that does the following:</p>
+<ol type="1">
+<li>Its name is <code>greeting</code></li>
+<li>It takes two arguments, <code>first_name</code> and <code>last_name</code></li>
+<li>It returns a string with a greeting using <code>first_name</code> and <code>last_name</code></li>
+</ol>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">print</span>( greeting(<span class="st">"Xinchen"</span>, <span class="st">"Yu"</span>) ) <span class="co"># Hello, Xinchen Yu!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="reading-the-documentation" class="slide level2">
+<h2>Reading the documentation</h2>
+<p>Access the <a href="https://docs.python.org/3.11/library/functions.html#built-in-functions">Python 3.11 documentation</a> and read the definitions for <code>print()</code>, <code>round()</code>, <code>input()</code>, <code>len()</code>, <code>int()</code>, and <code>str()</code>.</p>
+<p>With your table members, write a short definition for each of the built-in functions above on a white board.</p>
+</section>
+<section id="len-function" class="slide level2">
+<h2><code>len()</code> function</h2>
+<ul>
+<li>The <code>len()</code> function can be used with many types – we will be using it with <code>string</code> for now</li>
+<li>It returns the number of characters in a string</li>
+</ul>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>character_count <span class="op">=</span> <span class="bu">len</span>(<span class="st">"Xinchen"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="bu">print</span>(character_count)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>7</code></pre>
+</div>
+</div>
+</section>
+<section id="write-a-function-1" class="slide level2">
+<h2>Write a function</h2>
+<p>Write a Python function that does the following:</p>
+<ol type="1">
+<li>Its name is <code>count_characters</code></li>
+<li>It takes a string argument, <code>name</code></li>
+<li>It returns the total number of characters in <code>name</code></li>
+</ol>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="bu">print</span>( count_characters(<span class="st">"Xinchen"</span>) ) <span class="co"># 7</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="bu">print</span>( count_characters(<span class="st">""</span>) ) <span class="co"># 0</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="bu">print</span>( count_characters(<span class="st">" "</span>) ) <span class="co"># 1</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="bu">print</span>( count_characters(<span class="st">"10"</span>) ) <span class="co"># 2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="input-function" class="slide level2">
+<h2><code>input()</code> function</h2>
+<ul>
+<li>The <code>input()</code> function prompts the user to input text in the standard output</li>
+<li>Whatever is inside the parentheses in <code>input()</code> will be written to the standard output (without a trailing newline, which you can add using <code>\n</code>).</li>
+<li>The function then reads a line from input, converts it to a string (stripping a trailing newline), and returns that</li>
+<li><code>input()</code> always returns a string</li>
+</ul>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="bu">input</span>(<span class="st">"What's your name?</span><span class="ch">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-main" class="slide level2">
+<h2>Write main()</h2>
+<p>Now you should have two functions in your <code>.py</code> script: <code>greeting</code> and <code>count_characters</code>.</p>
+<p>Write a <code>main()</code> function.</p>
+</section>
+<section id="write-a-function-2" class="slide level2">
+<h2>Write a function</h2>
+<p>In the same script, write <code>main()</code>:</p>
+<ol type="1">
+<li>Prompt user to enter their first name and last name using <code>input()</code></li>
+<li>Call your <code>greeting</code> function and save the string it returns to a variable</li>
+<li>Print the variable</li>
+<li>Call your <code>count_characters</code> function with the user’s full name and save the integer value returned to a variable</li>
+<li>Print a message to the user: <code>Your full name has X letters.</code> – replacing X with the right character count</li>
+</ol>
 </section>
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li><p>No lecture this Wednesday, me and TAs will be here (Gittings 129b) to answer questions.</p></li>
-<li><p>Final exam will be on this Friday, May 03, 2024 – 6:00pm - 8:00pm in ENR2 N120.</p></li>
-<li><p>Bring your photo ID</p></li>
-<li><p>Last day of office hour is May 1st.</p></li>
+<li>Midterm 1 on February 14 (this room)</li>
+<li>Modules 1-5 (practice problems on the website)</li>
+<li>Review session TBA</li>
+<li>BRING PHOTO ID TO THE EXAM</li>
 </ul>
 </section>
-<section id="attendance" class="slide level2">
-<h2>Attendance</h2>
-<p>Go to gradescope and answer attendance question.</p>
+<section id="input-function-1" class="slide level2">
+<h2><code>input()</code> function</h2>
+<p>Use <code>input()</code> to get user input (it always returns a string)</p>
 </section>
-<section id="midterm-3---question-5" class="slide level2">
-<h2>Midterm 3 - question 5</h2>
-<p>Write a function called <code>matches</code> that takes two string arguments, <code>s1</code> and <code>s2</code>, which you may assume have equal length. The function should return a string that is the same length as <code>s1</code> and <code>s2</code>.</p>
-<p>If the corresponding characters in <code>s1</code> and <code>s2</code> are the same, then the corresponding character in the result is that character. If they are different, then the corresponding character in the result is <code>"*"</code>.</p>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="cf">assert</span> matches(<span class="st">"abc"</span>, <span class="st">"abc"</span>) <span class="op">==</span> <span class="st">"abc"</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="cf">assert</span> matches(<span class="st">"abc"</span>, <span class="st">"xyz"</span>) <span class="op">==</span> <span class="st">"***"</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="cf">assert</span> matches(<span class="st">"abcd"</span>, <span class="st">"cbxe"</span>) <span class="op">==</span> <span class="st">"*b**"</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="cf">assert</span> matches(<span class="st">""</span>, <span class="st">""</span>) <span class="op">==</span> <span class="st">""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="midterm-3---question-5-wrong-solution" class="slide level2">
-<h2>Midterm 3 - question 5 <span style="color:red">wrong</span> solution</h2>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">def</span> matches(s1, s2):</span>
-<span id="cb2-2"><a href="#cb2-2"></a>    result <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a>    <span class="cf">for</span> char <span class="kw">in</span> s1:</span>
-<span id="cb2-4"><a href="#cb2-4"></a>        <span class="cf">if</span> char <span class="kw">in</span> s2:</span>
-<span id="cb2-5"><a href="#cb2-5"></a>            result <span class="op">+=</span> char</span>
-<span id="cb2-6"><a href="#cb2-6"></a>        <span class="cf">else</span>:</span>
-<span id="cb2-7"><a href="#cb2-7"></a>            result <span class="op">+=</span> <span class="st">"*"</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a>    <span class="cf">return</span> result</span>
-<span id="cb2-9"><a href="#cb2-9"></a></span>
-<span id="cb2-10"><a href="#cb2-10"></a><span class="kw">def</span> main():</span>
-<span id="cb2-11"><a href="#cb2-11"></a>  <span class="cf">assert</span> matches(<span class="st">"abc"</span>, <span class="st">"abc"</span>) <span class="op">==</span> <span class="st">"abc"</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a>  <span class="cf">assert</span> matches(<span class="st">"abc"</span>, <span class="st">"xyz"</span>) <span class="op">==</span> <span class="st">"***"</span></span>
-<span id="cb2-13"><a href="#cb2-13"></a>  <span class="cf">assert</span> matches(<span class="st">"abcd"</span>, <span class="st">"cbxe"</span>) <span class="op">==</span> <span class="st">"*b**"</span> <span class="co"># Will fail this test case</span></span>
-<span id="cb2-14"><a href="#cb2-14"></a>  <span class="cf">assert</span> matches(<span class="st">""</span>, <span class="st">""</span>) <span class="op">==</span> <span class="st">""</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a></span>
-<span id="cb2-16"><a href="#cb2-16"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="midterm-3---question-5-solution" class="slide level2">
-<h2>Midterm 3 - question 5 solution</h2>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">def</span> matches(s1, s2):</span>
-<span id="cb3-2"><a href="#cb3-2"></a>    result <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>    <span class="cf">for</span> index <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(s1)):</span>
-<span id="cb3-4"><a href="#cb3-4"></a>        <span class="cf">if</span> s1[index] <span class="op">==</span> s2[index]:</span>
-<span id="cb3-5"><a href="#cb3-5"></a>            result <span class="op">+=</span> s1[index]</span>
-<span id="cb3-6"><a href="#cb3-6"></a>        <span class="cf">else</span>:</span>
-<span id="cb3-7"><a href="#cb3-7"></a>            result <span class="op">+=</span> <span class="st">"*"</span></span>
-<span id="cb3-8"><a href="#cb3-8"></a>    <span class="cf">return</span> result</span>
-<span id="cb3-9"><a href="#cb3-9"></a></span>
-<span id="cb3-10"><a href="#cb3-10"></a><span class="kw">def</span> main():</span>
-<span id="cb3-11"><a href="#cb3-11"></a>  <span class="cf">assert</span> matches(<span class="st">"abc"</span>, <span class="st">"abc"</span>) <span class="op">==</span> <span class="st">"abc"</span></span>
-<span id="cb3-12"><a href="#cb3-12"></a>  <span class="cf">assert</span> matches(<span class="st">"abc"</span>, <span class="st">"xyz"</span>) <span class="op">==</span> <span class="st">"***"</span></span>
-<span id="cb3-13"><a href="#cb3-13"></a>  <span class="cf">assert</span> matches(<span class="st">"abcd"</span>, <span class="st">"cbxe"</span>) <span class="op">==</span> <span class="st">"*b**"</span></span>
-<span id="cb3-14"><a href="#cb3-14"></a>  <span class="cf">assert</span> matches(<span class="st">""</span>, <span class="st">""</span>) <span class="op">==</span> <span class="st">""</span></span>
-<span id="cb3-15"><a href="#cb3-15"></a></span>
-<span id="cb3-16"><a href="#cb3-16"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="midterm-3---question-6" class="slide level2">
-<h2>Midterm 3 - question 6</h2>
-<p>Given code for bubble sort:</p>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">def</span> bubble_sort(items):</span>
-<span id="cb4-2"><a href="#cb4-2"></a>  swapped <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>  end <span class="op">=</span> <span class="bu">len</span>(items)<span class="op">-</span><span class="dv">1</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a>  <span class="cf">while</span> <span class="kw">not</span> swapped:</span>
-<span id="cb4-5"><a href="#cb4-5"></a>    swapped <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(end):</span>
-<span id="cb4-7"><a href="#cb4-7"></a>      <span class="cf">if</span> items[i] <span class="op">&gt;</span> items[i<span class="op">+</span><span class="dv">1</span>]:</span>
-<span id="cb4-8"><a href="#cb4-8"></a>        items[i], items[i<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> items[i<span class="op">+</span><span class="dv">1</span>], items[i]</span>
-<span id="cb4-9"><a href="#cb4-9"></a>        swapped <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a>    end <span class="op">-=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>How many sweeps and swaps of <code>[30, 13, 5, 1, 14]</code>?</p>
-</section>
-<section id="midterm-3---question-6-solution" class="slide level2">
-<h2>Midterm 3 - question 6 solution</h2>
-<p>1st sweep:</p>
+<section id="int-function" class="slide level2">
+<h2><code>int()</code> function</h2>
 <ul>
-<li><p>1st swap: <code>[13, 30, 5, 1, 14]</code></p></li>
-<li><p>2nd swap: <code>[13, 5, 30, 1, 14]</code></p></li>
-<li><p>3rd swap: <code>[13, 5, 1, 30, 14]</code></p></li>
-<li><p>4th swap: <code>[13, 5, 1, 14, 30]</code></p></li>
+<li>The <code>int()</code> function can be used to convert a string to an integer type</li>
+<li>It only works if the string only contains digits</li>
 </ul>
-<p>2nd sweep:</p>
-<ul>
-<li><p>5th swap: <code>[5, 13, 1, 14, 30]</code></p></li>
-<li><p>6th swap: <code>[5, 1, 13, 14, 30]</code></p></li>
-</ul>
-</section>
-<section id="midterm-3---question-6-solution-continued" class="slide level2">
-<h2>Midterm 3 - question 6 solution (continued)</h2>
-<p>3rd sweep:</p>
-<ul>
-<li>7th swap: <code>[1, 5, 13, 14, 30]</code></li>
-</ul>
-<p>4th sweep:</p>
-<p>List already sorted, no more swaps</p>
-<p><br></p>
-<p><strong>4 sweeps and 7 swaps</strong></p>
-</section>
-<section id="midterm-3---question-8-bonus" class="slide level2">
-<h2>Midterm 3 - question 8 (Bonus)</h2>
-<p>Write python code (multiple functions) that given a list of lists of integers as argument, it mutates the list by removing all <strong>prime numbers</strong> from each sublist.</p>
 <div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
-<span id="cb5-2"><a href="#cb5-2"></a>  original_list <span class="op">=</span> [[<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">20</span>], [<span class="dv">17</span>, <span class="dv">19</span>, <span class="dv">23</span>]]</span>
-<span id="cb5-3"><a href="#cb5-3"></a>  remove_primes(original_list)</span>
-<span id="cb5-4"><a href="#cb5-4"></a>  <span class="cf">assert</span> original_list <span class="op">==</span> [[<span class="dv">4</span>, <span class="dv">4</span>], [<span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">20</span>], []]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>age <span class="op">=</span> <span class="st">'35'</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>age_int <span class="op">=</span> <span class="bu">int</span>(age)</span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="bu">print</span>(<span class="bu">type</span>(age), <span class="bu">type</span>(age_int))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'str'&gt; &lt;class 'int'&gt;</code></pre>
+</div>
 </div>
 </section>
-<section id="midterm-3---question-8-solution" class="slide level2">
-<h2>Midterm 3 - question 8 solution</h2>
+<section id="float-function" class="slide level2">
+<h2><code>float()</code> function</h2>
+<ul>
+<li>The <code>float()</code> function can be used to convert a string to a float type</li>
+<li>It only works if the string only contains digits and optionally a decimal point</li>
+</ul>
 <div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">def</span> is_prime(number):</span>
-<span id="cb6-2"><a href="#cb6-2"></a>    <span class="cf">if</span> number <span class="op">==</span> <span class="dv">1</span>:</span>
-<span id="cb6-3"><a href="#cb6-3"></a>         <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a>    <span class="co"># If num is divisible by any number between 2 and n / 2, it is not prime</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a>    <span class="cf">for</span> denominator <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="bu">int</span>(number<span class="op">/</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span>)):</span>
-<span id="cb6-6"><a href="#cb6-6"></a>          <span class="cf">if</span> number <span class="op">%</span> denominator <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb6-7"><a href="#cb6-7"></a>               <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb6-8"><a href="#cb6-8"></a>    <span class="cf">return</span> <span class="va">True</span></span>
-<span id="cb6-9"><a href="#cb6-9"></a></span>
-<span id="cb6-10"><a href="#cb6-10"></a><span class="kw">def</span> remove_primes(lists):</span>
-<span id="cb6-11"><a href="#cb6-11"></a>    <span class="cf">for</span> sublist <span class="kw">in</span> lists:</span>
-<span id="cb6-12"><a href="#cb6-12"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(sublist)<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>):</span>
-<span id="cb6-13"><a href="#cb6-13"></a>            <span class="cf">if</span> is_prime(sublist[i]):</span>
-<span id="cb6-14"><a href="#cb6-14"></a>                sublist.pop(i)</span>
-<span id="cb6-15"><a href="#cb6-15"></a>    <span class="cf">return</span> lists</span>
-<span id="cb6-16"><a href="#cb6-16"></a>  </span>
-<span id="cb6-17"><a href="#cb6-17"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
-<span id="cb6-18"><a href="#cb6-18"></a>  original_list <span class="op">=</span> [[<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">20</span>], [<span class="dv">17</span>, <span class="dv">19</span>, <span class="dv">23</span>]]</span>
-<span id="cb6-19"><a href="#cb6-19"></a>  remove_primes(original_list)</span>
-<span id="cb6-20"><a href="#cb6-20"></a>  <span class="cf">assert</span> original_list <span class="op">==</span> [[<span class="dv">4</span>, <span class="dv">4</span>], [<span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">20</span>], []]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>age <span class="op">=</span> <span class="st">'35'</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>age_float <span class="op">=</span> <span class="bu">float</span>(age)</span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="bu">print</span>(<span class="bu">type</span>(age), <span class="bu">type</span>(age_float))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'str'&gt; &lt;class 'float'&gt;</code></pre>
 </div>
+</div>
+</section>
+<section id="write-a-function-3" class="slide level2">
+<h2>Write a function</h2>
+<p>Write a Python function that does the following:</p>
+<ol type="1">
+<li>Its name is <code>calculate_year_born</code>, with no parameters</li>
+<li>It prompts user to enter their age <code>input()</code></li>
+<li>It converts user’s age to integer (since <code>input()</code> always returns a string)</li>
+<li>It calculates (imperfectly) the year a person of <code>age</code> was born by subtracting <code>age</code> from <code>2024</code></li>
+<li>It returns an integer representing the approximate year person of <code>age</code> was born</li>
+</ol>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="bu">print</span>( calculate_year_born() ) <span class="co"># user enters 60, function returns 1964</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="attendence" class="slide level2">
+<h2>Attendence</h2>
+<p>Submit your calculate_year_born solution as attendance on Gradescope.</p>
+<p>Name your file <code>get_input.py</code></p>
+</section>
+<section id="organizing-your-code" class="slide level2">
+<h2>Organizing your code</h2>
+<ul>
+<li>Split your functions and your <code>main()</code> in different files</li>
+<li>Use <code>from script_name import *</code></li>
+<li>For gradescope, submit only your script with all of your functions</li>
+</ul>
 
 <div class="footer footer-default">
 

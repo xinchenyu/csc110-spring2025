@@ -10,7 +10,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
-  <title>CSc 110 Computer Programming I - final exam review (class slides)</title>
+  <title>CSc 110 Computer Programming I - for loops – iterating over items (class slides)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -389,159 +389,340 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">final exam review (class slides)</h1>
+  <h1 class="title">for loops – iterating over items (class slides)</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
 <section>
-<section id="csc-final-exam-review" class="title-slide slide level1 center">
-<h1>CSC – Final exam review</h1>
+<section id="csc-110---the-other-type-of-for-loop" class="title-slide slide level1 center">
+<h1>CSc 110 - the other type of <code>for</code> loop</h1>
 
 </section>
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li><p>No lecture this Wednesday, me and TAs will be here (Gittings 129b) to answer questions.</p></li>
-<li><p>Final exam will be on this Friday, May 03, 2024 – 6:00pm - 8:00pm in ENR2 N120.</p></li>
-<li><p>Bring your photo ID</p></li>
-<li><p>Last day of office hour is May 1st.</p></li>
+<li><p>We will add one more quiz. The quiz 04 will be on Mar 13 (list and dictionary).</p></li>
+<li><p>Midterm 2 will be on Mar 27.</p></li>
 </ul>
+</section>
+<section id="review-of-for-in-range" class="slide level2">
+<h2>Review of <code>for in range():</code></h2>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="bu">print</span>(n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0
+1
+2
+3
+4</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>numbers <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">23</span>, <span class="dv">2</span>]</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(numbers)):</span>
+<span id="cb3-3"><a href="#cb3-3"></a>  <span class="bu">print</span>(numbers[i])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>2
+1
+4
+6
+23
+2</code></pre>
+</div>
+</div>
+</section>
+<section id="introducing-for-x-in-string" class="slide level2">
+<h2>Introducing <code>for x in string:</code></h2>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>string <span class="op">=</span> <span class="st">"hello"</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="cf">for</span> n <span class="kw">in</span> string:</span>
+<span id="cb5-3"><a href="#cb5-3"></a>  <span class="bu">print</span>(n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>h
+e
+l
+l
+o</code></pre>
+</div>
+</div>
+</section>
+<section id="introducing-for-x-in-list" class="slide level2">
+<h2>Introducing <code>for x in list:</code></h2>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>numbers <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">23</span>, <span class="dv">2</span>]</span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="cf">for</span> n <span class="kw">in</span> numbers:</span>
+<span id="cb7-3"><a href="#cb7-3"></a>  <span class="bu">print</span>(n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>2
+1
+4
+6
+23
+2</code></pre>
+</div>
+</div>
+</section>
+<section id="write-a-function" class="slide level2">
+<h2>Write a function</h2>
+<ol type="1">
+<li>Its name is <code>count_vowels</code></li>
+<li>It takes a <code>string</code> argument</li>
+<li>It creates a <code>dictionary</code></li>
+<li>It returns the <code>dictionary</code> with the count of every lowercase vowel in <code>string</code></li>
+</ol>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="cf">assert</span> count_vowels(<span class="st">""</span>) <span class="op">==</span> {<span class="st">"a"</span>: <span class="dv">0</span>, <span class="st">"e"</span>: <span class="dv">0</span>, <span class="st">"i"</span>: <span class="dv">0</span>, <span class="st">"o"</span>: <span class="dv">0</span>, <span class="st">"u"</span>: <span class="dv">0</span>}</span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="cf">assert</span> count_vowels(<span class="st">"banana"</span>) <span class="op">==</span> {<span class="st">"a"</span>: <span class="dv">3</span>, <span class="st">"e"</span>: <span class="dv">0</span>, <span class="st">"i"</span>: <span class="dv">0</span>, <span class="st">"o"</span>: <span class="dv">0</span>, <span class="st">"u"</span>: <span class="dv">0</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-a-function-solution" class="slide level2">
+<h2>Write a function – solution</h2>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">def</span> count_vowels(string):</span>
+<span id="cb10-2"><a href="#cb10-2"></a>  counts <span class="op">=</span> {<span class="st">"a"</span>: <span class="dv">0</span>, <span class="st">"e"</span>: <span class="dv">0</span>, <span class="st">"i"</span>: <span class="dv">0</span>, <span class="st">"o"</span>: <span class="dv">0</span>, <span class="st">"u"</span>: <span class="dv">0</span>}</span>
+<span id="cb10-3"><a href="#cb10-3"></a>  <span class="cf">for</span> char <span class="kw">in</span> string:</span>
+<span id="cb10-4"><a href="#cb10-4"></a>    <span class="cf">if</span> char <span class="kw">in</span> counts:</span>
+<span id="cb10-5"><a href="#cb10-5"></a>      counts[char] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb10-6"><a href="#cb10-6"></a>  <span class="cf">return</span> counts</span>
+<span id="cb10-7"><a href="#cb10-7"></a></span>
+<span id="cb10-8"><a href="#cb10-8"></a><span class="kw">def</span> main():</span>
+<span id="cb10-9"><a href="#cb10-9"></a>  <span class="cf">assert</span> count_vowels(<span class="st">""</span>) <span class="op">==</span> {<span class="st">"a"</span>: <span class="dv">0</span>, <span class="st">"e"</span>: <span class="dv">0</span>, <span class="st">"i"</span>: <span class="dv">0</span>, <span class="st">"o"</span>: <span class="dv">0</span>, <span class="st">"u"</span>: <span class="dv">0</span>}</span>
+<span id="cb10-10"><a href="#cb10-10"></a>  <span class="cf">assert</span> count_vowels(<span class="st">"banana"</span>) <span class="op">==</span> {<span class="st">"a"</span>: <span class="dv">3</span>, <span class="st">"e"</span>: <span class="dv">0</span>, <span class="st">"i"</span>: <span class="dv">0</span>, <span class="st">"o"</span>: <span class="dv">0</span>, <span class="st">"u"</span>: <span class="dv">0</span>}</span>
+<span id="cb10-11"><a href="#cb10-11"></a>  <span class="bu">print</span>(<span class="st">"Passed all tests."</span>)</span>
+<span id="cb10-12"><a href="#cb10-12"></a>  </span>
+<span id="cb10-13"><a href="#cb10-13"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Passed all tests.</code></pre>
+</div>
+</div>
+</section>
+<section id="write-a-function-1" class="slide level2">
+<h2>Write a function</h2>
+<ol type="1">
+<li>Its name is <code>count_chars</code></li>
+<li>It takes a <code>string</code> argument</li>
+<li>It creates a <code>dictionary</code></li>
+<li>It returns the <code>dictionary</code> with the count of every characters in <code>string</code></li>
+</ol>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="cf">assert</span> count_chars(<span class="st">""</span>) <span class="op">==</span> {}</span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="cf">assert</span> count_chars(<span class="st">"banana"</span>) <span class="op">==</span> {<span class="st">"b"</span>: <span class="dv">1</span>, <span class="st">"a"</span>: <span class="dv">3</span>, <span class="st">"n"</span>: <span class="dv">2</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-a-function-solution-1" class="slide level2">
+<h2>Write a function – solution</h2>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">def</span> count_chars(string):</span>
+<span id="cb13-2"><a href="#cb13-2"></a>  counts <span class="op">=</span> {}</span>
+<span id="cb13-3"><a href="#cb13-3"></a>  <span class="cf">for</span> char <span class="kw">in</span> string:</span>
+<span id="cb13-4"><a href="#cb13-4"></a>    <span class="cf">if</span> char <span class="kw">in</span> counts:</span>
+<span id="cb13-5"><a href="#cb13-5"></a>      counts[char] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb13-6"><a href="#cb13-6"></a>    <span class="cf">else</span>:</span>
+<span id="cb13-7"><a href="#cb13-7"></a>      counts[char] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb13-8"><a href="#cb13-8"></a>      </span>
+<span id="cb13-9"><a href="#cb13-9"></a>  <span class="cf">return</span> counts</span>
+<span id="cb13-10"><a href="#cb13-10"></a></span>
+<span id="cb13-11"><a href="#cb13-11"></a><span class="kw">def</span> main():</span>
+<span id="cb13-12"><a href="#cb13-12"></a>  <span class="cf">assert</span> count_chars(<span class="st">""</span>) <span class="op">==</span> {}</span>
+<span id="cb13-13"><a href="#cb13-13"></a>  <span class="cf">assert</span> count_chars(<span class="st">"banana"</span>) <span class="op">==</span> {<span class="st">"b"</span>: <span class="dv">1</span>, <span class="st">"a"</span>: <span class="dv">3</span>, <span class="st">"n"</span>: <span class="dv">2</span>}</span>
+<span id="cb13-14"><a href="#cb13-14"></a>  <span class="bu">print</span>(<span class="st">"Passed all tests."</span>)</span>
+<span id="cb13-15"><a href="#cb13-15"></a></span>
+<span id="cb13-16"><a href="#cb13-16"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Passed all tests.</code></pre>
+</div>
+</div>
+</section>
+<section id="write-a-function-2" class="slide level2">
+<h2>Write a function</h2>
+<ol type="1">
+<li>Its name is <code>tally_negatives</code></li>
+<li>It takes a list of <code>numbers</code> as argument</li>
+<li>It returns a dictionary that maps each negative value in <code>numbers</code> to its frequency in <code>numbers</code></li>
+</ol>
+<p>Test cases:</p>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="cf">assert</span>  tally_negatives([<span class="dv">1</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">4</span>, <span class="op">-</span><span class="dv">2</span>]) <span class="op">==</span> {<span class="op">-</span><span class="dv">2</span>: <span class="dv">2</span>, <span class="op">-</span><span class="dv">4</span>: <span class="dv">1</span>}</span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="cf">assert</span> tally_negatives([]) <span class="op">==</span> {}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-a-function-solution-2" class="slide level2">
+<h2>Write a function – solution</h2>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a><span class="kw">def</span> tally_negatives(numbers):</span>
+<span id="cb16-2"><a href="#cb16-2"></a>  tally <span class="op">=</span> {}</span>
+<span id="cb16-3"><a href="#cb16-3"></a>  <span class="cf">for</span> n <span class="kw">in</span> numbers:</span>
+<span id="cb16-4"><a href="#cb16-4"></a>    <span class="cf">if</span> n <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb16-5"><a href="#cb16-5"></a>      <span class="cf">if</span> n <span class="kw">not</span> <span class="kw">in</span> tally:</span>
+<span id="cb16-6"><a href="#cb16-6"></a>        tally[n] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb16-7"><a href="#cb16-7"></a>      tally[n] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb16-8"><a href="#cb16-8"></a>  <span class="cf">return</span> tally</span>
+<span id="cb16-9"><a href="#cb16-9"></a></span>
+<span id="cb16-10"><a href="#cb16-10"></a><span class="kw">def</span> main():</span>
+<span id="cb16-11"><a href="#cb16-11"></a>  <span class="cf">assert</span>  tally_negatives([<span class="dv">1</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">4</span>, <span class="op">-</span><span class="dv">2</span>]) <span class="op">==</span> {<span class="op">-</span><span class="dv">2</span>: <span class="dv">2</span>, <span class="op">-</span><span class="dv">4</span>: <span class="dv">1</span>}</span>
+<span id="cb16-12"><a href="#cb16-12"></a>  <span class="cf">assert</span> tally_negatives([]) <span class="op">==</span> {}</span>
+<span id="cb16-13"><a href="#cb16-13"></a>  <span class="bu">print</span>(<span class="st">"Passed all tests."</span>)</span>
+<span id="cb16-14"><a href="#cb16-14"></a>  </span>
+<span id="cb16-15"><a href="#cb16-15"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Passed all tests.</code></pre>
+</div>
+</div>
 </section>
 <section id="attendance" class="slide level2">
 <h2>Attendance</h2>
-<p>Go to gradescope and answer attendance question.</p>
+<p>Submit your <code>tally_negatives</code> function to Gradescope for attendance.</p>
+<p>Name your file <code>tally_negatives.py</code></p>
 </section>
-<section id="midterm-3---question-5" class="slide level2">
-<h2>Midterm 3 - question 5</h2>
-<p>Write a function called <code>matches</code> that takes two string arguments, <code>s1</code> and <code>s2</code>, which you may assume have equal length. The function should return a string that is the same length as <code>s1</code> and <code>s2</code>.</p>
-<p>If the corresponding characters in <code>s1</code> and <code>s2</code> are the same, then the corresponding character in the result is that character. If they are different, then the corresponding character in the result is <code>"*"</code>.</p>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="cf">assert</span> matches(<span class="st">"abc"</span>, <span class="st">"abc"</span>) <span class="op">==</span> <span class="st">"abc"</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="cf">assert</span> matches(<span class="st">"abc"</span>, <span class="st">"xyz"</span>) <span class="op">==</span> <span class="st">"***"</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="cf">assert</span> matches(<span class="st">"abcd"</span>, <span class="st">"cbxe"</span>) <span class="op">==</span> <span class="st">"*b**"</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="cf">assert</span> matches(<span class="st">""</span>, <span class="st">""</span>) <span class="op">==</span> <span class="st">""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="what-happens-when-we-do-for-k-in-dictionary" class="slide level2">
+<h2>What happens when we do <code>for k in dictionary:</code></h2>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a>scores <span class="op">=</span> {<span class="st">'A'</span>: <span class="dv">10</span>, <span class="st">'B'</span>: <span class="dv">25</span>, <span class="st">'C'</span>: <span class="dv">27</span>, <span class="st">'D'</span>: <span class="dv">10</span>, <span class="st">'E'</span>: <span class="dv">5</span>}</span>
+<span id="cb18-2"><a href="#cb18-2"></a><span class="cf">for</span> key <span class="kw">in</span> scores:</span>
+<span id="cb18-3"><a href="#cb18-3"></a>  <span class="bu">print</span>(key)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>A
+B
+C
+D
+E</code></pre>
+</div>
 </div>
 </section>
-<section id="midterm-3---question-5-wrong-solution" class="slide level2">
-<h2>Midterm 3 - question 5 <span style="color:red">wrong</span> solution</h2>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">def</span> matches(s1, s2):</span>
-<span id="cb2-2"><a href="#cb2-2"></a>    result <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a>    <span class="cf">for</span> char <span class="kw">in</span> s1:</span>
-<span id="cb2-4"><a href="#cb2-4"></a>        <span class="cf">if</span> char <span class="kw">in</span> s2:</span>
-<span id="cb2-5"><a href="#cb2-5"></a>            result <span class="op">+=</span> char</span>
-<span id="cb2-6"><a href="#cb2-6"></a>        <span class="cf">else</span>:</span>
-<span id="cb2-7"><a href="#cb2-7"></a>            result <span class="op">+=</span> <span class="st">"*"</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a>    <span class="cf">return</span> result</span>
-<span id="cb2-9"><a href="#cb2-9"></a></span>
-<span id="cb2-10"><a href="#cb2-10"></a><span class="kw">def</span> main():</span>
-<span id="cb2-11"><a href="#cb2-11"></a>  <span class="cf">assert</span> matches(<span class="st">"abc"</span>, <span class="st">"abc"</span>) <span class="op">==</span> <span class="st">"abc"</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a>  <span class="cf">assert</span> matches(<span class="st">"abc"</span>, <span class="st">"xyz"</span>) <span class="op">==</span> <span class="st">"***"</span></span>
-<span id="cb2-13"><a href="#cb2-13"></a>  <span class="cf">assert</span> matches(<span class="st">"abcd"</span>, <span class="st">"cbxe"</span>) <span class="op">==</span> <span class="st">"*b**"</span> <span class="co"># Will fail this test case</span></span>
-<span id="cb2-14"><a href="#cb2-14"></a>  <span class="cf">assert</span> matches(<span class="st">""</span>, <span class="st">""</span>) <span class="op">==</span> <span class="st">""</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a></span>
-<span id="cb2-16"><a href="#cb2-16"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="methods-for-dictionaries" class="slide level2">
+<h2>Methods for dictionaries</h2>
+<p>We can use <code>.values()</code> to get only the values in a dictionary:</p>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a>scores <span class="op">=</span> {<span class="st">'A'</span>: <span class="dv">10</span>, <span class="st">'B'</span>: <span class="dv">25</span>, <span class="st">'C'</span>: <span class="dv">27</span>, <span class="st">'D'</span>: <span class="dv">10</span>, <span class="st">'E'</span>: <span class="dv">5</span>}</span>
+<span id="cb20-2"><a href="#cb20-2"></a>scores.values()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<pre><code>dict_values([10, 25, 27, 10, 5])</code></pre>
+</div>
+</div>
+<p>We can use <code>.keys()</code> to get only the keys in a dictionary:</p>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a>scores <span class="op">=</span> {<span class="st">'A'</span>: <span class="dv">10</span>, <span class="st">'B'</span>: <span class="dv">25</span>, <span class="st">'C'</span>: <span class="dv">27</span>, <span class="st">'D'</span>: <span class="dv">10</span>, <span class="st">'E'</span>: <span class="dv">5</span>}</span>
+<span id="cb22-2"><a href="#cb22-2"></a>scores.keys()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="10">
+<pre><code>dict_keys(['A', 'B', 'C', 'D', 'E'])</code></pre>
+</div>
+</div>
+<p>We can use <code>.items()</code> to get tuples for keys and values:</p>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1"></a>scores <span class="op">=</span> {<span class="st">'A'</span>: <span class="dv">10</span>, <span class="st">'B'</span>: <span class="dv">25</span>, <span class="st">'C'</span>: <span class="dv">27</span>, <span class="st">'D'</span>: <span class="dv">10</span>, <span class="st">'E'</span>: <span class="dv">5</span>}</span>
+<span id="cb24-2"><a href="#cb24-2"></a>scores.items()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="11">
+<pre><code>dict_items([('A', 10), ('B', 25), ('C', 27), ('D', 10), ('E', 5)])</code></pre>
+</div>
 </div>
 </section>
-<section id="midterm-3---question-5-solution" class="slide level2">
-<h2>Midterm 3 - question 5 solution</h2>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">def</span> matches(s1, s2):</span>
-<span id="cb3-2"><a href="#cb3-2"></a>    result <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>    <span class="cf">for</span> index <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(s1)):</span>
-<span id="cb3-4"><a href="#cb3-4"></a>        <span class="cf">if</span> s1[index] <span class="op">==</span> s2[index]:</span>
-<span id="cb3-5"><a href="#cb3-5"></a>            result <span class="op">+=</span> s1[index]</span>
-<span id="cb3-6"><a href="#cb3-6"></a>        <span class="cf">else</span>:</span>
-<span id="cb3-7"><a href="#cb3-7"></a>            result <span class="op">+=</span> <span class="st">"*"</span></span>
-<span id="cb3-8"><a href="#cb3-8"></a>    <span class="cf">return</span> result</span>
-<span id="cb3-9"><a href="#cb3-9"></a></span>
-<span id="cb3-10"><a href="#cb3-10"></a><span class="kw">def</span> main():</span>
-<span id="cb3-11"><a href="#cb3-11"></a>  <span class="cf">assert</span> matches(<span class="st">"abc"</span>, <span class="st">"abc"</span>) <span class="op">==</span> <span class="st">"abc"</span></span>
-<span id="cb3-12"><a href="#cb3-12"></a>  <span class="cf">assert</span> matches(<span class="st">"abc"</span>, <span class="st">"xyz"</span>) <span class="op">==</span> <span class="st">"***"</span></span>
-<span id="cb3-13"><a href="#cb3-13"></a>  <span class="cf">assert</span> matches(<span class="st">"abcd"</span>, <span class="st">"cbxe"</span>) <span class="op">==</span> <span class="st">"*b**"</span></span>
-<span id="cb3-14"><a href="#cb3-14"></a>  <span class="cf">assert</span> matches(<span class="st">""</span>, <span class="st">""</span>) <span class="op">==</span> <span class="st">""</span></span>
-<span id="cb3-15"><a href="#cb3-15"></a></span>
-<span id="cb3-16"><a href="#cb3-16"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="for-x-in-list" class="slide level2">
+<h2><code>for x in list</code></h2>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1"></a>scores <span class="op">=</span> {<span class="st">'A'</span>: <span class="dv">10</span>, <span class="st">'B'</span>: <span class="dv">25</span>, <span class="st">'C'</span>: <span class="dv">27</span>, <span class="st">'D'</span>: <span class="dv">10</span>, <span class="st">'E'</span>: <span class="dv">5</span>}</span>
+<span id="cb26-2"><a href="#cb26-2"></a><span class="cf">for</span> value <span class="kw">in</span> scores.values():</span>
+<span id="cb26-3"><a href="#cb26-3"></a>  <span class="bu">print</span>(value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>10
+25
+27
+10
+5</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1"></a>scores <span class="op">=</span> {<span class="st">'A'</span>: <span class="dv">10</span>, <span class="st">'B'</span>: <span class="dv">25</span>, <span class="st">'C'</span>: <span class="dv">27</span>, <span class="st">'D'</span>: <span class="dv">10</span>, <span class="st">'E'</span>: <span class="dv">5</span>}</span>
+<span id="cb28-2"><a href="#cb28-2"></a><span class="cf">for</span> key <span class="kw">in</span> scores.keys():</span>
+<span id="cb28-3"><a href="#cb28-3"></a>  <span class="bu">print</span>(key)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>A
+B
+C
+D
+E</code></pre>
+</div>
 </div>
 </section>
-<section id="midterm-3---question-6" class="slide level2">
-<h2>Midterm 3 - question 6</h2>
-<p>Given code for bubble sort:</p>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">def</span> bubble_sort(items):</span>
-<span id="cb4-2"><a href="#cb4-2"></a>  swapped <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>  end <span class="op">=</span> <span class="bu">len</span>(items)<span class="op">-</span><span class="dv">1</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a>  <span class="cf">while</span> <span class="kw">not</span> swapped:</span>
-<span id="cb4-5"><a href="#cb4-5"></a>    swapped <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(end):</span>
-<span id="cb4-7"><a href="#cb4-7"></a>      <span class="cf">if</span> items[i] <span class="op">&gt;</span> items[i<span class="op">+</span><span class="dv">1</span>]:</span>
-<span id="cb4-8"><a href="#cb4-8"></a>        items[i], items[i<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> items[i<span class="op">+</span><span class="dv">1</span>], items[i]</span>
-<span id="cb4-9"><a href="#cb4-9"></a>        swapped <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a>    end <span class="op">-=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="for-key-value-in-dictionary.items" class="slide level2">
+<h2><code>for key, value in dictionary.items()</code></h2>
+<div class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1"></a>scores <span class="op">=</span> {<span class="st">'A'</span>: <span class="dv">10</span>, <span class="st">'B'</span>: <span class="dv">25</span>, <span class="st">'C'</span>: <span class="dv">27</span>, <span class="st">'D'</span>: <span class="dv">10</span>, <span class="st">'E'</span>: <span class="dv">5</span>}</span>
+<span id="cb30-2"><a href="#cb30-2"></a><span class="cf">for</span> key, value <span class="kw">in</span> scores.items():</span>
+<span id="cb30-3"><a href="#cb30-3"></a>  <span class="bu">print</span>(key, value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>A 10
+B 25
+C 27
+D 10
+E 5</code></pre>
 </div>
-<p>How many sweeps and swaps of <code>[30, 13, 5, 1, 14]</code>?</p>
-</section>
-<section id="midterm-3---question-6-solution" class="slide level2">
-<h2>Midterm 3 - question 6 solution</h2>
-<p>1st sweep:</p>
-<ul>
-<li><p>1st swap: <code>[13, 30, 5, 1, 14]</code></p></li>
-<li><p>2nd swap: <code>[13, 5, 30, 1, 14]</code></p></li>
-<li><p>3rd swap: <code>[13, 5, 1, 30, 14]</code></p></li>
-<li><p>4th swap: <code>[13, 5, 1, 14, 30]</code></p></li>
-</ul>
-<p>2nd sweep:</p>
-<ul>
-<li><p>5th swap: <code>[5, 13, 1, 14, 30]</code></p></li>
-<li><p>6th swap: <code>[5, 1, 13, 14, 30]</code></p></li>
-</ul>
-</section>
-<section id="midterm-3---question-6-solution-continued" class="slide level2">
-<h2>Midterm 3 - question 6 solution (continued)</h2>
-<p>3rd sweep:</p>
-<ul>
-<li>7th swap: <code>[1, 5, 13, 14, 30]</code></li>
-</ul>
-<p>4th sweep:</p>
-<p>List already sorted, no more swaps</p>
-<p><br></p>
-<p><strong>4 sweeps and 7 swaps</strong></p>
-</section>
-<section id="midterm-3---question-8-bonus" class="slide level2">
-<h2>Midterm 3 - question 8 (Bonus)</h2>
-<p>Write python code (multiple functions) that given a list of lists of integers as argument, it mutates the list by removing all <strong>prime numbers</strong> from each sublist.</p>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
-<span id="cb5-2"><a href="#cb5-2"></a>  original_list <span class="op">=</span> [[<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">20</span>], [<span class="dv">17</span>, <span class="dv">19</span>, <span class="dv">23</span>]]</span>
-<span id="cb5-3"><a href="#cb5-3"></a>  remove_primes(original_list)</span>
-<span id="cb5-4"><a href="#cb5-4"></a>  <span class="cf">assert</span> original_list <span class="op">==</span> [[<span class="dv">4</span>, <span class="dv">4</span>], [<span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">20</span>], []]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="midterm-3---question-8-solution" class="slide level2">
-<h2>Midterm 3 - question 8 solution</h2>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">def</span> is_prime(number):</span>
-<span id="cb6-2"><a href="#cb6-2"></a>    <span class="cf">if</span> number <span class="op">==</span> <span class="dv">1</span>:</span>
-<span id="cb6-3"><a href="#cb6-3"></a>         <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a>    <span class="co"># If num is divisible by any number between 2 and n / 2, it is not prime</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a>    <span class="cf">for</span> denominator <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="bu">int</span>(number<span class="op">/</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span>)):</span>
-<span id="cb6-6"><a href="#cb6-6"></a>          <span class="cf">if</span> number <span class="op">%</span> denominator <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb6-7"><a href="#cb6-7"></a>               <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb6-8"><a href="#cb6-8"></a>    <span class="cf">return</span> <span class="va">True</span></span>
-<span id="cb6-9"><a href="#cb6-9"></a></span>
-<span id="cb6-10"><a href="#cb6-10"></a><span class="kw">def</span> remove_primes(lists):</span>
-<span id="cb6-11"><a href="#cb6-11"></a>    <span class="cf">for</span> sublist <span class="kw">in</span> lists:</span>
-<span id="cb6-12"><a href="#cb6-12"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(sublist)<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>):</span>
-<span id="cb6-13"><a href="#cb6-13"></a>            <span class="cf">if</span> is_prime(sublist[i]):</span>
-<span id="cb6-14"><a href="#cb6-14"></a>                sublist.pop(i)</span>
-<span id="cb6-15"><a href="#cb6-15"></a>    <span class="cf">return</span> lists</span>
-<span id="cb6-16"><a href="#cb6-16"></a>  </span>
-<span id="cb6-17"><a href="#cb6-17"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
-<span id="cb6-18"><a href="#cb6-18"></a>  original_list <span class="op">=</span> [[<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">20</span>], [<span class="dv">17</span>, <span class="dv">19</span>, <span class="dv">23</span>]]</span>
-<span id="cb6-19"><a href="#cb6-19"></a>  remove_primes(original_list)</span>
-<span id="cb6-20"><a href="#cb6-20"></a>  <span class="cf">assert</span> original_list <span class="op">==</span> [[<span class="dv">4</span>, <span class="dv">4</span>], [<span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">20</span>], []]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="write-a-function-3" class="slide level2">
+<h2>Write a function</h2>
+<ol type="1">
+<li>Its name is <code>keys_and_values</code></li>
+<li>It takes a <code>dictionary</code> as argument</li>
+<li>It returns a list with all the keys and values in the <code>dictionary</code></li>
+</ol>
+<p>Test cases:</p>
+<div class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1"></a><span class="cf">assert</span> keys_and_values({<span class="st">'A'</span>: <span class="dv">10</span>, <span class="st">'B'</span>: <span class="dv">25</span>, <span class="st">'C'</span>: <span class="dv">27</span>, <span class="st">'D'</span>: <span class="dv">10</span>, <span class="st">'E'</span>: <span class="dv">5</span>}) <span class="op">==</span> <span class="op">\</span></span>
+<span id="cb32-2"><a href="#cb32-2"></a>    [<span class="st">'A'</span>, <span class="dv">10</span>, <span class="st">'B'</span>, <span class="dv">25</span>, <span class="st">'C'</span>, <span class="dv">27</span>, <span class="st">'D'</span>, <span class="dv">10</span>, <span class="st">'E'</span>, <span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-a-function-solution-3" class="slide level2">
+<h2>Write a function – solution</h2>
+<div class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1"></a><span class="kw">def</span> keys_and_values(dictionary):</span>
+<span id="cb33-2"><a href="#cb33-2"></a>  new_list <span class="op">=</span> []</span>
+<span id="cb33-3"><a href="#cb33-3"></a>  <span class="cf">for</span> key, value <span class="kw">in</span> dictionary.items():</span>
+<span id="cb33-4"><a href="#cb33-4"></a>    new_list.append(key)</span>
+<span id="cb33-5"><a href="#cb33-5"></a>    new_list.append(value)</span>
+<span id="cb33-6"><a href="#cb33-6"></a>  <span class="cf">return</span> new_list</span>
+<span id="cb33-7"><a href="#cb33-7"></a></span>
+<span id="cb33-8"><a href="#cb33-8"></a><span class="kw">def</span> main():</span>
+<span id="cb33-9"><a href="#cb33-9"></a>  <span class="cf">assert</span> keys_and_values({<span class="st">'A'</span>: <span class="dv">10</span>, <span class="st">'B'</span>: <span class="dv">25</span>, <span class="st">'C'</span>: <span class="dv">27</span>, <span class="st">'D'</span>: <span class="dv">10</span>, <span class="st">'E'</span>: <span class="dv">5</span>}) <span class="op">==</span> [<span class="st">'A'</span>, <span class="dv">10</span>, <span class="st">'B'</span>, <span class="dv">25</span>, <span class="st">'C'</span>, <span class="dv">27</span>, <span class="st">'D'</span>, <span class="dv">10</span>, <span class="st">'E'</span>, <span class="dv">5</span>]</span>
+<span id="cb33-10"><a href="#cb33-10"></a>  </span>
+<span id="cb33-11"><a href="#cb33-11"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-a-function-4" class="slide level2">
+<h2>Write a function</h2>
+<ol type="1">
+<li>Its name is <code>merge_dictionaries</code></li>
+<li>It takes two arguments: <code>dict_1</code> and <code>dict_2</code></li>
+<li>It mutates <code>dict_1</code>, by adding to it all key-values pairs in <code>dict_2</code></li>
+<li>If a key is in both dictionaries, the values are added</li>
+<li>Don’t use <code>.update()</code></li>
+</ol>
+<p>Test cases:</p>
+<div class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1"></a>dict_1 <span class="op">=</span> {<span class="st">"a"</span>: <span class="dv">20</span>, <span class="st">"e"</span>: <span class="dv">5</span>}</span>
+<span id="cb34-2"><a href="#cb34-2"></a>dict_2 <span class="op">=</span> {<span class="st">"e"</span>: <span class="dv">10</span>, <span class="st">"i"</span>: <span class="dv">2</span>}</span>
+<span id="cb34-3"><a href="#cb34-3"></a><span class="cf">assert</span> merge_dictionaries(dict_1, dict_2) <span class="op">==</span> {<span class="st">"a"</span>: <span class="dv">20</span>, <span class="st">"e"</span>: <span class="dv">15</span>, <span class="st">"i"</span>: <span class="dv">2</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-a-function-solution-4" class="slide level2">
+<h2>Write a function – solution</h2>
+<div class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1"></a><span class="kw">def</span> merge_dictionaries(dict_1, dict_2):</span>
+<span id="cb35-2"><a href="#cb35-2"></a>  <span class="cf">for</span> key, value <span class="kw">in</span> dict_2.items():</span>
+<span id="cb35-3"><a href="#cb35-3"></a>    <span class="cf">if</span> key <span class="kw">in</span> dict_1:</span>
+<span id="cb35-4"><a href="#cb35-4"></a>      dict_1[key] <span class="op">+=</span> value</span>
+<span id="cb35-5"><a href="#cb35-5"></a>    <span class="cf">else</span>:</span>
+<span id="cb35-6"><a href="#cb35-6"></a>      dict_1[key] <span class="op">=</span> value</span>
+<span id="cb35-7"><a href="#cb35-7"></a>  <span class="cf">return</span> dict_1</span>
+<span id="cb35-8"><a href="#cb35-8"></a>      </span>
+<span id="cb35-9"><a href="#cb35-9"></a><span class="kw">def</span> main():</span>
+<span id="cb35-10"><a href="#cb35-10"></a>  dict_1 <span class="op">=</span> {<span class="st">"a"</span>: <span class="dv">20</span>, <span class="st">"e"</span>: <span class="dv">5</span>}</span>
+<span id="cb35-11"><a href="#cb35-11"></a>  dict_2 <span class="op">=</span> {<span class="st">"e"</span>: <span class="dv">10</span>, <span class="st">"i"</span>: <span class="dv">2</span>}</span>
+<span id="cb35-12"><a href="#cb35-12"></a>  <span class="cf">assert</span> merge_dictionaries(dict_1, dict_2) <span class="op">==</span> {<span class="st">"a"</span>: <span class="dv">20</span>, <span class="st">"e"</span>: <span class="dv">15</span>, <span class="st">"i"</span>: <span class="dv">2</span>}</span>
+<span id="cb35-13"><a href="#cb35-13"></a>  </span>
+<span id="cb35-14"><a href="#cb35-14"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 <div class="footer footer-default">
