@@ -1,0 +1,164 @@
+---
+title: "final exam review (class slides)"
+format: revealjs
+slide-number: true
+df-print: kable
+---
+
+
+# CSC -- Final exam review
+
+## `try:` and `except:`
+
+* Can be used to catch errors in a program without it having to crash!
+* The programmer can provide more information and/or context as to what happened
+* Can make debugging easier if you provide clear error messages
+
+## `try:` and `except:`
+
+```{python}
+#| echo: true
+#| eval: true
+ages = [35, 35, 23, 18, 45, 18, 72]
+try:
+    print(ages[0] + ages[4])
+except:
+    print('Failed to print the sum of two ages')
+```
+
+```{python}
+#| echo: true
+#| eval: true
+ages = [35, 35, 23, 18, 45, 18, 72]
+try:
+    print(ages[0] + ages[7])
+except:
+    print('Failed to print the sum of two ages')
+```
+
+## `try:` and `except:`
+
+```{python}
+#| echo: true
+#| eval: true
+ages = [35, 35, 23, 18, 45, 18, 72]
+try:
+    print(ages[0] + ages[7])
+except:
+    print('Failed to print the sum of two ages')
+    print('Tried to get a value from an index that does not exist in the list')
+```
+
+```{python}
+#| echo: true
+#| eval: false
+ages = [35, 35, 23, 18, 45, 18, 72]
+print(ages[0] + ages[7])
+```
+
+IndexError: list index out of range
+
+## Attendance
+
+Write a python function called `valid_input` that takes a string as argument and returns False if the string is not a year (check if the length is 4, and if the string is an integer). 
+
+Name your file `year_validation.py`
+
+```{python}
+#| echo: true
+#| eval: false
+print(valid_input("2023")) # True
+print(valid_input("20235")) # False
+print(valid_input("test")) # False
+```
+
+## Attendance - solution
+
+```{python}
+#| echo: true
+#| eval: true
+def valid_input(string):
+    if len(string) != 4:
+        return False
+    try:
+        int(string)
+        return True
+    except:
+        print("Invalid input. Please enter a valid year.")
+        return False
+
+def main():
+    print(valid_input("2023"))
+    print(valid_input("20235"))
+    print(valid_input("test"))
+
+main()
+```
+
+## Write a function
+
+1. Its name is `read_numbers`
+1. It takes a string for a file name
+1. It opens the file in read mode, it splits the lines by space
+1. It returns a list with all float numbers in the file
+1. [Download test file](data/weather.txt)
+
+```{python}
+#| echo: true
+#| eval: false
+print( read_numbers("weather.txt") ) # [89.5, 50.2, 93.4, 69.0]
+```
+
+## Write a function -- solution
+
+```{python}
+#| echo: true
+#| eval: true
+def read_numbers(file_name):
+  floats = []
+  not_floats = []
+  f = open(file_name, "r")
+  for line in f:
+    words = line.strip().split(" ")
+    for w in words:
+      try:
+        floats.append(float(w))
+      except:
+        not_floats.append(w)
+  f.close()
+  return floats
+
+def main():
+  print( read_numbers("weather.txt") ) # [89.5, 50.2, 93.4, 69.0]
+  
+main()
+```
+
+## Write a function -- solution 2
+
+
+```{python}
+#| echo: true
+#| eval: true
+def read_numbers(file_name):
+  floats = []
+  not_floats = []
+  f = open(file_name, "r")
+  for line in f:
+    words = line.strip().split(" ")
+    for w in words:
+      try:
+        floats.append(float(w))
+      except Exception as err:
+        not_floats.append(w)
+        print(err)
+      else:
+        print("coverted", w, "successfully")
+  f.close()
+  return floats
+
+def main():
+  print( read_numbers("weather.txt") ) # [89.5, 50.2, 93.4, 69.0]
+  
+main()
+```

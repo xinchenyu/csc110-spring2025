@@ -144,6 +144,7 @@ website:
       - section: "Module 16 - Review"
         contents:
         - final-review.qmd
+        - slides-16-01.qmd
 
 format:
   html:
