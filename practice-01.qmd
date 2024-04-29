@@ -39,6 +39,13 @@ Notebooks:
 * [Midterm 2 Study Guide](pdfs/midterm-2-study-guide.pdf)
 * [Midterm 3 Study Guide](pdfs/midterm-3-study-guide.pdf)
 
+# More practice for the final exam
+
+The TA Amyra White has created a practice problem set for the final exam:
+
+* [Final exam practice](https://colab.research.google.com/drive/1eHGlPOp9OYB_5PhgWM6cq3IRl5ScrExH?usp=sharing)
+* [Final exam practice answers](https://colab.research.google.com/drive/14smJXie0teWkYsXuDYF8e3NsTn4y8nxI?usp=sharing)
+
 # Video demonstration
 
 {{< video https://youtu.be/LYzAjSG7wyU >}}
