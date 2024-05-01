@@ -1439,7 +1439,7 @@
     "href": "project-11.html#output",
     "title": "Programming Project 11",
     "section": "Output",
-    "text": "Output\nThe program should return a dictionary with the starting row / col locations for each word found. Your code should have a function called search that returns this dictionary. The formatting of the return dictionary should be something like:\n\n{\"word1\": [0, 0], \"word2\": [5, 5]}"
+    "text": "Output\nThe program should return a dictionary with the starting row / col locations for each word found. Your code should have a function called search that returns this dictionary. The formatting of the return dictionary should be something like:\n\n{\"word1\": [1, 1], \"word2\": [5, 5]}"
   },
   {
     "objectID": "project-11.html#reading-in-input-files",

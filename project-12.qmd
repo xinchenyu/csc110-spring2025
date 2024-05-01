@@ -104,7 +104,7 @@ The steps of the algorithm are outlined below and you must implement these steps
   * Chose two random integers starting from zero and going up to the number of lines in the file minus 1
   * Swap the content of the lines at these two indexes
   
-By choosing the seed `42`, you should get the same results if you follow the steps carefully.
+By choosing the seed `125`, you should get the same results if you follow the steps carefully.
 
 ##  Test cases
 
