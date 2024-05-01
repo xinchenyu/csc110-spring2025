@@ -28,7 +28,7 @@ Midterm (individual) exams (pencil and paper format):
 
 The final exam (pencil and paper format) for all sections will be on:
 
--   `r schedule %>% filter(exam == "Final Exam" & term == "spring 2024") %>% pull(formatted_date)` -- `r schedule %>% filter(exam == "Final Exam" & term == "spring 2024") %>% pull(time)` in [ENR2 N120](https://maps.app.goo.gl/Rx3se1ArtPWDPnEN7).
+-   `r schedule %>% filter(exam == "Final Exam" & term == "spring 2024") %>% pull(formatted_date)` -- `r schedule %>% filter(exam == "Final Exam" & term == "spring 2024") %>% pull(time)` in [CESL 102](https://classrooms.registrar.arizona.edu/24/102) and [CESL 103](https://classrooms.registrar.arizona.edu/24/103).
 
 All assignments that are submitted on Gradescope are due at 9pm (Tuesdays for programming problems, and Wednesdays for Programming Projects).
 
