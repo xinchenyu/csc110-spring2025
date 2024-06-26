@@ -9,9 +9,9 @@ website:
 
 This is an introduction to programming with an emphasis on solving problems drawn from a variety of domains. Topics include basic control and data structures, problem solving strategies, and software development tools and techniques. Specifically, the Python programming language will be taught.
 
--   D2L: [d2l](https://d2l.arizona.edu/d2l/home/1386086)
--   Gradescope: [Gradescope](https://www.gradescope.com/courses/691034) (Entry Code:KKG76B)
--   Piazza: [Piazza](https://piazza.com/arizona/spring2024/csc110) (Access code: wildcats)
+-   D2L: [d2l]()
+-   Gradescope: [Gradescope]() (Entry Code:)
+-   Piazza: [Piazza]() (Access code: )
 
 Where to start:
 
