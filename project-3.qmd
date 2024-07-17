@@ -100,10 +100,9 @@ There is also a tax limit of `$75,000`. The tax should be capped at this value, 
 
 <pre>
 >>> TAX LIMIT REACHED <<<
-Overspending
-What happens if the expenditures and taxes are more than the annual salary? This should be represented by negative values in the extra row. You should also print a warning after the chart. Below is an example of a financial situation in which the user spends more than they earn, resulting in a deficit in the extra row.
 </pre>
 
+Overspending - What happens if the expenditures and taxes are more than the annual salary? This should be represented by negative values in the extra row. You should also print a warning after the chart. Below is an example of a financial situation in which the user spends more than they earn, resulting in a deficit in the extra row.
 
 ```{python}
 #| eval: false
