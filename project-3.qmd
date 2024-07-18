@@ -30,7 +30,7 @@ Budgeting and money management is very important both at the individual level, a
 
 *–Charles Dickens*
 
-In this assignment, you will be writing a program that helps a user visualize and understand how much money they spend of various categories of expenditures. Perhaps you will even find this program useful for your personal finances! You should name your program `wheres_the_money.py`.
+In this assignment, you will be writing a program that helps a user visualize and understand how much money they spend of various categories of expenditures. Perhaps you will even find this program useful for your personal finances! You should name your program `wheres_the_money.py`. 
 
 # Overview of the program
 
@@ -94,15 +94,11 @@ assert calculate_tax(20000) == 4000
 ```
 
 
-After calculating all of these values programmatically, you should generate the output table.
+After calculating all of these values programmatically, you should generate the output table. Print the table in the `wheres_the_money` function.
 
-There is also a tax limit of `$75,000`. The tax should be capped at this value, and if the limit is reached, a message indicating this should be printed out after the chart. The message should say:
+Finally, after printing the table, two warnings are optional to print (overspending & tax limit).
 
-<pre>
->>> TAX LIMIT REACHED <<<
-</pre>
-
-Overspending - What happens if the expenditures and taxes are more than the annual salary? This should be represented by negative values in the extra row. You should also print a warning after the chart. Below is an example of a financial situation in which the user spends more than they earn, resulting in a deficit in the extra row.
+Overspending - what happens if the expenditures and taxes are more than the annual salary? This should be represented by negative values in the extra row. You should also print a warning after the chart. Below is an example of a financial situation in which the user spends more than they earn, resulting in a deficit in the extra row.
 
 ```{python}
 #| eval: false
@@ -126,6 +122,11 @@ See the financial breakdown below, based on a salary of $40000
 >>> WARNING: DEFICIT <<<
 </pre>
 
+Tax limit - there is also a tax limit of `$75,000`. The tax should be capped at this value, and if the limit is reached, a message indicating this should be printed out after the chart. The message should say:
+
+<pre>
+>>> TAX LIMIT REACHED <<<
+</pre>
 
 # Formatting a Number
 
@@ -183,3 +184,16 @@ points = 19
 total = 22
 'Correct answers: {:.2%}'.format(points/total)
 ```
+
+Holding space and right aligning the numbers:
+```{python}
+#| eval: true
+#| echo: true
+point_1 = 20
+print('Correct answers: {:>5,}'.format(point_1))
+
+point_2 = 1000
+print('Correct answers: {:>5,}'.format(point_2))
+```
+
+

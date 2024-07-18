@@ -2461,7 +2461,7 @@
     "href": "project-3.html#examples-for-string-method-.format",
     "title": "Programming Project 3",
     "section": "Examples for string method .format()",
-    "text": "Examples for string method .format()\nUsing the comma as a thousands separator:\n\n'{:,}'.format(1234567890)\n\n'1,234,567,890'\n\n\nEstablishing numbers of digits to hold space for:\n\n'{:15,}'.format(10000)\n\n'         10,000'\n\n\nExpressing floats with four decimals (the 4 is number of digits after the decimal point, the f means it’s formatting a float):\n\n'{:.4f}'.format(4.2353635234)\n\n'4.2354'\n\n\nExpressing a percentage with two decimals:\n\npoints = 19\ntotal = 22\n'Correct answers: {:.2%}'.format(points/total)\n\n'Correct answers: 86.36%'"
+    "text": "Examples for string method .format()\nUsing the comma as a thousands separator:\n\n'{:,}'.format(1234567890)\n\n'1,234,567,890'\n\n\nEstablishing numbers of digits to hold space for:\n\n'{:15,}'.format(10000)\n\n'         10,000'\n\n\nExpressing floats with four decimals (the 4 is number of digits after the decimal point, the f means it’s formatting a float):\n\n'{:.4f}'.format(4.2353635234)\n\n'4.2354'\n\n\nExpressing a percentage with two decimals:\n\npoints = 19\ntotal = 22\n'Correct answers: {:.2%}'.format(points/total)\n\n'Correct answers: 86.36%'\n\n\nHolding space and right aligning the numbers:\n\npoint_1 = 20\nprint('Correct answers: {:&gt;5,}'.format(point_1))\n\nCorrect answers:    20\n\npoint_2 = 1000\nprint('Correct answers: {:&gt;5,}'.format(point_2))\n\nCorrect answers: 1,000"
   },
   {
     "objectID": "project-7.html",

@@ -1020,11 +1020,9 @@ See the financial breakdown below, based on a salary of $50000
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> calculate_tax(<span class="dv">10000</span>) <span class="op">==</span> <span class="dv">1000</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> calculate_tax(<span class="dv">20000</span>) <span class="op">==</span> <span class="dv">4000</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>After calculating all of these values programmatically, you should generate the output table.</p>
-<p>There is also a tax limit of <code>$75,000</code>. The tax should be capped at this value, and if the limit is reached, a message indicating this should be printed out after the chart. The message should say:</p>
-<pre>&gt;&gt;&gt; TAX LIMIT REACHED &lt;&lt;&lt;
-</pre>
-<p>Overspending - What happens if the expenditures and taxes are more than the annual salary? This should be represented by negative values in the extra row. You should also print a warning after the chart. Below is an example of a financial situation in which the user spends more than they earn, resulting in a deficit in the extra row.</p>
+<p>After calculating all of these values programmatically, you should generate the output table. Print the table in the <code>wheres_the_money</code> function.</p>
+<p>Finally, after printing the table, two warnings are optional to print (overspending &amp; tax limit).</p>
+<p>Overspending - what happens if the expenditures and taxes are more than the annual salary? This should be represented by negative values in the extra row. You should also print a warning after the chart. Below is an example of a financial situation in which the user spends more than they earn, resulting in a deficit in the extra row.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># arguments: salary, mortgage/rent, bills, food, travel</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>wheres_the_money(<span class="dv">40000</span>, <span class="dv">2000</span>, <span class="dv">300</span>, <span class="dv">150</span>, <span class="dv">4000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1040,6 +1038,9 @@ See the financial breakdown below, based on a salary of $40000
 |         extra | $  -7,400.00 | -18.5% |
 ------------------------------------------------------------------------------------------------------
 &gt;&gt;&gt; WARNING: DEFICIT &lt;&lt;&lt;
+</pre>
+<p>Tax limit - there is also a tax limit of <code>$75,000</code>. The tax should be capped at this value, and if the limit is reached, a message indicating this should be printed out after the chart. The message should say:</p>
+<pre>&gt;&gt;&gt; TAX LIMIT REACHED &lt;&lt;&lt;
 </pre>
 </section>
 <section id="formatting-a-number" class="level1">
@@ -1087,6 +1088,19 @@ See the financial breakdown below, based on a salary of $40000
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co">'Correct answers: {:.2%}'</span>.<span class="bu">format</span>(points<span class="op">/</span>total)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>'Correct answers: 86.36%'</code></pre>
+</div>
+</div>
+<p>Holding space and right aligning the numbers:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>point_1 <span class="op">=</span> <span class="dv">20</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Correct answers: {:&gt;5,}'</span>.<span class="bu">format</span>(point_1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Correct answers:    20</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>point_2 <span class="op">=</span> <span class="dv">1000</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Correct answers: {:&gt;5,}'</span>.<span class="bu">format</span>(point_2))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Correct answers: 1,000</code></pre>
 </div>
 </div>
 
