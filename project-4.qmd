@@ -31,7 +31,7 @@ You have graduated and now have a great job and decide that you want to start sa
 
 Name the program `house_hunting_1.py`. Make sure that gradescope gives you the points for passing the test cases.
 
-I this assignment we are going to determine how long it will take you to save enough money to make the down payment given the following assumptions:
+In this assignment we are going to determine how long it will take you to save enough money to make the down payment given the following assumptions:
 
 1. Call the cost of your first home `total_cost`.
 2. Call the portion of the cost needed for a down payment `portion_down_payment` . For
@@ -39,7 +39,7 @@ simplicity, assume that `portion_down_payment = 0.25 (25%)`.
 3. Call the amount that you have saved thus far `current_savings`. You start with a current
 savings of $0.
 4. Assume that you invest your current savings wisely, with an annual return of r (in other words,
-at the end of each month, you receive an additional `current_savings*r/12` funds to put into
+at the beginning of each month, you receive an additional `current_savings*r/12` funds to put into
 your savings – the 12 is because r is an annual rate). Assume that your investments earn a
 return of r = 0.04 (4%).
 5. Assume your annual salary is `annual_salary` .
