@@ -149,7 +149,10 @@ print( printable_board(board) )
 
 ## Move a knight
 
-This function has the same three parameters as the `move` function. `move_knight` should actually move a knight on the board (thus, it should change the board list). In 110 1d Chess, a knight can move either left or right. A knight moves 2 locations. If it lands on a space that another piece occupies, then it kills that piece. It can jump over other pieces. If it cannot move due to the ending position of the move being out-of-bounds of the board, the knight should stay in its place.
+This function has the same three parameters as the `move_king` function. `move_knight` should actually move a knight on the board (thus, it should change the board list). In 110 1d Chess, a knight can move either left or right. A knight moves 2 locations. If it lands on a space that another piece occupies, then it kills that piece. It can jump over other pieces. If it cannot move due to the ending position of the move being out-of-bounds of the board, the knight should stay in its place. Note the biggest differences between a knight and a king here are:  
+
+- a knight moves 2 locations each time
+- if it moves, it only do it once (the king may move multiple times and stop). 
 
 This function should move the knight at the provided position in the correct direction.
 
