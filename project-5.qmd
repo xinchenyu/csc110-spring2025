@@ -76,7 +76,7 @@ print( printable_board(board) ) # "+--------------------------------------------
 This function has three parameter variables. The board (a list, representing the 1 by 9 board), the position (index) of the player to move, and player (WHITE or BLACK). This function should return a boolean (`True` or `False`). True if the desired move is valid, False otherwise. A move is valid if:
 
 -   The position (index) is a valid index in the `board` list
--   The position is an index of one of the current player's pieces on the board
+-   The position is an index of one of the current player's pieces on the board (for example, position 6 is an index of one of the BLACK's pieces - BKn)
 
 You do not need a while loop or for loop within this function. It can be accomplished with if statements. If the above two conditions are True, the function should return True. In any other case, return False.
 
@@ -105,7 +105,7 @@ assert is_valid_move(board, 2, "WHITE" ) == True
 
 ## Move a king
 
-This function has the same three parameters as the move function. `move_king` should actually move a king on the board (thus, it should change the board list). In 110 1d Chess, a king can move either left or right. The king will move until either it reaches another piece (killing that piece and taking it’s place), or an end of the board.
+This function has the same three parameters as the `is_valid_move` function except the third parameter should be the direction. `move_king` should actually move a king on the board (thus, it should change the board list). In 110 1d Chess, a king can move either left or right. The king will move until either it reaches another piece (killing that piece and taking it’s place), or an end of the board.
 
 This function should move the king at the provided position in the correct direction. You should use a for-loop or while-loop to iterate through the elements in the list and determine the spot it should end up at.
 
@@ -235,7 +235,7 @@ print( printable_board(board) )
 
 ## Game over
 
-This function should be named `is_game_over` and it takes the board list as its only parameter, and should determine if the game is over or not. If the white king does not exist on the board, then the game is over, and black wins. In this case, the function should print the board, print `Black wins!` and return `True`. If the black king does not exist on the board, then the game is over, and white wins. In this case, the function should print the board, print `White wins!` and return `True`. If both kings are still in the board list, then the function should print nothing, and return `False`.
+This function should be named `is_game_over` and it takes the board list as its only parameter, and should determine if the game is over or not. If the white king does not exist on the board, then the game is over, and black wins. In this case, the function should print `Black wins!` and return `True`. If the black king does not exist on the board, then the game is over, and white wins. In this case, the function should print `White wins!` and return `True`. If both kings are still in the board list, then the function should print nothing, and return `False`. Note you should print `Black wins!` or `White wins!` without adding a new line to the end of string. 
 
 Test case:
 
@@ -376,7 +376,4 @@ assert is_game_over(board) == True
 
 ```{html}
 White wins!
-+-----------------------------------------------------+
-|     |     |     |     |     | WKi |     |     |     |
-+-----------------------------------------------------+
 ```

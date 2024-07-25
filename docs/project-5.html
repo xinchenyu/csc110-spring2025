@@ -1014,7 +1014,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This function has three parameter variables. The board (a list, representing the 1 by 9 board), the position (index) of the player to move, and player (WHITE or BLACK). This function should return a boolean (<code>True</code> or <code>False</code>). True if the desired move is valid, False otherwise. A move is valid if:</p>
 <ul>
 <li>The position (index) is a valid index in the <code>board</code> list</li>
-<li>The position is an index of one of the current player’s pieces on the board</li>
+<li>The position is an index of one of the current player’s pieces on the board (for example, position 6 is an index of one of the BLACK’s pieces - BKn)</li>
 </ul>
 <p>You do not need a while loop or for loop within this function. It can be accomplished with if statements. If the above two conditions are True, the function should return True. In any other case, return False.</p>
 <p>Test cases:</p>
@@ -1037,7 +1037,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="move-a-king" class="level2">
 <h2 class="anchored" data-anchor-id="move-a-king">Move a king</h2>
-<p>This function has the same three parameters as the move function. <code>move_king</code> should actually move a king on the board (thus, it should change the board list). In 110 1d Chess, a king can move either left or right. The king will move until either it reaches another piece (killing that piece and taking it’s place), or an end of the board.</p>
+<p>This function has the same three parameters as the <code>is_valid_move</code> function except the third parameter should be the direction. <code>move_king</code> should actually move a king on the board (thus, it should change the board list). In 110 1d Chess, a king can move either left or right. The king will move until either it reaches another piece (killing that piece and taking it’s place), or an end of the board.</p>
 <p>This function should move the king at the provided position in the correct direction. You should use a for-loop or while-loop to iterate through the elements in the list and determine the spot it should end up at.</p>
 <p>Test cases:</p>
 <div class="cell">
@@ -1135,7 +1135,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="game-over" class="level2">
 <h2 class="anchored" data-anchor-id="game-over">Game over</h2>
-<p>This function should be named <code>is_game_over</code> and it takes the board list as its only parameter, and should determine if the game is over or not. If the white king does not exist on the board, then the game is over, and black wins. In this case, the function should print the board, print <code>Black wins!</code> and return <code>True</code>. If the black king does not exist on the board, then the game is over, and white wins. In this case, the function should print the board, print <code>White wins!</code> and return <code>True</code>. If both kings are still in the board list, then the function should print nothing, and return <code>False</code>.</p>
+<p>This function should be named <code>is_game_over</code> and it takes the board list as its only parameter, and should determine if the game is over or not. If the white king does not exist on the board, then the game is over, and black wins. In this case, the function should print <code>Black wins!</code> and return <code>True</code>. If the black king does not exist on the board, then the game is over, and white wins. In this case, the function should print <code>White wins!</code> and return <code>True</code>. If both kings are still in the board list, then the function should print nothing, and return <code>False</code>. Note you should print <code>Black wins!</code> or <code>White wins!</code> without adding a new line to the end of string.</p>
 <p>Test case:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>board <span class="op">=</span> create_board()</span>
@@ -1240,10 +1240,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> is_game_over(board) <span class="op">==</span> <span class="va">True</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>White wins!</span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>|     |     |     |     |     | WKi |     |     |     |</span>
-<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>+-----------------------------------------------------+</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>White wins!</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
