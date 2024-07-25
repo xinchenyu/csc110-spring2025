@@ -1073,7 +1073,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This function has the same three parameters as the <code>move_king</code> function. <code>move_knight</code> should actually move a knight on the board (thus, it should change the board list). In 110 1d Chess, a knight can move either left or right. A knight moves 2 locations. If it lands on a space that another piece occupies, then it kills that piece. It can jump over other pieces. If it cannot move due to the ending position of the move being out-of-bounds of the board, the knight should stay in its place. Note the biggest differences between a knight and a king here are:</p>
 <ul>
 <li>a knight moves 2 locations each time</li>
-<li>if it moves, it only do it once (the king may move multiple times and stop).</li>
+<li>it only moves once if it moves (the king may move multiple times and stop).</li>
 </ul>
 <p>This function should move the knight at the provided position in the correct direction.</p>
 <p>Test cases:</p>
