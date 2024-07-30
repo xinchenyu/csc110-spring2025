@@ -973,7 +973,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Benford’s law is useful for distinguishing naturally occurring data from randomized or made-up data. It has been used in the real world to detect election fraud (For example, in the 2009 Iranian election). It has also been used as evidence in criminal cases in the US. In this project, you’ll be writing a program that reads in a data set, and prints out the plot of first-digits. Then, you can look at the plot to determine if it conforms to the law or not! Name your file <code>benfords_law.py.</code> You should organize the code into several functions.</p>
 <section id="the-input-file" class="level1">
 <h1>The Input File</h1>
-<p>Your program should accept an input file name as argument, which your program should expect to be formatted as CSV. As a reminder, a CSV file is one that is organized into rows and columns, commas are typically used as the character that separates each entry in a row. Shown below is an example of the program prompting the user for a file name, then the user enters a file name (<code>places.csv</code>), and then the program prints out the resulting plot.</p>
+<p>Your program should accept an input file name as argument, which your program should expect to be formatted as CSV. As a reminder, a CSV file is one that is organized into rows and columns, commas are typically used as the character that separates each entry in a row. Shown below is an example of the program prompting the user for a file name, then the user enters a file name (<code>places.csv</code>), and then the program prints out the resulting plot. Note you need to consider all the numbers including floating-point numbers in the CSV file.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>list_of_numbers <span class="op">=</span> csv_to_list(<span class="st">"places.csv"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> list_of_numbers <span class="op">==</span> [<span class="st">"1234"</span>, <span class="st">"145"</span>, <span class="st">"10"</span>, <span class="st">"1700"</span>, <span class="st">"1729"</span>, <span class="st">"1711"</span>, <span class="st">"219"</span>, <span class="op">\</span></span>
@@ -1048,7 +1048,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="does-it-follow-the-law" class="level2">
 <h2 class="anchored" data-anchor-id="does-it-follow-the-law">Does it follow the law?</h2>
-<p>The other thing you should determine is if the data follows Benford’s Law. For the purposes of this PA, a data set will follow Benford’s law if the percentage of occurrences of each digits follows the following percentages, plus 10% or minus 5%.</p>
+<p>The other thing you should determine is if the data follows Benford’s Law. For the purposes of this PA, a data set will follow Benford’s law if the percentage of occurrences of each digits follows the following percentages, plus 10% or minus 5%. For example, if the percentage of digit <code>1</code> calculated is 41%, then the data does not follow Benford’s law.</p>
 <table class="table">
 <thead>
 <tr class="header">

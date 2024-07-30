@@ -33,7 +33,7 @@ Benford's law is useful for distinguishing naturally occurring data from randomi
 # The Input File
 
 Your program should accept an input file name as argument, which your program should expect to be formatted as CSV. 
-As a reminder, a CSV file is one that is organized into rows and columns, commas are typically used as the character that separates each entry in a row. Shown below is an example of the program prompting the user for a file name, then the user enters a file name (`places.csv`), and then the program prints out the resulting plot.
+As a reminder, a CSV file is one that is organized into rows and columns, commas are typically used as the character that separates each entry in a row. Shown below is an example of the program prompting the user for a file name, then the user enters a file name (`places.csv`), and then the program prints out the resulting plot. Note you need to consider all the numbers including floating-point numbers in the CSV file.
 
 ```{python}
 #| eval: false
@@ -130,7 +130,7 @@ The number of `#` for a digit in the plot should be the same as the percentage o
 
 ## Does it follow the law?
 
-The other thing you should determine is if the data follows Benford's Law. For the purposes of this PA, a data set will follow Benford’s law if the percentage of occurrences of each digits follows the following percentages, plus 10% or minus 5%.
+The other thing you should determine is if the data follows Benford's Law. For the purposes of this PA, a data set will follow Benford’s law if the percentage of occurrences of each digits follows the following percentages, plus 10% or minus 5%. For example, if the percentage of digit `1` calculated is 41%, then the data does not follow Benford's law.
 
 | digit | percent (-5, +10) |
 |-------|-------------------|
@@ -161,3 +161,5 @@ assert check_benfords_law(percentages) == True
 -   [populations.csv](data/populations.csv) does follow Benford's Law
 -   [stocks.csv](data/stocks.csv) does follow Benford's Law
 -   [random_numbers.csv](data/random_numbers.csv) does NOT follow Benford's Law
+
+
