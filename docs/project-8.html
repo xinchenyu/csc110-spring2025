@@ -980,7 +980,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="program-behavior" class="level1">
 <h1>Program behavior</h1>
-<p>The spell checking program should be named <code>spellcheck.py</code>. The spell check program takes as argument the name of a text file, which will contain the text that the user wants to be spell-checked. The program than writes out an output file with swapping the contents of the input file with the spelling already fixed.</p>
+<p>The spell checking program should be named <code>spellcheck.py</code>. The spell check program takes as argument the name of a text file, which will contain the text that the user wants to be spell-checked. The program then writes out an output file with swapping the contents of the input file with the spelling already fixed.</p>
 <p>Let’s walk through a really simple example to demonstrate the difference in the two modes. Let’s say that the file <code>words.txt</code> has the below content:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>one hudnred dollars</span>
@@ -1030,8 +1030,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="ignoring-punctuation" class="level1">
 <h1>Ignoring Punctuation</h1>
-<p>You also should make the spell checker ignore punctuation. In particular, <code>spellcheck.py``` should be able to handle a trailing ,, ., ?, or !. For instance, it should be able to change</code>hudnred?<code>to</code>hundred?` in replace mode. How can this be accomplished?</p>
-<p>Before looking up a word in the misspellings dictionary, check if the last character is one of the four types of punctuation that you should look for (, or . or ? or !). If it is, create a variable to store that punctuation, and then trim it off of the end of the word. Then, proceed with checking the spelling. After you have determined if it is spelled correctly or not, you can put the punctuation at the end of the word.</p>
+<p>You also should make the spell checker ignore punctuation. In particular, <code>spellcheck.py</code> should be able to handle a trailing <code>,</code> <code>.</code> <code>;</code> <code>?</code>, or <code>!</code>. For instance, it should be able to change <code>hudnred?</code> to <code>hundred?</code> in replace mode. How can this be accomplished?</p>
+<p>Before looking up a word in the misspellings dictionary, check if the last character is one of the five types of punctuation that you should look for (<code>,</code> or <code>.</code> or <code>?</code> or <code>!</code> or <code>;</code>). If it is, create a variable to store that punctuation, and then trim it off of the end of the word. Then, proceed with checking the spelling. After you have determined if it is spelled correctly or not, you can put the punctuation at the end of the word.</p>
 </section>
 <section id="development-strategy" class="level1">
 <h1>Development Strategy</h1>

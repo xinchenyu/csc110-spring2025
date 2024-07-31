@@ -26,7 +26,7 @@ Most in this class have probably used a spellchecker at least once in your life 
 
 # Program behavior
 
-The spell checking program should be named `spellcheck.py`. The spell check program takes as argument the name of a text file, which will contain the text that the user wants to be spell-checked. The program than writes out an output file with swapping the contents of the input file with the spelling already fixed. 
+The spell checking program should be named `spellcheck.py`. The spell check program takes as argument the name of a text file, which will contain the text that the user wants to be spell-checked. The program then writes out an output file with swapping the contents of the input file with the spelling already fixed. 
 
 Let's walk through a really simple example to demonstrate the difference in the two modes. Let's say that the file `words.txt` has the below content:
 
@@ -96,9 +96,9 @@ You might find the string methods `.lower()`,`.isupper()`, and `.capitalize()` u
 
 # Ignoring Punctuation
 
-You also should make the spell checker ignore punctuation. In particular, `spellcheck.py``` should be able to handle a trailing ,, ., ?, or !. For instance, it should be able to change `hudnred?` to `hundred?` in replace mode. How can this be accomplished?
+You also should make the spell checker ignore punctuation. In particular, `spellcheck.py` should be able to handle a trailing `,` `.` `;` `?`, or `!`. For instance, it should be able to change `hudnred?` to `hundred?` in replace mode. How can this be accomplished?
 
-Before looking up a word in the misspellings dictionary, check if the last character is one of the four types of punctuation that you should look for (, or . or ? or !). If it is, create a variable to store that punctuation, and then trim it off of the end of the word. Then, proceed with checking the spelling. After you have determined if it is spelled correctly or not, you can put the punctuation at the end of the word.
+Before looking up a word in the misspellings dictionary, check if the last character is one of the five types of punctuation that you should look for (`,` or `.` or `?` or `!` or `;`). If it is, create a variable to store that punctuation, and then trim it off of the end of the word. Then, proceed with checking the spelling. After you have determined if it is spelled correctly or not, you can put the punctuation at the end of the word.
 
 # Development Strategy
 
