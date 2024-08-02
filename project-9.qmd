@@ -125,7 +125,7 @@ To calculate how many characters in each bar use the formula:
 (category_item_count/total_item_count) * 50
 ```
 
-Note for the percentages please keep two decimal places. For example, `3/8` in percentage should be `37.5%` while `3/9` should be `33.33%`.
+Note for the percentages please keep two decimal places. For example, `3/8` in percentage should be `37.5%` and `3/9` should be `33.33%`.
 
 # Resource Files
 
