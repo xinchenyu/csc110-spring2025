@@ -35,37 +35,37 @@ Otherwise, an integer is revealed, which is the number of adjacent (including di
 For example, let's say a player is provided the given board:
 
 <pre>
- 2 [ ][ ][ ]
- 1 [ ][ ][ ]
- 0 [ ][ ][ ]
-    a  b  c
+ 2[ ][ ][ ]
+ 1[ ][ ][ ]
+ 0[ ][ ][ ]
+   a  b  c
 </pre>
 
 If the the coordinates `(0, "a") `are provided, a result may be:
 
 <pre>
- 2 [ ][ ][ ]
- 1 [1][ ][ ]
- 0 [1][2][ ]
-    a  b  c
+ 2[ ][ ][ ]
+ 1[1][ ][ ]
+ 0[1][2][ ]
+   a  b  c
 </pre>
 
 This means that at `(0, "a")` there is not a mine, however there is one nearby. We know there's no mine in `(1, "a")` because the integer `1` was also revealed. Specifically there is probably a mine in `(1, "b")`. Suppose the player's next move is c0, which would produce:
 
 <pre>
- 2 [ ][ ][ ]
- 1 [1][ ][ ]
- 0 [1][2][2]
-    a  b  c
+ 2[ ][ ][ ]
+ 1[1][ ][ ]
+ 0[1][2][2]
+   a  b  c
 </pre>
 
 The 2 revealed means that there would be 2 mines somewhere among `(1, "b")`, `(1, "c")` and `(0, "c")`. After this let's say the coordinates `(1, "b")` are provided.
 
 <pre>
- 2 [ ][ ][ ]
- 1 [1][X][ ]
- 0 [1][2][2]
-    a  b  c
+ 2[ ][ ][ ]
+ 1[1][X][ ]
+ 0[1][2][2]
+   a  b  c
 </pre>
 
 Since this reveals an X the game has ended and the player loss. If all non-mine squares were revealed, the player would have won.
@@ -187,21 +187,23 @@ It returns the number of spots on the grid that have not been revealed by the pl
 Takes in a 2D list and prints it out to standard output. For example printing the initial user view (remember the user view is the blank grid made from `make_empty_grid`) of the grid from [tenSquare.txt](data/tenSquare.txt) should output:
 
 <pre>
-10 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 9 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 8 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 7 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 6 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 5 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 4 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 3 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 2 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 1 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
- 0 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-    a  b  c  d  e  f  g  h  i  j  k
+10[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 9[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 8[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 7[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 6[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 5[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 4[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 3[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 2[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 1[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+ 0[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+   a  b  c  d  e  f  g  h  i  j  k
 </pre>
 
-Take note of how the number labels are right-aligned. For the letter labels you can assume that the width will be at most 26 (One for each lower case letter) and the height will be 100 or less. You may also assume that every element in the 2D list will be only a single character string.
+Take note of how the number labels are right-aligned. For the letter labels you can assume that the width will be at most 26 (One for each lower case letter) and the height will be 100 or less. You may also assume that every element in the 2D list will be only a single character string. 
+
+Note the `print_grid` function is only used for printing purpose, so it does not return anything. There are 2 spaces after the last letter on the bottom (in this example the letter `k`). Call this function in the `dig` function.
 
 ### determine_game_status
 
