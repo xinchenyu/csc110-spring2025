@@ -125,6 +125,8 @@ To calculate how many characters in each bar use the formula:
 (category_item_count/total_item_count) * 50
 ```
 
+Note for the percentages please keep two decimal places. For example, `3/8` in percentage should be `37.5%` while `3/9` should be `33.33%`.
+
 # Resource Files
 
 Below are some resource files you might find interesting to run your program with.
@@ -140,7 +142,8 @@ If you'd like to try the program on other books, you can visit [gutenberg.org](h
 #| eval: false
 #| echo: true
 if __name__ == '__main__':
-    word_list = text_to_list("test.txt")
+    filename = "test.txt"
+    word_list = text_to_list(filename)
     assert word_list == ['two', 'forks.', 'one', 'knife.', 'two', 'glasses.', \
          'one', 'plate.', 'one', 'napkin.', 'his', 'glasses.', 'his', 'knife.']
     
