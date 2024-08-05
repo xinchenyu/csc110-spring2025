@@ -50,7 +50,9 @@ If the the coordinates `(0, "a") `are provided, a result may be:
    a  b  c
 </pre>
 
-This means that at `(0, "a")` there is not a mine, however there is one nearby. We know there's no mine in `(1, "a")` because the integer `1` was also revealed. Specifically there is probably a mine in `(1, "b")`. Suppose the player's next move is c0, which would produce:
+This means that at `(0, "a")` there is not a mine, however there is one nearby. We know there's no mine in `(1, "a")` because the integer `1` was also revealed. Specifically there is probably a mine in `(1, "b")`, `(2, "b")` or `(2, "a")`. Similarly, there is not a mine at `(0, "b")` because the integer `2`. There are two mines in `(1, "b")`, `(0, "c")` or `(1, "c")`.
+
+Suppose the player's next move is `(0, "c")`, which would produce:
 
 <pre>
  2[ ][ ][ ]
@@ -59,7 +61,7 @@ This means that at `(0, "a")` there is not a mine, however there is one nearby. 
    a  b  c
 </pre>
 
-The 2 revealed means that there would be 2 mines somewhere among `(1, "b")`, `(1, "c")` and `(0, "c")`. After this let's say the coordinates `(1, "b")` are provided.
+The 2 in `(0, "c")` revealed means that there would be 2 mines somewhere among `(1, "b")` and `(1, "c")`. After this let's say the next move is `(1, "b")`.
 
 <pre>
  2[ ][ ][ ]
@@ -68,7 +70,7 @@ The 2 revealed means that there would be 2 mines somewhere among `(1, "b")`, `(1
    a  b  c
 </pre>
 
-Since this reveals an X the game has ended and the player loss. If all non-mine squares were revealed, the player would have won.
+Since this reveals an `X` in `(1, "b")`, the game has ended and results in a loss. When revealing an `X`, the player lost the game and the nearby coordinates would not be revealed. If all non-mine squares were revealed, the player would have won.
 
 ## Input File Format
 

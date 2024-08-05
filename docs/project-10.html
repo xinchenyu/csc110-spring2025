@@ -1001,19 +1001,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  0[1][2][ ]
    a  b  c
 </pre>
-<p>This means that at <code>(0, "a")</code> there is not a mine, however there is one nearby. We know there’s no mine in <code>(1, "a")</code> because the integer <code>1</code> was also revealed. Specifically there is probably a mine in <code>(1, "b")</code>. Suppose the player’s next move is c0, which would produce:</p>
+<p>This means that at <code>(0, "a")</code> there is not a mine, however there is one nearby. We know there’s no mine in <code>(1, "a")</code> because the integer <code>1</code> was also revealed. Specifically there is probably a mine in <code>(1, "b")</code>, <code>(2, "b")</code> or <code>(2, "a")</code>. Similarly, there is not a mine at <code>(0, "b")</code> because the integer <code>2</code>. There are two mines in <code>(1, "b")</code>, <code>(0, "c")</code> or <code>(1, "c")</code>.</p>
+<p>Suppose the player’s next move is <code>(0, "c")</code>, which would produce:</p>
 <pre> 2[ ][ ][ ]
  1[1][ ][ ]
  0[1][2][2]
    a  b  c
 </pre>
-<p>The 2 revealed means that there would be 2 mines somewhere among <code>(1, "b")</code>, <code>(1, "c")</code> and <code>(0, "c")</code>. After this let’s say the coordinates <code>(1, "b")</code> are provided.</p>
+<p>The 2 in <code>(0, "c")</code> revealed means that there would be 2 mines somewhere among <code>(1, "b")</code> and <code>(1, "c")</code>. After this let’s say the next move is <code>(1, "b")</code>.</p>
 <pre> 2[ ][ ][ ]
  1[1][X][ ]
  0[1][2][2]
    a  b  c
 </pre>
-<p>Since this reveals an X the game has ended and the player loss. If all non-mine squares were revealed, the player would have won.</p>
+<p>Since this reveals an <code>X</code> in <code>(1, "b")</code>, the game has ended and results in a loss. When revealing an <code>X</code>, the player lost the game and the nearby coordinates would not be revealed. If all non-mine squares were revealed, the player would have won.</p>
 </section>
 <section id="input-file-format" class="level2">
 <h2 class="anchored" data-anchor-id="input-file-format">Input File Format</h2>
