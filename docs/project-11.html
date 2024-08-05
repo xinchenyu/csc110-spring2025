@@ -938,11 +938,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#output" id="toc-output" class="nav-link" data-scroll-target="#output">Output</a></li>
   </ul></li>
   <li><a href="#example-run" id="toc-example-run" class="nav-link" data-scroll-target="#example-run">Example Run</a></li>
-  <li><a href="#development-strategy" id="toc-development-strategy" class="nav-link" data-scroll-target="#development-strategy">Development Strategy</a>
+  <li><a href="#development-strategy-1" id="toc-development-strategy-1" class="nav-link" data-scroll-target="#development-strategy-1">Development Strategy 1</a>
   <ul class="collapse">
   <li><a href="#reading-in-input-files" id="toc-reading-in-input-files" class="nav-link" data-scroll-target="#reading-in-input-files">(1) Reading in input files</a></li>
   <li><a href="#word-search" id="toc-word-search" class="nav-link" data-scroll-target="#word-search">(2) Word search</a></li>
   </ul></li>
+  <li><a href="#development-strategy-2" id="toc-development-strategy-2" class="nav-link" data-scroll-target="#development-strategy-2">Development Strategy 2</a></li>
   <li><a href="#example-run-1" id="toc-example-run-1" class="nav-link" data-scroll-target="#example-run-1">Example run</a></li>
   </ul>
 </nav>
@@ -976,21 +977,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>You should name the file <code>wordsearch.py</code>. Your code should have a function called <code>search</code> that returns a dictionary (see specification below).</p>
 <section id="words-text-file" class="level2">
 <h2 class="anchored" data-anchor-id="words-text-file">Words text file</h2>
-<p>Your program should open up and read a text file name which determines which words you are searching for in your puzzle file! You can assume that each line in the input text file is formatted as follows: each line of the file is a word from the “word bank.”</p>
+<p>Your program should open up and read a text file name which determines which words you are searching for in your puzzle file! You can assume that each line in the input text file is formatted as follows: each line of the file is a word from the “word bank”.</p>
 <p>Contents of <code>words.txt</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>computer</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>science</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Your program should open and read the input text file into the program and store the mapping between forwards and backwards words in a dictionary. The keys of the dictionary should be the forward version of the word, and the value the keys map to, should be the backward version of that word. Given the example content of words.txt shown above, the words dictionary should have the keys and values shown below:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>words <span class="op">=</span> {<span class="st">"computer"</span>:<span class="st">"retupmoc"</span>, <span class="st">"science"</span>:<span class="st">"ecneics"</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>After you have read in the file and constructed this dictionary, you can use it to determine your word bank, which words you will need to look for within the puzzle.</p>
 </section>
 <section id="puzzle-text-file" class="level2">
 <h2 class="anchored" data-anchor-id="puzzle-text-file">Puzzle text file</h2>
-<p>This file contains a grid of letters and hidden within those letters are certain words you will need to be searching for. You will use your newly created words dictionary to figure out what letter combination of words you need to find. This is an example of what this word-grid file would look like:</p>
+<p>This file contains a grid of letters and hidden within those letters are certain words you will need to be searching for. You will use the words in <code>words.txt</code> to figure out what letter combination of words you need to find. This is an example of what this word-grid file would look like:</p>
 <pre>W O D I W S M Z H 
 N R M E W A N D A 
 L Z H I N O K L H 
@@ -1005,7 +1001,7 @@ A R A M E R I C A
 <h2 class="anchored" data-anchor-id="output">Output</h2>
 <p>The program should return a dictionary with the starting row / col locations for each word found. Your code should have a function called <code>search</code> that returns this dictionary. The formatting of the return dictionary should be something like:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">"word1"</span>: [<span class="dv">1</span>, <span class="dv">1</span>], <span class="st">"word2"</span>: [<span class="dv">5</span>, <span class="dv">5</span>]}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">"word1"</span>: [<span class="dv">1</span>, <span class="dv">1</span>], <span class="st">"word2"</span>: [<span class="dv">5</span>, <span class="dv">5</span>]}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
@@ -1013,11 +1009,11 @@ A R A M E R I C A
 <h1>Example Run</h1>
 <p>Say that <code>words.txt</code> contains:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>army</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>navy</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>star</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>america</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>bullet</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>army</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>navy</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>star</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>america</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>bullet</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>And then <code>grid.txt</code> contains:</p>
 <pre>Z S Y M R A Z
@@ -1030,15 +1026,16 @@ A M E R I C A
 </pre>
 <p>Your program should return:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">"army"</span>: [<span class="dv">1</span>, <span class="dv">6</span>],</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a> <span class="st">"bullet"</span>: [<span class="dv">6</span>, <span class="dv">2</span>],</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a> <span class="st">"america"</span>: [<span class="dv">7</span>, <span class="dv">1</span>],</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a> <span class="st">"navy"</span>: [<span class="dv">2</span>, <span class="dv">2</span>],</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a> <span class="st">"star"</span>: [<span class="dv">4</span>, <span class="dv">5</span>]}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">"army"</span>: [<span class="dv">1</span>, <span class="dv">6</span>],</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a> <span class="st">"bullet"</span>: [<span class="dv">6</span>, <span class="dv">2</span>],</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a> <span class="st">"america"</span>: [<span class="dv">7</span>, <span class="dv">1</span>],</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a> <span class="st">"navy"</span>: [<span class="dv">2</span>, <span class="dv">2</span>],</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a> <span class="st">"star"</span>: [<span class="dv">4</span>, <span class="dv">5</span>]}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>For example, when searching for the word <code>star</code>, the starting position is row 4 and column 5 for the letter <code>s</code>. A word in the grid can be horizontal or vertical, the order of letters may go forward or backward. Consider the cases when a word only show up once in the grid.</p>
 </section>
-<section id="development-strategy" class="level1">
-<h1>Development Strategy</h1>
+<section id="development-strategy-1" class="level1">
+<h1>Development Strategy 1</h1>
 <p>This section covers how you should go about structuring and implementing the code. In total, your program should have at least 5 functions. My recommendation for these five functions:</p>
 <ul>
 <li>A function to load in the forwards words, computes the backwards version of each word, and save into a dictionary</li>
@@ -1061,18 +1058,33 @@ A M E R I C A
 <p>In vertical search, you have to search for the words in the columns of the grid, rather than the rows. This is a bit more complex, but still very do-able. The way you should go about this is create a loop where you iterate through the column indexes. Within this loop, create another loop that goes through every character in that column and creates a list of those characters. Then, you can treat this column as if it is a row.</p>
 </section>
 </section>
+<section id="development-strategy-2" class="level1">
+<h1>Development Strategy 2</h1>
+<p>You may also consider the another strategy:</p>
+<ul>
+<li>A function to load in the words and save into a list</li>
+<li>One to get each word of the 4 directions at each position
+<ul>
+<li>The 4 directions are: horizontal forward, horizontal backward, vertical forward, and vertical backward</li>
+<li>For example, for position <code>[2, 2]</code>, the words are: <code>navybm</code>, <code>ns</code>, <code>nzzaql</code> and <code>nr</code></li>
+</ul></li>
+<li>One to save all the words in the 4 directions for all the indices using a dictionary</li>
+<li>One for checking if a word is found in any one of the 4 directions (the value) and where it is (the key)</li>
+<li>You may have other functions as well. You should build this program in the following sequence:</li>
+</ul>
+</section>
 <section id="example-run-1" class="level1">
 <h1>Example run</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    word_bank <span class="op">=</span> text_to_dictionary(<span class="st">"test_word_bank.txt"</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    grid <span class="op">=</span> load_search_grid(<span class="st">"test_puzzle_grid.txt"</span>)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> search(word_bank, grid) <span class="op">==</span> {<span class="st">"army"</span>: [<span class="dv">1</span>, <span class="dv">6</span>],</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"bullet"</span>: [<span class="dv">6</span>, <span class="dv">2</span>],</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"america"</span>: [<span class="dv">7</span>, <span class="dv">1</span>],</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"navy"</span>: [<span class="dv">2</span>, <span class="dv">2</span>],</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"star"</span>: [<span class="dv">4</span>, <span class="dv">5</span>]}</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Passed test."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    word_bank <span class="op">=</span> text_to_dictionary(<span class="st">"words.txt"</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    grid <span class="op">=</span> load_search_grid(<span class="st">"grid.txt"</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> search(word_bank, grid) <span class="op">==</span> {<span class="st">"army"</span>: [<span class="dv">1</span>, <span class="dv">6</span>],</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"bullet"</span>: [<span class="dv">6</span>, <span class="dv">2</span>],</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"america"</span>: [<span class="dv">7</span>, <span class="dv">1</span>],</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"navy"</span>: [<span class="dv">2</span>, <span class="dv">2</span>],</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"star"</span>: [<span class="dv">4</span>, <span class="dv">5</span>]}</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Passed test."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

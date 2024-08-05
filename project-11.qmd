@@ -26,7 +26,7 @@ You should name the file `wordsearch.py`. Your code should have a function calle
 
 ## Words text file
 
-Your program should open up and read a text file name which determines which words you are searching for in your puzzle file! You can assume that each line in the input text file is formatted as follows: each line of the file is a word from the "word bank." 
+Your program should open up and read a text file name which determines which words you are searching for in your puzzle file! You can assume that each line in the input text file is formatted as follows: each line of the file is a word from the "word bank". 
 
 Contents of `words.txt`:
 
@@ -35,19 +35,10 @@ computer
 science
 ```
 
-Your program should open and read the input text file into the program and store the mapping between forwards and backwards words in a dictionary. The keys of the dictionary should be the forward version of the word, and the value the keys map to, should be the backward version of that word. Given the example content of words.txt shown above, the words dictionary should have the keys and values shown below:
-
-
-```{python}
-#| eval: false
-words = {"computer":"retupmoc", "science":"ecneics"}
-```
-
-After you have read in the file and constructed this dictionary, you can use it to determine your word bank, which words you will need to look for within the puzzle.
 
 ## Puzzle text file
 
-This file contains a grid of letters and hidden within those letters are certain words you will need to be searching for. You will use your newly created words dictionary to figure out what letter combination of words you need to find. This is an example of what this word-grid file would look like:
+This file contains a grid of letters and hidden within those letters are certain words you will need to be searching for. You will use the words in `words.txt` to figure out what letter combination of words you need to find. This is an example of what this word-grid file would look like:
 
 <pre>
 W O D I W S M Z H 
@@ -106,7 +97,9 @@ Your program should return:
  "star": [4, 5]}
 ```
 
-# Development Strategy
+For example, when searching for the word `star`, the starting position is row 4 and column 5 for the letter `s`. A word in the grid can be horizontal or vertical, the order of letters may go forward or backward. Consider the cases when a word only show up once in the grid.
+
+# Development Strategy 1
 
 This section covers how you should go about structuring and implementing the code. In total, your program should have at least 5 functions. My recommendation for these five functions:
 
@@ -134,14 +127,26 @@ There will be separate test cases for horizontal and for vertical. I recommend t
 
 In vertical search, you have to search for the words in the columns of the grid, rather than the rows. This is a bit more complex, but still very do-able. The way you should go about this is create a loop where you iterate through the column indexes. Within this loop, create another loop that goes through every character in that column and creates a list of those characters. Then, you can treat this column as if it is a row.
 
+# Development Strategy 2
+
+You may also consider the another strategy: 
+
+* A function to load in the words and save into a list
+* One to get each word of the 4 directions at each position
+  * The 4 directions are: horizontal forward, horizontal backward, vertical forward, and vertical backward
+  * For example, for position `[2, 2]`, the words are: `navybm`, `ns`, `nzzaql` and `nr`
+* One to save all the words in the 4 directions for all the indices using a dictionary
+* One for checking if a word is found in any one of the 4 directions (the value) and where it is (the key)
+* You may have other functions as well. You should build this program in the following sequence:
+
 # Example run
 
 ```{python}
 #| echo: true
 #| eval: false
 if __name__ == '__main__':
-    word_bank = text_to_dictionary("test_word_bank.txt")
-    grid = load_search_grid("test_puzzle_grid.txt")
+    word_bank = text_to_dictionary("words.txt")
+    grid = load_search_grid("grid.txt")
     assert search(word_bank, grid) == {"army": [1, 6],
                                        "bullet": [6, 2],
                                        "america": [7, 1],

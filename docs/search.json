@@ -1425,14 +1425,14 @@
     "href": "project-11.html#words-text-file",
     "title": "Programming Project 11",
     "section": "Words text file",
-    "text": "Words text file\nYour program should open up and read a text file name which determines which words you are searching for in your puzzle file! You can assume that each line in the input text file is formatted as follows: each line of the file is a word from the “word bank.”\nContents of words.txt:\n\ncomputer\nscience\n\nYour program should open and read the input text file into the program and store the mapping between forwards and backwards words in a dictionary. The keys of the dictionary should be the forward version of the word, and the value the keys map to, should be the backward version of that word. Given the example content of words.txt shown above, the words dictionary should have the keys and values shown below:\n\nwords = {\"computer\":\"retupmoc\", \"science\":\"ecneics\"}\n\nAfter you have read in the file and constructed this dictionary, you can use it to determine your word bank, which words you will need to look for within the puzzle."
+    "text": "Words text file\nYour program should open up and read a text file name which determines which words you are searching for in your puzzle file! You can assume that each line in the input text file is formatted as follows: each line of the file is a word from the “word bank”.\nContents of words.txt:\n\ncomputer\nscience"
   },
   {
     "objectID": "project-11.html#puzzle-text-file",
     "href": "project-11.html#puzzle-text-file",
     "title": "Programming Project 11",
     "section": "Puzzle text file",
-    "text": "Puzzle text file\nThis file contains a grid of letters and hidden within those letters are certain words you will need to be searching for. You will use your newly created words dictionary to figure out what letter combination of words you need to find. This is an example of what this word-grid file would look like:\nW O D I W S M Z H \nN R M E W A N D A \nL Z H I N O K L H \nS R E G N E V A V \nI F R C X H C Q X \nA H T Z B A Y K Q \nA R A M E R I C A\n\nThe puzzle file could have more or less Rows/Columns depending on each test case."
+    "text": "Puzzle text file\nThis file contains a grid of letters and hidden within those letters are certain words you will need to be searching for. You will use the words in words.txt to figure out what letter combination of words you need to find. This is an example of what this word-grid file would look like:\nW O D I W S M Z H \nN R M E W A N D A \nL Z H I N O K L H \nS R E G N E V A V \nI F R C X H C Q X \nA H T Z B A Y K Q \nA R A M E R I C A\n\nThe puzzle file could have more or less Rows/Columns depending on each test case."
   },
   {
     "objectID": "project-11.html#output",
