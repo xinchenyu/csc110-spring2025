@@ -129,7 +129,7 @@ In vertical search, you have to search for the words in the columns of the grid,
 
 # Development Strategy 2
 
-You may also consider the another strategy: 
+You may also consider another strategy: 
 
 * A function to load in the words and save into a list
 * One to get each word of the 4 directions at each position
