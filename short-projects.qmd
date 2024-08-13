@@ -12,59 +12,72 @@ To schedule your lab session go to [the weekly lab session spreadsheet](https://
 
 This is for information only. You need to [sign up for a specific lab session](https://docs.google.com/spreadsheets/d/1mS3H-8GyLHb__rZaf9j66khmkncQgeqEXfyVk2l0sNo/edit?usp=sharing) to be able to attend it.
 
+## Lab 01
+
+September 3 to September 9 -- work on Short Project 01
+
+[Instructions for Short Project 01]()
+
+## Lab 02
+
+September 10 to September 16 -- work on Short Project 02
+
+[Instructions for Short Project 02]()
+
+## Lab 03
+
+September 17 to September 23 -- work on Short Project 03
+
+[Instructions for Short Project 03]()
+
 ## Lab 04
 
-February 6 to February 12 -- work on Short Project 04
+September 24 to September 30 -- work on Short Project 04
 
-[Instructions for Short Project 04](https://adrianapicoral.com/csc-110/pBT6ULZ1Lk.html)
+[Instructions for Short Project 04]()
 
 ## Lab 05
 
-February 13 to February 19 -- work on Short Project 05
-
-
-[Instructions for Short Project 05](https://adrianapicoral.com/csc-110/WA7aUvXjfV.html)
+October 1 to October 7 --  work on one previous short project (optional lab)
 
 ## Lab 06
 
-February 20 to February 25 -- work on Short Project 06
+October 8 to October 14 -- work on Short Project 05
 
-[Instructions for Short Project 06](https://adrianapicoral.com/csc-110/IWjLyyIYd1.html)
+[Instructions for Short Project 05]()
 
 ## Lab 07
 
-March 11 to March 15 -- work on Short Project 07
+October 15 to October 21 -- work on Short Project 06
 
-[Instructions for Short Project 07](https://adrianapicoral.com/csc-110/wncjVfMUSy.html)
+[Instructions for Short Project 06]()
 
 ## Lab 08
 
-March 18 to March 22 --  work on one previous short project (optional lab)
+October 22 to October 28 --  work on Short Project 07
+
+[Instructions for Short Project 07]()
 
 ## Lab 09
 
-March 15 to March 29 -- work on Short Project 08
+October 29 to November 4 -- work on Short Project 08
 
-[Instructions for Short Project 08](https://adrianapicoral.com/csc-110/cINZGYO27Q.html)
+[Instructions for Short Project 08]()
 
 ## Lab 10
 
-April 1 to April 5 -- work on Short Project 09
+November 5 to November 11 -- work on Short Project 09
 
-[Instructions for Short Project 09](https://adrianapicoral.com/csc-110/5ZNc2NEebu.html)
+[Instructions for Short Project 09]()
 
 ## Lab 11
 
-April 8 to April 12 -- work on Short Project 10
+November 12 to November 18 -- work on Short Project 10
 
-[Instructions for Short Project 10](https://adrianapicoral.com/csc-110/FQthkpyHfi.html)
+[Instructions for Short Project 10]()
 
 ## Lab 12
 
-April 15 to April 19 --  work on one previous short project (optional lab)
+November 19 to November 27 --  work on Short Project 11
 
-## Lab 13
-
-April 22 to April 26 -- work on Short Project 11
-
-[Instructions for Short Project 11](https://adrianapicoral.com/csc-110/suIyOODHYh.html)
+[Instructions for Short Project 11]()

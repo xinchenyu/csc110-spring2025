@@ -263,7 +263,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Biweekly quizzes will always be on Wednesday (when there’s no other evaluations) in class (pencil and paper format).\nMidterm (individual) exams (pencil and paper format):\n\nMidterm Exam 1 - Wednesday, February 14, 2024\nMidterm Exam 2 - Wednesday, March 27, 2024\nMidterm Exam 3 - Wednesday, April 24, 2024\n\nThe final exam (pencil and paper format) for all sections will be on:\n\nFriday, May 03, 2024 – 6:00pm - 8:00pm in CESL 102 and CESL 103.\n\nAll assignments that are submitted on Gradescope are due at 9pm (Tuesdays for programming problems, and Wednesdays for Programming Projects)."
+    "text": "Biweekly quizzes will always be on Wednesday (when there’s no other evaluations) in class (pencil and paper format).\nMidterm (individual) exams (pencil and paper format):\n\nMidterm Exam 1 - Wednesday, September 25, 2024\nMidterm Exam 2 - Wednesday, October 23, 2024\nMidterm Exam 3 - Wednesday, November 20, 2024\n\nThe final exam (pencil and paper format) for all sections will be on:\n\nFriday, December 13, 2024 – 6:00pm - 8:00pm\n\nThe final exam room is TBD.\nAll assignments that are submitted on Gradescope are due at 9pm (Tuesdays for programming problems, short projects and Thursdays for programming projects).\nIf a week has a midterm (on Wednesday), programming problems and short projects are put off from Tuesday to Friday, programming projects are put off from Thursday to next Monday."
   },
   {
     "objectID": "schedule.html#readings",
@@ -284,7 +284,7 @@
     "href": "schedule.html#assignments",
     "title": "Schedule",
     "section": "Assignments",
-    "text": "Assignments\n\nSurvey – Due date: Tuesday, September 03, 2024 at 9pm\nModule 1 Programming Problems – Due date: Tuesday, September 03, 2024 at 9pm"
+    "text": "Assignments\n\nModule 1 Programming Problems – Due date: Tuesday, September 03, 2024 at 9pm"
   },
   {
     "objectID": "schedule.html#quiz-01-wednesday-september-04-2024",
@@ -312,7 +312,7 @@
     "href": "schedule.html#assignments-1",
     "title": "Schedule",
     "section": "Assignments",
-    "text": "Assignments\n\nModule 2 Programming Problems – Due date: Tuesday, September 10, 2024 at 9pm\nProgramming Project 1 – Due date: Thursday, September 12, 2024 at 9pm"
+    "text": "Assignments\n\nModule 2 Programming Problems – Due date: Tuesday, September 10, 2024 at 9pm\nShort Project 1 – Due date: Tuesday, September 10, 2024 at 9pm\nProgramming Project 1 – Due date: Thursday, September 12, 2024 at 9pm"
   },
   {
     "objectID": "schedule.html#readings-2",
@@ -333,7 +333,7 @@
     "href": "schedule.html#assignments-2",
     "title": "Schedule",
     "section": "Assignments",
-    "text": "Assignments\n\nModule 3 Programming Problems – Due date: Tuesday, September 17, 2024 at 9pm\nProgramming Project 2 – Due date: Thursday, September 19, 2024 at 9pm"
+    "text": "Assignments\n\nModule 3 Programming Problems – Due date: Tuesday, September 17, 2024 at 9pm\nShort Project 2 – Due date: Tuesday, September 17, 2024 at 9pm\nProgramming Project 2 – Due date: Thursday, September 19, 2024 at 9pm"
   },
   {
     "objectID": "schedule.html#quiz-02-wednesday-september-11-2024",
@@ -361,7 +361,7 @@
     "href": "schedule.html#assignments-3",
     "title": "Schedule",
     "section": "Assignments",
-    "text": "Assignments\n\nModule 4 Programming Problems – Due date: Friday, September 27, 2024 at 9pm\nProgramming Project 3 – Due date: Monday, September 30, 2024 at 9pm"
+    "text": "Assignments\n\nModule 4 Programming Problems – Due date: Friday, September 27, 2024 at 9pm\nShort Project 3 – Due date: Friday, September 27, 2024 at 9pm\nProgramming Project 3 – Due date: Monday, September 30, 2024 at 9pm"
   },
   {
     "objectID": "schedule.html#readings-3",
@@ -382,7 +382,7 @@
     "href": "schedule.html#assignments-4",
     "title": "Schedule",
     "section": "Assignments",
-    "text": "Assignments\n\nModule 5 Programming Problems – Due date: Tuesday, October 01, 2024 at 9pm\nProgramming Project 4 – Due date: Thursday, October 03, 2024 at 9pm"
+    "text": "Assignments\n\nModule 5 Programming Problems – Due date: Tuesday, October 01, 2024 at 9pm\nShort Project 4 – Due date: Tuesday, October 01, 2024 at 9pm\nProgramming Project 4 – Due date: Thursday, October 03, 2024 at 9pm"
   },
   {
     "objectID": "schedule.html#midterm-1-wednesday-september-25-2024",
@@ -410,7 +410,7 @@
     "href": "schedule.html#assignments-5",
     "title": "Schedule",
     "section": "Assignments",
-    "text": "Assignments\n\nModule 6 Programming Problems – Due date: Tuesday, October 08, 2024 at 9pm\nProgramming Project 5 – Due date: Thursday, October 17, 2024 at 9pm"
+    "text": "Assignments\n\nModule 6 Programming Problems – Due date: Tuesday, October 08, 2024 at 9pm\nOptional lab if you have missed one"
   },
   {
     "objectID": "schedule.html#quiz-03-wednesday-september-18-2024",
@@ -438,7 +438,7 @@
     "href": "schedule.html#assignments-6",
     "title": "Schedule",
     "section": "Assignments",
-    "text": "Assignments\n\nModule 7 Programming Problems – Due date: Tuesday, October 15, 2024 at 9pm\nProgramming Project 6 – Due date: Monday, October 28, 2024 at 9pm"
+    "text": "Assignments\n\nModule 7 Programming Problems – Due date: Tuesday, October 15, 2024 at 9pm\nShort Project 5 – Due date: Tuesday, October 15, 2024 at 9pm\nProgramming Project 5 – Due date: Thursday, October 17, 2024 at 9pm"
   },
   {
     "objectID": "schedule.html#readings-6",
@@ -459,7 +459,7 @@
     "href": "schedule.html#assignments-7",
     "title": "Schedule",
     "section": "Assignments",
-    "text": "Assignments\n\nModule 8 Programming Problems – Due date: Friday, October 25, 2024 at 9pm\nProgramming Project 7 – Due date: Thursday, October 31, 2024 at 9pm"
+    "text": "Assignments\n\nModule 8 Programming Problems – Due date: Friday, October 25, 2024 at 9pm\nShort Project 6 – Due date: Friday, October 25, 2024 at 9pm\nProgramming Project 6 – Due date: Monday, October 28, 2024 at 9pm"
   },
   {
     "objectID": "schedule.html#quiz-04-wednesday-october-02-2024",
@@ -487,7 +487,7 @@
     "href": "schedule.html#assignments-8",
     "title": "Schedule",
     "section": "Assignments",
-    "text": "Assignments\n\nModule 9 Programming Problems – Due date: Tuesday, October 29, 2024 at 9pm"
+    "text": "Assignments\n\nModule 9 Programming Problems – Due date: Tuesday, October 29, 2024 at 9pm\nShort Project 7 – Due date: Tuesday, October 29, 2024 at 9pm\nProgramming Project 7 – Due date: Thursday, October 31, 2024 at 9pm"
   },
   {
     "objectID": "schedule.html#quiz-05-wednesday-october-09-2024",
@@ -515,7 +515,7 @@
     "href": "schedule.html#assignments-9",
     "title": "Schedule",
     "section": "Assignments",
-    "text": "Assignments\n\nModule 10 Programming Problems – Due date: Tuesday, November 05, 2024 at 9pm\nProgramming Project 8 – Due date: Thursday, November 07, 2024 at 9pm"
+    "text": "Assignments\n\nModule 10 Programming Problems – Due date: Tuesday, November 05, 2024 at 9pm\nShort Project 8 – Due date: Tuesday, November 05, 2024 at 9pm\nProgramming Project 8 – Due date: Thursday, November 07, 2024 at 9pm"
   },
   {
     "objectID": "schedule.html#midterm-2-wednesday-october-23-2024",
@@ -543,7 +543,7 @@
     "href": "schedule.html#assignments-10",
     "title": "Schedule",
     "section": "Assignments",
-    "text": "Assignments\n\nModule 11 Programming Problems – Due date: Tuesday, November 12, 2024 at 9pm\nProgramming Project 9 – Due date: Thursday, November 14, 2024 at 9pm"
+    "text": "Assignments\n\nModule 11 Programming Problems – Due date: Tuesday, November 12, 2024 at 9pm\nShort Project 9 – Due date: Tuesday, November 12, 2024 at 9pm\nProgramming Project 9 – Due date: Thursday, November 14, 2024 at 9pm"
   },
   {
     "objectID": "schedule.html#readings-10",
@@ -564,7 +564,7 @@
     "href": "schedule.html#assignments-11",
     "title": "Schedule",
     "section": "Assignments",
-    "text": "Assignments\n\nModule 12 Programming Problems – Due date: Friday, November 22, 2024 at 9pm\nProgramming Project 10 – Due date: Monday, November 25, 2024 at 9pm"
+    "text": "Assignments\n\nModule 12 Programming Problems – Due date: Friday, November 22, 2024 at 9pm\nShort Project 10 – Due date: Friday, November 22, 2024 at 9pm\nProgramming Project 10 – Due date: Monday, November 25, 2024 at 9pm"
   },
   {
     "objectID": "schedule.html#quiz-06-wednesday-october-16-2024",
@@ -592,7 +592,7 @@
     "href": "schedule.html#assignments-12",
     "title": "Schedule",
     "section": "Assignments",
-    "text": "Assignments\n\nModule 13 Programming Problems – Due date: Tuesday, November 26, 2024 at 9pm\nProgramming Project 11 – Due date: Monday, December 02, 2024 at 9pm"
+    "text": "Assignments\n\nModule 13 Programming Problems – Due date: Tuesday, November 26, 2024 at 9pm\nShort Project 11 – Due date: Tuesday, November 26, 2024 at 9pm\nProgramming Project 11 – Due date: Monday, December 02, 2024 at 9pm"
   },
   {
     "objectID": "schedule.html#quiz-07-wednesday-october-30-2024",
@@ -802,63 +802,63 @@
     "href": "short-projects.html#lab-04",
     "title": "Short Projects Dates and Instructions",
     "section": "Lab 04",
-    "text": "Lab 04\nFebruary 6 to February 12 – work on Short Project 04\nInstructions for Short Project 04"
+    "text": "Lab 04\nSeptember 24 to September 30 – work on Short Project 04\nInstructions for Short Project 04"
   },
   {
     "objectID": "short-projects.html#lab-05",
     "href": "short-projects.html#lab-05",
     "title": "Short Projects Dates and Instructions",
     "section": "Lab 05",
-    "text": "Lab 05\nFebruary 13 to February 19 – work on Short Project 05\nInstructions for Short Project 05"
+    "text": "Lab 05\nOctober 1 to October 7 – work on one previous short project (optional lab)"
   },
   {
     "objectID": "short-projects.html#lab-06",
     "href": "short-projects.html#lab-06",
     "title": "Short Projects Dates and Instructions",
     "section": "Lab 06",
-    "text": "Lab 06\nFebruary 20 to February 25 – work on Short Project 06\nInstructions for Short Project 06"
+    "text": "Lab 06\nOctober 8 to October 14 – work on Short Project 05\nInstructions for Short Project 05"
   },
   {
     "objectID": "short-projects.html#lab-07",
     "href": "short-projects.html#lab-07",
     "title": "Short Projects Dates and Instructions",
     "section": "Lab 07",
-    "text": "Lab 07\nMarch 11 to March 15 – work on Short Project 07\nInstructions for Short Project 07"
+    "text": "Lab 07\nOctober 15 to October 21 – work on Short Project 06\nInstructions for Short Project 06"
   },
   {
     "objectID": "short-projects.html#lab-08",
     "href": "short-projects.html#lab-08",
     "title": "Short Projects Dates and Instructions",
     "section": "Lab 08",
-    "text": "Lab 08\nMarch 18 to March 22 – work on one previous short project (optional lab)"
+    "text": "Lab 08\nOctober 22 to October 28 – work on Short Project 07\nInstructions for Short Project 07"
   },
   {
     "objectID": "short-projects.html#lab-09",
     "href": "short-projects.html#lab-09",
     "title": "Short Projects Dates and Instructions",
     "section": "Lab 09",
-    "text": "Lab 09\nMarch 15 to March 29 – work on Short Project 08\nInstructions for Short Project 08"
+    "text": "Lab 09\nOctober 29 to November 4 – work on Short Project 08\nInstructions for Short Project 08"
   },
   {
     "objectID": "short-projects.html#lab-10",
     "href": "short-projects.html#lab-10",
     "title": "Short Projects Dates and Instructions",
     "section": "Lab 10",
-    "text": "Lab 10\nApril 1 to April 5 – work on Short Project 09\nInstructions for Short Project 09"
+    "text": "Lab 10\nNovember 5 to November 11 – work on Short Project 09\nInstructions for Short Project 09"
   },
   {
     "objectID": "short-projects.html#lab-11",
     "href": "short-projects.html#lab-11",
     "title": "Short Projects Dates and Instructions",
     "section": "Lab 11",
-    "text": "Lab 11\nApril 8 to April 12 – work on Short Project 10\nInstructions for Short Project 10"
+    "text": "Lab 11\nNovember 12 to November 18 – work on Short Project 10\nInstructions for Short Project 10"
   },
   {
     "objectID": "short-projects.html#lab-12",
     "href": "short-projects.html#lab-12",
     "title": "Short Projects Dates and Instructions",
     "section": "Lab 12",
-    "text": "Lab 12\nApril 15 to April 19 – work on one previous short project (optional lab)"
+    "text": "Lab 12\nNovember 19 to November 27 – work on Short Project 11\nInstructions for Short Project 11"
   },
   {
     "objectID": "short-projects.html#lab-13",
@@ -5528,5 +5528,82 @@
     "title": "Module 1 Assignments",
     "section": "",
     "text": "Programming Problems should be submitted to gradescope.\nIf you need instructions on how to submit your .py files to gradescope, watch the video at the end of this page.\n\nSurvey\nDue date: at 9pm\nhttps://uarizona.co1.qualtrics.com/jfe/form/SV_0q8KC0FwVhCiYD4\nThis is a survey to collect information on your expectations for CSc 110 Computer Programming I. The completion of this survey is required and will be used for grading purposes.\n\n\nProgramming Problem 1\nDue date: Tuesday, September 03, 2024 at 9pm\nWrite a python program that prints out the string “Hello World!”. Be careful with capitalization and punctuation. Remember to write code inside a function called main().\nThe exact output of the program should be:\nHello World!\n\nName the program hello.py. Make sure that gradescope gives you the points for passing the test case.\n\n\nProgramming Problem 2\nDue date: Tuesday, September 03, 2024 at 9pm\nWrite a python program that prints out the following excerpt from Amanda Gorman’s poem, “The Hill We Climb”:\nWhen day comes, we ask ourselves, where can we find light in this never-ending shade?\n\nThe loss we carry. A sea we must wade.\nWe braved the belly of the beast.\n\nWe've learned that quiet isn't always peace, \nand the norms and notions of what \"just\" is isn't always justice.\n\nAnd yet the dawn is ours before we knew it.\n\nSomehow we do it.\n\nName the program poem.py. Remember to write code inside a function called main(). Make sure that gradescope gives you the points for passing the test case. You can submit your solution to gradescope as many times as you want before the deadline.\nHINT: print() has a parameter called end which is set as end=\"\\n\" by default – change that to end=\"\" to remove the last newline character.\nMake sure you do the reading for this module, especially the section on Escape Sequences\n\n\nHow to submit to gradescope video"
+  },
+  {
+    "objectID": "schedule.html#quiz-03-wednesday-september-18-2024-1",
+    "href": "schedule.html#quiz-03-wednesday-september-18-2024-1",
+    "title": "Schedule",
+    "section": "Quiz 03 (Wednesday, September 18, 2024)",
+    "text": "Quiz 03 (Wednesday, September 18, 2024)"
+  },
+  {
+    "objectID": "short-projects.html#lab-01",
+    "href": "short-projects.html#lab-01",
+    "title": "Short Projects Dates and Instructions",
+    "section": "Lab 01",
+    "text": "Lab 01\nSeptember 3 to September 9 – work on Short Project 01\nInstructions for Short Project 01"
+  },
+  {
+    "objectID": "short-projects.html#lab-02",
+    "href": "short-projects.html#lab-02",
+    "title": "Short Projects Dates and Instructions",
+    "section": "Lab 02",
+    "text": "Lab 02\nSeptember 10 to September 16 – work on Short Project 02\nInstructions for Short Project 02"
+  },
+  {
+    "objectID": "short-projects.html#lab-03",
+    "href": "short-projects.html#lab-03",
+    "title": "Short Projects Dates and Instructions",
+    "section": "Lab 03",
+    "text": "Lab 03\nSeptember 17 to September 23 – work on Short Project 03\nInstructions for Short Project 03"
+  },
+  {
+    "objectID": "schedule.html#quiz-04-wednesday-october-02-2024-1",
+    "href": "schedule.html#quiz-04-wednesday-october-02-2024-1",
+    "title": "Schedule",
+    "section": "Quiz 04 (Wednesday, October 02, 2024)",
+    "text": "Quiz 04 (Wednesday, October 02, 2024)"
+  },
+  {
+    "objectID": "schedule.html#quiz-05-wednesday-september-18-2024",
+    "href": "schedule.html#quiz-05-wednesday-september-18-2024",
+    "title": "Schedule",
+    "section": "Quiz 05 (Wednesday, September 18, 2024)",
+    "text": "Quiz 05 (Wednesday, September 18, 2024)"
+  },
+  {
+    "objectID": "schedule.html#quiz-06-wednesday-september-18-2024",
+    "href": "schedule.html#quiz-06-wednesday-september-18-2024",
+    "title": "Schedule",
+    "section": "Quiz 06 (Wednesday, September 18, 2024)",
+    "text": "Quiz 06 (Wednesday, September 18, 2024)"
+  },
+  {
+    "objectID": "schedule.html#quiz-07-wednesday-september-18-2024",
+    "href": "schedule.html#quiz-07-wednesday-september-18-2024",
+    "title": "Schedule",
+    "section": "Quiz 07 (Wednesday, September 18, 2024)",
+    "text": "Quiz 07 (Wednesday, September 18, 2024)"
+  },
+  {
+    "objectID": "schedule.html#midterm-2-wednesday-october-23-2024-1",
+    "href": "schedule.html#midterm-2-wednesday-october-23-2024-1",
+    "title": "Schedule",
+    "section": "Midterm 2 (Wednesday, October 23, 2024)",
+    "text": "Midterm 2 (Wednesday, October 23, 2024)"
+  },
+  {
+    "objectID": "schedule.html#quiz-08-wednesday-november-06-2024",
+    "href": "schedule.html#quiz-08-wednesday-november-06-2024",
+    "title": "Schedule",
+    "section": "Quiz 08 (Wednesday, November 06, 2024)",
+    "text": "Quiz 08 (Wednesday, November 06, 2024)"
+  },
+  {
+    "objectID": "schedule.html#quiz-09-wednesday-november-13-2024",
+    "href": "schedule.html#quiz-09-wednesday-november-13-2024",
+    "title": "Schedule",
+    "section": "Quiz 09 (Wednesday, November 13, 2024)",
+    "text": "Quiz 09 (Wednesday, November 13, 2024)"
   }
 ]
