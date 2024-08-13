@@ -3,7 +3,6 @@ title: "Syllabus"
 author: "Xinchen Yu (she/her/hers)"
 date: "Fall 2024"
 output:
-  html_document: default
   pdf_document: default
 subtitle: CSc 110 Computer Programming I
 ---
@@ -137,9 +136,9 @@ All online communication will be conducted through my official UA e-mail address
 
 All readings, videos, and assignment instructions will be available in the course website.
 
--   Course D2L: <https://d2l.arizona.edu/d2l/home/1403933>
--   Course Gradescope: <https://www.gradescope.com/courses/691034>
--   Course website: <https://xinchenyu.github.io/csc110-spring2024/>
+-   Course D2L: <https://d2l.arizona.edu/d2l/home/1493524>
+-   Course Gradescope: <https://www.gradescope.com/courses/822022>
+-   Course website: <https://xinchenyu.github.io/csc110-fall2024/>
 
 # Assignments and Examinations: Schedule/Due Dates
 
