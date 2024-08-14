@@ -767,21 +767,21 @@
     "href": "assignments-03.html",
     "title": "Module 3 Assignments",
     "section": "",
-    "text": "Due date: Tuesday, September 17, 2024 at 9pm\nShort Programming projects are submitted during our weekly 45-minute in-person lab sessions. Each lab sessions is guided by two TAs. The instructions for the short project will be available only during the lab sessions. To schedule your lab session go to the weekly lab session spreadsheet.\nProgramming Problems should be submitted to gradescope.\n\n\nDue date: Tuesday, September 17, 2024 at 9pm\nWrite two python functions. The first function does the following:\n\nIts name is kg_to_lbs.\nThe function prompts the user to enter a value in kilos (use the input() function) – your function should take no arguments\nIt converts the kilos entered to pounds (by multiplying kilos by 2.205)\nIt returns the converted weight in pounds with two decimals of precision\n\nThe second function does the following:\n\nIts name is liters_to_gallons\nThe function prompts the user to enter a value in liters (use the input() function) – your function should take no arguments\nIt converts the liters entered to gallons (divide the quantity in liters by 3.785)\nIt returns the converted volume in gallons with two decimals of precision\n\nName the program conversions.py. Make sure that gradescope gives you the points for passing the test cases.\nDevelopment test cases:\n\nprint(\"Enter 1:\")\nprint( kg_to_lbs() ) # 2.21 \n\nprint(\"Enter 6:\")\nprint( kg_to_lbs() ) # 13.23\n\nprint(\"Enter 120:\")\nprint( kg_to_lbs() ) # 264.6 \n\nprint(\"Enter 1:\")\nprint( liters_to_gallons() ) # 0.26 \n\nprint(\"Enter 3:\")\nprint( liters_to_gallons() ) # 0.79\n\nprint(\"Enter 6:\")\nprint( liters_to_gallons() ) # 1.59 \n\nYou can also download the ready-to-run script to test your solution.\n\n\n\nDue date: Tuesday, September 17, 2024 at 9pm\nWrite a python function that does the following:\n\nIts name is is_even\nIt takes an input number from the user\nIt returns True if the number entered is even, False if number is odd\n\nRemember that the modulus operator (%) returns the remainder of an integer division. Also, 0 is interpreted as False and 1 as True.\nName the program even.py. Make sure that gradescope gives you the points for passing the test cases.\nDevelopment test cases:\n\nprint(\"Enter 0:\")\nprint( is_even() ) # True \n\nprint(\"Enter 1:\")\nprint( is_even()) # False \n\nprint(\"Enter 2:\")\nprint( is_even()) # True \n\nprint(\"Enter -2:\")\nprint( is_even()) # True \n\nYou can also download the ready-to-run script to test your solution."
+    "text": "Due date: Tuesday, September 17, 2024 at 9pm\nShort Programming projects are submitted during our weekly 45-minute in-person lab sessions. Each lab sessions is guided by two TAs. The instructions for the short project will be available only during the lab sessions. To schedule your lab session go to the weekly lab session spreadsheet in Short Project Dates and Instructions."
   },
   {
     "objectID": "assignments-03.html#programming-problem-5",
     "href": "assignments-03.html#programming-problem-5",
     "title": "Module 3 Assignments",
-    "section": "",
-    "text": "Due date: Tuesday, September 17, 2024 at 9pm\nWrite two python functions. The first function does the following:\n\nIts name is kg_to_lbs.\nThe function prompts the user to enter a value in kilos (use the input() function) – your function should take no arguments\nIt converts the kilos entered to pounds (by multiplying kilos by 2.205)\nIt returns the converted weight in pounds with two decimals of precision\n\nThe second function does the following:\n\nIts name is liters_to_gallons\nThe function prompts the user to enter a value in liters (use the input() function) – your function should take no arguments\nIt converts the liters entered to gallons (divide the quantity in liters by 3.785)\nIt returns the converted volume in gallons with two decimals of precision\n\nName the program conversions.py. Make sure that gradescope gives you the points for passing the test cases.\nDevelopment test cases:\n\nprint(\"Enter 1:\")\nprint( kg_to_lbs() ) # 2.21 \n\nprint(\"Enter 6:\")\nprint( kg_to_lbs() ) # 13.23\n\nprint(\"Enter 120:\")\nprint( kg_to_lbs() ) # 264.6 \n\nprint(\"Enter 1:\")\nprint( liters_to_gallons() ) # 0.26 \n\nprint(\"Enter 3:\")\nprint( liters_to_gallons() ) # 0.79\n\nprint(\"Enter 6:\")\nprint( liters_to_gallons() ) # 1.59 \n\nYou can also download the ready-to-run script to test your solution."
+    "section": "Programming Problem 5",
+    "text": "Programming Problem 5\nDue date: Tuesday, September 17, 2024 at 9pm\nWrite two python functions. The first function does the following:\n\nIts name is kg_to_lbs.\nThe function prompts the user to enter a value in kilos (use the input() function) – your function should take no arguments\nIt converts the kilos entered to pounds (by multiplying kilos by 2.205)\nIt returns the converted weight in pounds with two decimals of precision\n\nThe second function does the following:\n\nIts name is liters_to_gallons\nThe function prompts the user to enter a value in liters (use the input() function) – your function should take no arguments\nIt converts the liters entered to gallons (divide the quantity in liters by 3.785)\nIt returns the converted volume in gallons with two decimals of precision\n\nName the program conversions.py. Make sure that gradescope gives you the points for passing the test cases.\nDevelopment test cases:\n\nprint(\"Enter 1:\")\nprint( kg_to_lbs() ) # 2.21 \n\nprint(\"Enter 6:\")\nprint( kg_to_lbs() ) # 13.23\n\nprint(\"Enter 120:\")\nprint( kg_to_lbs() ) # 264.6 \n\nprint(\"Enter 1:\")\nprint( liters_to_gallons() ) # 0.26 \n\nprint(\"Enter 3:\")\nprint( liters_to_gallons() ) # 0.79\n\nprint(\"Enter 6:\")\nprint( liters_to_gallons() ) # 1.59 \n\nYou can also download the ready-to-run script to test your solution."
   },
   {
     "objectID": "assignments-03.html#programming-problem-6",
     "href": "assignments-03.html#programming-problem-6",
     "title": "Module 3 Assignments",
-    "section": "",
-    "text": "Due date: Tuesday, September 17, 2024 at 9pm\nWrite a python function that does the following:\n\nIts name is is_even\nIt takes an input number from the user\nIt returns True if the number entered is even, False if number is odd\n\nRemember that the modulus operator (%) returns the remainder of an integer division. Also, 0 is interpreted as False and 1 as True.\nName the program even.py. Make sure that gradescope gives you the points for passing the test cases.\nDevelopment test cases:\n\nprint(\"Enter 0:\")\nprint( is_even() ) # True \n\nprint(\"Enter 1:\")\nprint( is_even()) # False \n\nprint(\"Enter 2:\")\nprint( is_even()) # True \n\nprint(\"Enter -2:\")\nprint( is_even()) # True \n\nYou can also download the ready-to-run script to test your solution."
+    "section": "Programming Problem 6",
+    "text": "Programming Problem 6\nDue date: Tuesday, September 17, 2024 at 9pm\nWrite a python function that does the following:\n\nIts name is is_even\nIt takes an input number from the user\nIt returns True if the number entered is even, False if number is odd\n\nRemember that the modulus operator (%) returns the remainder of an integer division. Also, 0 is interpreted as False and 1 as True.\nName the program even.py. Make sure that gradescope gives you the points for passing the test cases.\nDevelopment test cases:\n\nprint(\"Enter 0:\")\nprint( is_even() ) # True \n\nprint(\"Enter 1:\")\nprint( is_even()) # False \n\nprint(\"Enter 2:\")\nprint( is_even()) # True \n\nprint(\"Enter -2:\")\nprint( is_even()) # True \n\nYou can also download the ready-to-run script to test your solution."
   },
   {
     "objectID": "data_structures_dict.html",
@@ -998,7 +998,7 @@
     "href": "assignments-12.html",
     "title": "Module 12 Assignments",
     "section": "",
-    "text": "Due date: Friday, November 22, 2024 at 9pm\nShort Programming projects are submitted during our weekly 45-minute in-person lab sessions. Each lab sessions is guided by two TAs. The instructions for the short project will be available only during the lab sessions. To schedule your lab session go to the weekly lab session spreadsheet."
+    "text": "Due date: Friday, November 22, 2024 at 9pm\nShort Programming projects are submitted during our weekly 45-minute in-person lab sessions. Each lab sessions is guided by two TAs. The instructions for the short project will be available only during the lab sessions. To schedule your lab session go to the weekly lab session spreadsheet in Short Project Dates and Instructions."
   },
   {
     "objectID": "assignments-12.html#programming-problem-23",
@@ -1194,7 +1194,7 @@
     "href": "assignments-11.html",
     "title": "Module 11 Assignments",
     "section": "",
-    "text": "Due date: Tuesday, November 12, 2024 at 9pm\nShort Programming projects are submitted during our weekly 45-minute in-person lab sessions. Each lab sessions is guided by two TAs. The instructions for the short project will be available only during the lab sessions. To schedule your lab session go to the weekly lab session spreadsheet."
+    "text": "Due date: Tuesday, November 12, 2024 at 9pm\nShort Programming projects are submitted during our weekly 45-minute in-person lab sessions. Each lab sessions is guided by two TAs. The instructions for the short project will be available only during the lab sessions. To schedule your lab session go to the weekly lab session spreadsheet in Short Project Dates and Instructions."
   },
   {
     "objectID": "assignments-11.html#programming-problem-21",
@@ -3721,28 +3721,28 @@
     "href": "assignments-09.html",
     "title": "Module 9 Assignments",
     "section": "",
-    "text": "Programming Problems should be submitted to gradescope.\n\n\nDue date: Tuesday, October 29, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is read_csv\nIt takes a string as argument called file_name\nIt opens the file with file_name in read mode\nIt iterates over each line in the file, splitting each line by \",\"\nIt creates a dictionary where the keys are the first item in each line, and the values are the other values (in a list)\nIt returns the dictionary\n\nTest cases:\ncontents of stipends.csv:\n\nPeter,1000\nJoan,50500\nMary,2400\n\n\nprint( read_csv(\"stipends.csv\") ) # {\"Peter\": [1000], \n                                  #  \"Joan\": [50500],\n                                  #  \"Mary\": [2400]}\n\ncontents of population.csv:\n\nCountry,United States,Brazil,Mexico,Canada\nPopulation (in mil),331.00,212.56,128.93,37.74\n\n\nprint( read_csv(\"population.csv\") ) # {\"Country\": [\"United States\", \"Brazil\", \"Mexico\", \"Canada\"],\n                                    #  \"Population (in mil)\": [331.00, 212.56, 128.93, 37.74]}\n\nName the program read_data_file.py. Make sure that gradescope gives you the points for passing the test case.\n\n\n\nDue date: Tuesday, October 29, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is write_csv\nIt takes a dictionary and a string file_name as arguments\nIt opens the file with file_name in write mode\nIt iterates over the dictionary to write lines to the opened .csv\nEach key is the first element of the line, the values are lists that contain the other values in the line\n\nTest cases:\n\nmy_data = {\"Peter\": [1000], \"Joan\": [50500], \"Mary\": [2400]}\nwrite_csv(my_data, \"stipends.csv\")\n\nThis is what stipends.csv should contain:\n\nPeter,1000\nJoan,50500\nMary,2400\n\n\nmy_data = {\"Country\": [\"United States\", \"Brazil\", \"Mexico\", \"Canada\"],\n           \"Population (in mil)\": [331.00, 212.56, 128.93, 37.74]}\nwrite_csv(my_data, \"population.csv\")\n\nThis is what population.csv should contain:\n\nCountry,United States,Brazil,Mexico,Canada\nPopulation (in mil),331.0,212.56,128.93,37.74\n\nName the program write_data_file.py. Make sure that gradescope gives you the points for passing the test case."
+    "text": "Short Programming projects are submitted during our weekly 45-minute in-person lab sessions. Each lab sessions is guided by two TAs. The instructions for the short project will be available only during the lab sessions. To schedule your lab session go to the weekly lab session spreadsheet in Short Project Dates and Instructions."
   },
   {
     "objectID": "assignments-09.html#programming-problem-17",
     "href": "assignments-09.html#programming-problem-17",
     "title": "Module 9 Assignments",
-    "section": "",
-    "text": "Due date: Tuesday, October 29, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is read_csv\nIt takes a string as argument called file_name\nIt opens the file with file_name in read mode\nIt iterates over each line in the file, splitting each line by \",\"\nIt creates a dictionary where the keys are the first item in each line, and the values are the other values (in a list)\nIt returns the dictionary\n\nTest cases:\ncontents of stipends.csv:\n\nPeter,1000\nJoan,50500\nMary,2400\n\n\nprint( read_csv(\"stipends.csv\") ) # {\"Peter\": [1000], \n                                  #  \"Joan\": [50500],\n                                  #  \"Mary\": [2400]}\n\ncontents of population.csv:\n\nCountry,United States,Brazil,Mexico,Canada\nPopulation (in mil),331.00,212.56,128.93,37.74\n\n\nprint( read_csv(\"population.csv\") ) # {\"Country\": [\"United States\", \"Brazil\", \"Mexico\", \"Canada\"],\n                                    #  \"Population (in mil)\": [331.00, 212.56, 128.93, 37.74]}\n\nName the program read_data_file.py. Make sure that gradescope gives you the points for passing the test case."
+    "section": "Programming Problem 17",
+    "text": "Programming Problem 17\nDue date: Tuesday, October 29, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is read_csv\nIt takes a string as argument called file_name\nIt opens the file with file_name in read mode\nIt iterates over each line in the file, splitting each line by \",\"\nIt creates a dictionary where the keys are the first item in each line, and the values are the other values (in a list)\nIt returns the dictionary\n\nTest cases:\ncontents of stipends.csv:\n\nPeter,1000\nJoan,50500\nMary,2400\n\n\nprint( read_csv(\"stipends.csv\") ) # {\"Peter\": [1000], \n                                  #  \"Joan\": [50500],\n                                  #  \"Mary\": [2400]}\n\ncontents of population.csv:\n\nCountry,United States,Brazil,Mexico,Canada\nPopulation (in mil),331.00,212.56,128.93,37.74\n\n\nprint( read_csv(\"population.csv\") ) # {\"Country\": [\"United States\", \"Brazil\", \"Mexico\", \"Canada\"],\n                                    #  \"Population (in mil)\": [331.00, 212.56, 128.93, 37.74]}\n\nName the program read_data_file.py. Make sure that gradescope gives you the points for passing the test case."
   },
   {
     "objectID": "assignments-09.html#programming-problem-18",
     "href": "assignments-09.html#programming-problem-18",
     "title": "Module 9 Assignments",
-    "section": "",
-    "text": "Due date: Tuesday, October 29, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is write_csv\nIt takes a dictionary and a string file_name as arguments\nIt opens the file with file_name in write mode\nIt iterates over the dictionary to write lines to the opened .csv\nEach key is the first element of the line, the values are lists that contain the other values in the line\n\nTest cases:\n\nmy_data = {\"Peter\": [1000], \"Joan\": [50500], \"Mary\": [2400]}\nwrite_csv(my_data, \"stipends.csv\")\n\nThis is what stipends.csv should contain:\n\nPeter,1000\nJoan,50500\nMary,2400\n\n\nmy_data = {\"Country\": [\"United States\", \"Brazil\", \"Mexico\", \"Canada\"],\n           \"Population (in mil)\": [331.00, 212.56, 128.93, 37.74]}\nwrite_csv(my_data, \"population.csv\")\n\nThis is what population.csv should contain:\n\nCountry,United States,Brazil,Mexico,Canada\nPopulation (in mil),331.0,212.56,128.93,37.74\n\nName the program write_data_file.py. Make sure that gradescope gives you the points for passing the test case."
+    "section": "Programming Problem 18",
+    "text": "Programming Problem 18\nDue date: Tuesday, October 29, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is write_csv\nIt takes a dictionary and a string file_name as arguments\nIt opens the file with file_name in write mode\nIt iterates over the dictionary to write lines to the opened .csv\nEach key is the first element of the line, the values are lists that contain the other values in the line\n\nTest cases:\n\nmy_data = {\"Peter\": [1000], \"Joan\": [50500], \"Mary\": [2400]}\nwrite_csv(my_data, \"stipends.csv\")\n\nThis is what stipends.csv should contain:\n\nPeter,1000\nJoan,50500\nMary,2400\n\n\nmy_data = {\"Country\": [\"United States\", \"Brazil\", \"Mexico\", \"Canada\"],\n           \"Population (in mil)\": [331.00, 212.56, 128.93, 37.74]}\nwrite_csv(my_data, \"population.csv\")\n\nThis is what population.csv should contain:\n\nCountry,United States,Brazil,Mexico,Canada\nPopulation (in mil),331.0,212.56,128.93,37.74\n\nName the program write_data_file.py. Make sure that gradescope gives you the points for passing the test case."
   },
   {
     "objectID": "assignments-08.html",
     "href": "assignments-08.html",
     "title": "Module 8 Assignments",
     "section": "",
-    "text": "Due date: Friday, October 25, 2024 at 9pm\nShort Programming projects are submitted during our weekly 45-minute in-person lab sessions. Each lab sessions is guided by two TAs. The instructions for the short project will be available only during the lab sessions. To schedule your lab session go to the weekly lab session spreadsheet."
+    "text": "Due date: Friday, October 25, 2024 at 9pm\nShort Programming projects are submitted during our weekly 45-minute in-person lab sessions. Each lab sessions is guided by two TAs. The instructions for the short project will be available only during the lab sessions. To schedule your lab session go to the weekly lab session spreadsheet in Short Project Dates and Instructions."
   },
   {
     "objectID": "assignments-08.html#programming-problem-15",
@@ -5072,7 +5072,7 @@
     "href": "assignments-05.html",
     "title": "Module 5 Assignments",
     "section": "",
-    "text": "Due date: Tuesday, October 01, 2024 at 9pm\nShort Programming projects are submitted during our weekly 45-minute in-person lab sessions. Each lab sessions is guided by two TAs. The instructions for the short project will be available only during the lab sessions. To schedule your lab session go to the weekly lab session spreadsheet."
+    "text": "Due date: Tuesday, October 01, 2024 at 9pm\nShort Programming projects are submitted during our weekly 45-minute in-person lab sessions. Each lab sessions is guided by two TAs. The instructions for the short project will be available only during the lab sessions. To schedule your lab session go to the weekly lab session spreadsheet in Short Project Dates and Instructions."
   },
   {
     "objectID": "assignments-05.html#programming-problem-9",
@@ -5093,7 +5093,7 @@
     "href": "assignments-10.html",
     "title": "Module 10 Assignments",
     "section": "",
-    "text": "Due date: Tuesday, November 05, 2024 at 9pm\nShort Programming projects are submitted during our weekly 45-minute in-person lab sessions. Each lab sessions is guided by two TAs. The instructions for the short project will be available only during the lab sessions. To schedule your lab session go to the weekly lab session spreadsheet."
+    "text": "Due date: Tuesday, November 05, 2024 at 9pm\nShort Programming projects are submitted during our weekly 45-minute in-person lab sessions. Each lab sessions is guided by two TAs. The instructions for the short project will be available only during the lab sessions. To schedule your lab session go to the weekly lab session spreadsheet in Short Project Dates and Instructions."
   },
   {
     "objectID": "assignments-10.html#programming-problem-19",
@@ -5114,7 +5114,7 @@
     "href": "assignments-04.html",
     "title": "Module 4 Assignments",
     "section": "",
-    "text": "Due date: Friday, September 27, 2024 at 9pm\nShort Programming projects are submitted during our weekly 45-minute in-person lab sessions. Each lab sessions is guided by two TAs. The instructions for the short project will be available only during the lab sessions. To schedule your lab session go to the weekly lab session spreadsheet."
+    "text": "Due date: Friday, September 27, 2024 at 9pm\nShort Programming projects are submitted during our weekly 45-minute in-person lab sessions. Each lab sessions is guided by two TAs. The instructions for the short project will be available only during the lab sessions. To schedule your lab session go to the weekly lab session spreadsheet in Short Project Dates and Instructions."
   },
   {
     "objectID": "assignments-04.html#programming-problem-7",
@@ -5198,7 +5198,7 @@
     "href": "assignments-06.html",
     "title": "Module 6 Assignments",
     "section": "",
-    "text": "Due date: Tuesday, October 15, 2024 at 9pm\nShort Programming projects are submitted during our weekly 45-minute in-person lab sessions. Each lab sessions is guided by two TAs. The instructions for the short project will be available only during the lab sessions. To schedule your lab session go to the weekly lab session spreadsheet."
+    "text": "Due date: Tuesday, October 15, 2024 at 9pm\nShort Programming projects are submitted during our weekly 45-minute in-person lab sessions. Each lab sessions is guided by two TAs. The instructions for the short project will be available only during the lab sessions. To schedule your lab session go to the weekly lab session spreadsheet in Short Project Dates and Instructions."
   },
   {
     "objectID": "assignments-06.html#programming-problem-11",
@@ -5219,7 +5219,7 @@
     "href": "assignments-07.html",
     "title": "Module 7 Assignments",
     "section": "",
-    "text": "Due date: Friday, October 25, 2024 at 9pm\nShort Programming projects are submitted during our weekly 45-minute in-person lab sessions. Each lab sessions is guided by two TAs. The instructions for the short project will be available only during the lab sessions. To schedule your lab session go to the weekly lab session spreadsheet."
+    "text": "Due date: Friday, October 25, 2024 at 9pm\nShort Programming projects are submitted during our weekly 45-minute in-person lab sessions. Each lab sessions is guided by two TAs. The instructions for the short project will be available only during the lab sessions. To schedule your lab session go to the weekly lab session spreadsheet in Short Project Dates and Instructions."
   },
   {
     "objectID": "assignments-07.html#programming-problem-13",
@@ -5240,21 +5240,21 @@
     "href": "assignments-13.html",
     "title": "Module 13 Assignments",
     "section": "",
-    "text": "Programming Problems should be submitted to gradescope.\n\n\nDue date: Tuesday, November 26, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is sum_nums\nIt takes two arguments: a list of list (2D list) of integers and n an integers\nIt iterates through all of the numbers, and sum all of the ones whose value is less than n\nIt returns the sum\n\nTest cases:\n\nprint( sum_nums([[2, 12, 2], [12, 5, 100, 9]], 10) ) # 18\nprint( sum_nums([[2, 12, 2], [10, 5, 10, 9]], 10) ) # 18\nprint( sum_nums([[2, 12, 2], [10, 5, 10, 9]], 0) ) # 0\nprint( sum_nums([], 10) ) # 0\n\nName the program sums.py. Make sure that gradescope gives you the points for passing the test case.\n\n\n\nDue date: Tuesday, November 26, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is longest_string\nIt takes one argument: a list of dictionaries\nThe keys in each dictionary could be of various types, but you may assume that the values will be strings\nIt returns the longest string value from all of the dictionaries in the list\n\nTest cases:\n\ndata = [{'a':'horse', 'b':'caterpillar'}, {'a':'camp', 'c':'joker'}]\nprint( longest_string(data) ) # caterpillar\n\ndata = [{1:'abc', 5:'onetwothree'}, {2:'abcd'}, {7:'one two three'}]\nprint( longest_string(data) ) # one two three\n\nName the program longest.py. Make sure that gradescope gives you the points for passing the test case."
+    "text": "Short Programming projects are submitted during our weekly 45-minute in-person lab sessions. Each lab sessions is guided by two TAs. The instructions for the short project will be available only during the lab sessions. To schedule your lab session go to the weekly lab session spreadsheet in Short Project Dates and Instructions."
   },
   {
     "objectID": "assignments-13.html#programming-problem-25",
     "href": "assignments-13.html#programming-problem-25",
     "title": "Module 13 Assignments",
-    "section": "",
-    "text": "Due date: Tuesday, November 26, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is sum_nums\nIt takes two arguments: a list of list (2D list) of integers and n an integers\nIt iterates through all of the numbers, and sum all of the ones whose value is less than n\nIt returns the sum\n\nTest cases:\n\nprint( sum_nums([[2, 12, 2], [12, 5, 100, 9]], 10) ) # 18\nprint( sum_nums([[2, 12, 2], [10, 5, 10, 9]], 10) ) # 18\nprint( sum_nums([[2, 12, 2], [10, 5, 10, 9]], 0) ) # 0\nprint( sum_nums([], 10) ) # 0\n\nName the program sums.py. Make sure that gradescope gives you the points for passing the test case."
+    "section": "Programming Problem 25",
+    "text": "Programming Problem 25\nDue date: Tuesday, November 26, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is sum_nums\nIt takes two arguments: a list of list (2D list) of integers and n an integers\nIt iterates through all of the numbers, and sum all of the ones whose value is less than n\nIt returns the sum\n\nTest cases:\n\nprint( sum_nums([[2, 12, 2], [12, 5, 100, 9]], 10) ) # 18\nprint( sum_nums([[2, 12, 2], [10, 5, 10, 9]], 10) ) # 18\nprint( sum_nums([[2, 12, 2], [10, 5, 10, 9]], 0) ) # 0\nprint( sum_nums([], 10) ) # 0\n\nName the program sums.py. Make sure that gradescope gives you the points for passing the test case."
   },
   {
     "objectID": "assignments-13.html#programming-problem-26",
     "href": "assignments-13.html#programming-problem-26",
     "title": "Module 13 Assignments",
-    "section": "",
-    "text": "Due date: Tuesday, November 26, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is longest_string\nIt takes one argument: a list of dictionaries\nThe keys in each dictionary could be of various types, but you may assume that the values will be strings\nIt returns the longest string value from all of the dictionaries in the list\n\nTest cases:\n\ndata = [{'a':'horse', 'b':'caterpillar'}, {'a':'camp', 'c':'joker'}]\nprint( longest_string(data) ) # caterpillar\n\ndata = [{1:'abc', 5:'onetwothree'}, {2:'abcd'}, {7:'one two three'}]\nprint( longest_string(data) ) # one two three\n\nName the program longest.py. Make sure that gradescope gives you the points for passing the test case."
+    "section": "Programming Problem 26",
+    "text": "Programming Problem 26\nDue date: Tuesday, November 26, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is longest_string\nIt takes one argument: a list of dictionaries\nThe keys in each dictionary could be of various types, but you may assume that the values will be strings\nIt returns the longest string value from all of the dictionaries in the list\n\nTest cases:\n\ndata = [{'a':'horse', 'b':'caterpillar'}, {'a':'camp', 'c':'joker'}]\nprint( longest_string(data) ) # caterpillar\n\ndata = [{1:'abc', 5:'onetwothree'}, {2:'abcd'}, {7:'one two three'}]\nprint( longest_string(data) ) # one two three\n\nName the program longest.py. Make sure that gradescope gives you the points for passing the test case."
   },
   {
     "objectID": "control_flow_while.html",
@@ -5506,21 +5506,21 @@
     "href": "assignments-14.html",
     "title": "Module 14 Assignments",
     "section": "",
-    "text": "Due date: Tuesday, December 03, 2024 at 9pm\nShort Programming projects are submitted during our weekly 45-minute in-person lab sessions. Each lab sessions is guided by two TAs. The instructions for the short project will be available only during the lab sessions. To schedule your lab session go to the weekly lab session spreadsheet."
+    "text": "Programming Problems should be submitted to gradescope.\n\n\nDue date: Tuesday, December 03, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is swap\nIt takes two arguments: a dictionary and a set\nIt swaps the key and value for all of the keys that exist in the dictionary that also exist in the set\nIt does not return anything\n\nTest cases:\n\ndict_data = {'a':'b', 'c':'d', 'e':'f'}\nset_data = {'c', 'e'}\nswap(dict_data, set_data)\nprint(dict_data) # {'a': 'b', 'd': 'c', 'f': 'e'}\n\ndict_data = {23:24, 110:120, 50:45, 70:50, 57:1}\nset_data = {23, 110, 57}\nswap(dict_data, set_data)\nprint(dict_data) # {50: 45, 70: 50, 24: 23, 120: 110, 1: 57}\n\ndict_data = {23:24, 110:120, 50:45, 70:50, 57:1}\nset_data = {100}\nswap(dict_data, set_data)\nprint(dict_data) # {23:24, 110:120, 50:45, 70:50, 57:1}\n\nName the program swap_structures.py. Make sure that gradescope gives you the points for passing the test case.\n\n\n\nDue date: Tuesday, October 15, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is get_elements\nIt two arguments: a dictionary with strings as keys and integers as values, and an integer n\nIt returns a list containing all of the values who fall into at least one of these three categories:\n\nThe corresponding key starts with an upper-case letter\nThe corresponding key ends with an upper-case letter\nThe value is greater than or equal to the second parameter integer\n\n\nTest cases:\n\ndata = {'Alpha':10, 'bravo':25, 'charliE':15, 'dELTa':2}\nprint( get_elements(data, 12) ) # [10, 25, 15]\n\nName the program get_specific.py. Make sure that gradescope gives you the points for passing the test case."
   },
   {
     "objectID": "assignments-14.html#programming-problem-27",
     "href": "assignments-14.html#programming-problem-27",
     "title": "Module 14 Assignments",
-    "section": "Programming Problem 27",
-    "text": "Programming Problem 27\nDue date: Tuesday, December 03, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is swap\nIt takes two arguments: a dictionary and a set\nIt swaps the key and value for all of the keys that exist in the dictionary that also exist in the set\nIt does not return anything\n\nTest cases:\n\ndict_data = {'a':'b', 'c':'d', 'e':'f'}\nset_data = {'c', 'e'}\nswap(dict_data, set_data)\nprint(dict_data) # {'a': 'b', 'd': 'c', 'f': 'e'}\n\ndict_data = {23:24, 110:120, 50:45, 70:50, 57:1}\nset_data = {23, 110, 57}\nswap(dict_data, set_data)\nprint(dict_data) # {50: 45, 70: 50, 24: 23, 120: 110, 1: 57}\n\ndict_data = {23:24, 110:120, 50:45, 70:50, 57:1}\nset_data = {100}\nswap(dict_data, set_data)\nprint(dict_data) # {23:24, 110:120, 50:45, 70:50, 57:1}\n\nName the program swap_structures.py. Make sure that gradescope gives you the points for passing the test case."
+    "section": "",
+    "text": "Due date: Tuesday, December 03, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is swap\nIt takes two arguments: a dictionary and a set\nIt swaps the key and value for all of the keys that exist in the dictionary that also exist in the set\nIt does not return anything\n\nTest cases:\n\ndict_data = {'a':'b', 'c':'d', 'e':'f'}\nset_data = {'c', 'e'}\nswap(dict_data, set_data)\nprint(dict_data) # {'a': 'b', 'd': 'c', 'f': 'e'}\n\ndict_data = {23:24, 110:120, 50:45, 70:50, 57:1}\nset_data = {23, 110, 57}\nswap(dict_data, set_data)\nprint(dict_data) # {50: 45, 70: 50, 24: 23, 120: 110, 1: 57}\n\ndict_data = {23:24, 110:120, 50:45, 70:50, 57:1}\nset_data = {100}\nswap(dict_data, set_data)\nprint(dict_data) # {23:24, 110:120, 50:45, 70:50, 57:1}\n\nName the program swap_structures.py. Make sure that gradescope gives you the points for passing the test case."
   },
   {
     "objectID": "assignments-14.html#programming-problem-28",
     "href": "assignments-14.html#programming-problem-28",
     "title": "Module 14 Assignments",
-    "section": "Programming Problem 28",
-    "text": "Programming Problem 28\nDue date: Tuesday, October 15, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is get_elements\nIt two arguments: a dictionary with strings as keys and integers as values, and an integer n\nIt returns a list containing all of the values who fall into at least one of these three categories:\n\nThe corresponding key starts with an upper-case letter\nThe corresponding key ends with an upper-case letter\nThe value is greater than or equal to the second parameter integer\n\n\nTest cases:\n\ndata = {'Alpha':10, 'bravo':25, 'charliE':15, 'dELTa':2}\nprint( get_elements(data, 12) ) # [10, 25, 15]\n\nName the program get_specific.py. Make sure that gradescope gives you the points for passing the test case."
+    "section": "",
+    "text": "Due date: Tuesday, October 15, 2024 at 9pm\nWrite a Python function that does the following:\n\nIts name is get_elements\nIt two arguments: a dictionary with strings as keys and integers as values, and an integer n\nIt returns a list containing all of the values who fall into at least one of these three categories:\n\nThe corresponding key starts with an upper-case letter\nThe corresponding key ends with an upper-case letter\nThe value is greater than or equal to the second parameter integer\n\n\nTest cases:\n\ndata = {'Alpha':10, 'bravo':25, 'charliE':15, 'dELTa':2}\nprint( get_elements(data, 12) ) # [10, 25, 15]\n\nName the program get_specific.py. Make sure that gradescope gives you the points for passing the test case."
   },
   {
     "objectID": "assignments-01.html",
