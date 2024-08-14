@@ -12,17 +12,10 @@ assignments <- read_excel("assessment_schedule.xlsx") %>%
   mutate(formatted_date = format(due_date, "%A, %B %d, %Y"))
 ```
 
-Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/691034).
+Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/822022).
 
 If you need instructions on how to submit your `.py` files to gradescope, watch the video at the end of this page.
 
-# Survey
-
-**Due date: `r assignments %>% filter(assessment == "Survey") %>% pull(formatted_date)` at 9pm**
-
-<https://uarizona.co1.qualtrics.com/jfe/form/SV_0q8KC0FwVhCiYD4>
-
-This is a survey to collect information on your expectations for CSc 110 Computer Programming I. The completion of this survey is required and will be used for grading purposes.
 
 # Programming Problem 1
 
