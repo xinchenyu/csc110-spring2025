@@ -8,7 +8,7 @@ READ THE INFORMATION BELOW, IT'S **VERY** IMPORTANT.
 
 -   Off-class discussions among students and questions to the instructors/TAs will be conducted via Piazza. 
 
-    -   [Piazza link](https://piazza.com/arizona/spring2024/csc110)
+    -   [Piazza link](https://piazza.com/arizona/fall2024/csc110)
     -   Access code: wildcats
 
 -   Do **not** direct message (DM) TAs.
