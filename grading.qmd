@@ -1,0 +1,35 @@
+---
+title: "About the grading in this course"
+---
+
+# Formative assessment
+
+The assignments, quizzes and exams in this course are designed to give students and instructors information on how well students are learning the materials. In other words, all assessment is meant to help you learn.
+
+You should see the grades you get for these assessments as a way to adjust your studying, for example:
+
+* If you are doing well in the coding assignments, but not on quizzes, that means you are not completely grasping the concepts we are covering -- try solving the coding assignments without any assistance and on paper
+* If you are not doing well on the projects, that means you probably need to block more time over multiple days to figure projects out
+
+You will notice that assessment is frequent in this class -- there is either a midterm or a quiz every Wednesday, and there are coding assignments every week. The purpose of frequent assignments is to provide students with frequent feedback, so they realize what concepts they need to practice more.
+
+# Automated grading
+
+For the assignments you submit through gradescope, an autograder is run on your code. That means the instructors for this course wrote tests to check the output of your code. 
+
+For example, if you are asked to write a function that takes in a number `n` as argument and returns double that value, the tests that would be run would be whether your function returns `4` when the argument is `2` and `-8` when the argument is `-4` (and so on).
+
+Here are the reasons for this type of grading:
+
+* When writing code, programmers write this type of test themselves to check whether their code works as expected ([you can read more about unit testing, if you are interested](https://smartbear.com/learn/automated-testing/what-is-unit-testing/))
+* This type of testing of code scales well -- that means that 500 students can get instant feedback on their code at once (feedback is really important, like mentioned in the previous section of this document)
+
+This type of grading might seem very strict, because you either pass the test or you don't (there's no partial credit for trying hard). That is how computers work -- if I want to know what 10 times 10 is and your code says it is 99, that answer is incorrect. You are not "close" to the correct answer, so there is no partial credit awarded, because the answer is 100% incorrect.
+
+# Exams and quizzes
+
+The exams and quizzes for this class are all on **paper**. The coding questions will be short, and you won't be writing more than 10 lines of code per solution (most of the time your solution should be around 5 lines of code). 
+
+The same rules that we have for the autograder tests (see previous section) apply for grading code on paper -- your code is either right or wrong. We do award partial credit if there are up to two **minor** syntax errors (for example, you forgot the `:` at the end of your conditional statement). If your solution is not generalizable and does not return the correct values, you will not be awarded any points for it.
+
+Again, some students find this grading "unfair" because it does not take into account their effort to answer the question. The goal, however, is to assess whether you understand the logic of how to solve the problem and you know how to do so in Python syntax. If you do not demonstrate that you know how to solve the problem, you will be awarded a zero.

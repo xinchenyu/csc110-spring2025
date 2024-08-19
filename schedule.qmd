@@ -18,7 +18,7 @@ assignments <- read_excel("assessment_schedule.xlsx") %>%
 
 # Exam Dates
 
-Biweekly quizzes will always be on Wednesday (when there's no other evaluations) in class (pencil and paper format).
+Weekly quizzes will always be on Wednesday (when there's no other evaluations) in class (pencil and paper format).
 
 Midterm (individual) exams (pencil and paper format):
 
@@ -39,6 +39,8 @@ If a week has a midterm (on Wednesday), programming problems and short projects 
 
 # Week 1 (`r schedule %>% filter(week_number == 1 & term == "fall 2024") %>% pull(formatted_start)`)
 
+## Quiz 01 (`r assignments %>% filter(assessment == "Quiz 01") %>% pull(formatted_date)`)
+
 ## Readings
 
 -   [Hello World!](hello.html)
@@ -55,7 +57,7 @@ If a week has a midterm (on Wednesday), programming problems and short projects 
 
 # Week 2 (`r schedule %>% filter(week_number == 2 & term == "fall 2024") %>% pull(formatted_start)`)
 
-## Quiz 01 (`r assignments %>% filter(assessment == "Quiz 01") %>% pull(formatted_date)`)
+## Quiz 02 (`r assignments %>% filter(assessment == "Quiz 02") %>% pull(formatted_date)`)
 
 ## Readings
 
@@ -75,7 +77,7 @@ If a week has a midterm (on Wednesday), programming problems and short projects 
 
 # Week 3 (`r schedule %>% filter(week_number == 3 & term == "fall 2024") %>% pull(formatted_start)`)
 
-## Quiz 02 (`r assignments %>% filter(assessment == "Quiz 02") %>% pull(formatted_date)`)
+## Quiz 03 (`r assignments %>% filter(assessment == "Quiz 03") %>% pull(formatted_date)`)
 
 ## Readings
 
@@ -96,7 +98,7 @@ If a week has a midterm (on Wednesday), programming problems and short projects 
 
 # Week 4 (`r schedule %>% filter(week_number == 4 & term == "fall 2024") %>% pull(formatted_start)`)
 
-## Quiz 03 (`r assignments %>% filter(assessment == "Quiz 03") %>% pull(formatted_date)`)
+## Quiz 04 (`r assignments %>% filter(assessment == "Quiz 04") %>% pull(formatted_date)`)
 
 ## Readings/Video
 
@@ -119,7 +121,7 @@ If a week has a midterm (on Wednesday), programming problems and short projects 
 
 # Week 5 (`r schedule %>% filter(week_number == 5 & term == "fall 2024") %>% pull(formatted_start)`)
 
-## Midterm 1 (`r assignments %>% filter(assessment == "Midterm 1") %>% pull(formatted_date)`)
+## Quiz 05 (`r assignments %>% filter(assessment == "Quiz 05") %>% pull(formatted_date)`)
 
 ## Readings
 
@@ -142,7 +144,7 @@ If a week has a midterm (on Wednesday), programming problems and short projects 
 
 # Week 6 (`r schedule %>% filter(week_number == 6 & term == "fall 2024") %>% pull(formatted_start)`)
 
-## Quiz 04 (`r assignments %>% filter(assessment == "Quiz 04") %>% pull(formatted_date)`)
+## Midterm 1 (`r assignments %>% filter(assessment == "Midterm 1") %>% pull(formatted_date)`)
 
 ## Readings
 
@@ -156,13 +158,14 @@ If a week has a midterm (on Wednesday), programming problems and short projects 
 ## Assignments
 
 -   [Module 6 Programming Problems](assignments-06.html) -- Due date: `r assignments %>% filter(assessment == "Module 6 Programming Problems") %>% pull(formatted_date)` at 9pm
--   Optional lab if you have missed one
+-   [Short Project 5]() -- Due date: `r assignments %>% filter(assessment == "Short Programming Project 5") %>% pull(formatted_date)` at 9pm
+-   [Programming Project 5](project-5.html) -- Due date: `r assignments %>% filter(assessment == "Programming Project 5") %>% pull(formatted_date)` at 9pm
 
 
 
 # Week 7 (`r schedule %>% filter(week_number == 7 & term == "fall 2024") %>% pull(formatted_start)`)
 
-## Quiz 05 (`r assignments %>% filter(assessment == "Quiz 05") %>% pull(formatted_date)`)
+## Quiz 06 (`r assignments %>% filter(assessment == "Quiz 06") %>% pull(formatted_date)`)
 
 ## Readings
 
@@ -178,8 +181,8 @@ If a week has a midterm (on Wednesday), programming problems and short projects 
 ## Assignments
 
 -   [Module 7 Programming Problems](assignments-07.html) -- Due date: `r assignments %>% filter(assessment == "Module 7 Programming Problems") %>% pull(formatted_date)` at 9pm
--   [Short Project 5]() -- Due date: `r assignments %>% filter(assessment == "Short Programming Project 5") %>% pull(formatted_date)` at 9pm
--   [Programming Project 5](project-5.html) -- Due date: `r assignments %>% filter(assessment == "Programming Project 5") %>% pull(formatted_date)` at 9pm
+-   [Short Project 6]() -- Due date: `r assignments %>% filter(assessment == "Short Programming Project 6") %>% pull(formatted_date)` at 9pm
+-   [Programming Project 6](project-6.html) -- Due date: `r assignments %>% filter(assessment == "Programming Project 6") %>% pull(formatted_date)` at 9pm
 
 
 # Week 8 (`r schedule %>% filter(week_number == 8 & term == "fall 2024") %>% pull(formatted_start)`)
@@ -198,8 +201,8 @@ If a week has a midterm (on Wednesday), programming problems and short projects 
 ## Assignments
 
 -   [Module 8 Programming Problems](assignments-08.html) -- Due date: `r assignments %>% filter(assessment == "Module 8 Programming Problems") %>% pull(formatted_date)` at 9pm
--   [Short Project 6]() -- Due date: `r assignments %>% filter(assessment == "Short Programming Project 6") %>% pull(formatted_date)` at 9pm
--   [Programming Project 6](project-6.html) -- Due date: `r assignments %>% filter(assessment == "Programming Project 6") %>% pull(formatted_date)` at 9pm
+-   [Short Project 7]() -- Due date: `r assignments %>% filter(assessment == "Short Programming Project 7") %>% pull(formatted_date)` at 9pm
+-   [Programming Project 7](project-7.html) -- Due date: `r assignments %>% filter(assessment == "Programming Project 7") %>% pull(formatted_date)` at 9pm
 
 
 # Week 9 (`r schedule %>% filter(week_number == 9 & term == "fall 2024") %>% pull(formatted_start)`)
@@ -218,13 +221,12 @@ If a week has a midterm (on Wednesday), programming problems and short projects 
 ## Assignments
 
 -   [Module 9 Programming Problems](assignments-09.html) -- Due date: `r assignments %>% filter(assessment == "Module 9 Programming Problems") %>% pull(formatted_date)` at 9pm
--   [Short Project 7]() -- Due date: `r assignments %>% filter(assessment == "Short Programming Project 7") %>% pull(formatted_date)` at 9pm
--   [Programming Project 7](project-7.html) -- Due date: `r assignments %>% filter(assessment == "Programming Project 7") %>% pull(formatted_date)` at 9pm
+
 
 
 # Week 10 (`r schedule %>% filter(week_number == 10 & term == "fall 2024") %>% pull(formatted_start)`)
 
-## Quiz 07 (`r assignments %>% filter(assessment == "Quiz 07") %>% pull(formatted_date)`)
+## Quiz 08 (`r assignments %>% filter(assessment == "Quiz 08") %>% pull(formatted_date)`)
 
 ## Readings
 
@@ -233,7 +235,7 @@ If a week has a midterm (on Wednesday), programming problems and short projects 
 ## Class slides 
 
 -   [returning tuples](slides-10-01.html)
--   [tuples](slides-10-02.html)
+-   [tuple as argument](slides-10-02.html)
 
 ## Assignments
 
@@ -244,7 +246,7 @@ If a week has a midterm (on Wednesday), programming problems and short projects 
 
 # Week 11 (`r schedule %>% filter(week_number == 11 & term == "fall 2024") %>% pull(formatted_start)`)
 
-## Quiz 08 (`r assignments %>% filter(assessment == "Quiz 08") %>% pull(formatted_date)`)
+## Quiz 09 (`r assignments %>% filter(assessment == "Quiz 09") %>% pull(formatted_date)`)
 
 ## Readings
 
@@ -256,12 +258,12 @@ If a week has a midterm (on Wednesday), programming problems and short projects 
 ## Assignments
 -   [Module 11 Programming Problems](assignments-11.html) -- Due date: `r assignments %>% filter(assessment == "Module 11 Programming Problems") %>% pull(formatted_date)` at 9pm
 -   [Short Project 9]() -- Due date: `r assignments %>% filter(assessment == "Short Programming Project 9") %>% pull(formatted_date)` at 9pm
--   [Programming Project 9](project-8.html) -- Due date: `r assignments %>% filter(assessment == "Programming Project 9") %>% pull(formatted_date)` at 9pm
+-   [Programming Project 9](project-9.html) -- Due date: `r assignments %>% filter(assessment == "Programming Project 9") %>% pull(formatted_date)` at 9pm
 
 
 # Week 12 (`r schedule %>% filter(week_number == 12 & term == "fall 2024") %>% pull(formatted_start)`)
 
-## Quiz 09 (`r assignments %>% filter(assessment == "Quiz 09") %>% pull(formatted_date)`)
+## Quiz 10 (`r assignments %>% filter(assessment == "Quiz 10") %>% pull(formatted_date)`)
 
 ## Readings
 -   [Sets](data_structures_sets.html)
@@ -300,6 +302,8 @@ If a week has a midterm (on Wednesday), programming problems and short projects 
 
 
 # Week 14 (`r schedule %>% filter(week_number == 14 & term == "fall 2024") %>% pull(formatted_start)`)
+
+## Quiz 11 (`r assignments %>% filter(assessment == "Quiz 11") %>% pull(formatted_date)`)
 
 ## Class slides
 
