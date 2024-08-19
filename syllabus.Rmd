@@ -4,6 +4,7 @@ author: "Xinchen Yu (she/her/hers)"
 date: "Fall 2024"
 output:
   pdf_document: default
+  html_document: default
 subtitle: CSc 110 Computer Programming I
 ---
 
@@ -107,11 +108,12 @@ Absences pre-approved by the UA Dean of Students (or dean's designee) will be ho
 
 Every semester, students enroll in introductory CS classes but do not submit any work, resulting in a grade of `E` at the end of the term. To prevent this, at the end of the **second week** (Sep 6), all students who have not submitted/completed **three or more** of the following will be administratively dropped:
 
-1.  Class presence on August 30
-2.  September 4 quiz
-3.  [Module 1 Programming Problem 1](assignments-01.html)
-4.  [Module 1 Programming Problem 2](assignments-01.html)
-5.  Class presence on September 6
+1.  August 28 quiz
+2.  Class presence on August 30
+3.  September 4 quiz
+4.  [Module 1 Programming Problem 1](assignments-01.html)
+5.  [Module 1 Programming Problem 2](assignments-01.html)
+6.  Class presence on September 6
 
 In addition, to ensure your success in this course, and that you are on top of the work that is due every week, administrative drops will be in place throughout the semester. Students who miss coursework for two weeks or more often get an E at the end of the term in this course. After the second week of class, at any point during the semester if you fail to attend class and submit assignments for two consecutive weeks you will be administratively dropped.
 
