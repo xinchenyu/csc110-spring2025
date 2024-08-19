@@ -187,7 +187,7 @@ If a week has a midterm (on Wednesday), programming problems and short projects 
 
 # Week 8 (`r schedule %>% filter(week_number == 8 & term == "fall 2024") %>% pull(formatted_start)`)
 
-## Quiz 06 (`r assignments %>% filter(assessment == "Quiz 06") %>% pull(formatted_date)`)
+## Quiz 07 (`r assignments %>% filter(assessment == "Quiz 07") %>% pull(formatted_date)`)
 
 ## Readings
 
