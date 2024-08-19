@@ -4,7 +4,6 @@ author: "Xinchen Yu (she/her/hers)"
 date: "Fall 2024"
 output:
   pdf_document: default
-  html_document: default
 subtitle: CSc 110 Computer Programming I
 ---
 
