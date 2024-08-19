@@ -38,19 +38,20 @@ September 24 to September 30 -- work on Short Project 04
 
 ## Lab 05
 
-October 1 to October 7 --  work on one previous short project (optional lab)
-
-## Lab 06
-
-October 8 to October 14 -- work on Short Project 05
+October 1 to October 7 --  work on Short Project 05
 
 [Instructions for Short Project 05]()
 
-## Lab 07
+## Lab 06
 
-October 15 to October 21 -- work on Short Project 06
+October 8 to October 14 -- work on Short Project 06
 
 [Instructions for Short Project 06]()
+
+## Lab 07
+
+October 15 to October 21 -- work on one previous short project (optional lab)
+
 
 ## Lab 08
 

@@ -4,11 +4,11 @@ title: "Hello World!"
 
 ## Installing Python
 
-Before we begin writing Python code, you need to install Python3 in your computer (alternatively you can run your code in the cloud on replit.com for example -- see videos later on this page for more info on how to do that).
+Before we begin writing Python code, you need to install Python3 in your computer (alternatively you can run your code in the cloud on [vscode.dev](https://vscode.dev/) for example).
 
 1.  Go to <https://www.python.org/downloads/> and follow the instructions to install python for your specific Operating System (Mac, Windows, etc.)
 2.  I recommend you use Visual Studio Code for your IDE (Integrated Development Environment). Download and install VS code: <https://code.visualstudio.com/download>
-3.  If you are unable to install anything in your machine (you use a Chromebook, for example), you can use a cloud-based IDE such as <https://replit.com/>
+3.  If you are unable to install anything in your machine (you use a Chromebook, for example), you can use a cloud-based IDE such as <https://vscode.dev/>
 
 ## How to write Python programs
 
