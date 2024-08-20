@@ -17,7 +17,7 @@ slide-number: true
 ## Who am I?
 
 -   Xinchen Yu (you can call me Xinchen or Dr. Yu)
--   Office: Gould-Simpson 854
+-   Office: Gould-Simpson 829
 -   Email: xinchenyu\@arizona.edu
 
 ## Who are the teaching assistants? (TAs)
@@ -118,8 +118,8 @@ Exams are on paper. Why?
 
 ## Exams and Quizzes
 
--   Midterm exams and biweekly quizzes are always on Wednesday (same room as our lectures)
--   Our first quiz will be on next Wednesday, Jan 17
+-   Midterm exams and weekly quizzes are always on Wednesday (same room as our lectures)
+-   Our first quiz will be on this Wednesday, August 28
 
 
 ## Syllabus Activity
@@ -130,8 +130,8 @@ Exams are on paper. Why?
 
 ## Other Important Dates
 
--   Last day for students to add themselves to a course using UAccess is January 17
--   Last day for students to drop without a grade of W (withdraw) is January 23
+-   Last day for students to add themselves to a course using UAccess is September 2
+-   Last day for students to drop without a grade of W (withdraw) is September 8
 
 ## Academic integrity
 
@@ -197,10 +197,9 @@ But come prepared -- do not expect the TAs to solve problems or debug for you (y
 ## How to get help?
 
 -   Come to office hours!
--   Join [Piazza](https://piazza.com/class/lqwyilas2ns1tg) and ask questions there
+-   Join [Piazza](https://piazza.com/class/lzt00zmitty5rq) and ask questions there
 -   If you have private questions, generally please make a private Piazza post
 -   [Departmental Tutors](https://www.cs.arizona.edu/undergraduate/student-resources/tutoring) (free)
--   Do Not email me or TAs 
 
 # This is a difficult course, but we are here to help you succeed
 
