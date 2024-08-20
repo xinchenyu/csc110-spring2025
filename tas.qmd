@@ -10,9 +10,8 @@ The best way to talk with a particular TA is via office hours, so check the sche
 
 Course coordinators are experienced UGTAs that assist the instructor with course management and will have a supervisory role with the course UGTAs.
 
--   Cole Perry
 -   Emma Elliott
-
+-   Amyra White
 
 # TAs
 
@@ -20,8 +19,8 @@ Undergraduate Teaching Assistants (UGTAs) in the Department of Computer Science 
 
 -   Adan Baca
 -   Aidan Linder
--   Caeden Motley
--   Khojiakbar Yokubjonov
+-   Samarie Tavenner
+-   Zachary Nicolosi
 -   Ethan Holley
 -   Apurbo Barua
 -   Lilian Wei
@@ -33,6 +32,6 @@ Interested in becoming a TA in the future? Check out [more information about wha
 
 Shown below is the office hours schedule. The in-person office hours are hosted in Gould-Simpson 914. Xinchen's office hours are in GS 829. An (O) next to a name indicates that the office hour is online. For these office hours, check D2L for details.
 
-
-
+<!--
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwv6Ssty22U8FOKo28fqTnvez5sw0vlPrkcJiIe_3VXmdwY3bVqhO7TcQJip1yEmJLhljG1lgeCiy_/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="600px"></iframe>
+-->
