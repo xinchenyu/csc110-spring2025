@@ -11,6 +11,7 @@ The best way to talk with a particular TA is via office hours, so check the sche
 Course coordinators are experienced UGTAs that assist the instructor with course management and will have a supervisory role with the course UGTAs.
 
 -   Emma Elliott
+-   Samarie Tavenner 
 -   Amyra White
 
 # TAs
@@ -24,6 +25,7 @@ Undergraduate Teaching Assistants (UGTAs) in the Department of Computer Science 
 -   Ethan Holley
 -   Apurbo Barua
 -   Lilian Wei
+-   Connor Kippes 
 
 
 Interested in becoming a TA in the future? Check out [more information about what TAs do and how to apply](https://www.cs.arizona.edu/ugta).
@@ -32,6 +34,4 @@ Interested in becoming a TA in the future? Check out [more information about wha
 
 Shown below is the office hours schedule. The in-person office hours are hosted in Gould-Simpson 914. Xinchen's office hours are in GS 829. An (O) next to a name indicates that the office hour is online. For these office hours, check D2L for details.
 
-<!--
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwv6Ssty22U8FOKo28fqTnvez5sw0vlPrkcJiIe_3VXmdwY3bVqhO7TcQJip1yEmJLhljG1lgeCiy_/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="600px"></iframe>
--->
+<iframe src="https://docs.google.com/spreadsheets/d/1SjIKi9f1b8YaMD0rvPUmXC3JrR7nXB3m6gDeLOxpuuU/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="600px"></iframe>
