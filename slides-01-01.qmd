@@ -18,11 +18,8 @@ slide-number: true
 
 -   Xinchen Yu (you can call me Xinchen or Dr. Yu)
 -   Office: Gould-Simpson 829
--   Email: xinchenyu\@arizona.edu
 
 ## Who are the teaching assistants? (TAs)
-
-In this course we have course coordinators, senior TAs, and TAs.
 
 The TAs are responsible for:
 
@@ -34,14 +31,14 @@ The TAs are responsible for:
 
 ## What is this class, anyways?
 
--   In this class, you will learn how to program
+-   You will learn how to program
 -   Specifically, programming in Python (version 3)
--   Will cover many of the basic principles and concepts that are common to a number of programming languages, such as
+-   Will cover many of the basic principles and concepts, such as
     -   input/output
     -   conditionals and loops (control flow)
     -   functions
-    -   data structures
-    -   debugging and more!
+    -   data structures and more!
+-   Prerequisites: College Algebra or CSc 101 or appropriate math placement score
 
 ## The intro sequence
 
@@ -63,18 +60,13 @@ This is the intro course sequence for the CS department:
 
 </center>
 
-## General Info
-
--   For some, this is your very first CS course!
--   Prerequisites: College Algebra or CSc 101 or appropriate math placement score
 
 ## What do you need to succeed in this class?
 
 A willingness to:
 
--   try and fail
--   get frustrated and bored
 -   be curious about how things work
+-   try and fail
 
 ## What do you need to succeed in this class?
 
@@ -98,7 +90,7 @@ A willingness to:
 
 -   Projects
 
--   Exams and Quizzes
+-   Exams and Quizzes (on paper)
 
 ## Exams and Quizzes
 

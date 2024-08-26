@@ -2111,21 +2111,21 @@
     "href": "slides-01-01.html#who-am-i",
     "title": "Course Introduction (class slides)",
     "section": "Who am I?",
-    "text": "Who am I?\n\nXinchen Yu (you can call me Xinchen or Dr. Yu)\nOffice: Gould-Simpson 829\nEmail: xinchenyu@arizona.edu"
+    "text": "Who am I?\n\nXinchen Yu (you can call me Xinchen or Dr. Yu)\nOffice: Gould-Simpson 829"
   },
   {
     "objectID": "slides-01-01.html#who-are-the-teaching-assistants-tas",
     "href": "slides-01-01.html#who-are-the-teaching-assistants-tas",
     "title": "Course Introduction (class slides)",
     "section": "Who are the teaching assistants? (TAs)",
-    "text": "Who are the teaching assistants? (TAs)\nIn this course we have course coordinators, senior TAs, and TAs.\nThe TAs are responsible for:\n\nHelping you, the students, succeed\nGrading assignments, quizzes, and exams\nHelping students on office hours\n\n. . . So get to know them!"
+    "text": "Who are the teaching assistants? (TAs)\nThe TAs are responsible for:\n\nHelping you, the students, succeed\nGrading assignments, quizzes, and exams\nHelping students on office hours\n\n. . . So get to know them!"
   },
   {
     "objectID": "slides-01-01.html#what-is-this-class-anyways",
     "href": "slides-01-01.html#what-is-this-class-anyways",
     "title": "Course Introduction (class slides)",
     "section": "What is this class, anyways?",
-    "text": "What is this class, anyways?\n\nIn this class, you will learn how to program\nSpecifically, programming in Python (version 3)\nWill cover many of the basic principles and concepts that are common to a number of programming languages, such as\n\ninput/output\nconditionals and loops (control flow)\nfunctions\ndata structures\ndebugging and more!"
+    "text": "What is this class, anyways?\n\nYou will learn how to program\nSpecifically, programming in Python (version 3)\nWill cover many of the basic principles and concepts, such as\n\ninput/output\nconditionals and loops (control flow)\nfunctions\ndata structures and more!\n\nPrerequisites: College Algebra or CSc 101 or appropriate math placement score"
   },
   {
     "objectID": "slides-01-01.html#the-intro-sequence",
@@ -2153,7 +2153,7 @@
     "href": "slides-01-01.html#what-do-you-need-to-succeed-in-this-class",
     "title": "Course Introduction (class slides)",
     "section": "What do you need to succeed in this class?",
-    "text": "What do you need to succeed in this class?\nA willingness to:\n\ntry and fail\nget frustrated and bored\nbe curious about how things work"
+    "text": "What do you need to succeed in this class?\nA willingness to:\n\nbe curious about how things work\ntry and fail"
   },
   {
     "objectID": "slides-01-01.html#what-do-you-need-to-succeed-in-this-class-1",
@@ -2174,7 +2174,7 @@
     "href": "slides-01-01.html#assessment-structure",
     "title": "Course Introduction (class slides)",
     "section": "Assessment structure",
-    "text": "Assessment structure\n\nProgramming Problems\nShort Projects (to be completed in the lab sessions)\nProjects\nExams and Quizzes"
+    "text": "Assessment structure\n\nProgramming Problems\nShort Projects (to be completed in the lab sessions)\nProjects\nExams and Quizzes (on paper)"
   },
   {
     "objectID": "slides-01-01.html#exams-and-quizzes",
