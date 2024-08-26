@@ -68,14 +68,6 @@ This is the intro course sequence for the CS department:
 -   For some, this is your very first CS course!
 -   Prerequisites: College Algebra or CSc 101 or appropriate math placement score
 
-## Get to know each-other
-
--   Introduce yourself!
--   Share your
-    -   Name
-    -   Program/Major, declared or Intended (and why you chose that major)
-    -   One thing that you can do that took many hours of practice
-
 ## What do you need to succeed in this class?
 
 A willingness to:
@@ -127,6 +119,10 @@ Exams are on paper. Why?
 1.  What is the grade distribution for this class?
 2.  How many days you have for regrade requests?
 3.  When are the exams?
+
+## Attendance
+
+Access gradescope and answer the attendance question.
 
 ## Other Important Dates
 
@@ -199,7 +195,6 @@ But come prepared -- do not expect the TAs to solve problems or debug for you (y
 -   Come to office hours!
 -   Join [Piazza](https://piazza.com/class/lzt00zmitty5rq) and ask questions there
 -   If you have private questions, generally please make a private Piazza post
--   [Departmental Tutors](https://www.cs.arizona.edu/undergraduate/student-resources/tutoring) (free)
 
 # This is a difficult course, but we are here to help you succeed
 
