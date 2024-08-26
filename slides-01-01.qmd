@@ -31,8 +31,7 @@ The TAs are responsible for:
 
 ## What is this class, anyways?
 
--   You will learn how to program
--   Specifically, programming in Python (version 3)
+-   You will learn how to program in Python (version 3)
 -   Will cover many of the basic principles and concepts, such as
     -   input/output
     -   conditionals and loops (control flow)

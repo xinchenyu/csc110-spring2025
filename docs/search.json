@@ -2125,7 +2125,7 @@
     "href": "slides-01-01.html#what-is-this-class-anyways",
     "title": "Course Introduction (class slides)",
     "section": "What is this class, anyways?",
-    "text": "What is this class, anyways?\n\nYou will learn how to program\nSpecifically, programming in Python (version 3)\nWill cover many of the basic principles and concepts, such as\n\ninput/output\nconditionals and loops (control flow)\nfunctions\ndata structures and more!\n\nPrerequisites: College Algebra or CSc 101 or appropriate math placement score"
+    "text": "What is this class, anyways?\n\nYou will learn how to program in Python (version 3)\nWill cover many of the basic principles and concepts, such as\n\ninput/output\nconditionals and loops (control flow)\nfunctions\ndata structures and more!\n\nPrerequisites: College Algebra or CSc 101 or appropriate math placement score"
   },
   {
     "objectID": "slides-01-01.html#the-intro-sequence",
