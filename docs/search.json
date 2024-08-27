@@ -1978,14 +1978,14 @@
     "href": "slides-01-02.html#announcements",
     "title": "Python Basics (class slides)",
     "section": "Announcements",
-    "text": "Announcements\n\nTrouble accessing Gradescope? Use the link on D2L\nD2L grades are going to be used to calculate your final grade\nFull schedule for office hours can be found at xinchenyu.github.io/csc110-spring2024/tas.html"
+    "text": "Announcements\n\nTrouble accessing Gradescope? Use the link on D2L\nD2L grades are going to be used to calculate your final grade\nFull schedule for office hours can be found at xinchenyu.github.io/csc110-fall2024/tas.html"
   },
   {
     "objectID": "slides-01-02.html#did-you-set-up-your-workspace",
     "href": "slides-01-02.html#did-you-set-up-your-workspace",
     "title": "Python Basics (class slides)",
     "section": "Did you set up your workspace?",
-    "text": "Did you set up your workspace?\n\nDid you download Python 3?\nDid you download VS Code (or PyCharm, or Mu)?\nIf not, that’s fine, you can use replit.com"
+    "text": "Did you set up your workspace?\n\nDid you download Python 3?\nDid you download VS Code (or PyCharm, or Mu)?\nIf not, that’s fine, you can use vscode.dev"
   },
   {
     "objectID": "slides-01-02.html#the-print-function",
