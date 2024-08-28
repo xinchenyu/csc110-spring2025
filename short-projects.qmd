@@ -12,7 +12,7 @@ To schedule your lab session go to [the weekly lab session spreadsheet](https://
 
 This is for information only. You need to [sign up for a specific lab session](https://docs.google.com/spreadsheets/d/1vJNf444idLRKBJej3I9MvI7RDSk6ujV2s9kPt7CBA_Q/edit?usp=sharing) to be able to attend it.
 
-* [Lab 01](https://adrianapicoral.com/csc-110-lab/week-01/short-project.html): September 3 to September 9
+* [Lab 01](labs/lab01.html): September 3 to September 9
 * [Lab 02](https://adrianapicoral.com/csc-110-lab/week-02/short-project.html): September 10 to September 16
 * [Lab 03](https://adrianapicoral.com/csc-110-lab/week-03/short-project.html): September 17 to September 23
 * [Lab 04](https://adrianapicoral.com/csc-110-lab/week-04/short-project.html): September 24 to September 30
