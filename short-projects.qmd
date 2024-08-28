@@ -13,15 +13,15 @@ To schedule your lab session go to [the weekly lab session spreadsheet](https://
 This is for information only. You need to [sign up for a specific lab session](https://docs.google.com/spreadsheets/d/1vJNf444idLRKBJej3I9MvI7RDSk6ujV2s9kPt7CBA_Q/edit?usp=sharing) to be able to attend it.
 
 * [Lab 01](labs/lab01.html): September 3 to September 9
-* [Lab 02](https://adrianapicoral.com/csc-110-lab/week-02/short-project.html): September 10 to September 16
-* [Lab 03](https://adrianapicoral.com/csc-110-lab/week-03/short-project.html): September 17 to September 23
-* [Lab 04](https://adrianapicoral.com/csc-110-lab/week-04/short-project.html): September 24 to September 30
-* [Lab 05](https://adrianapicoral.com/csc-110-lab/week-05/short-project.html): October 01 to October 07
-* [Lab 06](https://adrianapicoral.com/csc-110-lab/week-06/short-project.html): October 08 to October 14
+* [Lab 02](labs/lab02.html): September 10 to September 16
+* [Lab 03](labs/lab03.html): September 17 to September 23
+* [Lab 04](labs/lab04.html): September 24 to September 30
+* [Lab 05](labs/lab05.html): October 01 to October 07
+* [Lab 06](labs/lab06.html): October 08 to October 14
 * CATCH UP WEEK: October 15 to October 21
-* [Lab 07](https://adrianapicoral.com/csc-110-lab/week-07/short-project.html): October 22 to October 28
-* [Lab 08](https://adrianapicoral.com/csc-110-lab/week-09/short-project.html): October 29 to November 04
-* [Lab 09](https://adrianapicoral.com/csc-110-lab/week-10/short-project.html): November 05 to November 12
+* [Lab 07](labs/lab07.html): October 22 to October 28
+* [Lab 08](labs/lab08.html): October 29 to November 04
+* [Lab 09](labs/lab09.html): November 05 to November 12
 * CATCH UP WEEK: November 13 to November 19
-* [Lab 10](https://adrianapicoral.com/csc-110-lab/week-11/short-project.html): November 20 to November 26
-* [Lab 11](https://adrianapicoral.com/csc-110-lab/week-13/short-project.html): December 02 to December 06
+* [Lab 10](labs/lab10.html): November 20 to November 26
+* [Lab 11](labs/lab11.html): December 02 to December 06
