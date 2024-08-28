@@ -599,7 +599,7 @@
     "href": "schedule.html#assignments-11",
     "title": "Schedule",
     "section": "Assignments",
-    "text": "Assignments\n\nModule 12 Programming Problems – Due date: Friday, November 22, 2024 at 9pm\nShort Project 10 – Due date: Friday, November 22, 2024 at 9pm\nProgramming Project 10 – Due date: Monday, November 25, 2024 at 9pm"
+    "text": "Assignments\n\nModule 12 Programming Problems – Due date: Friday, November 22, 2024 at 9pm\nShort Project 10 – Due date: Tuesday, November 26, 2024 at 9pm\nProgramming Project 10 – Due date: Thursday, December 05, 2024 at 9pm"
   },
   {
     "objectID": "schedule.html#midterm-3-wednesday-november-20-2024",
@@ -627,7 +627,7 @@
     "href": "schedule.html#assignments-12",
     "title": "Schedule",
     "section": "Assignments",
-    "text": "Assignments\n\nModule 13 Programming Problems – Due date: Tuesday, November 26, 2024 at 9pm\nShort Project 11 – Due date: Tuesday, December 03, 2024 at 9pm\nProgramming Project 11 – Due date: Thursday, December 05, 2024 at 9pm"
+    "text": "Assignments\n\nModule 13 Programming Problems – Due date: Tuesday, November 26, 2024 at 9pm\nShort Project 11 – Due date: Tuesday, December 10, 2024 at 9pm\nProgramming Project 11 – Due date: Wednesday, December 11, 2024 at 9pm"
   },
   {
     "objectID": "schedule.html#quiz-11-wednesday-december-04-2024",
@@ -641,7 +641,7 @@
     "href": "schedule.html#class-slides-13",
     "title": "Schedule",
     "section": "Class slides",
-    "text": "Class slides\n\nmore on lists\nsorting"
+    "text": "Class slides\n\ncombining data structures\nsorting\nreview"
   },
   {
     "objectID": "schedule.html#assignments-13",
@@ -5598,5 +5598,12 @@
     "title": "Python Basics (class slides)",
     "section": "Quiz 01",
     "text": "Quiz 01\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz"
+  },
+  {
+    "objectID": "schedule.html#quiz-12-wednesday-december-11-2024",
+    "href": "schedule.html#quiz-12-wednesday-december-11-2024",
+    "title": "Schedule",
+    "section": "Quiz 12 (Wednesday, December 11, 2024)",
+    "text": "Quiz 12 (Wednesday, December 11, 2024)"
   }
 ]
