@@ -10,6 +10,7 @@ slide-number: true
 
 -   Trouble accessing Gradescope? Use the link on D2L
 -   D2L grades are going to be used to calculate your final grade
+-   Sign-up for your lab session at [xinchenyu.github.io/csc110-fall2024/short-projects.html](https://xinchenyu.github.io/csc110-fall2024/short-projects.html)
 -   Full schedule for office hours can be found at [xinchenyu.github.io/csc110-fall2024/tas.html](https://xinchenyu.github.io/csc110-fall2024/tas.html)
 
 ## Did you set up your workspace?
