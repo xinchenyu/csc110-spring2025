@@ -92,6 +92,13 @@ Write a function that does the following:
 3.  It calculates the volume of a cylinder, based on `radius` and `height`. Volume is area multiplied by height.
 4.  It returns the float value for calculated volume.
 
+## Submit function to Gradescope
+
+-   Name your python script with the `volume` function `cylinder.py`
+-   Go to [Gradescope](https://www.gradescope.com/courses/822022) and submit your `.py` file
+-   You can resubmit as many times as you need (up to the deadline)
+-   You can look at your `Submission History` and activate a previous submission
+
 ## Function to calculate the volume of a cylinder
 
 ```{python}
@@ -112,12 +119,6 @@ print(volume(6, 10)) # 1130.94
 print(volume(5, 5)) # 392.68750000000006
 ```
 
-## Submit function to Gradescope
-
--   Name your python script with the `volume` function `cylinder.py`
--   Go to [Gradescope]() and submit your `.py` file
--   You can resubmit as many times as you need (up to the deadline)
--   You can look at your `Submission History` and activate a previous submission
 
 
 # Order of Operations
