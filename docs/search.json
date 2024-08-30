@@ -2069,7 +2069,7 @@
     "href": "slides-01-02.html#operations",
     "title": "Python Basics (class slides)",
     "section": "Operations",
-    "text": "Operations\nTry the following operators with the different types in python:\n\n   +\n   -\n   *\n   /\n   //\n   %\n   **"
+    "text": "Operations\n\n   +\n   -\n   *\n   /\n   **"
   },
   {
     "objectID": "slides-01-02.html#operations-and-variable-assignments",
@@ -5605,5 +5605,26 @@
     "title": "Schedule",
     "section": "Quiz 12 (Wednesday, December 11, 2024)",
     "text": "Quiz 12 (Wednesday, December 11, 2024)"
+  },
+  {
+    "objectID": "slides-01-02.html#combining-variables-and-operations",
+    "href": "slides-01-02.html#combining-variables-and-operations",
+    "title": "Python Basics (class slides)",
+    "section": "Combining variables and operations",
+    "text": "Combining variables and operations\nWrite code to calculate the area of a circle when radius is 3:\n\nAssign integer 3 to radius\nCalculate the area (use \\(\\pi\\) as 3.1415)\nPrint the area"
+  },
+  {
+    "objectID": "slides-01-02.html#questions",
+    "href": "slides-01-02.html#questions",
+    "title": "Python Basics (class slides)",
+    "section": "Questions",
+    "text": "Questions\n\nWhat if we want to get the area of circles when the radius is 1, 2, 3, 4 and 5?\nCan we do it more efficiently?"
+  },
+  {
+    "objectID": "slides-02-01.html#more-operations",
+    "href": "slides-02-01.html#more-operations",
+    "title": "Functions (class slides)",
+    "section": "More operations",
+    "text": "More operations\nTry the following operators with the different types in python:\n\n   +\n   -\n   *\n   /\n   **\n   \n   //\n   %"
   }
 ]

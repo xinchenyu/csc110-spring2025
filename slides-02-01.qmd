@@ -119,7 +119,26 @@ print(volume(6, 10)) # 1130.94
 print(volume(5, 5)) # 392.68750000000006
 ```
 
+## More operations
 
+Try the following operators with the different types in python:
+
+<br />
+
+```{=html}
+<pre style="font-size: 30px">
+
+   +
+   -
+   *
+   /
+   **
+   
+   //
+   %
+
+</pre>
+```
 
 # Order of Operations
 
