@@ -95,7 +95,7 @@ Write a function that does the following:
 ## Submit function to Gradescope
 
 -   Name your python script with the `volume` function `cylinder.py`
--   Go to [Gradescope](https://www.gradescope.com/courses/822022) and submit your `.py` file
+-   Submit your `.py` file to [Gradescope, Attendance August 30](https://www.gradescope.com/courses/822022)
 -   You can resubmit as many times as you need (up to the deadline)
 -   You can look at your `Submission History` and activate a previous submission
 
@@ -186,3 +186,12 @@ print(b2)
 ```
 
 Note that the division operator returns a float even when both numerator and denominator are integers
+
+## Quiz 02
+
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+</center>
+
+You have 10 minutes to complete the quiz

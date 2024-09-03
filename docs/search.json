@@ -1201,7 +1201,7 @@
     "href": "slides-02-01.html#submit-function-to-gradescope",
     "title": "Functions (class slides)",
     "section": "Submit function to Gradescope",
-    "text": "Submit function to Gradescope\n\nName your python script with the volume function cylinder.py\nGo to Gradescope and submit your .py file\nYou can resubmit as many times as you need (up to the deadline)\nYou can look at your Submission History and activate a previous submission"
+    "text": "Submit function to Gradescope\n\nName your python script with the volume function cylinder.py\nSubmit your .py file to Gradescope, Attendance August 30\nYou can resubmit as many times as you need (up to the deadline)\nYou can look at your Submission History and activate a previous submission"
   },
   {
     "objectID": "slides-02-01.html#pemdas",
@@ -5626,5 +5626,12 @@
     "title": "Functions (class slides)",
     "section": "More operations",
     "text": "More operations\nTry the following operators with the different types in python:\n\n   +\n   -\n   *\n   /\n   **\n   \n   //\n   %"
+  },
+  {
+    "objectID": "slides-02-01.html#quiz-02",
+    "href": "slides-02-01.html#quiz-02",
+    "title": "Functions (class slides)",
+    "section": "Quiz 02",
+    "text": "Quiz 02\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz"
   }
 ]
