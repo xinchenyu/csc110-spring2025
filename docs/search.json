@@ -1180,7 +1180,7 @@
     "href": "slides-02-01.html#function-to-calculate-area-of-a-circle-1",
     "title": "Functions (class slides)",
     "section": "Function to calculate area of a circle",
-    "text": "Function to calculate area of a circle\n\ndef calculate_area(radius):\n  # calculate the area first\n  area = 3.1415 * radius ** 2\n  \n  # return calculated area\n  return area\n\nprint(calculate_area(3)) # 28.27\nprint(calculate_area(6)) # 113.09"
+    "text": "Function to calculate area of a circle\n\ndef calculate_area(radius):\n  # calculate the area first\n  area = 3.1415 * radius ** 2\n  \n  # return calculated area\n  return area\n\ndef main():\n  print(calculate_area(3)) # 28.27\n  print(calculate_area(6)) # 113.09\n  \nmain()"
   },
   {
     "objectID": "slides-02-01.html#function-to-calculate-the-volume-of-a-cylinder",
@@ -1194,7 +1194,7 @@
     "href": "slides-02-01.html#function-to-calculate-the-volume-of-a-cylinder-1",
     "title": "Functions (class slides)",
     "section": "Function to calculate the volume of a cylinder",
-    "text": "Function to calculate the volume of a cylinder\n\ndef volume(radius, height):\n  # calculate the area first\n  area = 3.1415 * radius ** 2\n  \n  # multiply area by height\n  vol = area * height\n  \n  # return calculated volume\n  return vol\n\nprint(volume(1, 2)) # 6.283\nprint(volume(6, 10)) # 1130.94\nprint(volume(5, 5)) # 392.68750000000006"
+    "text": "Function to calculate the volume of a cylinder\n\ndef volume(radius, height):\n  # calculate the area first\n  area = 3.1415 * radius ** 2\n  \n  # multiply area by height\n  vol = area * height\n  \n  # return calculated volume\n  return vol\n\ndef main():\n  print(volume(1, 2)) # 6.283\n  print(volume(6, 10)) # 1130.94\n  print(volume(5, 5)) # 392.68750000000006\n  \nmain()"
   },
   {
     "objectID": "slides-02-01.html#submit-function-to-gradescope",

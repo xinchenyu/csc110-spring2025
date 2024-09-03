@@ -79,8 +79,11 @@ def calculate_area(radius):
   # return calculated area
   return area
 
-print(calculate_area(3)) # 28.27
-print(calculate_area(6)) # 113.09
+def main():
+  print(calculate_area(3)) # 28.27
+  print(calculate_area(6)) # 113.09
+  
+main()
 ```
 
 ## Function to calculate the volume of a cylinder
@@ -114,9 +117,12 @@ def volume(radius, height):
   # return calculated volume
   return vol
 
-print(volume(1, 2)) # 6.283
-print(volume(6, 10)) # 1130.94
-print(volume(5, 5)) # 392.68750000000006
+def main():
+  print(volume(1, 2)) # 6.283
+  print(volume(6, 10)) # 1130.94
+  print(volume(5, 5)) # 392.68750000000006
+  
+main()
 ```
 
 ## More operations
