@@ -40,10 +40,12 @@ Write a function that calculates the area of a square:
 def square_area(side):
   # enter your code here
 
-print(square_area(5)) # 25
-print(square_area(6)) # 36
-print(square_area(10)) # 100
+def main():
+  print(square_area(5)) # 25
+  print(square_area(6)) # 36
+  print(square_area(10)) # 100
 
+main()
 ```
 
 ## Square Area
@@ -56,9 +58,12 @@ def square_area(side):
   area = side * side
   return area
 
-print(square_area(5)) # 25
-print(square_area(6)) # 36
-print(square_area(10)) # 100
+def main():
+  print(square_area(5)) # 25
+  print(square_area(6)) # 36
+  print(square_area(10)) # 100
+
+main()
 ```
 
 # Rounding numbers with built-in function `round()`
@@ -154,9 +159,12 @@ def sphere_volume(radius):
   volume = (4 / 3) * 3.1415 * radius**3
   return round(volume, 2)
 
-print(sphere_volume(.75)) # 1.77
-print(sphere_volume(2)) # 33.51
-print(sphere_volume(5.5)) # 696.89
+def main():
+  print(sphere_volume(.75)) # 1.77
+  print(sphere_volume(2)) # 33.51
+  print(sphere_volume(5.5)) # 696.89
+
+main()
 ```
 
 ## Write a function
@@ -190,15 +198,13 @@ def sphere_area(radius):
   area = 4 * 3.1415 * radius**2
   return round(area, 2)
 
+def main():
+  r = .75
+  v = sphere_volume(r)
+  a = sphere_area(r)
+  print(v, a)
 
-r = .75
-v = sphere_volume(r)
-a = sphere_area(r)
-print(v, a)
+main()
 ```
 
-## Write a function -- sphere volume and area
 
-Submit your sphere volume and area solution as attendance on Gradescope.
-
-Name your file `sphere.py`
