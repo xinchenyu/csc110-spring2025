@@ -6,6 +6,11 @@ slide-number: true
 
 # CSc 110 Math in Python
 
+## CS Buddy Mentor Program Sign-up
+
+![](images/frame.png)
+
+
 ## The Mathematical Operators
 
 -   `+` Addition
@@ -25,12 +30,13 @@ slide-number: true
 
 ## Write a function
 
-Write a function that calculates the area of a square:
+Write a function called `square_area` that takes in one argument (side length) and calculates the area of a square (a quadrilateral with two sides parallel that are of equal length). 
 
-1.  Its name is `square_area`
-2.  It takes one argument: `side`
-3.  It calculates the area of a square (a quadrilateral with two sides parallel that are of equal length). The area of a square is calculated by multiplying the side by itself ($area = side^2$).
-4.  It returns the value for calculated square area.
+The area of a square is calculated by multiplying the side by itself ($area = side^2$). Return the value for calculated area.
+
+Add a comment to your code.
+
+Name your file `square.py` and submit it to attendance on gradescope. 
 
 ## Square Area
 
@@ -106,9 +112,9 @@ Rounding is done toward the nearest even choice. What would these round to? (dis
 #| echo: true
 #| eval: false
 round(51.6)
+round(51.4)
 round(51.5)
 round(50.5)
-round(51.4)
 ```
 
 ## `round()`
@@ -129,9 +135,9 @@ Rounding is done toward the nearest even choice. What would these round to:
 #| echo: true
 #| eval: true
 print(round(51.6))
+print(round(51.4))
 print(round(51.5))
 print(round(50.5))
-print(round(51.4))
 ```
 
 ## Write a function
