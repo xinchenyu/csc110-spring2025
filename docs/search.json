@@ -3854,7 +3854,7 @@
     "href": "slides-03-01.html#argument-vs.-parameter",
     "title": "More on Functions (class slides)",
     "section": "Argument vs. Parameter",
-    "text": "Argument vs. Parameter\n\nNever set variables as global variables, pass values to functions when called\nWhen a function is defined, the values you want to pass to the function are called parameter variables\nWhen the function is then called, the values you pass to the function are called arguments"
+    "text": "Argument vs. Parameter\n\nNever set variables as global variables, pass values to functions when called\nWhen a function is defined, the variables you want to pass to the function are called parameter variables\nWhen the function is then called, the values you pass to the function are called arguments"
   },
   {
     "objectID": "slides-03-01.html#argument-or-parameter",
@@ -3868,7 +3868,7 @@
     "href": "slides-03-01.html#write-a-function",
     "title": "More on Functions (class slides)",
     "section": "Write a function",
-    "text": "Write a function\nWrite a Python function that does the following:\n\nIts name is hypotenuse\nIt takes two arguments: a and b representing the length of the two non-hypotenuse sides of a right angle triangle\nIt calculate the hypotenuse (c) according to the Pythagorean theorem formula: \\(c = \\sqrt(a^2 + b^2)\\)\nIt returns the calculated hypotenuse\nTest cases: hypotenuse(3, 4) should return 5.0, hypotenuse(10, 10) should return 14.14"
+    "text": "Write a function\nWrite a Python function called hypotenuse that takes two arguments: a and b representing the length of the two non-hypotenuse sides of a right triangle. The function should calculate the hypotenuse according to the Pythagorean theorem: \\(c = \\sqrt(a^2 + b^2)\\). Return it rounded at two decimals.\nTest cases: hypotenuse(3, 4) should return 5.0, hypotenuse(10, 10) should return 14.14\nName your file hypotenuse.py"
   },
   {
     "objectID": "slides-03-01.html#write-a-function-1",
@@ -5640,5 +5640,12 @@
     "title": "Math in Python (class slides)",
     "section": "CS Buddy Mentor Program Sign-up",
     "text": "CS Buddy Mentor Program Sign-up"
+  },
+  {
+    "objectID": "slides-03-01.html#submit-attendance",
+    "href": "slides-03-01.html#submit-attendance",
+    "title": "More on Functions (class slides)",
+    "section": "Submit attendance",
+    "text": "Submit attendance\nSubmit your hypotenuse.py file with your solution to gradescope for attendance"
   }
 ]

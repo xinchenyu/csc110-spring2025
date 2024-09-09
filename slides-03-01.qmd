@@ -116,7 +116,7 @@ main()
 ## Argument vs. Parameter
 
 -   Never set variables as global variables, pass values to functions when called
--   When a function is defined, the values you want to pass to the function are called **parameter variables**
+-   When a function is defined, the variables you want to pass to the function are called **parameter variables**
 -   When the function is then called, the values you pass to the function are called **arguments**
 
 ## Argument or Parameter?
@@ -132,15 +132,19 @@ def add(a, b):
 add(5, 4)
 ```
 
+
 ## Write a function
 
-Write a Python function that does the following:
+Write a Python function called `hypotenuse` that takes two arguments: `a` and `b` representing the length of the two non-hypotenuse sides of a right triangle.
+The function should calculate the hypotenuse according to the Pythagorean theorem: $c = \sqrt(a^2 + b^2)$. Return it rounded at two decimals.
 
-1.  Its name is `hypotenuse`
-2.  It takes two arguments: `a` and `b` representing the length of the two non-hypotenuse sides of a right angle triangle
-3.  It calculate the hypotenuse (`c`) according to the Pythagorean theorem formula: $c = \sqrt(a^2 + b^2)$
-4.  It returns the calculated hypotenuse
-5.  Test cases: `hypotenuse(3, 4)` should return `5.0`, `hypotenuse(10, 10)` should return `14.14`
+Test cases: `hypotenuse(3, 4)` should return `5.0`, `hypotenuse(10, 10)` should return `14.14`
+
+Name your file `hypotenuse.py`
+
+## Submit attendance
+
+Submit your `hypotenuse.py` file with your solution to gradescope for attendance
 
 ## Write a function
 
@@ -183,3 +187,5 @@ def main():
   
 main()
 ```
+
+
