@@ -70,14 +70,14 @@ main()
 
 ## Global vs. Local variables (scope)
 
--   **Local Variables** have local scope -- for example, a variable assigned inside a function can only be used or modified withing that function
--   **Global Variables** have global scope -- for example, a variable delcared outside a function can be accessed or modified acorss mulitple functions
+-   **Local Variables** have local scope -- for example, a variable assigned inside a function can only be used or modified within that function
+-   **Global Variables** have global scope -- for example, a variable delcared outside a function can be accessed or modified across multiple functions
 
 ## Global vs. Local variables (scope)
 
 -   In the previous program we wrote (volume and area of sphere), `r`, `v` and `a` are local variables within the `main()` function.
--   The variable `area` is also local within the `sphere_area(radius)` function scope.
--   The variable `volume` is local within `sphere_volume(radius)`
+-   The variable `radius` and `area` are local within the `sphere_area(radius)` function scope.
+-   The variable `radius` and `volume` are local within `sphere_volume(radius)`
 
 ## Global or Local?
 
