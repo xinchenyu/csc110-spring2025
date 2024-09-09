@@ -188,21 +188,20 @@ $$
 4.  It returns the value for the calculated sphere area
 5.  Test case: `sphere_area(.75)` should return `7.07`.
 
-## Write a function -- solutions
+## Write a function -- solutions 1
 
 ```{python}
 #| echo: true
 #| eval: true
-def sphere_volume(radius):
-  "calculates the volume of a sphere of given radius"
-  volume = (4 / 3) * 3.1415 * radius**3
-  return round(volume, 2)
-
-
 def sphere_area(radius):
   "calculates the area of a sphere of given radius"
   area = 4 * 3.1415 * radius**2
   return round(area, 2)
+
+def sphere_volume(radius):
+  "calculates the volume of a sphere of given radius"
+  volume = (4 / 3) * 3.1415 * radius**3
+  return round(volume, 2)
 
 def main():
   r = .75
@@ -213,4 +212,44 @@ def main():
 main()
 ```
 
+## Write a function
+Comparing two formulas:
+$$
+a = 4 \cdot \pi \cdot radius^2
+$$
 
+$$
+v = {4 / 3} \cdot \pi \cdot radius^3 
+$$
+We can use area when calculating volume:
+$$
+v = {1 / 3} \cdot a \cdot radius
+$$
+
+Modify your `sphere_volume` function by calling `sphere_area` inside the function.
+
+## Write a function -- solutions 2
+
+```{python}
+#| echo: true
+#| eval: true
+def sphere_area(radius):
+  "calculates the area of a sphere of given radius"
+  area = 4 * 3.1415 * radius**2
+  return round(area, 2)
+
+
+def sphere_volume(radius):
+  "calculates the volume of a sphere of given radius"
+  volume = (1 / 3) * sphere_area(radius) * radius
+  return round(volume, 2)
+
+
+def main():
+  r = .75
+  v = sphere_volume(r)
+  a = sphere_area(r)
+  print(v, a)
+
+main()
+```

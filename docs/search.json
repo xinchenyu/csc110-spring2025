@@ -3819,7 +3819,7 @@
     "href": "slides-03-01.html#function-comments-1",
     "title": "More on Functions (class slides)",
     "section": "Function Comments",
-    "text": "Function Comments\n\n'''\nXinchen Yu\nCSC110\nClass Demonstration\nThis program has two functions: one to calculate the area of a sphere,\nthe other to calculate the volume of a sphere.\nThe main() function is called to print to the standard output the\narea and volume of a sphere of radius .75\n'''\n\ndef sphere_volume(radius):\n  '''\n  This function calculates the volume of a sphere of given radius.\n  Args:\n    radius: integer representing the radius of the sphere\n  Returns:\n    The float representing the volume of a sphere of the given radius\n  '''\n  volume = (1 / 3) * sphere_area(radius) * radius\n  return round(volume, 2)\n\n\ndef sphere_area(radius):\n  '''\n  This function calculates the area of a sphere of given radius.\n  Args:\n    radius: integer representing the radius of the sphere\n  Returns:\n    The float representing the area of a sphere of the given radius\n  '''\n  area = 4 * 3.1415 * radius**2\n  return round(area, 2)\n\n\ndef main():\n  '''\n  This function prints the volume and area of a sphere of radius .75.\n  Args:\n    None\n  Returns:\n    None\n  '''\n  r = .75\n  v = sphere_volume(r)\n  a = sphere_area(r)\n  print(v, a)\n  \nmain()\n\n1.77 7.07"
+    "text": "Function Comments\n\n'''\nXinchen Yu\nCSC110\nClass Demonstration\nThis program has two functions: one to calculate the area of a sphere,\nthe other to calculate the volume of a sphere.\nThe main() function is called to print to the standard output the\narea and volume of a sphere of radius .75\n'''\ndef sphere_area(radius):\n  '''\n  This function calculates the area of a sphere of given radius.\n  Args:\n    radius: integer representing the radius of the sphere\n  Returns:\n    The float representing the area of a sphere of the given radius\n  '''\n  area = 4 * 3.1415 * radius**2\n  return round(area, 2)\n\ndef sphere_volume(radius):\n  '''\n  This function calculates the volume of a sphere of given radius.\n  Args:\n    radius: integer representing the radius of the sphere\n  Returns:\n    The float representing the volume of a sphere of the given radius\n  '''\n  volume = (1 / 3) * sphere_area(radius) * radius\n  return round(volume, 2)\n\ndef main():\n  '''\n  This function prints the area and volume of a sphere of radius .75.\n  Args:\n    None\n  Returns:\n    None\n  '''\n  r = .75\n  a = sphere_area(r)\n  v = sphere_volume(r)\n  print(a, v)\n  \nmain()\n\n7.07 1.77"
   },
   {
     "objectID": "slides-03-01.html#global-vs.-local-variables-scope",
@@ -5647,5 +5647,26 @@
     "title": "More on Functions (class slides)",
     "section": "Submit attendance",
     "text": "Submit attendance\nSubmit your hypotenuse.py file with your solution to gradescope for attendance"
+  },
+  {
+    "objectID": "slides-02-02.html#write-a-function-solutions-1",
+    "href": "slides-02-02.html#write-a-function-solutions-1",
+    "title": "Math in Python (class slides)",
+    "section": "Write a function – solutions 1",
+    "text": "Write a function – solutions 1\n\ndef sphere_area(radius):\n  \"calculates the area of a sphere of given radius\"\n  area = 4 * 3.1415 * radius**2\n  return round(area, 2)\n\ndef sphere_volume(radius):\n  \"calculates the volume of a sphere of given radius\"\n  volume = (4 / 3) * 3.1415 * radius**3\n  return round(volume, 2)\n\ndef main():\n  r = .75\n  v = sphere_volume(r)\n  a = sphere_area(r)\n  print(v, a)\n\nmain()\n\n1.77 7.07"
+  },
+  {
+    "objectID": "slides-02-02.html#write-a-function-3",
+    "href": "slides-02-02.html#write-a-function-3",
+    "title": "Math in Python (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\nComparing two formulas: \\[\na = 4 \\cdot \\pi \\cdot radius^2\n\\]\n\\[\nv = {4 / 3} \\cdot \\pi \\cdot radius^3\n\\] We can use area when calculating volume: \\[\nv = {1 / 3} \\cdot a \\cdot radius\n\\]\nModify your sphere_volume function by calling sphere_area inside the function."
+  },
+  {
+    "objectID": "slides-02-02.html#write-a-function-solutions-2",
+    "href": "slides-02-02.html#write-a-function-solutions-2",
+    "title": "Math in Python (class slides)",
+    "section": "Write a function – solutions 2",
+    "text": "Write a function – solutions 2\n\ndef sphere_area(radius):\n  \"calculates the area of a sphere of given radius\"\n  area = 4 * 3.1415 * radius**2\n  return round(area, 2)\n\n\ndef sphere_volume(radius):\n  \"calculates the volume of a sphere of given radius\"\n  volume = (1 / 3) * sphere_area(radius) * radius\n  return round(volume, 2)\n\n\ndef main():\n  r = .75\n  v = sphere_volume(r)\n  a = sphere_area(r)\n  print(v, a)\n\nmain()\n\n1.77 7.07"
   }
 ]

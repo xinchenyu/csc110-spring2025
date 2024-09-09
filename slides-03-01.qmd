@@ -25,6 +25,16 @@ the other to calculate the volume of a sphere.
 The main() function is called to print to the standard output the
 area and volume of a sphere of radius .75
 '''
+def sphere_area(radius):
+  '''
+  This function calculates the area of a sphere of given radius.
+  Args:
+    radius: integer representing the radius of the sphere
+  Returns:
+    The float representing the area of a sphere of the given radius
+  '''
+  area = 4 * 3.1415 * radius**2
+  return round(area, 2)
 
 def sphere_volume(radius):
   '''
@@ -37,31 +47,18 @@ def sphere_volume(radius):
   volume = (1 / 3) * sphere_area(radius) * radius
   return round(volume, 2)
 
-
-def sphere_area(radius):
-  '''
-  This function calculates the area of a sphere of given radius.
-  Args:
-    radius: integer representing the radius of the sphere
-  Returns:
-    The float representing the area of a sphere of the given radius
-  '''
-  area = 4 * 3.1415 * radius**2
-  return round(area, 2)
-
-
 def main():
   '''
-  This function prints the volume and area of a sphere of radius .75.
+  This function prints the area and volume of a sphere of radius .75.
   Args:
     None
   Returns:
     None
   '''
   r = .75
-  v = sphere_volume(r)
   a = sphere_area(r)
-  print(v, a)
+  v = sphere_volume(r)
+  print(a, v)
   
 main()
 ```
