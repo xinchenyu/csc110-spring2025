@@ -66,7 +66,7 @@ main()
 ## Global vs. Local variables (scope)
 
 -   Every variable that is created has a particular scope
--   The scope of a variable is the range of coder over which that variable can be used or modified
+-   The scope of a variable is the region in the code where the variable can be used or modified
 
 ## Global vs. Local variables (scope)
 
