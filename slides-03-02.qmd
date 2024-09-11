@@ -6,6 +6,16 @@ slide-number: true
 
 # CSC 110 Python Functions
 
+## Built-in Functions
+
+-   `print()` 
+-   `round()`
+-   `type()`
+-   `input()`
+-   `len()`
+-   `int()`
+-   `float()`
+
 ## Write a function
 
 Write a Python function that does the following:
@@ -17,16 +27,59 @@ Write a Python function that does the following:
 ```{python}
 #| echo: true
 #| eval: false
-print( greeting("Xinchen", "Yu") ) # Hello, Xinchen Yu!
+print( greeting("Mickey", "Mouse") ) # Hello, Mickey Mouse!
 ```
 
+## `input()` function
 
-## Reading the documentation
+-   The `input()` function prompts the user to input text in the standard output
+-   Whatever is inside the parentheses in `input()` will be written to the standard output (without a trailing newline, which you can add using `\n`).
+-   The function then reads a line from input, converts it to a string (stripping a trailing newline), and returns that
+-   `input()` always returns a string
 
-Access the [Python 3.11 documentation](https://docs.python.org/3.11/library/functions.html#built-in-functions) and read the definitions for `print()`, `round()`, `input()`, `len()`, `int()`, and `str()`.
+```{python}
+#| echo: true
+#| eval: false
+input("What's your name?\n")
+```
 
-Try these built-in functions on your laptop and discuss with your table members.
- 
+## Write a function
+
+Write a Python function that does the following:
+
+1.  Its name is `greeting_again` with no parameters
+2.  It first prompts you to enter your first name
+3.  It again prompts you to enter your last name
+3.  It returns a string with the same greeting as `greeting` but replace with your first and last name
+
+```{python}
+#| echo: true
+#| eval: false
+print( greeting_again() ) 
+```
+
+## Write a function
+
+```{python}
+#| echo: true
+#| eval: false
+def greeting(first, last):
+    message = "Hello, " + first + " " + last + "!"
+    return message
+
+def greeting_again():
+    first = input("Enter your first name:\n")
+    last = input("Enter your last name:\n")
+    message = "Hello, " + first + " " + last + "!"
+    return message
+
+def main():
+    print(greeting("Mickey", "Mouse"))
+    print(greeting_again())
+
+main()
+```
+
 ## `len()` function
 
 -   The `len()` function can be used with many types -- we will be using it with `string` for now
@@ -35,7 +88,7 @@ Try these built-in functions on your laptop and discuss with your table members.
 ```{python}
 #| echo: true
 #| eval: true
-character_count = len("Xinchen")
+character_count = len("Mickey")
 print(character_count)
 ```
 
@@ -73,23 +126,6 @@ def main():
 main()
 ```
 
-## `input()` function
-
--   The `input()` function prompts the user to input text in the standard output
--   Whatever is inside the parentheses in `input()` will be written to the standard output (without a trailing newline, which you can add using `\n`).
--   The function then reads a line from input, converts it to a string (stripping a trailing newline), and returns that
--   `input()` always returns a string
-
-```{python}
-#| echo: true
-#| eval: false
-input("What's your name?\n")
-```
-
-
-## `input()` function
-
-Use `input()` to get user input (it always returns a string)
 
 
 ## Quiz 03

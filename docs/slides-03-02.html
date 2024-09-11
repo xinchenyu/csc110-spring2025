@@ -400,6 +400,18 @@
 <h1>CSC 110 Python Functions</h1>
 
 </section>
+<section id="built-in-functions" class="slide level2">
+<h2>Built-in Functions</h2>
+<ul>
+<li><code>print()</code></li>
+<li><code>round()</code></li>
+<li><code>type()</code></li>
+<li><code>input()</code></li>
+<li><code>len()</code></li>
+<li><code>int()</code></li>
+<li><code>float()</code></li>
+</ul>
+</section>
 <section id="write-a-function" class="slide level2">
 <h2>Write a function</h2>
 <p>Write a Python function that does the following:</p>
@@ -409,62 +421,7 @@
 <li>It returns a string with a greeting using <code>first_name</code> and <code>last_name</code></li>
 </ol>
 <div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">print</span>( greeting(<span class="st">"Xinchen"</span>, <span class="st">"Yu"</span>) ) <span class="co"># Hello, Xinchen Yu!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="reading-the-documentation" class="slide level2">
-<h2>Reading the documentation</h2>
-<p>Access the <a href="https://docs.python.org/3.11/library/functions.html#built-in-functions">Python 3.11 documentation</a> and read the definitions for <code>print()</code>, <code>round()</code>, <code>input()</code>, <code>len()</code>, <code>int()</code>, and <code>str()</code>.</p>
-<p>Try these built-in functions on your laptop and discuss with your table members.</p>
-</section>
-<section id="len-function" class="slide level2">
-<h2><code>len()</code> function</h2>
-<ul>
-<li>The <code>len()</code> function can be used with many types – we will be using it with <code>string</code> for now</li>
-<li>It returns the number of characters in a string</li>
-</ul>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>character_count <span class="op">=</span> <span class="bu">len</span>(<span class="st">"Xinchen"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="bu">print</span>(character_count)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>7</code></pre>
-</div>
-</div>
-</section>
-<section id="write-a-function-1" class="slide level2">
-<h2>Write a function</h2>
-<p>Write a Python function that does the following:</p>
-<ol type="1">
-<li>Its name is <code>count_characters</code></li>
-<li>It takes three string arguments, <code>a</code>, <code>b</code> and <code>c</code></li>
-<li>It returns the total number of characters for all three strings</li>
-</ol>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="bu">print</span>( count_characters(<span class="st">"hel"</span>, <span class="st">"lo"</span>, <span class="st">"world"</span>) ) <span class="co"># 10</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="bu">print</span>( count_characters(<span class="st">""</span>, <span class="st">""</span>, <span class="st">""</span>) ) <span class="co"># 0</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="bu">print</span>( count_characters(<span class="st">" "</span>, <span class="st">" "</span>, <span class="st">" "</span>) ) <span class="co"># 3</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="bu">print</span>( count_characters(<span class="st">"10"</span>, <span class="st">"2"</span>, <span class="st">"3"</span>) ) <span class="co"># 4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="write-a-function-2" class="slide level2">
-<h2>Write a function</h2>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">def</span> count_characters(a, b, c):</span>
-<span id="cb5-2"><a href="#cb5-2"></a>    <span class="cf">return</span> <span class="bu">len</span>(a) <span class="op">+</span> <span class="bu">len</span>(b) <span class="op">+</span> <span class="bu">len</span>(c)</span>
-<span id="cb5-3"><a href="#cb5-3"></a></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="kw">def</span> main():</span>
-<span id="cb5-5"><a href="#cb5-5"></a>    <span class="bu">print</span>( count_characters(<span class="st">"hel"</span>, <span class="st">"lo"</span>, <span class="st">"world"</span>) ) <span class="co"># 10</span></span>
-<span id="cb5-6"><a href="#cb5-6"></a>    <span class="bu">print</span>( count_characters(<span class="st">""</span>, <span class="st">""</span>, <span class="st">""</span>) ) <span class="co"># 0</span></span>
-<span id="cb5-7"><a href="#cb5-7"></a>    <span class="bu">print</span>( count_characters(<span class="st">" "</span>, <span class="st">" "</span>, <span class="st">" "</span>) ) <span class="co"># 3</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a>    <span class="bu">print</span>( count_characters(<span class="st">"10"</span>, <span class="st">"2"</span>, <span class="st">"3"</span>) ) <span class="co"># 4</span></span>
-<span id="cb5-9"><a href="#cb5-9"></a></span>
-<span id="cb5-10"><a href="#cb5-10"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>10
-0
-3
-4</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">print</span>( greeting(<span class="st">"Mickey"</span>, <span class="st">"Mouse"</span>) ) <span class="co"># Hello, Mickey Mouse!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="input-function" class="slide level2">
@@ -475,13 +432,92 @@
 <li>The function then reads a line from input, converts it to a string (stripping a trailing newline), and returns that</li>
 <li><code>input()</code> always returns a string</li>
 </ul>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="bu">input</span>(<span class="st">"What's your name?</span><span class="ch">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="bu">input</span>(<span class="st">"What's your name?</span><span class="ch">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="input-function-1" class="slide level2">
-<h2><code>input()</code> function</h2>
-<p>Use <code>input()</code> to get user input (it always returns a string)</p>
+<section id="write-a-function-1" class="slide level2">
+<h2>Write a function</h2>
+<p>Write a Python function that does the following:</p>
+<ol type="1">
+<li>Its name is <code>greeting_again</code> with no parameters</li>
+<li>It first prompts you to enter your first name</li>
+<li>It again prompts you to enter your last name</li>
+<li>It returns a string with the same greeting as <code>greeting</code> but replace with your first and last name</li>
+</ol>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="bu">print</span>( greeting_again() ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-a-function-2" class="slide level2">
+<h2>Write a function</h2>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">def</span> greeting(first, last):</span>
+<span id="cb4-2"><a href="#cb4-2"></a>    message <span class="op">=</span> <span class="st">"Hello, "</span> <span class="op">+</span> first <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> last <span class="op">+</span> <span class="st">"!"</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>    <span class="cf">return</span> message</span>
+<span id="cb4-4"><a href="#cb4-4"></a></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="kw">def</span> greeting_again():</span>
+<span id="cb4-6"><a href="#cb4-6"></a>    first <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Enter your first name:</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb4-7"><a href="#cb4-7"></a>    last <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Enter your last name:</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb4-8"><a href="#cb4-8"></a>    message <span class="op">=</span> <span class="st">"Hello, "</span> <span class="op">+</span> first <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> last <span class="op">+</span> <span class="st">"!"</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a>    <span class="cf">return</span> message</span>
+<span id="cb4-10"><a href="#cb4-10"></a></span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="kw">def</span> main():</span>
+<span id="cb4-12"><a href="#cb4-12"></a>    <span class="bu">print</span>(greeting(<span class="st">"Mickey"</span>, <span class="st">"Mouse"</span>))</span>
+<span id="cb4-13"><a href="#cb4-13"></a>    <span class="bu">print</span>(greeting_again())</span>
+<span id="cb4-14"><a href="#cb4-14"></a></span>
+<span id="cb4-15"><a href="#cb4-15"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="len-function" class="slide level2">
+<h2><code>len()</code> function</h2>
+<ul>
+<li>The <code>len()</code> function can be used with many types – we will be using it with <code>string</code> for now</li>
+<li>It returns the number of characters in a string</li>
+</ul>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>character_count <span class="op">=</span> <span class="bu">len</span>(<span class="st">"Mickey"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="bu">print</span>(character_count)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>6</code></pre>
+</div>
+</div>
+</section>
+<section id="write-a-function-3" class="slide level2">
+<h2>Write a function</h2>
+<p>Write a Python function that does the following:</p>
+<ol type="1">
+<li>Its name is <code>count_characters</code></li>
+<li>It takes three string arguments, <code>a</code>, <code>b</code> and <code>c</code></li>
+<li>It returns the total number of characters for all three strings</li>
+</ol>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="bu">print</span>( count_characters(<span class="st">"hel"</span>, <span class="st">"lo"</span>, <span class="st">"world"</span>) ) <span class="co"># 10</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="bu">print</span>( count_characters(<span class="st">""</span>, <span class="st">""</span>, <span class="st">""</span>) ) <span class="co"># 0</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="bu">print</span>( count_characters(<span class="st">" "</span>, <span class="st">" "</span>, <span class="st">" "</span>) ) <span class="co"># 3</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="bu">print</span>( count_characters(<span class="st">"10"</span>, <span class="st">"2"</span>, <span class="st">"3"</span>) ) <span class="co"># 4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-a-function-4" class="slide level2">
+<h2>Write a function</h2>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">def</span> count_characters(a, b, c):</span>
+<span id="cb8-2"><a href="#cb8-2"></a>    <span class="cf">return</span> <span class="bu">len</span>(a) <span class="op">+</span> <span class="bu">len</span>(b) <span class="op">+</span> <span class="bu">len</span>(c)</span>
+<span id="cb8-3"><a href="#cb8-3"></a></span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="kw">def</span> main():</span>
+<span id="cb8-5"><a href="#cb8-5"></a>    <span class="bu">print</span>( count_characters(<span class="st">"hel"</span>, <span class="st">"lo"</span>, <span class="st">"world"</span>) ) <span class="co"># 10</span></span>
+<span id="cb8-6"><a href="#cb8-6"></a>    <span class="bu">print</span>( count_characters(<span class="st">""</span>, <span class="st">""</span>, <span class="st">""</span>) ) <span class="co"># 0</span></span>
+<span id="cb8-7"><a href="#cb8-7"></a>    <span class="bu">print</span>( count_characters(<span class="st">" "</span>, <span class="st">" "</span>, <span class="st">" "</span>) ) <span class="co"># 3</span></span>
+<span id="cb8-8"><a href="#cb8-8"></a>    <span class="bu">print</span>( count_characters(<span class="st">"10"</span>, <span class="st">"2"</span>, <span class="st">"3"</span>) ) <span class="co"># 4</span></span>
+<span id="cb8-9"><a href="#cb8-9"></a></span>
+<span id="cb8-10"><a href="#cb8-10"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>10
+0
+3
+4</code></pre>
+</div>
+</div>
 </section>
 <section id="quiz-03" class="slide level2">
 <h2>Quiz 03</h2>
@@ -503,10 +539,10 @@
 <li>The <code>int()</code> function can be used to convert a string to an integer type</li>
 <li>It only works if the string only contains digits</li>
 </ul>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>age <span class="op">=</span> <span class="st">'35'</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a>age_int <span class="op">=</span> <span class="bu">int</span>(age)</span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="bu">print</span>(<span class="bu">type</span>(age), <span class="bu">type</span>(age_int))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>age <span class="op">=</span> <span class="st">'35'</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a>age_int <span class="op">=</span> <span class="bu">int</span>(age)</span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="bu">print</span>(<span class="bu">type</span>(age), <span class="bu">type</span>(age_int))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'str'&gt; &lt;class 'int'&gt;</code></pre>
 </div>
@@ -518,16 +554,16 @@
 <li>The <code>float()</code> function can be used to convert a string to a float type</li>
 <li>It only works if the string only contains digits and optionally a decimal point</li>
 </ul>
-<div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>age <span class="op">=</span> <span class="st">'35'</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a>age_float <span class="op">=</span> <span class="bu">float</span>(age)</span>
-<span id="cb10-3"><a href="#cb10-3"></a><span class="bu">print</span>(<span class="bu">type</span>(age), <span class="bu">type</span>(age_float))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a>age <span class="op">=</span> <span class="st">'35'</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>age_float <span class="op">=</span> <span class="bu">float</span>(age)</span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="bu">print</span>(<span class="bu">type</span>(age), <span class="bu">type</span>(age_float))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'str'&gt; &lt;class 'float'&gt;</code></pre>
 </div>
 </div>
 </section>
-<section id="write-a-function-3" class="slide level2">
+<section id="write-a-function-5" class="slide level2">
 <h2>Write a function</h2>
 <p>Write a Python function that does the following:</p>
 <ol type="1">
@@ -537,23 +573,23 @@
 <li>It calculates (imperfectly) the year a person of <code>age</code> was born by subtracting <code>age</code> from <code>2024</code></li>
 <li>It returns an integer representing the approximate year person of <code>age</code> was born</li>
 </ol>
-<div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="bu">print</span>( calculate_year_born() ) <span class="co"># user enters 60, function returns 1964</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="bu">print</span>( calculate_year_born() ) <span class="co"># user enters 60, function returns 1964</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="write-a-function-4" class="slide level2">
+<section id="write-a-function-6" class="slide level2">
 <h2>Write a function</h2>
-<div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">def</span> calculate_year_born():</span>
-<span id="cb13-2"><a href="#cb13-2"></a>    str_age <span class="op">=</span> <span class="bu">input</span>(<span class="st">"what's your age?</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb13-3"><a href="#cb13-3"></a>    age <span class="op">=</span> <span class="bu">int</span>(str_age)</span>
-<span id="cb13-4"><a href="#cb13-4"></a>    year_born <span class="op">=</span> <span class="dv">2024</span> <span class="op">-</span> age</span>
-<span id="cb13-5"><a href="#cb13-5"></a>    <span class="cf">return</span> year_born</span>
-<span id="cb13-6"><a href="#cb13-6"></a></span>
-<span id="cb13-7"><a href="#cb13-7"></a><span class="kw">def</span> main():</span>
-<span id="cb13-8"><a href="#cb13-8"></a>    <span class="bu">print</span>(calculate_year_born())</span>
-<span id="cb13-9"><a href="#cb13-9"></a></span>
-<span id="cb13-10"><a href="#cb13-10"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw">def</span> calculate_year_born():</span>
+<span id="cb15-2"><a href="#cb15-2"></a>    str_age <span class="op">=</span> <span class="bu">input</span>(<span class="st">"what's your age?</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb15-3"><a href="#cb15-3"></a>    age <span class="op">=</span> <span class="bu">int</span>(str_age)</span>
+<span id="cb15-4"><a href="#cb15-4"></a>    year_born <span class="op">=</span> <span class="dv">2024</span> <span class="op">-</span> age</span>
+<span id="cb15-5"><a href="#cb15-5"></a>    <span class="cf">return</span> year_born</span>
+<span id="cb15-6"><a href="#cb15-6"></a></span>
+<span id="cb15-7"><a href="#cb15-7"></a><span class="kw">def</span> main():</span>
+<span id="cb15-8"><a href="#cb15-8"></a>    <span class="bu">print</span>(calculate_year_born())</span>
+<span id="cb15-9"><a href="#cb15-9"></a></span>
+<span id="cb15-10"><a href="#cb15-10"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 <div class="footer footer-default">

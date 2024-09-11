@@ -3588,7 +3588,7 @@
     "href": "slides-03-02.html#write-a-function",
     "title": "Built-in Python Functions (class slides)",
     "section": "Write a function",
-    "text": "Write a function\nWrite a Python function that does the following:\n\nIts name is greeting\nIt takes two arguments, first_name and last_name\nIt returns a string with a greeting using first_name and last_name\n\n\nprint( greeting(\"Xinchen\", \"Yu\") ) # Hello, Xinchen Yu!"
+    "text": "Write a function\nWrite a Python function that does the following:\n\nIts name is greeting\nIt takes two arguments, first_name and last_name\nIt returns a string with a greeting using first_name and last_name\n\n\nprint( greeting(\"Mickey\", \"Mouse\") ) # Hello, Mickey Mouse!"
   },
   {
     "objectID": "slides-03-02.html#reading-the-documentation",
@@ -3602,14 +3602,14 @@
     "href": "slides-03-02.html#len-function",
     "title": "Built-in Python Functions (class slides)",
     "section": "len() function",
-    "text": "len() function\n\nThe len() function can be used with many types – we will be using it with string for now\nIt returns the number of characters in a string\n\n\ncharacter_count = len(\"Xinchen\")\nprint(character_count)\n\n7"
+    "text": "len() function\n\nThe len() function can be used with many types – we will be using it with string for now\nIt returns the number of characters in a string\n\n\ncharacter_count = len(\"Mickey\")\nprint(character_count)\n\n6"
   },
   {
     "objectID": "slides-03-02.html#write-a-function-1",
     "href": "slides-03-02.html#write-a-function-1",
     "title": "Built-in Python Functions (class slides)",
     "section": "Write a function",
-    "text": "Write a function\nWrite a Python function that does the following:\n\nIts name is count_characters\nIt takes three string arguments, a, b and c\nIt returns the total number of characters for all three strings\n\n\nprint( count_characters(\"hel\", \"lo\", \"world\") ) # 10\nprint( count_characters(\"\", \"\", \"\") ) # 0\nprint( count_characters(\" \", \" \", \" \") ) # 3\nprint( count_characters(\"10\", \"2\", \"3\") ) # 4"
+    "text": "Write a function\nWrite a Python function that does the following:\n\nIts name is greeting_again with no parameters\nIt first prompts you to enter your first name\nIt again prompts you to enter your last name\nIt returns a string with the same greeting as greeting but replace with your first and last name\n\n\nprint( greeting_again() )"
   },
   {
     "objectID": "slides-03-02.html#input-function",
@@ -3630,7 +3630,7 @@
     "href": "slides-03-02.html#write-a-function-2",
     "title": "Built-in Python Functions (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\ndef count_characters(a, b, c):\n    return len(a) + len(b) + len(c)\n\ndef main():\n    print( count_characters(\"hel\", \"lo\", \"world\") ) # 10\n    print( count_characters(\"\", \"\", \"\") ) # 0\n    print( count_characters(\" \", \" \", \" \") ) # 3\n    print( count_characters(\"10\", \"2\", \"3\") ) # 4\n\nmain()\n\n10\n0\n3\n4"
+    "text": "Write a function\n\ndef greeting(first, last):\n    message = \"Hello, \" + first + \" \" + last + \"!\"\n    return message\n\ndef greeting_again():\n    first = input(\"Enter your first name:\\n\")\n    last = input(\"Enter your last name:\\n\")\n    message = \"Hello, \" + first + \" \" + last + \"!\"\n    return message\n\ndef main():\n    print(greeting(\"Mickey\", \"Mouse\"))\n    print(greeting_again())\n\nmain()"
   },
   {
     "objectID": "slides-03-02.html#announcements",
@@ -3665,7 +3665,7 @@
     "href": "slides-03-02.html#write-a-function-3",
     "title": "Built-in Python Functions (class slides)",
     "section": "Write a function",
-    "text": "Write a function\nWrite a Python function that does the following:\n\nIts name is calculate_year_born, with no parameters\nIt prompts user to enter their age input()\nIt converts user’s age to integer (since input() always returns a string)\nIt calculates (imperfectly) the year a person of age was born by subtracting age from 2024\nIt returns an integer representing the approximate year person of age was born\n\n\nprint( calculate_year_born() ) # user enters 60, function returns 1964"
+    "text": "Write a function\nWrite a Python function that does the following:\n\nIts name is count_characters\nIt takes three string arguments, a, b and c\nIt returns the total number of characters for all three strings\n\n\nprint( count_characters(\"hel\", \"lo\", \"world\") ) # 10\nprint( count_characters(\"\", \"\", \"\") ) # 0\nprint( count_characters(\" \", \" \", \" \") ) # 3\nprint( count_characters(\"10\", \"2\", \"3\") ) # 4"
   },
   {
     "objectID": "slides-03-02.html#attendence",
@@ -5679,6 +5679,27 @@
   {
     "objectID": "slides-03-02.html#write-a-function-4",
     "href": "slides-03-02.html#write-a-function-4",
+    "title": "Built-in Python Functions (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\n\ndef count_characters(a, b, c):\n    return len(a) + len(b) + len(c)\n\ndef main():\n    print( count_characters(\"hel\", \"lo\", \"world\") ) # 10\n    print( count_characters(\"\", \"\", \"\") ) # 0\n    print( count_characters(\" \", \" \", \" \") ) # 3\n    print( count_characters(\"10\", \"2\", \"3\") ) # 4\n\nmain()\n\n10\n0\n3\n4"
+  },
+  {
+    "objectID": "slides-03-02.html#built-in-functions",
+    "href": "slides-03-02.html#built-in-functions",
+    "title": "Built-in Python Functions (class slides)",
+    "section": "Built-in Functions",
+    "text": "Built-in Functions\n\nprint()\nround()\ntype()\ninput()\nlen()\nint()\nfloat()"
+  },
+  {
+    "objectID": "slides-03-02.html#write-a-function-5",
+    "href": "slides-03-02.html#write-a-function-5",
+    "title": "Built-in Python Functions (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\nWrite a Python function that does the following:\n\nIts name is calculate_year_born, with no parameters\nIt prompts user to enter their age input()\nIt converts user’s age to integer (since input() always returns a string)\nIt calculates (imperfectly) the year a person of age was born by subtracting age from 2024\nIt returns an integer representing the approximate year person of age was born\n\n\nprint( calculate_year_born() ) # user enters 60, function returns 1964"
+  },
+  {
+    "objectID": "slides-03-02.html#write-a-function-6",
+    "href": "slides-03-02.html#write-a-function-6",
     "title": "Built-in Python Functions (class slides)",
     "section": "Write a function",
     "text": "Write a function\n\ndef calculate_year_born():\n    str_age = input(\"what's your age?\\n\")\n    age = int(str_age)\n    year_born = 2024 - age\n    return year_born\n\ndef main():\n    print(calculate_year_born())\n\nmain()"
