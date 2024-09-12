@@ -1614,7 +1614,7 @@
     "href": "slides-04-01.html#comparisons",
     "title": "More expressions (class slides)",
     "section": "Comparisons",
-    "text": "Comparisons\n\nWhat will be the result of the following expressions:\n\n\n8 == 7\n8 &lt; 7\n8 &gt; 7\n\n\nWhat are the other two comparison operators?"
+    "text": "Comparisons\n\nWhat will be the result of the following expressions:\n\n\n8 == 7\n8 &lt; 7\n8 &gt; 7\n\n\nWhat are the other comparison operators?"
   },
   {
     "objectID": "slides-04-01.html#comparisons-1",
@@ -5710,5 +5710,19 @@
     "title": "Built-in Python Functions (class slides)",
     "section": "Submit attendance",
     "text": "Submit attendance\nSubmit your get_input.py file with your solution to gradescope for attendance. Do not call main() in your file to get full points."
+  },
+  {
+    "objectID": "slides-04-01.html#arithmetic-operators-vs-comparison-operators",
+    "href": "slides-04-01.html#arithmetic-operators-vs-comparison-operators",
+    "title": "More expressions (class slides)",
+    "section": "Arithmetic Operators vs Comparison Operators",
+    "text": "Arithmetic Operators vs Comparison Operators\nArithmetic Operators:\n\n(expressions...), **, *, /, //, %, +, -\n\nComparison Operators:\n\n==, !=, &gt;=, &gt;, &lt;=, &lt;"
+  },
+  {
+    "objectID": "slides-04-01.html#arithmetic-vs-comparison-operators",
+    "href": "slides-04-01.html#arithmetic-vs-comparison-operators",
+    "title": "More expressions (class slides)",
+    "section": "Arithmetic vs Comparison Operators",
+    "text": "Arithmetic vs Comparison Operators\nArithmetic Operators:\n\n(expressions...), **, *, /, //, %, +, -\n\nComparison Operators:\n\n==, !=, &gt;=, &gt;, &lt;=, &lt;\n\nOrder of operations: arithmetic operators come before comparison operators."
   }
 ]

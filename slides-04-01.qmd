@@ -63,7 +63,7 @@ Evaluate the expressions below:
 8 > 7
 ```
 
--   What are the other two comparison operators?
+-   What are the other comparison operators?
 
 ## Comparisons
 
@@ -90,11 +90,6 @@ print( odd(5) ) # True
 print( odd(0) ) # False
 ```
 
-## Attendence
-
-Submit your odd function as attendance on Gradescope.
-
-Name your file `odd.py`
 
 ## Write a function -- solution
 
@@ -113,16 +108,17 @@ main()
 ```
 
 
-## Comparisons
+## Arithmetic vs Comparison Operators
 
-Expressions with comparisons operators are evaluated to `True` or `False`
+Arithmetic Operators:
 
--   `==` equal
--   `!=` different
--   `>=` greater or equal
--   `>` greater
--   `<=` less or equal
--   `<` less
+-   `(expressions...)`, `**, *, /, //, %, +, -` 
+
+Comparison Operators:
+
+-   `==, !=, >=, >, <=, <` 
+
+Order of operations: arithmetic operators come before comparison operators.
 
 ## Evaluate the expressions
 
