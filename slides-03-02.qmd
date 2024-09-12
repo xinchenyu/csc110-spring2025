@@ -169,19 +169,19 @@ print(type(age), type(age_float))
 
 ## Write a function
 
-Write a Python function that does the following:
+Write a Python function `calculate_year_born` with no parameters. It prompts user to enter their age `input()`. It converts user's age to integer. It calculates (imperfectly) the year a person of `age` was born by subtracting `age` from `2024`. It returns an integer representing the approximate year person of `age` was born.
 
-1.  Its name is `calculate_year_born`, with no parameters
-1.  It prompts user to enter their age `input()`
-2.  It converts user's age to integer (since `input()` always returns a string)
-3.  It calculates (imperfectly) the year a person of `age` was born by subtracting `age` from `2024`
-4.  It returns an integer representing the approximate year person of `age` was born
+Name your file `get_input.py`
 
 ```{python}
 #| echo: true
 #| eval: false
 print( calculate_year_born() ) # user enters 60, function returns 1964
 ```
+
+## Submit attendance
+
+Submit your `get_input.py` file with your solution to gradescope for attendance. Do not call `main()` in your file to get full points.
 
 ## Write a function
 

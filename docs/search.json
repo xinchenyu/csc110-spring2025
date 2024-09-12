@@ -5695,7 +5695,7 @@
     "href": "slides-03-02.html#write-a-function-5",
     "title": "Built-in Python Functions (class slides)",
     "section": "Write a function",
-    "text": "Write a function\nWrite a Python function that does the following:\n\nIts name is calculate_year_born, with no parameters\nIt prompts user to enter their age input()\nIt converts user’s age to integer (since input() always returns a string)\nIt calculates (imperfectly) the year a person of age was born by subtracting age from 2024\nIt returns an integer representing the approximate year person of age was born\n\n\nprint( calculate_year_born() ) # user enters 60, function returns 1964"
+    "text": "Write a function\nWrite a Python function calculate_year_born with no parameters. It prompts user to enter their age input(). It converts user’s age to integer. It calculates (imperfectly) the year a person of age was born by subtracting age from 2024. It returns an integer representing the approximate year person of age was born.\nName your file get_input.py\n\nprint( calculate_year_born() ) # user enters 60, function returns 1964"
   },
   {
     "objectID": "slides-03-02.html#write-a-function-6",
@@ -5703,5 +5703,12 @@
     "title": "Built-in Python Functions (class slides)",
     "section": "Write a function",
     "text": "Write a function\n\ndef calculate_year_born():\n    str_age = input(\"what's your age?\\n\")\n    age = int(str_age)\n    year_born = 2024 - age\n    return year_born\n\ndef main():\n    print(calculate_year_born())\n\nmain()"
+  },
+  {
+    "objectID": "slides-03-02.html#submit-attendance",
+    "href": "slides-03-02.html#submit-attendance",
+    "title": "Built-in Python Functions (class slides)",
+    "section": "Submit attendance",
+    "text": "Submit attendance\nSubmit your get_input.py file with your solution to gradescope for attendance. Do not call main() in your file to get full points."
   }
 ]
