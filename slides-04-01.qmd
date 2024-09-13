@@ -112,11 +112,11 @@ main()
 
 Arithmetic Operators:
 
--   `(expressions...)`, `**, *, /, //, %, +, -` 
+-   `(expressions...)`, `**`, `*`, `/`, `//`, `%`, `+`, `-` 
 
 Comparison Operators:
 
--   `==, !=, >=, >, <=, <` 
+-   `==`, `!=`, `>=`, `>`, `<=`, `<` 
 
 Order of operations: arithmetic operators come before comparison operators.
 
