@@ -1894,14 +1894,14 @@
     "href": "slides-04-02.html#write-a-function",
     "title": "If statements (class slides)",
     "section": "Write a function",
-    "text": "Write a function\nWrite a Python function that does the following:\n\nIts name is absolute\nIt takes one numeric argument (integer or float) n\nIt returns the absolute value of n: if n is positive, it results n, if n is negative, it returns n * -1\n\nTest cases:\n\nprint( absolute(4) ) # 4\nprint( absolute(-4) ) # 4\nprint( absolute(0) ) # 0"
+    "text": "Write a function\nWrite a Python function called absolute that takes one numeric argument (integer or float) n and returns the absolute value of n: if n is positive, it results n, if n is negative, it returns n * -1\nTest cases:\n\nprint( absolute(4) ) # 4\nprint( absolute(-4) ) # 4\nprint( absolute(0) ) # 0\n\nName your file absolute.py and submit to gradescope for attendance"
   },
   {
     "objectID": "slides-04-02.html#write-a-function-1",
     "href": "slides-04-02.html#write-a-function-1",
     "title": "If statements (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\ndef absolute(n):\n  if n &gt; 0:\n    return n\n  else:\n    return -n\n  \ndef main():\n  print( absolute(4) )\n  print( absolute(-4) )\n  print( absolute(0) )\n  \nmain()\n\n4\n4\n0"
+    "text": "Write a function\n\nFunction age_milestones takes one integer age\nIt returns:\n\n‘You may apply to join the military.’ if age is greater or equal to 18\n‘You may drink.’ if age greater or equal to 21\n‘You may run for president.’ if age greater or equal to 35\n\nThe latter conditions include former so concatenate them\n\n\nprint( age_milestones(18) ) # You may apply to join the military.\nprint( age_milestones(30) ) # You may apply to join the military. You may drink.\nprint( age_milestones(0) ) #"
   },
   {
     "objectID": "slides-04-02.html#write-a-function-2",
@@ -1915,7 +1915,7 @@
     "href": "slides-04-02.html#age-milestones",
     "title": "If statements (class slides)",
     "section": "Age milestones",
-    "text": "Age milestones\n\ndef age_milestones(age):\n  '''\n  This function prints an informative message based on,\n  a person's age.\n  Args:\n    age: integer representing a person's age\n  Returns:\n    A string with a message to the user\n  '''\n  message = \"\"\n  if age &gt;= 18:\n      message += 'You may apply to join the military.'\n     \n  if age &gt;= 21:\n      message += ' You may drink.'\n     \n  if age &gt;= 35:\n      message += ' You may run for president.'\n      \n  return message\n     \ndef main():\n  print( age_milestones(18) ) # You may apply to join the military.\n  print( age_milestones(30) ) # You may apply to join the military. You may drink.\n  print( age_milestones(0) ) # \n \nmain()\n\nYou may apply to join the military.\nYou may apply to join the military. You may drink."
+    "text": "Age milestones\n\ndef age_milestones(age):\n  '''\n  This function prints an informative message based on,\n  a person's age.\n  Args:\n    age: integer representing a person's age\n  Returns:\n    A string with a message to the user\n  '''\n  message = \"\"\n  if age &gt;= 18:\n      message += 'You may apply to join the military'\n     \n  if age &gt;= 21:\n      message += 'You may drink'\n     \n  if age &gt;= 35:\n      message += 'You may run for president'\n      \n  return message\n\ndef validate_age(age):\n  return age.isnumeric()\n     \ndef main():\n  '''\n  This functions takes input from the user and calls the\n  check_age() functiont to print a message\n  '''\n  age = input('How old are you?\\n')\n  if validate_age(age):\n    print(age_milestones(int(age)))\n  else:\n    print(\"Invalid age entered\")\n \nmain()"
   },
   {
     "objectID": "slides-04-02.html#string-methods",
@@ -3910,7 +3910,7 @@
     "href": "project-3.html",
     "title": "Programming Project 3",
     "section": "",
-    "text": "Programming Projects are to be submitted to gradescope\nDue date: Thursday, September 26, 2024 at 9pm\nThis programming project is an adaptation of Ben Dicken’s Where’s the Money Programming Assignment."
+    "text": "Programming Projects are to be submitted to gradescope\nDue date: Thursday, September 26, 2024 at 9pm\nThis programming project is an adaptation of Ben Dicken’s Where’s the Money Programming Assignment.\nDo not import any modules for this assignment. Do not use built-in functions like max() (you have to write your own). You can use the built-in functions we covered in class: print(), round(), input(), len(), int(), float(), str() in addition to format()."
   },
   {
     "objectID": "project-3.html#add-a-comma",
@@ -5724,5 +5724,33 @@
     "title": "More expressions (class slides)",
     "section": "Arithmetic vs Comparison Operators",
     "text": "Arithmetic vs Comparison Operators\nArithmetic Operators:\n\n(expressions...), **, *, /, //, %, +, -\n\nComparison Operators:\n\n==, !=, &gt;=, &gt;, &lt;=, &lt;\n\nOrder of operations: arithmetic operators come before comparison operators."
+  },
+  {
+    "objectID": "slides-04-02.html#expressions-vs-statements",
+    "href": "slides-04-02.html#expressions-vs-statements",
+    "title": "If statements (class slides)",
+    "section": "Expressions vs Statements",
+    "text": "Expressions vs Statements\n\nExpressions evaluates to value\nStatements does something\n\n\n3 + 4 # expression\nprint(3 + 4) # statement\na = 8 # statement\na != 9 # expression\nprint(a) # statement"
+  },
+  {
+    "objectID": "slides-04-02.html#expression-vs-statement",
+    "href": "slides-04-02.html#expression-vs-statement",
+    "title": "If statements (class slides)",
+    "section": "Expression vs Statement",
+    "text": "Expression vs Statement\n\nExpression evaluates to value\nStatement does something\n\n\n3 + 4 # expression\nprint(3 + 4) # statement\n\na = 8 # statement\na != 9 # expression\nprint(a) # statement"
+  },
+  {
+    "objectID": "slides-04-02.html#write-a-function-solution",
+    "href": "slides-04-02.html#write-a-function-solution",
+    "title": "If statements (class slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\n\ndef absolute(n):\n  if n &gt; 0:\n    return n\n  else:\n    return -n\n  \ndef main():\n  print( absolute(4) )\n  print( absolute(-4) )\n  print( absolute(0) )\n  \nmain()\n\n4\n4\n0"
+  },
+  {
+    "objectID": "slides-04-02.html#write-a-function-solution-1",
+    "href": "slides-04-02.html#write-a-function-solution-1",
+    "title": "If statements (class slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\n\ndef age_milestones(age):\n  '''\n  This function prints an informative message based on,\n  a person's age.\n  Args:\n    age: integer representing a person's age\n  Returns:\n    A string with a message to the user\n  '''\n  message = \"\"\n  if age &gt;= 18:\n      message += 'You may apply to join the military.'\n     \n  if age &gt;= 21:\n      message += ' You may drink.'\n     \n  if age &gt;= 35:\n      message += ' You may run for president.'\n      \n  return message\n     \ndef main():\n  print( age_milestones(18) ) # You may apply to join the military.\n  print( age_milestones(30) ) # You may apply to join the military. You may drink.\n  print( age_milestones(0) ) # \n \nmain()\n\nYou may apply to join the military.\nYou may apply to join the military. You may drink."
   }
 ]

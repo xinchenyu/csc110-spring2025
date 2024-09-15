@@ -21,6 +21,9 @@ Programming Projects are to be submitted to [gradescope](https://www.gradescope.
 
 This programming project is an adaptation of Ben Dicken's Where's the Money Programming Assignment.
 
+Do not import any modules for this assignment. Do not use built-in functions like max() (you have to
+write your own). You can use the built-in functions we covered in class: `print()`, `round()`, `input()`, `len()`, `int()`, `float()`, `str()` in addition to `format()`.
+
 # Where's the Money
 
 Budgeting and money management is very important both at the individual level, and for corporations and government. Having a clear understanding of where your money goes, how much you are saving, and how much you invest is important to financial success. As a famous author once wrote:

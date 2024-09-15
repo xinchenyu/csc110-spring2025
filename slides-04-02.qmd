@@ -6,6 +6,21 @@ slide-number: true
 
 # CSc 110 If statements
 
+## Expression vs Statement
+
+-   *Expression* evaluates to value
+-   *Statement* does something
+
+```{python}
+#| echo: true
+#| eval: false
+3 + 4 # expression
+print(3 + 4) # statement
+
+a = 8 # statement
+a != 9 # expression
+print(a) # statement
+```
 
 ## The if statement
 
@@ -80,11 +95,8 @@ main()
 
 ## Write a function
 
-Write a Python function that does the following:
-
-1.  Its name is `absolute`
-2.  It takes one numeric argument (integer or float) `n`
-3.  It returns the absolute value of `n`: if `n` is positive, it results `n`, if `n` is negative, it returns `n * -1`
+Write a Python function called `absolute` that takes one numeric argument (integer or float) `n`
+and returns the absolute value of `n`: if `n` is positive, it results `n`, if `n` is negative, it returns `n * -1`
 
 Test cases:
 
@@ -96,8 +108,10 @@ print( absolute(-4) ) # 4
 print( absolute(0) ) # 0
 ```
 
+Name your file `absolute.py` and submit to gradescope for attendance
 
-## Write a function
+
+## Write a function -- solution
 
 ```{python}
 #| echo: true
@@ -118,11 +132,12 @@ main()
 
 ## Write a function
 
-1.  Function name is `age_milestones` and it takes one integer argument: `age`
+1.  Function `age_milestones` takes one integer `age`
 2.  It returns:
-    -   'You may apply to join the military' if `age` is greater or equal to `18`
-    -   'You may drink' if `age` is greater or equal to `21`
-    -   'You may run for president' if `age` is greater or equal to `35`
+    -   'You may apply to join the military.' if `age` is greater or equal to `18`
+    -   'You may drink.' if `age` greater or equal to `21`
+    -   'You may run for president.' if `age` greater or equal to `35`
+3.  The latter conditions include former so concatenate them
     
 ```{python}
 #| echo: true
@@ -132,7 +147,7 @@ print( age_milestones(30) ) # You may apply to join the military. You may drink.
 print( age_milestones(0) ) # 
 ```
 
-## Age milestones
+## Write a function -- solution
 
 ```{python}
 #| eval: true
@@ -250,17 +265,3 @@ def main():
 main()
 ```
 
-## Quiz 02
-
-<center>
-<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
-<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
-</center>
-
-You have 15 minutes to complete. There are 2 problems.
-
--   No need for comments
--   No need for a `main.py`
--   Just write your function
-
-Built-in functions you can choose to use: `round()`, `input()`, `float()`, `str()`, `int()`
