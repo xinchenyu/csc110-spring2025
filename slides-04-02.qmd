@@ -111,7 +111,7 @@ print( absolute(0) ) # 0
 Name your file `absolute.py` and submit to gradescope for attendance
 
 
-## Write a function -- solution
+## Write a function -- solution 1
 
 ```{python}
 #| echo: true
@@ -129,6 +129,28 @@ def main():
   
 main()
 ```
+
+## Write a function -- solution 2
+
+```{python}
+#| echo: true
+#| eval: true
+def absolute(n):
+  if n > 0:
+    return n
+  return -n
+  
+def main():
+  print( absolute(4) )
+  print( absolute(-4) )
+  
+main()
+```
+
+Which lines run in the function `absolute`?
+
+-   When expression `n > 0` is `True`, line `3` runs (`return` is used to exit a function and returns a value)
+-   When expression `n > 0` is `False`, line `4` runs (skip line `3`)
 
 ## Write a function
 

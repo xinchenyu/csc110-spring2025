@@ -5744,13 +5744,20 @@
     "href": "slides-04-02.html#write-a-function-solution",
     "title": "If statements (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef absolute(n):\n  if n &gt; 0:\n    return n\n  else:\n    return -n\n  \ndef main():\n  print( absolute(4) )\n  print( absolute(-4) )\n  print( absolute(0) )\n  \nmain()\n\n4\n4\n0"
+    "text": "Write a function – solution\n\ndef age_milestones(age):\n  '''\n  This function prints an informative message based on,\n  a person's age.\n  Args:\n    age: integer representing a person's age\n  Returns:\n    A string with a message to the user\n  '''\n  message = \"\"\n  if age &gt;= 18:\n      message += 'You may apply to join the military.'\n     \n  if age &gt;= 21:\n      message += ' You may drink.'\n     \n  if age &gt;= 35:\n      message += ' You may run for president.'\n      \n  return message\n     \ndef main():\n  print( age_milestones(18) ) # You may apply to join the military.\n  print( age_milestones(30) ) # You may apply to join the military. You may drink.\n  print( age_milestones(0) ) # \n \nmain()\n\nYou may apply to join the military.\nYou may apply to join the military. You may drink."
   },
   {
     "objectID": "slides-04-02.html#write-a-function-solution-1",
     "href": "slides-04-02.html#write-a-function-solution-1",
     "title": "If statements (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef age_milestones(age):\n  '''\n  This function prints an informative message based on,\n  a person's age.\n  Args:\n    age: integer representing a person's age\n  Returns:\n    A string with a message to the user\n  '''\n  message = \"\"\n  if age &gt;= 18:\n      message += 'You may apply to join the military.'\n     \n  if age &gt;= 21:\n      message += ' You may drink.'\n     \n  if age &gt;= 35:\n      message += ' You may run for president.'\n      \n  return message\n     \ndef main():\n  print( age_milestones(18) ) # You may apply to join the military.\n  print( age_milestones(30) ) # You may apply to join the military. You may drink.\n  print( age_milestones(0) ) # \n \nmain()\n\nYou may apply to join the military.\nYou may apply to join the military. You may drink."
+    "section": "Write a function – solution 1",
+    "text": "Write a function – solution 1\n\ndef absolute(n):\n  if n &gt; 0:\n    return n\n  else:\n    return -n\n  \ndef main():\n  print( absolute(4) )\n  print( absolute(-4) )\n  print( absolute(0) )\n  \nmain()\n\n4\n4\n0"
+  },
+  {
+    "objectID": "slides-04-02.html#write-a-function-solution-2",
+    "href": "slides-04-02.html#write-a-function-solution-2",
+    "title": "If statements (class slides)",
+    "section": "Write a function – solution 2",
+    "text": "Write a function – solution 2\n\ndef absolute(n):\n  if n &gt; 0:\n    return n\n  return -n\n  \ndef main():\n  print( absolute(4) )\n  print( absolute(-4) )\n  \nmain()\n\n4\n4\n\n\nWhich lines run in the function absolute?\n\nWhen expression n &gt; 0 is True, line 3 runs (return is used to exit a function and returns a value)\nWhen expression n &gt; 0 is False, line 4 runs (skip line 3)"
   }
 ]
