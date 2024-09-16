@@ -1936,7 +1936,7 @@
     "href": "slides-04-02.html#write-a-validation-function",
     "title": "If statements (class slides)",
     "section": "Write a validation function",
-    "text": "Write a validation function\nWrite a Python function that does the following:\n\nIts name is validate_age\nIt takes a string argument: age\nIt returns True if age contains only 0-9 digit characters, and False otherwise\n\nCall this validation in your previous code for age milestones."
+    "text": "Write a validation function\nWrite a Python function validate_age that takes a string argument age. It returns True if age contains only 0-9 digit characters, and False otherwise.\nIn your previous file for age milestone, in the main function:\n\ncall input() to type an age\ncall validate_age to validate your input\nif it is True, call age_milestones to print messages\nif it is False, print ‘Invalid age entered’"
   },
   {
     "objectID": "slides-04-02.html#age-milestones-1",

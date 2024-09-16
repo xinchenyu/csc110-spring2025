@@ -615,7 +615,7 @@ You may apply to join the military. You may drink.
 <div class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>name <span class="op">=</span> <span class="st">"Jimmy42"</span></span>
 <span id="cb13-2"><a href="#cb13-2"></a>name.isnumeric()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="75">
+<div class="cell-output cell-output-display" data-execution_count="50">
 <pre><code>False</code></pre>
 </div>
 </div>
@@ -626,13 +626,14 @@ You may apply to join the military. You may drink.
 </section>
 <section id="write-a-validation-function" class="slide level2">
 <h2>Write a validation function</h2>
-<p>Write a Python function that does the following:</p>
-<ol type="1">
-<li>Its name is <code>validate_age</code></li>
-<li>It takes a string argument: <code>age</code></li>
-<li>It returns <code>True</code> if <code>age</code> contains only 0-9 digit characters, and <code>False</code> otherwise</li>
-</ol>
-<p>Call this validation in your previous code for age milestones.</p>
+<p>Write a Python function <code>validate_age</code> that takes a string argument <code>age</code>. It returns <code>True</code> if <code>age</code> contains only 0-9 digit characters, and <code>False</code> otherwise.</p>
+<p>In your previous file for age milestone, in the <code>main</code> function:</p>
+<ul>
+<li>call <code>input()</code> to type an age</li>
+<li>call <code>validate_age</code> to validate your input</li>
+<li>if it is <code>True</code>, call <code>age_milestones</code> to print messages</li>
+<li>if it is <code>False</code>, print ‘Invalid age entered’</li>
+</ul>
 </section>
 <section id="age-milestones" class="slide level2">
 <h2>Age milestones</h2>

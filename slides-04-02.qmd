@@ -236,13 +236,15 @@ age.isnumeric() # this throws an error
 
 ## Write a validation function
 
-Write a Python function that does the following:
+Write a Python function `validate_age` that takes a string argument `age`.
+It returns `True` if `age` contains only 0-9 digit characters, and `False` otherwise.
 
-1.  Its name is `validate_age`
-2.  It takes a string argument: `age`
-3.  It returns `True` if `age` contains only 0-9 digit characters, and `False` otherwise
+In your previous file for age milestone, in the `main` function:
 
-Call this validation in your previous code for age milestones.
+-   call `input()` to type an age 
+-   call `validate_age` to validate your input 
+-   if it is `True`, call `age_milestones` to print messages
+-   if it is `False`, print 'Invalid age entered'
 
 ## Age milestones
 
