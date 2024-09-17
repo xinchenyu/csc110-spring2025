@@ -400,15 +400,10 @@
 <h1>CSc 110 if elif else statements</h1>
 
 </section>
-<section id="announcements" class="slide level2">
-<h2>Announcements</h2>
-<ul>
-<li>Office hours are now in GS 856 (same floor, the other side of the building)</li>
-</ul>
-</section>
 <section id="if-elif-else" class="slide level2">
 <h2>if elif else</h2>
-<p>While the if condition is required, the elif and else statements are not</p>
+<p>While the if condition is required, the elif and else statements are not.</p>
+<p><code>elif</code> is saying ‘if the previous conditions were not true, then try this condition’. It forces the cases to be mutually exclusive.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {html} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>if conditionA:</span>
 <span id="cb1-2"><a href="#cb1-2"></a>    statements</span>
 <span id="cb1-3"><a href="#cb1-3"></a>elif conditionB:</span>
@@ -418,17 +413,46 @@
 <span id="cb1-7"><a href="#cb1-7"></a>else:</span>
 <span id="cb1-8"><a href="#cb1-8"></a>    statements</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
+<section id="if-elif-else-1" class="slide level2">
+<h2>if elif else</h2>
+<p>Compare the two functions</p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">def</span> func_one(n):</span>
+<span id="cb2-2"><a href="#cb2-2"></a>  message <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>  <span class="cf">if</span> n <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb2-4"><a href="#cb2-4"></a>    message <span class="op">+=</span> <span class="st">"Fizz"</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>  <span class="cf">if</span> n <span class="op">%</span> <span class="dv">5</span> <span class="op">==</span> <span class="dv">0</span>:  <span class="co"># n % 5 == 0 is independent from n % 3 == 0</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>    message <span class="op">+=</span> <span class="st">"Buzz"</span> </span>
+<span id="cb2-7"><a href="#cb2-7"></a>  <span class="cf">return</span> message</span>
+<span id="cb2-8"><a href="#cb2-8"></a></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="kw">def</span> func_two(n):</span>
+<span id="cb2-10"><a href="#cb2-10"></a>  message <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a>  <span class="cf">if</span> n <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb2-12"><a href="#cb2-12"></a>    message <span class="op">+=</span> <span class="st">"Fizz"</span></span>
+<span id="cb2-13"><a href="#cb2-13"></a>  <span class="cf">elif</span> n <span class="op">%</span> <span class="dv">5</span> <span class="op">==</span> <span class="dv">0</span>:  <span class="co"># n % 5 == 0 only runs when n % 3 == 0 is False</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a>    message <span class="op">+=</span> <span class="st">"Buzz"</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a>  <span class="cf">return</span> message</span>
+<span id="cb2-16"><a href="#cb2-16"></a></span>
+<span id="cb2-17"><a href="#cb2-17"></a><span class="kw">def</span> main():</span>
+<span id="cb2-18"><a href="#cb2-18"></a>  <span class="bu">print</span>(func_one(<span class="dv">15</span>), func_two(<span class="dv">15</span>))</span>
+<span id="cb2-19"><a href="#cb2-19"></a>  </span>
+<span id="cb2-20"><a href="#cb2-20"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>FizzBuzz Fizz</code></pre>
+</div>
+</div>
+</section>
 <section id="rewrite-the-code" class="slide level2">
 <h2>Rewrite the code</h2>
 <p>Rewrite the code below to use <code>elif</code> and <code>else</code></p>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">def</span> polarity(x):</span>
-<span id="cb2-2"><a href="#cb2-2"></a>  <span class="cf">if</span> x <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb2-3"><a href="#cb2-3"></a>    <span class="cf">return</span> <span class="st">"positive"</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a>  <span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">0</span>:</span>
-<span id="cb2-5"><a href="#cb2-5"></a>    <span class="cf">return</span> <span class="st">"negative"</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a>  <span class="cf">if</span> x <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb2-7"><a href="#cb2-7"></a>    <span class="cf">return</span> <span class="st">"zero"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">def</span> polarity(x):</span>
+<span id="cb4-2"><a href="#cb4-2"></a>  <span class="cf">if</span> x <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb4-3"><a href="#cb4-3"></a>    <span class="cf">return</span> <span class="st">"positive"</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a>  <span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb4-5"><a href="#cb4-5"></a>    <span class="cf">return</span> <span class="st">"negative"</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a>  <span class="cf">if</span> x <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb4-7"><a href="#cb4-7"></a>    <span class="cf">return</span> <span class="st">"zero"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function" class="slide level2">
@@ -440,27 +464,27 @@
 <li>It returns the highest value</li>
 </ol>
 <p>Test cases</p>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="bu">print</span>( max_of_two(<span class="op">-</span><span class="dv">1</span>, <span class="dv">3</span>) ) <span class="co"># 3</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="bu">print</span>( max_of_two(<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">3</span>) ) <span class="co"># -1</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="bu">print</span>( max_of_two(<span class="dv">5</span>, <span class="dv">5</span>) ) <span class="co"># 5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="bu">print</span>( max_of_two(<span class="op">-</span><span class="dv">1</span>, <span class="dv">3</span>) ) <span class="co"># 3</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="bu">print</span>( max_of_two(<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">3</span>) ) <span class="co"># -1</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="bu">print</span>( max_of_two(<span class="dv">5</span>, <span class="dv">5</span>) ) <span class="co"># 5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">def</span> max_of_two(x, y):</span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="cf">if</span> x <span class="op">&gt;=</span> y:</span>
-<span id="cb4-3"><a href="#cb4-3"></a>    <span class="cf">return</span> x</span>
-<span id="cb4-4"><a href="#cb4-4"></a>  <span class="cf">else</span>:</span>
-<span id="cb4-5"><a href="#cb4-5"></a>    <span class="cf">return</span> y</span>
-<span id="cb4-6"><a href="#cb4-6"></a></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="kw">def</span> main():</span>
-<span id="cb4-8"><a href="#cb4-8"></a>  <span class="bu">print</span>( max_of_two(<span class="op">-</span><span class="dv">1</span>, <span class="dv">3</span>) ) <span class="co"># 3</span></span>
-<span id="cb4-9"><a href="#cb4-9"></a>  <span class="bu">print</span>( max_of_two(<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">3</span>) ) <span class="co"># -1</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a>  <span class="bu">print</span>( max_of_two(<span class="dv">5</span>, <span class="dv">5</span>) ) <span class="co"># 5</span></span>
-<span id="cb4-11"><a href="#cb4-11"></a></span>
-<span id="cb4-12"><a href="#cb4-12"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">def</span> max_of_two(x, y):</span>
+<span id="cb6-2"><a href="#cb6-2"></a>  <span class="cf">if</span> x <span class="op">&gt;=</span> y:</span>
+<span id="cb6-3"><a href="#cb6-3"></a>    <span class="cf">return</span> x</span>
+<span id="cb6-4"><a href="#cb6-4"></a>  <span class="cf">else</span>:</span>
+<span id="cb6-5"><a href="#cb6-5"></a>    <span class="cf">return</span> y</span>
+<span id="cb6-6"><a href="#cb6-6"></a></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="kw">def</span> main():</span>
+<span id="cb6-8"><a href="#cb6-8"></a>  <span class="bu">print</span>( max_of_two(<span class="op">-</span><span class="dv">1</span>, <span class="dv">3</span>) ) <span class="co"># 3</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a>  <span class="bu">print</span>( max_of_two(<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">3</span>) ) <span class="co"># -1</span></span>
+<span id="cb6-10"><a href="#cb6-10"></a>  <span class="bu">print</span>( max_of_two(<span class="dv">5</span>, <span class="dv">5</span>) ) <span class="co"># 5</span></span>
+<span id="cb6-11"><a href="#cb6-11"></a></span>
+<span id="cb6-12"><a href="#cb6-12"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>3
 -1
@@ -477,29 +501,29 @@
 <li>It returns the highest value</li>
 </ol>
 <p>Test cases</p>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="bu">print</span>( max_of_three(<span class="op">-</span><span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">3</span>) ) <span class="co"># 3</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="bu">print</span>( max_of_three(<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">0</span>) ) <span class="co"># 0</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="bu">print</span>( max_of_three(<span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">10</span>) ) <span class="co"># 10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="bu">print</span>( max_of_three(<span class="op">-</span><span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">3</span>) ) <span class="co"># 3</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="bu">print</span>( max_of_three(<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">0</span>) ) <span class="co"># 0</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="bu">print</span>( max_of_three(<span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">10</span>) ) <span class="co"># 10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-solution-1" class="slide level2">
 <h2>Write a function – solution 1</h2>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">def</span> max_of_three(x, y, z):</span>
-<span id="cb7-2"><a href="#cb7-2"></a>  <span class="cf">if</span> x <span class="op">&gt;=</span> y <span class="kw">and</span> x <span class="op">&gt;=</span> z:</span>
-<span id="cb7-3"><a href="#cb7-3"></a>    <span class="cf">return</span> x</span>
-<span id="cb7-4"><a href="#cb7-4"></a>  <span class="cf">elif</span> y <span class="op">&gt;=</span> x <span class="kw">and</span> y <span class="op">&gt;=</span> z:</span>
-<span id="cb7-5"><a href="#cb7-5"></a>    <span class="cf">return</span> y</span>
-<span id="cb7-6"><a href="#cb7-6"></a>  <span class="cf">else</span>:</span>
-<span id="cb7-7"><a href="#cb7-7"></a>    <span class="cf">return</span> z</span>
-<span id="cb7-8"><a href="#cb7-8"></a></span>
-<span id="cb7-9"><a href="#cb7-9"></a><span class="kw">def</span> main():</span>
-<span id="cb7-10"><a href="#cb7-10"></a>  <span class="bu">print</span>( max_of_three(<span class="op">-</span><span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">3</span>) ) <span class="co"># 3</span></span>
-<span id="cb7-11"><a href="#cb7-11"></a>  <span class="bu">print</span>( max_of_three(<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">0</span>) ) <span class="co"># 0</span></span>
-<span id="cb7-12"><a href="#cb7-12"></a>  <span class="bu">print</span>( max_of_three(<span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">10</span>) ) <span class="co"># 10</span></span>
-<span id="cb7-13"><a href="#cb7-13"></a></span>
-<span id="cb7-14"><a href="#cb7-14"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">def</span> max_of_three(x, y, z):</span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="cf">if</span> x <span class="op">&gt;=</span> y <span class="kw">and</span> x <span class="op">&gt;=</span> z:</span>
+<span id="cb9-3"><a href="#cb9-3"></a>    <span class="cf">return</span> x</span>
+<span id="cb9-4"><a href="#cb9-4"></a>  <span class="cf">elif</span> y <span class="op">&gt;=</span> x <span class="kw">and</span> y <span class="op">&gt;=</span> z:</span>
+<span id="cb9-5"><a href="#cb9-5"></a>    <span class="cf">return</span> y</span>
+<span id="cb9-6"><a href="#cb9-6"></a>  <span class="cf">else</span>:</span>
+<span id="cb9-7"><a href="#cb9-7"></a>    <span class="cf">return</span> z</span>
+<span id="cb9-8"><a href="#cb9-8"></a></span>
+<span id="cb9-9"><a href="#cb9-9"></a><span class="kw">def</span> main():</span>
+<span id="cb9-10"><a href="#cb9-10"></a>  <span class="bu">print</span>( max_of_three(<span class="op">-</span><span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">3</span>) ) <span class="co"># 3</span></span>
+<span id="cb9-11"><a href="#cb9-11"></a>  <span class="bu">print</span>( max_of_three(<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">0</span>) ) <span class="co"># 0</span></span>
+<span id="cb9-12"><a href="#cb9-12"></a>  <span class="bu">print</span>( max_of_three(<span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">10</span>) ) <span class="co"># 10</span></span>
+<span id="cb9-13"><a href="#cb9-13"></a></span>
+<span id="cb9-14"><a href="#cb9-14"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>3
 0
@@ -509,24 +533,24 @@
 </section>
 <section id="write-a-function-solution-2" class="slide level2">
 <h2>Write a function – solution 2</h2>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">def</span> max_of_three(x, y, z):</span>
-<span id="cb9-2"><a href="#cb9-2"></a>  max_value <span class="op">=</span> x</span>
-<span id="cb9-3"><a href="#cb9-3"></a>  </span>
-<span id="cb9-4"><a href="#cb9-4"></a>  <span class="cf">if</span> y <span class="op">&gt;=</span> max_value:</span>
-<span id="cb9-5"><a href="#cb9-5"></a>    max_value <span class="op">=</span> y</span>
-<span id="cb9-6"><a href="#cb9-6"></a>    </span>
-<span id="cb9-7"><a href="#cb9-7"></a>  <span class="cf">if</span> z <span class="op">&gt;=</span> max_value:</span>
-<span id="cb9-8"><a href="#cb9-8"></a>    max_value <span class="op">=</span> z</span>
-<span id="cb9-9"><a href="#cb9-9"></a>    </span>
-<span id="cb9-10"><a href="#cb9-10"></a>  <span class="cf">return</span> max_value</span>
-<span id="cb9-11"><a href="#cb9-11"></a></span>
-<span id="cb9-12"><a href="#cb9-12"></a><span class="kw">def</span> main():</span>
-<span id="cb9-13"><a href="#cb9-13"></a>  <span class="bu">print</span>( max_of_three(<span class="op">-</span><span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">3</span>) ) <span class="co"># 3</span></span>
-<span id="cb9-14"><a href="#cb9-14"></a>  <span class="bu">print</span>( max_of_three(<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">0</span>) ) <span class="co"># 0</span></span>
-<span id="cb9-15"><a href="#cb9-15"></a>  <span class="bu">print</span>( max_of_three(<span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">10</span>) ) <span class="co"># 10</span></span>
-<span id="cb9-16"><a href="#cb9-16"></a></span>
-<span id="cb9-17"><a href="#cb9-17"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">def</span> max_of_three(x, y, z):</span>
+<span id="cb11-2"><a href="#cb11-2"></a>  max_value <span class="op">=</span> x</span>
+<span id="cb11-3"><a href="#cb11-3"></a>  </span>
+<span id="cb11-4"><a href="#cb11-4"></a>  <span class="cf">if</span> y <span class="op">&gt;=</span> max_value:</span>
+<span id="cb11-5"><a href="#cb11-5"></a>    max_value <span class="op">=</span> y</span>
+<span id="cb11-6"><a href="#cb11-6"></a>    </span>
+<span id="cb11-7"><a href="#cb11-7"></a>  <span class="cf">if</span> z <span class="op">&gt;=</span> max_value:</span>
+<span id="cb11-8"><a href="#cb11-8"></a>    max_value <span class="op">=</span> z</span>
+<span id="cb11-9"><a href="#cb11-9"></a>    </span>
+<span id="cb11-10"><a href="#cb11-10"></a>  <span class="cf">return</span> max_value</span>
+<span id="cb11-11"><a href="#cb11-11"></a></span>
+<span id="cb11-12"><a href="#cb11-12"></a><span class="kw">def</span> main():</span>
+<span id="cb11-13"><a href="#cb11-13"></a>  <span class="bu">print</span>( max_of_three(<span class="op">-</span><span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">3</span>) ) <span class="co"># 3</span></span>
+<span id="cb11-14"><a href="#cb11-14"></a>  <span class="bu">print</span>( max_of_three(<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">0</span>) ) <span class="co"># 0</span></span>
+<span id="cb11-15"><a href="#cb11-15"></a>  <span class="bu">print</span>( max_of_three(<span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">10</span>) ) <span class="co"># 10</span></span>
+<span id="cb11-16"><a href="#cb11-16"></a></span>
+<span id="cb11-17"><a href="#cb11-17"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>3
 0
@@ -536,36 +560,29 @@
 </section>
 <section id="write-a-function-solution-3" class="slide level2">
 <h2>Write a function – solution 3</h2>
-<div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">def</span> max_of_two(x, y):</span>
-<span id="cb11-2"><a href="#cb11-2"></a>  <span class="cf">if</span> x <span class="op">&gt;=</span> y:</span>
-<span id="cb11-3"><a href="#cb11-3"></a>    <span class="cf">return</span> x</span>
-<span id="cb11-4"><a href="#cb11-4"></a>  <span class="cf">else</span>:</span>
-<span id="cb11-5"><a href="#cb11-5"></a>    <span class="cf">return</span> y</span>
-<span id="cb11-6"><a href="#cb11-6"></a></span>
-<span id="cb11-7"><a href="#cb11-7"></a><span class="kw">def</span> max_of_three(x, y, z):</span>
-<span id="cb11-8"><a href="#cb11-8"></a>  max_x_y <span class="op">=</span> max_of_two(x, y)</span>
-<span id="cb11-9"><a href="#cb11-9"></a>  <span class="cf">return</span> max_of_two(max_x_y, z)</span>
-<span id="cb11-10"><a href="#cb11-10"></a></span>
-<span id="cb11-11"><a href="#cb11-11"></a><span class="kw">def</span> main():</span>
-<span id="cb11-12"><a href="#cb11-12"></a>  <span class="bu">print</span>( max_of_three(<span class="op">-</span><span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">3</span>) ) <span class="co"># 3</span></span>
-<span id="cb11-13"><a href="#cb11-13"></a>  <span class="bu">print</span>( max_of_three(<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">0</span>) ) <span class="co"># 0</span></span>
-<span id="cb11-14"><a href="#cb11-14"></a>  <span class="bu">print</span>( max_of_three(<span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">10</span>) ) <span class="co"># 10</span></span>
-<span id="cb11-15"><a href="#cb11-15"></a></span>
-<span id="cb11-16"><a href="#cb11-16"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">def</span> max_of_two(x, y):</span>
+<span id="cb13-2"><a href="#cb13-2"></a>  <span class="cf">if</span> x <span class="op">&gt;=</span> y:</span>
+<span id="cb13-3"><a href="#cb13-3"></a>    <span class="cf">return</span> x</span>
+<span id="cb13-4"><a href="#cb13-4"></a>  <span class="cf">else</span>:</span>
+<span id="cb13-5"><a href="#cb13-5"></a>    <span class="cf">return</span> y</span>
+<span id="cb13-6"><a href="#cb13-6"></a></span>
+<span id="cb13-7"><a href="#cb13-7"></a><span class="kw">def</span> max_of_three(x, y, z):</span>
+<span id="cb13-8"><a href="#cb13-8"></a>  max_x_y <span class="op">=</span> max_of_two(x, y)</span>
+<span id="cb13-9"><a href="#cb13-9"></a>  <span class="cf">return</span> max_of_two(max_x_y, z)</span>
+<span id="cb13-10"><a href="#cb13-10"></a></span>
+<span id="cb13-11"><a href="#cb13-11"></a><span class="kw">def</span> main():</span>
+<span id="cb13-12"><a href="#cb13-12"></a>  <span class="bu">print</span>( max_of_three(<span class="op">-</span><span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">3</span>) ) <span class="co"># 3</span></span>
+<span id="cb13-13"><a href="#cb13-13"></a>  <span class="bu">print</span>( max_of_three(<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">0</span>) ) <span class="co"># 0</span></span>
+<span id="cb13-14"><a href="#cb13-14"></a>  <span class="bu">print</span>( max_of_three(<span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">10</span>) ) <span class="co"># 10</span></span>
+<span id="cb13-15"><a href="#cb13-15"></a></span>
+<span id="cb13-16"><a href="#cb13-16"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>3
 0
 10</code></pre>
 </div>
 </div>
-</section></section>
-<section>
-<section id="submit-code-for-attendance" class="title-slide slide level1 center">
-<h1>Submit code for attendance</h1>
-<p><strong>One submission per group, add your TA’s name in a comment</strong></p>
-<p>Submit your <code>max_of_three</code> function to Gradescope for attendance.</p>
-<p>Name your file <code>max_of_three.py</code></p>
 </section>
 <section id="write-a-function-2" class="slide level2">
 <h2>Write a function</h2>
@@ -584,24 +601,24 @@
 </section>
 <section id="write-a-function---solution" class="slide level2">
 <h2>Write a function - solution</h2>
-<div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">def</span> average_of_highest(x, y, z):</span>
-<span id="cb13-2"><a href="#cb13-2"></a>  <span class="cf">if</span> x <span class="op">&gt;=</span> z <span class="kw">and</span> y <span class="op">&gt;=</span> z:</span>
-<span id="cb13-3"><a href="#cb13-3"></a>    <span class="cf">return</span> (x <span class="op">+</span> y) <span class="op">/</span> <span class="dv">2</span></span>
-<span id="cb13-4"><a href="#cb13-4"></a>  <span class="cf">elif</span> y <span class="op">&gt;=</span> x <span class="kw">and</span> z <span class="op">&gt;=</span> x:</span>
-<span id="cb13-5"><a href="#cb13-5"></a>    <span class="cf">return</span> (y <span class="op">+</span> z) <span class="op">/</span> <span class="dv">2</span></span>
-<span id="cb13-6"><a href="#cb13-6"></a>  <span class="cf">else</span>:</span>
-<span id="cb13-7"><a href="#cb13-7"></a>    <span class="cf">return</span> (x <span class="op">+</span> z) <span class="op">/</span> <span class="dv">2</span></span>
-<span id="cb13-8"><a href="#cb13-8"></a>  </span>
-<span id="cb13-9"><a href="#cb13-9"></a><span class="kw">def</span> main():</span>
-<span id="cb13-10"><a href="#cb13-10"></a>  <span class="bu">print</span>( average_of_highest(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>) ) <span class="co"># should print 4.0</span></span>
-<span id="cb13-11"><a href="#cb13-11"></a>  <span class="bu">print</span>( average_of_highest(<span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">2</span>) ) <span class="co"># should print 5.0</span></span>
-<span id="cb13-12"><a href="#cb13-12"></a>  <span class="bu">print</span>( average_of_highest(<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">1</span>) ) <span class="co"># should print 3.0</span></span>
-<span id="cb13-13"><a href="#cb13-13"></a>  <span class="bu">print</span>( average_of_highest(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">1</span>) ) <span class="co"># should print 2.0</span></span>
-<span id="cb13-14"><a href="#cb13-14"></a>  <span class="bu">print</span>( average_of_highest(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>) ) <span class="co"># should print 2.0</span></span>
-<span id="cb13-15"><a href="#cb13-15"></a>  <span class="bu">print</span>( average_of_highest(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>) ) <span class="co"># should print 1.5</span></span>
-<span id="cb13-16"><a href="#cb13-16"></a>  </span>
-<span id="cb13-17"><a href="#cb13-17"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw">def</span> average_of_highest(x, y, z):</span>
+<span id="cb15-2"><a href="#cb15-2"></a>  <span class="cf">if</span> x <span class="op">&gt;=</span> z <span class="kw">and</span> y <span class="op">&gt;=</span> z:</span>
+<span id="cb15-3"><a href="#cb15-3"></a>    <span class="cf">return</span> (x <span class="op">+</span> y) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb15-4"><a href="#cb15-4"></a>  <span class="cf">elif</span> y <span class="op">&gt;=</span> x <span class="kw">and</span> z <span class="op">&gt;=</span> x:</span>
+<span id="cb15-5"><a href="#cb15-5"></a>    <span class="cf">return</span> (y <span class="op">+</span> z) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb15-6"><a href="#cb15-6"></a>  <span class="cf">else</span>:</span>
+<span id="cb15-7"><a href="#cb15-7"></a>    <span class="cf">return</span> (x <span class="op">+</span> z) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb15-8"><a href="#cb15-8"></a>  </span>
+<span id="cb15-9"><a href="#cb15-9"></a><span class="kw">def</span> main():</span>
+<span id="cb15-10"><a href="#cb15-10"></a>  <span class="bu">print</span>( average_of_highest(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>) ) <span class="co"># should print 4.0</span></span>
+<span id="cb15-11"><a href="#cb15-11"></a>  <span class="bu">print</span>( average_of_highest(<span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">2</span>) ) <span class="co"># should print 5.0</span></span>
+<span id="cb15-12"><a href="#cb15-12"></a>  <span class="bu">print</span>( average_of_highest(<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">1</span>) ) <span class="co"># should print 3.0</span></span>
+<span id="cb15-13"><a href="#cb15-13"></a>  <span class="bu">print</span>( average_of_highest(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">1</span>) ) <span class="co"># should print 2.0</span></span>
+<span id="cb15-14"><a href="#cb15-14"></a>  <span class="bu">print</span>( average_of_highest(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>) ) <span class="co"># should print 2.0</span></span>
+<span id="cb15-15"><a href="#cb15-15"></a>  <span class="bu">print</span>( average_of_highest(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>) ) <span class="co"># should print 1.5</span></span>
+<span id="cb15-16"><a href="#cb15-16"></a>  </span>
+<span id="cb15-17"><a href="#cb15-17"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>4.0
 5.0
@@ -627,31 +644,31 @@
 </section>
 <section id="write-a-function---solution-1" class="slide level2">
 <h2>Write a function - solution</h2>
-<div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw">def</span> triangle_type(x, y, z):</span>
-<span id="cb15-2"><a href="#cb15-2"></a>  <span class="co">'''</span></span>
-<span id="cb15-3"><a href="#cb15-3"></a><span class="co">  This function labels a triangle of side lengths x, y, z into three categories:</span></span>
-<span id="cb15-4"><a href="#cb15-4"></a><span class="co">    * Equilateral if all three sides are the same length</span></span>
-<span id="cb15-5"><a href="#cb15-5"></a><span class="co">    * Isosceles if two of the sides are of equal length</span></span>
-<span id="cb15-6"><a href="#cb15-6"></a><span class="co">    * Obtuse if all three sides are of different lengths</span></span>
-<span id="cb15-7"><a href="#cb15-7"></a><span class="co">  Args:</span></span>
-<span id="cb15-8"><a href="#cb15-8"></a><span class="co">    x, y, z: numeric (integer or float) representing tiangle side lengths</span></span>
-<span id="cb15-9"><a href="#cb15-9"></a><span class="co">  Returns:</span></span>
-<span id="cb15-10"><a href="#cb15-10"></a><span class="co">    A string: "Equilateral", "Isosceles", or "Obtuse"</span></span>
-<span id="cb15-11"><a href="#cb15-11"></a><span class="co">  '''</span></span>
-<span id="cb15-12"><a href="#cb15-12"></a>  <span class="cf">if</span> x <span class="op">==</span> y <span class="kw">and</span> y <span class="op">==</span> z: <span class="co"># if expression is true, then we know x == z</span></span>
-<span id="cb15-13"><a href="#cb15-13"></a>    <span class="cf">return</span> <span class="st">"Equilateral"</span></span>
-<span id="cb15-14"><a href="#cb15-14"></a>  <span class="cf">elif</span> x <span class="op">==</span> y <span class="kw">or</span> y <span class="op">==</span> z <span class="kw">or</span> z <span class="op">==</span> x: <span class="co"># are any two sides equal?</span></span>
-<span id="cb15-15"><a href="#cb15-15"></a>    <span class="cf">return</span> <span class="st">"Isosceles"</span></span>
-<span id="cb15-16"><a href="#cb15-16"></a>  <span class="cf">else</span>: <span class="co"># all three sides are different</span></span>
-<span id="cb15-17"><a href="#cb15-17"></a>    <span class="cf">return</span> <span class="st">"Obtuse"</span></span>
-<span id="cb15-18"><a href="#cb15-18"></a></span>
-<span id="cb15-19"><a href="#cb15-19"></a><span class="kw">def</span> main():</span>
-<span id="cb15-20"><a href="#cb15-20"></a>  <span class="bu">print</span>( triangle_type(<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>) ) <span class="co"># "Equilateral"</span></span>
-<span id="cb15-21"><a href="#cb15-21"></a>  <span class="bu">print</span>( triangle_type(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">3</span>) ) <span class="co"># "Isosceles"</span></span>
-<span id="cb15-22"><a href="#cb15-22"></a>  <span class="bu">print</span>( triangle_type(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>) ) <span class="co"># "Obtuse"</span></span>
-<span id="cb15-23"><a href="#cb15-23"></a>  </span>
-<span id="cb15-24"><a href="#cb15-24"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="kw">def</span> triangle_type(x, y, z):</span>
+<span id="cb17-2"><a href="#cb17-2"></a>  <span class="co">'''</span></span>
+<span id="cb17-3"><a href="#cb17-3"></a><span class="co">  This function labels a triangle of side lengths x, y, z into three categories:</span></span>
+<span id="cb17-4"><a href="#cb17-4"></a><span class="co">    * Equilateral if all three sides are the same length</span></span>
+<span id="cb17-5"><a href="#cb17-5"></a><span class="co">    * Isosceles if two of the sides are of equal length</span></span>
+<span id="cb17-6"><a href="#cb17-6"></a><span class="co">    * Obtuse if all three sides are of different lengths</span></span>
+<span id="cb17-7"><a href="#cb17-7"></a><span class="co">  Args:</span></span>
+<span id="cb17-8"><a href="#cb17-8"></a><span class="co">    x, y, z: numeric (integer or float) representing tiangle side lengths</span></span>
+<span id="cb17-9"><a href="#cb17-9"></a><span class="co">  Returns:</span></span>
+<span id="cb17-10"><a href="#cb17-10"></a><span class="co">    A string: "Equilateral", "Isosceles", or "Obtuse"</span></span>
+<span id="cb17-11"><a href="#cb17-11"></a><span class="co">  '''</span></span>
+<span id="cb17-12"><a href="#cb17-12"></a>  <span class="cf">if</span> x <span class="op">==</span> y <span class="kw">and</span> y <span class="op">==</span> z: <span class="co"># if expression is true, then we know x == z</span></span>
+<span id="cb17-13"><a href="#cb17-13"></a>    <span class="cf">return</span> <span class="st">"Equilateral"</span></span>
+<span id="cb17-14"><a href="#cb17-14"></a>  <span class="cf">elif</span> x <span class="op">==</span> y <span class="kw">or</span> y <span class="op">==</span> z <span class="kw">or</span> z <span class="op">==</span> x: <span class="co"># are any two sides equal?</span></span>
+<span id="cb17-15"><a href="#cb17-15"></a>    <span class="cf">return</span> <span class="st">"Isosceles"</span></span>
+<span id="cb17-16"><a href="#cb17-16"></a>  <span class="cf">else</span>: <span class="co"># all three sides are different</span></span>
+<span id="cb17-17"><a href="#cb17-17"></a>    <span class="cf">return</span> <span class="st">"Obtuse"</span></span>
+<span id="cb17-18"><a href="#cb17-18"></a></span>
+<span id="cb17-19"><a href="#cb17-19"></a><span class="kw">def</span> main():</span>
+<span id="cb17-20"><a href="#cb17-20"></a>  <span class="bu">print</span>( triangle_type(<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>) ) <span class="co"># "Equilateral"</span></span>
+<span id="cb17-21"><a href="#cb17-21"></a>  <span class="bu">print</span>( triangle_type(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">3</span>) ) <span class="co"># "Isosceles"</span></span>
+<span id="cb17-22"><a href="#cb17-22"></a>  <span class="bu">print</span>( triangle_type(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>) ) <span class="co"># "Obtuse"</span></span>
+<span id="cb17-23"><a href="#cb17-23"></a>  </span>
+<span id="cb17-24"><a href="#cb17-24"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Equilateral
 Isosceles
@@ -673,28 +690,28 @@ Obtuse</code></pre>
 </section>
 <section id="write-a-function---solution-2" class="slide level2">
 <h2>Write a function - solution</h2>
-<div class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="kw">def</span> triangle_inequality(x, y, z):</span>
-<span id="cb17-2"><a href="#cb17-2"></a>  <span class="co">'''</span></span>
-<span id="cb17-3"><a href="#cb17-3"></a><span class="co">  This function checks for the triangle inequality given three numbers</span></span>
-<span id="cb17-4"><a href="#cb17-4"></a><span class="co">  representing the side lengths of a triangle</span></span>
-<span id="cb17-5"><a href="#cb17-5"></a><span class="co">  Args:</span></span>
-<span id="cb17-6"><a href="#cb17-6"></a><span class="co">    x, y, z: numeric (integer or float) representing tiangle side lengths</span></span>
-<span id="cb17-7"><a href="#cb17-7"></a><span class="co">  Returns:</span></span>
-<span id="cb17-8"><a href="#cb17-8"></a><span class="co">    True if inequality is held, False if it is violated</span></span>
-<span id="cb17-9"><a href="#cb17-9"></a><span class="co">  '''</span></span>
-<span id="cb17-10"><a href="#cb17-10"></a>  <span class="cf">if</span> x <span class="op">&gt;=</span> y <span class="op">+</span> z <span class="kw">or</span> y <span class="op">&gt;=</span> x <span class="op">+</span> z <span class="kw">or</span> z <span class="op">&gt;=</span> y <span class="op">+</span> x:</span>
-<span id="cb17-11"><a href="#cb17-11"></a>    <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb17-12"><a href="#cb17-12"></a>  <span class="cf">else</span>:</span>
-<span id="cb17-13"><a href="#cb17-13"></a>    <span class="cf">return</span> <span class="va">True</span></span>
-<span id="cb17-14"><a href="#cb17-14"></a>  </span>
-<span id="cb17-15"><a href="#cb17-15"></a><span class="kw">def</span> main():</span>
-<span id="cb17-16"><a href="#cb17-16"></a>  <span class="bu">print</span>( triangle_inequality(<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>) ) <span class="co"># True</span></span>
-<span id="cb17-17"><a href="#cb17-17"></a>  <span class="bu">print</span>( triangle_inequality(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">3</span>) ) <span class="co"># True</span></span>
-<span id="cb17-18"><a href="#cb17-18"></a>  <span class="bu">print</span>( triangle_inequality(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>) ) <span class="co"># True</span></span>
-<span id="cb17-19"><a href="#cb17-19"></a>  <span class="bu">print</span>( triangle_inequality(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>) ) <span class="co"># False</span></span>
-<span id="cb17-20"><a href="#cb17-20"></a>  </span>
-<span id="cb17-21"><a href="#cb17-21"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="kw">def</span> triangle_inequality(x, y, z):</span>
+<span id="cb19-2"><a href="#cb19-2"></a>  <span class="co">'''</span></span>
+<span id="cb19-3"><a href="#cb19-3"></a><span class="co">  This function checks for the triangle inequality given three numbers</span></span>
+<span id="cb19-4"><a href="#cb19-4"></a><span class="co">  representing the side lengths of a triangle</span></span>
+<span id="cb19-5"><a href="#cb19-5"></a><span class="co">  Args:</span></span>
+<span id="cb19-6"><a href="#cb19-6"></a><span class="co">    x, y, z: numeric (integer or float) representing tiangle side lengths</span></span>
+<span id="cb19-7"><a href="#cb19-7"></a><span class="co">  Returns:</span></span>
+<span id="cb19-8"><a href="#cb19-8"></a><span class="co">    True if inequality is held, False if it is violated</span></span>
+<span id="cb19-9"><a href="#cb19-9"></a><span class="co">  '''</span></span>
+<span id="cb19-10"><a href="#cb19-10"></a>  <span class="cf">if</span> x <span class="op">&gt;=</span> y <span class="op">+</span> z <span class="kw">or</span> y <span class="op">&gt;=</span> x <span class="op">+</span> z <span class="kw">or</span> z <span class="op">&gt;=</span> y <span class="op">+</span> x:</span>
+<span id="cb19-11"><a href="#cb19-11"></a>    <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb19-12"><a href="#cb19-12"></a>  <span class="cf">else</span>:</span>
+<span id="cb19-13"><a href="#cb19-13"></a>    <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb19-14"><a href="#cb19-14"></a>  </span>
+<span id="cb19-15"><a href="#cb19-15"></a><span class="kw">def</span> main():</span>
+<span id="cb19-16"><a href="#cb19-16"></a>  <span class="bu">print</span>( triangle_inequality(<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>) ) <span class="co"># True</span></span>
+<span id="cb19-17"><a href="#cb19-17"></a>  <span class="bu">print</span>( triangle_inequality(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">3</span>) ) <span class="co"># True</span></span>
+<span id="cb19-18"><a href="#cb19-18"></a>  <span class="bu">print</span>( triangle_inequality(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>) ) <span class="co"># True</span></span>
+<span id="cb19-19"><a href="#cb19-19"></a>  <span class="bu">print</span>( triangle_inequality(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>) ) <span class="co"># False</span></span>
+<span id="cb19-20"><a href="#cb19-20"></a>  </span>
+<span id="cb19-21"><a href="#cb19-21"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>True
 True
@@ -709,43 +726,43 @@ False</code></pre>
 </section>
 <section id="solution" class="slide level2">
 <h2>Solution</h2>
-<div class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="kw">def</span> triangle_inequality(x, y, z):</span>
-<span id="cb19-2"><a href="#cb19-2"></a>  <span class="cf">if</span> x <span class="op">&gt;=</span> y <span class="op">+</span> z <span class="kw">or</span> y <span class="op">&gt;=</span> x <span class="op">+</span> z <span class="kw">or</span> z <span class="op">&gt;=</span> y <span class="op">+</span> x:</span>
-<span id="cb19-3"><a href="#cb19-3"></a>    <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb19-4"><a href="#cb19-4"></a>  <span class="cf">else</span>:</span>
-<span id="cb19-5"><a href="#cb19-5"></a>    <span class="cf">return</span> <span class="va">True</span></span>
-<span id="cb19-6"><a href="#cb19-6"></a>  </span>
-<span id="cb19-7"><a href="#cb19-7"></a><span class="kw">def</span> triangle_type(x, y, z):</span>
-<span id="cb19-8"><a href="#cb19-8"></a>  <span class="co">'''</span></span>
-<span id="cb19-9"><a href="#cb19-9"></a><span class="co">  This function labels a triangle of side lengths x, y, z into four categories:</span></span>
-<span id="cb19-10"><a href="#cb19-10"></a><span class="co">    * Non-existing if side lengths violate inequality</span></span>
-<span id="cb19-11"><a href="#cb19-11"></a><span class="co">    * Equilateral if all three sides are the same length</span></span>
-<span id="cb19-12"><a href="#cb19-12"></a><span class="co">    * Isosceles if two of the sides are of equal length</span></span>
-<span id="cb19-13"><a href="#cb19-13"></a><span class="co">    * Obtuse if all three sides are of different lengths</span></span>
-<span id="cb19-14"><a href="#cb19-14"></a><span class="co">  Args:</span></span>
-<span id="cb19-15"><a href="#cb19-15"></a><span class="co">    x, y, z: numeric (integer or float) representing tiangle side lengths</span></span>
-<span id="cb19-16"><a href="#cb19-16"></a><span class="co">  Returns:</span></span>
-<span id="cb19-17"><a href="#cb19-17"></a><span class="co">    A string: "Equilateral", "Isosceles", "Obtuse", </span></span>
-<span id="cb19-18"><a href="#cb19-18"></a><span class="co">    or "The triangle does not exist"</span></span>
-<span id="cb19-19"><a href="#cb19-19"></a><span class="co">  '''</span></span>
-<span id="cb19-20"><a href="#cb19-20"></a>  <span class="cf">if</span> triangle_inequality(x, y, z):</span>
-<span id="cb19-21"><a href="#cb19-21"></a>    <span class="cf">if</span> x <span class="op">==</span> y <span class="kw">and</span> y <span class="op">==</span> z: <span class="co"># if expression is true, then we know x == z</span></span>
-<span id="cb19-22"><a href="#cb19-22"></a>      <span class="cf">return</span> <span class="st">"Equilateral"</span></span>
-<span id="cb19-23"><a href="#cb19-23"></a>    <span class="cf">elif</span> x <span class="op">==</span> y <span class="kw">or</span> y <span class="op">==</span> z <span class="kw">or</span> z <span class="op">==</span> x: <span class="co"># are any two sides equal?</span></span>
-<span id="cb19-24"><a href="#cb19-24"></a>      <span class="cf">return</span> <span class="st">"Isosceles"</span></span>
-<span id="cb19-25"><a href="#cb19-25"></a>    <span class="cf">else</span>: <span class="co"># all three sides are different</span></span>
-<span id="cb19-26"><a href="#cb19-26"></a>      <span class="cf">return</span> <span class="st">"Obtuse"</span></span>
-<span id="cb19-27"><a href="#cb19-27"></a>  <span class="cf">else</span>:</span>
-<span id="cb19-28"><a href="#cb19-28"></a>    <span class="cf">return</span> <span class="st">"The triangle does not exist"</span></span>
-<span id="cb19-29"><a href="#cb19-29"></a></span>
-<span id="cb19-30"><a href="#cb19-30"></a><span class="kw">def</span> main():</span>
-<span id="cb19-31"><a href="#cb19-31"></a>  <span class="bu">print</span>( triangle_type(<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>) ) <span class="co"># "Equilateral"</span></span>
-<span id="cb19-32"><a href="#cb19-32"></a>  <span class="bu">print</span>( triangle_type(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">3</span>) ) <span class="co"># "Isosceles"</span></span>
-<span id="cb19-33"><a href="#cb19-33"></a>  <span class="bu">print</span>( triangle_type(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>) ) <span class="co"># "Obtuse"</span></span>
-<span id="cb19-34"><a href="#cb19-34"></a>  <span class="bu">print</span>( triangle_type(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>) ) <span class="co"># "The triangle does not exist"</span></span>
-<span id="cb19-35"><a href="#cb19-35"></a>  </span>
-<span id="cb19-36"><a href="#cb19-36"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a><span class="kw">def</span> triangle_inequality(x, y, z):</span>
+<span id="cb21-2"><a href="#cb21-2"></a>  <span class="cf">if</span> x <span class="op">&gt;=</span> y <span class="op">+</span> z <span class="kw">or</span> y <span class="op">&gt;=</span> x <span class="op">+</span> z <span class="kw">or</span> z <span class="op">&gt;=</span> y <span class="op">+</span> x:</span>
+<span id="cb21-3"><a href="#cb21-3"></a>    <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb21-4"><a href="#cb21-4"></a>  <span class="cf">else</span>:</span>
+<span id="cb21-5"><a href="#cb21-5"></a>    <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb21-6"><a href="#cb21-6"></a>  </span>
+<span id="cb21-7"><a href="#cb21-7"></a><span class="kw">def</span> triangle_type(x, y, z):</span>
+<span id="cb21-8"><a href="#cb21-8"></a>  <span class="co">'''</span></span>
+<span id="cb21-9"><a href="#cb21-9"></a><span class="co">  This function labels a triangle of side lengths x, y, z into four categories:</span></span>
+<span id="cb21-10"><a href="#cb21-10"></a><span class="co">    * Non-existing if side lengths violate inequality</span></span>
+<span id="cb21-11"><a href="#cb21-11"></a><span class="co">    * Equilateral if all three sides are the same length</span></span>
+<span id="cb21-12"><a href="#cb21-12"></a><span class="co">    * Isosceles if two of the sides are of equal length</span></span>
+<span id="cb21-13"><a href="#cb21-13"></a><span class="co">    * Obtuse if all three sides are of different lengths</span></span>
+<span id="cb21-14"><a href="#cb21-14"></a><span class="co">  Args:</span></span>
+<span id="cb21-15"><a href="#cb21-15"></a><span class="co">    x, y, z: numeric (integer or float) representing tiangle side lengths</span></span>
+<span id="cb21-16"><a href="#cb21-16"></a><span class="co">  Returns:</span></span>
+<span id="cb21-17"><a href="#cb21-17"></a><span class="co">    A string: "Equilateral", "Isosceles", "Obtuse", </span></span>
+<span id="cb21-18"><a href="#cb21-18"></a><span class="co">    or "The triangle does not exist"</span></span>
+<span id="cb21-19"><a href="#cb21-19"></a><span class="co">  '''</span></span>
+<span id="cb21-20"><a href="#cb21-20"></a>  <span class="cf">if</span> triangle_inequality(x, y, z):</span>
+<span id="cb21-21"><a href="#cb21-21"></a>    <span class="cf">if</span> x <span class="op">==</span> y <span class="kw">and</span> y <span class="op">==</span> z: <span class="co"># if expression is true, then we know x == z</span></span>
+<span id="cb21-22"><a href="#cb21-22"></a>      <span class="cf">return</span> <span class="st">"Equilateral"</span></span>
+<span id="cb21-23"><a href="#cb21-23"></a>    <span class="cf">elif</span> x <span class="op">==</span> y <span class="kw">or</span> y <span class="op">==</span> z <span class="kw">or</span> z <span class="op">==</span> x: <span class="co"># are any two sides equal?</span></span>
+<span id="cb21-24"><a href="#cb21-24"></a>      <span class="cf">return</span> <span class="st">"Isosceles"</span></span>
+<span id="cb21-25"><a href="#cb21-25"></a>    <span class="cf">else</span>: <span class="co"># all three sides are different</span></span>
+<span id="cb21-26"><a href="#cb21-26"></a>      <span class="cf">return</span> <span class="st">"Obtuse"</span></span>
+<span id="cb21-27"><a href="#cb21-27"></a>  <span class="cf">else</span>:</span>
+<span id="cb21-28"><a href="#cb21-28"></a>    <span class="cf">return</span> <span class="st">"The triangle does not exist"</span></span>
+<span id="cb21-29"><a href="#cb21-29"></a></span>
+<span id="cb21-30"><a href="#cb21-30"></a><span class="kw">def</span> main():</span>
+<span id="cb21-31"><a href="#cb21-31"></a>  <span class="bu">print</span>( triangle_type(<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>) ) <span class="co"># "Equilateral"</span></span>
+<span id="cb21-32"><a href="#cb21-32"></a>  <span class="bu">print</span>( triangle_type(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">3</span>) ) <span class="co"># "Isosceles"</span></span>
+<span id="cb21-33"><a href="#cb21-33"></a>  <span class="bu">print</span>( triangle_type(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>) ) <span class="co"># "Obtuse"</span></span>
+<span id="cb21-34"><a href="#cb21-34"></a>  <span class="bu">print</span>( triangle_type(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>) ) <span class="co"># "The triangle does not exist"</span></span>
+<span id="cb21-35"><a href="#cb21-35"></a>  </span>
+<span id="cb21-36"><a href="#cb21-36"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Equilateral
 Isosceles

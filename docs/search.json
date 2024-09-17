@@ -1733,7 +1733,7 @@
     "href": "slides-04-03.html#if-elif-else",
     "title": "if elif else statements (class slides)",
     "section": "if elif else",
-    "text": "if elif else\nWhile the if condition is required, the elif and else statements are not\nif conditionA:\n    statements\nelif conditionB:\n    statements\nelif conditionC:\n    statements\nelse:\n    statements"
+    "text": "if elif else\nWhile the if condition is required, the elif and else statements are not.\nelif is saying ‘if the previous conditions were not true, then try this condition’. It forces the cases to be mutually exclusive.\nif conditionA:\n    statements\nelif conditionB:\n    statements\nelif conditionC:\n    statements\nelse:\n    statements"
   },
   {
     "objectID": "slides-04-03.html#rewrite-the-code",
@@ -5759,5 +5759,12 @@
     "title": "If statements (class slides)",
     "section": "Write a function – solution 2",
     "text": "Write a function – solution 2\n\ndef absolute(n):\n  if n &gt; 0:\n    return n\n  return -n\n  \ndef main():\n  print( absolute(4) )\n  print( absolute(-4) )\n  \nmain()\n\n4\n4\n\n\nWhich lines run in the function absolute?\n\nWhen expression n &gt; 0 is True, line 3 runs (return is used to exit a function and returns a value)\nWhen expression n &gt; 0 is False, line 4 runs (skip line 3)"
+  },
+  {
+    "objectID": "slides-04-03.html#if-elif-else-1",
+    "href": "slides-04-03.html#if-elif-else-1",
+    "title": "if elif else statements (class slides)",
+    "section": "if elif else",
+    "text": "if elif else\nCompare the two functions\n\ndef func_one(n):\n  message = \"\"\n  if n % 3 == 0:\n    message += \"Fizz\"\n  if n % 5 == 0:  # n % 5 == 0 is independent from n % 3 == 0\n    message += \"Buzz\" \n  return message\n\ndef func_two(n):\n  message = \"\"\n  if n % 3 == 0:\n    message += \"Fizz\"\n  elif n % 5 == 0:  # n % 5 == 0 only runs when n % 3 == 0 is False\n    message += \"Buzz\"\n  return message\n\ndef main():\n  print(func_one(15), func_two(15))\n  \nmain()\n\nFizzBuzz Fizz"
   }
 ]
