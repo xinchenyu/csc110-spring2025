@@ -52,21 +52,6 @@ def main():
 main()
 ```
 
-## Rewrite the code
-
-Rewrite the code below to use `elif` and `else`
-
-```{python}
-#| eval: false
-#| echo: true
-def polarity(x):
-  if x > 0:
-    return "positive"
-  if x < 0:
-    return "negative"
-  if x == 0:
-    return "zero"
-```
 
 ## Write a function
 
@@ -191,6 +176,17 @@ def main():
 
 main()
 ```
+
+## Quiz 04
+
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+</center>
+
+You have 10 minutes to complete the quiz.
+
+No need to write `main()` function.
 
 
 ## Write a function
@@ -355,6 +351,3 @@ def main():
 main()
 ```
 
-## Organize your code
-
-Split your functions and your code testing into two files: one called `triangles.py` and another called `test_triangles.py` -- remember to use `from triangles import *` in your `test_triangles.py` script.

@@ -5766,5 +5766,12 @@
     "title": "if elif else statements (class slides)",
     "section": "if elif else",
     "text": "if elif else\nCompare the two functions\n\ndef func_one(n):\n  message = \"\"\n  if n % 3 == 0:\n    message += \"Fizz\"\n  if n % 5 == 0:  # n % 5 == 0 is independent from n % 3 == 0\n    message += \"Buzz\" \n  return message\n\ndef func_two(n):\n  message = \"\"\n  if n % 3 == 0:\n    message += \"Fizz\"\n  elif n % 5 == 0:  # n % 5 == 0 only runs when n % 3 == 0 is False\n    message += \"Buzz\"\n  return message\n\ndef main():\n  print(func_one(15), func_two(15))\n  \nmain()\n\nFizzBuzz Fizz"
+  },
+  {
+    "objectID": "slides-04-03.html#quiz-04",
+    "href": "slides-04-03.html#quiz-04",
+    "title": "if elif else statements (class slides)",
+    "section": "Quiz 04",
+    "text": "Quiz 04\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.\nNo need to write main() function."
   }
 ]
