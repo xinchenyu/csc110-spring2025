@@ -6,6 +6,11 @@ slide-number: true
 
 # CSc 110 - Intro to While Loops
 
+## Announcements
+
+* Midterm 1 October 2 -- BRING PHOTO ID
+* Modules 1 to 5 -- study guide under [practice problems](practice-01.html) page on website
+
 ## While loops
 
 -   A **while** loop allows a programmer to repeat code
@@ -53,7 +58,8 @@ To ensure our condition (`number < 50`) will eventually be evaluated as `False`,
 number = 15
 while number < 50:
     print('number is less than 50')
-    number += 1
+    number += 5
+print('End')
 ```
 
 ## While loops -- visualization
@@ -62,29 +68,30 @@ Go to [Python Tutor](https://pythontutor.com/visualize.html#mode=edit) to visual
 
 ## While loop -- example
 
+Factorial: 5! = 1 * 2 * 3 * 4 * 5 = 120
+
 ```{python}
 #| eval: true
 #| echo: true
-def multiply(n, m):
-  result = 0
-  count = 0
-  while count < m:
-    result += n
-    count += 1
+def factorial(n):
+  result = 1
+  current_n = 1
+  while current_n <= n:
+    result = result * current_n
+    current_n += 1
   return result
 
 def main():
-  print( multiply(2, 3) )
-  print( multiply(5, 2) )
+  print( factorial(5) )
+  print( factorial(6) )
   
 main()
 ```
 
 ## Write a function
 
-1. Write a function called `add_up_to` that takes an numeric argument `n`.
-1. The function should add all numbers from 1 to `n` in a while loop
-1. Return sum
+Write a function called `add_up_to` that takes an numeric argument `n`.
+The function should add all numbers from 1 to `n` in a while loop, and then (outside the loop) return the sum
 
 ```{python}
 #| eval: false
@@ -92,6 +99,8 @@ main()
 print( add_up_to(5) ) # 15
 print( add_up_to(10) ) # 55
 ```
+
+Name your file `sum_up.py` and submit it to attendance on gradescope
 
 ## Write a function -- solution
 
@@ -109,6 +118,100 @@ def add_up_to(n):
 def main():
   print( add_up_to(5) )
   print( add_up_to(10) )
+  
+main()
+```
+
+## Age milestones
+
+Modify the code below to use a `while` loop to request a valid input from the user.
+
+```{python}
+#| eval: false
+#| echo: true
+def age_milestones(age):
+  '''
+  This function prints an informative message based on,
+  a person's age.
+  Args:
+    age: integer representing a person's age
+  Returns:
+    A string with a message to the user
+  '''
+  message = ""
+  if age >= 18:
+      message += 'You may apply to join the military'
+     
+  if age >= 21:
+      message += 'You may drink'
+     
+  if age > 35:
+      message += 'You may run for president'
+      
+  return message
+
+def validate_age(age):
+  return age.isnumeric()
+     
+def main():
+  '''
+  This functions takes input from the user and calls the
+  check_age() functiont to print a message
+  '''
+  age = input('How old are you?\n')
+  if validate_age(age):
+    age = int(age)
+    print(age_milestones(age))
+  else:
+    print("Invalid age entered")
+ 
+main()
+```
+
+## Age milestones -- solution
+
+Modify the code below to use a `while` loop to request a valid input from the user.
+
+```{python}
+#| eval: false
+#| echo: true
+def age_milestones(age):
+  '''
+  This function prints an informative message based on,
+  a person's age.
+  Args:
+    age: integer representing a person's age
+  Returns:
+    A string with a message to the user
+  '''
+  message = ""
+  if age >= 18:
+      message += 'You may apply to join the military'
+     
+  if age >= 21:
+      message += 'You may drink'
+     
+  if age > 35:
+      message += 'You may run for president'
+      
+  return message
+
+def validate_age(age):
+  if age.isnumeric() and int(age) < 150:
+    return True
+  return False
+     
+def main():
+  '''
+  This functions takes input from the user and calls the
+  check_age() functiont to print a message
+  '''
+  age = input('How old are you?\n')
+  while validate_age(age) == False:
+    print("Invalid age entered. Please enter a valid age.")
+    age = input('How old are you?\n')
+  age = int(age)
+  print(age_milestones(age))
   
 main()
 ```

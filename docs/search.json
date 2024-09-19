@@ -3014,7 +3014,7 @@
     "href": "slides-05-01.html#what-will-happen-1",
     "title": "while loop intro (class slides)",
     "section": "What will happen?",
-    "text": "What will happen?\nTo ensure our condition (number &lt; 50) will eventually be evaluated as False, we need to updated number inside our loop:\n\nnumber = 15\nwhile number &lt; 50:\n    print('number is less than 50')\n    number += 1"
+    "text": "What will happen?\nTo ensure our condition (number &lt; 50) will eventually be evaluated as False, we need to updated number inside our loop:\n\nnumber = 15\nwhile number &lt; 50:\n    print('number is less than 50')\n    number += 5\nprint('End')"
   },
   {
     "objectID": "slides-05-01.html#while-loops-visualization",
@@ -3028,14 +3028,14 @@
     "href": "slides-05-01.html#while-loop-example",
     "title": "while loop intro (class slides)",
     "section": "While loop – example",
-    "text": "While loop – example\n\ndef multiply(n, m):\n  result = 0\n  count = 0\n  while count &lt; m:\n    result += n\n    count += 1\n  return result\n\ndef main():\n  print( multiply(2, 3) )\n  print( multiply(5, 2) )\n  \nmain()\n\n6\n10"
+    "text": "While loop – example\nFactorial: 5! = 1 * 2 * 3 * 4 * 5 = 120\n\ndef factorial(n):\n  result = 1\n  current_n = 1\n  while current_n &lt;= n:\n    result = result * current_n\n    current_n += 1\n  return result\n\ndef main():\n  print( factorial(5) )\n  print( factorial(6) )\n  \nmain()\n\n120\n720"
   },
   {
     "objectID": "slides-05-01.html#write-a-function",
     "href": "slides-05-01.html#write-a-function",
     "title": "while loop intro (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nWrite a function called add_up_to that takes an numeric argument n.\nThe function should add all numbers from 1 to n in a while loop\nReturn sum\n\n\nprint( add_up_to(5) ) # 15\nprint( add_up_to(10) ) # 55"
+    "text": "Write a function\nWrite a function called add_up_to that takes an numeric argument n. The function should add all numbers from 1 to n in a while loop, and then (outside the loop) return the sum\n\nprint( add_up_to(5) ) # 15\nprint( add_up_to(10) ) # 55\n\nName your file sum_up.py and submit it to attendance on gradescope"
   },
   {
     "objectID": "slides-05-01.html#write-a-function-solution",
@@ -3413,7 +3413,7 @@
     "href": "practice-01.html",
     "title": "Practice Problems",
     "section": "",
-    "text": "I’ve created a Google colab notebook with practice exercises, and test cases. Here are the instructions to use the notebook:\n\nAccess notebook on google colab – you need to be signed in with a google account\nIf a black screen shows up, click on the “open with Google colab” at the top of the screen\nRun the first chunk of code. No need to change it, just make sure you run it by hovering over the [ ] on the left upper corner of the code chunk and then pressing the ► button that appears\nScroll down and follow the instructions to write different functions. Make sure you run your code by hovering over the [ ] on the left upper corner of the code chunk and then pressing the ► button that appears\nRun the following chunk with the testing (the one that calls the pass_or_fail function)\n\nNotebooks:\n\nPractice Problems Module 2\nPractice Problems Module 3\nPractice Problems Module 4\nPractice Problems Module 5\nPractice Problems Module 6\nPractice Problems Module 7 I\nPractice Problems Module 7 II\nExtra Practice Problems\nPractice Problems Module 7\nPractice Problems Module 8 I\nPractice Problems Module 8 II\nPractice Problems Module 9\nPractice Problems Module 10\nPractice Problems Module 11\nPractice Problems Module 11\nPractice Problems Module 12\nPractice Problems Module 13\nPractice problems Module 13 II (Quiz 07)\nPractice Problems Module 14 (Quiz 07)\n\n\nMidterm study guides\n\nMidterm 1 Study Guide\nMidterm 2 Study Guide\nMidterm 3 Study Guide\n\n\n\nMore practice for the final exam\nThe TA Amyra White has created a practice problem set for the final exam:\n\nFinal exam practice\nFinal exam practice answers\n\n\n\nVideo demonstration\n\n\n\nSolutions\nI highly recommend you do not look at the solutions before you try writing the practice functions yourself. Once you wrote your functions, you can compare yours with my solutions:\n\nSolutions for practice problems Module 2\nSolutions for practice problems Module 3\nSolutions for practice problems Module 4\nSolutions for practice problems Module 5\nSolutions for practice problems Module 6\nSolutions for practice problems Module 7 I\nSolutions for practice problems Module 7 II\nSolutions for practice problems\nSolutions for practice problems Module 7 III\nSolutions for practice problems Module 8 I\nSolutions for practice problems Module 8 II\nSolutions for practice problems Module 9\nSolutions for practice problems Module 10\nSolutions for practice problems Module 11\nSolutions for practice problems Module 11\nSolutions for practice problems Module 12\nSolutions for practice problems Module 13\nSolutions for practice problems Module 13 II\nSolutions for practice problems Module 14"
+    "text": "I’ve created a Google colab notebook with practice exercises, and test cases. Here are the instructions to use the notebook:\n\nAccess notebook on google colab – you need to be signed in with a google account\nIf a black screen shows up, click on the “open with Google colab” at the top of the screen\nRun the first chunk of code. No need to change it, just make sure you run it by hovering over the [ ] on the left upper corner of the code chunk and then pressing the ► button that appears\nScroll down and follow the instructions to write different functions. Make sure you run your code by hovering over the [ ] on the left upper corner of the code chunk and then pressing the ► button that appears\nRun the following chunk with the testing (the one that calls the pass_or_fail function)\n\nNotebooks:\n\nPractice Problems Module 2\nPractice Problems Module 3\nPractice Problems Module 4\nPractice Problems Module 5\nPractice Problems Module 6\nPractice Problems Module 7 I\nPractice Problems Module 7 II\nExtra Practice Problems\nPractice Problems Module 7\nPractice Problems Module 8 I\nPractice Problems Module 8 II\nPractice Problems Module 9\nPractice Problems Module 10\nPractice Problems Module 11\nPractice Problems Module 11\nPractice Problems Module 12 (Quiz 11)\nPractice Problems Module 13\nPractice problems Module 13 II (Quiz 12)\nPractice Problems Module 14\n\n\nVideo demonstration\n\n\n\nSolutions\nI highly recommend you do not look at the solutions before you try writing the practice functions yourself. Once you wrote your functions, you can compare yours with my solutions:\n\nSolutions for practice problems Module 2\nSolutions for practice problems Module 3\nSolutions for practice problems Module 4\nSolutions for practice problems Module 5\nSolutions for practice problems Module 6\nSolutions for practice problems Module 7 I\nSolutions for practice problems Module 7 II\nSolutions for practice problems\nSolutions for practice problems Module 7 III\nSolutions for practice problems Module 8 I\nSolutions for practice problems Module 8 II\nSolutions for practice problems Module 9\nSolutions for practice problems Module 10\nSolutions for practice problems Module 11\nSolutions for practice problems Module 11\n[Solutions for practice problems Module 12\nSolutions for practice problems Module 13\nSolutions for practice problems Module 13 II\nSolutions for practice problems Module 14"
   },
   {
     "objectID": "slides-07-01.html#announcements",
@@ -5773,5 +5773,26 @@
     "title": "if elif else statements (class slides)",
     "section": "Quiz 04",
     "text": "Quiz 04\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.\nNo need to write main() function."
+  },
+  {
+    "objectID": "slides-05-01.html#announcements",
+    "href": "slides-05-01.html#announcements",
+    "title": "while loop intro (class slides)",
+    "section": "Announcements",
+    "text": "Announcements\n\nMidterm 1 October 2 – BRING PHOTO ID\nModules 1 to 5 – study guide under practice problems page on website"
+  },
+  {
+    "objectID": "slides-05-01.html#age-milestones",
+    "href": "slides-05-01.html#age-milestones",
+    "title": "while loop intro (class slides)",
+    "section": "Age milestones",
+    "text": "Age milestones\nModify the code below to use a while loop to request a valid input from the user.\n\ndef age_milestones(age):\n  '''\n  This function prints an informative message based on,\n  a person's age.\n  Args:\n    age: integer representing a person's age\n  Returns:\n    A string with a message to the user\n  '''\n  message = \"\"\n  if age &gt;= 18:\n      message += 'You may apply to join the military'\n     \n  if age &gt;= 21:\n      message += 'You may drink'\n     \n  if age &gt; 35:\n      message += 'You may run for president'\n      \n  return message\n\ndef validate_age(age):\n  return age.isnumeric()\n     \ndef main():\n  '''\n  This functions takes input from the user and calls the\n  check_age() functiont to print a message\n  '''\n  age = input('How old are you?\\n')\n  if validate_age(age):\n    age = int(age)\n    print(age_milestones(age))\n  else:\n    print(\"Invalid age entered\")\n \nmain()"
+  },
+  {
+    "objectID": "slides-05-01.html#age-milestones-solution",
+    "href": "slides-05-01.html#age-milestones-solution",
+    "title": "while loop intro (class slides)",
+    "section": "Age milestones – solution",
+    "text": "Age milestones – solution\nModify the code below to use a while loop to request a valid input from the user.\n\ndef age_milestones(age):\n  '''\n  This function prints an informative message based on,\n  a person's age.\n  Args:\n    age: integer representing a person's age\n  Returns:\n    A string with a message to the user\n  '''\n  message = \"\"\n  if age &gt;= 18:\n      message += 'You may apply to join the military'\n     \n  if age &gt;= 21:\n      message += 'You may drink'\n     \n  if age &gt; 35:\n      message += 'You may run for president'\n      \n  return message\n\ndef validate_age(age):\n  if age.isnumeric() and int(age) &lt; 150:\n    return True\n  return False\n     \ndef main():\n  '''\n  This functions takes input from the user and calls the\n  check_age() functiont to print a message\n  '''\n  age = input('How old are you?\\n')\n  while validate_age(age) == False:\n    print(\"Invalid age entered. Please enter a valid age.\")\n    age = input('How old are you?\\n')\n  age = int(age)\n  print(age_milestones(age))\n  \nmain()"
   }
 ]

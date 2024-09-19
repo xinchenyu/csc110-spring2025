@@ -27,24 +27,11 @@ Notebooks:
 13. [Practice Problems Module 10](https://colab.research.google.com/drive/1kiOrOrbqIDpk251VvT7c6au9_HDAsI40?usp=sharing)
 14. [Practice Problems Module 11](https://colab.research.google.com/drive/1BwTHKQA7igraUvfhJqe3aqMwbIk_xOgL?usp=sharing)
 15. [Practice Problems Module 11](https://colab.research.google.com/drive/1qR0y_vaAkk21v_PdK1aVzpBzC9o7cEl-?usp=sharing)
-16. [Practice Problems Module 12](https://colab.research.google.com/drive/1MrMXHORXoNGarSataOih0cP6lHSUDgdb?usp=sharing)
+16. [Practice Problems Module 12 (Quiz 11)](https://colab.research.google.com/drive/1MrMXHORXoNGarSataOih0cP6lHSUDgdb?usp=sharing)
 17. [Practice Problems Module 13](https://colab.research.google.com/drive/1_eVARSVE203JFI7xe1YvEEeZCPMpaDSS?usp=sharing)
-18. [Practice problems Module 13 II (Quiz 07)](https://colab.research.google.com/drive/1-mSE4alNCXCef4RrcOOhg1pQH4xvs47l?usp=sharing)
-19. [Practice Problems Module 14 (Quiz 07)](https://colab.research.google.com/drive/1ut8vRtGFOR-fRL82zyOyhTXgcybelyz4?usp=sharing)
+18. [Practice problems Module 13 II (Quiz 12)](https://colab.research.google.com/drive/1-mSE4alNCXCef4RrcOOhg1pQH4xvs47l?usp=sharing)
+19. [Practice Problems Module 14](https://colab.research.google.com/drive/1ut8vRtGFOR-fRL82zyOyhTXgcybelyz4?usp=sharing)
 
-
-# Midterm study guides
-
-* [Midterm 1 Study Guide](pdfs/midterm-1-study-guide.pdf)
-* [Midterm 2 Study Guide](pdfs/midterm-2-study-guide.pdf)
-* [Midterm 3 Study Guide](pdfs/midterm-3-study-guide.pdf)
-
-# More practice for the final exam
-
-The TA Amyra White has created a practice problem set for the final exam:
-
-* [Final exam practice](https://colab.research.google.com/drive/1eHGlPOp9OYB_5PhgWM6cq3IRl5ScrExH?usp=sharing)
-* [Final exam practice answers](https://colab.research.google.com/drive/14smJXie0teWkYsXuDYF8e3NsTn4y8nxI?usp=sharing)
 
 # Video demonstration
 
@@ -69,7 +56,7 @@ I highly recommend you do not look at the solutions before you try writing the p
 13. [Solutions for practice problems Module 10](https://colab.research.google.com/drive/1Ksl6e-IqA4vBbW2FKO1m-2El3OHdjYWZ?usp=sharing)
 14. [Solutions for practice problems Module 11](https://colab.research.google.com/drive/1A7ByV6PL9EqaxGdnpAi2u2CtYQSPPNWM?usp=sharing)
 15. [Solutions for practice problems Module 11](https://colab.research.google.com/drive/15oIYSIcy_Gmy7G3fjT3euTs88iKB0uEW?usp=sharing)
-16. [Solutions for practice problems Module 12](https://colab.research.google.com/drive/1lUzIFEXKBdEC4AIzKwMKQBry2XwJPMyv?usp=sharing)
+16. [[Solutions for practice problems Module 12](https://colab.research.google.com/drive/1lUzIFEXKBdEC4AIzKwMKQBry2XwJPMyv?usp=sharing)
 17. [Solutions for practice problems Module 13](https://colab.research.google.com/drive/16CrcBq0jrk6Ch5Bpno_kIEiIIWcuhzKh?usp=sharing)
 18. [Solutions for practice problems Module 13 II](https://colab.research.google.com/drive/1EcqLHFg-VC5domigMQvaLz1TUbD6LBNX?usp=sharing)
 19. [Solutions for practice problems Module 14](https://colab.research.google.com/drive/17TlFnRj9689JAK1KzvmLT_qWm8lQVJeH?usp=sharing)
