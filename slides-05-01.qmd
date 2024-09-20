@@ -158,7 +158,7 @@ main()
 
 ## Age milestones -- solution
 
-Modify the code below to use a `while` loop to request a valid input from the user.
+Modify `main` function: use a `while` loop to request a valid input from the user.
 
 ```{python}
 #| eval: false
