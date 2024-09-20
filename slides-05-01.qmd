@@ -124,20 +124,12 @@ main()
 
 ## Age milestones
 
-Modify the code below to use a `while` loop to request a valid input from the user.
+Modify `main` function: use a `while` loop to request a valid input from the user.
 
 ```{python}
 #| eval: false
 #| echo: true
 def age_milestones(age):
-  '''
-  This function prints an informative message based on,
-  a person's age.
-  Args:
-    age: integer representing a person's age
-  Returns:
-    A string with a message to the user
-  '''
   message = ""
   if age >= 18:
       message += 'You may apply to join the military'
@@ -154,16 +146,12 @@ def validate_age(age):
   return age.isnumeric()
      
 def main():
-  '''
-  This functions takes input from the user and calls the
-  check_age() functiont to print a message
-  '''
-  age = input('How old are you?\n')
-  if validate_age(age):
-    age = int(age)
+  str_age = input('How old are you?\n')
+  if validate_age(str_age):
+    age = int(str_age)
     print(age_milestones(age))
   else:
-    print("Invalid age entered")
+    print("Invalid age entered.")
  
 main()
 ```
@@ -176,14 +164,6 @@ Modify the code below to use a `while` loop to request a valid input from the us
 #| eval: false
 #| echo: true
 def age_milestones(age):
-  '''
-  This function prints an informative message based on,
-  a person's age.
-  Args:
-    age: integer representing a person's age
-  Returns:
-    A string with a message to the user
-  '''
   message = ""
   if age >= 18:
       message += 'You may apply to join the military'
@@ -197,19 +177,13 @@ def age_milestones(age):
   return message
 
 def validate_age(age):
-  if age.isnumeric() and int(age) < 150:
-    return True
-  return False
+    return age.isnumeric()
      
 def main():
-  '''
-  This functions takes input from the user and calls the
-  check_age() functiont to print a message
-  '''
-  age = input('How old are you?\n')
-  while validate_age(age) == False:
-    print("Invalid age entered. Please enter a valid age.")
-    age = input('How old are you?\n')
+  str_age = input('How old are you?\n')
+  while validate_age(str_age) == False:
+    print("Invalid age entered.")
+    str_age = input('How old are you?\n')
   age = int(age)
   print(age_milestones(age))
   
