@@ -3119,7 +3119,7 @@
     "href": "slides-05-02.html#write-a-function",
     "title": "loops + strings (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is four_letter_anagram\nIts parameters are a string, and four integers a, b, c and d\nIt returns the anagram of the string according to the indices a, b, c and d – concatenate the individual characters\nTest case: four_letter_anagram(\"balm\", 2, 1, 3, 0) should return lamb"
+    "text": "Write a function\nFunction four_letter_anagram takes a string, and four integers a, b, c and d. It returns the anagram of the string according to the indices a, b, c and d – concatenate the individual characters.\nName your file anagram.py and submit it for attendance.\nTest cases:\n\nassert four_letter_anagram(\"balm\", 2, 1, 3, 0) == 'lamb'\nassert four_letter_anagram(\"loin\", 0, 2, 1, 3) == 'lion'\nassert four_letter_anagram(\"reap\", 3, 1, 2, 0) == 'pear'"
   },
   {
     "objectID": "slides-05-02.html#write-a-function---solution-add-to-it",
@@ -3413,7 +3413,7 @@
     "href": "practice-01.html",
     "title": "Practice Problems",
     "section": "",
-    "text": "I’ve created a Google colab notebook with practice exercises, and test cases. Here are the instructions to use the notebook:\n\nAccess notebook on google colab – you need to be signed in with a google account\nIf a black screen shows up, click on the “open with Google colab” at the top of the screen\nRun the first chunk of code. No need to change it, just make sure you run it by hovering over the [ ] on the left upper corner of the code chunk and then pressing the ► button that appears\nScroll down and follow the instructions to write different functions. Make sure you run your code by hovering over the [ ] on the left upper corner of the code chunk and then pressing the ► button that appears\nRun the following chunk with the testing (the one that calls the pass_or_fail function)\n\nNotebooks:\n\nPractice Problems Module 2\nPractice Problems Module 3\nPractice Problems Module 4\nPractice Problems Module 5\nPractice Problems Module 6\nPractice Problems Module 7 I\nPractice Problems Module 7 II\nExtra Practice Problems\nPractice Problems Module 7\nPractice Problems Module 8 I\nPractice Problems Module 8 II\nPractice Problems Module 9\nPractice Problems Module 10\nPractice Problems Module 11\nPractice Problems Module 11\nPractice Problems Module 12 (Quiz 11)\nPractice Problems Module 13\nPractice problems Module 13 II (Quiz 12)\nPractice Problems Module 14\n\n\nVideo demonstration\n\n\n\nSolutions\nI highly recommend you do not look at the solutions before you try writing the practice functions yourself. Once you wrote your functions, you can compare yours with my solutions:\n\nSolutions for practice problems Module 2\nSolutions for practice problems Module 3\nSolutions for practice problems Module 4\nSolutions for practice problems Module 5\nSolutions for practice problems Module 6\nSolutions for practice problems Module 7 I\nSolutions for practice problems Module 7 II\nSolutions for practice problems\nSolutions for practice problems Module 7 III\nSolutions for practice problems Module 8 I\nSolutions for practice problems Module 8 II\nSolutions for practice problems Module 9\nSolutions for practice problems Module 10\nSolutions for practice problems Module 11\nSolutions for practice problems Module 11\n[Solutions for practice problems Module 12\nSolutions for practice problems Module 13\nSolutions for practice problems Module 13 II\nSolutions for practice problems Module 14"
+    "text": "I’ve created a Google colab notebook with practice exercises, and test cases. Here are the instructions to use the notebook:\n\nAccess notebook on google colab – you need to be signed in with a google account\nIf a black screen shows up, click on the “open with Google colab” at the top of the screen\nRun the first chunk of code. No need to change it, just make sure you run it by hovering over the [ ] on the left upper corner of the code chunk and then pressing the ► button that appears\nScroll down and follow the instructions to write different functions. Make sure you run your code by hovering over the [ ] on the left upper corner of the code chunk and then pressing the ► button that appears\nRun the following chunk with the testing (the one that calls the pass_or_fail function)\n\nNotebooks:\n\nPractice Problems Module 2\nPractice Problems Module 3\nPractice Problems Module 4\nPractice Problems Module 5\n\nMidterm 1 (Modules 1-5) + Study Guide 1\n\nPractice Problems Module 6\nPractice Problems Module 7 I\nPractice Problems Module 7 II\nExtra Practice Problems\nPractice Problems Module 7\nPractice Problems Module 8 I\nPractice Problems Module 8 II\nPractice Problems Module 9\nPractice Problems Module 10\nPractice Problems Module 11\nPractice Problems Module 11\nPractice Problems Module 12 (Quiz 11)\nPractice Problems Module 13\nPractice problems Module 13 II (Quiz 12)\nPractice Problems Module 14\n\n\nVideo demonstration\n\n\n\nSolutions\nI highly recommend you do not look at the solutions before you try writing the practice functions yourself. Once you wrote your functions, you can compare yours with my solutions:\n\nSolutions for practice problems Module 2\nSolutions for practice problems Module 3\nSolutions for practice problems Module 4\nSolutions for practice problems Module 5\nSolutions for practice problems Module 6\nSolutions for practice problems Module 7 I\nSolutions for practice problems Module 7 II\nSolutions for practice problems\nSolutions for practice problems Module 7 III\nSolutions for practice problems Module 8 I\nSolutions for practice problems Module 8 II\nSolutions for practice problems Module 9\nSolutions for practice problems Module 10\nSolutions for practice problems Module 11\nSolutions for practice problems Module 11\n[Solutions for practice problems Module 12\nSolutions for practice problems Module 13\nSolutions for practice problems Module 13 II\nSolutions for practice problems Module 14"
   },
   {
     "objectID": "slides-07-01.html#announcements",
@@ -5793,6 +5793,41 @@
     "href": "slides-05-01.html#age-milestones-solution",
     "title": "while loop intro (class slides)",
     "section": "Age milestones – solution",
-    "text": "Age milestones – solution\nModify main function: use a while loop to request a valid input from the user.\n\ndef age_milestones(age):\n  message = \"\"\n  if age &gt;= 18:\n      message += 'You may apply to join the military'\n     \n  if age &gt;= 21:\n      message += 'You may drink'\n     \n  if age &gt; 35:\n      message += 'You may run for president'\n      \n  return message\n\ndef validate_age(age):\n    return age.isnumeric()\n     \ndef main():\n  str_age = input('How old are you?\\n')\n  while validate_age(str_age) == False:\n    print(\"Invalid age entered.\")\n    str_age = input('How old are you?\\n')\n  age = int(age)\n  print(age_milestones(age))\n  \nmain()"
+    "text": "Age milestones – solution\nModify main function: use a while loop to request a valid input from the user.\n\ndef age_milestones(age):\n  message = \"\"\n  if age &gt;= 18:\n      message += 'You may apply to join the military'\n     \n  if age &gt;= 21:\n      message += 'You may drink'\n     \n  if age &gt; 35:\n      message += 'You may run for president'\n      \n  return message\n\ndef validate_age(age):\n  return age.isnumeric()\n     \ndef main():\n  str_age = input('How old are you?\\n')\n  while validate_age(str_age) == False:\n    print(\"Invalid age entered.\")\n    str_age = input('How old are you?\\n')\n  age = int(str_age)\n  print(age_milestones(age))\n  \nmain()"
+  },
+  {
+    "objectID": "slides-05-01.html#write-functions",
+    "href": "slides-05-01.html#write-functions",
+    "title": "while loop intro (class slides)",
+    "section": "Write functions",
+    "text": "Write functions\n\nWrite a function to_do that takes a numeric argument temp.\nIt returns\n\n‘go for a swim’ if is greater equal to 86 and less than 104\n‘go for a hike’ if is greater equal to 68 and less than 86\n‘stay at home’ for all other cases\n\nWrite a main function to request input from user until it is valid (only digits), print the message"
+  },
+  {
+    "objectID": "slides-05-01.html#write-functions-continued",
+    "href": "slides-05-01.html#write-functions-continued",
+    "title": "while loop intro (class slides)",
+    "section": "Write functions continued",
+    "text": "Write functions continued\nProgram behavior in your standard output:\nEnter a temperature:\nabc\nEnter a temperature:\n100abc\nEnter a temperature:\n89\nLet us go for a swim"
+  },
+  {
+    "objectID": "slides-05-01.html#write-functions-solution",
+    "href": "slides-05-01.html#write-functions-solution",
+    "title": "while loop intro (class slides)",
+    "section": "Write functions – solution",
+    "text": "Write functions – solution\n\ndef to_do(temp):\n    if temp &gt;= 86 and temp &lt; 104:\n        return \"go for a swim\"\n    elif temp &gt;= 68 and temp &lt; 86:\n        return \"go for a hike\"\n    else:\n        return \"stay at home\"\n    \n\ndef main():\n    str_temp = input(\"Enter a temperature:\\n\")\n    while str_temp.isnumeric() == False:\n        str_temp =  input(\"Enter a temperature:\\n\")\n    message = to_do(int(str_temp))\n    print(\"Let us\", message)\n\nmain()"
+  },
+  {
+    "objectID": "slides-05-01.html#age-milestones-continued",
+    "href": "slides-05-01.html#age-milestones-continued",
+    "title": "while loop intro (class slides)",
+    "section": "Age milestones continued",
+    "text": "Age milestones continued\nProgram behavior in your standard output:\nHow old are you?\nabc\nInvalid age entered.\nHow old are you?\n10abc\nInvalid age entered.\nHow old are you?\n55\nYou may apply to join the military. You may drink. You may run for president."
+  },
+  {
+    "objectID": "slides-05-02.html#write-a-function---solution",
+    "href": "slides-05-02.html#write-a-function---solution",
+    "title": "loops + strings (class slides)",
+    "section": "Write a function - solution",
+    "text": "Write a function - solution\n\ndef four_letter_anagram(word, a, b, c, d):\n  return word[a] + word[b] + word[c] + word[d]\n\ndef main():\n  assert four_letter_anagram(\"balm\", 2, 1, 3, 0) == 'lamb'\n  assert four_letter_anagram(\"loin\", 0, 2, 1, 3) == 'lion'\n  assert four_letter_anagram(\"reap\", 3, 1, 2, 0) == 'pear'\n\nmain()"
   }
 ]

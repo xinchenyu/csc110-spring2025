@@ -395,23 +395,11 @@
 </div>
 
 </section>
-<section>
 <section id="csc-110---looping-through-strings" class="title-slide slide level1 center">
 <h1>CSc 110 - looping through strings</h1>
 
 </section>
-<section id="announcements" class="slide level2">
-<h2>Announcements</h2>
-<ul>
-<li>Midterm 1 February 14 – BRING PHOTO ID</li>
-<li>Modules 1 to 5 – study guide under practice problems page on website</li>
-<li>Review session:
-<ul>
-<li>February 13, 5pm to 7pm</li>
-<li>CMNS 105 (Highland Commons, The Commons on 6th street)</li>
-</ul></li>
-</ul>
-</section></section>
+
 <section>
 <section id="string-manipulation" class="title-slide slide level1 center">
 <h1>String Manipulation</h1>
@@ -426,7 +414,7 @@
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>name <span class="op">=</span> <span class="st">"Xinchen"</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a>name[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
+<div class="cell-output cell-output-display" data-execution_count="60">
 <pre><code>'X'</code></pre>
 </div>
 </div>
@@ -438,14 +426,14 @@
 <div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>name <span class="op">=</span> <span class="st">"Xinchen"</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="bu">len</span>(name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="61">
 <pre><code>7</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>name <span class="op">=</span> <span class="st">"Xinchen"</span></span>
 <span id="cb5-2"><a href="#cb5-2"></a>name[<span class="dv">6</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="62">
 <pre><code>'n'</code></pre>
 </div>
 </div>
@@ -472,86 +460,75 @@
 <div class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>my_str <span class="op">=</span> <span class="st">"Clint Eastwood"</span></span>
 <span id="cb9-2"><a href="#cb9-2"></a>my_str[<span class="dv">11</span>] <span class="op">+</span> my_str[<span class="dv">1</span>] <span class="op">+</span> my_str[<span class="dv">13</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
+<div class="cell-output cell-output-display" data-execution_count="63">
 <pre><code>'old'</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>my_str <span class="op">=</span> <span class="st">"cider"</span></span>
 <span id="cb11-2"><a href="#cb11-2"></a>my_str[<span class="dv">0</span>] <span class="op">+</span> my_str[<span class="dv">4</span>] <span class="op">+</span> my_str[<span class="dv">1</span>] <span class="op">+</span> my_str[<span class="dv">3</span>] <span class="op">+</span> my_str[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="64">
 <pre><code>'cried'</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>my_str <span class="op">=</span> <span class="st">"dusty"</span></span>
 <span id="cb13-2"><a href="#cb13-2"></a>my_str[<span class="dv">2</span>] <span class="op">+</span> my_str[<span class="dv">3</span>] <span class="op">+</span> my_str[<span class="dv">1</span>] <span class="op">+</span> my_str[<span class="dv">0</span>] <span class="op">+</span> my_str[<span class="dv">4</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
+<div class="cell-output cell-output-display" data-execution_count="65">
 <pre><code>'study'</code></pre>
 </div>
 </div>
 </section>
 <section id="write-a-function" class="slide level2">
 <h2>Write a function</h2>
-<ol type="1">
-<li>Its name is <code>four_letter_anagram</code></li>
-<li>Its parameters are a <code>string</code>, and four integers <code>a</code>, <code>b</code>, <code>c</code> and <code>d</code></li>
-<li>It returns the anagram of the string according to the indices <code>a</code>, <code>b</code>, <code>c</code> and <code>d</code> – concatenate the individual characters</li>
-<li>Test case: <code>four_letter_anagram("balm", 2, 1, 3, 0)</code> should return <code>lamb</code></li>
-</ol>
-</section>
-<section id="write-a-function---solution-add-to-it" class="slide level2">
-<h2>Write a function - solution + add to it</h2>
-<p>Add the following test cases to the code below:</p>
-<ul>
-<li><code>loin</code> returns <code>lion</code></li>
-<li><code>lugs</code> returns <code>slug</code></li>
-<li><code>reap</code> returns <code>pear</code></li>
-</ul>
+<p>Function <code>four_letter_anagram</code> takes a <code>string</code>, and four integers <code>a</code>, <code>b</code>, <code>c</code> and <code>d</code>. It returns the anagram of the string according to the indices <code>a</code>, <code>b</code>, <code>c</code> and <code>d</code> – concatenate the individual characters.</p>
+<p>Name your file <code>anagram.py</code> and submit it for attendance.</p>
+<p>Test cases:</p>
 <div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw">def</span> four_letter_anagram(word, a, b, c, d):</span>
-<span id="cb15-2"><a href="#cb15-2"></a>  <span class="cf">return</span> word[a] <span class="op">+</span> word[b] <span class="op">+</span> word[c] <span class="op">+</span> word[d]</span>
-<span id="cb15-3"><a href="#cb15-3"></a></span>
-<span id="cb15-4"><a href="#cb15-4"></a><span class="kw">def</span> main():</span>
-<span id="cb15-5"><a href="#cb15-5"></a>  <span class="bu">print</span>( four_letter_anagram(<span class="st">"balm"</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">0</span>) )</span>
-<span id="cb15-6"><a href="#cb15-6"></a></span>
-<span id="cb15-7"><a href="#cb15-7"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>lamb</code></pre>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="cf">assert</span> four_letter_anagram(<span class="st">"balm"</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">0</span>) <span class="op">==</span> <span class="st">'lamb'</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="cf">assert</span> four_letter_anagram(<span class="st">"loin"</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>) <span class="op">==</span> <span class="st">'lion'</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="cf">assert</span> four_letter_anagram(<span class="st">"reap"</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">0</span>) <span class="op">==</span> <span class="st">'pear'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="write-a-function---solution" class="slide level2">
+<h2>Write a function - solution</h2>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a><span class="kw">def</span> four_letter_anagram(word, a, b, c, d):</span>
+<span id="cb16-2"><a href="#cb16-2"></a>  <span class="cf">return</span> word[a] <span class="op">+</span> word[b] <span class="op">+</span> word[c] <span class="op">+</span> word[d]</span>
+<span id="cb16-3"><a href="#cb16-3"></a></span>
+<span id="cb16-4"><a href="#cb16-4"></a><span class="kw">def</span> main():</span>
+<span id="cb16-5"><a href="#cb16-5"></a>  <span class="cf">assert</span> four_letter_anagram(<span class="st">"balm"</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">0</span>) <span class="op">==</span> <span class="st">'lamb'</span></span>
+<span id="cb16-6"><a href="#cb16-6"></a>  <span class="cf">assert</span> four_letter_anagram(<span class="st">"loin"</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>) <span class="op">==</span> <span class="st">'lion'</span></span>
+<span id="cb16-7"><a href="#cb16-7"></a>  <span class="cf">assert</span> four_letter_anagram(<span class="st">"reap"</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">0</span>) <span class="op">==</span> <span class="st">'pear'</span></span>
+<span id="cb16-8"><a href="#cb16-8"></a></span>
+<span id="cb16-9"><a href="#cb16-9"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section>
-<section>
-<section id="submit-code-for-attendance" class="title-slide slide level1 center">
-<h1>Submit code for attendance</h1>
-<p>Submit your <code>four_letter_anagram</code> function to Gradescope for attendance.</p>
-<p>Name your file <code>anagram.py</code></p>
 </section>
 <section id="in-operator" class="slide level2">
 <h2><code>in</code> operator</h2>
 <p>The <code>in</code> operator determines whether a given value is a constituent element of a sequence (such as a string)</p>
-<div class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="co">"i"</span> <span class="kw">in</span> <span class="st">"Xinchen"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
-<pre><code>True</code></pre>
-</div>
-</div>
 <div class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="co">"inc"</span> <span class="kw">in</span> <span class="st">"Xinchen"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="co">"i"</span> <span class="kw">in</span> <span class="st">"Xinchen"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="67">
 <pre><code>True</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="co">"inc"</span> <span class="kw">in</span> <span class="st">"Xinchen"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="68">
+<pre><code>True</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a><span class="co">"i"</span> <span class="kw">in</span> <span class="st">"aeiou"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="69">
 <pre><code>True</code></pre>
 </div>
 </div>
 </section>
 <section id="evaluate-the-expressions" class="slide level2">
 <h2>Evaluate the expressions</h2>
-<div class="cell" data-execution_count="13">
+<div class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a><span class="co">"a"</span> <span class="kw">in</span> <span class="st">"aeiou"</span></span>
 <span id="cb23-2"><a href="#cb23-2"></a><span class="co">"b"</span> <span class="kw">in</span> <span class="st">"aeiou"</span></span>
 <span id="cb23-3"><a href="#cb23-3"></a><span class="kw">not</span> <span class="st">"b"</span> <span class="kw">in</span> <span class="st">"aeiou"</span></span>
@@ -561,33 +538,33 @@
 </section>
 <section id="evaluate-the-expressions-1" class="slide level2">
 <h2>Evaluate the expressions</h2>
-<div class="cell" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1"></a><span class="co">"a"</span> <span class="kw">in</span> <span class="st">"aeiou"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="11">
-<pre><code>True</code></pre>
-</div>
-</div>
 <div class="cell" data-execution_count="15">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1"></a><span class="co">"b"</span> <span class="kw">in</span> <span class="st">"aeiou"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="12">
-<pre><code>False</code></pre>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1"></a><span class="co">"a"</span> <span class="kw">in</span> <span class="st">"aeiou"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="70">
+<pre><code>True</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="16">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1"></a><span class="kw">not</span> <span class="st">"b"</span> <span class="kw">in</span> <span class="st">"aeiou"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="13">
-<pre><code>True</code></pre>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1"></a><span class="co">"b"</span> <span class="kw">in</span> <span class="st">"aeiou"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="71">
+<pre><code>False</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="17">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1"></a><span class="co">"0"</span> <span class="kw">in</span> <span class="st">"0987654321."</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1"></a><span class="kw">not</span> <span class="st">"b"</span> <span class="kw">in</span> <span class="st">"aeiou"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="72">
 <pre><code>True</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1"></a><span class="co">"0"</span> <span class="kw">in</span> <span class="st">"0987654321."</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="73">
+<pre><code>True</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1"></a><span class="co">"10.0"</span> <span class="kw">in</span>  <span class="st">"0987654321."</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="15">
+<div class="cell-output cell-output-display" data-execution_count="74">
 <pre><code>False</code></pre>
 </div>
 </div>
@@ -595,24 +572,24 @@
 <section id="before-we-proceed-a-refresher" class="slide level2">
 <h2>Before we proceed, a refresher …</h2>
 <p>Remember the string method<code>.isnumeric()</code>?</p>
-<div class="cell" data-execution_count="19">
+<div class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1"></a>user_input <span class="op">=</span> <span class="st">"paul"</span></span>
 <span id="cb34-2"><a href="#cb34-2"></a>user_input.isnumeric()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="16">
+<div class="cell-output cell-output-display" data-execution_count="75">
 <pre><code>False</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="20">
+<div class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1"></a>user_input <span class="op">=</span> <span class="st">"12"</span></span>
 <span id="cb36-2"><a href="#cb36-2"></a>user_input.isnumeric()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="17">
+<div class="cell-output cell-output-display" data-execution_count="76">
 <pre><code>True</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="21">
+<div class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1"></a>user_input <span class="op">=</span> <span class="st">"12.5"</span></span>
 <span id="cb38-2"><a href="#cb38-2"></a>user_input.isnumeric()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="18">
+<div class="cell-output cell-output-display" data-execution_count="77">
 <pre><code>False</code></pre>
 </div>
 </div>
@@ -625,7 +602,7 @@
 <li>It takes one <code>string</code> argument of length of 1 (check if argument is valid with <code>len()</code>)</li>
 <li>It returns <code>True</code> if the argument is a digit (0-9), <code>False</code> otherwise (use the <code>in</code> operator)</li>
 </ol>
-<div class="cell" data-execution_count="22">
+<div class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1"></a><span class="bu">print</span>( is_numeric_one_char(<span class="st">"0"</span>) ) <span class="co"># True</span></span>
 <span id="cb40-2"><a href="#cb40-2"></a><span class="bu">print</span>( is_numeric_one_char(<span class="st">"000"</span>) ) <span class="co"># False</span></span>
 <span id="cb40-3"><a href="#cb40-3"></a><span class="bu">print</span>( is_numeric_one_char(<span class="st">"9"</span>) ) <span class="co"># True</span></span>
@@ -634,7 +611,7 @@
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div class="cell" data-execution_count="23">
+<div class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1"></a><span class="kw">def</span> is_numeric_one_char(char):</span>
 <span id="cb41-2"><a href="#cb41-2"></a>  <span class="cf">if</span> <span class="bu">len</span>(char) <span class="op">&gt;</span> <span class="dv">1</span>:</span>
 <span id="cb41-3"><a href="#cb41-3"></a>    <span class="cf">return</span> <span class="va">False</span></span>
@@ -664,7 +641,7 @@ False</code></pre>
 <li>It returns <code>True</code> if the <strong>first character</strong> of the argument is a digit (0-9), <code>False</code> otherwise (remember to use <code>[ ]</code> to index the string and the <code>in</code> operator)</li>
 </ol>
 <p>Test cases:</p>
-<div class="cell" data-execution_count="24">
+<div class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1"></a><span class="bu">print</span>( is_numeric(<span class="st">"0"</span>) ) <span class="co"># True</span></span>
 <span id="cb43-2"><a href="#cb43-2"></a><span class="bu">print</span>( is_numeric(<span class="st">"000"</span>) ) <span class="co"># True</span></span>
 <span id="cb43-3"><a href="#cb43-3"></a><span class="bu">print</span>( is_numeric(<span class="st">"9"</span>) ) <span class="co"># True</span></span>
@@ -673,7 +650,7 @@ False</code></pre>
 </section>
 <section id="write-a-function-solution-1" class="slide level2">
 <h2>Write a function – solution</h2>
-<div class="cell" data-execution_count="25">
+<div class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1"></a><span class="kw">def</span> is_numeric(char):</span>
 <span id="cb44-2"><a href="#cb44-2"></a>  <span class="cf">return</span> char[<span class="dv">0</span>] <span class="kw">in</span> <span class="st">"0123456789"</span></span>
 <span id="cb44-3"><a href="#cb44-3"></a></span>
@@ -711,7 +688,7 @@ False</code></pre>
 </section>
 <section id="while-loops-using-an-index-1" class="slide level2">
 <h2>While loops – using an index</h2>
-<div class="cell" data-execution_count="26">
+<div class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1"></a>index <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb46-2"><a href="#cb46-2"></a><span class="cf">while</span> index <span class="op">&lt;</span> <span class="dv">5</span>:</span>
 <span id="cb46-3"><a href="#cb46-3"></a>    <span class="bu">print</span>(<span class="st">'Print '</span> <span class="op">+</span> <span class="bu">str</span>(index))</span>
@@ -725,7 +702,7 @@ Print 3
 Print 4</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="27">
+<div class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1"></a>index <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb48-2"><a href="#cb48-2"></a><span class="cf">while</span> index <span class="op">&gt;</span> <span class="dv">0</span>:</span>
 <span id="cb48-3"><a href="#cb48-3"></a>    <span class="bu">print</span>(<span class="st">'Print '</span> <span class="op">+</span> <span class="bu">str</span>(index))</span>
@@ -748,7 +725,7 @@ Print 1</code></pre>
 <li>It returns <code>True</code> if every character in the argument is a digit (0-9), <code>False</code> otherwise</li>
 <li>Remember to use <code>[ ]</code> to index the string, use a while loop with a <code>len()</code> condition, and an index – something like <code>string[index]</code> with index being updated inside a <code>while</code> loop</li>
 </ol>
-<div class="cell" data-execution_count="28">
+<div class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1"></a><span class="bu">print</span>( is_numeric(<span class="st">"0"</span>) ) <span class="co"># True</span></span>
 <span id="cb50-2"><a href="#cb50-2"></a><span class="bu">print</span>( is_numeric(<span class="st">"1090"</span>) ) <span class="co"># True</span></span>
 <span id="cb50-3"><a href="#cb50-3"></a><span class="bu">print</span>( is_numeric(<span class="st">"95"</span>) ) <span class="co"># True</span></span>
@@ -757,7 +734,7 @@ Print 1</code></pre>
 </section>
 <section id="is_numeric-solution" class="slide level2">
 <h2><code>is_numeric()</code> solution</h2>
-<div class="cell" data-execution_count="29">
+<div class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1"></a><span class="kw">def</span> is_numeric(my_string):</span>
 <span id="cb51-2"><a href="#cb51-2"></a>  index <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb51-3"><a href="#cb51-3"></a>  <span class="cf">while</span> index <span class="op">&lt;</span> <span class="bu">len</span>(my_string):</span>
@@ -784,7 +761,7 @@ False</code></pre>
 <section id="is_numeric-solution-1" class="slide level2">
 <h2><code>is_numeric()</code> solution</h2>
 <p>How do we change our function so that the last test case (“12.3”) returns <code>True</code> instead?</p>
-<div class="cell" data-execution_count="30">
+<div class="cell" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1"></a><span class="kw">def</span> is_numeric(my_string):</span>
 <span id="cb53-2"><a href="#cb53-2"></a>  index <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb53-3"><a href="#cb53-3"></a>  <span class="cf">while</span> index <span class="op">&lt;</span> <span class="bu">len</span>(my_string):</span>
@@ -811,7 +788,7 @@ False</code></pre>
 <section id="is_numeric-solution-2" class="slide level2">
 <h2><code>is_numeric()</code> solution</h2>
 <p>How do we change our function so that the last test case (“12.3”) returns <code>True</code> instead?</p>
-<div class="cell" data-execution_count="31">
+<div class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1"></a><span class="kw">def</span> is_numeric(my_string):</span>
 <span id="cb55-2"><a href="#cb55-2"></a>  index <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb55-3"><a href="#cb55-3"></a>  <span class="cf">while</span> index <span class="op">&lt;</span> <span class="bu">len</span>(my_string):</span>
@@ -838,14 +815,14 @@ True</code></pre>
 </div>
 </section></section>
 <section>
-<section id="submit-code-for-attendance-1" class="title-slide slide level1 center">
+<section id="submit-code-for-attendance" class="title-slide slide level1 center">
 <h1>Submit code for attendance</h1>
 <p>Submit your <code>is_numeric</code> function to Gradescope for attendance.</p>
 <p>Name your file <code>is_numeric.py</code></p>
 </section>
 <section id="is_numeric-solution-3" class="slide level2">
 <h2><code>is_numeric()</code> solution</h2>
-<div class="cell" data-execution_count="32">
+<div class="cell" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1"></a><span class="kw">def</span> is_numeric(my_string):</span>
 <span id="cb57-2"><a href="#cb57-2"></a>  <span class="co"># create control variable for one decimal point</span></span>
 <span id="cb57-3"><a href="#cb57-3"></a>  decimal_point <span class="op">=</span> <span class="va">False</span></span>

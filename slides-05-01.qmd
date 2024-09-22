@@ -156,6 +156,23 @@ def main():
 main()
 ```
 
+## Age milestones continued
+
+Program behavior in your standard output:
+```{=html}
+<pre style="font-size: 30px">
+How old are you?
+abc
+Invalid age entered.
+How old are you?
+10abc
+Invalid age entered.
+How old are you?
+55
+You may apply to join the military. You may drink. You may run for president.
+</pre>
+```
+
 ## Age milestones -- solution
 
 Modify `main` function: use a `while` loop to request a valid input from the user.
@@ -177,15 +194,63 @@ def age_milestones(age):
   return message
 
 def validate_age(age):
-    return age.isnumeric()
+  return age.isnumeric()
      
 def main():
   str_age = input('How old are you?\n')
   while validate_age(str_age) == False:
     print("Invalid age entered.")
     str_age = input('How old are you?\n')
-  age = int(age)
+  age = int(str_age)
   print(age_milestones(age))
   
+main()
+```
+
+## Write functions
+
+1. Write a function `to_do` that takes a numeric argument `temp`.
+2. It returns
+    -   'go for a swim' if is greater equal to `86` and less than `104`
+    -   'go for a hike' if is greater equal to `68` and less than `86`
+    -   'stay at home' for all other cases
+3. Write a `main` function to request input from user until it is valid (only digits), print the message
+
+## Write functions continued
+
+Program behavior in your standard output:
+```{=html}
+<pre style="font-size: 30px">
+Enter a temperature:
+abc
+Enter a temperature:
+100abc
+Enter a temperature:
+89
+Let us go for a swim
+</pre>
+```
+
+## Write functions -- solution
+
+```{python}
+#| eval: false
+#| echo: true
+def to_do(temp):
+    if temp >= 86 and temp < 104:
+        return "go for a swim"
+    elif temp >= 68 and temp < 86:
+        return "go for a hike"
+    else:
+        return "stay at home"
+    
+
+def main():
+    str_temp = input("Enter a temperature:\n")
+    while str_temp.isnumeric() == False:
+        str_temp =  input("Enter a temperature:\n")
+    message = to_do(int(str_temp))
+    print("Let us", message)
+
 main()
 ```

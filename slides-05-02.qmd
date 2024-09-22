@@ -5,14 +5,6 @@ slide-number: true
 ---
 
 # CSc 110 - looping through strings
-
-## Announcements
-
-* Midterm 1 February 14 -- BRING PHOTO ID
-* Modules 1 to 5 -- study guide under practice problems page on website
-* Review session:
-  * February 13, 5pm to 7pm
-  * CMNS 105 (Highland Commons, The Commons on 6th street)
   
 # String Manipulation
 
@@ -95,19 +87,22 @@ my_str[2] + my_str[3] + my_str[1] + my_str[0] + my_str[4]
 
 ## Write a function
 
-1.  Its name is `four_letter_anagram`
-2.  Its parameters are a `string`, and four integers `a`, `b`, `c` and `d`
-3.  It returns the anagram of the string according to the indices `a`, `b`, `c` and `d` -- concatenate the individual characters
-4.  Test case: `four_letter_anagram("balm", 2, 1, 3, 0)` should return `lamb`
+Function `four_letter_anagram` takes a `string`, and four integers `a`, `b`, `c` and `d`.
+It returns the anagram of the string according to the indices `a`, `b`, `c` and `d` -- concatenate the individual characters.
 
-## Write a function - solution + add to it
+Name your file `anagram.py` and submit it for attendance.
 
-Add the following test cases to the code below:
+Test cases:
+```{python}
+#| eval: false
+#| echo: true
+assert four_letter_anagram("balm", 2, 1, 3, 0) == 'lamb'
+assert four_letter_anagram("loin", 0, 2, 1, 3) == 'lion'
+assert four_letter_anagram("reap", 3, 1, 2, 0) == 'pear'
+```
 
--   `loin` returns `lion`
--   `lugs` returns `slug`
--   `reap` returns `pear`
 
+## Write a function - solution 
 
 ```{python}
 #| echo: true
@@ -116,17 +111,13 @@ def four_letter_anagram(word, a, b, c, d):
   return word[a] + word[b] + word[c] + word[d]
 
 def main():
-  print( four_letter_anagram("balm", 2, 1, 3, 0) )
+  assert four_letter_anagram("balm", 2, 1, 3, 0) == 'lamb'
+  assert four_letter_anagram("loin", 0, 2, 1, 3) == 'lion'
+  assert four_letter_anagram("reap", 3, 1, 2, 0) == 'pear'
 
 main()
 ```
 
-# Submit code for attendance
-
-
-Submit your `four_letter_anagram` function to Gradescope for attendance.
-
-Name your file `anagram.py`
 
 ## `in` operator
 
