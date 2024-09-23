@@ -132,13 +132,13 @@ Modify `main` function: use a `while` loop to request a valid input from the use
 def age_milestones(age):
   message = ""
   if age >= 18:
-      message += 'You may apply to join the military'
+      message += 'You may apply to join the military.'
      
   if age >= 21:
-      message += 'You may drink'
+      message += ' You may drink.'
      
   if age > 35:
-      message += 'You may run for president'
+      message += ' You may run for president.'
       
   return message
 
@@ -163,13 +163,12 @@ Program behavior in your standard output:
 <pre style="font-size: 30px">
 How old are you?
 abc
-Invalid age entered.
 How old are you?
 10abc
-Invalid age entered.
 How old are you?
 55
-You may apply to join the military. You may drink. You may run for president.
+You may apply to join the military. You may drink. You may 
+run for president.
 </pre>
 ```
 
@@ -183,13 +182,13 @@ Modify `main` function: use a `while` loop to request a valid input from the use
 def age_milestones(age):
   message = ""
   if age >= 18:
-      message += 'You may apply to join the military'
+      message += 'You may apply to join the military.'
      
   if age >= 21:
-      message += 'You may drink'
+      message += ' You may drink.'
      
   if age > 35:
-      message += 'You may run for president'
+      message += ' You may run for president.'
       
   return message
 
@@ -199,7 +198,6 @@ def validate_age(age):
 def main():
   str_age = input('How old are you?\n')
   while validate_age(str_age) == False:
-    print("Invalid age entered.")
     str_age = input('How old are you?\n')
   age = int(str_age)
   print(age_milestones(age))

@@ -5786,14 +5786,14 @@
     "href": "slides-05-01.html#age-milestones",
     "title": "while loop intro (class slides)",
     "section": "Age milestones",
-    "text": "Age milestones\nModify main function: use a while loop to request a valid input from the user.\n\ndef age_milestones(age):\n  message = \"\"\n  if age &gt;= 18:\n      message += 'You may apply to join the military'\n     \n  if age &gt;= 21:\n      message += 'You may drink'\n     \n  if age &gt; 35:\n      message += 'You may run for president'\n      \n  return message\n\ndef validate_age(age):\n  return age.isnumeric()\n     \ndef main():\n  str_age = input('How old are you?\\n')\n  if validate_age(str_age):\n    age = int(str_age)\n    print(age_milestones(age))\n  else:\n    print(\"Invalid age entered.\")\n \nmain()"
+    "text": "Age milestones\nModify main function: use a while loop to request a valid input from the user.\n\ndef age_milestones(age):\n  message = \"\"\n  if age &gt;= 18:\n      message += 'You may apply to join the military.'\n     \n  if age &gt;= 21:\n      message += ' You may drink.'\n     \n  if age &gt; 35:\n      message += ' You may run for president.'\n      \n  return message\n\ndef validate_age(age):\n  return age.isnumeric()\n     \ndef main():\n  str_age = input('How old are you?\\n')\n  if validate_age(str_age):\n    age = int(str_age)\n    print(age_milestones(age))\n  else:\n    print(\"Invalid age entered.\")\n \nmain()"
   },
   {
     "objectID": "slides-05-01.html#age-milestones-solution",
     "href": "slides-05-01.html#age-milestones-solution",
     "title": "while loop intro (class slides)",
     "section": "Age milestones – solution",
-    "text": "Age milestones – solution\nModify main function: use a while loop to request a valid input from the user.\n\ndef age_milestones(age):\n  message = \"\"\n  if age &gt;= 18:\n      message += 'You may apply to join the military'\n     \n  if age &gt;= 21:\n      message += 'You may drink'\n     \n  if age &gt; 35:\n      message += 'You may run for president'\n      \n  return message\n\ndef validate_age(age):\n  return age.isnumeric()\n     \ndef main():\n  str_age = input('How old are you?\\n')\n  while validate_age(str_age) == False:\n    print(\"Invalid age entered.\")\n    str_age = input('How old are you?\\n')\n  age = int(str_age)\n  print(age_milestones(age))\n  \nmain()"
+    "text": "Age milestones – solution\nModify main function: use a while loop to request a valid input from the user.\n\ndef age_milestones(age):\n  message = \"\"\n  if age &gt;= 18:\n      message += 'You may apply to join the military.'\n     \n  if age &gt;= 21:\n      message += ' You may drink.'\n     \n  if age &gt; 35:\n      message += ' You may run for president.'\n      \n  return message\n\ndef validate_age(age):\n  return age.isnumeric()\n     \ndef main():\n  str_age = input('How old are you?\\n')\n  while validate_age(str_age) == False:\n    str_age = input('How old are you?\\n')\n  age = int(str_age)\n  print(age_milestones(age))\n  \nmain()"
   },
   {
     "objectID": "slides-05-01.html#write-functions",
@@ -5821,7 +5821,7 @@
     "href": "slides-05-01.html#age-milestones-continued",
     "title": "while loop intro (class slides)",
     "section": "Age milestones continued",
-    "text": "Age milestones continued\nProgram behavior in your standard output:\nHow old are you?\nabc\nInvalid age entered.\nHow old are you?\n10abc\nInvalid age entered.\nHow old are you?\n55\nYou may apply to join the military. You may drink. You may run for president."
+    "text": "Age milestones continued\nProgram behavior in your standard output:\nHow old are you?\nabc\nHow old are you?\n10abc\nHow old are you?\n55\nYou may apply to join the military. You may drink. You may \nrun for president."
   },
   {
     "objectID": "slides-05-02.html#write-a-function---solution",

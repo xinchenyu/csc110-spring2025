@@ -523,13 +523,13 @@
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">def</span> age_milestones(age):</span>
 <span id="cb9-2"><a href="#cb9-2"></a>  message <span class="op">=</span> <span class="st">""</span></span>
 <span id="cb9-3"><a href="#cb9-3"></a>  <span class="cf">if</span> age <span class="op">&gt;=</span> <span class="dv">18</span>:</span>
-<span id="cb9-4"><a href="#cb9-4"></a>      message <span class="op">+=</span> <span class="st">'You may apply to join the military'</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a>      message <span class="op">+=</span> <span class="st">'You may apply to join the military.'</span></span>
 <span id="cb9-5"><a href="#cb9-5"></a>     </span>
 <span id="cb9-6"><a href="#cb9-6"></a>  <span class="cf">if</span> age <span class="op">&gt;=</span> <span class="dv">21</span>:</span>
-<span id="cb9-7"><a href="#cb9-7"></a>      message <span class="op">+=</span> <span class="st">'You may drink'</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a>      message <span class="op">+=</span> <span class="st">' You may drink.'</span></span>
 <span id="cb9-8"><a href="#cb9-8"></a>     </span>
 <span id="cb9-9"><a href="#cb9-9"></a>  <span class="cf">if</span> age <span class="op">&gt;</span> <span class="dv">35</span>:</span>
-<span id="cb9-10"><a href="#cb9-10"></a>      message <span class="op">+=</span> <span class="st">'You may run for president'</span></span>
+<span id="cb9-10"><a href="#cb9-10"></a>      message <span class="op">+=</span> <span class="st">' You may run for president.'</span></span>
 <span id="cb9-11"><a href="#cb9-11"></a>      </span>
 <span id="cb9-12"><a href="#cb9-12"></a>  <span class="cf">return</span> message</span>
 <span id="cb9-13"><a href="#cb9-13"></a></span>
@@ -552,13 +552,12 @@
 <p>Program behavior in your standard output:</p>
 <pre style="font-size: 30px">How old are you?
 abc
-Invalid age entered.
 How old are you?
 10abc
-Invalid age entered.
 How old are you?
 55
-You may apply to join the military. You may drink. You may run for president.
+You may apply to join the military. You may drink. You may 
+run for president.
 </pre>
 </section>
 <section id="age-milestones-solution" class="slide level2">
@@ -568,13 +567,13 @@ You may apply to join the military. You may drink. You may run for president.
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">def</span> age_milestones(age):</span>
 <span id="cb10-2"><a href="#cb10-2"></a>  message <span class="op">=</span> <span class="st">""</span></span>
 <span id="cb10-3"><a href="#cb10-3"></a>  <span class="cf">if</span> age <span class="op">&gt;=</span> <span class="dv">18</span>:</span>
-<span id="cb10-4"><a href="#cb10-4"></a>      message <span class="op">+=</span> <span class="st">'You may apply to join the military'</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a>      message <span class="op">+=</span> <span class="st">'You may apply to join the military.'</span></span>
 <span id="cb10-5"><a href="#cb10-5"></a>     </span>
 <span id="cb10-6"><a href="#cb10-6"></a>  <span class="cf">if</span> age <span class="op">&gt;=</span> <span class="dv">21</span>:</span>
-<span id="cb10-7"><a href="#cb10-7"></a>      message <span class="op">+=</span> <span class="st">'You may drink'</span></span>
+<span id="cb10-7"><a href="#cb10-7"></a>      message <span class="op">+=</span> <span class="st">' You may drink.'</span></span>
 <span id="cb10-8"><a href="#cb10-8"></a>     </span>
 <span id="cb10-9"><a href="#cb10-9"></a>  <span class="cf">if</span> age <span class="op">&gt;</span> <span class="dv">35</span>:</span>
-<span id="cb10-10"><a href="#cb10-10"></a>      message <span class="op">+=</span> <span class="st">'You may run for president'</span></span>
+<span id="cb10-10"><a href="#cb10-10"></a>      message <span class="op">+=</span> <span class="st">' You may run for president.'</span></span>
 <span id="cb10-11"><a href="#cb10-11"></a>      </span>
 <span id="cb10-12"><a href="#cb10-12"></a>  <span class="cf">return</span> message</span>
 <span id="cb10-13"><a href="#cb10-13"></a></span>
@@ -584,12 +583,11 @@ You may apply to join the military. You may drink. You may run for president.
 <span id="cb10-17"><a href="#cb10-17"></a><span class="kw">def</span> main():</span>
 <span id="cb10-18"><a href="#cb10-18"></a>  str_age <span class="op">=</span> <span class="bu">input</span>(<span class="st">'How old are you?</span><span class="ch">\n</span><span class="st">'</span>)</span>
 <span id="cb10-19"><a href="#cb10-19"></a>  <span class="cf">while</span> validate_age(str_age) <span class="op">==</span> <span class="va">False</span>:</span>
-<span id="cb10-20"><a href="#cb10-20"></a>    <span class="bu">print</span>(<span class="st">"Invalid age entered."</span>)</span>
-<span id="cb10-21"><a href="#cb10-21"></a>    str_age <span class="op">=</span> <span class="bu">input</span>(<span class="st">'How old are you?</span><span class="ch">\n</span><span class="st">'</span>)</span>
-<span id="cb10-22"><a href="#cb10-22"></a>  age <span class="op">=</span> <span class="bu">int</span>(str_age)</span>
-<span id="cb10-23"><a href="#cb10-23"></a>  <span class="bu">print</span>(age_milestones(age))</span>
-<span id="cb10-24"><a href="#cb10-24"></a>  </span>
-<span id="cb10-25"><a href="#cb10-25"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-20"><a href="#cb10-20"></a>    str_age <span class="op">=</span> <span class="bu">input</span>(<span class="st">'How old are you?</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb10-21"><a href="#cb10-21"></a>  age <span class="op">=</span> <span class="bu">int</span>(str_age)</span>
+<span id="cb10-22"><a href="#cb10-22"></a>  <span class="bu">print</span>(age_milestones(age))</span>
+<span id="cb10-23"><a href="#cb10-23"></a>  </span>
+<span id="cb10-24"><a href="#cb10-24"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-functions" class="slide level2">
