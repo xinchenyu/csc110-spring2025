@@ -5800,7 +5800,7 @@
     "href": "slides-05-01.html#write-functions",
     "title": "while loop intro (class slides)",
     "section": "Write functions",
-    "text": "Write functions\n\nWrite a function to_do that takes a numeric argument temp.\nIt returns\n\n‘go for a swim’ if is greater equal to 86 and less than 104\n‘go for a hike’ if is greater equal to 68 and less than 86\n‘stay at home’ for all other cases\n\nWrite a main function to request input from user until it is valid (only digits), print the message"
+    "text": "Write functions\n\nWrite a function to_do that takes a numeric argument temp.\nIt returns\n\n‘go for a swim’ if is greater equal to 86 and less than 104\n‘go for a hike’ if is greater equal to 68 and less than 86\n‘stay at home’ for all other cases\n\nWrite a main function to request input from user until it is valid (only digits 0-9), print \"Let us\" and the message"
   },
   {
     "objectID": "slides-05-01.html#write-functions-continued",

@@ -212,7 +212,7 @@ main()
     -   'go for a swim' if is greater equal to `86` and less than `104`
     -   'go for a hike' if is greater equal to `68` and less than `86`
     -   'stay at home' for all other cases
-3. Write a `main` function to request input from user until it is valid (only digits), print the message
+3. Write a `main` function to request input from user until it is valid (only digits 0-9), print `"Let us"` and the message
 
 ## Write functions continued
 
