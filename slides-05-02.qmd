@@ -214,59 +214,22 @@ user_input = "12.5"
 user_input.isnumeric()
 ```
 
-## Write your own `is numeric` for one character
 
-Write a Python function that does the following:
+## Write a function
 
-1.  Its name is `is_numeric_one_char`
-2.  It takes one `string` argument of length of 1 (check if argument is valid with `len()`)
-3.  It returns `True` if the argument is a digit (0-9), `False` otherwise (use the `in` operator)
+Write a function `is_numeric_one_char` that takes one `string` argument of any length (assume length > 0).
 
-```{python}
-#| echo: true
-#| eval: false
-print( is_numeric_one_char("0") ) # True
-print( is_numeric_one_char("000") ) # False
-print( is_numeric_one_char("9") ) # True
-print( is_numeric_one_char("a") ) # False
-```
-
-## Write a function -- solution
-
-```{python}
-#| echo: true
-#| eval: true
-def is_numeric_one_char(char):
-  if len(char) > 1:
-    return False
-  
-  return char in "0123456789"
-
-def main():
-  print( is_numeric_one_char("0") ) # True
-  print( is_numeric_one_char("000") ) # False
-  print( is_numeric_one_char("9") ) # True
-  print( is_numeric_one_char("a") ) # False
-  
-main()
-```
-
-
-## Write a `is_numeric()` for any string length
-
-1.  Its name is `is_numeric`
-2.  It takes one `string` argument of any length
-3.  It returns `True` if the **first character** of the argument is a digit (0-9), `False` otherwise (remember to use `[ ]` to index the string and the `in` operator)
+It returns `True` if the **first character** of the argument is a digit (0-9), `False` otherwise (use `[ ]` to index the string and the `in` operator).
 
 Test cases:
 
 ```{python}
-#| echo: true
 #| eval: false
-print( is_numeric("0") ) # True
-print( is_numeric("000") ) # True
-print( is_numeric("9") ) # True
-print( is_numeric("a") ) # False
+#| echo: true
+  assert is_numeric_one_char("0") == True
+  assert is_numeric_one_char("000")  == True
+  assert is_numeric_one_char("9") == True
+  assert is_numeric_one_char("a") == False
 ```
 
 ## Write a function -- solution
@@ -274,23 +237,23 @@ print( is_numeric("a") ) # False
 ```{python}
 #| echo: true
 #| eval: true
-def is_numeric(char):
-  return char[0] in "0123456789"
+def is_numeric_one_char(string):
+  return string[0] in "0123456789"
 
 def main():
-  print( is_numeric("0") ) # True
-  print( is_numeric("000") ) # True
-  print( is_numeric("9") ) # True
-  print( is_numeric("a") ) # False
+  assert is_numeric_one_char("0") == True
+  assert is_numeric_one_char("000")  == True
+  assert is_numeric_one_char("9") == True
+  assert is_numeric_one_char("a") == False
   
 main()
 ```
 
-## Improving on `is_numeric()`
+## Improving on `is_numeric_one_char()`
 
-What if we want to check every character in a string of any length?
+How to check every character in a string of any length?
 
-What if the string is of length `2` or `5` or `45`?
+For example, how to check if every character in `"BladeRunner2049"` is a digit (0-9)?
 
 
 ## While loops -- using an index
@@ -306,41 +269,32 @@ What if the string is of length `2` or `5` or `45`?
 ```{python}
 #| eval: true
 #| echo: true
+word = "BladeRunner2049"
 index = 0
-while index < 5:
-    print('Print ' + str(index))
+while index < len(word):
+    print(word[index])
     # Can add other lines here too
-    index = index + 1
+    index = index + 2
 ```
 
-```{python}
-#| eval: true
-#| echo: true
-index = 5
-while index > 0:
-    print('Print ' + str(index))
-    # Can add other lines here too
-    index = index - 1
-```
 
-## Improve on your `is_numeric()`
+## Improve on `is_numeric_one_char()`
 
-1.  Its name is `is_numeric`
-2.  It takes one `string` argument of any length
-3.  It returns `True` if every character in the argument is a digit (0-9), `False` otherwise
-4.  Remember to use `[ ]` to index the string, use a while loop with a  `len()` condition, and an index -- something like `string[index]` with index being updated inside a `while` loop
+Function name `is_numeric` that takes one `string` argument of any length (assume length > 0).
+
+It returns `True` if every character in the argument is a digit (0-9), `False` otherwise.
+Use a while loop with a  `len()` condition, update the index in the while loop.
 
 ```{python}
 #| echo: true
 #| eval: false
-print( is_numeric("0") ) # True
-print( is_numeric("1090") ) # True
-print( is_numeric("95") ) # True
-print( is_numeric("10a") ) # False
+assert is_numeric("0") == True
+assert is_numeric("1090") == True
+assert is_numeric("95") ==  True
+assert is_numeric("10a") == False
 ```
 
 ## `is_numeric()` solution
-
 
 ```{python}
 #| eval: true
@@ -354,14 +308,24 @@ def is_numeric(my_string):
   return True
 
 def main():
-  print( is_numeric("234") ) # True
-  print( is_numeric("abc") ) # False
-  print( is_numeric("12c") ) # False
-  print( is_numeric("12.3") ) # False
+  assert is_numeric("234") == True
+  assert is_numeric("abc") == False
+  assert is_numeric("12c") == False
+  assert is_numeric("12.3") == False
   
 main()
 ```
 
+## Quiz 05
+
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+</center>
+
+You have 10 minutes to complete the quiz.
+
+No need to write `main()` function.
 
 ## `is_numeric()` solution
 
@@ -379,17 +343,17 @@ def is_numeric(my_string):
   return True
 
 def main():
-  print( is_numeric("234") ) # True
-  print( is_numeric("abc") ) # False
-  print( is_numeric("12c") ) # False
-  print( is_numeric("12.3") ) # False
+  assert is_numeric("234") == True
+  assert is_numeric("abc") == False
+  assert is_numeric("12c") == False
+  assert is_numeric("12.3") == False # how to return True?
   
 main()
 ```
 
 ## `is_numeric()` solution
 
-How do we change our function so that the last test case ("12.3") returns `True` instead?
+How do we change our function so that the last test case ("1.2.3") returns `False` instead?
 
 ```{python}
 #| eval: true
@@ -403,22 +367,42 @@ def is_numeric(my_string):
   return True
 
 def main():
-  print( is_numeric("234") ) # True
-  print( is_numeric("abc") ) # False
-  print( is_numeric("12c") ) # False
-  print( is_numeric("12.3") ) # True
-  print( is_numeric("1.2.3") ) # True
+  assert is_numeric("234") == True
+  assert is_numeric("abc") == False
+  assert is_numeric("12c") == False
+  assert is_numeric("12.3") == True
+  assert is_numeric("1.2.3") == True # how to return False?
   
 main()
 ```
 
-# Submit code for attendance
+## `is_numeric()` -- solution 1
 
-Submit your `is_numeric` function to Gradescope for attendance.
+```{python}
+#| eval: true
+#| echo: true
+def is_numeric(my_string):
+  index = 0
+  count_period = 0
+  while index < len(my_string):
+    if my_string[index] == ".":
+      count_period += 1
+    if my_string[index] not in "0123456789." or count_period > 1:
+      return False
+    index += 1
+  return True
 
-Name your file `is_numeric.py`
+def main():
+  assert is_numeric("234") == True
+  assert is_numeric("abc") == False
+  assert is_numeric("12c") ==  False
+  assert is_numeric("12.3") == True
+  assert is_numeric("1.2.3") == False
+  
+main()
+```
 
-## `is_numeric()` solution
+## `is_numeric()` -- solution 2
 
 ```{python}
 #| eval: true
@@ -445,11 +429,11 @@ def is_numeric(my_string):
   return True
 
 def main():
-  print( is_numeric("234") ) # True
-  print( is_numeric("abc") ) # False
-  print( is_numeric("12c") ) # False
-  print( is_numeric("12.3") ) # True
-  print( is_numeric("1.2.3") ) # False
+  assert is_numeric("234") == True
+  assert is_numeric("abc") == False
+  assert is_numeric("12c") ==  False
+  assert is_numeric("12.3") == True
+  assert is_numeric("1.2.3") == False
   
 main()
 ```

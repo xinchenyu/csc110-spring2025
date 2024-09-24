@@ -3161,14 +3161,14 @@
     "href": "slides-05-02.html#write-your-own-is-numeric-for-one-character",
     "title": "loops + strings (class slides)",
     "section": "Write your own is numeric for one character",
-    "text": "Write your own is numeric for one character\nWrite a Python function that does the following:\n\nIts name is is_numeric_one_char\nIt takes one string argument of length of 1 (check if argument is valid with len())\nIt returns True if the argument is a digit (0-9), False otherwise (use the in operator)\n\n\nprint( is_numeric_one_char(\"0\") ) # True\nprint( is_numeric_one_char(\"000\") ) # False\nprint( is_numeric_one_char(\"9\") ) # True\nprint( is_numeric_one_char(\"a\") ) # False"
+    "text": "Write your own is numeric for one character\nWrite a function is_numeric_one_char that takes one string argument. Check if the length is 1.\nIt returns True if the argument is a digit (0-9), False otherwise (use the in operator)\n\nassert is_numeric_one_char(\"0\") == True\nassert is_numeric_one_char(\"000\")  == False\nassert is_numeric_one_char(\"\") == False\nassert is_numeric_one_char(\"a\") == False"
   },
   {
     "objectID": "slides-05-02.html#write-a-function-solution",
     "href": "slides-05-02.html#write-a-function-solution",
     "title": "loops + strings (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef is_numeric_one_char(char):\n  if len(char) &gt; 1:\n    return False\n  \n  return char in \"0123456789\"\n\ndef main():\n  print( is_numeric_one_char(\"0\") ) # True\n  print( is_numeric_one_char(\"000\") ) # False\n  print( is_numeric_one_char(\"9\") ) # True\n  print( is_numeric_one_char(\"a\") ) # False\n  \nmain()\n\nTrue\nFalse\nTrue\nFalse"
+    "text": "Write a function – solution\n\ndef is_numeric_one_char(string):\n  return string[0] in \"0123456789\"\n\ndef main():\n  assert is_numeric_one_char(\"0\") == True\n  assert is_numeric_one_char(\"000\")  == True\n  assert is_numeric_one_char(\"9\") == True\n  assert is_numeric_one_char(\"a\") == False\n  \nmain()"
   },
   {
     "objectID": "slides-05-02.html#write-a-is_numeric-for-any-string-length",
@@ -3203,7 +3203,7 @@
     "href": "slides-05-02.html#while-loops-using-an-index-1",
     "title": "loops + strings (class slides)",
     "section": "While loops – using an index",
-    "text": "While loops – using an index\n\nindex = 0\nwhile index &lt; 5:\n    print('Print ' + str(index))\n    # Can add other lines here too\n    index = index + 1\n\nPrint 0\nPrint 1\nPrint 2\nPrint 3\nPrint 4\n\n\n\nindex = 5\nwhile index &gt; 0:\n    print('Print ' + str(index))\n    # Can add other lines here too\n    index = index - 1\n\nPrint 5\nPrint 4\nPrint 3\nPrint 2\nPrint 1"
+    "text": "While loops – using an index\n\nword = \"BladeRunner2049\"\nindex = 0\nwhile index &lt; len(word):\n    print(word[index])\n    # Can add other lines here too\n    index = index + 2\n\nB\na\ne\nu\nn\nr\n0\n9"
   },
   {
     "objectID": "slides-05-02.html#improve-on-your-is_numeric",
@@ -3217,21 +3217,21 @@
     "href": "slides-05-02.html#is_numeric-solution",
     "title": "loops + strings (class slides)",
     "section": "is_numeric() solution",
-    "text": "is_numeric() solution\n\ndef is_numeric(my_string):\n  index = 0\n  while index &lt; len(my_string):\n    if my_string[index] not in \"0123456789\":\n      return False\n    index += 1\n  return True\n\ndef main():\n  print( is_numeric(\"234\") ) # True\n  print( is_numeric(\"abc\") ) # False\n  print( is_numeric(\"12c\") ) # False\n  print( is_numeric(\"12.3\") ) # False\n  \nmain()\n\nTrue\nFalse\nFalse\nFalse"
+    "text": "is_numeric() solution\n\ndef is_numeric(my_string):\n  index = 0\n  while index &lt; len(my_string):\n    if my_string[index] not in \"0123456789\":\n      return False\n    index += 1\n  return True\n\ndef main():\n  assert is_numeric(\"234\") == True\n  assert is_numeric(\"abc\") == False\n  assert is_numeric(\"12c\") == False\n  assert is_numeric(\"12.3\") == False\n  \nmain()"
   },
   {
     "objectID": "slides-05-02.html#is_numeric-solution-1",
     "href": "slides-05-02.html#is_numeric-solution-1",
     "title": "loops + strings (class slides)",
     "section": "is_numeric() solution",
-    "text": "is_numeric() solution\nHow do we change our function so that the last test case (“12.3”) returns True instead?\n\ndef is_numeric(my_string):\n  index = 0\n  while index &lt; len(my_string):\n    if my_string[index] not in \"0123456789\":\n      return False\n    index += 1\n  return True\n\ndef main():\n  print( is_numeric(\"234\") ) # True\n  print( is_numeric(\"abc\") ) # False\n  print( is_numeric(\"12c\") ) # False\n  print( is_numeric(\"12.3\") ) # False\n  \nmain()\n\nTrue\nFalse\nFalse\nFalse"
+    "text": "is_numeric() solution\nHow do we change our function so that the last test case (“12.3”) returns True instead?\n\ndef is_numeric(my_string):\n  index = 0\n  while index &lt; len(my_string):\n    if my_string[index] not in \"0123456789\":\n      return False\n    index += 1\n  return True\n\ndef main():\n  assert is_numeric(\"234\") == True\n  assert is_numeric(\"abc\") == False\n  assert is_numeric(\"12c\") == False\n  assert is_numeric(\"12.3\") == False # how to return True?\n  \nmain()"
   },
   {
     "objectID": "slides-05-02.html#is_numeric-solution-2",
     "href": "slides-05-02.html#is_numeric-solution-2",
     "title": "loops + strings (class slides)",
     "section": "is_numeric() solution",
-    "text": "is_numeric() solution\nHow do we change our function so that the last test case (“12.3”) returns True instead?\n\ndef is_numeric(my_string):\n  index = 0\n  while index &lt; len(my_string):\n    if my_string[index] not in \"0123456789.\":\n      return False\n    index += 1\n  return True\n\ndef main():\n  print( is_numeric(\"234\") ) # True\n  print( is_numeric(\"abc\") ) # False\n  print( is_numeric(\"12c\") ) # False\n  print( is_numeric(\"12.3\") ) # True\n  print( is_numeric(\"1.2.3\") ) # True\n  \nmain()\n\nTrue\nFalse\nFalse\nTrue\nTrue"
+    "text": "is_numeric() solution\nHow do we change our function so that the last test case (“1.2.3”) returns False instead?\n\ndef is_numeric(my_string):\n  index = 0\n  while index &lt; len(my_string):\n    if my_string[index] not in \"0123456789.\":\n      return False\n    index += 1\n  return True\n\ndef main():\n  assert is_numeric(\"234\") == True\n  assert is_numeric(\"abc\") == False\n  assert is_numeric(\"12c\") == False\n  assert is_numeric(\"12.3\") == True\n  assert is_numeric(\"1.2.3\") == True # how to return False?\n  \nmain()"
   },
   {
     "objectID": "slides-05-02.html#is_numeric-solution-3",
@@ -5829,5 +5829,68 @@
     "title": "loops + strings (class slides)",
     "section": "Write a function - solution",
     "text": "Write a function - solution\n\ndef four_letter_anagram(word, a, b, c, d):\n  return word[a] + word[b] + word[c] + word[d]\n\ndef main():\n  assert four_letter_anagram(\"balm\", 2, 1, 3, 0) == 'lamb'\n  assert four_letter_anagram(\"loin\", 0, 2, 1, 3) == 'lion'\n  assert four_letter_anagram(\"reap\", 3, 1, 2, 0) == 'pear'\n\nmain()"
+  },
+  {
+    "objectID": "slides-05-02.html#write-is-numeric-for-one-character",
+    "href": "slides-05-02.html#write-is-numeric-for-one-character",
+    "title": "loops + strings (class slides)",
+    "section": "Write is numeric for one character",
+    "text": "Write is numeric for one character\nWrite a function is_numeric_one_char that takes one string argument. Check if the length is 1.\nIt returns True if the argument is a digit (0-9), False otherwise (use the in operator)\n\nassert is_numeric_one_char(\"0\") == True\nassert is_numeric_one_char(\"000\")  == False\nassert is_numeric_one_char(\"\") == False\nassert is_numeric_one_char(\"a\") == False"
+  },
+  {
+    "objectID": "slides-05-02.html#write-is_numeric-for-any-string-length",
+    "href": "slides-05-02.html#write-is_numeric-for-any-string-length",
+    "title": "loops + strings (class slides)",
+    "section": "Write is_numeric() for any string length",
+    "text": "Write is_numeric() for any string length\n\nIts name is is_numeric\nIt takes one string argument of any length\nIt returns True if the first character of the argument is a digit (0-9), False otherwise (remember to use [ ] to index the string and the in operator)\n\nTest cases:\n\nprint( is_numeric(\"0\") ) # True\nprint( is_numeric(\"000\") ) # True\nprint( is_numeric(\"9\") ) # True\nprint( is_numeric(\"a\") ) # False"
+  },
+  {
+    "objectID": "slides-05-02.html#write-a-function-1",
+    "href": "slides-05-02.html#write-a-function-1",
+    "title": "loops + strings (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\nWrite a function is_numeric_one_char that takes one string argument of any length (assume length &gt; 0).\nIt returns True if the first character of the argument is a digit (0-9), False otherwise (use [ ] to index the string and the in operator).\nTest cases:\n\n  assert is_numeric_one_char(\"0\") == True\n  assert is_numeric_one_char(\"000\")  == True\n  assert is_numeric_one_char(\"9\") == True\n  assert is_numeric_one_char(\"a\") == False"
+  },
+  {
+    "objectID": "slides-05-02.html#improving-on-is_numeric_one_char",
+    "href": "slides-05-02.html#improving-on-is_numeric_one_char",
+    "title": "loops + strings (class slides)",
+    "section": "Improving on is_numeric_one_char()",
+    "text": "Improving on is_numeric_one_char()\nHow to check every character in a string of any length?\nFor example, how to check if every character in \"BladeRunner2049\" is a digit (0-9)?"
+  },
+  {
+    "objectID": "slides-05-02.html#improve-on-is_numeric",
+    "href": "slides-05-02.html#improve-on-is_numeric",
+    "title": "loops + strings (class slides)",
+    "section": "Improve on is_numeric()",
+    "text": "Improve on is_numeric()\nFunction name is is_numeric that takes one string argument of any length (assume length &gt; 0).\nIt returns True if every character in the argument is a digit (0-9), False otherwise. Use [ ] to index the string, use a while loop with a len() condition, update the index in the while loop.\n\nassert is_numeric(\"0\") == True\nassert is_numeric(\"1090\") == True\nassert is_numeric(\"95\") ==  True\nassert is_numeric(\"10a\") == False"
+  },
+  {
+    "objectID": "slides-05-02.html#improve-on-is_numeric_one_char",
+    "href": "slides-05-02.html#improve-on-is_numeric_one_char",
+    "title": "loops + strings (class slides)",
+    "section": "Improve on is_numeric_one_char()",
+    "text": "Improve on is_numeric_one_char()\nFunction name is_numeric that takes one string argument of any length (assume length &gt; 0).\nIt returns True if every character in the argument is a digit (0-9), False otherwise. Use a while loop with a len() condition, update the index in the while loop.\n\nassert is_numeric(\"0\") == True\nassert is_numeric(\"1090\") == True\nassert is_numeric(\"95\") ==  True\nassert is_numeric(\"10a\") == False"
+  },
+  {
+    "objectID": "slides-05-02.html#is_numeric-solution-1-1",
+    "href": "slides-05-02.html#is_numeric-solution-1-1",
+    "title": "loops + strings (class slides)",
+    "section": "is_numeric() – solution 1",
+    "text": "is_numeric() – solution 1\n\ndef is_numeric(my_string):\n  index = 0\n  count_period = 0\n  while index &lt; len(my_string):\n    if my_string[index] == \".\":\n      count_period += 1\n    if my_string[index] not in \"0123456789.\" or count_period &gt; 1:\n      return False\n    index += 1\n  return True\n\ndef main():\n  assert is_numeric(\"234\") == True\n  assert is_numeric(\"abc\") == False\n  assert is_numeric(\"12c\") ==  False\n  assert is_numeric(\"12.3\") == True\n  assert is_numeric(\"1.2.3\") == False\n  \nmain()"
+  },
+  {
+    "objectID": "slides-05-02.html#is_numeric-solution-2-1",
+    "href": "slides-05-02.html#is_numeric-solution-2-1",
+    "title": "loops + strings (class slides)",
+    "section": "is_numeric() – solution 2",
+    "text": "is_numeric() – solution 2\n\ndef is_numeric(my_string):\n  # create control variable for one decimal point\n  decimal_point = False\n  # create index variable\n  index = 0\n  while index &lt; len(my_string):\n    # first check, can character be found in a number?\n    if my_string[index] not in \"0123456789.\":\n      return False\n    # second check, if a period, has a period been found before?\n    if my_string[index] == \".\":\n      if decimal_point: # a previous period was detected\n        return False\n      else: # first period detected\n        decimal_point = True\n    # increment index  \n    index += 1\n  # while loop executed without returning False\n  # that means every character is valid, so return True\n  return True\n\ndef main():\n  assert is_numeric(\"234\") == True\n  assert is_numeric(\"abc\") == False\n  assert is_numeric(\"12c\") ==  False\n  assert is_numeric(\"12.3\") == True\n  assert is_numeric(\"1.2.3\") == False\n  \nmain()"
+  },
+  {
+    "objectID": "slides-05-02.html#quiz-05",
+    "href": "slides-05-02.html#quiz-05",
+    "title": "loops + strings (class slides)",
+    "section": "Quiz 05",
+    "text": "Quiz 05\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.\nNo need to write main() function."
   }
 ]
