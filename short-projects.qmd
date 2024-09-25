@@ -15,7 +15,7 @@ This is for information only. You need to [sign up for a specific lab session](h
 * [Lab 01](labs/lab01.html): September 3 to September 9 ([slides](labs/lab01-slide.html))
 * [Lab 02](labs/lab02.html): September 10 to September 16 ([slides](labs/lab02-slide.html))
 * [Lab 03](labs/lab03.html): September 17 to September 23 ([slides](labs/lab03-slide.html))
-* [Lab 04](labs/lab04.html): September 24 to September 30
+* [Lab 04](labs/lab04.html): September 24 to September 30 ([slides](labs/lab04-slide.html))
 * [Lab 05](labs/lab05.html): October 01 to October 07
 * [Lab 06](labs/lab06.html): October 08 to October 14
 * CATCH UP WEEK: October 15 to October 21
