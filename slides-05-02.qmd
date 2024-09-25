@@ -266,6 +266,7 @@ For example, how to check if every character in `"BladeRunner2049"` is a digit (
 
 ## While loops -- using an index
 
+Print characters at even indices.
 ```{python}
 #| eval: true
 #| echo: true

@@ -3203,7 +3203,7 @@
     "href": "slides-05-02.html#while-loops-using-an-index-1",
     "title": "loops + strings (class slides)",
     "section": "While loops – using an index",
-    "text": "While loops – using an index\n\nword = \"BladeRunner2049\"\nindex = 0\nwhile index &lt; len(word):\n    print(word[index])\n    # Can add other lines here too\n    index = index + 2\n\nB\na\ne\nu\nn\nr\n0\n9"
+    "text": "While loops – using an index\nPrint characters at even indices.\n\nword = \"BladeRunner2049\"\nindex = 0\nwhile index &lt; len(word):\n    print(word[index])\n    # Can add other lines here too\n    index = index + 2\n\nB\na\ne\nu\nn\nr\n0\n9"
   },
   {
     "objectID": "slides-05-02.html#improve-on-your-is_numeric",
