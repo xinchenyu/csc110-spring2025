@@ -5870,7 +5870,7 @@
     "href": "slides-05-02.html#improve-on-is_numeric_one_char",
     "title": "loops + strings (class slides)",
     "section": "Improve on is_numeric_one_char()",
-    "text": "Improve on is_numeric_one_char()\nFunction name is_numeric that takes one string argument of any length (assume length &gt; 0).\nIt returns True if every character in the argument is a digit (0-9), False otherwise. Use a while loop with a len() condition, update the index in the while loop.\n\nassert is_numeric(\"0\") == True\nassert is_numeric(\"1090\") == True\nassert is_numeric(\"95\") ==  True\nassert is_numeric(\"10a\") == False"
+    "text": "Improve on is_numeric_one_char()\nFunction name is_numeric that takes one string argument of any length (assume length &gt; 0).\nIt returns True if every character in the argument is a digit (0-9), False otherwise (if any character is not a digit).\nUse in operator instead of built-in function isnumeric().\n\nassert is_numeric(\"0\") == True\nassert is_numeric(\"1090\") == True\nassert is_numeric(\"95\") ==  True\nassert is_numeric(\"10a\") == False"
   },
   {
     "objectID": "slides-05-02.html#is_numeric-solution-1-1",

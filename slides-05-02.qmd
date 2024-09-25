@@ -283,8 +283,9 @@ while index < len(word):
 
 Function name `is_numeric` that takes one `string` argument of any length (assume length > 0).
 
-It returns `True` if every character in the argument is a digit (0-9), `False` otherwise.
-Use a while loop with a  `len()` condition, update the index in the while loop.
+It returns `True` if every character in the argument is a digit (0-9), `False` otherwise (if any character is not a digit).
+
+Use `in` operator instead of built-in function `isnumeric()`.
 
 ```{python}
 #| echo: true
