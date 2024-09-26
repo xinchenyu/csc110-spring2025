@@ -32,6 +32,19 @@ while index <= 5:
 print(total)
 ```
 
+## `while` loops table
+
+Start with `total = 0`, `index = 1`:
+
+| `index <= 5`   | total =  total + index | index = index + 1 |
+| :-------: |:-------: |:-------: |
+| True | total = 0 + 1 | index = 1 + 1 |
+| True | total = 1 + 2 | index = 2 + 1 |
+| True | total = 3 + 3 | index = 3 + 1 |
+| True | total = 6 + 4 | index = 4 + 1 |
+| True | total = 10 + 5 | index = 5 + 1 |
+| False | - | - |
+
 ## Write a function
 
 Its name is `sum_all` and takes two numeric arguments: `low` and `high`.

@@ -5906,5 +5906,19 @@
     "title": "while loop aggregation (class slides)",
     "section": "Write a function – solution",
     "text": "Write a function – solution\n\ndef vowels_only(string):\n  new_string = \"\"\n  index = 0\n  while index &lt; len(string):\n    if string[index] in \"aeiou\":\n      new_string += string[index]\n    index += 1\n  return new_string\n\ndef main():\n  print( vowels_only(\"banana\") ) # \"aaa\"\n  \nmain()\n\naaa"
+  },
+  {
+    "objectID": "slides-05-03.html#while-loops-with-aggregation-1",
+    "href": "slides-05-03.html#while-loops-with-aggregation-1",
+    "title": "while loop aggregation (class slides)",
+    "section": "while loops with aggregation",
+    "text": "while loops with aggregation\ntotal = 0, index = 1, condition: index &lt;= 5\n\n\n\n#Loop\ntotal = total + index\nindex = index + 1\n\n\n\n\n1\ntotal = 0 + 1\nindex = 1 + 1\n\n\n2\ntotal = 0 + 1\nindex = 1 + 1"
+  },
+  {
+    "objectID": "slides-05-03.html#while-loops-table",
+    "href": "slides-05-03.html#while-loops-table",
+    "title": "while loop aggregation (class slides)",
+    "section": "while loops table",
+    "text": "while loops table\nStart with total = 0, index = 1:\n\n\n\nindex &lt;= 5\ntotal = total + index\nindex = index + 1\n\n\n\n\nTrue\ntotal = 0 + 1\nindex = 1 + 1\n\n\nTrue\ntotal = 1 + 2\nindex = 2 + 1\n\n\nTrue\ntotal = 3 + 3\nindex = 3 + 1\n\n\nTrue\ntotal = 6 + 4\nindex = 4 + 1\n\n\nTrue\ntotal = 10 + 5\nindex = 5 + 1\n\n\nFalse\n-\n-"
   }
 ]
