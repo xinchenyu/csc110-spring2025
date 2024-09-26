@@ -2811,42 +2811,42 @@
     "href": "slides-05-03.html#write-a-function",
     "title": "while loop aggregation (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is sum_all\nIt takes two numeric arguments: low and high\nIt runs a loop that iterates through the values low and high summing all values (HINT: you need to create a variable that will aggregate or accumulate the sum)\nIt returns the sum of all values between low and high\nUse while (define an index before the loop, use index in the while condition, change the index inside the loop)"
+    "text": "Write a function\nIts name is sum_all and takes two numeric arguments: low and high. It runs a loop that iterates through the values low and high summing all values. It returns the sum of all values between low and high.\nHINT: Create a variable that will aggregate the sum. Use while (set the index as the low before the loop, use index in the while condition, update the index inside the loop).\n\nassert sum_all(1, 3) == 6\nassert sum_all(0, 5) == 15"
   },
   {
     "objectID": "slides-05-03.html#write-a-function-solution",
     "href": "slides-05-03.html#write-a-function-solution",
     "title": "while loop aggregation (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\nWrite more test cases for this function.\n\ndef sum_all(low, high):\n  total = 0\n  current_number = low\n  while current_number &lt;= high:\n    total += current_number\n    current_number += 1\n  return total\n    \ndef main():\n  print( sum_all(1, 2) ) # 3\n  print( sum_all(0, 5) ) # 15\n  \nmain()\n\n3\n15"
+    "text": "Write a function – solution\n\ndef sum_all(low, high):\n  total = 0\n  index = low\n  while index &lt;= high:\n    total += index\n    index += 1\n  return total\n    \ndef main():\n  assert sum_all(1, 3) == 6\n  assert sum_all(0, 5) == 15\n  \nmain()"
   },
   {
     "objectID": "slides-05-03.html#write-a-function-1",
     "href": "slides-05-03.html#write-a-function-1",
     "title": "while loop aggregation (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is vowels_only\nIt takes a string argument\nIt builds a new string containing only the vowels in the string argument\nIt returns new string with vowels only (define an index before the loop, use index in the while condition, change index inside the loop)\n\n\nprint( vowels_only(\"banana\") ) # \"aaa\"\nprint( vowels_only(\"fly\") ) # \"\""
+    "text": "Write a function\nWrite a function called count_vowels that takes a string as argument, and returns an integer with the number of vowels in the string.\nHINT: use in to determine if a character is a vowel. The vowels are \"a\",\"e\",\"i\",\"o\", and \"u\".\n\nassert count_vowels(\"banana\") == 3\nassert count_vowels(\"fly\") == 0"
   },
   {
     "objectID": "slides-05-03.html#write-a-function-solution-1",
     "href": "slides-05-03.html#write-a-function-solution-1",
     "title": "while loop aggregation (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\nWrite more test cases for this function.\n\ndef vowels_only(string):\n  new_string = \"\"\n  index = 0\n  while index &lt; len(string):\n    if string[index] in \"aeiou\":\n      new_string += string[index]\n    index += 1\n  return new_string\n\ndef main():\n  print( vowels_only(\"banana\") ) # \"aaa\"\n  \nmain()\n\naaa"
+    "text": "Write a function – solution\n\ndef count_vowels(string):\n  index = 0\n  count = 0\n  while index &lt; len(string):\n    if string[index] in \"aeiou\":\n      count += 1\n    index += 1\n  return count\n\ndef main():\n  assert count_vowels(\"banana\") == 3\n  assert count_vowels(\"fly\") == 0\n  print(\"End of tests.\")\n  \nmain()\n\nEnd of tests."
   },
   {
     "objectID": "slides-05-03.html#write-a-function-2",
     "href": "slides-05-03.html#write-a-function-2",
     "title": "while loop aggregation (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is factorial\nIt takes a numeric argument number\nIt returns the factorial of number\nThe factorial of a number is the product of itself and all the integers below it – factorial of 4 = 1 * 2 * 3 * 4 = 24\nUse while\n\n\nprint( factorial(4) ) # 24\nprint( factorial(5) ) # 120\nprint( factorial(0) ) # 1"
+    "text": "Write a function\nIts name is factorial and takes a numeric argument number. It returns the factorial of number. The factorial of a number is the product of that number and every number that comes before it, down to one.\nFor example, factorial of 4: 1 * 2 * 3 * 4 = 24.\nName your file factorial.py and submit to Gradescope.\n\nassert factorial(4) == 24\nassert factorial(5) == 120\nassert factorial(0) == 1"
   },
   {
     "objectID": "slides-05-03.html#write-a-function-solution-2",
     "href": "slides-05-03.html#write-a-function-solution-2",
     "title": "while loop aggregation (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\nWrite more test cases for this function.\n\ndef factorial(number):\n  result = 1\n  index = 1\n  while index &lt;= number:\n    result *= index\n    index += 1\n  return result\n\ndef main():\n  assert factorial(4) == 24\n  assert factorial(5) == 120\n  assert factorial(0) == 1\n  \nmain()"
+    "text": "Write a function – solution\n\ndef factorial(number):\n  result = 1\n  index = 1\n  while index &lt;= number:\n    result *= index\n    index += 1\n  return result\n\ndef main():\n  assert factorial(4) == 24\n  assert factorial(5) == 120\n  assert factorial(0) == 1\n  \nmain()"
   },
   {
     "objectID": "slides-05-03.html#write-a-function-3",
@@ -2860,7 +2860,7 @@
     "href": "slides-05-03.html#write-a-function-solution-3",
     "title": "while loop aggregation (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\nWrite more test cases for this function.\n\ndef power(base, exp):\n  result = 1\n  index = 1\n  while index &lt;= exp:\n    result *= base\n    index += 1\n  return result\n\ndef main():\n  print( power(2, 3) ) # 8\n  print( power(3, 3) ) # 27\n  \nmain()\n\n8\n27"
+    "text": "Write a function – solution\nWrite more test cases for this function.\n\ndef power(base, exp):\n  result = 1\n  index = 1\n  while index &lt;= exp:\n    result *= base\n    index += 1\n  return result\n\ndef main():\n  assert power(2, 3) == 8\n  assert power(3, 3) == 27\n    \nmain()"
   },
   {
     "objectID": "slides-09-01.html#announcements",
@@ -5892,5 +5892,19 @@
     "title": "loops + strings (class slides)",
     "section": "Quiz 05",
     "text": "Quiz 05\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.\nNo need to write main() function."
+  },
+  {
+    "objectID": "slides-05-03.html#write-a-function-4",
+    "href": "slides-05-03.html#write-a-function-4",
+    "title": "while loop aggregation (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\n\nIts name is vowels_only\nIt takes a string argument\nIt builds a new string containing only the vowels in the string argument\nIt returns new string with vowels only (define an index before the loop, use index in the while condition, change index inside the loop)\n\n\nprint( vowels_only(\"banana\") ) # \"aaa\"\nprint( vowels_only(\"fly\") ) # \"\""
+  },
+  {
+    "objectID": "slides-05-03.html#write-a-function-solution-4",
+    "href": "slides-05-03.html#write-a-function-solution-4",
+    "title": "while loop aggregation (class slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\n\ndef vowels_only(string):\n  new_string = \"\"\n  index = 0\n  while index &lt; len(string):\n    if string[index] in \"aeiou\":\n      new_string += string[index]\n    index += 1\n  return new_string\n\ndef main():\n  print( vowels_only(\"banana\") ) # \"aaa\"\n  \nmain()\n\naaa"
   }
 ]

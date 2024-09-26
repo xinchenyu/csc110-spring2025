@@ -34,30 +34,35 @@ print(total)
 
 ## Write a function
 
-1.  Its name is `sum_all`
-2.  It takes two numeric arguments: `low` and `high`
-3.  It runs a loop that iterates through the values `low` and `high` summing all values (HINT: you need to create a variable that will aggregate or accumulate the sum)
-4.  It returns the sum of all values between `low` and `high`
-5.  Use `while` (define an index before the loop, use index in the `while` condition, change the index inside the loop)
+Its name is `sum_all` and takes two numeric arguments: `low` and `high`.
+It runs a loop that iterates through the values `low` and `high` summing all values.
+It returns the sum of all values between `low` and `high`.
+
+HINT: Create a variable that will aggregate the sum. Use `while` (set the index as the `low` before the loop, use index in the `while` condition, update the index inside the loop). 
+
+```{python}
+#| eval: false
+#| echo: true
+assert sum_all(1, 3) == 6
+assert sum_all(0, 5) == 15
+```
 
 ## Write a function -- solution
-
-Write more test cases for this function.
 
 ```{python}
 #| eval: true
 #| echo: true
 def sum_all(low, high):
   total = 0
-  current_number = low
-  while current_number <= high:
-    total += current_number
-    current_number += 1
+  index = low
+  while index <= high:
+    total += index
+    index += 1
   return total
     
 def main():
-  print( sum_all(1, 2) ) # 3
-  print( sum_all(0, 5) ) # 15
+  assert sum_all(1, 3) == 6
+  assert sum_all(0, 5) == 15
   
 main()
   
@@ -65,62 +70,62 @@ main()
 
 ## Write a function
 
-1.  Its name is `vowels_only`
-2.  It takes a `string` argument
-3.  It builds a new string containing only the vowels in the `string` argument
-4.  It returns new string with vowels only (define an `index` before the loop, use index in the `while` condition, change `index` inside the loop)
+Write a function called `count_vowels` that takes a string as argument, and returns
+an integer with the number of vowels in the string.
+
+HINT: use `in` to determine if a character is a vowel. The vowels are `"a"`,`"e"`,`"i"`,`"o"`, and `"u"`.
 
 ```{python}
 #| eval: false
 #| echo: true
-print( vowels_only("banana") ) # "aaa"
-print( vowels_only("fly") ) # ""
+assert count_vowels("banana") == 3
+assert count_vowels("fly") == 0
 ```
 
-
 ## Write a function -- solution
-
-Write more test cases for this function.
 
 ```{python}
 #| eval: true
 #| echo: true
-def vowels_only(string):
-  new_string = ""
+def count_vowels(string):
   index = 0
+  count = 0
   while index < len(string):
     if string[index] in "aeiou":
-      new_string += string[index]
+      count += 1
     index += 1
-  return new_string
+  return count
 
 def main():
-  print( vowels_only("banana") ) # "aaa"
+  assert count_vowels("banana") == 3
+  assert count_vowels("fly") == 0
+  print("End of tests.")
   
 main()
+
 ```
+
 
 ## Write a function
 
-1.  Its name is `factorial`
-2.  It takes a numeric argument `number`
-3.  It returns the factorial of `number`
-4.  The factorial of a number is the product of itself and all the integers below it -- factorial of 4 = `1 * 2 * 3 * 4 = 24`
-5.  Use `while`
+Its name is `factorial` and takes a numeric argument `number`.
+It returns the factorial of `number`. 
+The factorial of a number is the product of that number and every number that comes before it, down to one. 
 
+For example, factorial of 4: `1 * 2 * 3 * 4 = 24`.
+
+Name your file `factorial.py` and submit to Gradescope.
 
 ```{python}
 #| eval: false
 #| echo: true
-print( factorial(4) ) # 24
-print( factorial(5) ) # 120
-print( factorial(0) ) # 1
+assert factorial(4) == 24
+assert factorial(5) == 120
+assert factorial(0) == 1
 ```
 
 
 ## Write a function -- solution
-
-Write more test cases for this function.
 
 ```{python}
 #| eval: true
@@ -141,11 +146,6 @@ def main():
 main()
 ```
 
-# Submit code for attendance
-
-Submit your `factorial` function to Gradescope for attendance.
-
-Name your file `factorial.py`
 
 ## Write a function
 
@@ -178,8 +178,45 @@ def power(base, exp):
   return result
 
 def main():
-  print( power(2, 3) ) # 8
-  print( power(3, 3) ) # 27
+  assert power(2, 3) == 8
+  assert power(3, 3) == 27
+    
+main()
+```
+
+
+## Write a function
+
+1.  Its name is `vowels_only`
+2.  It takes a `string` argument
+3.  It builds a new string containing only the vowels in the `string` argument
+4.  It returns new string with vowels only (define an `index` before the loop, use index in the `while` condition, change `index` inside the loop)
+
+```{python}
+#| eval: false
+#| echo: true
+print( vowels_only("banana") ) # "aaa"
+print( vowels_only("fly") ) # ""
+```
+
+
+## Write a function -- solution
+
+
+```{python}
+#| eval: true
+#| echo: true
+def vowels_only(string):
+  new_string = ""
+  index = 0
+  while index < len(string):
+    if string[index] in "aeiou":
+      new_string += string[index]
+    index += 1
+  return new_string
+
+def main():
+  print( vowels_only("banana") ) # "aaa"
   
 main()
 ```
