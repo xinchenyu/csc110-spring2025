@@ -2853,14 +2853,14 @@
     "href": "slides-05-03.html#write-a-function-3",
     "title": "while loop aggregation (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is power\nIt takes two numeric arguments: base and exp\nIt returns the base to the power of exp\nDon’t use the ** operator, use a while loop (define an index before the loop, use index in the while condition, change index inside the loop)\n\n\nassert power(2, 3) == 8\nassert power(3, 3) == 27"
+    "text": "Write a function\n\nIts name is power\nIt takes two numeric arguments: base and exp\nIt returns the base to the power of exp\nDon’t use the ** operator, use a while loop (define an index before the loop, use index in the while condition, change index inside the loop)\n\n\nassert power(2, 4) == 16\nassert power(3, 2) == 9"
   },
   {
     "objectID": "slides-05-03.html#write-a-function-solution-3",
     "href": "slides-05-03.html#write-a-function-solution-3",
     "title": "while loop aggregation (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\nWrite more test cases for this function.\n\ndef power(base, exp):\n  result = 1\n  index = 1\n  while index &lt;= exp:\n    result *= base\n    index += 1\n  return result\n\ndef main():\n  assert power(2, 3) == 8\n  assert power(3, 3) == 27\n    \nmain()"
+    "text": "Write a function – solution\nWrite more test cases for this function.\n\ndef power(base, exp):\n  result = 1\n  index = 1\n  while index &lt;= exp:\n    result *= base\n    index += 1\n  return result\n\ndef main():\n  assert power(2, 4) == 16\n  assert power(3, 2) == 9\n    \nmain()"
   },
   {
     "objectID": "slides-09-01.html#announcements",
@@ -5920,5 +5920,12 @@
     "title": "while loop aggregation (class slides)",
     "section": "while loops table",
     "text": "while loops table\nStart with total = 0, index = 1:\n\n\n\nindex &lt;= 5\ntotal = total + index\nindex = index + 1\n\n\n\n\nTrue\ntotal = 0 + 1\nindex = 1 + 1\n\n\nTrue\ntotal = 1 + 2\nindex = 2 + 1\n\n\nTrue\ntotal = 3 + 3\nindex = 3 + 1\n\n\nTrue\ntotal = 6 + 4\nindex = 4 + 1\n\n\nTrue\ntotal = 10 + 5\nindex = 5 + 1\n\n\nFalse\n-\n-"
+  },
+  {
+    "objectID": "slides-05-03.html#announcement",
+    "href": "slides-05-03.html#announcement",
+    "title": "while loop aggregation (class slides)",
+    "section": "Announcement",
+    "text": "Announcement\nReview session next Tuesday, October 1, starting at 5pm.\n\nLocation: Gittings 129b (same as lecture room)."
   }
 ]

@@ -6,6 +6,12 @@ slide-number: true
 
 # CSc 110 - while loop aggregation
 
+## Announcement
+
+Review session next Tuesday, October 1, starting at 5pm.
+
+-   Location: Gittings 129b (same as lecture room).
+
 ## `while` loops
 
 -   Using an index variable:
@@ -170,8 +176,8 @@ main()
 ```{python}
 #| eval: false
 #| echo: true
-assert power(2, 3) == 8
-assert power(3, 3) == 27
+assert power(2, 4) == 16
+assert power(3, 2) == 9
 ```
 
 
@@ -191,8 +197,8 @@ def power(base, exp):
   return result
 
 def main():
-  assert power(2, 3) == 8
-  assert power(3, 3) == 27
+  assert power(2, 4) == 16
+  assert power(3, 2) == 9
     
 main()
 ```
