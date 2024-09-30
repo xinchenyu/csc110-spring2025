@@ -4645,7 +4645,7 @@
     "href": "slides-06-01.html#using-a-control-variable",
     "title": "lists (class slides)",
     "section": "Using a control variable",
-    "text": "Using a control variable\nRemember how to get the max of three numbers?\n\ndef max3(x, y, z):\n  max = x # assume max is first number\n  if y &gt; max:\n    max = y # assumption is incorrect, assume y is max\n  if z &gt; max:\n    max = z # assumption is incorrect, z is max\n  return max\n\ndef main():\n  print( max3(1, 2, 2) ) # 2\n  \nmain()\n\n2\n\n\nAdapt this function (max_list) to take a list of numbers instead of three numbers (use while)."
+    "text": "Using a control variable\nRemember how to get the max of three numbers?\n\ndef max3(x, y, z):\n  max = x # assume max is first number\n  if y &gt; max:\n    max = y # assumption is incorrect, assume y is max\n  if z &gt; max:\n    max = z # assumption is incorrect, z is max\n  return max\n\ndef main():\n  print( max3(1, 2, 2) ) # 2\n  \nmain()\n\n2\n\n\nAdapt this function (max_list) to take a list of numbers (for example [1, 2, 2, 1, 3, 1, 1]) instead of three numbers (use while)."
   },
   {
     "objectID": "slides-06-01.html#max-of-list-solution",

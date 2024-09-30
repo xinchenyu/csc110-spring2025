@@ -248,7 +248,7 @@ def main():
 main()
 ```
 
-Adapt this function (`max_list`) to take a list of numbers instead of three numbers (use `while`). 
+Adapt this function (`max_list`) to take a list of numbers (for example `[1, 2, 2, 1, 3, 1, 1]`) instead of three numbers (use `while`). 
 
 ## Max of list -- solution
 
