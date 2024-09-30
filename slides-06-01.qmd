@@ -280,6 +280,7 @@ main()
 
 ## Loop table
 
+We start with `index = 1` and `max = 2`:
 ```{python}
 #| eval: false
 #| echo: true
@@ -304,6 +305,7 @@ data.frame(index = c("|", "| ", "| ", "| ",
 
 ## Loop table -- solution
 
+We start with `index = 1` and `max = 2`:
 ```{python}
 #| eval: false
 #| echo: true

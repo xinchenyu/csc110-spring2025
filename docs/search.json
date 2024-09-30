@@ -4659,14 +4659,14 @@
     "href": "slides-06-01.html#loop-table-2",
     "title": "lists (class slides)",
     "section": "Loop table",
-    "text": "Loop table\n\nmax_list([2, 1, 3, 1])\n\n\n\n\n\n\nindex\nindex &lt; len(numbers)\nnumbers[index]\nmax\n\n\n\n\n|\n\n\n\n\n\n|\n\n\n\n\n\n|\n\n\n\n\n\n|\n\n\n\n\n\n|\n\n\n\n\n\n|"
+    "text": "Loop table\nWe start with index = 1 and max = 2:\n\nmax_list([2, 1, 3, 1])\n\n\n\n\n\n\nindex\nindex &lt; len(numbers)\nnumbers[index]\nmax\n\n\n\n\n|\n\n\n\n\n\n|\n\n\n\n\n\n|\n\n\n\n\n\n|\n\n\n\n\n\n|\n\n\n\n\n\n|"
   },
   {
     "objectID": "slides-06-01.html#loop-table-solution-1",
     "href": "slides-06-01.html#loop-table-solution-1",
     "title": "lists (class slides)",
     "section": "Loop table – solution",
-    "text": "Loop table – solution\n\nmax_list([2, 1, 3, 1])\n\n\n\n\n\n\nindex\nindex &lt; len(numbers)\nnumbers[index]\nmax\n\n\n\n\n1\nTrue\n1\n2\n\n\n2\nTrue\n3\n3\n\n\n3\nTrue\n1\n3\n\n\n4\nFalse\n-\n3"
+    "text": "Loop table – solution\nWe start with index = 1 and max = 2:\n\nmax_list([2, 1, 3, 1])\n\n\n\n\n\n\nindex\nindex &lt; len(numbers)\nnumbers[index]\nmax\n\n\n\n\n1\nTrue\n1\n2\n\n\n2\nTrue\n3\n3\n\n\n3\nTrue\n1\n3\n\n\n4\nFalse\n-\n3"
   },
   {
     "objectID": "slides-06-01.html#max-solution",
