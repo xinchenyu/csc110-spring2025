@@ -434,7 +434,7 @@
 <li>In Python <code>lists</code> are a data structure that is:
 <ul>
 <li>mutable (you can change the values in it)</li>
-<li>unordered/unsorted – you can have repeated elements in a list</li>
+<li>unordered – you can have repeated elements in a list</li>
 </ul></li>
 </ul>
 </section>
@@ -503,14 +503,8 @@
 </section>
 <section id="write-a-function" class="slide level2">
 <h2>Write a function</h2>
-<ol type="1">
-<li>Its name is <code>sum_all</code></li>
-<li>It takes a list of <code>numbers</code> as an argument</li>
-<li>It runs a loop that iterates through the values in <code>numbers</code> summing all values (HINT: you need to create a variable that will aggregate or accumulate the sum)</li>
-<li>It returns the sum of all values in <code>numbers</code><br>
-</li>
-<li>Use <code>while</code> (define an <code>index</code> before the loop, use index in the <code>while</code> condition, change the <code>index</code> inside the loop)</li>
-</ol>
+<p>Its name is <code>sum_all</code> that takes a list of <code>values</code> as an argument. It runs a loop that iterates through the number in <code>values</code> summing all numbers. It returns the sum of all numbers in <code>values</code>. HINT: a) create a variable that accumulate the sum and b) use <code>while</code>.</p>
+<p>Name your file <code>sum_list.py</code> and submit to Gradescope.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="cf">assert</span> sum_all([<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>]) <span class="op">==</span> <span class="dv">6</span></span>
 <span id="cb17-2"><a href="#cb17-2"></a><span class="cf">assert</span> sum_all([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>]) <span class="op">==</span> <span class="dv">5</span></span>
@@ -521,31 +515,25 @@
 <h2>Write a function – solution</h2>
 <p>Add test cases to the solution below:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a><span class="kw">def</span> sum_all(numbers):</span>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a><span class="kw">def</span> sum_all(values):</span>
 <span id="cb18-2"><a href="#cb18-2"></a>  total <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb18-3"><a href="#cb18-3"></a>  index <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb18-4"><a href="#cb18-4"></a>  <span class="cf">while</span> index <span class="op">&lt;</span> <span class="bu">len</span>(numbers):</span>
-<span id="cb18-5"><a href="#cb18-5"></a>    total <span class="op">+=</span> numbers[index]</span>
+<span id="cb18-4"><a href="#cb18-4"></a>  <span class="cf">while</span> index <span class="op">&lt;</span> <span class="bu">len</span>(values):</span>
+<span id="cb18-5"><a href="#cb18-5"></a>    total <span class="op">+=</span> values[index]</span>
 <span id="cb18-6"><a href="#cb18-6"></a>    index <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb18-7"><a href="#cb18-7"></a>    </span>
-<span id="cb18-8"><a href="#cb18-8"></a>  <span class="cf">return</span> total</span>
-<span id="cb18-9"><a href="#cb18-9"></a></span>
-<span id="cb18-10"><a href="#cb18-10"></a><span class="kw">def</span> main():</span>
-<span id="cb18-11"><a href="#cb18-11"></a>  <span class="cf">assert</span> sum_all([<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>]) <span class="op">==</span> <span class="dv">6</span></span>
-<span id="cb18-12"><a href="#cb18-12"></a>  <span class="cf">assert</span> sum_all([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>]) <span class="op">==</span> <span class="dv">5</span></span>
-<span id="cb18-13"><a href="#cb18-13"></a>  <span class="cf">assert</span> sum_all([]) <span class="op">==</span> <span class="dv">0</span></span>
-<span id="cb18-14"><a href="#cb18-14"></a>    </span>
-<span id="cb18-15"><a href="#cb18-15"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb18-7"><a href="#cb18-7"></a>  <span class="cf">return</span> total</span>
+<span id="cb18-8"><a href="#cb18-8"></a></span>
+<span id="cb18-9"><a href="#cb18-9"></a><span class="kw">def</span> main():</span>
+<span id="cb18-10"><a href="#cb18-10"></a>  <span class="cf">assert</span> sum_all([<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>]) <span class="op">==</span> <span class="dv">6</span></span>
+<span id="cb18-11"><a href="#cb18-11"></a>  <span class="cf">assert</span> sum_all([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>]) <span class="op">==</span> <span class="dv">5</span></span>
+<span id="cb18-12"><a href="#cb18-12"></a>  <span class="cf">assert</span> sum_all([]) <span class="op">==</span> <span class="dv">0</span></span>
+<span id="cb18-13"><a href="#cb18-13"></a>    </span>
+<span id="cb18-14"><a href="#cb18-14"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section>
-<section>
-<section id="submit-code-for-attendance" class="title-slide slide level1 center">
-<h1>Submit code for attendance</h1>
-<p>Submit your <code>sum_all</code> function to Gradescope for attendance.</p>
-<p>Name your file <code>sum_list.py</code></p>
 </section>
 <section id="loop-table" class="slide level2">
 <h2>Loop Table</h2>
+<p>We start with <code>index = 0</code> and <code>total = 0</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a>sum_all([<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -555,8 +543,8 @@
 <thead>
 <tr class="header">
 <th style="text-align: right;">index</th>
-<th style="text-align: left;">index &lt; len(numbers)</th>
-<th style="text-align: left;">numbers[index]</th>
+<th style="text-align: left;">index &lt; len(values)</th>
+<th style="text-align: left;">values[index]</th>
 <th style="text-align: left;">total</th>
 </tr>
 </thead>
@@ -604,6 +592,7 @@
 </section>
 <section id="loop-table-1" class="slide level2">
 <h2>Loop Table</h2>
+<p>Start with <code>index = 0</code> and <code>total = 0</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a>sum_all([<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -613,8 +602,8 @@
 <thead>
 <tr class="header">
 <th style="text-align: left;">index</th>
-<th style="text-align: left;">index &lt; len(numbers)</th>
-<th style="text-align: left;">numbers[index]</th>
+<th style="text-align: left;">index &lt; len(values)</th>
+<th style="text-align: left;">values[index]</th>
 <th style="text-align: left;">total</th>
 </tr>
 </thead>
@@ -723,24 +712,21 @@
 <div class="cell">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a><span class="kw">def</span> max3(x, y, z):</span>
 <span id="cb22-2"><a href="#cb22-2"></a>  <span class="bu">max</span> <span class="op">=</span> x <span class="co"># assume max is first number</span></span>
-<span id="cb22-3"><a href="#cb22-3"></a>  </span>
-<span id="cb22-4"><a href="#cb22-4"></a>  <span class="cf">if</span> y <span class="op">&gt;</span> <span class="bu">max</span>:</span>
-<span id="cb22-5"><a href="#cb22-5"></a>    <span class="bu">max</span> <span class="op">=</span> y <span class="co"># assumption is incorrect, assume y is max</span></span>
-<span id="cb22-6"><a href="#cb22-6"></a>    </span>
-<span id="cb22-7"><a href="#cb22-7"></a>  <span class="cf">if</span> z <span class="op">&gt;</span> <span class="bu">max</span>:</span>
-<span id="cb22-8"><a href="#cb22-8"></a>    <span class="bu">max</span> <span class="op">=</span> z <span class="co"># assumption is incorrect, z is max</span></span>
-<span id="cb22-9"><a href="#cb22-9"></a>    </span>
-<span id="cb22-10"><a href="#cb22-10"></a>  <span class="cf">return</span> <span class="bu">max</span></span>
-<span id="cb22-11"><a href="#cb22-11"></a></span>
-<span id="cb22-12"><a href="#cb22-12"></a><span class="kw">def</span> main():</span>
-<span id="cb22-13"><a href="#cb22-13"></a>  <span class="bu">print</span>( max3(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>) ) <span class="co"># 2</span></span>
-<span id="cb22-14"><a href="#cb22-14"></a>  </span>
-<span id="cb22-15"><a href="#cb22-15"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb22-3"><a href="#cb22-3"></a>  <span class="cf">if</span> y <span class="op">&gt;</span> <span class="bu">max</span>:</span>
+<span id="cb22-4"><a href="#cb22-4"></a>    <span class="bu">max</span> <span class="op">=</span> y <span class="co"># assumption is incorrect, assume y is max</span></span>
+<span id="cb22-5"><a href="#cb22-5"></a>  <span class="cf">if</span> z <span class="op">&gt;</span> <span class="bu">max</span>:</span>
+<span id="cb22-6"><a href="#cb22-6"></a>    <span class="bu">max</span> <span class="op">=</span> z <span class="co"># assumption is incorrect, z is max</span></span>
+<span id="cb22-7"><a href="#cb22-7"></a>  <span class="cf">return</span> <span class="bu">max</span></span>
+<span id="cb22-8"><a href="#cb22-8"></a></span>
+<span id="cb22-9"><a href="#cb22-9"></a><span class="kw">def</span> main():</span>
+<span id="cb22-10"><a href="#cb22-10"></a>  <span class="bu">print</span>( max3(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>) ) <span class="co"># 2</span></span>
+<span id="cb22-11"><a href="#cb22-11"></a>  </span>
+<span id="cb22-12"><a href="#cb22-12"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>2</code></pre>
 </div>
 </div>
-<p>Activity: adapt this function (<code>max_list</code>) to take a list of numbers instead of three numbers.</p>
+<p>Adapt this function (<code>max_list</code>) to take a list of numbers instead of three numbers (use <code>while</code>).</p>
 </section>
 <section id="max-of-list-solution" class="slide level2">
 <h2>Max of list – solution</h2>
