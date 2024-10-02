@@ -30,7 +30,7 @@ The final exam (pencil and paper format) for all sections will be on:
 
 -   `r schedule %>% filter(exam == "Final Exam" & term == "fall 2024") %>% pull(formatted_date)` -- `r schedule %>% filter(exam == "Final Exam" & term == "fall 2024") %>% pull(time)` 
 
-The final exam room is TBD.
+The final exam room is in  [S SCI 100](https://classrooms.registrar.arizona.edu/27/100).
 
 All assignments that are submitted on Gradescope are due at 9pm (Tuesdays for programming problems, short projects and Thursdays for programming projects).
 

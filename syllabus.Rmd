@@ -3,7 +3,7 @@ title: "Syllabus"
 author: "Xinchen Yu (she/her/hers)"
 date: "Fall 2024"
 output:
-  pdf_document: default
+  html_document: default
 subtitle: CSc 110 Computer Programming I
 ---
 
@@ -185,7 +185,7 @@ The final exam will be on:
 
 You must keep this time available. Do not schedule any flights, travel plans, or other conflicts with these exams.
 
-Common final exam room will be announced during the semester.
+Common final exam room in [S SCI 100](https://classrooms.registrar.arizona.edu/27/100).
 
 See also Final Exam Regulations and Schedule: <https://registrar.arizona.edu/finals>
 
