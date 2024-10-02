@@ -3040,7 +3040,7 @@ vertical-align: -.125em;
 
 <section id="move-items-in-list" class="level1">
 <h1>Move items in list</h1>
-<p>In this short programming project you will be writing a function that takes a list, and index, and a direction (<code>&quot;left&quot;</code> or <code>&quot;right&quot;</code>) as arguments. The goal of the function is to move the item at index to the provided direction skipping over all zeros and taking the place of another item that is not zero.</p>
+<p>In this short programming project you will be writing a function that takes a list, and index, and a direction (<code>&quot;left&quot;</code> or <code>&quot;right&quot;</code>) as arguments. The goal of the function is to move the item at index to the provided direction skipping over all zeros and taking the place of another item that is not zero. If reaching the end (either left or right end) and all of the items are zero, take place of the last item.</p>
 <p>Name the program <code>move_item.py</code>. Make sure that gradescope gives you the points for passing the test cases.</p>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
@@ -3057,7 +3057,8 @@ vertical-align: -.125em;
 <pre>[&#39;a&#39;, 0, 0, 0, &#39;b&#39;, 0, 0]
 </pre>
 <div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( move_item(original_list, <span class="dv">4</span>, <span class="st">&quot;right&quot;</span>) ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># call the function again</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( move_item(original_list, <span class="dv">4</span>, <span class="st">&quot;right&quot;</span>) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre>[&#39;a&#39;, 0, 0, 0, 0, 0, &#39;b&#39;]
 </pre>

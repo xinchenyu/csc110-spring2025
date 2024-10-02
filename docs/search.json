@@ -816,7 +816,7 @@
     "href": "short-projects.html",
     "title": "Short Projects Dates and Instructions",
     "section": "",
-    "text": "Short programming projects are due on the same day as programming problems. While the instructions for programming problems are on the website, instructions for short projects will be available only during our weekly 50-minute in-person lab sessions.\nThe lowest grade for short programming projects will be dropped at the end of the semester. There will be two lab sessions (the weeks of October 15 and November 13) for you to work on a maximum of two short programming project submissions you have missed.\nTo schedule your lab session go to the weekly lab session spreadsheet.\n\nLab Schedule\nThis is for information only. You need to sign up for a specific lab session to be able to attend it.\n\nLab 01: September 3 to September 9 (slides)\nLab 02: September 10 to September 16 (slides)\nLab 03: September 17 to September 23 (slides)\nLab 04: September 24 to September 30 (slides)\nLab 05: October 01 to October 07\nLab 06: October 08 to October 14\nCATCH UP WEEK: October 15 to October 21\nLab 07: October 22 to October 28\nLab 08: October 29 to November 04\nLab 09: November 05 to November 12\nCATCH UP WEEK: November 13 to November 19\nLab 10: November 20 to November 26\nLab 11: December 02 to December 06"
+    "text": "Short programming projects are due on the same day as programming problems. While the instructions for programming problems are on the website, instructions for short projects will be available only during our weekly 50-minute in-person lab sessions.\nThe lowest grade for short programming projects will be dropped at the end of the semester. There will be two lab sessions (the weeks of October 15 and November 13) for you to work on a maximum of two short programming project submissions you have missed.\nTo schedule your lab session go to the weekly lab session spreadsheet.\n\nLab Schedule\nThis is for information only. You need to sign up for a specific lab session to be able to attend it.\n\nLab 01: September 3 to September 9 (slides)\nLab 02: September 10 to September 16 (slides)\nLab 03: September 17 to September 23 (slides)\nLab 04: September 24 to September 30 (slides)\nLab 05: October 01 to October 07 (slides)\nLab 06: October 08 to October 14\nCATCH UP WEEK: October 15 to October 21\nLab 07: October 22 to October 28\nLab 08: October 29 to November 04\nLab 09: November 05 to November 12\nCATCH UP WEEK: November 13 to November 19\nLab 10: November 20 to November 26\nLab 11: December 02 to December 06"
   },
   {
     "objectID": "short-projects.html#lab-01",
@@ -1026,7 +1026,7 @@
     "href": "exam-instructions.html#exam-instructions",
     "title": "Exam Instructions",
     "section": "Exam Instructions",
-    "text": "Exam Instructions\nThis exam starts at 6:00pm and it ends at 8:00pm\nNo breaks during the exam. Use the restroom now.\n\nHave your photo ID handy\nPut away phones, laptops, calculators, smart watches, etc. Please remove headphones/earbuds and either turn hats or remove."
+    "text": "Exam Instructions\n1PM Section: exam starts at 1:00pm and ends at 1:50pm\n2PM Section: exam starts at 2:00pm and ends at 2:50pm\nNo breaks during the exam. Use the restroom now.\n\nHave your photo ID handy\nPut away earbuds, headphones, phones, laptops, calculators, smart watches, etc."
   },
   {
     "objectID": "assignments-12.html",
@@ -5927,5 +5927,19 @@
     "title": "while loop aggregation (class slides)",
     "section": "Announcement",
     "text": "Announcement\nReview session next Tuesday, October 1, starting at 5pm.\n\nLocation: Gittings 129b (same as lecture room)."
+  },
+  {
+    "objectID": "exam-instructions.html#exam-instructions-1",
+    "href": "exam-instructions.html#exam-instructions-1",
+    "title": "Exam Instructions",
+    "section": "Exam Instructions",
+    "text": "Exam Instructions\n\n\ncurrent time\n\n\n\n\n\n\nThis exam starts at 1:00pm and it ends at 1:50pm\nNo breaks during the exam.\n\nYou are only allowed to use functions and methods covered in the class materials. No need to write comments.\nWrite with a blue or black pen, or pencil. If you have a question, please raise your hand.\nRaise your hand when you are done, a TA will check your ID."
+  },
+  {
+    "objectID": "exam-instructions.html#exam-instructions-2",
+    "href": "exam-instructions.html#exam-instructions-2",
+    "title": "Exam Instructions",
+    "section": "Exam Instructions",
+    "text": "Exam Instructions\nThis exam starts at 1:00pm and it ends at 1:50pm\nNo breaks during the exam. Use the restroom now.\n\nHave your photo ID handy\nPut away earbuds, headphones, phones, laptops, calculators, smart watches, etc."
   }
 ]

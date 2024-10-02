@@ -8,19 +8,24 @@ format: revealjs
 <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
 </center>
 
-This exam starts at 6:00pm and it ends at 8:00pm
+1PM Section: exam starts at 1:00pm and ends at 1:50pm
+
+2PM Section: exam starts at 2:00pm and ends at 2:50pm
 
 <font color="red">No breaks during the exam.</font>
 
-* You are only allowed to use functions and methods covered in the class materials
+* You are only allowed to use functions and methods covered in the class materials. No need to write comments.
 * Write with a blue or black pen, or pencil. If you have a question, please raise your hand.
-* Raise your hand when you are done, a TA will check your ID and add their initials to the your exam cover.
+* Raise your hand when you are done, a TA will check your ID. 
 
 ## Exam Instructions
 
-This exam starts at 6:00pm and it ends at 8:00pm
+1PM Section: exam starts at 1:00pm and ends at 1:50pm
+
+2PM Section: exam starts at 2:00pm and ends at 2:50pm
 
 <font color="red">No breaks during the exam. Use the restroom now.</font>
 
 * Have your photo ID handy
-* Put away phones, laptops, calculators, smart watches, etc. Please remove headphones/earbuds and either turn hats or remove.
+* Put away earbuds, headphones, phones, laptops, calculators, smart watches, etc. 
+
