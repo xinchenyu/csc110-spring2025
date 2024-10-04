@@ -400,6 +400,17 @@
 <h1>CSC 110 – Generating Random Numbers and Other Important Functions and Methods</h1>
 
 </section>
+<section id="announcement" class="slide level2">
+<h2>Announcement</h2>
+<ul>
+<li>Check gradescope for grades</li>
+<li>Lecture next Friday, Oct 11 will be on Zoom.
+<ul>
+<li>You can also come here and watch the recording so that TAs can help</li>
+<li>Attendance window will be 9am - 9pm</li>
+</ul></li>
+</ul>
+</section>
 <section id="random-module" class="slide level2">
 <h2>random module</h2>
 <p>We need to <code>import</code> the module <code>random</code></p>
@@ -407,14 +418,16 @@
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> random</span>
 <span id="cb1-2"><a href="#cb1-2"></a></span>
-<span id="cb1-3"><a href="#cb1-3"></a>n <span class="op">=</span> random.random()</span>
+<span id="cb1-3"><a href="#cb1-3"></a>n <span class="op">=</span> random.random() <span class="co">#returns a random float between 0 and 1</span></span>
 <span id="cb1-4"><a href="#cb1-4"></a><span class="bu">print</span>(n)</span>
 <span id="cb1-5"><a href="#cb1-5"></a></span>
-<span id="cb1-6"><a href="#cb1-6"></a>n <span class="op">=</span> random.randint(<span class="dv">0</span>, <span class="dv">9</span>)</span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="bu">print</span>(n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-6"><a href="#cb1-6"></a>n <span class="op">=</span> random.randint(<span class="dv">0</span>, <span class="dv">9</span>) <span class="co">#returns a random integer betweem 0 and 9.</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a></span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="bu">print</span>(n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>0.49707204107132374
-2</code></pre>
+<pre><code>0.10770023493843905
+0</code></pre>
 </div>
 </div>
 </section>
@@ -443,7 +456,7 @@
 <span id="cb4-8"><a href="#cb4-8"></a>  winner <span class="op">=</span> pick_winner([<span class="st">"Peter"</span>, <span class="st">"Joan"</span>, <span class="st">"Mary"</span>, <span class="st">"June"</span>])</span>
 <span id="cb4-9"><a href="#cb4-9"></a>  <span class="bu">print</span>(winner)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Mary</code></pre>
+<pre><code>June</code></pre>
 </div>
 </div>
 </section>

@@ -329,6 +329,13 @@ data.frame(index = c(1:4),
 -   What about empty lists?
 -   How to get the min instead?
 
+```{python}
+#| eval: false
+#| echo: true
+assert max_list([]) == None
+assert max_list([2, 1, 3, 1]) == 3
+```
+
 ## Max solution - empty lists
 
 ```{python}
@@ -353,10 +360,12 @@ main()
 
 ## Write a function
 
-1. Its name is `double`
-1. It takes a list of numeric variables as argument
-1. It iterates over the list (use `while`) doubling (multiplying by two) each value in the list
-1. It returns the modified list
+Its name is `double` that takes a list of numeric variables as argument.
+It iterates over the list (use `while`) doubling (multiplying by two) each value in the list.
+It returns the modified list.
+
+Name your file `double.py` and submit it to gradescope.
+
 
 ```{python}
 #| eval: false
@@ -386,10 +395,6 @@ def main():
   
 main()
 ```
-
-## Submit attendance
-
-Name your file `double.py` and submit it to gradescope.
 
 
 ## Slicing lists

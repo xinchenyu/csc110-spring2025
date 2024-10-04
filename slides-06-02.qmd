@@ -7,6 +7,12 @@ df-print: kable
 
 # CSC 110 -- Generating Random Numbers and Other Important Functions and Methods
 
+## Announcement
+
+* Check gradescope for grades
+* Lecture next Friday, Oct 11 will be on Zoom.
+  * You can also come here and watch the recording so that TAs can help
+  * Attendance window will be 9am - 9pm 
 
 ## random module
 
@@ -18,10 +24,12 @@ What do the functions `.random()` and `.randint()` return?
 #| echo: true
 import random
 
-n = random.random()
+n = random.random() #returns a random float between 0 and 1
 print(n)
 
-n = random.randint(0, 9)
+n = random.randint(0, 9) #returns a random integer betweem 0 and 9.
+
+
 print(n)
 ```
 
