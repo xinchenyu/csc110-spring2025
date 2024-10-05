@@ -2391,42 +2391,42 @@
     "href": "slides-07-01.html#write-a-function-solution-1",
     "title": "mutability (class slides)",
     "section": "Write a function – solution 1",
-    "text": "Write a function – solution 1\n\ndef make_all_even(integers):\n  index = 0\n  while index &lt; len(integers):\n    if integers[index] % 2 == 1:\n      integers[index] += 1\n    index += 1\n  return integers\n      \ndef main():\n  test_integers = [1, 2, 3, 4]\n  assert make_all_even(test_integers) == test_integers\n  assert test_integers == [2, 2, 4, 4]\n  print(test_integers) # we print the list we created before function call\n  \nmain()\n\n[2, 2, 4, 4]\n\n\nLet’s visualize this on Python Tutor"
+    "text": "Write a function – solution 1\n\ndef make_all_even(integers):\n  index = 0\n  while index &lt; len(integers):\n    if integers[index] % 2 == 1:\n      integers[index] += 1\n    index += 1\n  return integers\n      \ndef main():\n  test_integers = [1, 2, 3, 4]\n  make_all_even(test_integers)\n  assert test_integers == [2, 2, 4, 4]\n  \nmain()\n\nLet’s visualize this on Python Tutor"
   },
   {
     "objectID": "slides-07-01.html#write-a-function-solution-2",
     "href": "slides-07-01.html#write-a-function-solution-2",
     "title": "mutability (class slides)",
     "section": "Write a function – solution 2",
-    "text": "Write a function – solution 2\n\ndef make_all_even(integers):\n  index = 0\n  while index &lt; len(integers):\n    integers[index] += integers[index] % 2\n    index += 1\n  return integers\n      \ndef main():\n  test_integers = [1, 2, 3, 4]\n  assert make_all_even(test_integers) == test_integers\n  assert test_integers == [2, 2, 4, 4]\n  print(test_integers) # we print the list we created before function call\n  \nmain()\n\n[2, 2, 4, 4]"
+    "text": "Write a function – solution 2\n\ndef make_all_even(integers):\n  index = 0\n  while index &lt; len(integers):\n    integers[index] += integers[index] % 2\n    index += 1\n  return integers\n      \ndef main():\n  test_integers = [1, 2, 3, 4]\n  make_all_even(test_integers)\n  assert test_integers == [2, 2, 4, 4]\n  \nmain()"
   },
   {
     "objectID": "slides-07-01.html#object-references",
     "href": "slides-07-01.html#object-references",
     "title": "mutability (class slides)",
     "section": "Object References",
-    "text": "Object References\n\nA variable doesn’t store values, it stores a reference to an object that lives in your computer memory (RAM)\nThe same variable name can be pointed to a different object\nA variable name can point to an object that is already referenced by another variable"
+    "text": "Object References\n\nA variable doesn’t store values, it stores a reference to an object that lives in your computer memory (RAM)\nThe same variable name can be pointed to a different object\n\n\ntitle = \"Dr.\"\ntitle = \"Ms.\"\n\n\nA variable name can point to an object that is already referenced by another variable\n\n\nlast_name = \"Brown\"\nname = last_name"
   },
   {
     "objectID": "slides-07-01.html#examples",
     "href": "slides-07-01.html#examples",
     "title": "mutability (class slides)",
     "section": "Examples",
-    "text": "Examples\nStrings are not mutable\n\ntitle = \"Dr.\"\nlast_name = \"Brown\"\nprint(title + \" \" + last_name)\n\ntitle = \"Ms.\"\nprint(title + \" \" + last_name)\n\nname = last_name\nlast_name = \"Silva\" # last_name points to a different object\nprint(title + \" \" + name)\n\nDr. Brown\nMs. Brown\nMs. Brown\n\n\nVisualize these examples in Python Tutor"
+    "text": "Examples\nStrings are not mutable\n\ntitle = \"Dr.\"\nlast_name = \"Brown\"\nprint(title + \" \" + last_name)\n\ntitle = \"Ms.\"\nprint(title + \" \" + last_name)\n\nname = last_name # both point to the same object\nlast_name = \"Silva\" # a new object created, last_name point to the new object\nprint(title + \" \" + name) # name still point to the original string\n\nDr. Brown\nMs. Brown\nMs. Brown\n\n\nVisualize these examples in Python Tutor"
   },
   {
     "objectID": "slides-07-01.html#examples-1",
     "href": "slides-07-01.html#examples-1",
     "title": "mutability (class slides)",
     "section": "Examples",
-    "text": "Examples\nLists are mutable\n\nnames = [\"Dr.\", \"Brown\"]\nprint(names[0] + \" \" + names[1])\n\nnames[0] = \"Ms.\"\nprint(names[0] + \" \" + names[1])\n\nnames_copy = names\nnames[1] = \"Silva\"\nprint(names_copy[0] + \" \" + names_copy[1])\n\nDr. Brown\nMs. Brown\nMs. Silva\n\n\nVisualize these examples in Python Tutor"
+    "text": "Examples\nLists are mutable\n\nnames = [\"Dr.\", \"Brown\"]\nprint(names[0] + \" \" + names[1])\n\nnames[0] = \"Ms.\"\nprint(names[0] + \" \" + names[1])\n\nnames_copy = names # both point to the same object\nnames[1] = \"Silva\" # the object been mutated, no new object created\nprint(names_copy[0] + \" \" + names_copy[1]) # both name and name_copy point to the mutated object\n\nDr. Brown\nMs. Brown\nMs. Silva\n\n\nVisualize these examples in Python Tutor"
   },
   {
     "objectID": "slides-07-01.html#another-example",
     "href": "slides-07-01.html#another-example",
     "title": "mutability (class slides)",
     "section": "Another example",
-    "text": "Another example\n\nnumbers = [50, 30, 80]\nsame_numbers = numbers\nsame_numbers[1] = 40\nnumbers = \"look, numbers!\"\nsame_numbers = numbers\n\nVisualize these examples in Python Tutor"
+    "text": "Another example\n\nnumbers = [50, 30, 80]\nsame_numbers = numbers\nsame_numbers[1] = 3000\nnumbers = \"look, numbers\"\nsame_numbers = numbers\nsame_numbers += \"!\"\n\nVisualize these examples in Python Tutor"
   },
   {
     "objectID": "slides-07-01.html#object-references-1",
@@ -2440,7 +2440,7 @@
     "href": "slides-07-01.html#object-references-2",
     "title": "mutability (class slides)",
     "section": "Object references",
-    "text": "Object references\n\nWhen you assign a value to a new variable, one of two things could happen\n\nIf you assign it to an existing object, the variable references that object\nIf you assign it to a new object, the object is created, placed in memory, and then the variable references it"
+    "text": "Object references\n\nIf you assign a value to an existing object, the variable references that object\n\n\nlast_name = \"Brown\"\nname = last_name\n\n\nIf you assign it to a new object, the object is created, placed in memory, and then the variable references it\n\n\ntitle = \"Dr.\"\ntitle = \"Ms.\" # \"Dr.\" object will be removed from memory\n\n\nWhen there’s no variable pointing to an object anymore, that object is removed from memory by Python’s Garbage Collector (so you don’t have to worry about memory leaks)"
   },
   {
     "objectID": "slides-07-01.html#garbage-collection",

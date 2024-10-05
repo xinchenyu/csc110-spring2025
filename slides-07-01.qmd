@@ -7,13 +7,6 @@ df-print: kable
 
 # CSc 110 - Mutability
 
-## Announcements
-
-* Academic integrity 
-* Extra 0.5 point - meet with TAs to go through the questions where you got wrong in midterm 1 by next Friday.
-* TAs of your section will reach out to you this week.
-
-
 ## Lists vs strings
 
 -   Lists are **mutable**
@@ -76,9 +69,8 @@ def make_all_even(integers):
       
 def main():
   test_integers = [1, 2, 3, 4]
-  assert make_all_even(test_integers) == test_integers
+  make_all_even(test_integers)
   assert test_integers == [2, 2, 4, 4]
-  print(test_integers) # we print the list we created before function call
   
 main()
 ```
@@ -99,9 +91,8 @@ def make_all_even(integers):
       
 def main():
   test_integers = [1, 2, 3, 4]
-  assert make_all_even(test_integers) == test_integers
+  make_all_even(test_integers)
   assert test_integers == [2, 2, 4, 4]
-  print(test_integers) # we print the list we created before function call
   
 main()
 ```
@@ -110,7 +101,22 @@ main()
 
 -   A variable doesn't store values, it stores a reference to an object that lives in your computer memory (RAM)
 -   The same variable name can be pointed to a different object
+
+```{python}
+#| eval: true
+#| echo: true
+title = "Dr."
+title = "Ms."
+```
+
 -   A variable name can point to an object that is already referenced by another variable
+
+```{python}
+#| eval: true
+#| echo: true
+last_name = "Brown"
+name = last_name
+```
 
 ## Examples
 
@@ -126,9 +132,9 @@ print(title + " " + last_name)
 title = "Ms."
 print(title + " " + last_name)
 
-name = last_name
-last_name = "Silva" # last_name points to a different object
-print(title + " " + name)
+name = last_name # both point to the same object
+last_name = "Silva" # a new object created, last_name point to the new object
+print(title + " " + name) # name still point to the original string
 ```
 
 Visualize these examples in [Python Tutor](https://pythontutor.com/visualize.html#mode=display)
@@ -146,9 +152,9 @@ print(names[0] + " " + names[1])
 names[0] = "Ms."
 print(names[0] + " " + names[1])
 
-names_copy = names
-names[1] = "Silva"
-print(names_copy[0] + " " + names_copy[1])
+names_copy = names # both point to the same object
+names[1] = "Silva" # the object been mutated, no new object created
+print(names_copy[0] + " " + names_copy[1]) # both name and name_copy point to the mutated object
 ```
 
 Visualize these examples in [Python Tutor](https://pythontutor.com/visualize.html#mode=display)
@@ -160,9 +166,10 @@ Visualize these examples in [Python Tutor](https://pythontutor.com/visualize.htm
 #| echo: true
 numbers = [50, 30, 80]
 same_numbers = numbers
-same_numbers[1] = 40
-numbers = "look, numbers!"
+same_numbers[1] = 3000
+numbers = "look, numbers"
 same_numbers = numbers
+same_numbers += "!"
 ```
 
 Visualize these examples in [Python Tutor](https://pythontutor.com/visualize.html#mode=display)
@@ -175,11 +182,22 @@ Visualize these examples in [Python Tutor](https://pythontutor.com/visualize.htm
 
 ## Object references
 
--   When you assign a value to a new variable, one of two things could happen
-    -   If you assign it to an existing object, the variable references that object
-    -   If you assign it to a new object, the object is created, placed in memory, and then the variable references it
-
-## Garbage Collection
+-   If you assign a value to an existing object, the variable references that object
+```{python}
+#| eval: true
+#| echo: true
+last_name = "Brown"
+name = last_name
+```
+   
+-   If you assign it to a new object, the object is created, placed in memory, and then the variable references it
+    
+```{python}
+#| eval: true
+#| echo: true
+title = "Dr."
+title = "Ms." # "Dr." object will be removed from memory
+```
 
 -   When there's no variable pointing to an object anymore, that object is removed from memory by Python's Garbage Collector (so you don't have to worry about memory leaks)
 
@@ -364,17 +382,3 @@ def main():
 main()
 ```
 
-## Quiz 03
-
-<center>
-<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
-<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
-</center>
-
-You have 15 minutes to complete. There are 2 problems.
-
--   No need for comments and a `main.py`
--   Just write your function
--   DO NOT USE NESTED CONDITIONALS
-
-Built-in functions you can choose to use: `round()`, `input()`, `float()`, `str()`, `int()`
