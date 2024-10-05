@@ -426,8 +426,8 @@
 <span id="cb1-8"><a href="#cb1-8"></a></span>
 <span id="cb1-9"><a href="#cb1-9"></a><span class="bu">print</span>(n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>0.10770023493843905
-0</code></pre>
+<pre><code>0.14970553746845094
+1</code></pre>
 </div>
 </div>
 </section>
@@ -456,7 +456,7 @@
 <span id="cb4-8"><a href="#cb4-8"></a>  winner <span class="op">=</span> pick_winner([<span class="st">"Peter"</span>, <span class="st">"Joan"</span>, <span class="st">"Mary"</span>, <span class="st">"June"</span>])</span>
 <span id="cb4-9"><a href="#cb4-9"></a>  <span class="bu">print</span>(winner)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>June</code></pre>
+<pre><code>Peter</code></pre>
 </div>
 </div>
 </section>
@@ -468,11 +468,11 @@
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> random</span>
 <span id="cb6-2"><a href="#cb6-2"></a></span>
 <span id="cb6-3"><a href="#cb6-3"></a><span class="kw">def</span> pick_winner(names):</span>
-<span id="cb6-4"><a href="#cb6-4"></a>  index <span class="op">=</span> random.randint(<span class="dv">0</span>, <span class="bu">len</span>(names) <span class="op">-</span> <span class="dv">1</span>)</span>
-<span id="cb6-5"><a href="#cb6-5"></a>  <span class="cf">return</span> names[index]</span>
-<span id="cb6-6"><a href="#cb6-6"></a></span>
-<span id="cb6-7"><a href="#cb6-7"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
-<span id="cb6-8"><a href="#cb6-8"></a>  random.seed(<span class="dv">123</span>)</span>
+<span id="cb6-4"><a href="#cb6-4"></a>  random.seed(<span class="dv">123</span>)</span>
+<span id="cb6-5"><a href="#cb6-5"></a>  index <span class="op">=</span> random.randint(<span class="dv">0</span>, <span class="bu">len</span>(names) <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb6-6"><a href="#cb6-6"></a>  <span class="cf">return</span> names[index]</span>
+<span id="cb6-7"><a href="#cb6-7"></a></span>
+<span id="cb6-8"><a href="#cb6-8"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
 <span id="cb6-9"><a href="#cb6-9"></a>  winner <span class="op">=</span> pick_winner([<span class="st">"Peter"</span>, <span class="st">"Joan"</span>, <span class="st">"Mary"</span>, <span class="st">"June"</span>])</span>
 <span id="cb6-10"><a href="#cb6-10"></a>  <span class="bu">print</span>(winner)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -480,28 +480,41 @@
 </div>
 </div>
 </section>
-<section id="changing-a-list-with-random-numbers" class="slide level2">
-<h2>Changing a list with random numbers</h2>
-<p>Write a function that takes as argument a list of integers. Iterate over each list element (with a <code>while</code> loop), replacing each integer with a random number between zero and the original integer.</p>
-<p>Test case:</p>
+<section id="write-a-function-1" class="slide level2">
+<h2>Write a function</h2>
+<p>Write a function <code>random_list</code> that takes as argument a list of <code>numbers</code>. Iterate over each list element (with a <code>while</code> loop), replacing each integer with a random number between zero and the original number. Set the seed as <code>123</code> in your function.</p>
+<p>Name your file <code>random_list.py</code> and submit to Gradescope.</p>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># test case</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="cf">assert</span> random_list([<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>]) <span class="op">==</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-a-function-solution-1" class="slide level2">
+<h2>Write a function – solution</h2>
 <div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>numbers <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>]</span>
-<span id="cb8-2"><a href="#cb8-2"></a>numbers <span class="op">=</span> random_list(numbers)</span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="bu">print</span>(numbers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">import</span> random</span>
+<span id="cb9-2"><a href="#cb9-2"></a></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="kw">def</span> random_list(numbers):</span>
+<span id="cb9-4"><a href="#cb9-4"></a>  random.seed(<span class="dv">123</span>)</span>
+<span id="cb9-5"><a href="#cb9-5"></a>  index <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a>  <span class="cf">while</span> index <span class="op">&lt;</span> <span class="bu">len</span>(numbers):</span>
+<span id="cb9-7"><a href="#cb9-7"></a>    item <span class="op">=</span> numbers[index]</span>
+<span id="cb9-8"><a href="#cb9-8"></a>    numbers[index] <span class="op">=</span> random.randint(<span class="dv">0</span>, item)</span>
+<span id="cb9-9"><a href="#cb9-9"></a>    index <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb9-10"><a href="#cb9-10"></a>  <span class="cf">return</span> numbers</span>
+<span id="cb9-11"><a href="#cb9-11"></a></span>
+<span id="cb9-12"><a href="#cb9-12"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb9-13"><a href="#cb9-13"></a>  <span class="cf">assert</span> random_list([<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>]) <span class="op">==</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">2</span>]</span>
+<span id="cb9-14"><a href="#cb9-14"></a>  <span class="bu">print</span>(<span class="st">"pass the test"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[0, 1, 0, 3, 2]</code></pre>
+<pre><code>pass the test</code></pre>
 </div>
 </div>
-</section></section>
-<section id="submit-for-gradescope-attendance" class="title-slide slide level1 center">
-<h1>Submit for gradescope attendance</h1>
-<p>Submit your <code>random_list</code> to gradescope.</p>
-<p>Name your file <code>random_list.py</code> and remember to set a seed.</p>
 
 <div class="footer footer-default">
 
 </div>
-</section>
+</section></section>
     </div>
   </div>
 

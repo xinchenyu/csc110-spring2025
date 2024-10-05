@@ -74,49 +74,46 @@ To get always the same result (for autograding purposes, for example) we can set
 import random
 
 def pick_winner(names):
+  random.seed(123)
   index = random.randint(0, len(names) - 1)
   return names[index]
 
 if __name__ == "__main__":
-  random.seed(123)
   winner = pick_winner(["Peter", "Joan", "Mary", "June"])
   print(winner)
 ```
 
 
-## Changing a list with random numbers
+## Write a function
 
-Write a function that takes as argument a list of integers. Iterate over each list element (with a `while` loop), replacing each integer with a random number between zero and the original integer.
+Write a function `random_list` that takes as argument a list of `numbers`. Iterate over each list element (with a `while` loop), replacing each integer with a random number between zero and the original number. Set the seed as `123` in your function.
 
-Test case:
+Name your file `random_list.py` and submit to Gradescope.
 
 ```{python}
-#| eval: true
-#| echo: false
-import random
-random.seed(123)
-
-def random_list(original_list):
-  index = 0
-  while index < len(original_list):
-    item = original_list[index]
-    original_list[index] = random.randint(0, item)
-    index += 1
-  return original_list
-  
+#| eval: false
+#| echo: true
+# test case
+assert random_list([3, 2, 1, 3, 5]) == [0, 1, 0, 3, 2]
 ```
 
+## Write a function -- solution
 
 ```{python}
 #| eval: true
 #| echo: true
-numbers = [3, 2, 1, 3, 5]
-numbers = random_list(numbers)
-print(numbers)
+import random
+
+def random_list(numbers):
+  random.seed(123)
+  index = 0
+  while index < len(numbers):
+    item = numbers[index]
+    numbers[index] = random.randint(0, item)
+    index += 1
+  return numbers
+
+if __name__ == "__main__":
+  assert random_list([3, 2, 1, 3, 5]) == [0, 1, 0, 3, 2]
+  print("pass the test")
 ```
-
-# Submit for gradescope attendance
-
-Submit your `random_list` to gradescope.
-
-Name your file `random_list.py` and remember to set a seed.

@@ -4925,7 +4925,7 @@
     "href": "slides-06-02.html#random-module",
     "title": "random (class slides)",
     "section": "random module",
-    "text": "random module\nWe need to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random() #returns a random float between 0 and 1\nprint(n)\n\nn = random.randint(0, 9) #returns a random integer betweem 0 and 9.\n\n\nprint(n)\n\n0.10770023493843905\n0"
+    "text": "random module\nWe need to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random() #returns a random float between 0 and 1\nprint(n)\n\nn = random.randint(0, 9) #returns a random integer betweem 0 and 9.\n\n\nprint(n)\n\n0.14970553746845094\n1"
   },
   {
     "objectID": "slides-06-02.html#write-a-function",
@@ -4939,21 +4939,21 @@
     "href": "slides-06-02.html#write-a-function-solution",
     "title": "random (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nJune"
+    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nPeter"
   },
   {
     "objectID": "slides-06-02.html#setting-a-seed",
     "href": "slides-06-02.html#setting-a-seed",
     "title": "random (class slides)",
     "section": "Setting a seed",
-    "text": "Setting a seed\nWhat happens when you run pick_winner multiple times?\nTo get always the same result (for autograding purposes, for example) we can set a seed.\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  random.seed(123)\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nPeter"
+    "text": "Setting a seed\nWhat happens when you run pick_winner multiple times?\nTo get always the same result (for autograding purposes, for example) we can set a seed.\n\nimport random\n\ndef pick_winner(names):\n  random.seed(123)\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nPeter"
   },
   {
     "objectID": "slides-06-02.html#changing-a-list-with-random-numbers",
     "href": "slides-06-02.html#changing-a-list-with-random-numbers",
     "title": "random (class slides)",
     "section": "Changing a list with random numbers",
-    "text": "Changing a list with random numbers\nWrite a function that takes as argument a list of integers. Iterate over each list element (with a while loop), replacing each integer with a random number between zero and the original integer.\nTest case:\n\nnumbers = [3, 2, 1, 3, 5]\nnumbers = random_list(numbers)\nprint(numbers)\n\n[0, 1, 0, 3, 2]"
+    "text": "Changing a list with random numbers\nWrite a function random_list that takes as argument a list of numbers. Iterate over each list element (with a while loop), replacing each integer with a random number between zero and the original number. Set the seed as 123 in your function.\nName your file random_list.py and submit to Gradescope.\n\nnumbers = [3, 2, 1, 3, 5]\nnumbers = random_list(numbers)\nprint(numbers)"
   },
   {
     "objectID": "slides-14-02-old.html#tuples-as-dictionary-keys",
@@ -5549,5 +5549,26 @@
     "title": "random (class slides)",
     "section": "Announcement",
     "text": "Announcement\n\nCheck gradescope for grades\nLecture next Friday, Oct 11 will be on Zoom.\n\nYou can also come here and watch the recording so that TAs can help\nAttendance window will be 9am - 9pm"
+  },
+  {
+    "objectID": "slides-06-02.html#changing-a-list-with-random-numbers-solution",
+    "href": "slides-06-02.html#changing-a-list-with-random-numbers-solution",
+    "title": "random (class slides)",
+    "section": "Changing a list with random numbers – solution",
+    "text": "Changing a list with random numbers – solution\n\nimport random\nrandom.seed(123)\n\ndef random_list(numbers):\n  index = 0\n  while index &lt; len(numbers):\n    item = numbers[index]\n    numbers[index] = random.randint(0, item)\n    index += 1\n  return numbers"
+  },
+  {
+    "objectID": "slides-06-02.html#write-a-function-1",
+    "href": "slides-06-02.html#write-a-function-1",
+    "title": "random (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\nWrite a function random_list that takes as argument a list of numbers. Iterate over each list element (with a while loop), replacing each integer with a random number between zero and the original number. Set the seed as 123 in your function.\nName your file random_list.py and submit to Gradescope.\n\n# test case\nassert random_list([3, 2, 1, 3, 5]) == [0, 1, 0, 3, 2]"
+  },
+  {
+    "objectID": "slides-06-02.html#write-a-function-solution-1",
+    "href": "slides-06-02.html#write-a-function-solution-1",
+    "title": "random (class slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\n\nimport random\n\ndef random_list(numbers):\n  random.seed(123)\n  index = 0\n  while index &lt; len(numbers):\n    item = numbers[index]\n    numbers[index] = random.randint(0, item)\n    index += 1\n  return numbers\n\nif __name__ == \"__main__\":\n  assert random_list([3, 2, 1, 3, 5]) == [0, 1, 0, 3, 2]\n  print(\"pass the test\")\n\npass the test"
   }
 ]
