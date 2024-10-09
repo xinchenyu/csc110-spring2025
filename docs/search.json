@@ -2608,7 +2608,7 @@
     "href": "slides-07-02.html#while-vs.-for-loops",
     "title": "for loops with range (class slides)",
     "section": "while vs. for loops",
-    "text": "while vs. for loops\nIn addition to while, we can use for to create loops\n\nvalues = [70, 20, 30]\nindex = 0\nwhile index &lt; len(values):\n  print(values[index])\n  index += 1\n\n70\n20\n30\n\n\n\nvalues = [70, 20, 30]\nfor index in range(len(values)):\n  print(values[index])\n\n70\n20\n30"
+    "text": "while vs. for loops\nIn addition to while, we can use for to create loops\n\nindex = 0\nwhile index &lt; 3:\n  print(index)\n  index += 1\n\n0\n1\n2\n\n\n\nfor index in range(3):\n  print(index)\n\n0\n1\n2"
   },
   {
     "objectID": "slides-07-02.html#write-a-function",
@@ -2629,7 +2629,7 @@
     "href": "slides-07-02.html#write-a-function-1",
     "title": "for loops with range (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is indices_of_vowels\nIt takes a single string as its parameter.\nIt returns a list of integers that represent the indices of the vowels in the original list\nUse a for loop\n\nTest cases:\n\nassert indices_of_vowels(\"hello\") == [1, 4]\nassert indices_of_vowels(\"\") == []\nassert indices_of_vowels(\"aeiou\") == [0, 1, 2, 3, 4]"
+    "text": "Write a function\nIts name is indices_of_vowels that takes a single string as its parameter. It returns a list of integers that represent the indices of the vowels in the original list. Name your file indices_of_vowels.py and submit to Gradescope. Use a for loop.\nTest cases:\n\nassert indices_of_vowels(\"hello\") == [1, 4]\nassert indices_of_vowels(\"\") == []\nassert indices_of_vowels(\"aeiou\") == [0, 1, 2, 3, 4]"
   },
   {
     "objectID": "slides-07-02.html#write-a-function-solution-1",
@@ -5577,5 +5577,12 @@
     "title": "mutability (class slides)",
     "section": "Quiz 06",
     "text": "Quiz 06\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.\nNo need to write main() function."
+  },
+  {
+    "objectID": "slides-07-02.html#while-vs.-for-loops-1",
+    "href": "slides-07-02.html#while-vs.-for-loops-1",
+    "title": "for loops with range (class slides)",
+    "section": "while vs. for loops",
+    "text": "while vs. for loops\nIn addition to while, we can use for to create loops\n\nvalues = [70, 20, 30]\nindex = 0\nwhile index &lt; len(values):\n  print(values[index])\n  index += 1\n\n70\n20\n30\n\n\n\nvalues = [70, 20, 30]\nfor index in range(len(values)):\n  print(values[index])\n\n70\n20\n30"
   }
 ]

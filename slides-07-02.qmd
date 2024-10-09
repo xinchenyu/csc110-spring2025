@@ -10,6 +10,25 @@ df-print: kable
 ## `while` vs. `for` loops
 
 In addition to `while`, we can use `for` to create loops
+```{python}
+#| eval: true
+#| echo: true
+index = 0
+while index < 3:
+  print(index)
+  index += 1
+```
+
+```{python}
+#| eval: true
+#| echo: true
+for index in range(3):
+  print(index)
+```
+
+## `while` vs. `for` loops
+
+In addition to `while`, we can use `for` to create loops
 
 ```{python}
 #| eval: true
@@ -65,10 +84,9 @@ main()
 
 ## Write a function
 
-1.  Its name is `indices_of_vowels`
-2.  It takes a single `string` as its parameter.
-3.  It returns a list of integers that represent the indices of the vowels in the original list
-4.  Use a `for` loop
+Its name is `indices_of_vowels` that takes a single `string` as its parameter.
+It returns a list of integers that represent the indices of the vowels in the original list.
+Name your file `indices_of_vowels.py` and submit to Gradescope. Use a `for` loop.
 
 Test cases:
 
@@ -101,11 +119,6 @@ def main():
 main()
 ```
 
-# Submit code for attendance
-
-Submit your `indices_of_vowels` functions to Gradescope for attendance.
-
-Name your file `indices_of_vowels.py`
 
 ## More on how to use `range()`
 
