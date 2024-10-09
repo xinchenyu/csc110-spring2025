@@ -209,21 +209,28 @@ Changes to lists persist once the function has finished running
 
 ## `.pop()` list method
 
-We will be using a few built-in list `methods` (not all of them, some you will implement yourself from scratch)
+We will be using a few built-in list `methods`
 
 Here's how `.pop()` works:
 
 ```{python}
 #| echo: true
 #| eval: true
-songs = ["Lavender Haze", "Calm Down", "As It Was", "About Damn Time"]
+songs = ["Lavender Haze", "Calm Down", "As It Was", "Her"]
 songs
 ```
 
 ```{python}
 #| echo: true
 #| eval: true
-songs.pop(0)
+songs.pop(0) # 'Her' index moves from 3 to 2
+songs
+```
+
+```{python}
+#| echo: true
+#| eval: true
+songs.pop(0) # 'Her' index moves from 2 to 1
 songs
 ```
 
@@ -295,14 +302,14 @@ We will be using the following list methods in this class:
 ```{python}
 #| echo: true
 #| eval: true
-songs = ["Lavender Haze", "Calm Down", "As It Was", "About Damn Time"]
+songs = ["Lavender Haze", "Calm Down", "As It Was", "Her"]
 songs
 ```
 
 ```{python}
 #| echo: true
 #| eval: true
-songs.append("Flowers")
+songs.append("Attention")
 songs
 ```
 
@@ -334,7 +341,6 @@ def indices_of_vowels(string):
     if string[index] in "aeiou": # check if character is vowel
       result.append(index) # append index to result
     index += 1 # increment index
-    
   return result
 
 def main():
@@ -345,6 +351,17 @@ def main():
 
 main()
 ```
+
+## Quiz 06
+
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+</center>
+
+You have 10 minutes to complete the quiz.
+
+No need to write `main()` function.
 
 ## Write a function
 
