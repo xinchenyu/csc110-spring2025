@@ -89,19 +89,23 @@ numbers[5] = 77
 Example (mapping strings to integers)
 
 ```{python}
-#| eval: false
+#| eval: true
 #| echo: true
-players = { "Lebron James": 38,
-            "Steph Curry":  35,
-            "Devin Booker":  12 }
-            
-# Using the key "Lebron James" 
-# to lookup the number 38
-players["Lebron James"]
+singers = { "Taylor Swift": 1989,
+            "JVKE":  2001,
+            "Bruno Mars":  1983}
+        
+# Using the key "JVKE" 
+# to lookup the number 2001
+singers["JVKE"]
 
-# Modifying the number associated with 
-# "Devin Booker" from 12 to 26
-players["Devin Booker"] = 26
+# Modifying the value associated with "Bruno Mars" 
+singers["Bruno Mars"] = 1985
+
+# add a new key and value pair
+singers["Doja Cat"] = 1995
+
+print(singers)
 ```
 
 ## Evaluate the expressions
@@ -255,16 +259,16 @@ word_count = {"and": 324, "why": 134, "cannot": 76, "Sanded": 13}
 
 ## Write a function
 
-1.  Its name is `count_vowels`
-2.  It takes a `string` argument
-3.  It creates a `dictionary`
-4.  It returns the `dictionary` with the count of every lowercase vowel in `string` (iterate over the string with a for loop)
+Its name is `count_vowels` that takes a `string` argument
+It creates a `dictionary` and returns the `dictionary` with the count of every lowercase vowel in `string` (iterate over the string with a `for` loop)
+
+Hint: initialize a dictionary with all the vowels as keys and the associated count as 0.
 
 ```{python}
 #| eval: false
 #| echo: true
-print( count_vowels("") ) # {"a": 0, "e": 0, "i": 0, "o": 0, "u": 0}
-print( count_vowels("pineapple") ) # {"a": 1, "e": 2, "i": 1, "o": 0, "u": 0}
+assert count_vowels("") == {"a": 0, "e": 0, "i": 0, "o": 0, "u": 0}
+assert count_vowels("pineapple") == {"a": 1, "e": 2, "i": 1, "o": 0, "u": 0}
 ```
 
 ## Write a function -- solution
@@ -281,8 +285,8 @@ def count_vowels(string):
   return counts
 
 def main():
-  print( count_vowels("") ) # {"a": 0, "e": 0, "i": 0, "o": 0, "u": 0}
-  print( count_vowels("pineapple") ) # {"a": 1, "e": 2, "i": 1, "o": 0, "u": 0}
+  assert count_vowels("") == {"a": 0, "e": 0, "i": 0, "o": 0, "u": 0}
+  assert count_vowels("pineapple") == {"a": 1, "e": 2, "i": 1, "o": 0, "u": 0}
   
 main()
 ```

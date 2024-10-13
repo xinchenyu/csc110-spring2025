@@ -4407,7 +4407,7 @@
     "href": "slides-08-01.html#dictionary-1",
     "title": "intro to dictionaries (class slides)",
     "section": "Dictionary",
-    "text": "Dictionary\nExample (mapping strings to integers)\n\nplayers = { \"Lebron James\": 38,\n            \"Steph Curry\":  35,\n            \"Devin Booker\":  12 }\n            \n# Using the key \"Lebron James\" \n# to lookup the number 38\nplayers[\"Lebron James\"]\n\n# Modifying the number associated with \n# \"Devin Booker\" from 12 to 26\nplayers[\"Devin Booker\"] = 26"
+    "text": "Dictionary\nExample (mapping strings to integers)\n\nsingers = { \"Taylor Swift\": 1989,\n            \"JVKE\":  2001,\n            \"Bruno Mars\":  1983}\n        \n# Using the key \"JVKE\" \n# to lookup the number 2001\nsingers[\"JVKE\"]\n\n# Modifying the value associated with \"Bruno Mars\" \nsingers[\"Bruno Mars\"] = 1985\n\n# add a new key and value pair\nsingers[\"Doja Cat\"] = 1995\n\nprint(singers)\n\n{'Taylor Swift': 1989, 'JVKE': 2001, 'Bruno Mars': 1985, 'Doja Cat': 1995}"
   },
   {
     "objectID": "slides-08-01.html#evaluate-the-expressions",
@@ -4470,14 +4470,14 @@
     "href": "slides-08-01.html#write-a-function",
     "title": "intro to dictionaries (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is count_vowels\nIt takes a string argument\nIt creates a dictionary\nIt returns the dictionary with the count of every lowercase vowel in string (iterate over the string with a for loop)\n\n\nprint( count_vowels(\"\") ) # {\"a\": 0, \"e\": 0, \"i\": 0, \"o\": 0, \"u\": 0}\nprint( count_vowels(\"pineapple\") ) # {\"a\": 1, \"e\": 2, \"i\": 1, \"o\": 0, \"u\": 0}"
+    "text": "Write a function\nIts name is count_vowels that takes a string argument It creates a dictionary and returns the dictionary with the count of every lowercase vowel in string (iterate over the string with a for loop)\nHint: initialize a dictionary with all the vowels as keys and the associated count as 0.\n\nassert count_vowels(\"\") == {\"a\": 0, \"e\": 0, \"i\": 0, \"o\": 0, \"u\": 0}\nassert count_vowels(\"pineapple\") == {\"a\": 1, \"e\": 2, \"i\": 1, \"o\": 0, \"u\": 0}"
   },
   {
     "objectID": "slides-08-01.html#write-a-function-solution",
     "href": "slides-08-01.html#write-a-function-solution",
     "title": "intro to dictionaries (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef count_vowels(string):\n  counts = {\"a\": 0, \"e\": 0, \"i\": 0, \"o\": 0, \"u\": 0}\n  for i in range(len(string)):\n    char = string[i]\n    if char in counts:\n      counts[char] += 1\n  return counts\n\ndef main():\n  print( count_vowels(\"\") ) # {\"a\": 0, \"e\": 0, \"i\": 0, \"o\": 0, \"u\": 0}\n  print( count_vowels(\"pineapple\") ) # {\"a\": 1, \"e\": 2, \"i\": 1, \"o\": 0, \"u\": 0}\n  \nmain()\n\n{'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0}\n{'a': 1, 'e': 2, 'i': 1, 'o': 0, 'u': 0}"
+    "text": "Write a function – solution\n\ndef count_vowels(string):\n  counts = {\"a\": 0, \"e\": 0, \"i\": 0, \"o\": 0, \"u\": 0}\n  for i in range(len(string)):\n    char = string[i]\n    if char in counts:\n      counts[char] += 1\n  return counts\n\ndef main():\n  assert count_vowels(\"\") == {\"a\": 0, \"e\": 0, \"i\": 0, \"o\": 0, \"u\": 0}\n  assert count_vowels(\"pineapple\") == {\"a\": 1, \"e\": 2, \"i\": 1, \"o\": 0, \"u\": 0}\n  \nmain()"
   },
   {
     "objectID": "slides-08-01.html#write-a-function-1",
