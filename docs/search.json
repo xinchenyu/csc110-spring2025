@@ -4358,7 +4358,7 @@
     "href": "slides-08-01.html#announcements",
     "title": "intro to dictionaries (class slides)",
     "section": "Announcements",
-    "text": "Announcements\n\nLast lab for short project 06 is Today – no lab for the rest of the week, we re-start lab sessions Monday March 11"
+    "text": "Announcements\n\nLast lab for short project 06 is Today – no lab for the rest of the week, we re-start lab sessions Tuesday October 22"
   },
   {
     "objectID": "slides-08-01.html#data-structure",
@@ -5584,5 +5584,19 @@
     "title": "for loops with range (class slides)",
     "section": "while vs. for loops",
     "text": "while vs. for loops\nIn addition to while, we can use for to create loops\n\nvalues = [70, 20, 30]\nindex = 0\nwhile index &lt; len(values):\n  print(values[index])\n  index += 1\n\n70\n20\n30\n\n\n\nvalues = [70, 20, 30]\nfor index in range(len(values)):\n  print(values[index])\n\n70\n20\n30"
+  },
+  {
+    "objectID": "slides-07-02.html#write-a-function-4",
+    "href": "slides-07-02.html#write-a-function-4",
+    "title": "for loops with range (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\nIts name is every_two. It takes one argument, a list of characters. It creates a new list with items at even indices in characters and return the list.\nUse a for loop.\nTest cases:\n\ncharacters = [\"a\", \"e\", \"p\", \"o\", \"p\", \"w\", \"l\", \"i\", \"e\", \"f\"]\nassert every_two(characters) == [\"a\", \"p\", \"p\", \"l\", \"e\"]"
+  },
+  {
+    "objectID": "slides-07-02.html#write-a-function-solution-4",
+    "href": "slides-07-02.html#write-a-function-solution-4",
+    "title": "for loops with range (class slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\n\ndef every_two(chars):\n  result = []\n  for i in range(0, len(chars), 2):\n    result.append(chars[i])\n  return result\n\ndef main():\n  characters = [\"a\", \"e\", \"p\", \"o\", \"p\", \"w\", \"l\", \"i\", \"e\", \"f\"]\n  assert every_two(characters) == [\"a\", \"p\", \"p\", \"l\", \"e\"]\n  print(\"pass the test case\")\n  \nmain()\n\npass the test case"
   }
 ]

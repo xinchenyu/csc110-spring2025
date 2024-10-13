@@ -216,3 +216,37 @@ def main():
   
 main()
 ```
+
+## Write a function
+
+Its name is `every_two`. It takes one argument, a list of `characters`. It creates a **new** list with items at even indices in `characters` and return the list.
+
+Use a `for` loop.
+
+Test cases:
+
+```{python}
+#| eval: false
+#| echo: true
+characters = ["a", "e", "p", "o", "p", "w", "l", "i", "e", "f"]
+assert every_two(characters) == ["a", "p", "p", "l", "e"]
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def every_two(chars):
+  result = []
+  for i in range(0, len(chars), 2):
+    result.append(chars[i])
+  return result
+
+def main():
+  characters = ["a", "e", "p", "o", "p", "w", "l", "i", "e", "f"]
+  assert every_two(characters) == ["a", "p", "p", "l", "e"]
+  print("pass the test case")
+  
+main()
+```
