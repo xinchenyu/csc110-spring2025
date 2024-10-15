@@ -9,9 +9,7 @@ df-print: kable
 
 ## Announcements
 
-* We will add one more quiz. The quiz 04 will be on Mar 13 (list and dictionary).
-
-* Midterm 2 will be on Mar 27.
+* Midterm 2 will be on next Tuesday, Oct 23.
 
 ## Review of `for in range():`
 
@@ -52,16 +50,16 @@ for n in numbers:
 
 ## Write a function
 
-1.  Its name is `count_vowels`
-2.  It takes a `string` argument
-3.  It creates a `dictionary`
-4.  It returns the `dictionary` with the count of every lowercase vowel in `string`
+Modify your `count_vowels` and `count_chars` functions.
+Use `for x in string` instead of `for x in range(len(string))`.
 
 ```{python}
 #| eval: false
 #| echo: true
 assert count_vowels("") == {"a": 0, "e": 0, "i": 0, "o": 0, "u": 0}
 assert count_vowels("banana") == {"a": 3, "e": 0, "i": 0, "o": 0, "u": 0}
+assert count_chars("") == {}
+assert count_chars("banana") == {"b": 1, "a": 3, "n": 2}
 ```
 
 ## Write a function -- solution
@@ -85,19 +83,6 @@ main()
     
 ```
 
-## Write a function
-
-1.  Its name is `count_chars`
-2.  It takes a `string` argument
-3.  It creates a `dictionary`
-4.  It returns the `dictionary` with the count of every characters in `string`
-
-```{python}
-#| eval: false
-#| echo: true
-assert count_chars("") == {}
-assert count_chars("banana") == {"b": 1, "a": 3, "n": 2}
-```
 
 ## Write a function -- solution
 
@@ -121,6 +106,18 @@ def main():
 
 main()
 ```
+
+
+## Quiz 07
+
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+</center>
+
+You have 10 minutes to complete the quiz.
+
+No need to write `main()` function.
 
 ## Write a function
 
@@ -159,11 +156,6 @@ def main():
 main()
 ```
 
-## Attendance
-
-Submit your `tally_negatives` function to Gradescope for attendance.
-
-Name your file `tally_negatives.py`
 
 ## What happens when we do `for k in dictionary:`
 

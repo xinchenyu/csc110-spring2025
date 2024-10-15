@@ -4162,7 +4162,7 @@
     "href": "slides-08-02.html#announcements",
     "title": "for loops – iterating over items (class slides)",
     "section": "Announcements",
-    "text": "Announcements\n\nWe will add one more quiz. The quiz 04 will be on Mar 13 (list and dictionary).\nMidterm 2 will be on Mar 27."
+    "text": "Announcements\n\nMidterm 2 will be on next Tuesday, Oct 23."
   },
   {
     "objectID": "slides-08-02.html#review-of-for-in-range",
@@ -4190,7 +4190,7 @@
     "href": "slides-08-02.html#write-a-function",
     "title": "for loops – iterating over items (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is count_vowels\nIt takes a string argument\nIt creates a dictionary\nIt returns the dictionary with the count of every lowercase vowel in string\n\n\nassert count_vowels(\"\") == {\"a\": 0, \"e\": 0, \"i\": 0, \"o\": 0, \"u\": 0}\nassert count_vowels(\"banana\") == {\"a\": 3, \"e\": 0, \"i\": 0, \"o\": 0, \"u\": 0}"
+    "text": "Write a function\nModify your count_vowels and count_chars functions. Use for x in string instead of for x in range(len(string)).\n\nassert count_vowels(\"\") == {\"a\": 0, \"e\": 0, \"i\": 0, \"o\": 0, \"u\": 0}\nassert count_vowels(\"banana\") == {\"a\": 3, \"e\": 0, \"i\": 0, \"o\": 0, \"u\": 0}\nassert count_chars(\"\") == {}\nassert count_chars(\"banana\") == {\"b\": 1, \"a\": 3, \"n\": 2}"
   },
   {
     "objectID": "slides-08-02.html#write-a-function-solution",
@@ -4204,7 +4204,7 @@
     "href": "slides-08-02.html#write-a-function-1",
     "title": "for loops – iterating over items (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is count_chars\nIt takes a string argument\nIt creates a dictionary\nIt returns the dictionary with the count of every characters in string\n\n\nassert count_chars(\"\") == {}\nassert count_chars(\"banana\") == {\"b\": 1, \"a\": 3, \"n\": 2}"
+    "text": "Write a function\n\nIts name is tally_negatives\nIt takes a list of numbers as argument\nIt returns a dictionary that maps each negative value in numbers to its frequency in numbers\n\nTest cases:\n\nassert  tally_negatives([1, -2, 0, -4, -2]) == {-2: 2, -4: 1}\nassert tally_negatives([]) == {}"
   },
   {
     "objectID": "slides-08-02.html#write-a-function-solution-1",
@@ -4218,7 +4218,7 @@
     "href": "slides-08-02.html#write-a-function-2",
     "title": "for loops – iterating over items (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is tally_negatives\nIt takes a list of numbers as argument\nIt returns a dictionary that maps each negative value in numbers to its frequency in numbers\n\nTest cases:\n\nassert  tally_negatives([1, -2, 0, -4, -2]) == {-2: 2, -4: 1}\nassert tally_negatives([]) == {}"
+    "text": "Write a function\n\nIts name is keys_and_values\nIt takes a dictionary as argument\nIt returns a list with all the keys and values in the dictionary\n\nTest cases:\n\nassert keys_and_values({'A': 10, 'B': 25, 'C': 27, 'D': 10, 'E': 5}) == \\\n    ['A', 10, 'B', 25, 'C', 27, 'D', 10, 'E', 5]"
   },
   {
     "objectID": "slides-08-02.html#write-a-function-solution-2",
@@ -4267,7 +4267,7 @@
     "href": "slides-08-02.html#write-a-function-3",
     "title": "for loops – iterating over items (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is keys_and_values\nIt takes a dictionary as argument\nIt returns a list with all the keys and values in the dictionary\n\nTest cases:\n\nassert keys_and_values({'A': 10, 'B': 25, 'C': 27, 'D': 10, 'E': 5}) == \\\n    ['A', 10, 'B', 25, 'C', 27, 'D', 10, 'E', 5]"
+    "text": "Write a function\n\nIts name is merge_dictionaries\nIt takes two arguments: dict_1 and dict_2\nIt mutates dict_1, by adding to it all key-values pairs in dict_2\nIf a key is in both dictionaries, the values are added\nDon’t use .update()\n\nTest cases:\n\ndict_1 = {\"a\": 20, \"e\": 5}\ndict_2 = {\"e\": 10, \"i\": 2}\nassert merge_dictionaries(dict_1, dict_2) == {\"a\": 20, \"e\": 15, \"i\": 2}"
   },
   {
     "objectID": "slides-08-02.html#write-a-function-solution-3",
@@ -5598,5 +5598,12 @@
     "title": "for loops with range (class slides)",
     "section": "Write a function – solution",
     "text": "Write a function – solution\n\ndef every_two(chars):\n  result = []\n  for i in range(0, len(chars), 2):\n    result.append(chars[i])\n  return result\n\ndef main():\n  characters = [\"a\", \"e\", \"p\", \"o\", \"p\", \"w\", \"l\", \"i\", \"e\", \"f\"]\n  assert every_two(characters) == [\"a\", \"p\", \"p\", \"l\", \"e\"]\n  print(\"pass the test case\")\n  \nmain()\n\npass the test case"
+  },
+  {
+    "objectID": "slides-08-02.html#quiz-07",
+    "href": "slides-08-02.html#quiz-07",
+    "title": "for loops – iterating over items (class slides)",
+    "section": "Quiz 07",
+    "text": "Quiz 07\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.\nNo need to write main() function."
   }
 ]
