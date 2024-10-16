@@ -9,7 +9,11 @@ df-print: kable
 
 ## Announcements
 
-* Midterm 2 will be on next Tuesday, Oct 23.
+* Midterm 2 will be on next Wednesday, Oct 23.
+* Review session next Tuesday, Oct 22 5-7pm
+  * Location: Gittings 129b 
+* Study guide: [xinchenyu.github.io/csc110-fall2024/pdfs/study-guide-2.pdf](https://xinchenyu.github.io/csc110-fall2024/pdfs/study-guide-2.pdf) 
+  
 
 ## Review of `for in range():`
 
