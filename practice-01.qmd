@@ -26,6 +26,9 @@ Midterm 1 (Modules 1-5) + [Study Guide 1](pdfs/study-guide-1.pdf)
 9.  [Practice Problems Module 7 ](https://colab.research.google.com/drive/1c4puLIos5zlCQn6I-W5hjb6wKRZmqCc9?usp=sharing)
 10.  [Practice Problems Module 8 I](https://colab.research.google.com/drive/1ZVT8M3FE9G9AHhoRs9uxpYan6gCzoTFr?usp=sharing)
 11.  [Practice Problems Module 8 II](https://colab.research.google.com/drive/1PGFcwTIU-z6wWq2Yk9iZodiiExssZIXE?usp=sharing)
+
+Midterm 2 (Modules 1-8) + [Study Guide 2](pdfs/study-guide-2.pdf)
+
 12. [Practice Problems Module 9](https://colab.research.google.com/drive/1TaQ3qQH7GLiJ_3TyO7cnP3gWJgKLPewl?usp=sharing)
 13. [Practice Problems Module 10](https://colab.research.google.com/drive/1kiOrOrbqIDpk251VvT7c6au9_HDAsI40?usp=sharing)
 14. [Practice Problems Module 11](https://colab.research.google.com/drive/1BwTHKQA7igraUvfhJqe3aqMwbIk_xOgL?usp=sharing)
