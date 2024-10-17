@@ -19,7 +19,7 @@ This is for information only. You need to [sign up for a specific lab session](h
 * [Lab 05](labs/lab05.html): October 01 to October 07 ([slides](labs/lab05-slide.html))
 * [Lab 06](labs/lab06.html): October 08 to October 14 ([slides](labs/lab06-slide.html))
 * CATCH UP WEEK: October 15 to October 21
-* [Lab 07](labs/lab07.html): October 22 to October 28
+* [Lab 07](labs/lab07.html): October 22 to October 28 ([slides](labs/lab07-slide.html))
 * [Lab 08](labs/lab08.html): October 29 to November 04
 * [Lab 09](labs/lab09.html): November 05 to November 12
 * CATCH UP WEEK: November 13 to November 19
