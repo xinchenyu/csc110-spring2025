@@ -4204,7 +4204,7 @@
     "href": "slides-08-02.html#write-a-function-1",
     "title": "for loops – iterating over items (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is tally_negatives\nIt takes a list of numbers as argument\nIt returns a dictionary that maps each negative value in numbers to its frequency in numbers\n\nTest cases:\n\nassert  tally_negatives([1, -2, 0, -4, -2]) == {-2: 2, -4: 1}\nassert tally_negatives([]) == {}"
+    "text": "Write a function\n\nIts name is max_list that takes a list of numbers as argument.\nIt mutates the list, multiply each number by 2\nIt returns the highest value in the mutated numbers\n\nTest cases:\n\nassert max_list([]) == None\nassert max_list([2, 2, 1]) == 4\nassert max_list([1, -3]) == 2"
   },
   {
     "objectID": "slides-08-02.html#write-a-function-solution-1",
@@ -4218,14 +4218,14 @@
     "href": "slides-08-02.html#write-a-function-2",
     "title": "for loops – iterating over items (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is keys_and_values\nIt takes a dictionary as argument\nIt returns a list with all the keys and values in the dictionary\n\nTest cases:\n\nassert keys_and_values({'A': 10, 'B': 25, 'C': 27, 'D': 10, 'E': 5}) == \\\n    ['A', 10, 'B', 25, 'C', 27, 'D', 10, 'E', 5]"
+    "text": "Write a function\n\nIts name is tally_negatives\nIt takes a list of numbers as argument\nIt returns a dictionary that maps each negative value in numbers to its frequency in numbers\n\nName your file as tally_negatives.py and submit to gradescope. Test cases:\n\nassert  tally_negatives([1, -2, 0, -4, -2]) == {-2: 2, -4: 1}\nassert tally_negatives([]) == {}"
   },
   {
     "objectID": "slides-08-02.html#write-a-function-solution-2",
     "href": "slides-08-02.html#write-a-function-solution-2",
     "title": "for loops – iterating over items (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef tally_negatives(numbers):\n  tally = {}\n  for n in numbers:\n    if n &lt; 0:\n      if n not in tally:\n        tally[n] = 0\n      tally[n] += 1\n  return tally\n\ndef main():\n  assert  tally_negatives([1, -2, 0, -4, -2]) == {-2: 2, -4: 1}\n  assert tally_negatives([]) == {}\n  print(\"Passed all tests.\")\n  \nmain()\n\nPassed all tests."
+    "text": "Write a function – solution\n\ndef max_list(numbers):\n    max = None\n    for i in range(len(numbers)):\n        numbers[i] *= 2\n    for i in range(len(numbers)):\n        if max == None or numbers[i] &gt; max:\n            max = numbers[i]\n    return max\n\ndef main():\n  assert max_list([]) == None\n  assert max_list([2, 2, 1]) == 4\n  assert max_list([1, -3]) == 2 \n  print(\"pass\")\n  \nmain()\n\npass"
   },
   {
     "objectID": "slides-08-02.html#attendance",
@@ -4267,14 +4267,14 @@
     "href": "slides-08-02.html#write-a-function-3",
     "title": "for loops – iterating over items (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is merge_dictionaries\nIt takes two arguments: dict_1 and dict_2\nIt mutates dict_1, by adding to it all key-values pairs in dict_2\nIf a key is in both dictionaries, the values are added\nDon’t use .update()\n\nTest cases:\n\ndict_1 = {\"a\": 20, \"e\": 5}\ndict_2 = {\"e\": 10, \"i\": 2}\nassert merge_dictionaries(dict_1, dict_2) == {\"a\": 20, \"e\": 15, \"i\": 2}"
+    "text": "Write a function\n\nIts name is keys_and_values\nIt takes a dictionary as argument\nIt returns a list with all the keys and values in the dictionary\n\nTest cases:\n\nassert keys_and_values({'A': 10, 'B': 25, 'C': 27, 'D': 10, 'E': 5}) == \\\n    ['A', 10, 'B', 25, 'C', 27, 'D', 10, 'E', 5]"
   },
   {
     "objectID": "slides-08-02.html#write-a-function-solution-3",
     "href": "slides-08-02.html#write-a-function-solution-3",
     "title": "for loops – iterating over items (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef keys_and_values(dictionary):\n  new_list = []\n  for key, value in dictionary.items():\n    new_list.append(key)\n    new_list.append(value)\n  return new_list\n\ndef main():\n  assert keys_and_values({'A': 10, 'B': 25, 'C': 27, 'D': 10, 'E': 5}) == ['A', 10, 'B', 25, 'C', 27, 'D', 10, 'E', 5]\n  \nmain()"
+    "text": "Write a function – solution\n\ndef tally_negatives(numbers):\n  tally = {}\n  for n in numbers:\n    if n &lt; 0:\n      if n not in tally:\n        tally[n] = 0\n      tally[n] += 1\n  return tally\n\ndef main():\n  assert  tally_negatives([1, -2, 0, -4, -2]) == {-2: 2, -4: 1}\n  assert tally_negatives([]) == {}\n  print(\"Passed all tests.\")\n  \nmain()\n\nPassed all tests."
   },
   {
     "objectID": "slides-08-02.html#write-a-function-4",
@@ -4288,7 +4288,7 @@
     "href": "slides-08-02.html#write-a-function-solution-4",
     "title": "for loops – iterating over items (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef merge_dictionaries(dict_1, dict_2):\n  for key, value in dict_2.items():\n    if key in dict_1:\n      dict_1[key] += value\n    else:\n      dict_1[key] = value\n  return dict_1\n      \ndef main():\n  dict_1 = {\"a\": 20, \"e\": 5}\n  dict_2 = {\"e\": 10, \"i\": 2}\n  assert merge_dictionaries(dict_1, dict_2) == {\"a\": 20, \"e\": 15, \"i\": 2}\n  \nmain()"
+    "text": "Write a function – solution\n\ndef keys_and_values(dictionary):\n  new_list = []\n  for key, value in dictionary.items():\n    new_list.append(key)\n    new_list.append(value)\n  return new_list\n\ndef main():\n  assert keys_and_values({'A': 10, 'B': 25, 'C': 27, 'D': 10, 'E': 5}) == ['A', 10, 'B', 25, 'C', 27, 'D', 10, 'E', 5]\n  \nmain()"
   },
   {
     "objectID": "control_flow_for.html",
@@ -5605,5 +5605,12 @@
     "title": "for loops – iterating over items (class slides)",
     "section": "Quiz 07",
     "text": "Quiz 07\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.\nNo need to write main() function."
+  },
+  {
+    "objectID": "slides-08-02.html#write-a-function-solution-5",
+    "href": "slides-08-02.html#write-a-function-solution-5",
+    "title": "for loops – iterating over items (class slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\n\ndef merge_dictionaries(dict_1, dict_2):\n  for key, value in dict_2.items():\n    if key in dict_1:\n      dict_1[key] += value\n    else:\n      dict_1[key] = value\n  return dict_1\n      \ndef main():\n  dict_1 = {\"a\": 20, \"e\": 5}\n  dict_2 = {\"e\": 10, \"i\": 2}\n  assert merge_dictionaries(dict_1, dict_2) == {\"a\": 20, \"e\": 15, \"i\": 2}\n  \nmain()"
   }
 ]
