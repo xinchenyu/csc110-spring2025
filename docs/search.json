@@ -3028,7 +3028,7 @@
     "href": "slides-09-01.html#opening-a-file",
     "title": "files (class slides)",
     "section": "Opening a file",
-    "text": "Opening a file\n\nTo open a file in a python program:\na_file = open(file_name, mode)\nfile_name should be the name of the file to open\n\nIt can also be a path\n\nmode should be the mode in which to open in\n\n‘a’    ‘r’    ‘w’\n\n\nAfter opening, use the a_file object to read from or write to the file"
+    "text": "Opening a file\n\nTo open a file in a python program:\ninfo = open(file_name, mode)\nfile_name: the name of the file to open\n\nIt can also be a path\n\nmode: the mode in which to open in\n\n‘a’    ‘r’    ‘w’"
   },
   {
     "objectID": "slides-09-01.html#absolute-vs-relative-path",
@@ -3049,14 +3049,14 @@
     "href": "slides-09-01.html#reading-a-line",
     "title": "files (class slides)",
     "section": "Reading a line",
-    "text": "Reading a line\n\nfile.readline()\n\nreads one line from a file, returns a string\nreturns an empty string if it has reached the end of the content\n\nfile.readlines()\n\nreads all of the lines\nreturns a list of strings\n\nfile.read()\n\nreturns one string"
+    "text": "Reading a line\nUse info object and call readline()to read a line\nread_file.py\n\ninfo = open('info.txt', 'r')\nline = info.readline()\ninfo.close()\n\nprint(line)\n\nThe quick brown fox"
   },
   {
     "objectID": "slides-09-01.html#reading-a-line-example",
     "href": "slides-09-01.html#reading-a-line-example",
     "title": "files (class slides)",
     "section": "Reading a line example",
-    "text": "Reading a line example\ninfo.txt\nThe quick brown fox\njumped over\nthe lazy\nbear\nsitting by the tree\nread_line.py\n\ndef read_first_line(filename):\n  info = open(filename, 'r')\n  line = info.readline()\n  info.close()\n  return line\n\nassert read_first_line('info.txt') == \"The quick brown fox\\n\""
+    "text": "Reading a line example\ninfo.txt\nThe quick brown fox\njumped over\nthe lazy\nbear\nsitting by the tree\nfirst_read.py\n\ndef read_first_line(filename):\n  info = open(filename, 'r')\n  line = info.readline()\n  info.close()\n  return line\n\nassert read_first_line('info.txt') == \"The quick brown fox\\n\""
   },
   {
     "objectID": "slides-09-01.html#iterating-over-a-file-directly",
@@ -3105,7 +3105,7 @@
     "href": "slides-09-01.html#write-a-function-1",
     "title": "files (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is count_words\nIt takes a string file_name as argument\nIt returns a dictionary with word counts\n\nTest case:\n\nassert count_words(\"info.txt\") == {\"the\": 3, \"quick\": 1, \"brown\": 1,\n                                   \"fox\": 1 , \"jumped\": 1, \"over\": 1, \n                                   \"lazy\": 1, \"bear\": 1, \"sitting\": 1,\n                                   \"by\": 1, \"tree\": 1}"
+    "text": "Write a function\n\nIts name is lines_and_words\nIt takes a string called file_name\nIt opens the file with file_name in read mode\nIt iterates over the file’s lines, splitting each line by space (remember to strip the line breaks)\nIt returns a list of lists, where each inner-list is a line containing all the words in that line\n\nTest case (download text file):\n\nassert lines_and_words(\"info.txt\") == [ ['The', 'quick', 'brown', 'fox'], \n                                        ['jumped', 'over'], ['the', 'lazy'],\n                                        ['bear'], ['sitting', 'by', 'the', 'tree'] ]"
   },
   {
     "objectID": "slides-09-01.html#write-a-function-solution-1",
@@ -5612,5 +5612,61 @@
     "title": "for loops – iterating over items (class slides)",
     "section": "Write a function – solution",
     "text": "Write a function – solution\n\ndef merge_dictionaries(dict_1, dict_2):\n  for key, value in dict_2.items():\n    if key in dict_1:\n      dict_1[key] += value\n    else:\n      dict_1[key] = value\n  return dict_1\n      \ndef main():\n  dict_1 = {\"a\": 20, \"e\": 5}\n  dict_2 = {\"e\": 10, \"i\": 2}\n  assert merge_dictionaries(dict_1, dict_2) == {\"a\": 20, \"e\": 15, \"i\": 2}\n  \nmain()"
+  },
+  {
+    "objectID": "slides-09-01.html#reading-a-line-1",
+    "href": "slides-09-01.html#reading-a-line-1",
+    "title": "files (class slides)",
+    "section": "Reading a line",
+    "text": "Reading a line\n\nfile.readline()\n\nreads one line from a file, returns a string\n\nfile.readlines()\n\nreads all of the lines, returns a list of strings\n\nfile.read()\n\nreturns one string"
+  },
+  {
+    "objectID": "slides-09-01.html#reading-a-line-example-1",
+    "href": "slides-09-01.html#reading-a-line-example-1",
+    "title": "files (class slides)",
+    "section": "Reading a line example",
+    "text": "Reading a line example\ninfo.txt\nThe quick brown fox\njumped over\nthe lazy\nbear\nsitting by the tree\nread_line.py\n\ndef read_first_line(filename):\n  info = open(filename, 'r')\n  line = info.readline()\n  info.close()\n  return line\n\nassert read_first_line('info.txt') == \"The quick brown fox\\n\""
+  },
+  {
+    "objectID": "slides-09-01.html#write-a-function-2",
+    "href": "slides-09-01.html#write-a-function-2",
+    "title": "files (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\n\nIts name is count_words\nIt takes a string file_name as argument\nIt returns a dictionary with word counts\n\nTest case:\n\nassert count_words(\"info.txt\") == {\"the\": 3, \"quick\": 1, \"brown\": 1,\n                                   \"fox\": 1 , \"jumped\": 1, \"over\": 1, \n                                   \"lazy\": 1, \"bear\": 1, \"sitting\": 1,\n                                   \"by\": 1, \"tree\": 1}"
+  },
+  {
+    "objectID": "slides-09-01.html#reading-three-lines-example",
+    "href": "slides-09-01.html#reading-three-lines-example",
+    "title": "files (class slides)",
+    "section": "Reading three lines example",
+    "text": "Reading three lines example\n\ninfo = open('info.txt', 'r')\nprint(info.readline())\nprint(info.readline())\nprint(info.readline())\ninfo.close()\n\nThe quick brown fox\n\njumped over\n\nthe lazy"
+  },
+  {
+    "objectID": "slides-09-01.html#reading-three-lines",
+    "href": "slides-09-01.html#reading-three-lines",
+    "title": "files (class slides)",
+    "section": "Reading three lines",
+    "text": "Reading three lines\n\ninfo = open('info.txt', 'r')\nprint(info.readline())\nprint(info.readline())\nprint(info.readline())\ninfo.close()\n\nThe quick brown fox\n\njumped over\n\nthe lazy"
+  },
+  {
+    "objectID": "slides-09-01.html#reading-lines",
+    "href": "slides-09-01.html#reading-lines",
+    "title": "files (class slides)",
+    "section": "Reading lines",
+    "text": "Reading lines\n\nfile.readline()\n\nreads one line from a file, returns a string\n\nfile.readlines()\n\nreads all of the lines, returns a list of strings\n\nfile.read()\n\nreturns one string"
+  },
+  {
+    "objectID": "slides-09-01.html#iterating-over-a-file",
+    "href": "slides-09-01.html#iterating-over-a-file",
+    "title": "files (class slides)",
+    "section": "Iterating over a file",
+    "text": "Iterating over a file\nUse readlines():\n\ninfo = open('info.txt', 'r')\nfor line in info.readlines():\n    print(line)\ninfo.close()\n\nThe quick brown fox\n\njumped over\n\nthe lazy\n\nbear\n\nsitting by the tree"
+  },
+  {
+    "objectID": "slides-09-01.html#iterating-over-a-file-an-easier-way",
+    "href": "slides-09-01.html#iterating-over-a-file-an-easier-way",
+    "title": "files (class slides)",
+    "section": "Iterating over a file – an easier way",
+    "text": "Iterating over a file – an easier way\nHere info is iterable, so we can use for x in file loop:\n\ninfo = open('info.txt', 'r')\nfor line in info:\n    print(line)\ninfo.close()\n\nThe quick brown fox\n\njumped over\n\nthe lazy\n\nbear\n\nsitting by the tree"
   }
 ]

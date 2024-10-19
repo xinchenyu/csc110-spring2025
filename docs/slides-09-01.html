@@ -400,16 +400,6 @@
 <h1>CSc 110 - files</h1>
 
 </section>
-<section id="announcements" class="slide level2">
-<h2>Announcements</h2>
-<ul>
-<li><p>All CSC 110 TA office hours have moved to GS 813</p></li>
-<li><p>Quiz 04 this Wednesday (lists)</p>
-<ul>
-<li>when finding max or min, how to avoid error if the list is empty?</li>
-</ul></li>
-</ul>
-</section>
 <section id="files-and-file-systems" class="slide level2">
 <h2>Files and file systems</h2>
 <ul>
@@ -425,17 +415,16 @@
 <h2>Opening a file</h2>
 <ul>
 <li><p>To open a file in a python program:</p>
-<p><strong><code>a_file = open(file_name, mode)</code></strong></p></li>
-<li><p><strong>file_name</strong> should be the name of the file to open</p>
+<p><strong><code>info = open(file_name, mode)</code></strong></p></li>
+<li><p><code>file_name</code>: the name of the file to open</p>
 <ul>
 <li>It can also be a path</li>
 </ul></li>
-<li><p><strong>mode should be the mode in which to open in</strong></p>
+<li><p><code>mode</code>: the mode in which to open in</p>
 <ul>
 <li><strong>‘a’&nbsp; &nbsp; ‘r’&nbsp; &nbsp; ‘w’</strong></li>
 </ul></li>
 </ul>
-<p>After opening, use the <strong>a_file</strong> object to read from or write to the file</p>
 </section>
 <section id="absolute-vs-relative-path" class="slide level2">
 <h2>Absolute vs Relative path</h2>
@@ -464,16 +453,73 @@
 </section>
 <section id="reading-a-line" class="slide level2">
 <h2>Reading a line</h2>
+<p>Use <code>info</code> object and call <code>readline()</code>to read a line</p>
+<p>read_file.py</p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>info <span class="op">=</span> <span class="bu">open</span>(<span class="st">'info.txt'</span>, <span class="st">'r'</span>)</span>
+<span id="cb3-2"><a href="#cb3-2"></a>line <span class="op">=</span> info.readline()</span>
+<span id="cb3-3"><a href="#cb3-3"></a>info.close()</span>
+<span id="cb3-4"><a href="#cb3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="bu">print</span>(line)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The quick brown fox
+</code></pre>
+</div>
+</div>
+</section>
+<section id="reading-three-lines" class="slide level2">
+<h2>Reading three lines</h2>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>info <span class="op">=</span> <span class="bu">open</span>(<span class="st">'info.txt'</span>, <span class="st">'r'</span>)</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="bu">print</span>(info.readline())</span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="bu">print</span>(info.readline())</span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="bu">print</span>(info.readline())</span>
+<span id="cb5-5"><a href="#cb5-5"></a>info.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The quick brown fox
+
+jumped over
+
+the lazy
+</code></pre>
+</div>
+</div>
+</section></section>
+<section>
+<section id="write-a-function" class="title-slide slide level1 center">
+<h1>Write a function</h1>
+<p>Function name <code>read_first_line</code>: given a <code>filename</code> string, open file in read (<code>'r'</code>) mode, read one line, close file, return that line.</p>
+<p>Name your file <code>first_read.py</code> and submit to gradescope.</p>
+</section>
+<section id="reading-a-line-example" class="slide level2">
+<h2>Reading a line example</h2>
+<p>info.txt</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource {html} number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href="#cb7-1"></a>The quick brown fox</span>
+<span id="cb7-2"><a href="#cb7-2"></a>jumped over</span>
+<span id="cb7-3"><a href="#cb7-3"></a>the lazy</span>
+<span id="cb7-4"><a href="#cb7-4"></a>bear</span>
+<span id="cb7-5"><a href="#cb7-5"></a>sitting by the tree</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>first_read.py</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">def</span> read_first_line(filename):</span>
+<span id="cb8-2"><a href="#cb8-2"></a>  info <span class="op">=</span> <span class="bu">open</span>(filename, <span class="st">'r'</span>)</span>
+<span id="cb8-3"><a href="#cb8-3"></a>  line <span class="op">=</span> info.readline()</span>
+<span id="cb8-4"><a href="#cb8-4"></a>  info.close()</span>
+<span id="cb8-5"><a href="#cb8-5"></a>  <span class="cf">return</span> line</span>
+<span id="cb8-6"><a href="#cb8-6"></a></span>
+<span id="cb8-7"><a href="#cb8-7"></a><span class="cf">assert</span> read_first_line(<span class="st">'info.txt'</span>) <span class="op">==</span> <span class="st">"The quick brown fox</span><span class="ch">\n</span><span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="reading-lines" class="slide level2">
+<h2>Reading lines</h2>
 <ul>
 <li><p><strong><code>file.readline()</code></strong></p>
 <ul>
-<li><p>reads one line from a file, returns a string</p></li>
-<li><p>returns an empty string if it has reached the end of the content</p></li>
+<li>reads one line from a file, returns a string</li>
 </ul></li>
 <li><p><strong><code>file.readlines()</code></strong></p>
 <ul>
-<li><p>reads all of the lines</p></li>
-<li><p>returns a list of strings</p></li>
+<li>reads all of the lines, returns a list of strings</li>
 </ul></li>
 <li><p><strong><code>file.read()</code></strong></p>
 <ul>
@@ -481,39 +527,35 @@
 </ul></li>
 </ul>
 </section>
-<section id="reading-a-line-example" class="slide level2">
-<h2>Reading a line example</h2>
-<p>info.txt</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource {html} number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href="#cb3-1"></a>The quick brown fox</span>
-<span id="cb3-2"><a href="#cb3-2"></a>jumped over</span>
-<span id="cb3-3"><a href="#cb3-3"></a>the lazy</span>
-<span id="cb3-4"><a href="#cb3-4"></a>bear</span>
-<span id="cb3-5"><a href="#cb3-5"></a>sitting by the tree</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>read_line.py</p>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">def</span> read_first_line(filename):</span>
-<span id="cb4-2"><a href="#cb4-2"></a>  info <span class="op">=</span> <span class="bu">open</span>(filename, <span class="st">'r'</span>)</span>
-<span id="cb4-3"><a href="#cb4-3"></a>  line <span class="op">=</span> info.readline()</span>
-<span id="cb4-4"><a href="#cb4-4"></a>  info.close()</span>
-<span id="cb4-5"><a href="#cb4-5"></a>  <span class="cf">return</span> line</span>
-<span id="cb4-6"><a href="#cb4-6"></a></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="cf">assert</span> read_first_line(<span class="st">'info.txt'</span>) <span class="op">==</span> <span class="st">"The quick brown fox</span><span class="ch">\n</span><span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="iterating-over-a-file" class="slide level2">
+<h2>Iterating over a file</h2>
+<p>Use <code>readlines()</code>:</p>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>info <span class="op">=</span> <span class="bu">open</span>(<span class="st">'info.txt'</span>, <span class="st">'r'</span>)</span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="cf">for</span> line <span class="kw">in</span> info.readlines():</span>
+<span id="cb9-3"><a href="#cb9-3"></a>    <span class="bu">print</span>(line)</span>
+<span id="cb9-4"><a href="#cb9-4"></a>info.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The quick brown fox
+
+jumped over
+
+the lazy
+
+bear
+
+sitting by the tree</code></pre>
 </div>
-</section></section>
-<section>
-<section id="submit-code-for-attendance" class="title-slide slide level1 center">
-<h1>Submit code for attendance</h1>
-<p>Submit the <code>read_first_line</code> function to Gradescope for attendance (given a file name string, open file in read mode, read first line, return that first line).</p>
-<p>Name your file <code>first_read.py</code></p>
+</div>
 </section>
-<section id="iterating-over-a-file-directly" class="slide level2">
-<h2>Iterating over a file directly</h2>
-<p>The type <code>file</code> is iterable so we can use a <code>for x in file</code> loop:</p>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>info <span class="op">=</span> <span class="bu">open</span>(<span class="st">'info.txt'</span>, <span class="st">'r'</span>)</span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="cf">for</span> line <span class="kw">in</span> info:</span>
-<span id="cb5-3"><a href="#cb5-3"></a>    <span class="bu">print</span>(line)</span>
-<span id="cb5-4"><a href="#cb5-4"></a>info.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="iterating-over-a-file-an-easier-way" class="slide level2">
+<h2>Iterating over a file – an easier way</h2>
+<p>Here <code>info</code> is iterable, so we can use <code>for x in file</code> loop:</p>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>info <span class="op">=</span> <span class="bu">open</span>(<span class="st">'info.txt'</span>, <span class="st">'r'</span>)</span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="cf">for</span> line <span class="kw">in</span> info:</span>
+<span id="cb11-3"><a href="#cb11-3"></a>    <span class="bu">print</span>(line)</span>
+<span id="cb11-4"><a href="#cb11-4"></a>info.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>The quick brown fox
 
@@ -538,21 +580,21 @@ sitting by the tree</code></pre>
 </section>
 <section id="more-string-methods-.strip" class="slide level2">
 <h2>More string methods – <code>.strip()</code></h2>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>info <span class="op">=</span> <span class="bu">open</span>(<span class="st">'info.txt'</span>, <span class="st">'r'</span>)</span>
-<span id="cb7-2"><a href="#cb7-2"></a></span>
-<span id="cb7-3"><a href="#cb7-3"></a>first_line <span class="op">=</span> info.readline()</span>
-<span id="cb7-4"><a href="#cb7-4"></a>second_line <span class="op">=</span> info.readline()</span>
-<span id="cb7-5"><a href="#cb7-5"></a><span class="bu">print</span>(first_line)</span>
-<span id="cb7-6"><a href="#cb7-6"></a><span class="bu">print</span>(second_line)</span>
-<span id="cb7-7"><a href="#cb7-7"></a></span>
-<span id="cb7-8"><a href="#cb7-8"></a></span>
-<span id="cb7-9"><a href="#cb7-9"></a>first_line <span class="op">=</span> first_line.strip(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb7-10"><a href="#cb7-10"></a>second_line <span class="op">=</span> second_line.strip(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb7-11"><a href="#cb7-11"></a><span class="bu">print</span>(first_line)</span>
-<span id="cb7-12"><a href="#cb7-12"></a><span class="bu">print</span>(second_line)</span>
-<span id="cb7-13"><a href="#cb7-13"></a></span>
-<span id="cb7-14"><a href="#cb7-14"></a>info.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>info <span class="op">=</span> <span class="bu">open</span>(<span class="st">'info.txt'</span>, <span class="st">'r'</span>)</span>
+<span id="cb13-2"><a href="#cb13-2"></a></span>
+<span id="cb13-3"><a href="#cb13-3"></a>first_line <span class="op">=</span> info.readline()</span>
+<span id="cb13-4"><a href="#cb13-4"></a>second_line <span class="op">=</span> info.readline()</span>
+<span id="cb13-5"><a href="#cb13-5"></a><span class="bu">print</span>(first_line)</span>
+<span id="cb13-6"><a href="#cb13-6"></a><span class="bu">print</span>(second_line)</span>
+<span id="cb13-7"><a href="#cb13-7"></a></span>
+<span id="cb13-8"><a href="#cb13-8"></a></span>
+<span id="cb13-9"><a href="#cb13-9"></a>first_line <span class="op">=</span> first_line.strip(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb13-10"><a href="#cb13-10"></a>second_line <span class="op">=</span> second_line.strip(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb13-11"><a href="#cb13-11"></a><span class="bu">print</span>(first_line)</span>
+<span id="cb13-12"><a href="#cb13-12"></a><span class="bu">print</span>(second_line)</span>
+<span id="cb13-13"><a href="#cb13-13"></a></span>
+<span id="cb13-14"><a href="#cb13-14"></a>info.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>The quick brown fox
 
@@ -565,26 +607,26 @@ jumped over</code></pre>
 </section>
 <section id="more-string-methods-.split" class="slide level2">
 <h2>More string methods – <code>.split(" ")</code></h2>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>info <span class="op">=</span> <span class="bu">open</span>(<span class="st">'info.txt'</span>, <span class="st">'r'</span>)</span>
-<span id="cb9-2"><a href="#cb9-2"></a></span>
-<span id="cb9-3"><a href="#cb9-3"></a>first_line <span class="op">=</span> info.readline().strip(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb9-4"><a href="#cb9-4"></a>second_line <span class="op">=</span> info.readline().strip(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb9-5"><a href="#cb9-5"></a></span>
-<span id="cb9-6"><a href="#cb9-6"></a>first_line_words <span class="op">=</span> first_line.split(<span class="st">" "</span>)</span>
-<span id="cb9-7"><a href="#cb9-7"></a>second_line_words <span class="op">=</span> second_line.split(<span class="st">" "</span>)</span>
-<span id="cb9-8"><a href="#cb9-8"></a></span>
-<span id="cb9-9"><a href="#cb9-9"></a><span class="bu">print</span>(first_line_words)</span>
-<span id="cb9-10"><a href="#cb9-10"></a><span class="bu">print</span>(second_line_words)</span>
-<span id="cb9-11"><a href="#cb9-11"></a></span>
-<span id="cb9-12"><a href="#cb9-12"></a>info.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a>info <span class="op">=</span> <span class="bu">open</span>(<span class="st">'info.txt'</span>, <span class="st">'r'</span>)</span>
+<span id="cb15-2"><a href="#cb15-2"></a></span>
+<span id="cb15-3"><a href="#cb15-3"></a>first_line <span class="op">=</span> info.readline().strip(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb15-4"><a href="#cb15-4"></a>second_line <span class="op">=</span> info.readline().strip(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb15-5"><a href="#cb15-5"></a></span>
+<span id="cb15-6"><a href="#cb15-6"></a>first_line_words <span class="op">=</span> first_line.split(<span class="st">" "</span>)</span>
+<span id="cb15-7"><a href="#cb15-7"></a>second_line_words <span class="op">=</span> second_line.split(<span class="st">" "</span>)</span>
+<span id="cb15-8"><a href="#cb15-8"></a></span>
+<span id="cb15-9"><a href="#cb15-9"></a><span class="bu">print</span>(first_line_words)</span>
+<span id="cb15-10"><a href="#cb15-10"></a><span class="bu">print</span>(second_line_words)</span>
+<span id="cb15-11"><a href="#cb15-11"></a></span>
+<span id="cb15-12"><a href="#cb15-12"></a>info.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>['The', 'quick', 'brown', 'fox']
 ['jumped', 'over']</code></pre>
 </div>
 </div>
 </section>
-<section id="write-a-function" class="slide level2">
+<section id="write-a-function-1" class="slide level2">
 <h2>Write a function</h2>
 <ol type="1">
 <li>Its name is <code>lines_and_words</code></li>
@@ -594,33 +636,33 @@ jumped over</code></pre>
 <li>It returns a list of lists, where each inner-list is a line containing all the words in that line</li>
 </ol>
 <p>Test case (<a href="data/info.txt">download text file</a>):</p>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="cf">assert</span> lines_and_words(<span class="st">"info.txt"</span>) <span class="op">==</span> [ [<span class="st">'The'</span>, <span class="st">'quick'</span>, <span class="st">'brown'</span>, <span class="st">'fox'</span>], </span>
-<span id="cb11-2"><a href="#cb11-2"></a>                                        [<span class="st">'jumped'</span>, <span class="st">'over'</span>], [<span class="st">'the'</span>, <span class="st">'lazy'</span>],</span>
-<span id="cb11-3"><a href="#cb11-3"></a>                                        [<span class="st">'bear'</span>], [<span class="st">'sitting'</span>, <span class="st">'by'</span>, <span class="st">'the'</span>, <span class="st">'tree'</span>] ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="cf">assert</span> lines_and_words(<span class="st">"info.txt"</span>) <span class="op">==</span> [ [<span class="st">'The'</span>, <span class="st">'quick'</span>, <span class="st">'brown'</span>, <span class="st">'fox'</span>], </span>
+<span id="cb17-2"><a href="#cb17-2"></a>                                        [<span class="st">'jumped'</span>, <span class="st">'over'</span>], [<span class="st">'the'</span>, <span class="st">'lazy'</span>],</span>
+<span id="cb17-3"><a href="#cb17-3"></a>                                        [<span class="st">'bear'</span>], [<span class="st">'sitting'</span>, <span class="st">'by'</span>, <span class="st">'the'</span>, <span class="st">'tree'</span>] ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw">def</span> lines_and_words(file_name):</span>
-<span id="cb12-2"><a href="#cb12-2"></a>  f <span class="op">=</span> <span class="bu">open</span>(file_name, <span class="st">"r"</span>)</span>
-<span id="cb12-3"><a href="#cb12-3"></a>  all_words <span class="op">=</span> []</span>
-<span id="cb12-4"><a href="#cb12-4"></a>  <span class="cf">for</span> line <span class="kw">in</span> f:</span>
-<span id="cb12-5"><a href="#cb12-5"></a>    all_words.append(line.strip(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>).split(<span class="st">" "</span>))</span>
-<span id="cb12-6"><a href="#cb12-6"></a>  f.close()</span>
-<span id="cb12-7"><a href="#cb12-7"></a>  <span class="cf">return</span> all_words</span>
-<span id="cb12-8"><a href="#cb12-8"></a>  </span>
-<span id="cb12-9"><a href="#cb12-9"></a>  </span>
-<span id="cb12-10"><a href="#cb12-10"></a><span class="kw">def</span> main():</span>
-<span id="cb12-11"><a href="#cb12-11"></a>  <span class="cf">assert</span> lines_and_words(<span class="st">"info.txt"</span>) <span class="op">==</span> [ [<span class="st">'The'</span>, <span class="st">'quick'</span>, <span class="st">'brown'</span>, <span class="st">'fox'</span>], </span>
-<span id="cb12-12"><a href="#cb12-12"></a>                                          [<span class="st">'jumped'</span>, <span class="st">'over'</span>], [<span class="st">'the'</span>, <span class="st">'lazy'</span>],</span>
-<span id="cb12-13"><a href="#cb12-13"></a>                                          [<span class="st">'bear'</span>], [<span class="st">'sitting'</span>, <span class="st">'by'</span>, <span class="st">'the'</span>, <span class="st">'tree'</span>] ]</span>
-<span id="cb12-14"><a href="#cb12-14"></a>                                     </span>
-<span id="cb12-15"><a href="#cb12-15"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a><span class="kw">def</span> lines_and_words(file_name):</span>
+<span id="cb18-2"><a href="#cb18-2"></a>  f <span class="op">=</span> <span class="bu">open</span>(file_name, <span class="st">"r"</span>)</span>
+<span id="cb18-3"><a href="#cb18-3"></a>  all_words <span class="op">=</span> []</span>
+<span id="cb18-4"><a href="#cb18-4"></a>  <span class="cf">for</span> line <span class="kw">in</span> f:</span>
+<span id="cb18-5"><a href="#cb18-5"></a>    all_words.append(line.strip(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>).split(<span class="st">" "</span>))</span>
+<span id="cb18-6"><a href="#cb18-6"></a>  f.close()</span>
+<span id="cb18-7"><a href="#cb18-7"></a>  <span class="cf">return</span> all_words</span>
+<span id="cb18-8"><a href="#cb18-8"></a>  </span>
+<span id="cb18-9"><a href="#cb18-9"></a>  </span>
+<span id="cb18-10"><a href="#cb18-10"></a><span class="kw">def</span> main():</span>
+<span id="cb18-11"><a href="#cb18-11"></a>  <span class="cf">assert</span> lines_and_words(<span class="st">"info.txt"</span>) <span class="op">==</span> [ [<span class="st">'The'</span>, <span class="st">'quick'</span>, <span class="st">'brown'</span>, <span class="st">'fox'</span>], </span>
+<span id="cb18-12"><a href="#cb18-12"></a>                                          [<span class="st">'jumped'</span>, <span class="st">'over'</span>], [<span class="st">'the'</span>, <span class="st">'lazy'</span>],</span>
+<span id="cb18-13"><a href="#cb18-13"></a>                                          [<span class="st">'bear'</span>], [<span class="st">'sitting'</span>, <span class="st">'by'</span>, <span class="st">'the'</span>, <span class="st">'tree'</span>] ]</span>
+<span id="cb18-14"><a href="#cb18-14"></a>                                     </span>
+<span id="cb18-15"><a href="#cb18-15"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="write-a-function-1" class="slide level2">
+<section id="write-a-function-2" class="slide level2">
 <h2>Write a function</h2>
 <ol type="1">
 <li>Its name is <code>count_words</code></li>
@@ -628,36 +670,36 @@ jumped over</code></pre>
 <li>It returns a dictionary with word counts</li>
 </ol>
 <p>Test case:</p>
-<div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="cf">assert</span> count_words(<span class="st">"info.txt"</span>) <span class="op">==</span> {<span class="st">"the"</span>: <span class="dv">3</span>, <span class="st">"quick"</span>: <span class="dv">1</span>, <span class="st">"brown"</span>: <span class="dv">1</span>,</span>
-<span id="cb13-2"><a href="#cb13-2"></a>                                   <span class="st">"fox"</span>: <span class="dv">1</span> , <span class="st">"jumped"</span>: <span class="dv">1</span>, <span class="st">"over"</span>: <span class="dv">1</span>, </span>
-<span id="cb13-3"><a href="#cb13-3"></a>                                   <span class="st">"lazy"</span>: <span class="dv">1</span>, <span class="st">"bear"</span>: <span class="dv">1</span>, <span class="st">"sitting"</span>: <span class="dv">1</span>,</span>
-<span id="cb13-4"><a href="#cb13-4"></a>                                   <span class="st">"by"</span>: <span class="dv">1</span>, <span class="st">"tree"</span>: <span class="dv">1</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="cf">assert</span> count_words(<span class="st">"info.txt"</span>) <span class="op">==</span> {<span class="st">"the"</span>: <span class="dv">3</span>, <span class="st">"quick"</span>: <span class="dv">1</span>, <span class="st">"brown"</span>: <span class="dv">1</span>,</span>
+<span id="cb19-2"><a href="#cb19-2"></a>                                   <span class="st">"fox"</span>: <span class="dv">1</span> , <span class="st">"jumped"</span>: <span class="dv">1</span>, <span class="st">"over"</span>: <span class="dv">1</span>, </span>
+<span id="cb19-3"><a href="#cb19-3"></a>                                   <span class="st">"lazy"</span>: <span class="dv">1</span>, <span class="st">"bear"</span>: <span class="dv">1</span>, <span class="st">"sitting"</span>: <span class="dv">1</span>,</span>
+<span id="cb19-4"><a href="#cb19-4"></a>                                   <span class="st">"by"</span>: <span class="dv">1</span>, <span class="st">"tree"</span>: <span class="dv">1</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-solution-1" class="slide level2">
 <h2>Write a function – solution</h2>
-<div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="kw">def</span> count_words(file_name):</span>
-<span id="cb14-2"><a href="#cb14-2"></a>  f <span class="op">=</span> <span class="bu">open</span>(file_name, <span class="st">"r"</span>)</span>
-<span id="cb14-3"><a href="#cb14-3"></a>  counts <span class="op">=</span> {}</span>
-<span id="cb14-4"><a href="#cb14-4"></a>  <span class="cf">for</span> line <span class="kw">in</span> f:</span>
-<span id="cb14-5"><a href="#cb14-5"></a>    words <span class="op">=</span> line.strip(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>).split(<span class="st">" "</span>)</span>
-<span id="cb14-6"><a href="#cb14-6"></a>    <span class="cf">for</span> w <span class="kw">in</span> words:</span>
-<span id="cb14-7"><a href="#cb14-7"></a>      lower_case_w <span class="op">=</span> w.lower()</span>
-<span id="cb14-8"><a href="#cb14-8"></a>      <span class="cf">if</span> lower_case_w <span class="kw">not</span> <span class="kw">in</span> counts:</span>
-<span id="cb14-9"><a href="#cb14-9"></a>        counts[lower_case_w] <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb14-10"><a href="#cb14-10"></a>      <span class="cf">else</span>:</span>
-<span id="cb14-11"><a href="#cb14-11"></a>        counts[lower_case_w] <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb14-12"><a href="#cb14-12"></a>  <span class="cf">return</span> counts</span>
-<span id="cb14-13"><a href="#cb14-13"></a></span>
-<span id="cb14-14"><a href="#cb14-14"></a><span class="kw">def</span> main():</span>
-<span id="cb14-15"><a href="#cb14-15"></a>  <span class="cf">assert</span> count_words(<span class="st">"info.txt"</span>) <span class="op">==</span> {<span class="st">"the"</span>: <span class="dv">3</span>, <span class="st">"quick"</span>: <span class="dv">1</span>, <span class="st">"brown"</span>: <span class="dv">1</span>,</span>
-<span id="cb14-16"><a href="#cb14-16"></a>                                     <span class="st">"fox"</span>: <span class="dv">1</span> , <span class="st">"jumped"</span>: <span class="dv">1</span>, <span class="st">"over"</span>: <span class="dv">1</span>, </span>
-<span id="cb14-17"><a href="#cb14-17"></a>                                     <span class="st">"lazy"</span>: <span class="dv">1</span>, <span class="st">"bear"</span>: <span class="dv">1</span>, <span class="st">"sitting"</span>: <span class="dv">1</span>,</span>
-<span id="cb14-18"><a href="#cb14-18"></a>                                     <span class="st">"by"</span>: <span class="dv">1</span>, <span class="st">"tree"</span>: <span class="dv">1</span>}</span>
-<span id="cb14-19"><a href="#cb14-19"></a>                                 </span>
-<span id="cb14-20"><a href="#cb14-20"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a><span class="kw">def</span> count_words(file_name):</span>
+<span id="cb20-2"><a href="#cb20-2"></a>  f <span class="op">=</span> <span class="bu">open</span>(file_name, <span class="st">"r"</span>)</span>
+<span id="cb20-3"><a href="#cb20-3"></a>  counts <span class="op">=</span> {}</span>
+<span id="cb20-4"><a href="#cb20-4"></a>  <span class="cf">for</span> line <span class="kw">in</span> f:</span>
+<span id="cb20-5"><a href="#cb20-5"></a>    words <span class="op">=</span> line.strip(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>).split(<span class="st">" "</span>)</span>
+<span id="cb20-6"><a href="#cb20-6"></a>    <span class="cf">for</span> w <span class="kw">in</span> words:</span>
+<span id="cb20-7"><a href="#cb20-7"></a>      lower_case_w <span class="op">=</span> w.lower()</span>
+<span id="cb20-8"><a href="#cb20-8"></a>      <span class="cf">if</span> lower_case_w <span class="kw">not</span> <span class="kw">in</span> counts:</span>
+<span id="cb20-9"><a href="#cb20-9"></a>        counts[lower_case_w] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb20-10"><a href="#cb20-10"></a>      <span class="cf">else</span>:</span>
+<span id="cb20-11"><a href="#cb20-11"></a>        counts[lower_case_w] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb20-12"><a href="#cb20-12"></a>  <span class="cf">return</span> counts</span>
+<span id="cb20-13"><a href="#cb20-13"></a></span>
+<span id="cb20-14"><a href="#cb20-14"></a><span class="kw">def</span> main():</span>
+<span id="cb20-15"><a href="#cb20-15"></a>  <span class="cf">assert</span> count_words(<span class="st">"info.txt"</span>) <span class="op">==</span> {<span class="st">"the"</span>: <span class="dv">3</span>, <span class="st">"quick"</span>: <span class="dv">1</span>, <span class="st">"brown"</span>: <span class="dv">1</span>,</span>
+<span id="cb20-16"><a href="#cb20-16"></a>                                     <span class="st">"fox"</span>: <span class="dv">1</span> , <span class="st">"jumped"</span>: <span class="dv">1</span>, <span class="st">"over"</span>: <span class="dv">1</span>, </span>
+<span id="cb20-17"><a href="#cb20-17"></a>                                     <span class="st">"lazy"</span>: <span class="dv">1</span>, <span class="st">"bear"</span>: <span class="dv">1</span>, <span class="st">"sitting"</span>: <span class="dv">1</span>,</span>
+<span id="cb20-18"><a href="#cb20-18"></a>                                     <span class="st">"by"</span>: <span class="dv">1</span>, <span class="st">"tree"</span>: <span class="dv">1</span>}</span>
+<span id="cb20-19"><a href="#cb20-19"></a>                                 </span>
+<span id="cb20-20"><a href="#cb20-20"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="quiz-04" class="slide level2">

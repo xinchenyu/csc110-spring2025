@@ -7,14 +7,6 @@ df-print: kable
 
 # CSc 110 - files
 
-## Announcements
-
--   All CSC 110  TA office hours have moved to GS 813 
-
--   Quiz 04 this Wednesday (lists)
-
-    -   when finding max or min, how to avoid error if the list is empty?
-
 
 ## Files and file systems
 
@@ -30,17 +22,15 @@ df-print: kable
 
 -   To open a file in a python program:
 
-    **`a_file = open(file_name, mode)`**
+    **`info = open(file_name, mode)`**
 
--   **file_name** should be the name of the file to open
+-   `file_name`: the name of the file to open
 
     -   It can also be a path
 
--   **mode should be the mode in which to open in**
+-   `mode`: the mode in which to open in
 
     -   **'a'    'r'    'w'**
-
-After opening, use the **a_file** object to read from or write to the file
 
 ## Absolute vs Relative path
 
@@ -72,25 +62,39 @@ info = open('info.txt', 'r')
 info.close()
 ```
 
-
-
 ## Reading a line
 
--   **`file.readline()`**
+Use `info` object and call `readline()`to read a line
 
-    -   reads one line from a file, returns a string 
+read_file.py
 
-    -   returns an empty string if it has reached the end of the content
+```{python}
+#| eval: true
+#| echo: true
+info = open('info.txt', 'r')
+line = info.readline()
+info.close()
 
--   **`file.readlines()`**
+print(line)
+```
 
-    -   reads all of the lines
+## Reading three lines 
 
-    -   returns a list of strings
+```{python}
+#| eval: true
+#| echo: true
+info = open('info.txt', 'r')
+print(info.readline())
+print(info.readline())
+print(info.readline())
+info.close()
+```
 
--   **`file.read()`**
+# Write a function
 
-    -   returns one string
+Function name `read_first_line`: given a `filename` string, open file in read (`'r'`) mode, read one line, close file, return that line.
+
+Name your file `first_read.py` and submit to gradescope.
 
 ## Reading a line example
 
@@ -104,7 +108,7 @@ bear
 sitting by the tree
 ```
 
-read_line.py
+first_read.py
 
 ```{python}
 #| eval: true
@@ -118,15 +122,37 @@ def read_first_line(filename):
 assert read_first_line('info.txt') == "The quick brown fox\n"
 ```
 
-# Submit code for attendance
+## Reading lines
 
-Submit the `read_first_line` function to Gradescope for attendance (given a file name string, open file in read mode, read first line, return that first line).
+-   **`file.readline()`**
 
-Name your file `first_read.py`
+    -   reads one line from a file, returns a string 
 
-## Iterating over a file directly
+-   **`file.readlines()`**
 
-The type `file` is iterable so we can use a `for x in file` loop:
+    -   reads all of the lines, returns a list of strings
+
+-   **`file.read()`**
+
+    -   returns one string
+
+## Iterating over a file
+
+Use `readlines()`:
+
+```{python}
+#| eval: true
+#| echo: true
+info = open('info.txt', 'r')
+for line in info.readlines():
+    print(line)
+info.close()
+```
+
+
+## Iterating over a file -- an easier way
+
+Here `info` is iterable, so we can use `for x in file` loop:
 
 ```{python}
 #| eval: true
