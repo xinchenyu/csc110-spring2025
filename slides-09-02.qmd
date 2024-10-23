@@ -16,12 +16,11 @@ df-print: kable
 
 ## Write a function
 
-1.  Its name is `sum_all`
-2.  It takes a string `file_name` as argument
-3.  It reads the file with `file_name` in read mode
-4.  It iterates over each line in [the file](data/numbers.txt), stripping the line breaks, casting each line as integer (assume each line is a single number), summing each number to a total variable
-5.  Return the total
-6.  [Download the text file](data/numbers.txt) for the test case below
+Its name is `sum_all` that takes a string `filename` as argument.
+It reads the file with `filename` and iterates over each line in [the file](data/numbers.txt), stripping the line breaks, casting each line as integer (assume each line is a single number), summing each number to a total variable. Return the total.
+
+Name your file `sum_numbers.py` and submit to Gradescope.
+
 
 ```{python}
 #| echo: true
@@ -47,12 +46,6 @@ def main():
 main()
 ```
 
-
-# Submit code for attendance
-
-Submit your `sum_all` functions to Gradescope for attendance.
-
-Name your file `sum_numbers.py`
 
 ## Modes
 
@@ -82,6 +75,14 @@ Name your file `sum_numbers.py`
 
 -   When finished writing, **close** the file **a_file.close()**
 
+## Create a file
+
+words.txt
+
+```{html}
+Let us start a story.
+```
+
 ## Evaluate the code
 
 ```{python}
@@ -100,9 +101,27 @@ words.close()
 #| echo: true
 #| eval: true
 words = open('words.txt', 'w')
+words.write('The slow wolf')
+words.write('jumped over')
+words.write('the bear')
+words.close()
+```
+
+words.txt
+
+```{html}
+The slow wolfjumped overthe bear
+```
+
+## Evaluate the code
+
+```{python}
+#| echo: true
+#| eval: true
+words = open('words.txt', 'w')
 words.write('The slow wolf\n')
 words.write('jumped over\n')
-words.write('the bear\n')
+words.write('the bear')
 words.close()
 ```
 
@@ -111,11 +130,77 @@ words.close()
 ```{python}
 #| echo: true
 #| eval: true
-words = open('words.txt', 'a')
+words = open('words.txt', 'w')
 words.write('The slow wolf\n')
 words.write('jumped over\n')
-words.write('the bear\n')
+words.write('the bear')
 words.close()
+```
+
+words.txt
+
+```{html}
+The slow wolf
+jumped over
+the bear
+```
+
+## Evaluate the code -- continued
+
+```{python}
+#| echo: true
+#| eval: true
+words = open('words.txt', 'a')
+words.write(' The quick fox\n')
+words.write('jumped over\n')
+words.write('the bear')
+words.close()
+```
+
+## Evaluate the code -- continued
+
+```{python}
+#| echo: true
+#| eval: true
+words = open('words.txt', 'a')
+words.write(' The quick fox\n')
+words.write('jumped over\n')
+words.write('the bear')
+words.close()
+```
+
+words.txt
+
+```{html}
+The slow wolf
+jumped over
+the bear The quick fox
+jumped over
+the bear
+```
+
+## Combining dictionary with write
+
+```{python}
+#| eval: false
+#| echo: true
+info = {"a": 2, "b": 5, "c": 0}
+output = open("count.txt", "w")
+
+for key, value in info.items():
+  output.write(key + ", " + str(value) + "\n")
+output.write("end")
+
+output.close()
+```
+
+count.txt
+
+```{html}
+a, 2
+b, 5
+c, 0
+end   
 ```
 
 ## Write a function

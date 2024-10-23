@@ -3301,7 +3301,7 @@
     "href": "slides-09-02.html#write-a-function",
     "title": "files and strings (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is sum_all\nIt takes a string file_name as argument\nIt reads the file with file_name in read mode\nIt iterates over each line in the file, stripping the line breaks, casting each line as integer (assume each line is a single number), summing each number to a total variable\nReturn the total\nDownload the text file for the test case below\n\n\nassert sum_all(\"numbers.txt\") == 15"
+    "text": "Write a function\nIts name is sum_all that takes a string filename as argument. It reads the file with filename and iterates over each line in the file, stripping the line breaks, casting each line as integer (assume each line is a single number), summing each number to a total variable. Return the total.\nName your file sum_numbers.py and submit to Gradescope.\n\nassert sum_all(\"numbers.txt\") == 15"
   },
   {
     "objectID": "slides-09-02.html#write-a-function-solution",
@@ -3336,14 +3336,14 @@
     "href": "slides-09-02.html#evaluate-the-code-1",
     "title": "files and strings (class slides)",
     "section": "Evaluate the code",
-    "text": "Evaluate the code\n\nwords = open('words.txt', 'w')\nwords.write('The slow wolf\\n')\nwords.write('jumped over\\n')\nwords.write('the bear\\n')\nwords.close()"
+    "text": "Evaluate the code\n\nwords = open('words.txt', 'w')\nwords.write('The slow wolf')\nwords.write('jumped over')\nwords.write('the bear')\nwords.close()\n\nwords.txt\nThe slow wolfjumped overthe bear"
   },
   {
     "objectID": "slides-09-02.html#evaluate-the-code-2",
     "href": "slides-09-02.html#evaluate-the-code-2",
     "title": "files and strings (class slides)",
     "section": "Evaluate the code",
-    "text": "Evaluate the code\n\nwords = open('words.txt', 'a')\nwords.write('The slow wolf\\n')\nwords.write('jumped over\\n')\nwords.write('the bear\\n')\nwords.close()"
+    "text": "Evaluate the code\n\nwords = open('words.txt', 'w')\nwords.write('The slow wolf\\n')\nwords.write('jumped over\\n')\nwords.write('the bear')\nwords.close()"
   },
   {
     "objectID": "slides-09-02.html#write-a-function-1",
@@ -5668,5 +5668,54 @@
     "title": "files (class slides)",
     "section": "Iterating over a file – an easier way",
     "text": "Iterating over a file – an easier way\nHere info is iterable, so we can use for x in file loop:\n\ninfo = open('info.txt', 'r')\nfor line in info:\n    print(line)\ninfo.close()\n\nThe quick brown fox\n\njumped over\n\nthe lazy\n\nbear\n\nsitting by the tree"
+  },
+  {
+    "objectID": "slides-09-02.html#evaluate-the-code-3",
+    "href": "slides-09-02.html#evaluate-the-code-3",
+    "title": "files and strings (class slides)",
+    "section": "Evaluate the code",
+    "text": "Evaluate the code\n\nwords = open('words.txt', 'w')\nwords.write('The slow wolf\\n')\nwords.write('jumped over\\n')\nwords.write('the bear')\nwords.close()\n\nwords.txt\nThe slow wolf\njumped over\nthe bear"
+  },
+  {
+    "objectID": "slides-09-02.html#evaluate-the-code-4",
+    "href": "slides-09-02.html#evaluate-the-code-4",
+    "title": "files and strings (class slides)",
+    "section": "Evaluate the code",
+    "text": "Evaluate the code\n\nwords = open('words.txt', 'a')\nwords.write(' The quick fox\\n')\nwords.write('jumped over\\n')\nwords.write('the bear')\nwords.close()\n\nwords.txt\nThe slow wolf\njumped over\nthe bear The quick fox\njumped over\nthe bear"
+  },
+  {
+    "objectID": "slides-09-02.html#evaluate-the-code-5",
+    "href": "slides-09-02.html#evaluate-the-code-5",
+    "title": "files and strings (class slides)",
+    "section": "Evaluate the code",
+    "text": "Evaluate the code\n\nwords = open('words.txt', 'a')\nwords.write(' The slow wolf\\n')\nwords.write('jumped over\\n')\nwords.write('the bear')\nwords.close()\n\nwords.txt\nThe slow wolf\njumped over\nthe bear The slow wolf\njumped over\nthe bear"
+  },
+  {
+    "objectID": "slides-09-02.html#evaluate-the-code-continued",
+    "href": "slides-09-02.html#evaluate-the-code-continued",
+    "title": "files and strings (class slides)",
+    "section": "Evaluate the code – continued",
+    "text": "Evaluate the code – continued\n\nwords = open('words.txt', 'a')\nwords.write(' The quick fox\\n')\nwords.write('jumped over\\n')\nwords.write('the bear')\nwords.close()"
+  },
+  {
+    "objectID": "slides-09-02.html#create-a-file",
+    "href": "slides-09-02.html#create-a-file",
+    "title": "files and strings (class slides)",
+    "section": "Create a file",
+    "text": "Create a file\nwords.txt\nLet us start a story."
+  },
+  {
+    "objectID": "slides-09-02.html#evaluate-the-code-continued-1",
+    "href": "slides-09-02.html#evaluate-the-code-continued-1",
+    "title": "files and strings (class slides)",
+    "section": "Evaluate the code – continued",
+    "text": "Evaluate the code – continued\n\nwords = open('words.txt', 'a')\nwords.write(' The quick fox\\n')\nwords.write('jumped over\\n')\nwords.write('the bear')\nwords.close()\n\nwords.txt\nThe slow wolf\njumped over\nthe bear The quick fox\njumped over\nthe bear"
+  },
+  {
+    "objectID": "slides-09-02.html#combining-dictionary-with-write",
+    "href": "slides-09-02.html#combining-dictionary-with-write",
+    "title": "files and strings (class slides)",
+    "section": "Combining dictionary with write",
+    "text": "Combining dictionary with write\n\ninfo = {\"a\": 2, \"b\": 5, \"c\": 0}\noutput = open(\"count.txt\", \"w\")\n\nfor key, value in info.items():\n  output.write(key + \", \" + str(value) + \"\\n\")\noutput.write(\"end\")\n\noutput.close()\n\ncount.txt\na, 2\nb, 5\nc, 0\nend"
   }
 ]
