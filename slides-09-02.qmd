@@ -205,10 +205,10 @@ end
 
 ## Write a function
 
-1.  Its name is `write_word_count`
-2.  It takes a string `file_name` as argument, it opens the file in read mode
-3.  It writes a comma separated file ("out_" + original filename), with the lowercase word as first value and count second
-4.  [Download test file](data/alien.txt)
+Its name is `write_word_count` that takes a string `file_name` as argument, it opens the file in read mode.
+It writes a comma separated file ("out_" + original filename), with the lowercase word as first value and count second. [Download test file](data/alien.txt)
+
+Name file as `read_and_write.py`, submit for attendance.
 
 Test case:
 
@@ -250,6 +250,3 @@ def main():
 main()
 ```
 
-# Submit Attendance
-
-Name your previous solution `read_and_write.py` and submit it to attendance on Gradescope

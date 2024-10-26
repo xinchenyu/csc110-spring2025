@@ -1061,14 +1061,14 @@
     "href": "slides-10-01.html#write-a-function-2",
     "title": "returning tuples (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is odds_and_evens\nIt takes one list of integers as argument\nIt returns two lists: one with all the odd numbers in integers, and another with all the even numbers in integers\n\n\nprint( odds_and_evens([2,6,1]) ) # ([1], [2,6])"
+    "text": "Write a function\n\nIts name is odds_and_evens\nIt takes one list of integers as argument\nIt returns two lists: one with all the odd numbers in integers, and another with all the even numbers in integers\n\n\nassert odds_and_evens([2,6,1]) == ([1], [2,6])"
   },
   {
     "objectID": "slides-10-01.html#write-a-function-solution-2",
     "href": "slides-10-01.html#write-a-function-solution-2",
     "title": "returning tuples (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef odds_and_evens(integers):\n  odds = []\n  evens = []\n  for n in integers:\n    if n % 2 == 0:\n      evens.append(n)\n    else:\n      odds.append(n)\n  return odds, evens\n      \ndef main():\n  print( odds_and_evens([2,6,1]) ) # ([1], [2,6])\n  \nmain()\n\n([1], [2, 6])"
+    "text": "Write a function – solution\n\ndef odds_and_evens(integers):\n  odds = []\n  evens = []\n  for n in integers:\n    if n % 2 == 0:\n      evens.append(n)\n    else:\n      odds.append(n)\n  return odds, evens\n      \ndef main():\n  assert odds_and_evens([2,6,1]) == ([1], [2,6])\n  \nmain()"
   },
   {
     "objectID": "strings.html",
@@ -3350,7 +3350,7 @@
     "href": "slides-09-02.html#write-a-function-1",
     "title": "files and strings (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is write_word_count\nIt takes a string file_name as argument, it opens the file in read mode\nIt writes a comma separated file (“out_” + original filename), with the lowercase word as first value and count second\nDownload test file\n\nTest case:\n\nwrite_word_count(\"alien.txt\")\n# writes out out_alien.txt with word counts"
+    "text": "Write a function\nIts name is write_word_count that takes a string file_name as argument, it opens the file in read mode. It writes a comma separated file (“out_” + original filename), with the lowercase word as first value and count second. Download test file\nName file as read_and_write.py, submit for attendance.\nTest case:\n\nwrite_word_count(\"alien.txt\")\n# writes out out_alien.txt with word counts"
   },
   {
     "objectID": "slides-09-02.html#write-a-function-solution-1",

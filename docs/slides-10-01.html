@@ -400,21 +400,6 @@
 <h1>CSc 110 - returning tuples</h1>
 
 </section>
-<section id="announcements" class="slide level2">
-<h2>Announcements</h2>
-<ul>
-<li>Quiz 05 this Wednesday
-<ul>
-<li>dictionary and list</li>
-<li>read and write to files</li>
-</ul></li>
-<li>Midterm 2 on Wednesday March 27 (bring PHOTO ID)
-<ul>
-<li>content: Modules 1 to 10</li>
-<li>Review session: Tuesday, March 26, 5pm to 7pm, Commons 105</li>
-</ul></li>
-</ul>
-</section>
 <section id="what-are-tuples" class="slide level2">
 <h2>What are tuples?</h2>
 <ul>
@@ -430,13 +415,13 @@
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>my_tuple <span class="op">=</span> (<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>)</span>
 <span id="cb1-2"><a href="#cb1-2"></a>my_tuple[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
+<div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>2</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>my_tuple[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>6</code></pre>
 </div>
 </div>
@@ -444,7 +429,7 @@
 <div class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>empty <span class="op">=</span> ()</span>
 <span id="cb5-2"><a href="#cb5-2"></a>empty</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>()</code></pre>
 </div>
 </div>
@@ -561,7 +546,7 @@
 <li>It returns two lists: one with all the odd numbers in <code>integers</code>, and another with all the even numbers in <code>integers</code></li>
 </ol>
 <div class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="bu">print</span>( odds_and_evens([<span class="dv">2</span>,<span class="dv">6</span>,<span class="dv">1</span>]) ) <span class="co"># ([1], [2,6])</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="cf">assert</span> odds_and_evens([<span class="dv">2</span>,<span class="dv">6</span>,<span class="dv">1</span>]) <span class="op">==</span> ([<span class="dv">1</span>], [<span class="dv">2</span>,<span class="dv">6</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-solution-2" class="slide level2">
@@ -578,12 +563,9 @@
 <span id="cb15-9"><a href="#cb15-9"></a>  <span class="cf">return</span> odds, evens</span>
 <span id="cb15-10"><a href="#cb15-10"></a>      </span>
 <span id="cb15-11"><a href="#cb15-11"></a><span class="kw">def</span> main():</span>
-<span id="cb15-12"><a href="#cb15-12"></a>  <span class="bu">print</span>( odds_and_evens([<span class="dv">2</span>,<span class="dv">6</span>,<span class="dv">1</span>]) ) <span class="co"># ([1], [2,6])</span></span>
+<span id="cb15-12"><a href="#cb15-12"></a>  <span class="cf">assert</span> odds_and_evens([<span class="dv">2</span>,<span class="dv">6</span>,<span class="dv">1</span>]) <span class="op">==</span> ([<span class="dv">1</span>], [<span class="dv">2</span>,<span class="dv">6</span>])</span>
 <span id="cb15-13"><a href="#cb15-13"></a>  </span>
 <span id="cb15-14"><a href="#cb15-14"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>([1], [2, 6])</code></pre>
-</div>
 </div>
 
 <div class="footer footer-default">
