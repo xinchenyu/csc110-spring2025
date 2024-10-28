@@ -551,9 +551,16 @@
 <span id="cb16-3"><a href="#cb16-3"></a>c, 0</span>
 <span id="cb16-4"><a href="#cb16-4"></a>end   </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="write-a-function-1" class="slide level2">
-<h2>Write a function</h2>
-<p>Its name is <code>write_word_count</code> that takes a string <code>file_name</code> as argument, it opens the file in read mode. It writes a comma separated file (“out_” + original filename), with the lowercase word as first value and count second. <a href="data/alien.txt">Download test file</a></p>
+<section id="write-two-functions" class="slide level2">
+<h2>Write two functions</h2>
+<ul>
+<li>Both functions takes a string <code>file_name</code> as argument:
+<ul>
+<li><code>count_words</code> count frequency of each lowercase word, return a dictionary.</li>
+<li><code>write_word_count</code> call <code>count_words</code>, iterate it and write a comma separated file (“out_” + <code>file_name</code>).</li>
+</ul></li>
+<li><a href="data/alien.txt">Download test file</a></li>
+</ul>
 <p>Name file as <code>read_and_write.py</code>, submit for attendance.</p>
 <p>Test case:</p>
 <div class="cell" data-execution_count="10">
@@ -561,8 +568,8 @@
 <span id="cb17-2"><a href="#cb17-2"></a><span class="co"># writes out out_alien.txt with word counts</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="write-a-function-solution-1" class="slide level2">
-<h2>Write a function – solution</h2>
+<section id="write-two-functions-solution" class="slide level2">
+<h2>Write two functions – solution</h2>
 <div class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a><span class="kw">def</span> count_words(file_name):</span>
 <span id="cb18-2"><a href="#cb18-2"></a>  f <span class="op">=</span> <span class="bu">open</span>(file_name, <span class="st">"r"</span>)</span>

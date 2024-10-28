@@ -5717,5 +5717,19 @@
     "title": "files and strings (class slides)",
     "section": "Combining dictionary with write",
     "text": "Combining dictionary with write\n\ninfo = {\"a\": 2, \"b\": 5, \"c\": 0}\noutput = open(\"count.txt\", \"w\")\n\nfor key, value in info.items():\n  output.write(key + \", \" + str(value) + \"\\n\")\noutput.write(\"end\")\n\noutput.close()\n\ncount.txt\na, 2\nb, 5\nc, 0\nend"
+  },
+  {
+    "objectID": "slides-09-02.html#write-two-functions",
+    "href": "slides-09-02.html#write-two-functions",
+    "title": "files and strings (class slides)",
+    "section": "Write two functions",
+    "text": "Write two functions\n\nBoth functions takes a string file_name as argument:\n\ncount_words count frequency of each lowercase word, return a dictionary.\nwrite_word_count call count_words, iterate it and write a comma separated file (“out_” + file_name).\n\nDownload test file\n\nName file as read_and_write.py, submit for attendance.\nTest case:\n\nwrite_word_count(\"alien.txt\")\n# writes out out_alien.txt with word counts"
+  },
+  {
+    "objectID": "slides-09-02.html#write-two-functions-solution",
+    "href": "slides-09-02.html#write-two-functions-solution",
+    "title": "files and strings (class slides)",
+    "section": "Write two functions – solution",
+    "text": "Write two functions – solution\n\ndef count_words(file_name):\n  f = open(file_name, \"r\")\n  counts = {}\n  for line in f:\n    words = line.strip(\"\\n\").split(\" \")\n    for w in words:\n      lower_case_w = w.lower()\n      if lower_case_w not in counts:\n        counts[lower_case_w] = 1\n      else:\n        counts[lower_case_w] += 1\n  return counts\n\ndef write_word_count(file_name):\n  count_dict = count_words(file_name)\n  output_file = open(\"out_\" + file_name, \"w\")\n  for key, value in count_dict.items():\n    output_file.write(key + \",\" + str(value) + \"\\n\")\n  output_file.close()\n  \ndef main(): \n  write_word_count(\"alien.txt\")\n  \nmain()"
   }
 ]

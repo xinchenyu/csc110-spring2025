@@ -203,10 +203,12 @@ c, 0
 end   
 ```
 
-## Write a function
+## Write two functions
 
-Its name is `write_word_count` that takes a string `file_name` as argument, it opens the file in read mode.
-It writes a comma separated file ("out_" + original filename), with the lowercase word as first value and count second. [Download test file](data/alien.txt)
+*   Both functions takes a string `file_name` as argument: 
+    *  `count_words` count frequency of each lowercase word, return a dictionary.
+    *  `write_word_count` call `count_words`, iterate it and write a comma separated file ("out_" + `file_name`). 
+*   [Download test file](data/alien.txt)
 
 Name file as `read_and_write.py`, submit for attendance.
 
@@ -219,7 +221,7 @@ write_word_count("alien.txt")
 # writes out out_alien.txt with word counts
 ```
 
-## Write a function -- solution
+## Write two functions -- solution
 
 ```{python}
 #| eval: true
