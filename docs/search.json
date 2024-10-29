@@ -5289,14 +5289,14 @@
     "href": "slides-10-02.html#variable-length-parameter",
     "title": "tuples (class slides)",
     "section": "Variable length parameter",
-    "text": "Variable length parameter\nSometimes you want to handle a variable number of parameters (like print does)\n\nprint(1, 2, 3)\n\n1 2 3"
+    "text": "Variable length parameter\nSometimes you want to handle a variable number of parameters (like print does)\n\nprint(1, 2, 3, 4, 5)\n\n1 2 3 4 5"
   },
   {
     "objectID": "slides-10-02.html#variable-length-parameter-1",
     "href": "slides-10-02.html#variable-length-parameter-1",
     "title": "tuples (class slides)",
     "section": "Variable length parameter",
-    "text": "Variable length parameter\nYou can add a * before your parameter name so that it accepts a variable number of arguments, gathering them into a tuple\n\ndef concatenate(*values):\n  new_string = \"\"\n  for v in values:\n    new_string += str(v) + \" \"\n  return new_string[:-1]\n\ndef main():\n  print( concatenate(\"The\", \"temperature\", \"is\", 82, \"degrees\"))\n  \nmain()\n\nThe temperature is 82 degrees"
+    "text": "Variable length parameter\nAdd a * before your parameter name so that it accepts a variable number of arguments, gathering them into a tuple\n\ndef func(*values):\n  print(values)\n  for v in values:\n    print(v)\n  \ndef main():\n  func(0, 2, 'quick', 4, 'brown', 'fox')\n  \nmain()\n\n(0, 2, 'quick', 4, 'brown', 'fox')\n0\n2\nquick\n4\nbrown\nfox"
   },
   {
     "objectID": "slides-10-02.html#write-a-function",
@@ -5738,5 +5738,19 @@
     "title": "returning tuples (class slides)",
     "section": "Write a function – solution",
     "text": "Write a function – solution\n\ndef odds_and_evens(integers):\n  odds = []\n  evens = []\n  for n in integers:\n    if n % 2 == 0:\n      evens.append(n)\n    else:\n      odds.append(n)\n  return odds, evens\n      \ndef main():\n  assert odds_and_evens([2,6,1]) == ([1], [2,6])\n  \nmain()"
+  },
+  {
+    "objectID": "slides-10-02.html#quiz-08",
+    "href": "slides-10-02.html#quiz-08",
+    "title": "tuples (class slides)",
+    "section": "Quiz 08",
+    "text": "Quiz 08\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.\nNo need to write main() function."
+  },
+  {
+    "objectID": "slides-10-02.html#variable-length-parameter-2",
+    "href": "slides-10-02.html#variable-length-parameter-2",
+    "title": "tuples (class slides)",
+    "section": "Variable length parameter",
+    "text": "Variable length parameter\nAdd a * before your parameter name so that it accepts a variable number of arguments, gathering them into a tuple\n\ndef concatenate(*values):\n  new_string = \"\"\n  for v in values:\n    new_string += str(v) + \" \"\n  return new_string[:-1]\n\ndef main():\n  print( concatenate(\"The\", \"temperature\", \"is\", 82, \"degrees\"))\n  \nmain()\n\nThe temperature is 82 degrees"
   }
 ]
