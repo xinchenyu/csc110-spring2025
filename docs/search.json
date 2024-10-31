@@ -3609,7 +3609,7 @@
     "href": "slides-11-01.html#for-loops-with-lists-of-lists",
     "title": "more on for loops (class slides)",
     "section": "for loops with lists of lists",
-    "text": "for loops with lists of lists\n\nitems = [[9, 7, 8],\n         [5],\n         [10, 20, 30]]\n         \nfor i in range(len(items)):\n  for j in range(len(items[i])):\n    print( items[i][j] )\n\n9\n7\n8\n5\n10\n20\n30"
+    "text": "for loops with lists of lists\n\nitems = [[9, 7, 8],\n         [5],\n         [10, 20, 30]]\n         \nfor i in range(len(items)):\n  print(items[i])\n  for j in range(len(items[i])):\n    print( items[i][j] )\n\n[9, 7, 8]\n9\n7\n8\n[5]\n5\n[10, 20, 30]\n10\n20\n30"
   },
   {
     "objectID": "slides-11-01.html#write-a-function",
@@ -3630,7 +3630,7 @@
     "href": "slides-11-01.html#write-a-function-1",
     "title": "more on for loops (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is get_highest_average\nIt takes an argument, lists, which is a 2D list of numbers (floats or integers)\nIt calculates the mean of each sublist, and returns the highest average\n\n\nassert get_highest_average([[1, 1, 1], [2, 2]]) == 2"
+    "text": "Write a function\n\nIts name is get_highest_average\nIt takes an argument, lists, which is a 2D list of numbers (floats or integers)\nIt calculates the mean of each sublist, and returns the highest average\n\n\nassert get_highest_average([[1, 1, 1], [2, 2]]) == 2\nassert get_highest_average([[], []]) == None\nassert get_highest_average([]) == None"
   },
   {
     "objectID": "slides-11-01.html#write-a-function-2",
@@ -3644,14 +3644,14 @@
     "href": "slides-11-01.html#write-a-function-solution-1",
     "title": "more on for loops (class slides)",
     "section": "Write a function – solution 1",
-    "text": "Write a function – solution 1\n\ndef get_highest_average(numbers):\n  means = []\n  for i in range(len(numbers)):\n    if len(numbers[i]) &gt; 0:\n      total_sublist = 0\n      for j in range(len(numbers[i])):\n        total_sublist += numbers[i][j]\n      mean_sublist = total_sublist / len(numbers[i])\n      means.append(mean_sublist)\n  \n  if len(means) &gt; 0:\n    highest_mean = means[0]\n    for i in range(len(means)):\n      if means[i] &gt; highest_mean:\n        highest_mean = means[i]\n        \n    return highest_mean\n\ndef main():\n  assert get_highest_average([[1, 1, 1], [2, 2]]) == 2\n  assert get_highest_average([[1, 1, 1], []]) == 1\n  assert get_highest_average([[], []]) == None\n  assert get_highest_average([]) == None\n  \n  weeks = [ [100, 100, 105, 105, 102, 102, 100],\n            [70, 71, 75, 72, 81, 80, 74],\n            [78, 72, 74, 71, 70, 70, 70],\n            [30, 32, 40, 38, 31, 32, 30] ]\n  average = get_highest_average(weeks)\n  assert average == 102\n  \nmain()"
+    "text": "Write a function – solution 1\n\ndef get_highest_average(lists):\n    means = []\n    highest_mean = None\n    for i in range(len(lists)):\n        if len(lists[i]) &gt; 0:\n            total = 0\n            for j in range(len(lists[i])):\n                total += lists[i][j]\n            mean = total/len(lists[i])\n            means.append(mean)\n    for n in means:\n        if highest_mean == None or n &gt; highest_mean:\n            highest_mean = n\n    return highest_mean\n\ndef main():\n    assert get_highest_average([[1, 1, 1], [2, 2]]) == 2\n    assert get_highest_average([[1, 1, 1], []]) == 1\n    assert get_highest_average([[], []]) == None\n    assert get_highest_average([]) == None\n    \n    weeks = [ [100, 100, 105, 105, 102, 102, 100],\n              [70, 71, 75, 72, 81, 80, 74],\n              [78, 72, 74, 71, 70, 70, 70],\n              [30, 32, 40, 38, 31, 32, 30] ]\n    average = get_highest_average(weeks)\n    assert average == 102\n  \nmain()"
   },
   {
     "objectID": "slides-11-01.html#write-a-function-solution-2",
     "href": "slides-11-01.html#write-a-function-solution-2",
     "title": "more on for loops (class slides)",
     "section": "Write a function – solution 2",
-    "text": "Write a function – solution 2\n\ndef get_highest_average(number_lists):\n    max_average = None\n    for i in range(len(number_lists)):\n        if len(number_lists[i]) &gt; 0:\n            total_sublist = 0\n            for j in range(len(number_lists[i])):\n                total_sublist += number_lists[i][j]\n            average = total_sublist/len(number_lists[i])\n            if max_average == None or average &gt; max_average:\n                max_average = average\n    return max_average\n\ndef main():\n  assert get_highest_average([[1, 1, 1], [2, 2]]) == 2\n  assert get_highest_average([[1, 1, 1], []]) == 1\n  assert get_highest_average([[], []]) == None\n  assert get_highest_average([]) == None\n  \n  weeks = [ [100, 100, 105, 105, 102, 102, 100],\n            [70, 71, 75, 72, 81, 80, 74],\n            [78, 72, 74, 71, 70, 70, 70],\n            [30, 32, 40, 38, 31, 32, 30] ]\n  average = get_highest_average(weeks)\n  assert average == 102\n  \nmain()"
+    "text": "Write a function – solution 2\n\ndef get_highest_average(numbers):\n    highest_mean = None\n    for i in range(len(numbers)):\n        if len(numbers[i]) &gt; 0:\n            total = 0\n            for j in range(len(numbers[i])):\n                total += numbers[i][j]\n            mean = total/len(numbers[i])\n            if highest_mean == None or mean &gt; highest_mean:\n                highest_mean = mean\n    return highest_mean\n\ndef main():\n  assert get_highest_average([[1, 1, 1], [2, 2]]) == 2\n  assert get_highest_average([[1, 1, 1], []]) == 1\n  assert get_highest_average([[], []]) == None\n  assert get_highest_average([]) == None\n  \n  weeks = [ [100, 100, 105, 105, 102, 102, 100],\n            [70, 71, 75, 72, 81, 80, 74],\n            [78, 72, 74, 71, 70, 70, 70],\n            [30, 32, 40, 38, 31, 32, 30] ]\n  average = get_highest_average(weeks)\n  assert average == 102\n  \nmain()"
   },
   {
     "objectID": "slides-13-01.html#announcements",

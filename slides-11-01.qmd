@@ -114,6 +114,7 @@ items = [[9, 7, 8],
          [10, 20, 30]]
          
 for i in range(len(items)):
+  print(items[i])
   for j in range(len(items[i])):
     print( items[i][j] )
 ```
@@ -164,6 +165,8 @@ main()
 #| eval: false
 #| echo: true
 assert get_highest_average([[1, 1, 1], [2, 2]]) == 2
+assert get_highest_average([[], []]) == None
+assert get_highest_average([]) == None
 ```
 
 ## Write a function
@@ -198,36 +201,33 @@ flowchart LR
 ```{python}
 #| eval: true
 #| echo: true
-def get_highest_average(numbers):
-  means = []
-  for i in range(len(numbers)):
-    if len(numbers[i]) > 0:
-      total_sublist = 0
-      for j in range(len(numbers[i])):
-        total_sublist += numbers[i][j]
-      mean_sublist = total_sublist / len(numbers[i])
-      means.append(mean_sublist)
-  
-  if len(means) > 0:
-    highest_mean = means[0]
-    for i in range(len(means)):
-      if means[i] > highest_mean:
-        highest_mean = means[i]
-        
+def get_highest_average(lists):
+    means = []
+    highest_mean = None
+    for i in range(len(lists)):
+        if len(lists[i]) > 0:
+            total = 0
+            for j in range(len(lists[i])):
+                total += lists[i][j]
+            mean = total/len(lists[i])
+            means.append(mean)
+    for n in means:
+        if highest_mean == None or n > highest_mean:
+            highest_mean = n
     return highest_mean
 
 def main():
-  assert get_highest_average([[1, 1, 1], [2, 2]]) == 2
-  assert get_highest_average([[1, 1, 1], []]) == 1
-  assert get_highest_average([[], []]) == None
-  assert get_highest_average([]) == None
-  
-  weeks = [ [100, 100, 105, 105, 102, 102, 100],
-            [70, 71, 75, 72, 81, 80, 74],
-            [78, 72, 74, 71, 70, 70, 70],
-            [30, 32, 40, 38, 31, 32, 30] ]
-  average = get_highest_average(weeks)
-  assert average == 102
+    assert get_highest_average([[1, 1, 1], [2, 2]]) == 2
+    assert get_highest_average([[1, 1, 1], []]) == 1
+    assert get_highest_average([[], []]) == None
+    assert get_highest_average([]) == None
+    
+    weeks = [ [100, 100, 105, 105, 102, 102, 100],
+              [70, 71, 75, 72, 81, 80, 74],
+              [78, 72, 74, 71, 70, 70, 70],
+              [30, 32, 40, 38, 31, 32, 30] ]
+    average = get_highest_average(weeks)
+    assert average == 102
   
 main()
       
@@ -238,17 +238,17 @@ main()
 ```{python}
 #| eval: true
 #| echo: true
-def get_highest_average(number_lists):
-    max_average = None
-    for i in range(len(number_lists)):
-        if len(number_lists[i]) > 0:
-            total_sublist = 0
-            for j in range(len(number_lists[i])):
-                total_sublist += number_lists[i][j]
-            average = total_sublist/len(number_lists[i])
-            if max_average == None or average > max_average:
-                max_average = average
-    return max_average
+def get_highest_average(numbers):
+    highest_mean = None
+    for i in range(len(numbers)):
+        if len(numbers[i]) > 0:
+            total = 0
+            for j in range(len(numbers[i])):
+                total += numbers[i][j]
+            mean = total/len(numbers[i])
+            if highest_mean == None or mean > highest_mean:
+                highest_mean = mean
+    return highest_mean
 
 def main():
   assert get_highest_average([[1, 1, 1], [2, 2]]) == 2
