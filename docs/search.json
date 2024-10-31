@@ -5317,7 +5317,7 @@
     "href": "slides-10-02.html#write-a-function-1",
     "title": "tuples (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is min_max\nIt takes a variable number of arguments: *values\nIt returns the highest and lowest values in values\n\n\nassert min_max(1) == (1, 1)\nassert min_max(3,1) == (1, 3)\nassert min_max(2,4,6) == (2, 6)\nassert min_max() == (None, None)"
+    "text": "Write a function\n\nIts name is min_max\nIt takes a variable number of arguments: *values\nIt returns the highest and lowest values in values\n\nName your file min_max_tuple.py, submit to Gradescope.\n\nassert min_max(1) == (1, 1)\nassert min_max(3,1) == (1, 3)\nassert min_max(2,4,6) == (2, 6)\nassert min_max() == (None, None)"
   },
   {
     "objectID": "slides-10-02.html#write-a-function-solution-1",
