@@ -471,11 +471,11 @@ fox</code></pre>
 <h2>Write a function – solution</h2>
 <div class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">def</span> maximum(<span class="op">*</span>values):</span>
-<span id="cb8-2"><a href="#cb8-2"></a>  result <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="bu">max</span> <span class="op">=</span> <span class="va">None</span></span>
 <span id="cb8-3"><a href="#cb8-3"></a>  <span class="cf">for</span> v <span class="kw">in</span> values:</span>
-<span id="cb8-4"><a href="#cb8-4"></a>    <span class="cf">if</span> result <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span> v <span class="op">&gt;</span> result:</span>
-<span id="cb8-5"><a href="#cb8-5"></a>      result <span class="op">=</span> v</span>
-<span id="cb8-6"><a href="#cb8-6"></a>  <span class="cf">return</span> result</span>
+<span id="cb8-4"><a href="#cb8-4"></a>    <span class="cf">if</span> <span class="bu">max</span> <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span> v <span class="op">&gt;</span> <span class="bu">max</span>:</span>
+<span id="cb8-5"><a href="#cb8-5"></a>      <span class="bu">max</span> <span class="op">=</span> v</span>
+<span id="cb8-6"><a href="#cb8-6"></a>  <span class="cf">return</span> <span class="bu">max</span></span>
 <span id="cb8-7"><a href="#cb8-7"></a></span>
 <span id="cb8-8"><a href="#cb8-8"></a><span class="kw">def</span> main():</span>
 <span id="cb8-9"><a href="#cb8-9"></a>  <span class="cf">assert</span> maximum(<span class="dv">1</span>) <span class="op">==</span> <span class="dv">1</span></span>

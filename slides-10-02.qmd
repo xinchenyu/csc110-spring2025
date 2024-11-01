@@ -77,11 +77,11 @@ assert maximum() == None
 #| eval: true
 #| echo: true
 def maximum(*values):
-  result = None
+  max = None
   for v in values:
-    if result == None or v > result:
-      result = v
-  return result
+    if max == None or v > max:
+      max = v
+  return max
 
 def main():
   assert maximum(1) == 1

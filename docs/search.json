@@ -5310,7 +5310,7 @@
     "href": "slides-10-02.html#write-a-function-solution",
     "title": "tuples (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef maximum(*values):\n  result = None\n  for v in values:\n    if result == None or v &gt; result:\n      result = v\n  return result\n\ndef main():\n  assert maximum(1) == 1\n  assert maximum(3,1) == 3\n  assert maximum(2,4,6) == 6\n  assert maximum() == None\n  print(\"Passed all tests\")\n  \nmain()\n\nPassed all tests"
+    "text": "Write a function – solution\n\ndef maximum(*values):\n  max = None\n  for v in values:\n    if max == None or v &gt; max:\n      max = v\n  return max\n\ndef main():\n  assert maximum(1) == 1\n  assert maximum(3,1) == 3\n  assert maximum(2,4,6) == 6\n  assert maximum() == None\n  print(\"Passed all tests\")\n  \nmain()\n\nPassed all tests"
   },
   {
     "objectID": "slides-10-02.html#write-a-function-1",
