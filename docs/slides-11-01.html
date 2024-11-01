@@ -411,13 +411,13 @@
 <span id="cb1-2"><a href="#cb1-2"></a>         [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">4</span>],</span>
 <span id="cb1-3"><a href="#cb1-3"></a>         [<span class="dv">5</span>,  <span class="dv">50</span>, <span class="dv">55</span>, <span class="dv">4</span>]]</span>
 <span id="cb1-4"><a href="#cb1-4"></a>lists[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="22">
+<div class="cell-output cell-output-display" data-execution_count="89">
 <pre><code>[9, 8, 7, 8]</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>lists[<span class="dv">0</span>][<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="23">
+<div class="cell-output cell-output-display" data-execution_count="90">
 <pre><code>9</code></pre>
 </div>
 </div>
@@ -469,7 +469,7 @@
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>numbers <span class="op">=</span> [[<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">3</span>],</span>
 <span id="cb8-2"><a href="#cb8-2"></a>           [<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">5</span>]]</span>
 <span id="cb8-3"><a href="#cb8-3"></a>numbers[<span class="dv">1</span>][<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="26">
+<div class="cell-output cell-output-display" data-execution_count="93">
 <pre><code>5</code></pre>
 </div>
 </div>
@@ -479,7 +479,7 @@
 <span id="cb10-3"><a href="#cb10-3"></a>         [<span class="dv">5</span>],</span>
 <span id="cb10-4"><a href="#cb10-4"></a>         [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>]]</span>
 <span id="cb10-5"><a href="#cb10-5"></a>items[<span class="dv">1</span>][<span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="27">
+<div class="cell-output cell-output-display" data-execution_count="94">
 <pre><code>6</code></pre>
 </div>
 </div>
@@ -488,7 +488,7 @@
 </div>
 <div class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>items[<span class="dv">3</span>][<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="28">
+<div class="cell-output cell-output-display" data-execution_count="95">
 <pre><code>30</code></pre>
 </div>
 </div>
@@ -570,19 +570,18 @@
 <div class="cell-output-display">
 <div>
 <div>
-<pre class="mermaid mermaid-js">flowchart LR
+<pre class="mermaid mermaid-js">%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '24px', 'fontFamily': 'Inter'}}}%%
+
+flowchart LR
   A["[[ ],  &lt;br&gt;  [2, 3, 7], &lt;br&gt; [15, 21, 3, 24], &lt;br&gt; [6, 4] ]"] --&gt; B("len([]) &gt; 0 ?") 
-  A --&gt; SS("len([2, 3, 7]) &gt; 0 ?") --&gt; K["[2, 3, 7]"]
-  A --&gt; SSS("len([15, 2, 3, 8]) &gt; 0 ?") --&gt; S["[15, 2, 3, 8]"]
-  A --&gt; SSSS("len([6, 4]) &gt; 0 ?") --&gt; F["[6, 4]"]
-  K --&gt;id1[calculate mean: 4]
-  S --&gt; id2[calculate mean: 7]
-  F --&gt; id3[calculate mean: 5]
+  A --&gt; SS("len([2, 3, 7]) &gt; 0 ?") --&gt; id1[calculate mean: 4]
+  A --&gt; SSS("len([15, 2, 3, 8]) &gt; 0 ?") --&gt; id2[calculate mean: 7]
+  A --&gt; SSSS("len([6, 4]) &gt; 0 ?") --&gt; id3[calculate mean: 5]
   id1 --&gt; E["[4, 7, 5]"]
   id2 --&gt; E
   id3 --&gt; E
   
-  L("len([4, 7, 5]) &gt; 0 ?") --&gt; id4[calculate highest mean: 7]
+  E --&gt; id4[highest mean: 7]
   
 
   style id1 fill:#ffd5f1,stroke:#333,stroke-width:2px
@@ -627,6 +626,35 @@
 <span id="cb20-27"><a href="#cb20-27"></a>    <span class="cf">assert</span> average <span class="op">==</span> <span class="dv">102</span></span>
 <span id="cb20-28"><a href="#cb20-28"></a>  </span>
 <span id="cb20-29"><a href="#cb20-29"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-a-function-3" class="slide level2">
+<h2>Write a function</h2>
+<p>An illustration:</p>
+<div class="cell" data-reveal="true">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '24px', 'fontFamily': 'Inter'}}}%%
+
+flowchart LR
+  A["[[ ],  &lt;br&gt;  [2, 3, 7], &lt;br&gt; [15, 21, 3, 24], &lt;br&gt; [6, 4] ]"] --&gt; B("len([]) &gt; 0 ?") 
+  A --&gt; SS("len([2, 3, 7]) &gt; 0 ?") --&gt; id1[calculate mean: 4] --&gt; E1[highest mean: 4]
+  A --&gt; SSS("len([15, 2, 3, 8]) &gt; 0 ?") --&gt; id2[calculate mean: 7] --&gt; E2[highest mean: 7]
+  A --&gt; SSSS("len([6, 4]) &gt; 0 ?") --&gt; id3[calculate mean: 5]--&gt; E3[highest mean: 7]
+  
+
+  style id1 fill:#ffd5f1,stroke:#333,stroke-width:2px
+  style id2 fill:#ffd5f1,stroke:#333,stroke-width:2px
+  style id3 fill:#ffd5f1,stroke:#333,stroke-width:2px
+  style E1 fill:#feffad,stroke:#333,stroke-width:2px
+  style E2 fill:#feffad,stroke:#333,stroke-width:2px
+  style E3 fill:#feffad,stroke:#333,stroke-width:2px
+
+</pre>
+</div>
+</div>
+</div>
 </div>
 </section>
 <section id="write-a-function-solution-2" class="slide level2">

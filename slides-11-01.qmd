@@ -174,19 +174,18 @@ assert get_highest_average([]) == None
 An illustration:
 
 ```{mermaid}
+%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '24px', 'fontFamily': 'Inter'}}}%%
+
 flowchart LR
   A["[[ ],  <br>  [2, 3, 7], <br> [15, 21, 3, 24], <br> [6, 4] ]"] --> B("len([]) > 0 ?") 
-  A --> SS("len([2, 3, 7]) > 0 ?") --> K["[2, 3, 7]"]
-  A --> SSS("len([15, 2, 3, 8]) > 0 ?") --> S["[15, 2, 3, 8]"]
-  A --> SSSS("len([6, 4]) > 0 ?") --> F["[6, 4]"]
-  K -->id1[calculate mean: 4]
-  S --> id2[calculate mean: 7]
-  F --> id3[calculate mean: 5]
+  A --> SS("len([2, 3, 7]) > 0 ?") --> id1[calculate mean: 4]
+  A --> SSS("len([15, 2, 3, 8]) > 0 ?") --> id2[calculate mean: 7]
+  A --> SSSS("len([6, 4]) > 0 ?") --> id3[calculate mean: 5]
   id1 --> E["[4, 7, 5]"]
   id2 --> E
   id3 --> E
   
-  L("len([4, 7, 5]) > 0 ?") --> id4[calculate highest mean: 7]
+  E --> id4[highest mean: 7]
   
 
   style id1 fill:#ffd5f1,stroke:#333,stroke-width:2px
@@ -231,6 +230,29 @@ def main():
   
 main()
       
+```
+
+## Write a function
+
+An illustration:
+
+```{mermaid}
+%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '24px', 'fontFamily': 'Inter'}}}%%
+
+flowchart LR
+  A["[[ ],  <br>  [2, 3, 7], <br> [15, 21, 3, 24], <br> [6, 4] ]"] --> B("len([]) > 0 ?") 
+  A --> SS("len([2, 3, 7]) > 0 ?") --> id1[calculate mean: 4] --> E1[highest mean: 4]
+  A --> SSS("len([15, 2, 3, 8]) > 0 ?") --> id2[calculate mean: 7] --> E2[highest mean: 7]
+  A --> SSSS("len([6, 4]) > 0 ?") --> id3[calculate mean: 5]--> E3[highest mean: 7]
+  
+
+  style id1 fill:#ffd5f1,stroke:#333,stroke-width:2px
+  style id2 fill:#ffd5f1,stroke:#333,stroke-width:2px
+  style id3 fill:#ffd5f1,stroke:#333,stroke-width:2px
+  style E1 fill:#feffad,stroke:#333,stroke-width:2px
+  style E2 fill:#feffad,stroke:#333,stroke-width:2px
+  style E3 fill:#feffad,stroke:#333,stroke-width:2px
+
 ```
 
 ## Write a function -- solution 2

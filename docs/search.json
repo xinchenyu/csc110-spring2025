@@ -3637,7 +3637,7 @@
     "href": "slides-11-01.html#write-a-function-2",
     "title": "more on for loops (class slides)",
     "section": "Write a function",
-    "text": "Write a function\nAn illustration:\n\n\n\n\nflowchart LR\n  A[\"[[ ],  &lt;br&gt;  [2, 3, 7], &lt;br&gt; [15, 21, 3, 24], &lt;br&gt; [6, 4] ]\"] --&gt; B(\"len([]) &gt; 0 ?\") \n  A --&gt; SS(\"len([2, 3, 7]) &gt; 0 ?\") --&gt; K[\"[2, 3, 7]\"]\n  A --&gt; SSS(\"len([15, 2, 3, 8]) &gt; 0 ?\") --&gt; S[\"[15, 2, 3, 8]\"]\n  A --&gt; SSSS(\"len([6, 4]) &gt; 0 ?\") --&gt; F[\"[6, 4]\"]\n  K --&gt;id1[calculate mean: 4]\n  S --&gt; id2[calculate mean: 7]\n  F --&gt; id3[calculate mean: 5]\n  id1 --&gt; E[\"[4, 7, 5]\"]\n  id2 --&gt; E\n  id3 --&gt; E\n  \n  L(\"len([4, 7, 5]) &gt; 0 ?\") --&gt; id4[calculate highest mean: 7]\n  \n\n  style id1 fill:#ffd5f1,stroke:#333,stroke-width:2px\n  style id2 fill:#ffd5f1,stroke:#333,stroke-width:2px\n  style id3 fill:#ffd5f1,stroke:#333,stroke-width:2px\n  style id4 fill:#feffad,stroke:#333,stroke-width:2px"
+    "text": "Write a function\nAn illustration:\n\n\n\n\n%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '24px', 'fontFamily': 'Inter'}}}%%\n\nflowchart LR\n  A[\"[[ ],  &lt;br&gt;  [2, 3, 7], &lt;br&gt; [15, 21, 3, 24], &lt;br&gt; [6, 4] ]\"] --&gt; B(\"len([]) &gt; 0 ?\") \n  A --&gt; SS(\"len([2, 3, 7]) &gt; 0 ?\") --&gt; id1[calculate mean: 4]\n  A --&gt; SSS(\"len([15, 2, 3, 8]) &gt; 0 ?\") --&gt; id2[calculate mean: 7]\n  A --&gt; SSSS(\"len([6, 4]) &gt; 0 ?\") --&gt; id3[calculate mean: 5]\n  id1 --&gt; E[\"[4, 7, 5]\"]\n  id2 --&gt; E\n  id3 --&gt; E\n  \n  E --&gt; id4[highest mean: 7]\n  \n\n  style id1 fill:#ffd5f1,stroke:#333,stroke-width:2px\n  style id2 fill:#ffd5f1,stroke:#333,stroke-width:2px\n  style id3 fill:#ffd5f1,stroke:#333,stroke-width:2px\n  style id4 fill:#feffad,stroke:#333,stroke-width:2px"
   },
   {
     "objectID": "slides-11-01.html#write-a-function-solution-1",
@@ -5752,5 +5752,12 @@
     "title": "tuples (class slides)",
     "section": "Variable length parameter",
     "text": "Variable length parameter\nAdd a * before your parameter name so that it accepts a variable number of arguments, gathering them into a tuple\n\ndef concatenate(*values):\n  new_string = \"\"\n  for v in values:\n    new_string += str(v) + \" \"\n  return new_string[:-1]\n\ndef main():\n  print( concatenate(\"The\", \"temperature\", \"is\", 82, \"degrees\"))\n  \nmain()\n\nThe temperature is 82 degrees"
+  },
+  {
+    "objectID": "slides-11-01.html#write-a-function-3",
+    "href": "slides-11-01.html#write-a-function-3",
+    "title": "more on for loops (class slides)",
+    "section": "Write a function",
+    "text": "Write a function\nAn illustration:\n\n\n\n\n%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '24px', 'fontFamily': 'Inter'}}}%%\n\nflowchart LR\n  A[\"[[ ],  &lt;br&gt;  [2, 3, 7], &lt;br&gt; [15, 21, 3, 24], &lt;br&gt; [6, 4] ]\"] --&gt; B(\"len([]) &gt; 0 ?\") \n  A --&gt; SS(\"len([2, 3, 7]) &gt; 0 ?\") --&gt; id1[calculate mean: 4] --&gt; E1[highest mean: 4]\n  A --&gt; SSS(\"len([15, 2, 3, 8]) &gt; 0 ?\") --&gt; id2[calculate mean: 7] --&gt; E2[highest mean: 7]\n  A --&gt; SSSS(\"len([6, 4]) &gt; 0 ?\") --&gt; id3[calculate mean: 5]--&gt; E3[highest mean: 7]\n  \n\n  style id1 fill:#ffd5f1,stroke:#333,stroke-width:2px\n  style id2 fill:#ffd5f1,stroke:#333,stroke-width:2px\n  style id3 fill:#ffd5f1,stroke:#333,stroke-width:2px\n  style E1 fill:#feffad,stroke:#333,stroke-width:2px\n  style E2 fill:#feffad,stroke:#333,stroke-width:2px\n  style E3 fill:#feffad,stroke:#333,stroke-width:2px"
   }
 ]
