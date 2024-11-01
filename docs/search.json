@@ -2174,7 +2174,7 @@
     "href": "slides-11-02.html#write-a-function-solution-2",
     "title": "nested for loops (class slides)",
     "section": "Write a function – solution 2",
-    "text": "Write a function – solution 2\n\ndef max_list(numbers):\n  max = None\n  for i in range(len(numbers)):\n    if max == None or numbers[i] &gt; max:\n      max = numbers[i]\n  return max\n\ndef nested_max(lists):\n  max = None\n  for i in range(len(lists)):\n    max_of_sublist = max_list(lists[i])\n    if max == None or  max_of_sublist&gt; max:\n      max = max_of_sublist\n  return max\n\ndef main():\n  assert nested_max([[], []]) == None\n  assert nested_max([[1, 2, 3, 2, 1],\n                     [2, 3, 2, 1, 5],\n                     [0, 1]]) == 5\n  print(\"Passed all tests\")\nmain()\n\nPassed all tests"
+    "text": "Write a function – solution 2\n\ndef max_list(numbers):\n  max = None\n  for i in range(len(numbers)):\n    if max == None or numbers[i] &gt; max:\n      max = numbers[i]\n  return max\n\ndef nested_max(lists):\n  max = None\n  for i in range(len(lists)):\n    max_of_sublist = max_list(lists[i])\n    if max == None or  max_of_sublist &gt; max:\n      max = max_of_sublist\n  return max\n\ndef main():\n  assert nested_max([[], []]) == None\n  assert nested_max([[1, 2, 3, 2, 1],\n                     [2, 3, 2, 1, 5],\n                     [0, 1]]) == 5\n  print(\"Passed all tests\")\nmain()\n\nPassed all tests"
   },
   {
     "objectID": "slides-11-02.html#write-a-function-1",
@@ -2244,7 +2244,7 @@
     "href": "slides-11-02.html#extra-activity-loop-table",
     "title": "nested for loops (class slides)",
     "section": "Extra Activity – Loop Table",
-    "text": "Extra Activity – Loop Table\n\ndef nested_max(lists):\n  max = None\n  for i in range(len(lists)):\n    for j in range(len(lists[i])):\n      if max == None or lists[i][j] &gt; max:\n        max = lists[i][j]\n  return max\n\nmax_nested([[], [], [2, 1], [0, 5, 2], [3]])\n\nDraw a loop table with:\n\nvalue of max before loop, and in each iteration of the nested loops\nvalues of i, j, and lists[i][j] for each nested loop iteration"
+    "text": "Extra Activity – Loop Table\n\ndef nested_max(lists):\n  max = None\n  for i in range(len(lists)):\n    for j in range(len(lists[i])):\n      if max == None or lists[i][j] &gt; max:\n        max = lists[i][j]\n  return max\n\nmax_nested([[], [], [2, 1], [0, 5, 2])\n\nDraw a loop table with:\n\nvalue of max before loop, and in each iteration of the nested loops\nvalues of i, j, and lists[i][j] for each nested loop iteration"
   },
   {
     "objectID": "slides-11-02.html#loop-table-solution-part-1",

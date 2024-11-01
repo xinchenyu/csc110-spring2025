@@ -510,7 +510,7 @@ A</code></pre>
 <span id="cb14-9"><a href="#cb14-9"></a>  <span class="bu">max</span> <span class="op">=</span> <span class="va">None</span></span>
 <span id="cb14-10"><a href="#cb14-10"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(lists)):</span>
 <span id="cb14-11"><a href="#cb14-11"></a>    max_of_sublist <span class="op">=</span> max_list(lists[i])</span>
-<span id="cb14-12"><a href="#cb14-12"></a>    <span class="cf">if</span> <span class="bu">max</span> <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span>  max_of_sublist<span class="op">&gt;</span> <span class="bu">max</span>:</span>
+<span id="cb14-12"><a href="#cb14-12"></a>    <span class="cf">if</span> <span class="bu">max</span> <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span>  max_of_sublist <span class="op">&gt;</span> <span class="bu">max</span>:</span>
 <span id="cb14-13"><a href="#cb14-13"></a>      <span class="bu">max</span> <span class="op">=</span> max_of_sublist</span>
 <span id="cb14-14"><a href="#cb14-14"></a>  <span class="cf">return</span> <span class="bu">max</span></span>
 <span id="cb14-15"><a href="#cb14-15"></a></span>
@@ -525,196 +525,19 @@ A</code></pre>
 <pre><code>Passed all tests</code></pre>
 </div>
 </div>
-</section></section>
-<section>
-<section id="submit-code-for-attendance" class="title-slide slide level1 center">
-<h1>Submit code for attendance</h1>
-<p>Submit your <code>nested_max</code> functions to Gradescope for attendance.</p>
-<p>Name your file <code>nested_max.py</code></p>
-</section>
-<section id="write-a-function-1" class="slide level2">
-<h2>Write a function</h2>
-<ol type="1">
-<li>Function name is <code>nested_min</code></li>
-<li>It takes a 2D list of numbers as argument</li>
-<li>It iterates over every item in each sublist to find the lowest number</li>
-<li>It returns the lowest number in all lists</li>
-</ol>
-<p>Test cases</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a><span class="cf">assert</span> nested_min([[], []]) <span class="op">==</span> <span class="va">None</span></span>
-<span id="cb16-2"><a href="#cb16-2"></a><span class="cf">assert</span> nested_min([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>],</span>
-<span id="cb16-3"><a href="#cb16-3"></a>                   [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">5</span>],</span>
-<span id="cb16-4"><a href="#cb16-4"></a>                   [<span class="dv">0</span>, <span class="dv">1</span>]]) <span class="op">==</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="write-a-function-solution" class="slide level2">
-<h2>Write a function – solution</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="kw">def</span> nested_min(lists):</span>
-<span id="cb17-2"><a href="#cb17-2"></a>  <span class="bu">min</span> <span class="op">=</span> <span class="va">None</span></span>
-<span id="cb17-3"><a href="#cb17-3"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(lists)):</span>
-<span id="cb17-4"><a href="#cb17-4"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(lists[i])):</span>
-<span id="cb17-5"><a href="#cb17-5"></a>      <span class="cf">if</span> <span class="bu">min</span> <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span> lists[i][j] <span class="op">&lt;</span> <span class="bu">min</span>:</span>
-<span id="cb17-6"><a href="#cb17-6"></a>        <span class="bu">min</span> <span class="op">=</span> lists[i][j]</span>
-<span id="cb17-7"><a href="#cb17-7"></a>  <span class="cf">return</span> <span class="bu">min</span></span>
-<span id="cb17-8"><a href="#cb17-8"></a></span>
-<span id="cb17-9"><a href="#cb17-9"></a><span class="kw">def</span> main():</span>
-<span id="cb17-10"><a href="#cb17-10"></a>  <span class="cf">assert</span> nested_min([[], []]) <span class="op">==</span> <span class="va">None</span></span>
-<span id="cb17-11"><a href="#cb17-11"></a>  <span class="cf">assert</span> nested_min([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>],</span>
-<span id="cb17-12"><a href="#cb17-12"></a>                     [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">5</span>],</span>
-<span id="cb17-13"><a href="#cb17-13"></a>                     [<span class="dv">0</span>, <span class="dv">1</span>]]) <span class="op">==</span> <span class="dv">0</span></span>
-<span id="cb17-14"><a href="#cb17-14"></a>  <span class="bu">print</span>(<span class="st">"Passed all tests"</span>)</span>
-<span id="cb17-15"><a href="#cb17-15"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Passed all tests</code></pre>
-</div>
-</div>
-</section>
-<section id="mutate-nested-lists" class="slide level2">
-<h2>Mutate nested lists</h2>
-<p>In addition to retrieving a value from nested lists, we can also mutate a value in a sublist.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a>people <span class="op">=</span> [[<span class="st">"Ana"</span>, <span class="dv">34</span>, <span class="st">"B"</span>],</span>
-<span id="cb19-2"><a href="#cb19-2"></a>          [<span class="st">"Peter"</span>, <span class="dv">23</span>, <span class="st">"A"</span>]]</span>
-<span id="cb19-3"><a href="#cb19-3"></a>people</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[['Ana', 34, 'B'], ['Peter', 23, 'A']]</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a>people[<span class="dv">0</span>][<span class="dv">1</span>] <span class="op">=</span> <span class="dv">24</span></span>
-<span id="cb21-2"><a href="#cb21-2"></a>people</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[['Ana', 24, 'B'], ['Peter', 23, 'A']]</code></pre>
-</div>
-</div>
-</section>
-<section id="write-a-function-2" class="slide level2">
-<h2>Write a function</h2>
-<ol type="1">
-<li>Function name is <code>double_nested</code></li>
-<li>It takes a 2D list of numbers as argument</li>
-<li>It mutates the sublist items by multiplying each number in each sublist by 2</li>
-<li>It returns the argument list</li>
-</ol>
-<p>Test cases</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a><span class="cf">assert</span> double_nested([[], []]) <span class="op">==</span> [[], []]</span>
-<span id="cb23-2"><a href="#cb23-2"></a><span class="cf">assert</span> double_nested([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>],</span>
-<span id="cb23-3"><a href="#cb23-3"></a>                     [<span class="dv">0</span>, <span class="dv">1</span>]]) <span class="op">==</span> [[<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">2</span>],</span>
-<span id="cb23-4"><a href="#cb23-4"></a>                                  [<span class="dv">0</span>, <span class="dv">2</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="write-a-function-solution-3" class="slide level2">
-<h2>Write a function – solution</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1"></a><span class="kw">def</span> double_nested(lists):</span>
-<span id="cb24-2"><a href="#cb24-2"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(lists)):</span>
-<span id="cb24-3"><a href="#cb24-3"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(lists[i])):</span>
-<span id="cb24-4"><a href="#cb24-4"></a>      lists[i][j] <span class="op">*=</span> <span class="dv">2</span></span>
-<span id="cb24-5"><a href="#cb24-5"></a>  <span class="cf">return</span> lists</span>
-<span id="cb24-6"><a href="#cb24-6"></a></span>
-<span id="cb24-7"><a href="#cb24-7"></a><span class="kw">def</span> main():</span>
-<span id="cb24-8"><a href="#cb24-8"></a>  <span class="cf">assert</span> double_nested([[], []]) <span class="op">==</span> [[], []]</span>
-<span id="cb24-9"><a href="#cb24-9"></a>  <span class="cf">assert</span> double_nested([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>],</span>
-<span id="cb24-10"><a href="#cb24-10"></a>                        [<span class="dv">0</span>, <span class="dv">1</span>]]) <span class="op">==</span> [[<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">2</span>],</span>
-<span id="cb24-11"><a href="#cb24-11"></a>                                     [<span class="dv">0</span>, <span class="dv">2</span>]]</span>
-<span id="cb24-12"><a href="#cb24-12"></a>  <span class="bu">print</span>(<span class="st">"Passed all tests"</span>)</span>
-<span id="cb24-13"><a href="#cb24-13"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Passed all tests</code></pre>
-</div>
-</div>
-</section>
-<section id="write-a-function-3" class="slide level2">
-<h2>Write a function</h2>
-<ol type="1">
-<li>Function name is <code>len_strings_nested</code></li>
-<li>It takes a 2D list of strings as argument</li>
-<li>It mutates the sublist items by replacing each string with its length</li>
-<li>It returns the argument list</li>
-</ol>
-<p>Test cases:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1"></a><span class="cf">assert</span> len_strings_nested([[<span class="st">"desserts"</span>, <span class="st">"raw"</span>, <span class="st">"live"</span>],</span>
-<span id="cb26-2"><a href="#cb26-2"></a>                            [<span class="st">"smart"</span>, <span class="st">"knits"</span>]]) <span class="op">==</span> [[<span class="dv">8</span>, <span class="dv">3</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">5</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="write-a-function-solution-4" class="slide level2">
-<h2>Write a function – solution</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1"></a><span class="kw">def</span> len_strings_nested(strings):</span>
-<span id="cb27-2"><a href="#cb27-2"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(strings)):</span>
-<span id="cb27-3"><a href="#cb27-3"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(strings[i])):</span>
-<span id="cb27-4"><a href="#cb27-4"></a>      strings[i][j] <span class="op">=</span> <span class="bu">len</span>(strings[i][j])</span>
-<span id="cb27-5"><a href="#cb27-5"></a>  <span class="cf">return</span> strings</span>
-<span id="cb27-6"><a href="#cb27-6"></a></span>
-<span id="cb27-7"><a href="#cb27-7"></a><span class="kw">def</span> main():</span>
-<span id="cb27-8"><a href="#cb27-8"></a>  original_list <span class="op">=</span> [[<span class="st">"desserts"</span>, <span class="st">"raw"</span>, <span class="st">"live"</span>],</span>
-<span id="cb27-9"><a href="#cb27-9"></a>                               [<span class="st">"smart"</span>, <span class="st">"knits"</span>]]</span>
-<span id="cb27-10"><a href="#cb27-10"></a>  <span class="cf">assert</span> len_strings_nested(original_list) <span class="op">==</span> [[<span class="dv">8</span>, <span class="dv">3</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">5</span>]]</span>
-<span id="cb27-11"><a href="#cb27-11"></a>  <span class="bu">print</span>(original_list)</span>
-<span id="cb27-12"><a href="#cb27-12"></a>  </span>
-<span id="cb27-13"><a href="#cb27-13"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[[8, 3, 4], [5, 5]]</code></pre>
-</div>
-</div>
-</section>
-<section id="write-a-function-4" class="slide level2">
-<h2>Write a function</h2>
-<ol type="1">
-<li>Function name is <code>reverse_strings_nested</code></li>
-<li>It takes a 2D list of strings as argument</li>
-<li>It mutates the sublist items by reversing each string (you can use <code>string[::-1]</code> to reverse it)</li>
-<li>It returns the argument list</li>
-</ol>
-<p>Test cases:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1"></a><span class="cf">assert</span> reverse_strings_nested([[<span class="st">"desserts"</span>, <span class="st">"raw"</span>, <span class="st">"live"</span>],</span>
-<span id="cb29-2"><a href="#cb29-2"></a>                               [<span class="st">"smart"</span>, <span class="st">"knits"</span>]]) <span class="op">==</span> [[<span class="st">"stressed"</span>, <span class="st">"war"</span>, <span class="st">"evil"</span>],</span>
-<span id="cb29-3"><a href="#cb29-3"></a>                                                        [<span class="st">"trams"</span>, <span class="st">"stink"</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="write-a-function-solution-5" class="slide level2">
-<h2>Write a function – solution</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1"></a><span class="kw">def</span> reverse_strings_nested(strings):</span>
-<span id="cb30-2"><a href="#cb30-2"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(strings)):</span>
-<span id="cb30-3"><a href="#cb30-3"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(strings[i])):</span>
-<span id="cb30-4"><a href="#cb30-4"></a>      strings[i][j] <span class="op">=</span> strings[i][j][::<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb30-5"><a href="#cb30-5"></a>  <span class="cf">return</span> strings</span>
-<span id="cb30-6"><a href="#cb30-6"></a></span>
-<span id="cb30-7"><a href="#cb30-7"></a><span class="kw">def</span> main():</span>
-<span id="cb30-8"><a href="#cb30-8"></a>  original_strings <span class="op">=</span> [[<span class="st">"desserts"</span>, <span class="st">"raw"</span>, <span class="st">"live"</span>],</span>
-<span id="cb30-9"><a href="#cb30-9"></a>                      [<span class="st">"smart"</span>, <span class="st">"knits"</span>]]</span>
-<span id="cb30-10"><a href="#cb30-10"></a>  reverse_strings_nested(original_strings)   </span>
-<span id="cb30-11"><a href="#cb30-11"></a>  <span class="cf">assert</span>  original_strings <span class="op">==</span> [[<span class="st">"stressed"</span>, <span class="st">"war"</span>, <span class="st">"evil"</span>],</span>
-<span id="cb30-12"><a href="#cb30-12"></a>                               [<span class="st">"trams"</span>, <span class="st">"stink"</span>]]</span>
-<span id="cb30-13"><a href="#cb30-13"></a>  </span>
-<span id="cb30-14"><a href="#cb30-14"></a>  <span class="bu">print</span>(original_strings)</span>
-<span id="cb30-15"><a href="#cb30-15"></a>  <span class="bu">print</span>(<span class="st">"Passed test"</span>)</span>
-<span id="cb30-16"><a href="#cb30-16"></a>  </span>
-<span id="cb30-17"><a href="#cb30-17"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[['stressed', 'war', 'evil'], ['trams', 'stink']]
-Passed test</code></pre>
-</div>
-</div>
 </section>
 <section id="extra-activity-loop-table" class="slide level2">
 <h2>Extra Activity – Loop Table</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1"></a><span class="kw">def</span> nested_max(lists):</span>
-<span id="cb32-2"><a href="#cb32-2"></a>  <span class="bu">max</span> <span class="op">=</span> <span class="va">None</span></span>
-<span id="cb32-3"><a href="#cb32-3"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(lists)):</span>
-<span id="cb32-4"><a href="#cb32-4"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(lists[i])):</span>
-<span id="cb32-5"><a href="#cb32-5"></a>      <span class="cf">if</span> <span class="bu">max</span> <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span> lists[i][j] <span class="op">&gt;</span> <span class="bu">max</span>:</span>
-<span id="cb32-6"><a href="#cb32-6"></a>        <span class="bu">max</span> <span class="op">=</span> lists[i][j]</span>
-<span id="cb32-7"><a href="#cb32-7"></a>  <span class="cf">return</span> <span class="bu">max</span></span>
-<span id="cb32-8"><a href="#cb32-8"></a></span>
-<span id="cb32-9"><a href="#cb32-9"></a>max_nested([[], [], [<span class="dv">2</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">2</span>], [<span class="dv">3</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a><span class="kw">def</span> nested_max(lists):</span>
+<span id="cb16-2"><a href="#cb16-2"></a>  <span class="bu">max</span> <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(lists)):</span>
+<span id="cb16-4"><a href="#cb16-4"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(lists[i])):</span>
+<span id="cb16-5"><a href="#cb16-5"></a>      <span class="cf">if</span> <span class="bu">max</span> <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span> lists[i][j] <span class="op">&gt;</span> <span class="bu">max</span>:</span>
+<span id="cb16-6"><a href="#cb16-6"></a>        <span class="bu">max</span> <span class="op">=</span> lists[i][j]</span>
+<span id="cb16-7"><a href="#cb16-7"></a>  <span class="cf">return</span> <span class="bu">max</span></span>
+<span id="cb16-8"><a href="#cb16-8"></a></span>
+<span id="cb16-9"><a href="#cb16-9"></a>max_nested([[], [], [<span class="dv">2</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">2</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Draw a loop table with:</p>
 <ul>
@@ -727,7 +550,7 @@ Passed test</code></pre>
 <div class="cell">
 <div class="cell-output-display">
 
-<table class="huxtable" data-quarto-disable-processing="true" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; ; margin-left: auto; margin-right: auto;  " id="tab:unnamed-chunk-21">
+<table class="huxtable" data-quarto-disable-processing="true" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; ; margin-left: auto; margin-right: auto;  " id="tab:unnamed-chunk-11">
 <colgroup><col><col><col><col><col></colgroup><tbody><tr>
 <th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">i</th><th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">j</th><th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">len(lists[i])</th><th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">lists[i][j]</th><th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">max</th></tr>
 <tr>
@@ -749,18 +572,174 @@ Passed test</code></pre>
 </div>
 </div>
 </section>
-<section id="loop-table-solution-part-2" class="slide level2">
-<h2>Loop table – solution part 2</h2>
+<section id="write-a-function-1" class="slide level2">
+<h2>Write a function</h2>
+<ol type="1">
+<li>Function name is <code>nested_min</code></li>
+<li>It takes a 2D list of numbers as argument</li>
+<li>It iterates over every item in each sublist to find the lowest number</li>
+<li>It returns the lowest number in all lists</li>
+</ol>
+<p>Test cases</p>
 <div class="cell">
-<div class="cell-output-display">
-
-<table class="huxtable" data-quarto-disable-processing="true" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; ; margin-left: auto; margin-right: auto;  " id="tab:unnamed-chunk-22">
-<colgroup><col><col><col><col><col></colgroup><tbody><tr>
-<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">i</th><th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">j</th><th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">len(lists[i])</th><th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">lists[i][j]</th><th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">max</th></tr>
-<tr>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">4</td><td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0</td><td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1</td><td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">3</td><td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">5</td></tr>
-</tbody></table>
-
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="cf">assert</span> nested_min([[], []]) <span class="op">==</span> <span class="va">None</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a><span class="cf">assert</span> nested_min([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>],</span>
+<span id="cb17-3"><a href="#cb17-3"></a>                   [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">5</span>],</span>
+<span id="cb17-4"><a href="#cb17-4"></a>                   [<span class="dv">0</span>, <span class="dv">1</span>]]) <span class="op">==</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-a-function-solution" class="slide level2">
+<h2>Write a function – solution</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a><span class="kw">def</span> nested_min(lists):</span>
+<span id="cb18-2"><a href="#cb18-2"></a>  <span class="bu">min</span> <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb18-3"><a href="#cb18-3"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(lists)):</span>
+<span id="cb18-4"><a href="#cb18-4"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(lists[i])):</span>
+<span id="cb18-5"><a href="#cb18-5"></a>      <span class="cf">if</span> <span class="bu">min</span> <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span> lists[i][j] <span class="op">&lt;</span> <span class="bu">min</span>:</span>
+<span id="cb18-6"><a href="#cb18-6"></a>        <span class="bu">min</span> <span class="op">=</span> lists[i][j]</span>
+<span id="cb18-7"><a href="#cb18-7"></a>  <span class="cf">return</span> <span class="bu">min</span></span>
+<span id="cb18-8"><a href="#cb18-8"></a></span>
+<span id="cb18-9"><a href="#cb18-9"></a><span class="kw">def</span> main():</span>
+<span id="cb18-10"><a href="#cb18-10"></a>  <span class="cf">assert</span> nested_min([[], []]) <span class="op">==</span> <span class="va">None</span></span>
+<span id="cb18-11"><a href="#cb18-11"></a>  <span class="cf">assert</span> nested_min([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>],</span>
+<span id="cb18-12"><a href="#cb18-12"></a>                     [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">5</span>],</span>
+<span id="cb18-13"><a href="#cb18-13"></a>                     [<span class="dv">0</span>, <span class="dv">1</span>]]) <span class="op">==</span> <span class="dv">0</span></span>
+<span id="cb18-14"><a href="#cb18-14"></a>  <span class="bu">print</span>(<span class="st">"Passed all tests"</span>)</span>
+<span id="cb18-15"><a href="#cb18-15"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Passed all tests</code></pre>
+</div>
+</div>
+</section>
+<section id="mutate-nested-lists" class="slide level2">
+<h2>Mutate nested lists</h2>
+<p>In addition to retrieving a value from nested lists, we can also mutate a value in a sublist.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a>people <span class="op">=</span> [[<span class="st">"Ana"</span>, <span class="dv">34</span>, <span class="st">"B"</span>],</span>
+<span id="cb20-2"><a href="#cb20-2"></a>          [<span class="st">"Peter"</span>, <span class="dv">23</span>, <span class="st">"A"</span>]]</span>
+<span id="cb20-3"><a href="#cb20-3"></a>people</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[['Ana', 34, 'B'], ['Peter', 23, 'A']]</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a>people[<span class="dv">0</span>][<span class="dv">1</span>] <span class="op">=</span> <span class="dv">24</span></span>
+<span id="cb22-2"><a href="#cb22-2"></a>people</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[['Ana', 24, 'B'], ['Peter', 23, 'A']]</code></pre>
+</div>
+</div>
+</section>
+<section id="write-a-function-2" class="slide level2">
+<h2>Write a function</h2>
+<ol type="1">
+<li>Function name is <code>double_nested</code></li>
+<li>It takes a 2D list of numbers as argument</li>
+<li>It mutates the sublist items by multiplying each number in each sublist by 2</li>
+<li>It returns the argument list</li>
+</ol>
+<p>Test cases</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1"></a><span class="cf">assert</span> double_nested([[], []]) <span class="op">==</span> [[], []]</span>
+<span id="cb24-2"><a href="#cb24-2"></a><span class="cf">assert</span> double_nested([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>],</span>
+<span id="cb24-3"><a href="#cb24-3"></a>                     [<span class="dv">0</span>, <span class="dv">1</span>]]) <span class="op">==</span> [[<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">2</span>],</span>
+<span id="cb24-4"><a href="#cb24-4"></a>                                  [<span class="dv">0</span>, <span class="dv">2</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-a-function-solution-3" class="slide level2">
+<h2>Write a function – solution</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1"></a><span class="kw">def</span> double_nested(lists):</span>
+<span id="cb25-2"><a href="#cb25-2"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(lists)):</span>
+<span id="cb25-3"><a href="#cb25-3"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(lists[i])):</span>
+<span id="cb25-4"><a href="#cb25-4"></a>      lists[i][j] <span class="op">*=</span> <span class="dv">2</span></span>
+<span id="cb25-5"><a href="#cb25-5"></a>  <span class="cf">return</span> lists</span>
+<span id="cb25-6"><a href="#cb25-6"></a></span>
+<span id="cb25-7"><a href="#cb25-7"></a><span class="kw">def</span> main():</span>
+<span id="cb25-8"><a href="#cb25-8"></a>  <span class="cf">assert</span> double_nested([[], []]) <span class="op">==</span> [[], []]</span>
+<span id="cb25-9"><a href="#cb25-9"></a>  <span class="cf">assert</span> double_nested([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>],</span>
+<span id="cb25-10"><a href="#cb25-10"></a>                        [<span class="dv">0</span>, <span class="dv">1</span>]]) <span class="op">==</span> [[<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">2</span>],</span>
+<span id="cb25-11"><a href="#cb25-11"></a>                                     [<span class="dv">0</span>, <span class="dv">2</span>]]</span>
+<span id="cb25-12"><a href="#cb25-12"></a>  <span class="bu">print</span>(<span class="st">"Passed all tests"</span>)</span>
+<span id="cb25-13"><a href="#cb25-13"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Passed all tests</code></pre>
+</div>
+</div>
+</section>
+<section id="write-a-function-3" class="slide level2">
+<h2>Write a function</h2>
+<ol type="1">
+<li>Function name is <code>len_strings_nested</code></li>
+<li>It takes a 2D list of strings as argument</li>
+<li>It mutates the sublist items by replacing each string with its length</li>
+<li>It returns the argument list</li>
+</ol>
+<p>Test cases:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1"></a><span class="cf">assert</span> len_strings_nested([[<span class="st">"desserts"</span>, <span class="st">"raw"</span>, <span class="st">"live"</span>],</span>
+<span id="cb27-2"><a href="#cb27-2"></a>                            [<span class="st">"smart"</span>, <span class="st">"knits"</span>]]) <span class="op">==</span> [[<span class="dv">8</span>, <span class="dv">3</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">5</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-a-function-solution-4" class="slide level2">
+<h2>Write a function – solution</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1"></a><span class="kw">def</span> len_strings_nested(strings):</span>
+<span id="cb28-2"><a href="#cb28-2"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(strings)):</span>
+<span id="cb28-3"><a href="#cb28-3"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(strings[i])):</span>
+<span id="cb28-4"><a href="#cb28-4"></a>      strings[i][j] <span class="op">=</span> <span class="bu">len</span>(strings[i][j])</span>
+<span id="cb28-5"><a href="#cb28-5"></a>  <span class="cf">return</span> strings</span>
+<span id="cb28-6"><a href="#cb28-6"></a></span>
+<span id="cb28-7"><a href="#cb28-7"></a><span class="kw">def</span> main():</span>
+<span id="cb28-8"><a href="#cb28-8"></a>  original_list <span class="op">=</span> [[<span class="st">"desserts"</span>, <span class="st">"raw"</span>, <span class="st">"live"</span>],</span>
+<span id="cb28-9"><a href="#cb28-9"></a>                               [<span class="st">"smart"</span>, <span class="st">"knits"</span>]]</span>
+<span id="cb28-10"><a href="#cb28-10"></a>  <span class="cf">assert</span> len_strings_nested(original_list) <span class="op">==</span> [[<span class="dv">8</span>, <span class="dv">3</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">5</span>]]</span>
+<span id="cb28-11"><a href="#cb28-11"></a>  <span class="bu">print</span>(original_list)</span>
+<span id="cb28-12"><a href="#cb28-12"></a>  </span>
+<span id="cb28-13"><a href="#cb28-13"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[8, 3, 4], [5, 5]]</code></pre>
+</div>
+</div>
+</section>
+<section id="write-a-function-4" class="slide level2">
+<h2>Write a function</h2>
+<ol type="1">
+<li>Function name is <code>reverse_strings_nested</code></li>
+<li>It takes a 2D list of strings as argument</li>
+<li>It mutates the sublist items by reversing each string (you can use <code>string[::-1]</code> to reverse it)</li>
+<li>It returns the argument list</li>
+</ol>
+<p>Test cases:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1"></a><span class="cf">assert</span> reverse_strings_nested([[<span class="st">"desserts"</span>, <span class="st">"raw"</span>, <span class="st">"live"</span>],</span>
+<span id="cb30-2"><a href="#cb30-2"></a>                               [<span class="st">"smart"</span>, <span class="st">"knits"</span>]]) <span class="op">==</span> [[<span class="st">"stressed"</span>, <span class="st">"war"</span>, <span class="st">"evil"</span>],</span>
+<span id="cb30-3"><a href="#cb30-3"></a>                                                        [<span class="st">"trams"</span>, <span class="st">"stink"</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-a-function-solution-5" class="slide level2">
+<h2>Write a function – solution</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1"></a><span class="kw">def</span> reverse_strings_nested(strings):</span>
+<span id="cb31-2"><a href="#cb31-2"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(strings)):</span>
+<span id="cb31-3"><a href="#cb31-3"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(strings[i])):</span>
+<span id="cb31-4"><a href="#cb31-4"></a>      strings[i][j] <span class="op">=</span> strings[i][j][::<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb31-5"><a href="#cb31-5"></a>  <span class="cf">return</span> strings</span>
+<span id="cb31-6"><a href="#cb31-6"></a></span>
+<span id="cb31-7"><a href="#cb31-7"></a><span class="kw">def</span> main():</span>
+<span id="cb31-8"><a href="#cb31-8"></a>  original_strings <span class="op">=</span> [[<span class="st">"desserts"</span>, <span class="st">"raw"</span>, <span class="st">"live"</span>],</span>
+<span id="cb31-9"><a href="#cb31-9"></a>                      [<span class="st">"smart"</span>, <span class="st">"knits"</span>]]</span>
+<span id="cb31-10"><a href="#cb31-10"></a>  reverse_strings_nested(original_strings)   </span>
+<span id="cb31-11"><a href="#cb31-11"></a>  <span class="cf">assert</span>  original_strings <span class="op">==</span> [[<span class="st">"stressed"</span>, <span class="st">"war"</span>, <span class="st">"evil"</span>],</span>
+<span id="cb31-12"><a href="#cb31-12"></a>                               [<span class="st">"trams"</span>, <span class="st">"stink"</span>]]</span>
+<span id="cb31-13"><a href="#cb31-13"></a>  </span>
+<span id="cb31-14"><a href="#cb31-14"></a>  <span class="bu">print</span>(original_strings)</span>
+<span id="cb31-15"><a href="#cb31-15"></a>  <span class="bu">print</span>(<span class="st">"Passed test"</span>)</span>
+<span id="cb31-16"><a href="#cb31-16"></a>  </span>
+<span id="cb31-17"><a href="#cb31-17"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[['stressed', 'war', 'evil'], ['trams', 'stink']]
+Passed test</code></pre>
 </div>
 </div>
 
