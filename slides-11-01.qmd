@@ -161,6 +161,8 @@ main()
 2.  It takes an argument, `lists`, which is a 2D list of numbers (floats or integers)
 3.  It calculates the mean of each sublist, and returns the highest average
 
+Name your solution `two_d_highest_average.py` and submit it to gradescope
+
 ```{python}
 #| eval: false
 #| echo: true
@@ -289,6 +291,3 @@ main()
       
 ```
 
-# Submit attendance
-
-Name your solution `two_d_highest_average.py` and submit it to gradescope

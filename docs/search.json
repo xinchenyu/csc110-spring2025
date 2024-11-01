@@ -3630,7 +3630,7 @@
     "href": "slides-11-01.html#write-a-function-1",
     "title": "more on for loops (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is get_highest_average\nIt takes an argument, lists, which is a 2D list of numbers (floats or integers)\nIt calculates the mean of each sublist, and returns the highest average\n\n\nassert get_highest_average([[1, 1, 1], [2, 2]]) == 2\nassert get_highest_average([[], []]) == None\nassert get_highest_average([]) == None"
+    "text": "Write a function\n\nIts name is get_highest_average\nIt takes an argument, lists, which is a 2D list of numbers (floats or integers)\nIt calculates the mean of each sublist, and returns the highest average\n\nName your solution two_d_highest_average.py and submit it to gradescope\n\nassert get_highest_average([[1, 1, 1], [2, 2]]) == 2\nassert get_highest_average([[], []]) == None\nassert get_highest_average([]) == None"
   },
   {
     "objectID": "slides-11-01.html#write-a-function-2",
