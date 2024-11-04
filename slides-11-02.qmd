@@ -159,7 +159,7 @@ Draw a loop table with:
 * value of `max` before loop, and in each iteration of the nested loops
 * values of `i`, `j`, and `lists[i][j]` for each nested loop iteration
 
-## Loop table -- solution part 1
+## Loop table -- solution
 
 ```{r}
 #| eval: true
