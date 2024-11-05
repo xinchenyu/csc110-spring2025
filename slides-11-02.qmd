@@ -138,7 +138,7 @@ def main():
 main()
 ```
 
-## Extra Activity -- Loop Table
+## Loop Table
 
 ```{python}
 #| eval: false
@@ -151,15 +151,22 @@ def nested_max(lists):
         max = lists[i][j]
   return max
 
-max_nested([[], [], [2, 1], [0, 5, 2])
+max_nested([[], [], [2, 1], [0, 5])
 ```
 
 Draw a loop table with:
 
-* value of `max` before loop, and in each iteration of the nested loops
-* values of `i`, `j`, and `lists[i][j]` for each nested loop iteration
+* values of `i`, `j`,`len(lists[i])`, `lists[i][j]`, and `max` for each nested loop iteration
+* Hint: both values of `j` and `lists[i][j]` are `"-"` if an inner list is empty 
 
-## Loop table -- solution
+## Loop Table -- solution
+
+
+```{python}
+#| eval: false
+#| echo: true
+max_nested([[], [], [2, 1], [0, 5])
+```
 
 ```{r}
 #| eval: true
@@ -169,19 +176,19 @@ Draw a loop table with:
 library(knitr)
 library(tidyverse)
 library(huxtable)
-df <- data.frame(a = c("0", "1", "2", "2", "3", "3", "3"),
-           b = c("-", "-", "0", "1", "0", "1", "2"),
-           c = c("0", "0", "2", "2", "3", "3", "3"),
-           d = c("-", "-", "2", "1", "0", "5", "2"),
-           e = c("None", "None", "2", "2", "2", "5", "5"))
+df <- data.frame(a = c("0", "1", "2", "2", "3", "3"),
+           b = c("-", "-", "0", "1", "0", "1"),
+           c = c("0", "0", "2", "2", "2", "2"),
+           d = c("-", "-", "2", "1", "0", "5"),
+           e = c("None", "None", "2", "2", "2", "5"))
 
 colnames(df) <-  c("i", "j", "len(lists[i])", "lists[i][j]", "max")
 
 as_hux(df, add_colnames = TRUE) %>%
-      set_right_border(1:8, everywhere, 0.4) %>%
-      set_left_border(1:8, everywhere, 0.4) %>%
-      set_top_border(1:8, everywhere, 0.4) %>% 
-      set_bottom_border(1:8, everywhere, 0.4)
+      set_right_border(1:7, everywhere, 0.4) %>%
+      set_left_border(1:7, everywhere, 0.4) %>%
+      set_top_border(1:7, everywhere, 0.4) %>% 
+      set_bottom_border(1:7, everywhere, 0.4)
 ```
 
 
@@ -233,7 +240,7 @@ In addition to retrieving a value from nested lists, we can also mutate a value 
 ```{python}
 #| eval: true
 #| echo: true
-people = [["Ana", 34, "B"],
+people = [["Ana", 24, "B"],
           ["Peter", 23, "A"]]
 people
 ```
@@ -242,7 +249,7 @@ people
 ```{python}
 #| eval: true
 #| echo: true
-people[0][1] = 24
+people[0][1] = 54
 people
 ```
 
@@ -286,42 +293,6 @@ main()
 
 ## Write a function
 
-1. Function name is `len_strings_nested`
-1. It takes a 2D list of strings as argument
-1. It mutates the sublist items by replacing each string with its length
-1. It returns the argument list
-
-Test cases:
-
-```{python}
-#| eval: false
-#| echo: true
-assert len_strings_nested([["desserts", "raw", "live"],
-                            ["smart", "knits"]]) == [[8, 3, 4], [5, 5]]
-```
-
-## Write a function -- solution
-
-```{python}
-#| eval: true
-#| echo: true
-def len_strings_nested(strings):
-  for i in range(len(strings)):
-    for j in range(len(strings[i])):
-      strings[i][j] = len(strings[i][j])
-  return strings
-
-def main():
-  original_list = [["desserts", "raw", "live"],
-                               ["smart", "knits"]]
-  assert len_strings_nested(original_list) == [[8, 3, 4], [5, 5]]
-  print(original_list)
-  
-main()
-```
-
-## Write a function
-
 1. Function name is `reverse_strings_nested`
 1. It takes a 2D list of strings as argument
 1. It mutates the sublist items by reversing each string (you can use `string[::-1]` to reverse it)
@@ -361,3 +332,11 @@ def main():
 main()
 ```
 
+## Quiz 09
+
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+</center>
+
+You have 10 minutes to complete the quiz.

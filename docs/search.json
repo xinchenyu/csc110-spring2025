@@ -2195,7 +2195,7 @@
     "href": "slides-11-02.html#mutate-nested-lists",
     "title": "nested for loops (class slides)",
     "section": "Mutate nested lists",
-    "text": "Mutate nested lists\nIn addition to retrieving a value from nested lists, we can also mutate a value in a sublist.\n\npeople = [[\"Ana\", 34, \"B\"],\n          [\"Peter\", 23, \"A\"]]\npeople\n\n[['Ana', 34, 'B'], ['Peter', 23, 'A']]\n\n\n\npeople[0][1] = 24\npeople\n\n[['Ana', 24, 'B'], ['Peter', 23, 'A']]"
+    "text": "Mutate nested lists\nIn addition to retrieving a value from nested lists, we can also mutate a value in a sublist.\n\npeople = [[\"Ana\", 24, \"B\"],\n          [\"Peter\", 23, \"A\"]]\npeople\n\n[['Ana', 24, 'B'], ['Peter', 23, 'A']]\n\n\n\npeople[0][1] = 54\npeople\n\n[['Ana', 54, 'B'], ['Peter', 23, 'A']]"
   },
   {
     "objectID": "slides-11-02.html#write-a-function-2",
@@ -2216,14 +2216,14 @@
     "href": "slides-11-02.html#write-a-function-3",
     "title": "nested for loops (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nFunction name is len_strings_nested\nIt takes a 2D list of strings as argument\nIt mutates the sublist items by replacing each string with its length\nIt returns the argument list\n\nTest cases:\n\nassert len_strings_nested([[\"desserts\", \"raw\", \"live\"],\n                            [\"smart\", \"knits\"]]) == [[8, 3, 4], [5, 5]]"
+    "text": "Write a function\n\nFunction name is reverse_strings_nested\nIt takes a 2D list of strings as argument\nIt mutates the sublist items by reversing each string (you can use string[::-1] to reverse it)\nIt returns the argument list\n\nTest cases:\n\nassert reverse_strings_nested([[\"desserts\", \"raw\", \"live\"],\n                               [\"smart\", \"knits\"]]) == [[\"stressed\", \"war\", \"evil\"],\n                                                        [\"trams\", \"stink\"]]"
   },
   {
     "objectID": "slides-11-02.html#write-a-function-solution-4",
     "href": "slides-11-02.html#write-a-function-solution-4",
     "title": "nested for loops (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef len_strings_nested(strings):\n  for i in range(len(strings)):\n    for j in range(len(strings[i])):\n      strings[i][j] = len(strings[i][j])\n  return strings\n\ndef main():\n  original_list = [[\"desserts\", \"raw\", \"live\"],\n                               [\"smart\", \"knits\"]]\n  assert len_strings_nested(original_list) == [[8, 3, 4], [5, 5]]\n  print(original_list)\n  \nmain()\n\n[[8, 3, 4], [5, 5]]"
+    "text": "Write a function – solution\n\ndef reverse_strings_nested(strings):\n  for i in range(len(strings)):\n    for j in range(len(strings[i])):\n      strings[i][j] = strings[i][j][::-1]\n  return strings\n\ndef main():\n  original_strings = [[\"desserts\", \"raw\", \"live\"],\n                      [\"smart\", \"knits\"]]\n  reverse_strings_nested(original_strings)   \n  assert  original_strings == [[\"stressed\", \"war\", \"evil\"],\n                               [\"trams\", \"stink\"]]\n  \n  print(original_strings)\n  print(\"Passed test\")\n  \nmain()\n\n[['stressed', 'war', 'evil'], ['trams', 'stink']]\nPassed test"
   },
   {
     "objectID": "slides-11-02.html#write-a-function-4",
@@ -2244,7 +2244,7 @@
     "href": "slides-11-02.html#extra-activity-loop-table",
     "title": "nested for loops (class slides)",
     "section": "Extra Activity – Loop Table",
-    "text": "Extra Activity – Loop Table\n\ndef nested_max(lists):\n  max = None\n  for i in range(len(lists)):\n    for j in range(len(lists[i])):\n      if max == None or lists[i][j] &gt; max:\n        max = lists[i][j]\n  return max\n\nmax_nested([[], [], [2, 1], [0, 5, 2])\n\nDraw a loop table with:\n\nvalue of max before loop, and in each iteration of the nested loops\nvalues of i, j, and lists[i][j] for each nested loop iteration"
+    "text": "Extra Activity – Loop Table\n\ndef nested_max(lists):\n  max = None\n  for i in range(len(lists)):\n    for j in range(len(lists[i])):\n      if max == None or lists[i][j] &gt; max:\n        max = lists[i][j]\n  return max\n\nmax_nested([[], [], [2, 1], [0, 5, 2])\n\nDraw a loop table with:\n\nvalues of i, j,len(lists[i]), lists[i][j], and max for each nested loop iteration\nHint: both values of j and lists[i][j] are \"-\" if an inner list is empty"
   },
   {
     "objectID": "slides-11-02.html#loop-table-solution-part-1",
@@ -5771,7 +5771,21 @@
     "objectID": "slides-11-02.html#loop-table-solution",
     "href": "slides-11-02.html#loop-table-solution",
     "title": "nested for loops (class slides)",
-    "section": "Loop table – solution",
-    "text": "Loop table – solution\n\n\n\n\n\nijlen(lists[i])lists[i][j]max\n\n0-0-None\n\n1-0-None\n\n20222\n\n21212\n\n30302\n\n31355\n\n32325"
+    "section": "Loop Table – solution",
+    "text": "Loop Table – solution\n\nmax_nested([[], [], [2, 1], [0, 5])\n\n\n\n\n\n\nijlen(lists[i])lists[i][j]max\n\n0-0-None\n\n1-0-None\n\n20222\n\n21212\n\n30202\n\n31255"
+  },
+  {
+    "objectID": "slides-11-02.html#loop-table",
+    "href": "slides-11-02.html#loop-table",
+    "title": "nested for loops (class slides)",
+    "section": "Loop Table",
+    "text": "Loop Table\n\ndef nested_max(lists):\n  max = None\n  for i in range(len(lists)):\n    for j in range(len(lists[i])):\n      if max == None or lists[i][j] &gt; max:\n        max = lists[i][j]\n  return max\n\nmax_nested([[], [], [2, 1], [0, 5])\n\nDraw a loop table with:\n\nvalues of i, j,len(lists[i]), lists[i][j], and max for each nested loop iteration\nHint: both values of j and lists[i][j] are \"-\" if an inner list is empty"
+  },
+  {
+    "objectID": "slides-11-02.html#quiz-09",
+    "href": "slides-11-02.html#quiz-09",
+    "title": "nested for loops (class slides)",
+    "section": "Quiz 09",
+    "text": "Quiz 09\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz."
   }
 ]
