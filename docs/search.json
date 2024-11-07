@@ -4,7 +4,7 @@
     "href": "slides-12-01.html#announcements",
     "title": "data structures – review (class slides)",
     "section": "Announcements",
-    "text": "Announcements\n\nCheck grades on D2L and gradescope\nMidterm 3 is on April 24\nFinal exam on May 3"
+    "text": "Announcements\n\nNo lecture, office hours, and lab on Monday, Nov 11"
   },
   {
     "objectID": "slides-12-01.html#data-structures-in-python",
@@ -74,14 +74,14 @@
     "href": "slides-12-01.html#evaluate-the-code",
     "title": "data structures – review (class slides)",
     "section": "Evaluate the code",
-    "text": "Evaluate the code\nIndicate when errors are thrown\n\nmy_list = [2, 3, 1, 2]\nmy_list.append(3)\nmy_list.insert(0, 1)\nmy_list[3] = 4\nmy_list # evaluate what this list holds at this point\n\nmy_list[6] = 10\n\nmy_tupple = (3, 4, 1)\nmy_tupple.append(3)\nmy_tupple # evaluate what this tuple holds at this point\n\nmy_dictionary = {3: 4, 1: 2, 5: 4}\nmy_dictionary[5] = 10\nmy_dictionary # evaluate what this dictionary holds at this point\n\nmy_dictionary.append(4: 5)\nmy_dictionary # evaluate what this dictionary holds at this point"
+    "text": "Evaluate the code\nIndicate when errors are thrown\n\nmy_list = [2, 3, 1, 2]\nmy_list.append(3)\nmy_list.insert(0, 1)\nmy_list[3] = 4\nmy_list[6] = 10\nmy_list # evaluate what this list holds at this point\n\nmy_tuple = (3, 4, 1)\nmy_tuple.append(3)\nmy_tuple # evaluate what this tuple holds at this point\n\nmy_dictionary = {3: 4, 1: 2, 5: 4}\nmy_dictionary[5] = 10\nmy_dictionary # evaluate what this dictionary holds at this point\n\nmy_dictionary.append(4: 5)\nmy_dictionary # evaluate what this dictionary holds at this point"
   },
   {
     "objectID": "slides-12-01.html#evaluate-the-code-1",
     "href": "slides-12-01.html#evaluate-the-code-1",
     "title": "data structures – review (class slides)",
     "section": "Evaluate the code",
-    "text": "Evaluate the code\nIndicate when errors are thrown\n\nmy_list = [2, 3, 1, 2]\nmy_list.append(3)\nmy_list.insert(0, 1)\nmy_list[3] = 4\nmy_list # evaluate what this list holds at this point\n\n[1, 2, 3, 4, 2, 3]\n\n\n\n# error --- my_list[6] = 10\n\nmy_tupple = (3, 4, 1)\n# error --- my_tupple.append(3)\nmy_tupple # evaluate what this tuple holds at this point\n\n(3, 4, 1)\n\n\n\nmy_dictionary = {3: 4, 1: 2, 5: 4}\nmy_dictionary[5] = 10\nmy_dictionary # evaluate what this dictionary holds at this point\n\n{3: 4, 1: 2, 5: 10}\n\n\n\n# error --- my_dictionary.append(4: 5)\nmy_dictionary # evaluate what this dictionary holds at this point\n\n{3: 4, 1: 2, 5: 10}"
+    "text": "Evaluate the code\nIndicate when errors are thrown\n\nmy_list = [2, 3, 1, 2]\nmy_list.append(3)\nmy_list.insert(0, 1)\nmy_list[3] = 4\n# error --- my_list[6] = 10\nmy_list # evaluate what this list holds at this point\n\n[1, 2, 3, 4, 2, 3]\n\n\n\nmy_tuple = (3, 4, 1)\n# error --- my_tupple.append(3)\nmy_tuple # evaluate what this tuple holds at this point\n\n(3, 4, 1)\n\n\n\nmy_dictionary = {3: 4, 1: 2, 5: 4}\nmy_dictionary[5] = 10\nmy_dictionary # evaluate what this dictionary holds at this point\n\n{3: 4, 1: 2, 5: 10}\n\n\n\n# error --- my_dictionary.append(4: 5)\nmy_dictionary # evaluate what this dictionary holds at this point\n\n{3: 4, 1: 2, 5: 10}"
   },
   {
     "objectID": "slides-12-01.html#iterating-over-data-structures",
@@ -123,7 +123,7 @@
     "href": "slides-12-01.html#write-a-function",
     "title": "data structures – review (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is count_names\nIt opens in read mode a file that contains a name per line, with repeated names\nIt counts how many unique names there are in the file\nIt returns an integer with the count\nUse a list for this\n\n\nassert count_names(\"names.txt\") == 11"
+    "text": "Write a function\n\nIts name is count_names that opens in read mode a file that contains a name per line, with repeated names\nIt counts how many unique names there are in the file\nIt returns an integer with the count\nUse a list for this\n\nName your file names.py and submit to Gradescope.\n\nassert count_names(\"names.txt\") == 11"
   },
   {
     "objectID": "slides-12-01.html#write-a-function-solution",

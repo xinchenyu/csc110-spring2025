@@ -9,9 +9,7 @@ df-print: kable
 
 ## Announcements
 
-* Check grades on D2L and gradescope
-* Midterm 3 is on April 24
-* Final exam on May 3
+* No lecture, office hours, and lab on Monday, Nov 11
 
 
 ## Data Structures in Python
@@ -133,13 +131,12 @@ my_list = [2, 3, 1, 2]
 my_list.append(3)
 my_list.insert(0, 1)
 my_list[3] = 4
+my_list[6] = 10
 my_list # evaluate what this list holds at this point
 
-my_list[6] = 10
-
-my_tupple = (3, 4, 1)
-my_tupple.append(3)
-my_tupple # evaluate what this tuple holds at this point
+my_tuple = (3, 4, 1)
+my_tuple.append(3)
+my_tuple # evaluate what this tuple holds at this point
 
 my_dictionary = {3: 4, 1: 2, 5: 4}
 my_dictionary[5] = 10
@@ -160,17 +157,16 @@ my_list = [2, 3, 1, 2]
 my_list.append(3)
 my_list.insert(0, 1)
 my_list[3] = 4
+# error --- my_list[6] = 10
 my_list # evaluate what this list holds at this point
 ```
 
 ```{python}
 #| eval: true
 #| echo: true
-# error --- my_list[6] = 10
-
-my_tupple = (3, 4, 1)
+my_tuple = (3, 4, 1)
 # error --- my_tupple.append(3)
-my_tupple # evaluate what this tuple holds at this point
+my_tuple # evaluate what this tuple holds at this point
 ```
 
 ```{python}
@@ -250,6 +246,81 @@ for key, value in my_dictionary.items():
   print(key)
 ```
 
+
+## Write a function
+
+1.  Its name is `count_names` that opens in read mode [a file that contains a name per line](data/names.txt), with repeated names
+3.  It counts how many unique names there are in the file
+4.  It returns an **integer** with the count
+5.  Use a **list** for this
+
+Name your file `names.py` and submit to Gradescope.
+
+```{python}
+#| eval: false
+#| echo: true
+assert count_names("names.txt") == 11
+```
+
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def count_names(file_name):
+  f = open(file_name, "r")
+  name_list = []
+  for line in f:
+    name = line.strip()
+    if name not in name_list:
+      name_list.append(name)
+  f.close()
+  return len(name_list)
+
+def main():
+  assert count_names("names.txt") == 11
+  
+main()
+```
+
+
+## Write a function
+
+1.  Its name is `count_names`
+2.  It opens in read mode [a file that contains a name per line](data/names.txt), with repeated names
+3.  It counts how many unique names there are in the file
+4.  It returns an **integer** with the count
+5.  Use a **dictionary** for this
+
+```{python}
+#| eval: false
+#| echo: true
+assert count_names("names.txt") == 11
+```
+
+
+## Write a functionn -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def count_names(file_name):
+  f = open(file_name, "r")
+  name_dict = {}
+  for line in f:
+    name = line.strip()
+    if name not in name_dict:
+      name_dict[name] = ""
+  f.close()
+  return len(name_dict)
+
+def main():
+  assert count_names("names.txt") == 11
+  
+main()
+```
+
 ## Cannot change size of data structure
 
 It is not possible to remove or add items to a list or a dictionary inside a `for x in data_structure` loop. This is what happens when you try to do so:
@@ -287,84 +358,4 @@ Error:
 my_dict = {2: 0, 3: 1, 1: 0, 2: 0}
 for key in my_dict:
   my_dict.pop(key) # this causes an error
-```
-
-## Write a function
-
-1.  Its name is `count_names`
-2.  It opens in read mode [a file that contains a name per line](data/names.txt), with repeated names
-3.  It counts how many unique names there are in the file
-4.  It returns an **integer** with the count
-5.  Use a **list** for this
-
-```{python}
-#| eval: false
-#| echo: true
-assert count_names("names.txt") == 11
-```
-
-
-## Write a function -- solution
-
-```{python}
-#| eval: true
-#| echo: true
-def count_names(file_name):
-  f = open(file_name, "r")
-  name_list = []
-  for line in f:
-    name = line.strip()
-    if name not in name_list:
-      name_list.append(name)
-  f.close()
-  return len(name_list)
-
-def main():
-  assert count_names("names.txt") == 11
-  
-main()
-```
-
-# Submit code for attendance
-
-Submit your `count_names` functions to Gradescope for attendance.
-
-Name your file `names.py`
-
-
-## Write a function
-
-1.  Its name is `count_names`
-2.  It opens in read mode [a file that contains a name per line](data/names.txt), with repeated names
-3.  It counts how many unique names there are in the file
-4.  It returns an **integer** with the count
-5.  Use a **dictionary** for this
-
-```{python}
-#| eval: false
-#| echo: true
-assert count_names("names.txt") == 11
-```
-
-
-
-## Write a functionn -- solution
-
-```{python}
-#| eval: true
-#| echo: true
-def count_names(file_name):
-  f = open(file_name, "r")
-  name_dict = {}
-  for line in f:
-    name = line.strip()
-    if name not in name_dict:
-      name_dict[name] = ""
-  f.close()
-  return len(name_dict)
-
-def main():
-  assert count_names("names.txt") == 11
-  
-main()
 ```
