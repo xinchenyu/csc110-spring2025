@@ -130,7 +130,7 @@
     "href": "slides-12-01.html#write-a-function-solution",
     "title": "data structures – review (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef count_names(file_name):\n  f = open(file_name, \"r\")\n  name_list = []\n  for line in f:\n    name = line.strip()\n    if name not in name_list:\n      name_list.append(name)\n  f.close()\n  return len(name_list)\n\ndef main():\n  assert count_names(\"names.txt\") == 11\n  \nmain()"
+    "text": "Write a function – solution\n\ndef count_names(file_name):\n  f = open(file_name, \"r\")\n  name_list = []\n  for line in f:\n    name = line.strip()\n    if name not in name_list and name != \"\":\n      name_list.append(name)\n  f.close()\n  return len(name_list)\n\ndef main():\n  assert count_names(\"names.txt\") == 11\n  \nmain()"
   },
   {
     "objectID": "slides-12-01.html#write-a-function-1",
@@ -5787,5 +5787,12 @@
     "title": "nested for loops (class slides)",
     "section": "Quiz 09",
     "text": "Quiz 09\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz."
+  },
+  {
+    "objectID": "slides-12-01.html#write-a-function-solution-1",
+    "href": "slides-12-01.html#write-a-function-solution-1",
+    "title": "data structures – review (class slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\n\ndef count_names(file_name):\n  f = open(file_name, \"r\")\n  name_dict = {}\n  for line in f:\n    name = line.strip()\n    if name not in name_dict and name != \"\":\n      name_dict[name] = \"\"\n  f.close()\n  return len(name_dict)\n\ndef main():\n  assert count_names(\"names.txt\") == 11\n  \nmain()"
   }
 ]
