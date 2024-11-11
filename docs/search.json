@@ -5794,5 +5794,12 @@
     "title": "data structures – review (class slides)",
     "section": "Write a function – solution",
     "text": "Write a function – solution\n\ndef count_names(file_name):\n  f = open(file_name, \"r\")\n  name_dict = {}\n  for line in f:\n    name = line.strip()\n    if name not in name_dict and name != \"\":\n      name_dict[name] = \"\"\n  f.close()\n  return len(name_dict)\n\ndef main():\n  assert count_names(\"names.txt\") == 11\n  \nmain()"
+  },
+  {
+    "objectID": "slides-12-02.html#quiz-10",
+    "href": "slides-12-02.html#quiz-10",
+    "title": "intro to sets (class slides)",
+    "section": "Quiz 10",
+    "text": "Quiz 10\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz."
   }
 ]
