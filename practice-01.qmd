@@ -33,9 +33,12 @@ Midterm 2 (Modules 1-8) + [Study Guide 2](pdfs/study-guide-2.pdf)
 13. [Practice Problems Module 10](https://colab.research.google.com/drive/1kiOrOrbqIDpk251VvT7c6au9_HDAsI40?usp=sharing)
 14. [Practice Problems Module 11](https://colab.research.google.com/drive/1BwTHKQA7igraUvfhJqe3aqMwbIk_xOgL?usp=sharing)
 15. [Practice Problems Module 11](https://colab.research.google.com/drive/1qR0y_vaAkk21v_PdK1aVzpBzC9o7cEl-?usp=sharing)
-16. [Practice Problems Module 12 (Quiz 11)](https://colab.research.google.com/drive/1MrMXHORXoNGarSataOih0cP6lHSUDgdb?usp=sharing)
+16. [Practice Problems Module 12](https://colab.research.google.com/drive/1MrMXHORXoNGarSataOih0cP6lHSUDgdb?usp=sharing)
+
+Midterm 3 (Modules 1-12) + [Study Guide 3](pdfs/study-guide-3.pdf)
+
 17. [Practice Problems Module 13](https://colab.research.google.com/drive/1_eVARSVE203JFI7xe1YvEEeZCPMpaDSS?usp=sharing)
-18. [Practice problems Module 13 II (Quiz 12)](https://colab.research.google.com/drive/1-mSE4alNCXCef4RrcOOhg1pQH4xvs47l?usp=sharing)
+18. [Practice problems Module 13](https://colab.research.google.com/drive/1-mSE4alNCXCef4RrcOOhg1pQH4xvs47l?usp=sharing)
 19. [Practice Problems Module 14](https://colab.research.google.com/drive/1ut8vRtGFOR-fRL82zyOyhTXgcybelyz4?usp=sharing)
 
 
