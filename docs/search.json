@@ -704,7 +704,7 @@
     "href": "slides-12-02.html#sets",
     "title": "intro to sets (class slides)",
     "section": "Sets",
-    "text": "Sets\n\nA set is (another) data structure\nHelpful ways of thinking about it\n\nA dictionary without the values\nA “bag” of elements"
+    "text": "Sets\n\nstore:\n\ndo NOT store items in the order you created them\nCANNOT use square brackets to retrieve an item\ndo NOT allow repeated items to be stored\n\nuse set() to initiate an empty set\nuse curly brackets ({}) for creating a set with values\nuse for x in set to iterate over the elements in a set"
   },
   {
     "objectID": "slides-12-02.html#sets-1",

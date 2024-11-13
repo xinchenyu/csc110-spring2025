@@ -49,30 +49,19 @@ df-print: kable
 -   allow value retrieval through key with square brackets (`[]`)
 -   are **mutable**
 
-## Sets
-
--   A **set** is (another) data structure
-
--   Helpful ways of thinking about it
-
-    -   A dictionary without the values
-
-    -   A "bag" of elements
 
 ## Sets
 
--   Do not store items in the order you created them
+-   store:
+    -   do **NOT** store items in the order you created them
+    -   **CANNOT** use square brackets to retrieve an item
+    -   do **NOT** allow repeated items to be stored
 
--   Do not allow repeated items to be stored
+-   use `set()` to initiate an empty set
 
--   **Cannot** use square brackets to retrieve an item
+-   use curly brackets (`{}`) for creating a set with values
 
--   Use `set()` to initiate an empty set
-
--   Use `len()` to get number of items
-
--   Use `for x in set` to iterate over the elements in a set
-
+-   use `for x in set` to iterate over the elements in a set
 
 
 ## Set methods
