@@ -5808,5 +5808,12 @@
     "title": "intro to sets (class slides)",
     "section": "Announcements",
     "text": "Announcements\n\nMidterm 3 will be on next Wednesday, Nov 20.\nReview session next Tuesday, Nov 19, 5-7pm\n\nLocation: Gittings 129b\n\nStudy guide: xinchenyu.github.io/csc110-fall2024/pdfs/study-guide-3.pdf"
+  },
+  {
+    "objectID": "slides-12-01.html#can-we-change-size-of-data-structure",
+    "href": "slides-12-01.html#can-we-change-size-of-data-structure",
+    "title": "data structures – review (class slides)",
+    "section": "Can we change size of data structure?",
+    "text": "Can we change size of data structure?\nGo to Python Tutor and visualize the following execution.\n\nRemove values using for x in list:\n\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.remove(value)\n\n\nAppend values using for x in list:\n\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.append(value + 1)"
   }
 ]

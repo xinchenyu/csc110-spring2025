@@ -321,6 +321,28 @@ def main():
 main()
 ```
 
+## Can we change size of data structure?
+
+Go to [Python Tutor](https://pythontutor.com/) and visualize the following execution. 
+
+-   Remove values using `for x in list`:
+```{python}
+#| eval: false
+#| echo: true
+my_list = [2, 3, 1, 2]
+for value in my_list:
+  my_list.remove(value)
+```
+
+-   Append values using `for x in list`:
+```{python}
+#| eval: false
+#| echo: true
+my_list = [2, 3, 1, 2]
+for value in my_list:
+  my_list.append(value + 1) 
+```
+
 ## Cannot change size of data structure
 
 It is not possible to remove or add items to a list or a dictionary inside a `for x in data_structure` loop. This is what happens when you try to do so:
