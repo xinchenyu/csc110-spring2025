@@ -400,6 +400,17 @@
 <h1>CSc 110 - Intro to Sets</h1>
 
 </section>
+<section id="announcements" class="slide level2">
+<h2>Announcements</h2>
+<ul>
+<li>Midterm 3 will be on next Wednesday, Nov 20.</li>
+<li>Review session next Tuesday, Nov 19, 5-7pm
+<ul>
+<li>Location: Gittings 129b</li>
+</ul></li>
+<li>Study guide: <a href="https://xinchenyu.github.io/csc110-fall2024/pdfs/study-guide-3.pdf">xinchenyu.github.io/csc110-fall2024/pdfs/study-guide-3.pdf</a></li>
+</ul>
+</section>
 <section id="data-structures-in-python" class="slide level2">
 <h2>Data Structures in Python</h2>
 <ul>
@@ -496,21 +507,21 @@
 <div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>numbers <span class="op">=</span> {<span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">9</span>, <span class="dv">8</span>, <span class="dv">20</span>, <span class="dv">5</span>}</span>
 <span id="cb2-2"><a href="#cb2-2"></a>numbers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
+<div class="cell-output cell-output-display" data-execution_count="11">
 <pre><code>{3, 5, 7, 8, 9, 10, 20}</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>numbers.add(<span class="dv">30</span>)</span>
 <span id="cb4-2"><a href="#cb4-2"></a>numbers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="12">
 <pre><code>{3, 5, 7, 8, 9, 10, 20, 30}</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>numbers.discard(<span class="dv">10</span>)</span>
 <span id="cb6-2"><a href="#cb6-2"></a>numbers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>{3, 5, 7, 8, 9, 20, 30}</code></pre>
 </div>
 </div>
@@ -541,14 +552,14 @@
 <div class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>numbers_list <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">1</span>]</span>
 <span id="cb9-2"><a href="#cb9-2"></a>numbers_list <span class="co"># evaluate this line</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
+<div class="cell-output cell-output-display" data-execution_count="14">
 <pre><code>[2, 1, 2, 1, 3, 4, 1]</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>numbers_set <span class="op">=</span> <span class="bu">set</span>(numbers_list)</span>
 <span id="cb11-2"><a href="#cb11-2"></a>numbers_set <span class="co"># evaluate this line</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="15">
 <pre><code>{1, 2, 3, 4}</code></pre>
 </div>
 </div>
@@ -556,14 +567,14 @@
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>numbers_set.add(<span class="dv">1</span>)</span>
 <span id="cb13-2"><a href="#cb13-2"></a>numbers_set.add(<span class="dv">2</span>)</span>
 <span id="cb13-3"><a href="#cb13-3"></a>numbers_set <span class="co"># evaluate this line</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
+<div class="cell-output cell-output-display" data-execution_count="16">
 <pre><code>{1, 2, 3, 4}</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a>numbers_set.add(<span class="dv">5</span>)</span>
 <span id="cb15-2"><a href="#cb15-2"></a>numbers_set <span class="co"># evaluate this line</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
+<div class="cell-output cell-output-display" data-execution_count="17">
 <pre><code>{1, 2, 3, 4, 5}</code></pre>
 </div>
 </div>
@@ -571,7 +582,7 @@
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a>numbers_set.discard(<span class="dv">6</span>)</span>
 <span id="cb17-2"><a href="#cb17-2"></a>numbers_set.discard(<span class="dv">1</span>)</span>
 <span id="cb17-3"><a href="#cb17-3"></a>numbers_set <span class="co"># evaluate this line</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
+<div class="cell-output cell-output-display" data-execution_count="18">
 <pre><code>{2, 3, 4, 5}</code></pre>
 </div>
 </div>

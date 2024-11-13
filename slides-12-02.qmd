@@ -7,6 +7,13 @@ df-print: kable
 
 # CSc 110 - Intro to Sets
 
+## Announcements
+
+* Midterm 3 will be on next Wednesday, Nov 20.
+* Review session next Tuesday, Nov 19, 5-7pm
+  * Location: Gittings 129b 
+* Study guide: [xinchenyu.github.io/csc110-fall2024/pdfs/study-guide-3.pdf](https://xinchenyu.github.io/csc110-fall2024/pdfs/study-guide-3.pdf) 
+
 ## Data Structures in Python
 
 -   lists (mutable)
