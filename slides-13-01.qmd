@@ -7,11 +7,6 @@ df-print: kable
 
 # CSc 110 - mutating lists
 
-## Announcements
-
-* Quiz 06 will be on next Wednesday, Apr 10 (mutate nested lists & sets)
-* Review Module 11 and 12
-
 
 ## Lists are mutable
 
@@ -44,17 +39,17 @@ numbers
 
 ## Write a function
 
-1. Its name is `square_all`
-1. It takes a list of integers as argument
-1. It **mutates** the list, squaring each integer (`n**2`)
+1. Its name is `total_mean`
+1. It takes a 2D list of integers as argument with at least one inner list
+1. It **mutates** the list, replace each inner list with a tuple. The tuple is the total and mean of that inner list.
 
 ```{python}
 #| echo: true
 #| eval: false
-test_list = [1, 2, 3, 4]
-square_all(test_list)
-assert test_list == [1, 4, 9, 16]
-assert square_all([-1, -2, -4]) == [1, 4, 16]
+test_list = [[2, 4, 6, 8], [], [2, 3, 4]]
+total_mean(test_list)
+assert test_list == [(20, 5.0), (None, None), (9, 3.0)]
+assert total_mean([[2, 4, 6, 8], [], [2, 3, 4]]) == [(20, 5.0), (None, None), (9, 3.0)]
 ```
 
 
@@ -63,17 +58,23 @@ assert square_all([-1, -2, -4]) == [1, 4, 16]
 ```{python}
 #| echo: true
 #| eval: true
-def square_all(numbers):
-  for i in range(len(numbers)):
-    numbers[i] = numbers[i]**2
-  return numbers
+def total_mean(lists):
+    for i in range(len(lists)): #must use for i in range(len(lists))
+        total = None
+        mean = None
+        if len(lists[i]) > 0: 
+            total = 0
+            for j in range(len(lists[i])): #can also use for n in lists[i]
+                total += lists[i][j]
+            mean = total/len(lists[i])
+        lists[i] = total, mean #need to use i to mutate lists
+    return lists
     
 def main():
-  test_list = [1, 2, 3, 4]
-  square_all(test_list)
-  assert test_list == [1, 4, 9, 16]
-  assert square_all([-1, -2, -4]) == [1, 4, 16]
-  print(test_list) # [1, 4, 9, 16]
+  test_list = [[2, 4, 6, 8], [], [2, 3, 4]]
+  total_mean(test_list)
+  assert test_list == [(20, 5.0), (None, None), (9, 3.0)]
+  assert total_mean([[2, 4, 6, 8], [], [2, 3, 4]]) == [(20, 5.0), (None, None), (9, 3.0)]
   
 main()
 ```
@@ -126,10 +127,12 @@ numbers
 1. It takes one argument: a list of strings
 1. It `mutates` and `returns` the argument list removing all strings that end in vowel
 
+Name your file as `delete_from_list.py` and submit to Gradescope.
+
 ```{python}
 #| echo: true
 #| eval: false
-names = ["Beatrice", "Philip", "Anna", "Peter"]
+names = ["Beatrice", "ASA", "Philip", "Anna", "Peter"]
 remove_names(names)
 assert names == ["Philip", "Peter"]
 ```
@@ -142,17 +145,16 @@ assert names == ["Philip", "Peter"]
 def remove_names(string_list):
   i = 0
   while i < len(string_list):
-    if string_list[i][-1] in "aeiou":
+    if string_list[i][-1].lower() in "aeiou":
       string_list.pop(i)
     else:
       i += 1
   return string_list
       
 def main():
-  names = ["Beatrice", "Philip", "Anna", "Peter"]
+  names = ["Beatrice", "ASA", "Philip", "Anna", "Peter"]
   remove_names(names)
   assert names == ["Philip", "Peter"]
-  print(names) # ["Philip", "Peter"]
 
 main()
 ```
@@ -164,7 +166,7 @@ main()
 #| eval: true
 def remove_names(string_list):
   for i in range(len(string_list)-1, -1, -1):
-    if string_list[i][-1] in "aeiou":
+    if string_list[i][-1].lower() in "aeiou":
       string_list.pop(i)
   return string_list
       
@@ -225,8 +227,3 @@ def main():
 main()
 ```
 
-# Submit code for attendance
-
-Submit your `remove_odds` functions to Gradescope for attendance.
-
-Name your file `remove_odds.py`

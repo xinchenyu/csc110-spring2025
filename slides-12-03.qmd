@@ -7,12 +7,6 @@ df-print: kable
 
 # CSc 110 - Sets
 
-## Announcements
-
-* If you submitted your solution to short project 09 before today, check gradescope -- there was a special character that was removed for the test file
-* Go to lab to work on short projects -- I will instruct TAs not to help students with short projects during office hours
-* Midterm 3 on April 24 -- up to module 14
-* Final exam on May 3, 6pm to 8pm, in ENR2 120N
 
 ## Set methods
 

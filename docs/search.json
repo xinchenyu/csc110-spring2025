@@ -3679,14 +3679,14 @@
     "href": "slides-13-01.html#write-a-function",
     "title": "mutating lists (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is square_all\nIt takes a list of integers as argument\nIt mutates the list, squaring each integer (n**2)\n\n\ntest_list = [1, 2, 3, 4]\nsquare_all(test_list)\nassert test_list == [1, 4, 9, 16]\nassert square_all([-1, -2, -4]) == [1, 4, 16]"
+    "text": "Write a function\n\nIts name is total_mean\nIt takes a 2D list of integers as argument with at least one inner list\nIt mutates the list, replace each inner list with a tuple. The tuple is the total and mean of that inner list.\n\n\ntest_list = [[2, 4, 6, 8], [], [2, 3, 4]]\ntotal_mean(test_list)\nassert test_list == [(20, 5.0), (None, None), (9, 3.0)]\nassert total_mean([[2, 4, 6, 8], [], [2, 3, 4]]) == [(20, 5.0), (None, None), (9, 3.0)]"
   },
   {
     "objectID": "slides-13-01.html#write-a-function-solution",
     "href": "slides-13-01.html#write-a-function-solution",
     "title": "mutating lists (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef square_all(numbers):\n  for i in range(len(numbers)):\n    numbers[i] = numbers[i]**2\n  return numbers\n    \ndef main():\n  test_list = [1, 2, 3, 4]\n  square_all(test_list)\n  assert test_list == [1, 4, 9, 16]\n  assert square_all([-1, -2, -4]) == [1, 4, 16]\n  print(test_list) # [1, 4, 9, 16]\n  \nmain()\n\n[1, 4, 9, 16]"
+    "text": "Write a function – solution\n\ndef total_mean(lists):\n    for i in range(len(lists)): #must use for i in range(len(lists))\n        total = None\n        mean = None\n        if len(lists[i]) &gt; 0: \n            total = 0\n            for j in range(len(lists[i])): #can also use for n in lists[i]\n                total += lists[i][j]\n            mean = total/len(lists[i])\n        lists[i] = total, mean #need to use i to mutate lists\n    return lists\n    \ndef main():\n  test_list = [[2, 4, 6, 8], [], [2, 3, 4]]\n  total_mean(test_list)\n  assert test_list == [(20, 5.0), (None, None), (9, 3.0)]\n  assert total_mean([[2, 4, 6, 8], [], [2, 3, 4]]) == [(20, 5.0), (None, None), (9, 3.0)]\n  \nmain()"
   },
   {
     "objectID": "slides-13-01.html#removing-elements-from-a-list-in-a-loop",
@@ -3707,21 +3707,21 @@
     "href": "slides-13-01.html#write-a-function-1",
     "title": "mutating lists (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is remove_names\nIt takes one argument: a list of strings\nIt mutates and returns the argument list removing all strings that end in vowel\n\n\nnames = [\"Beatrice\", \"Philip\", \"Anna\", \"Peter\"]\nremove_names(names)\nassert names == [\"Philip\", \"Peter\"]"
+    "text": "Write a function\n\nIts name is remove_names\nIt takes one argument: a list of strings\nIt mutates and returns the argument list removing all strings that end in vowel\n\nName your file as delete_from_list.py and submit to Gradescope.\n\nnames = [\"Beatrice\", \"ASA\", \"Philip\", \"Anna\", \"Peter\"]\nremove_names(names)\nassert names == [\"Philip\", \"Peter\"]"
   },
   {
     "objectID": "slides-13-01.html#write-a-function-solution-1",
     "href": "slides-13-01.html#write-a-function-solution-1",
     "title": "mutating lists (class slides)",
     "section": "Write a function – solution 1",
-    "text": "Write a function – solution 1\n\ndef remove_names(string_list):\n  i = 0\n  while i &lt; len(string_list):\n    if string_list[i][-1] in \"aeiou\":\n      string_list.pop(i)\n    else:\n      i += 1\n  return string_list\n      \ndef main():\n  names = [\"Beatrice\", \"Philip\", \"Anna\", \"Peter\"]\n  remove_names(names)\n  assert names == [\"Philip\", \"Peter\"]\n  print(names) # [\"Philip\", \"Peter\"]\n\nmain()\n\n['Philip', 'Peter']"
+    "text": "Write a function – solution 1\n\ndef remove_names(string_list):\n  i = 0\n  while i &lt; len(string_list):\n    if string_list[i][-1].lower() in \"aeiou\":\n      string_list.pop(i)\n    else:\n      i += 1\n  return string_list\n      \ndef main():\n  names = [\"Beatrice\", \"ASA\", \"Philip\", \"Anna\", \"Peter\"]\n  remove_names(names)\n  assert names == [\"Philip\", \"Peter\"]\n\nmain()"
   },
   {
     "objectID": "slides-13-01.html#write-a-function-solution-2",
     "href": "slides-13-01.html#write-a-function-solution-2",
     "title": "mutating lists (class slides)",
     "section": "Write a function – solution 2",
-    "text": "Write a function – solution 2\n\ndef remove_names(string_list):\n  for i in range(len(string_list)-1, -1, -1):\n    if string_list[i][-1] in \"aeiou\":\n      string_list.pop(i)\n  return string_list\n      \ndef main():\n  names = [\"Beatrice\", \"Philip\", \"Anna\", \"Peter\"]\n  remove_names(names)\n  assert names == [\"Philip\", \"Peter\"]\n  print(names) # [\"Philip\", \"Peter\"]\n\nmain()\n\n['Philip', 'Peter']"
+    "text": "Write a function – solution 2\n\ndef remove_names(string_list):\n  for i in range(len(string_list)-1, -1, -1):\n    if string_list[i][-1].lower() in \"aeiou\":\n      string_list.pop(i)\n  return string_list\n      \ndef main():\n  names = [\"Beatrice\", \"Philip\", \"Anna\", \"Peter\"]\n  remove_names(names)\n  assert names == [\"Philip\", \"Peter\"]\n  print(names) # [\"Philip\", \"Peter\"]\n\nmain()\n\n['Philip', 'Peter']"
   },
   {
     "objectID": "slides-13-01.html#removing-elements-from-inner-lists-in-2d-lists",
