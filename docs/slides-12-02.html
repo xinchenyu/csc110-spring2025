@@ -499,21 +499,21 @@
 <div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>numbers <span class="op">=</span> {<span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">9</span>, <span class="dv">8</span>, <span class="dv">20</span>, <span class="dv">5</span>}</span>
 <span id="cb2-2"><a href="#cb2-2"></a>numbers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="91">
+<div class="cell-output cell-output-display" data-execution_count="1">
 <pre><code>{3, 5, 7, 8, 9, 10, 20}</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>numbers.add(<span class="dv">30</span>)</span>
 <span id="cb4-2"><a href="#cb4-2"></a>numbers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="92">
+<div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>{3, 5, 7, 8, 9, 10, 20, 30}</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>numbers.discard(<span class="dv">10</span>)</span>
 <span id="cb6-2"><a href="#cb6-2"></a>numbers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="93">
+<div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>{3, 5, 7, 8, 9, 20, 30}</code></pre>
 </div>
 </div>
@@ -544,14 +544,14 @@
 <div class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>numbers_list <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">1</span>]</span>
 <span id="cb9-2"><a href="#cb9-2"></a>numbers_list <span class="co"># evaluate this line</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="94">
+<div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>[2, 1, 2, 1, 3, 4, 1]</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>numbers_set <span class="op">=</span> <span class="bu">set</span>(numbers_list)</span>
 <span id="cb11-2"><a href="#cb11-2"></a>numbers_set <span class="co"># evaluate this line</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="95">
+<div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>{1, 2, 3, 4}</code></pre>
 </div>
 </div>
@@ -559,14 +559,14 @@
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>numbers_set.add(<span class="dv">1</span>)</span>
 <span id="cb13-2"><a href="#cb13-2"></a>numbers_set.add(<span class="dv">2</span>)</span>
 <span id="cb13-3"><a href="#cb13-3"></a>numbers_set <span class="co"># evaluate this line</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="96">
+<div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>{1, 2, 3, 4}</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a>numbers_set.add(<span class="dv">5</span>)</span>
 <span id="cb15-2"><a href="#cb15-2"></a>numbers_set <span class="co"># evaluate this line</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="97">
+<div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>{1, 2, 3, 4, 5}</code></pre>
 </div>
 </div>
@@ -574,23 +574,10 @@
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a>numbers_set.discard(<span class="dv">6</span>)</span>
 <span id="cb17-2"><a href="#cb17-2"></a>numbers_set.discard(<span class="dv">1</span>)</span>
 <span id="cb17-3"><a href="#cb17-3"></a>numbers_set <span class="co"># evaluate this line</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="98">
+<div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>{2, 3, 4, 5}</code></pre>
 </div>
 </div>
-</section>
-<section id="quiz-10" class="slide level2">
-<h2>Quiz 10</h2>
-<center>
-<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;">
-<a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time
-<div id="clock_block_cb650886c4849ee">
-
-</div>
-</div>
-<script type="text/javascript" src="//w.24timezones.com/l.js" async=""></script>
-</center>
-<p>You have 10 minutes to complete the quiz.</p>
 </section>
 <section id="write-a-function" class="slide level2">
 <h2>Write a function</h2>
@@ -612,14 +599,16 @@
 <span id="cb20-2"><a href="#cb20-2"></a>  f <span class="op">=</span> <span class="bu">open</span>(file_name, <span class="st">"r"</span>)</span>
 <span id="cb20-3"><a href="#cb20-3"></a>  name_set <span class="op">=</span> <span class="bu">set</span>()</span>
 <span id="cb20-4"><a href="#cb20-4"></a>  <span class="cf">for</span> line <span class="kw">in</span> f:</span>
-<span id="cb20-5"><a href="#cb20-5"></a>    name_set.add(line.strip())</span>
-<span id="cb20-6"><a href="#cb20-6"></a>  f.close()</span>
-<span id="cb20-7"><a href="#cb20-7"></a>  <span class="cf">return</span> <span class="bu">len</span>(name_set)</span>
-<span id="cb20-8"><a href="#cb20-8"></a></span>
-<span id="cb20-9"><a href="#cb20-9"></a><span class="kw">def</span> main():</span>
-<span id="cb20-10"><a href="#cb20-10"></a>  <span class="cf">assert</span> count_names(<span class="st">"names.txt"</span>) <span class="op">==</span> <span class="dv">11</span></span>
-<span id="cb20-11"><a href="#cb20-11"></a>  </span>
-<span id="cb20-12"><a href="#cb20-12"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb20-5"><a href="#cb20-5"></a>    name <span class="op">=</span> line.strip()</span>
+<span id="cb20-6"><a href="#cb20-6"></a>    <span class="cf">if</span> name <span class="op">!=</span> <span class="st">""</span>:</span>
+<span id="cb20-7"><a href="#cb20-7"></a>      name_set.add(name)</span>
+<span id="cb20-8"><a href="#cb20-8"></a>  f.close()</span>
+<span id="cb20-9"><a href="#cb20-9"></a>  <span class="cf">return</span> <span class="bu">len</span>(name_set)</span>
+<span id="cb20-10"><a href="#cb20-10"></a></span>
+<span id="cb20-11"><a href="#cb20-11"></a><span class="kw">def</span> main():</span>
+<span id="cb20-12"><a href="#cb20-12"></a>  <span class="cf">assert</span> count_names(<span class="st">"names.txt"</span>) <span class="op">==</span> <span class="dv">11</span></span>
+<span id="cb20-13"><a href="#cb20-13"></a>  </span>
+<span id="cb20-14"><a href="#cb20-14"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-1" class="slide level2">
@@ -635,36 +624,36 @@
 </div>
 </section>
 <section id="write-a-function-solution-1" class="slide level2">
-<h2>Write a function – solution</h2>
+<h2>Write a function – solution 1</h2>
 <div class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a><span class="kw">def</span> has_duplicates(<span class="op">*</span>values):</span>
-<span id="cb22-2"><a href="#cb22-2"></a>  unique_values <span class="op">=</span> <span class="bu">set</span>()</span>
-<span id="cb22-3"><a href="#cb22-3"></a>  <span class="cf">for</span> v <span class="kw">in</span> values:</span>
-<span id="cb22-4"><a href="#cb22-4"></a>    <span class="cf">if</span> v <span class="kw">not</span> <span class="kw">in</span> unique_values:</span>
-<span id="cb22-5"><a href="#cb22-5"></a>      unique_values.add(v)</span>
-<span id="cb22-6"><a href="#cb22-6"></a>    <span class="cf">else</span>:</span>
-<span id="cb22-7"><a href="#cb22-7"></a>      <span class="cf">return</span> <span class="va">True</span></span>
-<span id="cb22-8"><a href="#cb22-8"></a>  <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb22-9"><a href="#cb22-9"></a></span>
-<span id="cb22-10"><a href="#cb22-10"></a><span class="kw">def</span> main():</span>
-<span id="cb22-11"><a href="#cb22-11"></a>  <span class="cf">assert</span> has_duplicates(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>) <span class="op">==</span> <span class="va">True</span></span>
-<span id="cb22-12"><a href="#cb22-12"></a>  <span class="cf">assert</span> has_duplicates(<span class="dv">3</span>, <span class="dv">20</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">13</span>) <span class="op">==</span> <span class="va">False</span></span>
-<span id="cb22-13"><a href="#cb22-13"></a>  </span>
-<span id="cb22-14"><a href="#cb22-14"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb22-2"><a href="#cb22-2"></a>  values_set <span class="op">=</span> <span class="bu">set</span>(values)</span>
+<span id="cb22-3"><a href="#cb22-3"></a>  <span class="cf">return</span> <span class="bu">len</span>(values) <span class="op">&gt;</span> <span class="bu">len</span>(values_set)</span>
+<span id="cb22-4"><a href="#cb22-4"></a></span>
+<span id="cb22-5"><a href="#cb22-5"></a><span class="kw">def</span> main():</span>
+<span id="cb22-6"><a href="#cb22-6"></a>  <span class="cf">assert</span> has_duplicates(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>) <span class="op">==</span> <span class="va">True</span></span>
+<span id="cb22-7"><a href="#cb22-7"></a>  <span class="cf">assert</span> has_duplicates(<span class="dv">3</span>, <span class="dv">20</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">13</span>) <span class="op">==</span> <span class="va">False</span></span>
+<span id="cb22-8"><a href="#cb22-8"></a>  </span>
+<span id="cb22-9"><a href="#cb22-9"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-solution-2" class="slide level2">
 <h2>Write a function – solution 2</h2>
 <div class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a><span class="kw">def</span> has_duplicates(<span class="op">*</span>values):</span>
-<span id="cb23-2"><a href="#cb23-2"></a>  values_set <span class="op">=</span> <span class="bu">set</span>(values)</span>
-<span id="cb23-3"><a href="#cb23-3"></a>  <span class="cf">return</span> <span class="bu">len</span>(values) <span class="op">&gt;</span> <span class="bu">len</span>(values_set)</span>
-<span id="cb23-4"><a href="#cb23-4"></a></span>
-<span id="cb23-5"><a href="#cb23-5"></a><span class="kw">def</span> main():</span>
-<span id="cb23-6"><a href="#cb23-6"></a>  <span class="cf">assert</span> has_duplicates(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>) <span class="op">==</span> <span class="va">True</span></span>
-<span id="cb23-7"><a href="#cb23-7"></a>  <span class="cf">assert</span> has_duplicates(<span class="dv">3</span>, <span class="dv">20</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">13</span>) <span class="op">==</span> <span class="va">False</span></span>
-<span id="cb23-8"><a href="#cb23-8"></a>  </span>
-<span id="cb23-9"><a href="#cb23-9"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb23-2"><a href="#cb23-2"></a>  unique_values <span class="op">=</span> <span class="bu">set</span>()</span>
+<span id="cb23-3"><a href="#cb23-3"></a>  <span class="cf">for</span> v <span class="kw">in</span> values:</span>
+<span id="cb23-4"><a href="#cb23-4"></a>    <span class="cf">if</span> v <span class="kw">not</span> <span class="kw">in</span> unique_values:</span>
+<span id="cb23-5"><a href="#cb23-5"></a>      unique_values.add(v)</span>
+<span id="cb23-6"><a href="#cb23-6"></a>    <span class="cf">else</span>:</span>
+<span id="cb23-7"><a href="#cb23-7"></a>      <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb23-8"><a href="#cb23-8"></a>  <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb23-9"><a href="#cb23-9"></a></span>
+<span id="cb23-10"><a href="#cb23-10"></a><span class="kw">def</span> main():</span>
+<span id="cb23-11"><a href="#cb23-11"></a>  <span class="cf">assert</span> has_duplicates(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>) <span class="op">==</span> <span class="va">True</span></span>
+<span id="cb23-12"><a href="#cb23-12"></a>  <span class="cf">assert</span> has_duplicates(<span class="dv">3</span>, <span class="dv">20</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">13</span>) <span class="op">==</span> <span class="va">False</span></span>
+<span id="cb23-13"><a href="#cb23-13"></a>  </span>
+<span id="cb23-14"><a href="#cb23-14"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 <div class="footer footer-default">

@@ -760,7 +760,7 @@
     "href": "slides-12-02.html#write-a-function-solution",
     "title": "intro to sets (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef count_names(file_name):\n  f = open(file_name, \"r\")\n  name_set = set()\n  for line in f:\n    name_set.add(line.strip())\n  f.close()\n  return len(name_set)\n\ndef main():\n  assert count_names(\"names.txt\") == 11\n  \nmain()"
+    "text": "Write a function – solution\n\ndef count_names(file_name):\n  f = open(file_name, \"r\")\n  name_set = set()\n  for line in f:\n    name = line.strip()\n    if name != \"\":\n      name_set.add(name)\n  f.close()\n  return len(name_set)\n\ndef main():\n  assert count_names(\"names.txt\") == 11\n  \nmain()"
   },
   {
     "objectID": "slides-12-02.html#write-a-function-1",
@@ -773,15 +773,15 @@
     "objectID": "slides-12-02.html#write-a-function-solution-1",
     "href": "slides-12-02.html#write-a-function-solution-1",
     "title": "intro to sets (class slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef has_duplicates(*values):\n  unique_values = set()\n  for v in values:\n    if v not in unique_values:\n      unique_values.add(v)\n    else:\n      return True\n  return False\n\ndef main():\n  assert has_duplicates(3, 2, 1, 2, 3) == True\n  assert has_duplicates(3, 20, 1, 2, 13) == False\n  \nmain()"
+    "section": "Write a function – solution 1",
+    "text": "Write a function – solution 1\n\ndef has_duplicates(*values):\n  values_set = set(values)\n  return len(values) &gt; len(values_set)\n\ndef main():\n  assert has_duplicates(3, 2, 1, 2, 3) == True\n  assert has_duplicates(3, 20, 1, 2, 13) == False\n  \nmain()"
   },
   {
     "objectID": "slides-12-02.html#write-a-function-solution-2",
     "href": "slides-12-02.html#write-a-function-solution-2",
     "title": "intro to sets (class slides)",
     "section": "Write a function – solution 2",
-    "text": "Write a function – solution 2\n\ndef has_duplicates(*values):\n  values_set = set(values)\n  return len(values) &gt; len(values_set)\n\ndef main():\n  assert has_duplicates(3, 2, 1, 2, 3) == True\n  assert has_duplicates(3, 20, 1, 2, 13) == False\n  \nmain()"
+    "text": "Write a function – solution 2\n\ndef has_duplicates(*values):\n  unique_values = set()\n  for v in values:\n    if v not in unique_values:\n      unique_values.add(v)\n    else:\n      return True\n  return False\n\ndef main():\n  assert has_duplicates(3, 2, 1, 2, 3) == True\n  assert has_duplicates(3, 20, 1, 2, 13) == False\n  \nmain()"
   },
   {
     "objectID": "final-review.html",
