@@ -171,7 +171,7 @@ def remove_names(string_list):
   return string_list
       
 def main():
-  names = ["Beatrice", "Philip", "Anna", "Peter"]
+  names = ["Beatrice", "ASA", "Philip", "Anna", "Peter"]
   remove_names(names)
   assert names == ["Philip", "Peter"]
   print(names) # ["Philip", "Peter"]

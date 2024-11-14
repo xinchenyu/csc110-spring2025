@@ -3721,7 +3721,7 @@
     "href": "slides-13-01.html#write-a-function-solution-2",
     "title": "mutating lists (class slides)",
     "section": "Write a function – solution 2",
-    "text": "Write a function – solution 2\n\ndef remove_names(string_list):\n  for i in range(len(string_list)-1, -1, -1):\n    if string_list[i][-1].lower() in \"aeiou\":\n      string_list.pop(i)\n  return string_list\n      \ndef main():\n  names = [\"Beatrice\", \"Philip\", \"Anna\", \"Peter\"]\n  remove_names(names)\n  assert names == [\"Philip\", \"Peter\"]\n  print(names) # [\"Philip\", \"Peter\"]\n\nmain()\n\n['Philip', 'Peter']"
+    "text": "Write a function – solution 2\n\ndef remove_names(string_list):\n  for i in range(len(string_list)-1, -1, -1):\n    if string_list[i][-1].lower() in \"aeiou\":\n      string_list.pop(i)\n  return string_list\n      \ndef main():\n  names = [\"Beatrice\", \"ASA\", \"Philip\", \"Anna\", \"Peter\"]\n  remove_names(names)\n  assert names == [\"Philip\", \"Peter\"]\n  print(names) # [\"Philip\", \"Peter\"]\n\nmain()\n\n['Philip', 'Peter']"
   },
   {
     "objectID": "slides-13-01.html#removing-elements-from-inner-lists-in-2d-lists",
