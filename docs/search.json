@@ -3973,7 +3973,7 @@
     "href": "slides-13-02.html#write-a-function",
     "title": "mutating dictionaries (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is sales_tax\nIt takes a dictionary as argument, with string keys and float values\nIt mutates the dictionary argument, multiplying each value by 0.056 and rounding the result to two decimals\n\n\ngroceries = {\"banana\": 2.50, \"milk\": 4.25, \"bread\": 3.68}\nsales_tax(groceries)\nassert groceries == {'banana': 0.14, 'milk': 0.24, 'bread': 0.21}"
+    "text": "Write a function\n\nIts name is sales_tax\nIt takes a dictionary as argument, with string keys and float values\nIt mutates the dictionary, multiplying each value by 0.056 and rounding the result to two decimals\n\nName file as sales_tax.py and submit to Gradescope\n\ngroceries = {\"banana\": 2.50, \"milk\": 4.25, \"bread\": 3.68}\nsales_tax(groceries)\nassert groceries == {'banana': 0.14, 'milk': 0.24, 'bread': 0.21}"
   },
   {
     "objectID": "slides-13-02.html#write-a-function-solution",
@@ -3987,21 +3987,21 @@
     "href": "slides-13-02.html#write-a-function-1",
     "title": "mutating dictionaries (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is sales_tax\nIt takes a dictionary as argument, with string keys and float values\nIt returns a new dictionary, multiplying each value by 0.056 and rounding the result to two decimals\n\n\ngroceries = {\"banana\": 2.50, \"milk\": 4.25, \"bread\": 3.68}\nassert sales_tax(groceries) == {'banana': 0.14, 'milk': 0.24, 'bread': 0.21}"
+    "text": "Write a function\n\nIts name is remove_records\nIt takes a dictionary as argument, with string keys\nIt mutates and returns the dictionary argument removing keys that start and end with the same character\n\n\nstudents = {\"Anna\": \"A\", \"Peter\": \"B\", \"Bob\": \"D\", \"Cedric\": \"A\"}\nremove_records(students)\nassert students == {\"Peter\": \"B\"}"
   },
   {
     "objectID": "slides-13-02.html#write-a-function-solution-1",
     "href": "slides-13-02.html#write-a-function-solution-1",
     "title": "mutating dictionaries (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef sales_tax(dictionary):\n  result = {}\n  for key, value in dictionary.items():\n    result[key] = round(value * 0.056, 2)\n  return result\n\ndef main():\n  groceries = {\"banana\": 2.50, \"milk\": 4.25, \"bread\": 3.68}\n  assert sales_tax(groceries) == {'banana': 0.14, 'milk': 0.24, 'bread': 0.21}\n  print( sales_tax(groceries) )\n\nmain()\n\n{'banana': 0.14, 'milk': 0.24, 'bread': 0.21}"
+    "text": "Write a function – solution\n\ndef remove_records(dictionary):\n  for k in set(dictionary):\n    if len(k) &gt; 0 and k[0].lower() == k[-1].lower():\n      dictionary.pop(k)\n  return dictionary\n      \ndef main():\n  students = {\"Anna\": \"A\", \"Peter\": \"B\", \"Bob\": \"D\", \"Cedric\": \"A\"}\n  remove_records(students)\n  assert students == {\"Peter\": \"B\"}\n  \nmain()"
   },
   {
     "objectID": "slides-13-02.html#removing-key-value-from-a-dictionary",
     "href": "slides-13-02.html#removing-key-value-from-a-dictionary",
     "title": "mutating dictionaries (class slides)",
     "section": "Removing key: value from a dictionary",
-    "text": "Removing key: value from a dictionary\nCannot iterate over a dictionary and change its size:\n\ncounts = {\"a\": 10, \"e\": 4, \"i\": 3}\nfor key in counts:\n  counts.pop(key)\n\nRuntimeError: dictionary changed size during iteration"
+    "text": "Removing key: value from a dictionary\nUse another data structure (like a set) instead\n\ncounts = {\"a\": 10, \"e\": 4, \"i\": 3}\nkeys = set(counts)\nfor k in keys:\n  counts.pop(k)\ncounts\n\n{}"
   },
   {
     "objectID": "slides-13-02.html#removing-key-value-from-a-dictionary-1",
@@ -4015,28 +4015,28 @@
     "href": "slides-13-02.html#write-a-function-2",
     "title": "mutating dictionaries (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is remove_records\nIt takes a dictionary as argument, with string keys\nIt mutates and returns the dictionary argument removing keys that start and end with the same character\n\n\nstudents = {\"Anna\": \"A\", \"Peter\": \"B\", \"Bob\": \"D\", \"Cedric\": \"A\"}\nremove_records(students)\nassert students == {\"Peter\": \"B\"}"
+    "text": "Write a function\n\nIts name is repetition\nIt takes a dictionary as argument, with strings as keys and integers as values (assume all values are positive)\nIt mutates and returns the dictionary, replacing each value with a list of the key repeated by the value\n\n\ntest_dictionary = {\"a\": 5, \"b\": 2, \"c\": 3}\nrepetition(test_dictionary)\nassert test_dictionary == {\"a\": [\"a\", \"a\", \"a\", \"a\", \"a\"], \n                           \"b\": [\"b\", \"b\"], \"c\": [\"c\", \"c\", \"c\"] }"
   },
   {
     "objectID": "slides-13-02.html#write-a-function-solution-2",
     "href": "slides-13-02.html#write-a-function-solution-2",
     "title": "mutating dictionaries (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef remove_records(dictionary):\n  for k in set(dictionary):\n    if len(k) &gt; 0 and k[0].lower() == k[-1].lower():\n      dictionary.pop(k)\n  return dictionary\n      \ndef main():\n  students = {\"Anna\": \"A\", \"Peter\": \"B\", \"Bob\": \"D\", \"Cedric\": \"A\"}\n  remove_records(students)\n  assert students == {\"Peter\": \"B\"}\n  print(students)\n  \nmain()\n\n{'Peter': 'B'}"
+    "text": "Write a function – solution\n\ndef repetition(dictionary):\n  for key, value in dictionary.items():\n    dictionary[key] = [key] * value\n  return dictionary\n\ndef main():\n  test_dictionary = {\"a\": 5, \"b\": 2, \"c\": 3}\n  repetition(test_dictionary)\n  assert test_dictionary == {\"a\": [\"a\", \"a\", \"a\", \"a\", \"a\"], \n                           \"b\": [\"b\", \"b\"], \"c\": [\"c\", \"c\", \"c\"] }\n  \nmain()"
   },
   {
     "objectID": "slides-13-02.html#write-a-function-3",
     "href": "slides-13-02.html#write-a-function-3",
     "title": "mutating dictionaries (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is repetition\nIt takes a dictionary as argument, with strings as keys and integers as values (you can assume the values are never negative)\nIt mutates and returns the dictionary, replacing each value with a list of the key repeated by the value\n\n\ntest_dictionary = {\"a\": 5, \"b\": 2, \"c\": 3}\nrepetition(test_dictionary)\nassert test_dictionary == {\"a\": [\"a\", \"a\", \"a\", \"a\", \"a\"], \n                           \"b\": [\"b\", \"b\"], \"c\": [\"c\", \"c\", \"c\"] }"
+    "text": "Write a function\n\nIts name is get_names\nIt has two parameters: a dictionary that maps one-letter strings to lists of strings, and a string\nIt returns a list with strings (names) from the lists in the dictionary that include the second parameter (string) as a substring (this search is not case sensitive)\n\nTest case:\n\nnames = {\"R\": [\"Randy\", \"Roger\"], \"S\": [\"Steve\", \"Sally\"], \"T\": [\"Tanner\"]}\nassert get_names(names, \"er\") == [\"Roger\", \"Tanner\"]"
   },
   {
     "objectID": "slides-13-02.html#write-a-function-solution-3",
     "href": "slides-13-02.html#write-a-function-solution-3",
     "title": "mutating dictionaries (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef repetition(dictionary):\n  for key, value in dictionary.items():\n    dictionary[key] = [key] * value\n  return dictionary\n\ndef main():\n  test_dictionary = {\"a\": 5, \"b\": 2, \"c\": 3}\n  repetition(test_dictionary)\n  assert test_dictionary == {\"a\": [\"a\", \"a\", \"a\", \"a\", \"a\"], \n                           \"b\": [\"b\", \"b\"], \"c\": [\"c\", \"c\", \"c\"] }\n  print(test_dictionary) # {\"a\": [\"a\", \"a\", \"a\", \"a\", \"a\"], \n                         #  \"b\": [\"b\", \"b\"], \"c\": [\"c\", \"c\", \"c\"] }\nmain()\n\n{'a': ['a', 'a', 'a', 'a', 'a'], 'b': ['b', 'b'], 'c': ['c', 'c', 'c']}"
+    "text": "Write a function – solution\n\ndef get_names(dictionary, string):\n  new_list = []\n  for name_list in dictionary.values():\n    for name in name_list:\n      if string.lower() in name.lower():\n        new_list.append(name)\n  return new_list\n\ndef main():\n  names = { \"R\": [\"Randy\", \"Roger\"], \n            \"S\": [\"Steve\", \"Sally\"], \n            \"T\": [\"Tanner\"] }\n  print( get_names(names, \"er\") ) # [\"Roger\", \"Tanner\"]\n  \nmain()\n\n['Roger', 'Tanner']"
   },
   {
     "objectID": "slides-13-02.html#write-a-function-4",
@@ -5829,5 +5829,19 @@
     "title": "mutating lists (class slides)",
     "section": "Removing list elements in a loop",
     "text": "Removing list elements in a loop\n\nOption 1: while loop without adjusting i\n\n\nnumbers = [1, 2, 1, 4, 5]\ni = 0\nwhile i &lt; len(numbers):\n  numbers.pop(i)\nnumbers\n\n[]\n\n\n\nOption 2: for loop but go backwards\n\n\nnumbers = [1, 2, 1, 4, 5]\nfor i in range(len(numbers)-1, -1, -1):\n  numbers.pop(i)\nnumbers\n\n[]"
+  },
+  {
+    "objectID": "slides-13-02.html#removing-dictionary-key-value",
+    "href": "slides-13-02.html#removing-dictionary-key-value",
+    "title": "mutating dictionaries (class slides)",
+    "section": "Removing dictionary key: value",
+    "text": "Removing dictionary key: value\nCannot iterate over a dictionary and change its size:\n\ncounts = {\"a\": 10, \"e\": 4, \"i\": 3}\nfor key in counts:\n  counts.pop(key)\n\nRuntimeError: dictionary changed size during iteration"
+  },
+  {
+    "objectID": "slides-13-02.html#removing-dictionary-key-value-1",
+    "href": "slides-13-02.html#removing-dictionary-key-value-1",
+    "title": "mutating dictionaries (class slides)",
+    "section": "Removing dictionary key: value",
+    "text": "Removing dictionary key: value\n\nStep 1: use another data structure (like a set) instead\nStep 2: iterate that data structure\n\n\ncounts = {\"a\": 10, \"e\": 4, \"i\": 3}\nkeys = set(counts)\nfor k in keys:\n  counts.pop(k)\ncounts\n\n{}"
   }
 ]

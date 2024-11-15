@@ -7,10 +7,6 @@ df-print: kable
 
 # CSc 110 - mutating dictionaries
 
-## Announcements
-
-*	Check your grades on D2L
-* Quiz 06 this Wednesday (check practice problems Module 11 and 12)
 
 ## Dictionaries are mutable
 
@@ -34,7 +30,9 @@ names_ages
 
 1.  Its name is `sales_tax`
 2.  It takes a dictionary as argument, with string keys and float values
-3.  It **mutates** the dictionary argument, multiplying each value by 0.056 and rounding the result to two decimals
+3.  It **mutates** the dictionary, multiplying each value by 0.056 and rounding the result to two decimals
+
+Name file as `sales_tax.py` and submit to Gradescope
 
 ```{python}
 #| eval: false
@@ -64,44 +62,8 @@ main()
     
 ```
 
-# Attendance
 
-Submit your solution as `sales_tax.py` for attendance on gradescope
-
-## Write a function
-
-1.  Its name is `sales_tax`
-2.  It takes a dictionary as argument, with string keys and float values
-3.  It returns a new dictionary, multiplying each value by 0.056 and rounding the result to two decimals
-
-```{python}
-#| eval: false
-#| echo: true
-groceries = {"banana": 2.50, "milk": 4.25, "bread": 3.68}
-assert sales_tax(groceries) == {'banana': 0.14, 'milk': 0.24, 'bread': 0.21}
-```
-
-## Write a function -- solution
-
-```{python}
-#| eval: true
-#| echo: true
-def sales_tax(dictionary):
-  result = {}
-  for key, value in dictionary.items():
-    result[key] = round(value * 0.056, 2)
-  return result
-
-def main():
-  groceries = {"banana": 2.50, "milk": 4.25, "bread": 3.68}
-  assert sales_tax(groceries) == {'banana': 0.14, 'milk': 0.24, 'bread': 0.21}
-  print( sales_tax(groceries) )
-
-main()
-```
-
-
-## Removing `key: value` from a dictionary
+## Removing dictionary `key: value`
 
 Cannot iterate over a dictionary and change its size:
 
@@ -115,9 +77,10 @@ for key in counts:
 
 RuntimeError: dictionary changed size during iteration
 
-## Removing `key: value` from a dictionary
+## Removing dictionary `key: value`
 
-Use another data structure (like a set) instead
+-   Step 1: use another data structure (like a set) instead
+-   Step 2: iterate that data structure
 
 ```{python}
 #| eval: true
@@ -158,7 +121,6 @@ def main():
   students = {"Anna": "A", "Peter": "B", "Bob": "D", "Cedric": "A"}
   remove_records(students)
   assert students == {"Peter": "B"}
-  print(students)
   
 main()
 ```
@@ -166,7 +128,7 @@ main()
 ## Write a function
 
 1.  Its name is `repetition`
-2.  It takes a dictionary as argument, with strings as keys and integers as values (you can assume the values are never negative)
+2.  It takes a dictionary as argument, with strings as keys and integers as values (assume all values are positive)
 3.  It **mutates** and returns the dictionary, replacing each value with a list of the key repeated by the value
 
 ```{python}
@@ -193,15 +155,14 @@ def main():
   repetition(test_dictionary)
   assert test_dictionary == {"a": ["a", "a", "a", "a", "a"], 
                            "b": ["b", "b"], "c": ["c", "c", "c"] }
-  print(test_dictionary) # {"a": ["a", "a", "a", "a", "a"], 
-                         #  "b": ["b", "b"], "c": ["c", "c", "c"] }
+  
 main()
 ```
 
 ## Write a function
 
 1.  Its name is `get_names`
-2.  It has two parameters: a `dictionary` that maps one_letter strings to lists of strings, and a `string`
+2.  It has two parameters: a `dictionary` that maps one-letter strings to lists of strings, and a `string`
 3.  It returns a list with strings (names) from the lists in the dictionary that include the second parameter (`string`) as a substring (this search is not case sensitive)
 
 Test case:
@@ -234,18 +195,3 @@ def main():
   
 main()
 ```
-
-## Quiz 06
-
-<center>
-<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
-<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
-</center>
-
-You have 15 minutes to complete. There are 2 problems.
-
--   No need for comments and a `main.py`
--   Just write your function
--   DO NOT USE NESTED CONDITIONALS
-
-Built-in functions you can use: `round()`, `input()`, `float()`, `str()`, `int()`, `len()`, `range()`, `set()`, `list()` — you don’t have to use all of these
