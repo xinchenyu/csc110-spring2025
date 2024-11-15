@@ -80,7 +80,7 @@ main()
 ```
 
 
-## Removing elements from a list in a `loop`
+## Removing list elements in a `loop`
 
 Using a `for i in range` when removing items in a list throws an error
 
@@ -95,9 +95,9 @@ numbers
 
 ERROR
 
-## Removing elements from a list in a `loop`
+## Removing list elements in a `loop`
 
-Use a `while` loop instead (remember to adjust `i` if doing conditional removal)
+-   Option 1: `while` loop without adjusting `i`
 
 ```{python}
 #| echo: true
@@ -109,7 +109,7 @@ while i < len(numbers):
 numbers
 ```
 
-Or go backwards
+-  Option 2: `for` loop but go backwards
 
 
 ```{python}
@@ -127,7 +127,7 @@ numbers
 1. It takes one argument: a list of strings
 1. It `mutates` and `returns` the argument list removing all strings that end in vowel
 
-Name your file as `delete_from_list.py` and submit to Gradescope.
+Name as `delete_from_list.py`, submit to Gradescope.
 
 ```{python}
 #| echo: true
@@ -174,7 +174,6 @@ def main():
   names = ["Beatrice", "ASA", "Philip", "Anna", "Peter"]
   remove_names(names)
   assert names == ["Philip", "Peter"]
-  print(names) # ["Philip", "Peter"]
 
 main()
 ```

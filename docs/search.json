@@ -3707,7 +3707,7 @@
     "href": "slides-13-01.html#write-a-function-1",
     "title": "mutating lists (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is remove_names\nIt takes one argument: a list of strings\nIt mutates and returns the argument list removing all strings that end in vowel\n\nName your file as delete_from_list.py and submit to Gradescope.\n\nnames = [\"Beatrice\", \"ASA\", \"Philip\", \"Anna\", \"Peter\"]\nremove_names(names)\nassert names == [\"Philip\", \"Peter\"]"
+    "text": "Write a function\n\nIts name is remove_names\nIt takes one argument: a list of strings\nIt mutates and returns the argument list removing all strings that end in vowel\n\nName as delete_from_list.py, submit to Gradescope.\n\nnames = [\"Beatrice\", \"ASA\", \"Philip\", \"Anna\", \"Peter\"]\nremove_names(names)\nassert names == [\"Philip\", \"Peter\"]"
   },
   {
     "objectID": "slides-13-01.html#write-a-function-solution-1",
@@ -3721,7 +3721,7 @@
     "href": "slides-13-01.html#write-a-function-solution-2",
     "title": "mutating lists (class slides)",
     "section": "Write a function – solution 2",
-    "text": "Write a function – solution 2\n\ndef remove_names(string_list):\n  for i in range(len(string_list)-1, -1, -1):\n    if string_list[i][-1].lower() in \"aeiou\":\n      string_list.pop(i)\n  return string_list\n      \ndef main():\n  names = [\"Beatrice\", \"ASA\", \"Philip\", \"Anna\", \"Peter\"]\n  remove_names(names)\n  assert names == [\"Philip\", \"Peter\"]\n  print(names) # [\"Philip\", \"Peter\"]\n\nmain()\n\n['Philip', 'Peter']"
+    "text": "Write a function – solution 2\n\ndef remove_names(string_list):\n  for i in range(len(string_list)-1, -1, -1):\n    if string_list[i][-1].lower() in \"aeiou\":\n      string_list.pop(i)\n  return string_list\n      \ndef main():\n  names = [\"Beatrice\", \"ASA\", \"Philip\", \"Anna\", \"Peter\"]\n  remove_names(names)\n  assert names == [\"Philip\", \"Peter\"]\n\nmain()"
   },
   {
     "objectID": "slides-13-01.html#removing-elements-from-inner-lists-in-2d-lists",
@@ -5815,5 +5815,19 @@
     "title": "data structures – review (class slides)",
     "section": "Can we change size of data structure?",
     "text": "Can we change size of data structure?\nGo to Python Tutor and visualize the following execution.\n\nRemove values using for x in list:\n\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.remove(value)\n\n\nAppend values using for x in list:\n\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.append(value + 1)"
+  },
+  {
+    "objectID": "slides-13-01.html#removing-list-elements-in-a-loop",
+    "href": "slides-13-01.html#removing-list-elements-in-a-loop",
+    "title": "mutating lists (class slides)",
+    "section": "Removing list elements in a loop",
+    "text": "Removing list elements in a loop\nUsing a for i in range when removing items in a list throws an error\n\nnumbers = [1, 2, 1, 4, 5]\nfor i in range(len(numbers)):\n  numbers.pop(i)\nnumbers\n\nERROR"
+  },
+  {
+    "objectID": "slides-13-01.html#removing-list-elements-in-a-loop-1",
+    "href": "slides-13-01.html#removing-list-elements-in-a-loop-1",
+    "title": "mutating lists (class slides)",
+    "section": "Removing list elements in a loop",
+    "text": "Removing list elements in a loop\n\nOption 1: while loop without adjusting i\n\n\nnumbers = [1, 2, 1, 4, 5]\ni = 0\nwhile i &lt; len(numbers):\n  numbers.pop(i)\nnumbers\n\n[]\n\n\n\nOption 2: for loop but go backwards\n\n\nnumbers = [1, 2, 1, 4, 5]\nfor i in range(len(numbers)-1, -1, -1):\n  numbers.pop(i)\nnumbers\n\n[]"
   }
 ]
