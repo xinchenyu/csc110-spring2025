@@ -17,13 +17,13 @@ What will happen? Run this code on your computer and on [Python Tutor](https://p
 #| echo: true
 vegetables = ["kale", "carrot", "peas", "celery"]
 fruits = ["banana", "tomato", "pear"]
-vegetables + fruits
+print(vegetables + fruits)
 ```
 
-What will happen below? Will vegetables be mutated?
+Will vegetables be mutated?
 
 ```{python}
-#| eval: false
+#| eval: true
 #| echo: true
 def combine_lists(list_1, list_2):
   list_1 = list_1 + list_2
@@ -38,7 +38,7 @@ if __name__ == "__main__":
 
 ## Combining lists
 
-What will happen? Run this code on your computer and on [Python Tutor](https://pythontutor.com/visualize.html) the difference between the two chunks of code (the one above and the one below)?
+Will vegetables be mutated? Run this code on your computer and on [Python Tutor](https://pythontutor.com/visualize.html) 
 
 ```{python}
 #| eval: true
@@ -57,7 +57,7 @@ if __name__ == "__main__":
 
 ## Combining lists
 
-What will happen? Run this code on your computer and on [Python Tutor](https://pythontutor.com/visualize.html) the difference between the two chunks of code (the one above and the one below)?
+Will vegetables be mutated? Run this code on your computer and on [Python Tutor](https://pythontutor.com/visualize.html) 
 
 ```{python}
 #| eval: true
@@ -187,13 +187,17 @@ if __name__ == "__main__":
 
 Write python code that determines if a number is prime or not. 
 
-## Write python code
+-   A number `n` is NOT prime if it is divisible by any number between 2 and `n / 2`.
 
-A number `n` is NOT prime if it is divisible by any number between 2 and `n / 2`.
+-   The integer 1 is not a prime number.
 
-The integer 1 is not a prime number.
-
-Your code should have different functions to deal with lists of numbers in different ways (see test cases on next slide)
+```{python}
+#| echo: true
+#| eval: false
+assert is_prime(6) == False # divisible by 2 and 3
+assert is_prime(5) == True # not divisible by 2 and 3
+assert is_prime(11) == True # not divisible by any number between 2 and 6
+```
 
 ## Determining prime number - solution
 
@@ -214,7 +218,7 @@ def is_prime(n):
 
 ## Write python code
 
-Test cases:
+Name your file `prime_numbers.py` and submit for attendance. Test cases:
 
 ```{python}
 #| echo: true
@@ -238,9 +242,6 @@ if __name__ == "__main__":
     assert original_list == [102, 250, 345, 4]
 ```
 
-# Attendance
-
-Submit your code to gradescope for attendance. Name your file `prime_numbers.py`
 
 ## Write a function -- solution
 

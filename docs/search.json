@@ -4071,21 +4071,21 @@
     "href": "slides-13-03.html#combining-lists",
     "title": "more on lists (class slides)",
     "section": "Combining lists",
-    "text": "Combining lists\nWhat will happen? Run this code on your computer and on Python Tutor\n\nvegetables = [\"kale\", \"carrot\", \"peas\", \"celery\"]\nfruits = [\"banana\", \"tomato\", \"pear\"]\nvegetables + fruits\n\nWhat will happen below? Will vegetables be mutated?\n\ndef combine_lists(list_1, list_2):\n  list_1 = list_1 + list_2\n  return list_1\n  \nif __name__ == \"__main__\":\n  vegetables = [\"kale\", \"carrot\", \"peas\", \"celery\"]\n  fruits = [\"banana\", \"tomato\", \"pear\"]\n  combine_lists(vegetables, fruits)\n  print(vegetables)"
+    "text": "Combining lists\nWhat will happen? Run this code on your computer and on Python Tutor\n\nvegetables = [\"kale\", \"carrot\", \"peas\", \"celery\"]\nfruits = [\"banana\", \"tomato\", \"pear\"]\nprint(vegetables + fruits)\n\nWill vegetables be mutated?\n\ndef combine_lists(list_1, list_2):\n  list_1 = list_1 + list_2\n  return list_1\n  \nif __name__ == \"__main__\":\n  vegetables = [\"kale\", \"carrot\", \"peas\", \"celery\"]\n  fruits = [\"banana\", \"tomato\", \"pear\"]\n  combine_lists(vegetables, fruits)\n  print(vegetables)\n\n['kale', 'carrot', 'peas', 'celery']"
   },
   {
     "objectID": "slides-13-03.html#combining-lists-1",
     "href": "slides-13-03.html#combining-lists-1",
     "title": "more on lists (class slides)",
     "section": "Combining lists",
-    "text": "Combining lists\nWhat will happen? Run this code on your computer and on Python Tutor the difference between the two chunks of code (the one above and the one below)?\n\ndef combine_lists(list_1, list_2):\n  for item in list_2:\n    list_1.append(item)\n  return list_1\n  \nif __name__ == \"__main__\":\n  vegetables = [\"kale\", \"carrot\", \"peas\", \"celery\"]\n  fruits = [\"banana\", \"tomato\", \"pear\"]\n  combine_lists(vegetables, fruits)\n  print(vegetables)\n\n['kale', 'carrot', 'peas', 'celery', 'banana', 'tomato', 'pear']"
+    "text": "Combining lists\nWill vegetables be mutated? Run this code on your computer and on Python Tutor\n\ndef combine_lists(list_1, list_2):\n  for item in list_2:\n    list_1.append(item)\n  return list_1\n  \nif __name__ == \"__main__\":\n  vegetables = [\"kale\", \"carrot\", \"peas\", \"celery\"]\n  fruits = [\"banana\", \"tomato\", \"pear\"]\n  combine_lists(vegetables, fruits)\n  print(vegetables)\n\n['kale', 'carrot', 'peas', 'celery', 'banana', 'tomato', 'pear']"
   },
   {
     "objectID": "slides-13-03.html#combining-lists-2",
     "href": "slides-13-03.html#combining-lists-2",
     "title": "more on lists (class slides)",
     "section": "Combining lists",
-    "text": "Combining lists\nWhat will happen? Run this code on your computer and on Python Tutor the difference between the two chunks of code (the one above and the one below)?\n\ndef combine_lists(list_1, list_2):\n  list_1.extend(list_2)\n  return list_1\n  \nif __name__ == \"__main__\":\n  vegetables = [\"kale\", \"carrot\", \"peas\", \"celery\"]\n  fruits = [\"banana\", \"tomato\", \"pear\"]\n  combine_lists(vegetables, fruits)\n  print(vegetables)\n\n['kale', 'carrot', 'peas', 'celery', 'banana', 'tomato', 'pear']"
+    "text": "Combining lists\nWill vegetables be mutated? Run this code on your computer and on Python Tutor\n\ndef combine_lists(list_1, list_2):\n  list_1.extend(list_2)\n  return list_1\n  \nif __name__ == \"__main__\":\n  vegetables = [\"kale\", \"carrot\", \"peas\", \"celery\"]\n  fruits = [\"banana\", \"tomato\", \"pear\"]\n  combine_lists(vegetables, fruits)\n  print(vegetables)\n\n['kale', 'carrot', 'peas', 'celery', 'banana', 'tomato', 'pear']"
   },
   {
     "objectID": "slides-13-03.html#list-methods",
@@ -4127,14 +4127,14 @@
     "href": "slides-13-03.html#write-python-code",
     "title": "more on lists (class slides)",
     "section": "Write python code",
-    "text": "Write python code\nWrite python code that determines if a number is prime or not."
+    "text": "Write python code\nWrite python code that determines if a number is prime or not.\n\nA number n is NOT prime if it is divisible by any number between 2 and n / 2.\nThe integer 1 is not a prime number.\n\n\nassert is_prime(6) == False # divisible by 2 and 3\nassert is_prime(5) == True # not divisible by 2 and 3\nassert is_prime(11) == True # not divisible by any number between 2 and 6"
   },
   {
     "objectID": "slides-13-03.html#write-python-code-1",
     "href": "slides-13-03.html#write-python-code-1",
     "title": "more on lists (class slides)",
     "section": "Write python code",
-    "text": "Write python code\nA number n is NOT prime if it is divisible by any number between 2 and n / 2.\nThe integer 1 is not a prime number.\nYour code should have different functions to deal with lists of numbers in different ways (see test cases on next slide)"
+    "text": "Write python code\nName your file prime_numbers.py and submit for attendance. Test cases:\n\nif __name__ == \"__main__\":\n    original_list = [1, 2, 453, 3, 32, 5, 7]\n    result = create_dictionary(original_list)\n    assert result == {1: False, 2: True, 453: False, 3: True, 32: False, 5: True, 7: True}\n\n    original_list = [102, 250, 509, 345, 2, 4, 547, 563]\n    result = create_dictionary(original_list)\n    assert result == {102: False, 250: False, 509: True, 345: False, 2: True,\n                      4: False, 547: True, 563: True}\n\n    original_list = [102, 250, 509, 345, 2, 4, 547, 563]\n    mutate_list(original_list)\n    assert original_list == [False, False, True, False, True, False, True, True]\n\n    original_list = [102, 250, 509, 345, 2, 4, 547, 563]\n    remove_primes(original_list)\n    assert original_list == [102, 250, 345, 4]"
   },
   {
     "objectID": "slides-13-03.html#determining-prime-number---solution",
