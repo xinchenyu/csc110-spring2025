@@ -5843,5 +5843,12 @@
     "title": "mutating dictionaries (class slides)",
     "section": "Removing dictionary key: value",
     "text": "Removing dictionary key: value\n\nStep 1: use another data structure (like a set) instead\nStep 2: iterate that data structure\n\n\ncounts = {\"a\": 10, \"e\": 4, \"i\": 3}\nkeys = set(counts)\nfor k in keys:\n  counts.pop(k)\ncounts\n\n{}"
+  },
+  {
+    "objectID": "slides-13-03.html#announcements",
+    "href": "slides-13-03.html#announcements",
+    "title": "more on lists (class slides)",
+    "section": "Announcements",
+    "text": "Announcements\n\nFill out SCS at scsonline.ucatt.arizona.edu\nIf 80% of students complete the survey, I’ll replace one of your lowest quizzes grade with full points (2.5/2.5 pts)\nFinal exam on Dec 13"
   }
 ]
