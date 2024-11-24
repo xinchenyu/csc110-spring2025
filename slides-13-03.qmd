@@ -192,32 +192,38 @@ if __name__ == "__main__":
 
 Write python code that determines if a number is prime or not. 
 
--   A number `n` is NOT prime if it is divisible by any number between 2 and `n / 2`.
+-   A number `n` is NOT prime if it is divisible by any integer between 2 and `n / 2`.
 
 -   The integer 1 is not a prime number.
 
 ```{python}
 #| echo: true
 #| eval: false
-assert is_prime(6) == False # divisible by 2 and 3
-assert is_prime(5) == True # not divisible by 2 and 3
-assert is_prime(11) == True # not divisible by any number between 2 and 6
+assert is_prime(4) == False # divisible by 2
+assert is_prime(5) == True  # not divisible by 2
+assert is_prime(6) == False # divisible by 2 or 3
+assert is_prime(11) == True # not divisible by any number between 2 and 5
 ```
 
 ## Determining prime number - solution
 
 ```{python}
 #| echo: true
-#| eval: false
+#| eval: true
 def is_prime(n):
     if n == 1:
          return False
-    # If num is divisible by any number between
-    # 2 and n / 2, it is not prime
     for denominator in range(2, int(n/2 + 1)):
           if n % denominator == 0:
                return False
     return True
+  
+if __name__ == "__main__":
+  assert is_prime(4) == False 
+  assert is_prime(5) == True  
+  assert is_prime(6) == False 
+  assert is_prime(11) == True
+  print("pass all test cases")
 ```
 
 
@@ -229,26 +235,22 @@ Name your file `prime_numbers.py` and submit for attendance. Test cases:
 #| echo: true
 #| eval: false
 if __name__ == "__main__":
-    original_list = [1, 2, 453, 3, 32, 5, 7]
-    result = create_dictionary(original_list)
-    assert result == {1: False, 2: True, 453: False, 3: True, 32: False, 5: True, 7: True}
+    numbers = [102, 250, 509, 345, 2, 4, 547]
+    result = create_dictionary(numbers)
+    assert result == {102: False, 250: False, 509: True, 345: False, 
+                      2: True, 4: False, 547: True}
 
-    original_list = [102, 250, 509, 345, 2, 4, 547, 563]
-    result = create_dictionary(original_list)
-    assert result == {102: False, 250: False, 509: True, 345: False, 2: True,
-                      4: False, 547: True, 563: True}
+    numbers = [102, 250, 509, 345, 2, 4, 547]
+    mutate_list(numbers)
+    assert numbers == [False, False, True, False, True, False, True]
 
-    original_list = [102, 250, 509, 345, 2, 4, 547, 563]
-    mutate_list(original_list)
-    assert original_list == [False, False, True, False, True, False, True, True]
-
-    original_list = [102, 250, 509, 345, 2, 4, 547, 563]
-    remove_primes(original_list)
-    assert original_list == [102, 250, 345, 4]
+    numbers = [102, 250, 509, 345, 2, 4, 547]
+    remove_primes(numbers)
+    assert numbers == [102, 250, 345, 4]
 ```
 
 
-## Write a function -- solution
+## Write python code -- solution
 
 ```{python}
 #| echo: true

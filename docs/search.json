@@ -4127,21 +4127,21 @@
     "href": "slides-13-03.html#write-python-code",
     "title": "more on lists (class slides)",
     "section": "Write python code",
-    "text": "Write python code\nWrite python code that determines if a number is prime or not.\n\nA number n is NOT prime if it is divisible by any number between 2 and n / 2.\nThe integer 1 is not a prime number.\n\n\nassert is_prime(6) == False # divisible by 2 and 3\nassert is_prime(5) == True # not divisible by 2 and 3\nassert is_prime(11) == True # not divisible by any number between 2 and 6"
+    "text": "Write python code\nWrite python code that determines if a number is prime or not.\n\nA number n is NOT prime if it is divisible by any integer between 2 and n / 2.\nThe integer 1 is not a prime number.\n\n\nassert is_prime(4) == False # divisible by 2\nassert is_prime(5) == True  # not divisible by 2\nassert is_prime(6) == False # divisible by 2 or 3\nassert is_prime(11) == True # not divisible by any number between 2 and 5"
   },
   {
     "objectID": "slides-13-03.html#write-python-code-1",
     "href": "slides-13-03.html#write-python-code-1",
     "title": "more on lists (class slides)",
     "section": "Write python code",
-    "text": "Write python code\nName your file prime_numbers.py and submit for attendance. Test cases:\n\nif __name__ == \"__main__\":\n    original_list = [1, 2, 453, 3, 32, 5, 7]\n    result = create_dictionary(original_list)\n    assert result == {1: False, 2: True, 453: False, 3: True, 32: False, 5: True, 7: True}\n\n    original_list = [102, 250, 509, 345, 2, 4, 547, 563]\n    result = create_dictionary(original_list)\n    assert result == {102: False, 250: False, 509: True, 345: False, 2: True,\n                      4: False, 547: True, 563: True}\n\n    original_list = [102, 250, 509, 345, 2, 4, 547, 563]\n    mutate_list(original_list)\n    assert original_list == [False, False, True, False, True, False, True, True]\n\n    original_list = [102, 250, 509, 345, 2, 4, 547, 563]\n    remove_primes(original_list)\n    assert original_list == [102, 250, 345, 4]"
+    "text": "Write python code\nName your file prime_numbers.py and submit for attendance. Test cases:\n\nif __name__ == \"__main__\":\n    numbers = [102, 250, 509, 345, 2, 4, 547]\n    result = create_dictionary(numbers)\n    assert result == {102: False, 250: False, 509: True, 345: False, \n                      2: True, 4: False, 547: True}\n\n    numbers = [102, 250, 509, 345, 2, 4, 547]\n    mutate_list(numbers)\n    assert numbers == [False, False, True, False, True, False, True]\n\n    numbers = [102, 250, 509, 345, 2, 4, 547]\n    remove_primes(numbers)\n    assert numbers == [102, 250, 345, 4]"
   },
   {
     "objectID": "slides-13-03.html#determining-prime-number---solution",
     "href": "slides-13-03.html#determining-prime-number---solution",
     "title": "more on lists (class slides)",
     "section": "Determining prime number - solution",
-    "text": "Determining prime number - solution\n\ndef is_prime(n):\n    if n == 1:\n         return False\n    # If num is divisible by any number between\n    # 2 and n / 2, it is not prime\n    for denominator in range(2, int(n/2 + 1)):\n          if n % denominator == 0:\n               return False\n    return True"
+    "text": "Determining prime number - solution\n\ndef is_prime(n):\n    if n == 1:\n         return False\n    for denominator in range(2, int(n/2 + 1)):\n          if n % denominator == 0:\n               return False\n    return True\n  \nif __name__ == \"__main__\":\n  assert is_prime(4) == False \n  assert is_prime(5) == True  \n  assert is_prime(6) == False \n  assert is_prime(11) == True\n  print(\"pass all test cases\")\n\npass all test cases"
   },
   {
     "objectID": "slides-13-03.html#write-python-code-2",
@@ -4512,21 +4512,21 @@
     "href": "slides-14-01.html#tuples-as-dictionary-keys-1",
     "title": "combining data structures (class slides)",
     "section": "Tuples as dictionary keys",
-    "text": "Tuples as dictionary keys\nTuples are useful as keys since keys need to be unique (no repeated key is allowed)\n\ncourse_schedule = { (\"CSC 110\", \"section 1\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 110\", \"section 2\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 110\", \"section 3\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 120\", \"section 1\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 144\", \"section 1\") : (\"Social Sciences\", \"100\"),\n                    (\"CSC 120\", \"section 2\") : (\"Gittings\", \"129b\")}\n\n\nHow would you retrieve the room where CSC 144, section 1 takes place?\nHow would you retrieve all rooms for CSC 120?"
+    "text": "Tuples as dictionary keys\n\nHow would you retrieve the room where CSC 110, section 2 takes place?\n\n\ncourse_schedule = { (\"CSC 110\", \"section 1\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 110\", \"section 2\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 110\", \"section 3\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 120\", \"section 1\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 144\", \"section 1\") : (\"Social Sciences\", \"100\"),\n                    (\"CSC 120\", \"section 2\") : (\"Gittings\", \"129b\")}"
   },
   {
     "objectID": "slides-14-01.html#write-a-function",
     "href": "slides-14-01.html#write-a-function",
     "title": "combining data structures (class slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is retrieve_room\nIt takes three arguments: a dictionary with course information, a string for course code and number (e.g., \"CSC 110\") and a string for section (e.g., \"section 3\")\nIt returns a string with the building and room numbers (concatenated)\n\n\ncourse = \"CSC 110\"\nsection = \"section 3\"\nprint( retrieve_room(course_schedule, course, section) ) \n# \"Gittings 129b\""
+    "text": "Write a function\nIts name is retrieve_room that takes three arguments:\n\na dictionary with course information\na string for course code and number (e.g., \"CSC 110\")\na string for section (e.g., \"section 3\")\n\nIt returns a string with the building and room number\n\ncourse = \"CSC 110\"\nsection = \"section 3\"\nassert retrieve_room(course_schedule, course, section) == \"Gittings 129b\""
   },
   {
     "objectID": "slides-14-01.html#write-a-function-solution",
     "href": "slides-14-01.html#write-a-function-solution",
     "title": "combining data structures (class slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef retrieve_room(course_dict, course, section):\n  c, s =  course_dict[(course, section)]\n  return c + \" \" + s\n\ndef main():\n  course_schedule = { (\"CSC 110\", \"section 1\") : (\"Gittings\", \"129b\"),\n                      (\"CSC 110\", \"section 2\") : (\"Gittings\", \"129b\"),\n                      (\"CSC 110\", \"section 3\") : (\"Gittings\", \"129b\"),\n                      (\"CSC 120\", \"section 1\") : (\"Gittings\", \"129b\"),\n                      (\"CSC 144\", \"section 1\") : (\"Social Sciences\", \"100\"),\n                      (\"CSC 120\", \"section 2\") : (\"Gittings\", \"129b\")}\n  print( retrieve_room(course_schedule, \n                       \"CSC 110\", \"section 3\")) # \"Gittings 129b\"\n  \nmain()\n\nGittings 129b"
+    "text": "Write a function – solution\n\ndef retrieve_room(course_dict, course, section):\n  building, room =  course_dict[(course, section)]\n  return building + \" \" + room\n\ndef main():\n  course_schedule = { (\"CSC 110\", \"section 1\") : (\"Gittings\", \"129b\"),\n                      (\"CSC 110\", \"section 2\") : (\"Gittings\", \"129b\"),\n                      (\"CSC 110\", \"section 3\") : (\"Gittings\", \"129b\"),\n                      (\"CSC 120\", \"section 1\") : (\"Gittings\", \"129b\"),\n                      (\"CSC 144\", \"section 1\") : (\"Social Sciences\", \"100\"),\n                      (\"CSC 120\", \"section 2\") : (\"Gittings\", \"129b\")}\n  course = \"CSC 110\"\n  section = \"section 3\"\n  assert retrieve_room(course_schedule, course, section) == \"Gittings 129b\"\n  \nmain()"
   },
   {
     "objectID": "slides-14-01.html#dictionaries-as-values",
@@ -5850,5 +5850,19 @@
     "title": "more on lists (class slides)",
     "section": "Announcements",
     "text": "Announcements\n\nFill out SCS at scsonline.ucatt.arizona.edu\nIf 80% of students complete the survey, I’ll replace one of your lowest quizzes grade with full points (2.5/2.5 pts)\nFinal exam on Dec 13"
+  },
+  {
+    "objectID": "slides-13-03.html#write-python-code-solution",
+    "href": "slides-13-03.html#write-python-code-solution",
+    "title": "more on lists (class slides)",
+    "section": "Write python code – solution",
+    "text": "Write python code – solution\n\ndef create_dictionary(numbers):\n    result = {}\n    for n in numbers:\n        result[n] = is_prime(n)\n    return result\n\ndef mutate_list(numbers):\n    for i in range(len(numbers)):\n        numbers[i] = is_prime(numbers[i])\n    return numbers\n          \ndef remove_primes(numbers):\n    for i in range(len(numbers)-1, -1, -1):\n        if is_prime(numbers[i]):\n            numbers.pop(i)\n    return numbers"
+  },
+  {
+    "objectID": "slides-14-01.html#tuples-as-dictionary-keys-2",
+    "href": "slides-14-01.html#tuples-as-dictionary-keys-2",
+    "title": "combining data structures (class slides)",
+    "section": "Tuples as dictionary keys",
+    "text": "Tuples as dictionary keys\n\nHow would you retrieve the room where CSC 110, section 2 takes place?\n\n\ncourse_schedule = { (\"CSC 110\", \"section 1\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 110\", \"section 2\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 110\", \"section 3\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 120\", \"section 1\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 144\", \"section 1\") : (\"Social Sciences\", \"100\"),\n                    (\"CSC 120\", \"section 2\") : (\"Gittings\", \"129b\")}\n                    \ncourse_schedule[(\"CSC 110\", \"section 2\")]      \n\n('Gittings', '129b')\n\n\nTuples are useful as keys since keys need to be unique (no repeated key is allowed)"
   }
 ]

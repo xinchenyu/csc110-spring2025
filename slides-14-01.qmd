@@ -14,7 +14,7 @@ df-print: kable
 
 ## Tuples as dictionary keys
 
-Tuples are useful as keys since keys need to be unique (no repeated key is allowed)
+-   How would you retrieve the room where CSC 110, section 2 takes place?
 
 ```{python}
 #| eval: true
@@ -27,26 +27,45 @@ course_schedule = { ("CSC 110", "section 1") : ("Gittings", "129b"),
                     ("CSC 120", "section 2") : ("Gittings", "129b")}
 ```
 
--   How would you retrieve the room where CSC 144, section 1 takes place?
--   How would you retrieve all rooms for CSC 120?
 
-# Attendance
+## Tuples as dictionary keys
 
-Go to gradescope and answer today's attendance question
+-   How would you retrieve the room where CSC 110, section 2 takes place?
+
+```{python}
+#| eval: true
+#| echo: true
+course_schedule = { ("CSC 110", "section 1") : ("Gittings", "129b"),
+                    ("CSC 110", "section 2") : ("Gittings", "129b"),
+                    ("CSC 110", "section 3") : ("Gittings", "129b"),
+                    ("CSC 120", "section 1") : ("Gittings", "129b"),
+                    ("CSC 144", "section 1") : ("Social Sciences", "100"),
+                    ("CSC 120", "section 2") : ("Gittings", "129b")}
+                    
+course_schedule[("CSC 110", "section 2")]      
+```
+
+Tuples are useful as keys since keys need to be unique (no repeated key is allowed)
+
 
 ## Write a function
 
-1.  Its name is `retrieve_room`
-2.  It takes three arguments: a dictionary with course information, a string for course code and number (e.g., `"CSC 110"`) and a string for section (e.g., `"section 3"`)
-3.  It returns a string with the building and room numbers (concatenated)
+Its name is `retrieve_room` that takes three arguments: 
+
+-   a dictionary with course information 
+
+-   a string for course code and number (e.g., `"CSC 110"`)
+
+-   a string for section (e.g., `"section 3"`)
+
+It returns a string with the building and room number
 
 ```{python}
 #| eval: false
 #| echo: true
 course = "CSC 110"
 section = "section 3"
-print( retrieve_room(course_schedule, course, section) ) 
-# "Gittings 129b"
+assert retrieve_room(course_schedule, course, section) == "Gittings 129b"
 ```
 
 ## Write a function -- solution
@@ -55,8 +74,8 @@ print( retrieve_room(course_schedule, course, section) )
 #| eval: true
 #| echo: true
 def retrieve_room(course_dict, course, section):
-  c, s =  course_dict[(course, section)]
-  return c + " " + s
+  building, room =  course_dict[(course, section)]
+  return building + " " + room
 
 def main():
   course_schedule = { ("CSC 110", "section 1") : ("Gittings", "129b"),
@@ -65,8 +84,9 @@ def main():
                       ("CSC 120", "section 1") : ("Gittings", "129b"),
                       ("CSC 144", "section 1") : ("Social Sciences", "100"),
                       ("CSC 120", "section 2") : ("Gittings", "129b")}
-  print( retrieve_room(course_schedule, 
-                       "CSC 110", "section 3")) # "Gittings 129b"
+  course = "CSC 110"
+  section = "section 3"
+  assert retrieve_room(course_schedule, course, section) == "Gittings 129b"
   
 main()
 ```

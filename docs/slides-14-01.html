@@ -409,7 +409,9 @@
 </section>
 <section id="tuples-as-dictionary-keys-1" class="slide level2">
 <h2>Tuples as dictionary keys</h2>
-<p>Tuples are useful as keys since keys need to be unique (no repeated key is allowed)</p>
+<ul>
+<li>How would you retrieve the room where CSC 110, section 2 takes place?</li>
+</ul>
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>course_schedule <span class="op">=</span> { (<span class="st">"CSC 110"</span>, <span class="st">"section 1"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
 <span id="cb1-2"><a href="#cb1-2"></a>                    (<span class="st">"CSC 110"</span>, <span class="st">"section 2"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
@@ -418,68 +420,78 @@
 <span id="cb1-5"><a href="#cb1-5"></a>                    (<span class="st">"CSC 144"</span>, <span class="st">"section 1"</span>) : (<span class="st">"Social Sciences"</span>, <span class="st">"100"</span>),</span>
 <span id="cb1-6"><a href="#cb1-6"></a>                    (<span class="st">"CSC 120"</span>, <span class="st">"section 2"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>)}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="tuples-as-dictionary-keys-2" class="slide level2">
+<h2>Tuples as dictionary keys</h2>
 <ul>
-<li>How would you retrieve the room where CSC 144, section 1 takes place?</li>
-<li>How would you retrieve all rooms for CSC 120?</li>
+<li>How would you retrieve the room where CSC 110, section 2 takes place?</li>
 </ul>
-</section></section>
-<section>
-<section id="attendance" class="title-slide slide level1 center">
-<h1>Attendance</h1>
-<p>Go to gradescope and answer today’s attendance question</p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>course_schedule <span class="op">=</span> { (<span class="st">"CSC 110"</span>, <span class="st">"section 1"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
+<span id="cb2-2"><a href="#cb2-2"></a>                    (<span class="st">"CSC 110"</span>, <span class="st">"section 2"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
+<span id="cb2-3"><a href="#cb2-3"></a>                    (<span class="st">"CSC 110"</span>, <span class="st">"section 3"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
+<span id="cb2-4"><a href="#cb2-4"></a>                    (<span class="st">"CSC 120"</span>, <span class="st">"section 1"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
+<span id="cb2-5"><a href="#cb2-5"></a>                    (<span class="st">"CSC 144"</span>, <span class="st">"section 1"</span>) : (<span class="st">"Social Sciences"</span>, <span class="st">"100"</span>),</span>
+<span id="cb2-6"><a href="#cb2-6"></a>                    (<span class="st">"CSC 120"</span>, <span class="st">"section 2"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>)}</span>
+<span id="cb2-7"><a href="#cb2-7"></a>                    </span>
+<span id="cb2-8"><a href="#cb2-8"></a>course_schedule[(<span class="st">"CSC 110"</span>, <span class="st">"section 2"</span>)]      </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="52">
+<pre><code>('Gittings', '129b')</code></pre>
+</div>
+</div>
+<p>Tuples are useful as keys since keys need to be unique (no repeated key is allowed)</p>
 </section>
 <section id="write-a-function" class="slide level2">
 <h2>Write a function</h2>
-<ol type="1">
-<li>Its name is <code>retrieve_room</code></li>
-<li>It takes three arguments: a dictionary with course information, a string for course code and number (e.g., <code>"CSC 110"</code>) and a string for section (e.g., <code>"section 3"</code>)</li>
-<li>It returns a string with the building and room numbers (concatenated)</li>
-</ol>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>course <span class="op">=</span> <span class="st">"CSC 110"</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>section <span class="op">=</span> <span class="st">"section 3"</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="bu">print</span>( retrieve_room(course_schedule, course, section) ) </span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="co"># "Gittings 129b"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Its name is <code>retrieve_room</code> that takes three arguments:</p>
+<ul>
+<li><p>a dictionary with course information</p></li>
+<li><p>a string for course code and number (e.g., <code>"CSC 110"</code>)</p></li>
+<li><p>a string for section (e.g., <code>"section 3"</code>)</p></li>
+</ul>
+<p>It returns a string with the building and room number</p>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>course <span class="op">=</span> <span class="st">"CSC 110"</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>section <span class="op">=</span> <span class="st">"section 3"</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="cf">assert</span> retrieve_room(course_schedule, course, section) <span class="op">==</span> <span class="st">"Gittings 129b"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">def</span> retrieve_room(course_dict, course, section):</span>
-<span id="cb3-2"><a href="#cb3-2"></a>  c, s <span class="op">=</span>  course_dict[(course, section)]</span>
-<span id="cb3-3"><a href="#cb3-3"></a>  <span class="cf">return</span> c <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> s</span>
-<span id="cb3-4"><a href="#cb3-4"></a></span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="kw">def</span> main():</span>
-<span id="cb3-6"><a href="#cb3-6"></a>  course_schedule <span class="op">=</span> { (<span class="st">"CSC 110"</span>, <span class="st">"section 1"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
-<span id="cb3-7"><a href="#cb3-7"></a>                      (<span class="st">"CSC 110"</span>, <span class="st">"section 2"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
-<span id="cb3-8"><a href="#cb3-8"></a>                      (<span class="st">"CSC 110"</span>, <span class="st">"section 3"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
-<span id="cb3-9"><a href="#cb3-9"></a>                      (<span class="st">"CSC 120"</span>, <span class="st">"section 1"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
-<span id="cb3-10"><a href="#cb3-10"></a>                      (<span class="st">"CSC 144"</span>, <span class="st">"section 1"</span>) : (<span class="st">"Social Sciences"</span>, <span class="st">"100"</span>),</span>
-<span id="cb3-11"><a href="#cb3-11"></a>                      (<span class="st">"CSC 120"</span>, <span class="st">"section 2"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>)}</span>
-<span id="cb3-12"><a href="#cb3-12"></a>  <span class="bu">print</span>( retrieve_room(course_schedule, </span>
-<span id="cb3-13"><a href="#cb3-13"></a>                       <span class="st">"CSC 110"</span>, <span class="st">"section 3"</span>)) <span class="co"># "Gittings 129b"</span></span>
-<span id="cb3-14"><a href="#cb3-14"></a>  </span>
-<span id="cb3-15"><a href="#cb3-15"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Gittings 129b</code></pre>
-</div>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">def</span> retrieve_room(course_dict, course, section):</span>
+<span id="cb5-2"><a href="#cb5-2"></a>  building, room <span class="op">=</span>  course_dict[(course, section)]</span>
+<span id="cb5-3"><a href="#cb5-3"></a>  <span class="cf">return</span> building <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> room</span>
+<span id="cb5-4"><a href="#cb5-4"></a></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="kw">def</span> main():</span>
+<span id="cb5-6"><a href="#cb5-6"></a>  course_schedule <span class="op">=</span> { (<span class="st">"CSC 110"</span>, <span class="st">"section 1"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
+<span id="cb5-7"><a href="#cb5-7"></a>                      (<span class="st">"CSC 110"</span>, <span class="st">"section 2"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
+<span id="cb5-8"><a href="#cb5-8"></a>                      (<span class="st">"CSC 110"</span>, <span class="st">"section 3"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
+<span id="cb5-9"><a href="#cb5-9"></a>                      (<span class="st">"CSC 120"</span>, <span class="st">"section 1"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
+<span id="cb5-10"><a href="#cb5-10"></a>                      (<span class="st">"CSC 144"</span>, <span class="st">"section 1"</span>) : (<span class="st">"Social Sciences"</span>, <span class="st">"100"</span>),</span>
+<span id="cb5-11"><a href="#cb5-11"></a>                      (<span class="st">"CSC 120"</span>, <span class="st">"section 2"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>)}</span>
+<span id="cb5-12"><a href="#cb5-12"></a>  course <span class="op">=</span> <span class="st">"CSC 110"</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a>  section <span class="op">=</span> <span class="st">"section 3"</span></span>
+<span id="cb5-14"><a href="#cb5-14"></a>  <span class="cf">assert</span> retrieve_room(course_schedule, course, section) <span class="op">==</span> <span class="st">"Gittings 129b"</span></span>
+<span id="cb5-15"><a href="#cb5-15"></a>  </span>
+<span id="cb5-16"><a href="#cb5-16"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="dictionaries-as-values" class="slide level2">
 <h2>Dictionaries as values</h2>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>course_schedule <span class="op">=</span> { <span class="st">"CSC 110"</span>: </span>
-<span id="cb5-2"><a href="#cb5-2"></a>                      {<span class="dv">1</span>: {<span class="st">"building"</span>: <span class="st">"Gittings"</span>, <span class="st">"room"</span>: <span class="st">"129b"</span>},</span>
-<span id="cb5-3"><a href="#cb5-3"></a>                       <span class="dv">2</span>: {<span class="st">"building"</span>: <span class="st">"Gittings"</span>, <span class="st">"room"</span>: <span class="st">"129b"</span>},</span>
-<span id="cb5-4"><a href="#cb5-4"></a>                       <span class="dv">3</span>: {<span class="st">"building"</span>: <span class="st">"Gittings"</span>, <span class="st">"room"</span>: <span class="st">"129b"</span>} },</span>
-<span id="cb5-5"><a href="#cb5-5"></a>                    <span class="st">"CSC 120"</span>:</span>
-<span id="cb5-6"><a href="#cb5-6"></a>                       {<span class="dv">1</span>: {<span class="st">"building"</span>: <span class="st">"Gittings"</span>, <span class="st">"room"</span>: <span class="st">"129b"</span>},</span>
-<span id="cb5-7"><a href="#cb5-7"></a>                        <span class="dv">2</span>: {<span class="st">"building"</span>: <span class="st">"Gittings"</span>, <span class="st">"room"</span>: <span class="st">"129b"</span>} },</span>
-<span id="cb5-8"><a href="#cb5-8"></a>                    <span class="st">"CSC 144"</span>:</span>
-<span id="cb5-9"><a href="#cb5-9"></a>                       {<span class="dv">1</span>: {<span class="st">"building"</span>: <span class="st">"Social Sciences"</span>, <span class="st">"room"</span>: <span class="st">"100"</span>}}}</span>
-<span id="cb5-10"><a href="#cb5-10"></a>                       </span>
-<span id="cb5-11"><a href="#cb5-11"></a>course_schedule[<span class="st">"CSC 110"</span>][<span class="dv">3</span>][<span class="st">"building"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>course_schedule <span class="op">=</span> { <span class="st">"CSC 110"</span>: </span>
+<span id="cb6-2"><a href="#cb6-2"></a>                      {<span class="dv">1</span>: {<span class="st">"building"</span>: <span class="st">"Gittings"</span>, <span class="st">"room"</span>: <span class="st">"129b"</span>},</span>
+<span id="cb6-3"><a href="#cb6-3"></a>                       <span class="dv">2</span>: {<span class="st">"building"</span>: <span class="st">"Gittings"</span>, <span class="st">"room"</span>: <span class="st">"129b"</span>},</span>
+<span id="cb6-4"><a href="#cb6-4"></a>                       <span class="dv">3</span>: {<span class="st">"building"</span>: <span class="st">"Gittings"</span>, <span class="st">"room"</span>: <span class="st">"129b"</span>} },</span>
+<span id="cb6-5"><a href="#cb6-5"></a>                    <span class="st">"CSC 120"</span>:</span>
+<span id="cb6-6"><a href="#cb6-6"></a>                       {<span class="dv">1</span>: {<span class="st">"building"</span>: <span class="st">"Gittings"</span>, <span class="st">"room"</span>: <span class="st">"129b"</span>},</span>
+<span id="cb6-7"><a href="#cb6-7"></a>                        <span class="dv">2</span>: {<span class="st">"building"</span>: <span class="st">"Gittings"</span>, <span class="st">"room"</span>: <span class="st">"129b"</span>} },</span>
+<span id="cb6-8"><a href="#cb6-8"></a>                    <span class="st">"CSC 144"</span>:</span>
+<span id="cb6-9"><a href="#cb6-9"></a>                       {<span class="dv">1</span>: {<span class="st">"building"</span>: <span class="st">"Social Sciences"</span>, <span class="st">"room"</span>: <span class="st">"100"</span>}}}</span>
+<span id="cb6-10"><a href="#cb6-10"></a>                       </span>
+<span id="cb6-11"><a href="#cb6-11"></a>course_schedule[<span class="st">"CSC 110"</span>][<span class="dv">3</span>][<span class="st">"building"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="54">
 <pre><code>'Gittings'</code></pre>
 </div>
 </div>
