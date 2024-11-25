@@ -109,5 +109,5 @@ course_schedule = { "CSC 110":
 course_schedule["CSC 110"][3]["building"]
 ```
 
--   How would you retrieve the room for the section 3 of CSC 110?
+-   How would you retrieve the building for CSC 110 section 3?
 

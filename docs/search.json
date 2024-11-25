@@ -4533,7 +4533,7 @@
     "href": "slides-14-01.html#dictionaries-as-values",
     "title": "combining data structures (class slides)",
     "section": "Dictionaries as values",
-    "text": "Dictionaries as values\n\ncourse_schedule = { \"CSC 110\": \n                      {1: {\"building\": \"Gittings\", \"room\": \"129b\"},\n                       2: {\"building\": \"Gittings\", \"room\": \"129b\"},\n                       3: {\"building\": \"Gittings\", \"room\": \"129b\"} },\n                    \"CSC 120\":\n                       {1: {\"building\": \"Gittings\", \"room\": \"129b\"},\n                        2: {\"building\": \"Gittings\", \"room\": \"129b\"} },\n                    \"CSC 144\":\n                       {1: {\"building\": \"Social Sciences\", \"room\": \"100\"}}}\n                       \ncourse_schedule[\"CSC 110\"][3][\"building\"]\n\n'Gittings'\n\n\n\nHow would you retrieve the room for the section 3 of CSC 110?"
+    "text": "Dictionaries as values\n\ncourse_schedule = { \"CSC 110\": \n                      {1: {\"building\": \"Gittings\", \"room\": \"129b\"},\n                       2: {\"building\": \"Gittings\", \"room\": \"129b\"},\n                       3: {\"building\": \"Gittings\", \"room\": \"129b\"} },\n                    \"CSC 120\":\n                       {1: {\"building\": \"Gittings\", \"room\": \"129b\"},\n                        2: {\"building\": \"Gittings\", \"room\": \"129b\"} },\n                    \"CSC 144\":\n                       {1: {\"building\": \"Social Sciences\", \"room\": \"100\"}}}\n                       \ncourse_schedule[\"CSC 110\"][3][\"building\"]\n\n'Gittings'\n\n\n\nHow would you retrieve the building for CSC 110 section 3?"
   },
   {
     "objectID": "slides-06-01.html#sequences",
