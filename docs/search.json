@@ -4687,14 +4687,14 @@
     "href": "slides-14-02.html#sorting-1",
     "title": "sorting (class slides)",
     "section": "Sorting",
-    "text": "Sorting\n\nlists have built-in functionality to rearrange the elements to be in sorted order\n\nlist_var.sort()\nsorted(list_var)\n\nBut, someone at some point had to come up with an algorithm for this!\nHow does sorting work, behind the scenes?"
+    "text": "Sorting\nTwo built-in functions, compare their difference:\n\nlist_var.sort()\n\n\nitems = [5, 10, 20, 6, 7, 9, 43, 10, 12]\nitems.sort()\nitems\n\n[5, 6, 7, 9, 10, 10, 12, 20, 43]\n\n\n\nsorted(list_var)\n\n\nitems = [5, 10, 20, 6, 7, 9, 43, 10, 12]\nsorted(items)\nitems\n\n[5, 10, 20, 6, 7, 9, 43, 10, 12]"
   },
   {
     "objectID": "slides-14-02.html#what-is-a-sorted-list",
     "href": "slides-14-02.html#what-is-a-sorted-list",
     "title": "sorting (class slides)",
     "section": "What is a sorted list?",
-    "text": "What is a sorted list?\n\nA sorting algorithm is an algorithm that puts elements of a list in a certain order\nHowever, there are different types of “ordering”\n\nAscending numeric order (numbers)\nDescending numeric order (numbers)\nLexicographic (strings)\nOthers…\n\nWe will mostly stick with Ascending numeric for the examples in this lecture"
+    "text": "What is a sorted list?\n\nA sorting algorithm is an algorithm that puts elements of a list in a certain order\nThere are different types of “ordering”:\n\n\n# ascending numeric order \nnumbers = [1, 2, 3, 4, 8, 10]\n\n# descending numeric order\nnumbers = [20, 17, 5, 3, 1]\n\n# lexicographic\nletters = ['a', 'b', 'c', 'e']"
   },
   {
     "objectID": "slides-14-02.html#what-is-a-sorted-list-1",
@@ -4708,7 +4708,7 @@
     "href": "slides-14-02.html#discuss",
     "title": "sorting (class slides)",
     "section": "Discuss",
-    "text": "Discuss\nCome up with a sorting algorithm\n\nDiscuss ideas for how to sort numbers\nDepict your algorithm with drawings/diagrams or with pseudocode\nCan’t use the .sort() method"
+    "text": "Discuss\n[5, 10, 1, 20, 7, 3, 9]\n\nCome up with a sorting algorithm and discuss your ideas\nDepict your algorithm with drawings/diagrams or with pseudocode\nCan’t use built-in methods"
   },
   {
     "objectID": "slides-14-02.html#in-place-and-out-of-place",
@@ -4743,28 +4743,28 @@
     "href": "slides-14-02.html#write-selection-sort-step-1-solution",
     "title": "sorting (class slides)",
     "section": "Write selection sort – step 1 solution",
-    "text": "Write selection sort – step 1 solution\n\ndef find_min_index(items):\n  min_index = None\n  for i in range(len(items)):\n    if min_index == None or items[min_index] &gt; items[i]:\n      min_index = i\n  return min_index\n    \ndef main():\n  test_list = [5, 10, 20, 1, 7, 9, 43, 10, 12]\n  print(find_min_index(test_list)) # 3\n  \nmain()\n\n3"
+    "text": "Write selection sort – step 1 solution\n\ndef find_min_index(items):\n  min_index = None\n  for i in range(len(items)):\n    if min_index == None or items[min_index] &gt; items[i]:\n      min_index = i\n  return min_index\n    \ndef main():\n  test_list = [5, 10, 20, 1, 7, 9, 43, 10, 12]\n  assert find_min_index(test_list) == 3\n  \nmain()"
   },
   {
     "objectID": "slides-14-02.html#write-selection-sort---step-1-continue",
     "href": "slides-14-02.html#write-selection-sort---step-1-continue",
     "title": "sorting (class slides)",
     "section": "Write selection sort - step 1 continue",
-    "text": "Write selection sort - step 1 continue\n\nCall your find_min_index function\nFind the smallest number starting from a specified index\nReturn the index of that smallest number\n\n\nbegin_index = 3\nitems = [5, 10, 1, 20, 7, 3, 9]\n\nprint(items[begin_index:]) # [20, 7, 3, 9]\n\nprint(find_min_index(items[begin_index:])) # 2\nprint(find_min_index(items[begin_index:]) + begin_index) # 5"
+    "text": "Write selection sort - step 1 continue\nCall your find_min_index function, find the index of smallest number starting from begin_index.\n\nbegin_index = 3\nitems = [5, 10, 1, 20, 7, 3, 9]\n\nassert items[begin_index:] == [20, 7, 3, 9] # 3 is the min\n\n# index of 3 in the sublist is 2\nassert find_min_index(items[begin_index:]) == 2  \n\n# index of 3 in the list is 5\nmin_index = find_min_index(items[begin_index:]) + begin_index \nassert min_index == 5"
   },
   {
     "objectID": "slides-14-02.html#write-selection-sort---step-2",
     "href": "slides-14-02.html#write-selection-sort---step-2",
     "title": "sorting (class slides)",
     "section": "Write selection sort - step 2",
-    "text": "Write selection sort - step 2\n\nFunction name is selection_sort\nIt takes a list as argument\nIt mutates the list argument, sorting it\nIt iterates over the list, call find_min_index to find the index of smallest element\nIt swaps the smallest element found in each iteration with the beginning element"
+    "text": "Write selection sort - step 2\nNow you found the index of smallest number starting from begin_index, let’s make one swap: swap the items at begin_index and min_index.\n\nbegin_index = 3\nitems = [5, 10, 1, 20, 7, 3, 9]\nmin_index = find_min_index(items[begin_index:]) + begin_index \n\n# swap items at index 3 and 5\nitems[begin_index], items[min_index] = items[min_index], items[begin_index]\n\nassert items = [5, 10, 1, 3, 7, 20, 9]"
   },
   {
     "objectID": "slides-14-02.html#write-selection-sort-solution",
     "href": "slides-14-02.html#write-selection-sort-solution",
     "title": "sorting (class slides)",
     "section": "Write selection sort – solution",
-    "text": "Write selection sort – solution\n\ndef find_min_index(items):\n  min_index = None\n  for i in range(len(items)):\n    if min_index == None or items[min_index] &gt; items[i]:\n      min_index = i\n  return min_index\n\ndef selection_sort(items):\n  begin_index = 0\n  while begin_index &lt; len(items)-1:\n    # get min of sublist, add begin_index to shift it\n    min_index = find_min_index(items[begin_index:]) + begin_index\n    items[begin_index], items[min_index] = items[min_index], items[begin_index]\n    begin_index += 1\n    \ndef main():\n  test_list = [5, 10, 20, 6, 7, 9, 43, 10, 12]\n  selection_sort(test_list)\n  print(test_list)\n  \nmain()\n\n[5, 6, 7, 9, 10, 10, 12, 20, 43]"
+    "text": "Write selection sort – solution\n\ndef find_min_index(items):\n  min_index = None\n  for i in range(len(items)):\n    if min_index == None or items[min_index] &gt; items[i]:\n      min_index = i\n  return min_index\n\ndef selection_sort(items):\n  begin_index = 0\n  while begin_index &lt; len(items)-1:\n    # get min of sublist, add begin_index to shift it\n    min_index = find_min_index(items[begin_index:]) + begin_index\n    items[begin_index], items[min_index] = items[min_index], items[begin_index]\n    begin_index += 1\n    \ndef main():\n  test_list = [5, 10, 20, 6, 7, 9, 43, 10, 12]\n  selection_sort(test_list)\n  assert test_list == [5, 6, 7, 9, 10, 10, 12, 20, 43]\n  \nmain()"
   },
   {
     "objectID": "slides-14-02.html#how-many-total-sweeps-and-swaps-to-sort-this-list",
@@ -4785,7 +4785,7 @@
     "href": "slides-14-02.html#how-many-total-sweeps-and-swaps-to-sort-this-list-2",
     "title": "sorting (class slides)",
     "section": "How many total sweeps and swaps to sort this list?",
-    "text": "How many total sweeps and swaps to sort this list?\n\nnumbers = [ 3, 0, 7, 2, 4, 8 ]"
+    "text": "How many total sweeps and swaps to sort this list?\nGo to gradescope and answer today’s attendance question:\n\nnumbers = [ 3, 0, 7, 2, 4, 8 ]"
   },
   {
     "objectID": "slides-14-02.html#how-many-total-sweeps-and-swaps-to-sort-this-list-3",
@@ -4820,7 +4820,7 @@
     "href": "slides-14-02.html#write-bubble-sort---step-2",
     "title": "sorting (class slides)",
     "section": "Write bubble sort - step 2",
-    "text": "Write bubble sort - step 2\n\nFunction name is bubble_sort\nIt sweeps the list, comparing elements\nIf it is sorted, return the list. Otherwise, swap elements\nIt sweeps the list in a iteration. The end starts at len(items)-1\nIn each iteration, subtract 1 from the end index\n\n\nassert bubble_sort([8, 3, 5, 7, 1]) == [1, 3, 5, 7, 8]"
+    "text": "Write bubble sort - step 2\n\nFunction name is bubble_sort that sweeps the list, comparing elements\nIf it is sorted, return the list. Otherwise, swap elements\nIt sweeps the list in a iteration. The end starts at len(items)-1\nIn each iteration, subtract 1 from the end index\n\n\nassert bubble_sort([8, 3, 5, 7, 1]) == [1, 3, 5, 7, 8]"
   },
   {
     "objectID": "slides-14-02.html#write-bubble-sort-solution",
@@ -4848,7 +4848,7 @@
     "href": "slides-14-02.html#how-many-total-sweeps-and-swaps",
     "title": "sorting (class slides)",
     "section": "How many total sweeps and swaps?",
-    "text": "How many total sweeps and swaps?\n\nnumbers = [ 3, 1, 7, 2, 4, 8, 5 ]"
+    "text": "How many total sweeps and swaps?\nGo to gradescope and answer today’s attendance question:\n\nnumbers = [ 3, 1, 7, 2, 4, 8, 5 ]"
   },
   {
     "objectID": "slides-14-02.html#how-many-sweeps-swaps-part-1",
@@ -4876,7 +4876,7 @@
     "href": "slides-14-02.html#visualization",
     "title": "sorting (class slides)",
     "section": "Visualization",
-    "text": "Visualization\nhttps://www.youtube.com/watch?v=kPRA0W1kECg"
+    "text": "Visualization\nFlash Warning: the following video contains flashing lights. https://www.youtube.com/watch?v=kPRA0W1kECg"
   },
   {
     "objectID": "project-11.html",
@@ -5864,5 +5864,12 @@
     "title": "combining data structures (class slides)",
     "section": "Tuples as dictionary keys",
     "text": "Tuples as dictionary keys\n\nHow would you retrieve the room where CSC 110, section 2 takes place?\n\n\ncourse_schedule = { (\"CSC 110\", \"section 1\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 110\", \"section 2\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 110\", \"section 3\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 120\", \"section 1\") : (\"Gittings\", \"129b\"),\n                    (\"CSC 144\", \"section 1\") : (\"Social Sciences\", \"100\"),\n                    (\"CSC 120\", \"section 2\") : (\"Gittings\", \"129b\")}\n                    \ncourse_schedule[(\"CSC 110\", \"section 2\")]      \n\n('Gittings', '129b')\n\n\nTuples are useful as keys since keys need to be unique (no repeated key is allowed)"
+  },
+  {
+    "objectID": "slides-14-02.html#write-selection-sort---step-3",
+    "href": "slides-14-02.html#write-selection-sort---step-3",
+    "title": "sorting (class slides)",
+    "section": "Write selection sort - step 3",
+    "text": "Write selection sort - step 3\n\nFunction name is selection_sort that mutates the list argument and sort it\nIt iterates over the list, call find_min_index to find the index of smallest element\nIt swaps the smallest element found in each iteration with the beginning element\nSet a begin_index before while loop, in each iteration add 1 to begin_index"
   }
 ]
