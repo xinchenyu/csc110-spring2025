@@ -435,7 +435,7 @@
 <span id="cb2-6"><a href="#cb2-6"></a>                    (<span class="st">"CSC 120"</span>, <span class="st">"section 2"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>)}</span>
 <span id="cb2-7"><a href="#cb2-7"></a>                    </span>
 <span id="cb2-8"><a href="#cb2-8"></a>course_schedule[(<span class="st">"CSC 110"</span>, <span class="st">"section 2"</span>)]      </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="14">
 <pre><code>('Gittings', '129b')</code></pre>
 </div>
 </div>
@@ -491,13 +491,81 @@
 <span id="cb6-9"><a href="#cb6-9"></a>                       {<span class="dv">1</span>: {<span class="st">"building"</span>: <span class="st">"Social Sciences"</span>, <span class="st">"room"</span>: <span class="st">"100"</span>}}}</span>
 <span id="cb6-10"><a href="#cb6-10"></a>                       </span>
 <span id="cb6-11"><a href="#cb6-11"></a>course_schedule[<span class="st">"CSC 110"</span>][<span class="dv">3</span>][<span class="st">"building"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
+<div class="cell-output cell-output-display" data-execution_count="16">
 <pre><code>'Gittings'</code></pre>
 </div>
 </div>
 <ul>
 <li>How would you retrieve the building for CSC 110 section 3?</li>
 </ul>
+</section></section>
+<section>
+<section id="review" class="title-slide slide level1 center">
+<h1>Review</h1>
+
+</section>
+<section id="write-functions-side-by-side" class="slide level2">
+<h2>Write functions side-by-side</h2>
+<p>Write a function called <code>remove_first</code> that takes in a list of lists (2D list) and removes the first element of each sublist.</p>
+<p>Write a function called <code>remove_odds</code> that takes in a list of list (2D list) of numbers and removes all values that are odd.</p>
+<p>Name your file <code>removing.py</code> and submit it to gradescope for attendance</p>
+</section>
+<section id="solutions" class="slide level2">
+<h2>Solutions</h2>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">def</span> remove_first(list_of_lists):</span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="cf">for</span> sublist <span class="kw">in</span> list_of_lists:</span>
+<span id="cb8-3"><a href="#cb8-3"></a>    <span class="cf">if</span> <span class="bu">len</span>(sublist) <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb8-4"><a href="#cb8-4"></a>      sublist.pop(<span class="dv">0</span>)</span>
+<span id="cb8-5"><a href="#cb8-5"></a>  <span class="cf">return</span> list_of_lists</span>
+<span id="cb8-6"><a href="#cb8-6"></a></span>
+<span id="cb8-7"><a href="#cb8-7"></a><span class="kw">def</span> remove_odds(list_of_lists):</span>
+<span id="cb8-8"><a href="#cb8-8"></a>  <span class="cf">for</span> sublist <span class="kw">in</span> list_of_lists:</span>
+<span id="cb8-9"><a href="#cb8-9"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(sublist)<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>):</span>
+<span id="cb8-10"><a href="#cb8-10"></a>      <span class="cf">if</span> sublist[i] <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb8-11"><a href="#cb8-11"></a>        sublist.pop(i)</span>
+<span id="cb8-12"><a href="#cb8-12"></a>  <span class="cf">return</span> list_of_lists</span>
+<span id="cb8-13"><a href="#cb8-13"></a></span>
+<span id="cb8-14"><a href="#cb8-14"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb8-15"><a href="#cb8-15"></a>  original_list <span class="op">=</span> [[<span class="st">"banana"</span>, <span class="st">"apple"</span>], [], [<span class="st">"pear"</span>]]</span>
+<span id="cb8-16"><a href="#cb8-16"></a>  remove_first(original_list)</span>
+<span id="cb8-17"><a href="#cb8-17"></a>  <span class="cf">assert</span> original_list <span class="op">==</span> [[<span class="st">"apple"</span>], [], []]</span>
+<span id="cb8-18"><a href="#cb8-18"></a>  </span>
+<span id="cb8-19"><a href="#cb8-19"></a>  numbers <span class="op">=</span> [[<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">0</span>], []]</span>
+<span id="cb8-20"><a href="#cb8-20"></a>  remove_odds(numbers)</span>
+<span id="cb8-21"><a href="#cb8-21"></a>  <span class="cf">assert</span> numbers <span class="op">==</span> [[], [<span class="dv">0</span>, <span class="dv">0</span>], []]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-functions-side-by-side-1" class="slide level2">
+<h2>Write functions side-by-side</h2>
+<p>Write a function called <code>censor_consonants</code> that takes as argument a string and returns the string with the consonants replaced with <code>"*"</code>.</p>
+<p>Write a function called <code>replace_consonants</code> that takes as argument a list of characters (strings of length one) and replaces the consonants with a <code>"*"</code>.</p>
+</section>
+<section id="solutions-1" class="slide level2">
+<h2>Solutions</h2>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">def</span> censor_consonants(string):</span>
+<span id="cb9-2"><a href="#cb9-2"></a>  new_string <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="cf">for</span> char <span class="kw">in</span> string:</span>
+<span id="cb9-4"><a href="#cb9-4"></a>    <span class="cf">if</span> char <span class="kw">not</span> <span class="kw">in</span> <span class="st">"aeiou"</span>:</span>
+<span id="cb9-5"><a href="#cb9-5"></a>      new_string <span class="op">+=</span> <span class="st">"*"</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a>    <span class="cf">else</span>:</span>
+<span id="cb9-7"><a href="#cb9-7"></a>      new_string <span class="op">+=</span> char</span>
+<span id="cb9-8"><a href="#cb9-8"></a>  <span class="cf">return</span> new_string</span>
+<span id="cb9-9"><a href="#cb9-9"></a></span>
+<span id="cb9-10"><a href="#cb9-10"></a><span class="kw">def</span> replace_consonants(strings):</span>
+<span id="cb9-11"><a href="#cb9-11"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(strings)):</span>
+<span id="cb9-12"><a href="#cb9-12"></a>    <span class="cf">if</span> strings[i] <span class="kw">not</span> <span class="kw">in</span> <span class="st">"aeiou"</span>:</span>
+<span id="cb9-13"><a href="#cb9-13"></a>      strings[i] <span class="op">=</span> <span class="st">"*"</span></span>
+<span id="cb9-14"><a href="#cb9-14"></a>  <span class="cf">return</span> strings</span>
+<span id="cb9-15"><a href="#cb9-15"></a></span>
+<span id="cb9-16"><a href="#cb9-16"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb9-17"><a href="#cb9-17"></a>  <span class="cf">assert</span> censor_consonants(<span class="st">"abcd"</span>) <span class="op">==</span> <span class="st">"a***"</span></span>
+<span id="cb9-18"><a href="#cb9-18"></a>  </span>
+<span id="cb9-19"><a href="#cb9-19"></a>  letters <span class="op">=</span> [<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"d"</span>]</span>
+<span id="cb9-20"><a href="#cb9-20"></a>  replace_consonants(letters)</span>
+<span id="cb9-21"><a href="#cb9-21"></a>  <span class="cf">assert</span> letters <span class="op">==</span> [<span class="st">"a"</span>, <span class="st">"*"</span>, <span class="st">"*"</span>, <span class="st">"*"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 <div class="footer footer-default">
 

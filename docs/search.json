@@ -5871,5 +5871,33 @@
     "title": "sorting (class slides)",
     "section": "Write selection sort - step 3",
     "text": "Write selection sort - step 3\n\nFunction name is selection_sort that mutates the list argument and sort it\nIt iterates over the list, call find_min_index to find the index of smallest element\nIt swaps the smallest element found in each iteration with the beginning element\nSet a begin_index before while loop, in each iteration add 1 to begin_index"
+  },
+  {
+    "objectID": "slides-14-01.html#write-functions-side-by-side",
+    "href": "slides-14-01.html#write-functions-side-by-side",
+    "title": "combining data structures (class slides)",
+    "section": "Write functions side-by-side",
+    "text": "Write functions side-by-side\nWrite a function called remove_first that takes in a list of lists (2D list) and removes the first element of each sublist.\nWrite a function called remove_odds that takes in a list of list (2D list) of numbers and removes all values that are odd.\nName your file removing.py and submit it to gradescope for attendance"
+  },
+  {
+    "objectID": "slides-14-01.html#solutions",
+    "href": "slides-14-01.html#solutions",
+    "title": "combining data structures (class slides)",
+    "section": "Solutions",
+    "text": "Solutions\n\ndef remove_first(list_of_lists):\n  for sublist in list_of_lists:\n    if len(sublist) &gt; 0:\n      sublist.pop(0)\n  return list_of_lists\n\ndef remove_odds(list_of_lists):\n  for sublist in list_of_lists:\n    for i in range(len(sublist)-1, -1, -1):\n      if sublist[i] % 2 == 1:\n        sublist.pop(i)\n  return list_of_lists\n\nif __name__ == \"__main__\":\n  original_list = [[\"banana\", \"apple\"], [], [\"pear\"]]\n  remove_first(original_list)\n  assert original_list == [[\"apple\"], [], []]\n  \n  numbers = [[1, 1, 1], [0, 0], []]\n  remove_odds(numbers)\n  assert numbers == [[], [0, 0], []]"
+  },
+  {
+    "objectID": "slides-14-01.html#write-functions-side-by-side-1",
+    "href": "slides-14-01.html#write-functions-side-by-side-1",
+    "title": "combining data structures (class slides)",
+    "section": "Write functions side-by-side",
+    "text": "Write functions side-by-side\nWrite a function called censor_consonants that takes as argument a string and returns the string with the consonants replaced with \"*\".\nWrite a function called replace_consonants that takes as argument a list of characters (strings of length one) and replaces the consonants with a \"*\"."
+  },
+  {
+    "objectID": "slides-14-01.html#solutions-1",
+    "href": "slides-14-01.html#solutions-1",
+    "title": "combining data structures (class slides)",
+    "section": "Solutions",
+    "text": "Solutions\n\ndef censor_consonants(string):\n  new_string = \"\"\n  for char in string:\n    if char not in \"aeiou\":\n      new_string += \"*\"\n    else:\n      new_string += char\n  return new_string\n\ndef replace_consonants(strings):\n  for i in range(len(strings)):\n    if strings[i] not in \"aeiou\":\n      strings[i] = \"*\"\n  return strings\n\nif __name__ == \"__main__\":\n  assert censor_consonants(\"abcd\") == \"a***\"\n  \n  letters = [\"a\", \"b\", \"c\", \"d\"]\n  replace_consonants(letters)\n  assert letters == [\"a\", \"*\", \"*\", \"*\"]"
   }
 ]
