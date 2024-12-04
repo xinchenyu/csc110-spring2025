@@ -117,47 +117,80 @@ def find_min_index(items):
   return min_index
     
 def main():
-  test_list = [5, 10, 20, 1, 7, 9, 43, 10, 12]
-  assert find_min_index(test_list) == 3
+  test_list = [5, 10, 1, 20, 7, 3, 9]
+  assert find_min_index(test_list) == 2
   
 main()
 ```
 
 ## Write selection sort - step 1 continue
 
-Call your `find_min_index` function, find the index of smallest number starting from `begin_index`.
+Now you found the index of smallest number, let's make one swap: swap the items at index `0` and `min_index`.
 
 ```{python}
 #| eval: false
 #| echo: true
-begin_index = 3
 items = [5, 10, 1, 20, 7, 3, 9]
 
-assert items[begin_index:] == [20, 7, 3, 9] # 3 is the min
+begin_index = 0
+min_index = find_min_index(items) # min_index is 2
 
-# index of 3 in the sublist is 2
-assert find_min_index(items[begin_index:]) == 2  
+# swap items at index 0 and 2
+items[begin_index], items[min_index] = items[min_index], items[begin_index]
+
+assert items = [1, 10, 5, 20, 7, 3, 9]
+```
+
+## Write selection sort - step 2
+
+How to find the `min_index` starting from `begin_index`? You can call `find_min_index` function.
+
+```{python}
+#| eval: false
+#| echo: true
+begin_index = 1
+items = [1, 10, 5, 20, 7, 3, 9]
+
+# write your code here
+
+assert min_index == 5  
+```
+
+## Write selection sort - step 2 solution
+
+How to find the `min_index` starting from `begin_index`? You can call `find_min_index` function.
+
+```{python}
+#| eval: false
+#| echo: true
+begin_index = 1
+items = [1, 10, 5, 20, 7, 3, 9]
+
+assert items[begin_index:] == [10, 5, 20, 7, 3, 9] 
+
+# index of 3 in the sublist is 4
+assert find_min_index(items[begin_index:]) == 4  
 
 # index of 3 in the list is 5
 min_index = find_min_index(items[begin_index:]) + begin_index 
 assert min_index == 5  
 ```
 
-## Write selection sort - step 2
+## Write selection sort - step 2 continue
 
-Now you found the index of smallest number starting from `begin_index`, let's make one swap: swap the items at `begin_index` and `min_index`.
+Now you found the index of smallest number starting from `begin_index`, let's make another swap:
 
 ```{python}
 #| eval: false
 #| echo: true
-begin_index = 3
-items = [5, 10, 1, 20, 7, 3, 9]
+begin_index = 1
+items = [1, 10, 5, 20, 7, 3, 9]
 min_index = find_min_index(items[begin_index:]) + begin_index 
 
-# swap items at index 3 and 5
+# swap items at index 1 and 5
 items[begin_index], items[min_index] = items[min_index], items[begin_index]
 
-assert items = [5, 10, 1, 3, 7, 20, 9]
+assert items = [1, 3, 5, 20, 7, 10, 9]
 ```
 
 ## Write selection sort - step 3
@@ -222,7 +255,6 @@ numbers = [ 3, 1, 7, 2, 4 ]
 
 ## How many total sweeps and swaps to sort this list?
 
-Go to gradescope and answer today's attendance question:
 ```{python}
 #| eval: true
 #| echo: true
@@ -245,6 +277,16 @@ numbers = [ 3, 0, 7, 2, 4, 8 ]
 
 5 sweeps, 4 swaps
 
+## Quiz 11
+
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+</center>
+
+You have 10 minutes to complete the quiz.
+
+No need to write `main()` function.
 
 ## Bubble sort
 

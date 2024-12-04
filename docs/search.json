@@ -4743,21 +4743,21 @@
     "href": "slides-14-02.html#write-selection-sort-step-1-solution",
     "title": "sorting (class slides)",
     "section": "Write selection sort – step 1 solution",
-    "text": "Write selection sort – step 1 solution\n\ndef find_min_index(items):\n  min_index = None\n  for i in range(len(items)):\n    if min_index == None or items[min_index] &gt; items[i]:\n      min_index = i\n  return min_index\n    \ndef main():\n  test_list = [5, 10, 20, 1, 7, 9, 43, 10, 12]\n  assert find_min_index(test_list) == 3\n  \nmain()"
+    "text": "Write selection sort – step 1 solution\n\ndef find_min_index(items):\n  min_index = None\n  for i in range(len(items)):\n    if min_index == None or items[min_index] &gt; items[i]:\n      min_index = i\n  return min_index\n    \ndef main():\n  test_list = [5, 10, 1, 20, 7, 3, 9]\n  assert find_min_index(test_list) == 2\n  \nmain()"
   },
   {
     "objectID": "slides-14-02.html#write-selection-sort---step-1-continue",
     "href": "slides-14-02.html#write-selection-sort---step-1-continue",
     "title": "sorting (class slides)",
     "section": "Write selection sort - step 1 continue",
-    "text": "Write selection sort - step 1 continue\nCall your find_min_index function, find the index of smallest number starting from begin_index.\n\nbegin_index = 3\nitems = [5, 10, 1, 20, 7, 3, 9]\n\nassert items[begin_index:] == [20, 7, 3, 9] # 3 is the min\n\n# index of 3 in the sublist is 2\nassert find_min_index(items[begin_index:]) == 2  \n\n# index of 3 in the list is 5\nmin_index = find_min_index(items[begin_index:]) + begin_index \nassert min_index == 5"
+    "text": "Write selection sort - step 1 continue\nNow you found the index of smallest number, let’s make one swap: swap the items at index 0 and min_index.\n\nitems = [5, 10, 1, 20, 7, 3, 9]\n\nbegin_index = 0\nmin_index = find_min_index(items) # min_index is 2\n\n# swap items at index 0 and 2\nitems[begin_index], items[min_index] = items[min_index], items[begin_index]\n\nassert items = [1, 10, 5, 20, 7, 3, 9]"
   },
   {
     "objectID": "slides-14-02.html#write-selection-sort---step-2",
     "href": "slides-14-02.html#write-selection-sort---step-2",
     "title": "sorting (class slides)",
     "section": "Write selection sort - step 2",
-    "text": "Write selection sort - step 2\nNow you found the index of smallest number starting from begin_index, let’s make one swap: swap the items at begin_index and min_index.\n\nbegin_index = 3\nitems = [5, 10, 1, 20, 7, 3, 9]\nmin_index = find_min_index(items[begin_index:]) + begin_index \n\n# swap items at index 3 and 5\nitems[begin_index], items[min_index] = items[min_index], items[begin_index]\n\nassert items = [5, 10, 1, 3, 7, 20, 9]"
+    "text": "Write selection sort - step 2\nHow to find the min_index starting from begin_index? You can call find_min_index function.\n\nbegin_index = 1\nitems = [1, 10, 5, 20, 7, 3, 9]\n\n# write your code here\n\nassert min_index == 5"
   },
   {
     "objectID": "slides-14-02.html#write-selection-sort-solution",
@@ -4785,7 +4785,7 @@
     "href": "slides-14-02.html#how-many-total-sweeps-and-swaps-to-sort-this-list-2",
     "title": "sorting (class slides)",
     "section": "How many total sweeps and swaps to sort this list?",
-    "text": "How many total sweeps and swaps to sort this list?\nGo to gradescope and answer today’s attendance question:\n\nnumbers = [ 3, 0, 7, 2, 4, 8 ]"
+    "text": "How many total sweeps and swaps to sort this list?\n\nnumbers = [ 3, 0, 7, 2, 4, 8 ]"
   },
   {
     "objectID": "slides-14-02.html#how-many-total-sweeps-and-swaps-to-sort-this-list-3",
@@ -5899,5 +5899,40 @@
     "title": "combining data structures (class slides)",
     "section": "Solutions",
     "text": "Solutions\n\ndef censor_consonants(string):\n  new_string = \"\"\n  for char in string:\n    if char not in \"aeiou\":\n      new_string += \"*\"\n    else:\n      new_string += char\n  return new_string\n\ndef replace_consonants(strings):\n  for i in range(len(strings)):\n    if strings[i] not in \"aeiou\":\n      strings[i] = \"*\"\n  return strings\n\nif __name__ == \"__main__\":\n  assert censor_consonants(\"abcd\") == \"a***\"\n  \n  letters = [\"a\", \"b\", \"c\", \"d\"]\n  replace_consonants(letters)\n  assert letters == [\"a\", \"*\", \"*\", \"*\"]"
+  },
+  {
+    "objectID": "slides-14-02.html#quiz-11",
+    "href": "slides-14-02.html#quiz-11",
+    "title": "sorting (class slides)",
+    "section": "Quiz 11",
+    "text": "Quiz 11\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.\nNo need to write main() function."
+  },
+  {
+    "objectID": "slides-14-02.html#write-selection-sort---step-1-continue-1",
+    "href": "slides-14-02.html#write-selection-sort---step-1-continue-1",
+    "title": "sorting (class slides)",
+    "section": "Write selection sort - step 1 continue",
+    "text": "Write selection sort - step 1 continue\nCall your find_min_index function, find the index of smallest number starting from begin_index.\n\nbegin_index = 1\nitems = [1, 10, 5, 20, 7, 3, 9]\n\nassert items[begin_index:] == [10, 5, 20, 7, 3, 9] \n\n# index of 3 in the sublist is 4\nassert find_min_index(items[begin_index:]) == 4  \n\n# index of 3 in the list is 5\nmin_index = find_min_index(items[begin_index:]) + begin_index \nassert min_index == 5"
+  },
+  {
+    "objectID": "slides-14-02.html#write-selection-sort---step-2-1",
+    "href": "slides-14-02.html#write-selection-sort---step-2-1",
+    "title": "sorting (class slides)",
+    "section": "Write selection sort - step 2",
+    "text": "Write selection sort - step 2\nNow you found the index of smallest number starting from begin_index, let’s make one swap: swap the items at begin_index and min_index.\n\nbegin_index = 1\nitems = [1, 10, 5, 20, 7, 3, 9]\nmin_index = find_min_index(items[begin_index:]) + begin_index \n\n# swap items at index 1 and 5\nitems[begin_index], items[min_index] = items[min_index], items[begin_index]\n\nassert items = [1, 3, 5, 20, 7, 10, 9]"
+  },
+  {
+    "objectID": "slides-14-02.html#write-selection-sort---step-2-solution",
+    "href": "slides-14-02.html#write-selection-sort---step-2-solution",
+    "title": "sorting (class slides)",
+    "section": "Write selection sort - step 2 solution",
+    "text": "Write selection sort - step 2 solution\nHow to find the min_index starting from begin_index? You can call find_min_index function.\n\nbegin_index = 1\nitems = [1, 10, 5, 20, 7, 3, 9]\n\nassert items[begin_index:] == [10, 5, 20, 7, 3, 9] \n\n# index of 3 in the sublist is 4\nassert find_min_index(items[begin_index:]) == 4  \n\n# index of 3 in the list is 5\nmin_index = find_min_index(items[begin_index:]) + begin_index \nassert min_index == 5"
+  },
+  {
+    "objectID": "slides-14-02.html#write-selection-sort---step-2-continue",
+    "href": "slides-14-02.html#write-selection-sort---step-2-continue",
+    "title": "sorting (class slides)",
+    "section": "Write selection sort - step 2 continue",
+    "text": "Write selection sort - step 2 continue\nNow you found the index of smallest number starting from begin_index, let’s make another swap:\n\nbegin_index = 1\nitems = [1, 10, 5, 20, 7, 3, 9]\nmin_index = find_min_index(items[begin_index:]) + begin_index \n\n# swap items at index 1 and 5\nitems[begin_index], items[min_index] = items[min_index], items[begin_index]\n\nassert items = [1, 3, 5, 20, 7, 10, 9]"
   }
 ]
