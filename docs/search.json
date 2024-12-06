@@ -5934,5 +5934,12 @@
     "title": "sorting (class slides)",
     "section": "Write selection sort - step 2 continue",
     "text": "Write selection sort - step 2 continue\nNow you found the index of smallest number starting from begin_index, let’s make another swap:\n\nitems = [1, 10, 5, 20, 7, 3, 9]\n\nbegin_index = 1\nmin_index = find_min_index(items[begin_index:]) + begin_index \n\n# swap items at index 1 and 5\nitems[begin_index], items[min_index] = items[min_index], items[begin_index]\n\nassert items = [1, 3, 5, 20, 7, 10, 9]"
+  },
+  {
+    "objectID": "slides-14-02.html#attendance",
+    "href": "slides-14-02.html#attendance",
+    "title": "sorting (class slides)",
+    "section": "Attendance",
+    "text": "Attendance\nHow many total sweeps and swaps to sort this list?\n[ 7, 1, 1, 4, 2 ]"
   }
 ]
