@@ -12,11 +12,10 @@ df-print: kable
 
 -   No lecture this Wednesday, me and TAs will be here (Gittings 129b) to answer questions.
 
--   Final exam will be on this Friday May 03, **6:00 - 8:00pm** in **ENR2 N120**.
+-   Final exam will be on this Friday Dec 13, **6:00 - 8:00pm** in **S SCI 100**.
 
 -   Bring your photo ID
 
--   Last day of office hour is May 1st. 
 
 ## Attendance
 
