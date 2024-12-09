@@ -1474,7 +1474,7 @@
     "href": "slides-16-01.html#announcements",
     "title": "final exam review (class slides)",
     "section": "Announcements",
-    "text": "Announcements\n\nNo lecture this Wednesday, me and TAs will be here (Gittings 129b) to answer questions.\nFinal exam will be on this Friday Dec 13, 6:00 - 8:00pm in S SCI 100.\nBring your photo ID"
+    "text": "Announcements\nFinal exam\n\nTime: this Friday Dec 13, 6:00 - 8:00pm\nLocation: S SCI 100\nBring your photo ID"
   },
   {
     "objectID": "slides-16-01.html#attendance",
@@ -5976,5 +5976,75 @@
     "title": "sorting (class slides)",
     "section": "How many total sweeps and swaps?",
     "text": "How many total sweeps and swaps?\nGo to gradescope and answer today’s attendance question:\n\nnumbers = [ 1, 5, 5, 7, 2, 4 ]"
+  },
+  {
+    "objectID": "slides-16-01.html#quiz-12",
+    "href": "slides-16-01.html#quiz-12",
+    "title": "final exam review (class slides)",
+    "section": "Quiz 12",
+    "text": "Quiz 12\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz."
+  },
+  {
+    "objectID": "slides-16-01.html#review",
+    "href": "slides-16-01.html#review",
+    "title": "final exam review (class slides)",
+    "section": "Review",
+    "text": "Review"
+  },
+  {
+    "objectID": "slides-16-01.html#int-and-isnumeric",
+    "href": "slides-16-01.html#int-and-isnumeric",
+    "title": "final exam review (class slides)",
+    "section": "int() and isnumeric()",
+    "text": "int() and isnumeric()\n\nint(\"110\") # 110\nint(\"csc110\") # error"
+  },
+  {
+    "objectID": "slides-16-01.html#int-and-.isnumeric",
+    "href": "slides-16-01.html#int-and-.isnumeric",
+    "title": "final exam review (class slides)",
+    "section": "int() and .isnumeric()",
+    "text": "int() and .isnumeric()\nint()\n\nint(\"110\") # 110\nint(\"csc110\") # error\n\nOne usage case: use int() to convert \"2\" to 2 when reading the number 2 from a file.\nstring.isnumeric()\n\n\"110\".isnumeric() # True\n\"csc110\".isnumeric() # False"
+  },
+  {
+    "objectID": "slides-16-01.html#evaluate-code",
+    "href": "slides-16-01.html#evaluate-code",
+    "title": "final exam review (class slides)",
+    "section": "Evaluate code",
+    "text": "Evaluate code\nEvaluate last line:\n\nnumbers = (1000, 1, 2, 3)\nnumbers.add(4)\nprint(numbers[0]) # Error\n\nCorrect: Error\nIncorrect: 1000"
+  },
+  {
+    "objectID": "slides-16-01.html#write-to-file---compare-difference",
+    "href": "slides-16-01.html#write-to-file---compare-difference",
+    "title": "final exam review (class slides)",
+    "section": "Write to file - compare difference",
+    "text": "Write to file - compare difference\nversion 1:\n\nwords = ['quick', 'brown', 'fox']\noutput = open(\"result.txt\", \"w\")\nfor w in words:\n  output.write(w + ' ')\noutput.close()\n\nversion 2:\n\nwords = ['quick', 'brown', 'fox']\noutput = open(\"result.txt\", \"w\")\nfor w in words:\n  output.write(w + '\\n')\noutput.close()"
+  },
+  {
+    "objectID": "slides-16-01.html#write-a-function",
+    "href": "slides-16-01.html#write-a-function",
+    "title": "final exam review (class slides)",
+    "section": "write a function",
+    "text": "write a function\nWrite a python function that does the following:\n\nIts name is create_list\nIt takes two arguments, a set of strings and an integer n\nIt returns a list that contains each string from the set repeated n times\n\n\nitems = {\"banana\", \"apple\", \"pear\"}\nassert create_list(items, 2) == ['banana', 'banana', 'apple', 'apple', 'pear', 'pear']"
+  },
+  {
+    "objectID": "slides-16-01.html#write-a-function---solution",
+    "href": "slides-16-01.html#write-a-function---solution",
+    "title": "final exam review (class slides)",
+    "section": "write a function - solution",
+    "text": "write a function - solution\n\ndef create_list(items, n):\n  new_list = [ ]\n  for value in items:\n    new_list.extend([value] * n)\n  return new_list\n\ndef main():\n  items = {\"banana\", \"apple\", \"pear\"}\n  assert create_list(items, 2) == ['banana', 'banana', 'apple', 'apple', 'pear', 'pear']  \n  \nmain()"
+  },
+  {
+    "objectID": "slides-16-01.html#write-a-function-1",
+    "href": "slides-16-01.html#write-a-function-1",
+    "title": "final exam review (class slides)",
+    "section": "write a function",
+    "text": "write a function\n\nIts name is maximum\nIt takes a variable number of arguments: *values\nIt returns the highest value in values\n\n\nassert maximum(1) == 1\nassert maximum(2,4,6) == 6\nassert maximum() == None"
+  },
+  {
+    "objectID": "slides-16-01.html#write-a-function-solution",
+    "href": "slides-16-01.html#write-a-function-solution",
+    "title": "final exam review (class slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\n\ndef maximum(*values):\n  max = None\n  for v in values:\n    if max == None or v &gt; max:\n      max = v\n  return max\n\ndef main():\n  assert maximum(1) == 1\n  assert maximum(2,4,6) == 6\n  assert maximum() == None\n\nmain()\n\nCan we change the order of max == None and v &gt; max?\nNo we CANNOT. Try it on your own laptop."
   }
 ]

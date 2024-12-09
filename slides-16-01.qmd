@@ -10,16 +10,154 @@ df-print: kable
 
 ## Announcements
 
--   No lecture this Wednesday, me and TAs will be here (Gittings 129b) to answer questions.
+Final exam 
 
--   Final exam will be on this Friday Dec 13, **6:00 - 8:00pm** in **S SCI 100**.
+-   Time: this Friday Dec 13, **6:00 - 8:00pm** 
+
+-   Location: **S SCI 100**
 
 -   Bring your photo ID
 
 
-## Attendance
+## Quiz 12
 
-Go to gradescope and answer attendance question.
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+</center>
 
+You have 10 minutes to complete the quiz.
 
+# Review
 
+## int() and .isnumeric()
+
+`int()`
+```{python}
+#| eval: false
+#| echo: true
+int("110") # 110
+int("csc110") # error
+```
+
+One usage case: use `int()` to convert `"2"` to `2` when reading the number 2 from a file.
+
+`string.isnumeric()`
+```{python}
+#| eval: false
+#| echo: true
+"110".isnumeric() # True
+"csc110".isnumeric() # False
+```
+
+## Evaluate code
+
+Evaluate last line:
+```{python}
+#| eval: false
+#| echo: true
+numbers = (1000, 1, 2, 3)
+numbers.add(4)
+print(numbers[0]) # Error
+```
+
+Correct: `Error`
+
+Incorrect: `1000` 
+
+## Write to file - compare difference
+
+version 1:
+```{python}
+#| eval: false
+#| echo: true
+words = ['quick', 'brown', 'fox']
+output = open("result.txt", "w")
+for w in words:
+  output.write(w + ' ')
+output.close()
+```
+
+version 2:
+```{python}
+#| eval: false
+#| echo: true
+words = ['quick', 'brown', 'fox']
+output = open("result.txt", "w")
+for w in words:
+  output.write(w + '\n')
+output.close()
+```
+
+## write a function
+
+Write a python function that does the following:
+
+1. Its name is `create_list`
+
+2. It takes two arguments, a set of strings and an integer n
+
+3. It returns a list that contains each string from the set repeated n times
+
+```{python}
+#| eval: false
+#| echo: true
+items = {"banana", "apple", "pear"}
+assert create_list(items, 2) == ['banana', 'banana', 'apple', 'apple', 'pear', 'pear']
+```
+
+## write a function - solution
+
+```{python}
+#| eval: false
+#| echo: true
+def create_list(items, n):
+  new_list = [ ]
+  for value in items:
+    new_list.extend([value] * n)
+  return new_list
+
+def main():
+  items = {"banana", "apple", "pear"}
+  assert create_list(items, 2) == ['banana', 'banana', 'apple', 'apple', 'pear', 'pear']  
+  
+main()
+```
+
+## write a function
+
+1.  Its name is `maximum`
+2.  It takes a variable number of arguments: `*values`
+3.  It returns the highest value in `values`
+
+```{python}
+#| eval: false
+#| echo: true
+assert maximum(1) == 1
+assert maximum(2,4,6) == 6
+assert maximum() == None
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def maximum(*values):
+  max = None
+  for v in values:
+    if max == None or v > max:
+      max = v
+  return max
+
+def main():
+  assert maximum(1) == 1
+  assert maximum(2,4,6) == 6
+  assert maximum() == None
+
+main()
+```
+
+Can we change the order of `max == None` and `v > max`? 
+
+No we CANNOT. Try it on your own laptop.
