@@ -4848,7 +4848,7 @@
     "href": "slides-14-02.html#how-many-total-sweeps-and-swaps",
     "title": "sorting (class slides)",
     "section": "How many total sweeps and swaps?",
-    "text": "How many total sweeps and swaps?\n\n[ 1, 3, 7, 8, 9 ] first sweep"
+    "text": "How many total sweeps and swaps?\n\n[ 3, 1, 7, 2, 4 ] first sweep\n\n[ 1, 3, 7, 2, 4 ] swap\n[ 1, 3, 2, 7, 4 ] swap\n[ 1, 3, 2, 4, 7 ] swap\n\n[ 1, 3, 2, 4, 7 ] second sweep\n\n[ 1, 2, 3, 4, 7 ] swap\n\n[ 1, 2, 3, 4, 7 ] third sweep"
   },
   {
     "objectID": "slides-14-02.html#how-many-sweeps-swaps-part-1",
@@ -4876,7 +4876,7 @@
     "href": "slides-14-02.html#visualization",
     "title": "sorting (class slides)",
     "section": "Visualization",
-    "text": "Visualization\nFlash Warning: the following video contains flashing lights. https://www.youtube.com/watch?v=kPRA0W1kECg"
+    "text": "Visualization\nFlash Warning: the following video contains flashing lights. https://www.youtube.com/watch?v=kPRA0W1kECg\nselection sort at 0:00, bubble sort at 4:00"
   },
   {
     "objectID": "project-11.html",
@@ -5954,7 +5954,7 @@
     "href": "slides-14-02.html#how-many-total-sweeps-and-swaps-1",
     "title": "sorting (class slides)",
     "section": "How many total sweeps and swaps?",
-    "text": "How many total sweeps and swaps?\n\n[ 3, 1, 7, 2, 4 ] first sweep\n\n[ 1, 3, 7, 2, 4 ] swap\n[ 1, 3, 2, 7, 4 ] swap\n[ 1, 3, 2, 4, 7 ] swap\n\n[ 1, 3, 2, 4, 7 ] second sweep\n\n[ 1, 2, 3, 4, 7 ] swap\n\n[ 1, 2, 3, 4, 7 ] third sweep"
+    "text": "How many total sweeps and swaps?\n\nnumbers = [ 3, 1, 7, 2, 4, 8, 5 ]"
   },
   {
     "objectID": "slides-14-02.html#how-many-total-sweeps-and-swaps-to-sort-this-list-6",
@@ -5968,7 +5968,7 @@
     "href": "slides-14-02.html#how-many-total-sweeps-and-swaps-2",
     "title": "sorting (class slides)",
     "section": "How many total sweeps and swaps?",
-    "text": "How many total sweeps and swaps?\n\nnumbers = [ 3, 1, 7, 2, 4, 8, 5 ]"
+    "text": "How many total sweeps and swaps?\nGo to gradescope and answer today’s attendance question:\n\nnumbers = [ 1, 5, 5, 7, 2, 4 ]"
   },
   {
     "objectID": "slides-14-02.html#how-many-total-sweeps-and-swaps-3",

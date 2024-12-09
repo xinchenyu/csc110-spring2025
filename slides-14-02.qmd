@@ -395,9 +395,6 @@ main()
 numbers = [ 3, 1, 7, 2, 4 ]
 ```
 
-## How many total sweeps and swaps?
-
-> \[ <span style="color:cornflowerblue">1, 3, 7, 8, 9</span> \] first sweep
 
 ## How many total sweeps and swaps?
 
@@ -477,3 +474,5 @@ numbers = [ 1, 5, 5, 7, 2, 4 ]
 
 <span style="color:red">Flash Warning</span>: the following video contains flashing lights.
 <https://www.youtube.com/watch?v=kPRA0W1kECg>
+
+selection sort at 0:00, bubble sort at 4:00
