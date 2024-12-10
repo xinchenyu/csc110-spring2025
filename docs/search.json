@@ -6003,14 +6003,14 @@
     "href": "slides-16-01.html#int-and-.isnumeric",
     "title": "final exam review (class slides)",
     "section": "int() and .isnumeric()",
-    "text": "int() and .isnumeric()\nint()\n\nint(\"110\") # 110\nint(\"csc110\") # error\n\nOne usage case: use int() to convert \"2\" to 2 when reading the number 2 from a file.\nstring.isnumeric()\n\n\"110\".isnumeric() # True\n\"csc110\".isnumeric() # False"
+    "text": "int() and .isnumeric()\nint()\n\nint(\"110\") # 110\nint(\"csc110\") # error\n\nUse case: use int() to convert \"2\" to 2 when reading the number 2 from a file.\nstring.isnumeric()\n\n\"110\".isnumeric() # True\n\"csc110\".isnumeric() # False"
   },
   {
     "objectID": "slides-16-01.html#evaluate-code",
     "href": "slides-16-01.html#evaluate-code",
     "title": "final exam review (class slides)",
     "section": "Evaluate code",
-    "text": "Evaluate code\nEvaluate last line:\n\nnumbers = (1000, 1, 2, 3)\nnumbers.add(4)\nprint(numbers[0]) # Error\n\nCorrect: Error\nIncorrect: 1000"
+    "text": "Evaluate code\nEvaluate last line:\n\nnumbers = (1000, 1, 2, 3)\nnumbers.add(4)\nprint(numbers[0]) # Error\n\nCorrect: Error (code won’t proceed to last line)\nIncorrect: 1000"
   },
   {
     "objectID": "slides-16-01.html#write-to-file---compare-difference",
@@ -6046,5 +6046,40 @@
     "title": "final exam review (class slides)",
     "section": "Write a function – solution",
     "text": "Write a function – solution\n\ndef maximum(*values):\n  max = None\n  for v in values:\n    if max == None or v &gt; max:\n      max = v\n  return max\n\ndef main():\n  assert maximum(1) == 1\n  assert maximum(2,4,6) == 6\n  assert maximum() == None\n\nmain()\n\nCan we change the order of max == None and v &gt; max?\nNo we CANNOT. Try it on your own laptop."
+  },
+  {
+    "objectID": "slides-16-01.html#int",
+    "href": "slides-16-01.html#int",
+    "title": "final exam review (class slides)",
+    "section": "int()",
+    "text": "int()\nint on “110”:\n\nint(\"110\") # 110\n\n110\n\n\nint on “CSC110”:\n\nint(\"CSC110\") # Error\n\nUse case: use int() to convert \"2\" to 2 when reading and summing the number 2 from a .txt file."
+  },
+  {
+    "objectID": "slides-16-01.html#isnumeric",
+    "href": "slides-16-01.html#isnumeric",
+    "title": "final exam review (class slides)",
+    "section": ".isnumeric()",
+    "text": ".isnumeric()\n.isnumeric() on “110”:\n\n\"110\".isnumeric() \n\nTrue\n\n\n.isnumeric() on “CSC110”:\n\n\"csc110\".isnumeric() \n\nFalse"
+  },
+  {
+    "objectID": "slides-16-01.html#string.isnumeric",
+    "href": "slides-16-01.html#string.isnumeric",
+    "title": "final exam review (class slides)",
+    "section": "string.isnumeric()",
+    "text": "string.isnumeric()\n.isnumeric() on “110”:\n\n\"110\".isnumeric() \n\nTrue\n\n\n.isnumeric() on “CSC110”:\n\n\"csc110\".isnumeric() \n\nFalse"
+  },
+  {
+    "objectID": "slides-16-01.html#tips",
+    "href": "slides-16-01.html#tips",
+    "title": "final exam review (class slides)",
+    "section": "Tips",
+    "text": "Tips\n\nloop table (1D and 2D lists)\nsorting (number of sweeps and swaps)\nstring methods\n\niterate string\n\ndata structures and their mutability\n\niterate data structures\nif conditions\n\nreading, aggregating or writing to files"
+  },
+  {
+    "objectID": "slides-16-01.html#more-concepts",
+    "href": "slides-16-01.html#more-concepts",
+    "title": "final exam review (class slides)",
+    "section": "More concepts",
+    "text": "More concepts\n\nloop table (1D and 2D lists)\nsorting (number of sweeps and swaps)\nstring methods\n\niterate string\n\ndata structures and their mutability\n\niterate data structures\nif conditions\n\nreading, aggregating or writing to files"
   }
 ]

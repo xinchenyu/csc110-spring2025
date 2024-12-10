@@ -30,24 +30,38 @@ You have 10 minutes to complete the quiz.
 
 # Review
 
-## int() and .isnumeric()
+## int() 
 
-`int()`
+`int` on "110":
 ```{python}
-#| eval: false
+#| eval: true
 #| echo: true
 int("110") # 110
-int("csc110") # error
 ```
 
-One usage case: use `int()` to convert `"2"` to `2` when reading the number 2 from a file.
-
-`string.isnumeric()`
+`int` on "CSC110":
 ```{python}
 #| eval: false
 #| echo: true
-"110".isnumeric() # True
-"csc110".isnumeric() # False
+int("CSC110") # Error
+```
+
+Use case: use `int()` to convert `"2"` to `2` when reading and summing the number 2 from a .txt file.
+
+## string.isnumeric()
+
+`.isnumeric()` on "110":
+```{python}
+#| eval: true
+#| echo: true
+"110".isnumeric() 
+```
+
+`.isnumeric()` on "CSC110":
+```{python}
+#| eval: true
+#| echo: true
+"csc110".isnumeric() 
 ```
 
 ## Evaluate code
@@ -61,7 +75,7 @@ numbers.add(4)
 print(numbers[0]) # Error
 ```
 
-Correct: `Error`
+Correct: `Error` (code won't proceed to last line)
 
 Incorrect: `1000` 
 
@@ -161,3 +175,25 @@ main()
 Can we change the order of `max == None` and `v > max`? 
 
 No we CANNOT. Try it on your own laptop.
+
+## More concepts
+
+-   loop table (1D and 2D lists)
+
+-   sorting (number of sweeps and swaps)
+
+-   string methods
+
+    * iterate string
+
+-   data structures and their mutability
+
+    * iterate data structures
+  
+    * if conditions
+    
+-   reading, aggregating or writing to files   
+
+
+
+
