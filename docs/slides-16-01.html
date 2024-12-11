@@ -432,7 +432,7 @@
 <p><code>int</code> on “110”:</p>
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">int</span>(<span class="st">"110"</span>) <span class="co"># 110</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
+<div class="cell-output cell-output-display" data-execution_count="11">
 <pre><code>110</code></pre>
 </div>
 </div>
@@ -447,14 +447,14 @@
 <p><code>.isnumeric()</code> on “110”:</p>
 <div class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="co">"110"</span>.isnumeric() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="12">
 <pre><code>True</code></pre>
 </div>
 </div>
 <p><code>.isnumeric()</code> on “CSC110”:</p>
 <div class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="co">"csc110"</span>.isnumeric() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>False</code></pre>
 </div>
 </div>
@@ -508,7 +508,9 @@
 </ol>
 <div class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a>items <span class="op">=</span> {<span class="st">"banana"</span>, <span class="st">"apple"</span>, <span class="st">"pear"</span>}</span>
-<span id="cb12-2"><a href="#cb12-2"></a><span class="cf">assert</span> create_list(items, <span class="dv">2</span>) <span class="op">==</span> [<span class="st">'banana'</span>, <span class="st">'banana'</span>, <span class="st">'apple'</span>, <span class="st">'apple'</span>, <span class="st">'pear'</span>, <span class="st">'pear'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="bu">print</span>(create_list(items, <span class="dv">2</span>)) </span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="co"># order does not matter</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="co"># ['banana', 'banana', 'apple', 'apple', 'pear', 'pear']</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function---solution" class="slide level2">
@@ -522,9 +524,12 @@
 <span id="cb13-6"><a href="#cb13-6"></a></span>
 <span id="cb13-7"><a href="#cb13-7"></a><span class="kw">def</span> main():</span>
 <span id="cb13-8"><a href="#cb13-8"></a>  items <span class="op">=</span> {<span class="st">"banana"</span>, <span class="st">"apple"</span>, <span class="st">"pear"</span>}</span>
-<span id="cb13-9"><a href="#cb13-9"></a>  <span class="cf">assert</span> create_list(items, <span class="dv">2</span>) <span class="op">==</span> [<span class="st">'banana'</span>, <span class="st">'banana'</span>, <span class="st">'apple'</span>, <span class="st">'apple'</span>, <span class="st">'pear'</span>, <span class="st">'pear'</span>]  </span>
+<span id="cb13-9"><a href="#cb13-9"></a>  <span class="bu">print</span>(create_list(items, <span class="dv">2</span>))  </span>
 <span id="cb13-10"><a href="#cb13-10"></a>  </span>
 <span id="cb13-11"><a href="#cb13-11"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['banana', 'banana', 'pear', 'pear', 'apple', 'apple']</code></pre>
+</div>
 </div>
 </section>
 <section id="write-a-function-1" class="slide level2">
@@ -535,27 +540,27 @@
 <li>It returns the highest value in <code>values</code></li>
 </ol>
 <div class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="cf">assert</span> maximum(<span class="dv">1</span>) <span class="op">==</span> <span class="dv">1</span></span>
-<span id="cb14-2"><a href="#cb14-2"></a><span class="cf">assert</span> maximum(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>) <span class="op">==</span> <span class="dv">6</span></span>
-<span id="cb14-3"><a href="#cb14-3"></a><span class="cf">assert</span> maximum() <span class="op">==</span> <span class="va">None</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="cf">assert</span> maximum(<span class="dv">1</span>) <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="cf">assert</span> maximum(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>) <span class="op">==</span> <span class="dv">6</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="cf">assert</span> maximum() <span class="op">==</span> <span class="va">None</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
 <div class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw">def</span> maximum(<span class="op">*</span>values):</span>
-<span id="cb15-2"><a href="#cb15-2"></a>  <span class="bu">max</span> <span class="op">=</span> <span class="va">None</span></span>
-<span id="cb15-3"><a href="#cb15-3"></a>  <span class="cf">for</span> v <span class="kw">in</span> values:</span>
-<span id="cb15-4"><a href="#cb15-4"></a>    <span class="cf">if</span> <span class="bu">max</span> <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span> v <span class="op">&gt;</span> <span class="bu">max</span>:</span>
-<span id="cb15-5"><a href="#cb15-5"></a>      <span class="bu">max</span> <span class="op">=</span> v</span>
-<span id="cb15-6"><a href="#cb15-6"></a>  <span class="cf">return</span> <span class="bu">max</span></span>
-<span id="cb15-7"><a href="#cb15-7"></a></span>
-<span id="cb15-8"><a href="#cb15-8"></a><span class="kw">def</span> main():</span>
-<span id="cb15-9"><a href="#cb15-9"></a>  <span class="cf">assert</span> maximum(<span class="dv">1</span>) <span class="op">==</span> <span class="dv">1</span></span>
-<span id="cb15-10"><a href="#cb15-10"></a>  <span class="cf">assert</span> maximum(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>) <span class="op">==</span> <span class="dv">6</span></span>
-<span id="cb15-11"><a href="#cb15-11"></a>  <span class="cf">assert</span> maximum() <span class="op">==</span> <span class="va">None</span></span>
-<span id="cb15-12"><a href="#cb15-12"></a></span>
-<span id="cb15-13"><a href="#cb15-13"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a><span class="kw">def</span> maximum(<span class="op">*</span>values):</span>
+<span id="cb16-2"><a href="#cb16-2"></a>  <span class="bu">max</span> <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a>  <span class="cf">for</span> v <span class="kw">in</span> values:</span>
+<span id="cb16-4"><a href="#cb16-4"></a>    <span class="cf">if</span> <span class="bu">max</span> <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span> v <span class="op">&gt;</span> <span class="bu">max</span>:</span>
+<span id="cb16-5"><a href="#cb16-5"></a>      <span class="bu">max</span> <span class="op">=</span> v</span>
+<span id="cb16-6"><a href="#cb16-6"></a>  <span class="cf">return</span> <span class="bu">max</span></span>
+<span id="cb16-7"><a href="#cb16-7"></a></span>
+<span id="cb16-8"><a href="#cb16-8"></a><span class="kw">def</span> main():</span>
+<span id="cb16-9"><a href="#cb16-9"></a>  <span class="cf">assert</span> maximum(<span class="dv">1</span>) <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb16-10"><a href="#cb16-10"></a>  <span class="cf">assert</span> maximum(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>) <span class="op">==</span> <span class="dv">6</span></span>
+<span id="cb16-11"><a href="#cb16-11"></a>  <span class="cf">assert</span> maximum() <span class="op">==</span> <span class="va">None</span></span>
+<span id="cb16-12"><a href="#cb16-12"></a></span>
+<span id="cb16-13"><a href="#cb16-13"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Can we change the order of <code>max == None</code> and <code>v &gt; max</code>?</p>
 <p>No we CANNOT. Try it on your own laptop.</p>

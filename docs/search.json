@@ -6024,14 +6024,14 @@
     "href": "slides-16-01.html#write-a-function",
     "title": "final exam review (class slides)",
     "section": "write a function",
-    "text": "write a function\nWrite a python function that does the following:\n\nIts name is create_list\nIt takes two arguments, a set of strings and an integer n\nIt returns a list that contains each string from the set repeated n times\n\n\nitems = {\"banana\", \"apple\", \"pear\"}\nassert create_list(items, 2) == ['banana', 'banana', 'apple', 'apple', 'pear', 'pear']"
+    "text": "write a function\nWrite a python function that does the following:\n\nIts name is create_list\nIt takes two arguments, a set of strings and an integer n\nIt returns a list that contains each string from the set repeated n times\n\n\nitems = {\"banana\", \"apple\", \"pear\"}\nprint(create_list(items, 2)) \n# order does not matter\n# ['banana', 'banana', 'apple', 'apple', 'pear', 'pear']"
   },
   {
     "objectID": "slides-16-01.html#write-a-function---solution",
     "href": "slides-16-01.html#write-a-function---solution",
     "title": "final exam review (class slides)",
     "section": "write a function - solution",
-    "text": "write a function - solution\n\ndef create_list(items, n):\n  new_list = [ ]\n  for value in items:\n    new_list.extend([value] * n)\n  return new_list\n\ndef main():\n  items = {\"banana\", \"apple\", \"pear\"}\n  assert create_list(items, 2) == ['banana', 'banana', 'apple', 'apple', 'pear', 'pear']  \n  \nmain()"
+    "text": "write a function - solution\n\ndef create_list(items, n):\n  new_list = [ ]\n  for value in items:\n    new_list.extend([value] * n)\n  return new_list\n\ndef main():\n  items = {\"banana\", \"apple\", \"pear\"}\n  print(create_list(items, 2))  \n  \nmain()\n\n['banana', 'banana', 'pear', 'pear', 'apple', 'apple']"
   },
   {
     "objectID": "slides-16-01.html#write-a-function-1",

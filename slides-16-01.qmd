@@ -128,13 +128,15 @@ Write a python function that does the following:
 #| eval: false
 #| echo: true
 items = {"banana", "apple", "pear"}
-assert create_list(items, 2) == ['banana', 'banana', 'apple', 'apple', 'pear', 'pear']
+print(create_list(items, 2)) 
+# order does not matter
+# ['banana', 'banana', 'apple', 'apple', 'pear', 'pear']
 ```
 
 ## write a function - solution
 
 ```{python}
-#| eval: false
+#| eval: true
 #| echo: true
 def create_list(items, n):
   new_list = [ ]
@@ -144,7 +146,7 @@ def create_list(items, n):
 
 def main():
   items = {"banana", "apple", "pear"}
-  assert create_list(items, 2) == ['banana', 'banana', 'apple', 'apple', 'pear', 'pear']  
+  print(create_list(items, 2))  
   
 main()
 ```
