@@ -72,6 +72,17 @@ Evaluate last line:
 #| echo: true
 numbers = (1000, 1, 2, 3)
 numbers.add(4)
+print(numbers[0]) 
+```
+
+## Evaluate code - answer
+
+Evaluate last line:
+```{python}
+#| eval: false
+#| echo: true
+numbers = (1000, 1, 2, 3)
+numbers.add(4)
 print(numbers[0]) # Error
 ```
 

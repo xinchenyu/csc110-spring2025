@@ -6010,7 +6010,7 @@
     "href": "slides-16-01.html#evaluate-code",
     "title": "final exam review (class slides)",
     "section": "Evaluate code",
-    "text": "Evaluate code\nEvaluate last line:\n\nnumbers = (1000, 1, 2, 3)\nnumbers.add(4)\nprint(numbers[0]) # Error\n\nCorrect: Error (code won’t proceed to last line)\nIncorrect: 1000"
+    "text": "Evaluate code\nEvaluate last line:\n\nnumbers = (1000, 1, 2, 3)\nnumbers.add(4)\nprint(numbers[0])"
   },
   {
     "objectID": "slides-16-01.html#write-to-file---compare-difference",
@@ -6081,5 +6081,12 @@
     "title": "final exam review (class slides)",
     "section": "More concepts",
     "text": "More concepts\n\nloop table (1D and 2D lists)\nsorting (number of sweeps and swaps)\nstring methods\n\niterate string\n\ndata structures and their mutability\n\niterate data structures\nif conditions\n\nreading, aggregating or writing to files"
+  },
+  {
+    "objectID": "slides-16-01.html#evaluate-code---answer",
+    "href": "slides-16-01.html#evaluate-code---answer",
+    "title": "final exam review (class slides)",
+    "section": "Evaluate code - answer",
+    "text": "Evaluate code - answer\nEvaluate last line:\n\nnumbers = (1000, 1, 2, 3)\nnumbers.add(4)\nprint(numbers[0]) # Error\n\nCorrect: Error (code won’t proceed to last line)\nIncorrect: 1000"
   }
 ]
