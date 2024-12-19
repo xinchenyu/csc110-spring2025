@@ -1,188 +1,255 @@
 ---
-title: "More on Functions (class slides)"
+title: "Math in Python (class slides)"
 format: revealjs
 slide-number: true
 ---
 
-# CSC 110 - More on Functions in Python
+# CSc 110 Math in Python
 
-## Function Comments
+## CS Buddy Mentor Program Sign-up
 
--   Every function created is required to have a function comment, including main
--   Function comments are a multi-line string (as opposed to using `#` for other comments)
+![](images/frame.png)
 
-## Function Comments
+
+## The Mathematical Operators
+
+-   `+` Addition
+-   `-` Subtraction
+-   `*` Multiplication
+-   `/` Division
+-   `//` Integer Division
+-   `**` Exponent
+-   `%` Modulus
+
+## The order of Operations (PEMDAS)
+
+1.  **P**arentheses,
+2.  **E**xponentiation
+3.  **M**ultiplication and **D**ivision have equal precedence
+4.  **A**ddition and **S**ubtraction have equal precedence
+
+## Write a function
+
+Write a function called `square_area` that takes in one argument (side length) and calculates the area of a square (a quadrilateral with two sides parallel that are of equal length). 
+
+The area of a square is calculated by multiplying the side by itself ($area = side^2$). Return the value for calculated area.
+
+Add a comment to your code.
+
+Name your file `square.py` and submit it to attendance on gradescope. 
+
+## Square Area
+
+```{python}
+#| echo: true
+#| eval: false
+def square_area(side):
+  # enter your code here
+
+def main():
+  print(square_area(5)) # 25
+  print(square_area(6)) # 36
+  print(square_area(10)) # 100
+
+main()
+```
+
+## Square Area
 
 ```{python}
 #| echo: true
 #| eval: true
-'''
-Xinchen Yu
-CSC110
-Class Demonstration
-This program has two functions: one to calculate the area of a sphere,
-the other to calculate the volume of a sphere.
-The main() function is called to print to the standard output the
-area and volume of a sphere of radius .75
-'''
+def square_area(side):
+  "calculates the area of a square"
+  area = side * side
+  return area
+
+def main():
+  print(square_area(5)) # 25
+  print(square_area(6)) # 36
+  print(square_area(10)) # 100
+
+main()
+```
+
+# Rounding numbers with built-in function `round()`
+
+## `round()`
+
+Use the round() function to get a floating-point number rounded to the specified number of decimals.
+
+Syntax:
+
+```{python}
+#| echo: true
+#| eval: false
+round(number, ndigits*)
+```
+
+The number of digits (`ndigits`) is optional, but we will often round number to two decimals:
+
+```{python}
+#| echo: true
+#| eval: true
+round(392.68750000000006, 2)
+```
+
+## `round()`
+
+Use the round() function to get a floating-point number rounded to the specified number of decimals.
+
+Syntax:
+
+```{python}
+#| echo: true
+#| eval: false
+round(number, ndigits*)
+```
+
+Rounding is done toward the nearest even choice. What would these round to? (discuss with your group)
+
+```{python}
+#| echo: true
+#| eval: false
+round(51.6)
+round(51.4)
+round(51.5)
+round(50.5)
+```
+
+## `round()`
+
+Use the round() function to get a floating-point number rounded to the specified number of decimals.
+
+Syntax:
+
+```{python}
+#| echo: true
+#| eval: false
+round(number, ndigits*)
+```
+
+Rounding is done toward the nearest even choice. What would these round to:
+
+```{python}
+#| echo: true
+#| eval: true
+print(round(51.6))
+print(round(51.4))
+print(round(51.5))
+print(round(50.5))
+```
+
+## Write a function
+
+Write a function that calculates the volume of a sphere:
+
+1.  Its name is `sphere_volume`
+2.  It takes one argument: `radius`
+3.  It calculates the volume of the sphere (use `3.1415` for $\pi$):
+
+$$
+v = {4 / 3} \cdot \pi \cdot radius^3
+$$
+
+4.  It returns the value for the calculated sphere volume
+5.  Test case: `sphere_volume(.75)` should return `1.77`.
+
+## Write a function -- sphere volume
+
+```{python}
+#| echo: true
+#| eval: true
+def sphere_volume(radius):
+  "calculates the volume of a sphere of given radius"
+  volume = (4 / 3) * 3.1415 * radius**3
+  return round(volume, 2)
+
+def main():
+  print(sphere_volume(.75)) # 1.77
+  print(sphere_volume(2)) # 33.51
+  print(sphere_volume(5.5)) # 696.89
+
+main()
+```
+
+## Write a function
+
+Write a function that calculates the area of a sphere:
+
+1.  Its name is `sphere_area`
+2.  It takes one argument: `radius`
+3.  It calculates the volume of the sphere (use `3.1415` for $\pi$):
+
+$$
+a = 4 \cdot \pi \cdot radius^2
+$$
+
+4.  It returns the value for the calculated sphere area
+5.  Test case: `sphere_area(.75)` should return `7.07`.
+
+## Write a function -- solutions 1
+
+```{python}
+#| echo: true
+#| eval: true
 def sphere_area(radius):
-  '''
-  This function calculates the area of a sphere of given radius.
-  Args:
-    radius: integer representing the radius of the sphere
-  Returns:
-    The float representing the area of a sphere of the given radius
-  '''
+  "calculates the area of a sphere of given radius"
   area = 4 * 3.1415 * radius**2
   return round(area, 2)
 
 def sphere_volume(radius):
-  '''
-  This function calculates the volume of a sphere of given radius.
-  Args:
-    radius: integer representing the radius of the sphere
-  Returns:
-    The float representing the volume of a sphere of the given radius
-  '''
-  volume = (1 / 3) * sphere_area(radius) * radius
+  "calculates the volume of a sphere of given radius"
+  volume = (4 / 3) * 3.1415 * radius**3
   return round(volume, 2)
 
 def main():
-  '''
-  This function prints the area and volume of a sphere of radius .75.
-  Args:
-    None
-  Returns:
-    None
-  '''
   r = .75
-  a = sphere_area(r)
   v = sphere_volume(r)
-  print(a, v)
-  
+  a = sphere_area(r)
+  print(v, a)
+
 main()
 ```
-
-## Global vs. Local variables (scope)
-
--   Every variable that is created has a particular scope
--   The scope of a variable is the region in the code where the variable can be used or modified
-
-## Global vs. Local variables (scope)
-
--   **Local Variables** have local scope -- for example, a variable assigned inside a function can only be used or modified within that function
--   **Global Variables** have global scope -- for example, a variable delcared outside a function can be accessed or modified across multiple functions
-
-## Global vs. Local variables (scope)
-
--   In the previous program we wrote (volume and area of sphere), `r`, `v` and `a` are local variables within the `main()` function.
--   The variable `radius` and `area` are local within the `sphere_area(radius)` function scope.
--   The variable `radius` and `volume` are local within `sphere_volume(radius)`
-
-## Global or Local?
-
-```{python}
-#| eval: false
-#| echo: true
-a = 10               # What are the global and local variables?
-b = 5                # Is the output of the two programs the same 
-                     # or different?
-def sum():
-  return a + b
-
-def main():
-  print(sum())
-  
-main()
-```
-
-vs.
-
-```{python}
-#| eval: false
-#| echo: true
-def sum(a, b):
-  return a + b
-
-def main():
-  print(sum(10, 5))
-  
-main()
-```
-
-## Argument vs. Parameter
-
--   Never set variables as global variables, pass values to functions when called
--   When a function is defined, the variables you want to pass to the function are called **parameter variables**
--   When the function is then called, the values you pass to the function are called **arguments**
-
-## Argument or Parameter?
-
-```{python}
-#| eval: false
-#| echo: true
-# The parameters are a and b
-def add(a, b):
-    return a+b
-  
-# The arguments being passed through are 5 and 4
-add(5, 4)
-```
-
 
 ## Write a function
+Comparing two formulas:
+$$
+a = 4 \cdot \pi \cdot radius^2
+$$
 
-Write a Python function called `hypotenuse` that takes two arguments: `a` and `b` representing the length of the two non-hypotenuse sides of a right triangle.
-The function should calculate the hypotenuse according to the Pythagorean theorem: $c = \sqrt(a^2 + b^2)$. Return it rounded at two decimals.
+$$
+v = {4 / 3} \cdot \pi \cdot radius^3 
+$$
+We can use area when calculating volume:
+$$
+v = {1 / 3} \cdot a \cdot radius
+$$
 
-Test cases: `hypotenuse(3, 4)` should return `5.0`, `hypotenuse(10, 10)` should return `14.14`
+Modify your `sphere_volume` function by calling `sphere_area` inside the function.
 
-Name your file `hypotenuse.py`
-
-## Submit attendance
-
-Submit your `hypotenuse.py` file with your solution to gradescope for attendance
-
-## Write a function
+## Write a function -- solutions 2
 
 ```{python}
+#| echo: true
 #| eval: true
-#| echo: true
-def sqrt(n):
-  '''
-  This function calculates the square root of a number
-  Args:
-    n: integer or float
-  Returns:
-    The square root of n
-  '''
-  return n**.5
+def sphere_area(radius):
+  "calculates the area of a sphere of given radius"
+  area = 4 * 3.1415 * radius**2
+  return round(area, 2)
 
-def hypotenuse(a, b):
-  '''
-  This function calculates the hypotenuse of a right angle triangle.
-  Args:
-    a: number (integer or float) representing one of the non-hypotenuse sides
-    b: number (integer or float) representing one of the non-hypotenuse sides
-  Returns:
-    Float representing the length of the hypotenuse given a and b
-  ''' 
-  h = sqrt(a**2 + b**2)
-  return round(h, 2)
+
+def sphere_volume(radius):
+  "calculates the volume of a sphere of given radius"
+  volume = (1 / 3) * sphere_area(radius) * radius
+  return round(volume, 2)
+
 
 def main():
-  '''
-  This function calls the hypotenuse function to calculate and then
-  print out the hypotenuse of a right angle triangle of sides 3 and 4
-  and the hypotenuse of a right angle triange of sides 10 and 10
-  '''
-  result = hypotenuse(3, 4)
-  print(result)
-  
-  result = hypotenuse(10, 10)
-  print(result)
-  
+  r = .75
+  v = sphere_volume(r)
+  a = sphere_area(r)
+  print(v, a)
+
 main()
 ```
-
-
