@@ -1,5 +1,5 @@
 ---
-title: "if elif else statements (class slides)"
+title: "if elif else statements (slides)"
 format: revealjs
 slide-number: true
 ---

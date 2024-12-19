@@ -1,5 +1,5 @@
 ---
-title: "sorting (class slides)"
+title: "sorting (slides)"
 format: revealjs
 slide-number: true
 df-print: kable

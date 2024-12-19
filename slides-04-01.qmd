@@ -1,5 +1,5 @@
 ---
-title: "More expressions (class slides)"
+title: "more expressions (slides)"
 format: revealjs
 slide-number: true
 ---

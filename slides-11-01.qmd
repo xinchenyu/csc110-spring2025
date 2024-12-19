@@ -1,5 +1,5 @@
 ---
-title: "more on for loops (class slides)"
+title: "more on for loops (slides)"
 format: revealjs
 slide-number: true
 df-print: kable

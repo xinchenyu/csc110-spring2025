@@ -1,5 +1,5 @@
 ---
-title: "data structures -- review (class slides)"
+title: "data structures -- review (slides)"
 format: revealjs
 slide-number: true
 df-print: kable

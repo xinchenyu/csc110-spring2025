@@ -1,5 +1,5 @@
 ---
-title: "more on lists (class slides)"
+title: "more on lists (slides)"
 format: revealjs
 slide-number: true
 df-print: kable

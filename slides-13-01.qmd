@@ -1,5 +1,5 @@
 ---
-title: "mutating lists (class slides)"
+title: "mutating lists (slides)"
 format: revealjs
 slide-number: true
 df-print: kable

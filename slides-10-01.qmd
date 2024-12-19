@@ -1,5 +1,5 @@
 ---
-title: "returning tuples (class slides)"
+title: "returning tuples (slides)"
 format: revealjs
 slide-number: true
 df-print: kable

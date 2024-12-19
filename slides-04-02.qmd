@@ -1,5 +1,5 @@
 ---
-title: "If statements (class slides)"
+title: "if statements (slides)"
 format: revealjs
 slide-number: true
 ---

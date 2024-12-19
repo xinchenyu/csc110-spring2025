@@ -1,5 +1,5 @@
 ---
-title: "random (class slides)"
+title: "random (slides)"
 format: revealjs
 slide-number: true
 df-print: kable

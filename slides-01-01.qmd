@@ -1,5 +1,5 @@
 ---
-title: "Course Introduction (class slides)"
+title: "course introduction (slides)"
 format: revealjs
 website:
   google-analytics: "G-X5E6TNHNQ5"

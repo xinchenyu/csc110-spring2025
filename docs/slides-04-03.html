@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.39">
 
-  <title>CSc 110 Computer Programming I – if elif else statements (class slides)</title>
+  <title>CSc 110 Computer Programming I – if elif else statements (slides)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -191,7 +191,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">if elif else statements (class slides)</h1>
+  <h1 class="title">if elif else statements (slides)</h1>
 
 <div class="quarto-title-authors">
 </div>
@@ -218,7 +218,7 @@
 <section id="if-elif-else-1" class="slide level2">
 <h2>if elif else</h2>
 <p>Compare the two functions</p>
-<div id="d10cc910" class="cell" data-execution_count="1">
+<div id="843bf8a6" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="kw">def</span> func_one(n):</span>
 <span id="cb2-2"><a></a>  message <span class="op">=</span> <span class="st">""</span></span>
 <span id="cb2-3"><a></a>  <span class="cf">if</span> n <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>:</span>
@@ -253,7 +253,7 @@
 <li>It returns the highest value</li>
 </ol>
 <p>Test cases</p>
-<div id="d950619c" class="cell" data-execution_count="2">
+<div id="9b581964" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="bu">print</span>( max_of_two(<span class="op">-</span><span class="dv">1</span>, <span class="dv">3</span>) ) <span class="co"># 3</span></span>
 <span id="cb4-2"><a></a><span class="bu">print</span>( max_of_two(<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">3</span>) ) <span class="co"># -1</span></span>
 <span id="cb4-3"><a></a><span class="bu">print</span>( max_of_two(<span class="dv">5</span>, <span class="dv">5</span>) ) <span class="co"># 5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -261,7 +261,7 @@
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div id="857caccb" class="cell" data-execution_count="3">
+<div id="2cf7a6cf" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="kw">def</span> max_of_two(x, y):</span>
 <span id="cb5-2"><a></a>  <span class="cf">if</span> x <span class="op">&gt;=</span> y:</span>
 <span id="cb5-3"><a></a>    <span class="cf">return</span> x</span>
@@ -290,7 +290,7 @@
 <li>It returns the highest value</li>
 </ol>
 <p>Test cases</p>
-<div id="491b21f1" class="cell" data-execution_count="4">
+<div id="c07835e0" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="bu">print</span>( max_of_three(<span class="op">-</span><span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">3</span>) ) <span class="co"># 3</span></span>
 <span id="cb7-2"><a></a><span class="bu">print</span>( max_of_three(<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">0</span>) ) <span class="co"># 0</span></span>
 <span id="cb7-3"><a></a><span class="bu">print</span>( max_of_three(<span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">10</span>) ) <span class="co"># 10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -298,7 +298,7 @@
 </section>
 <section id="write-a-function-solution-1" class="slide level2">
 <h2>Write a function – solution 1</h2>
-<div id="9782b89e" class="cell" data-execution_count="5">
+<div id="37e6f20c" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="kw">def</span> max_of_three(x, y, z):</span>
 <span id="cb8-2"><a></a>  <span class="cf">if</span> x <span class="op">&gt;=</span> y <span class="kw">and</span> x <span class="op">&gt;=</span> z:</span>
 <span id="cb8-3"><a></a>    <span class="cf">return</span> x</span>
@@ -322,7 +322,7 @@
 </section>
 <section id="write-a-function-solution-2" class="slide level2">
 <h2>Write a function – solution 2</h2>
-<div id="d4330bfd" class="cell" data-execution_count="6">
+<div id="92bf7169" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="kw">def</span> max_of_three(x, y, z):</span>
 <span id="cb10-2"><a></a>  max_value <span class="op">=</span> x</span>
 <span id="cb10-3"><a></a>  </span>
@@ -349,7 +349,7 @@
 </section>
 <section id="write-a-function-solution-3" class="slide level2">
 <h2>Write a function – solution 3</h2>
-<div id="3625e753" class="cell" data-execution_count="7">
+<div id="9aa30b41" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="kw">def</span> max_of_two(x, y):</span>
 <span id="cb12-2"><a></a>  <span class="cf">if</span> x <span class="op">&gt;=</span> y:</span>
 <span id="cb12-3"><a></a>    <span class="cf">return</span> x</span>
@@ -404,7 +404,7 @@
 </section>
 <section id="write-a-function---solution" class="slide level2">
 <h2>Write a function - solution</h2>
-<div id="ba331a0f" class="cell" data-execution_count="8">
+<div id="e77f6a46" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="kw">def</span> average_of_highest(x, y, z):</span>
 <span id="cb14-2"><a></a>  <span class="cf">if</span> x <span class="op">&gt;=</span> z <span class="kw">and</span> y <span class="op">&gt;=</span> z:</span>
 <span id="cb14-3"><a></a>    <span class="cf">return</span> (x <span class="op">+</span> y) <span class="op">/</span> <span class="dv">2</span></span>

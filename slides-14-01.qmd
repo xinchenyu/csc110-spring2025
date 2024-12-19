@@ -1,5 +1,5 @@
 ---
-title: "combining data structures (class slides)"
+title: "combining data structures (slides)"
 format: revealjs
 slide-number: true
 df-print: kable

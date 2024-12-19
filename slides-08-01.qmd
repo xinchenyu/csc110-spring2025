@@ -1,5 +1,5 @@
 ---
-title: "intro to dictionaries (class slides)"
+title: "intro to dictionaries (slides)"
 format: revealjs
 slide-number: true
 df-print: kable

@@ -1,5 +1,5 @@
 ---
-title: "nested for loops (class slides)"
+title: "nested for loops (slides)"
 format: revealjs
 slide-number: true
 df-print: kable

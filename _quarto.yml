@@ -53,20 +53,19 @@ website:
         - slides-01-01.qmd
         - slides-01-02.qmd
         - assignments-01.qmd
-      - section: "Module 2 - Functions, Operators and Expressions"
+      - section: "Module 2 - Functions, Operators, Expressions and Decomposition"
         contents:
         - functions-a.md
         - op_exp-a.md
         - slides-02-01.qmd
         - slides-02-02.qmd
         - assignments-02.qmd
-      - section: "Module 3 - More on Functions, Operators and Expressions"
+      - section: "Module 3 - More on Functions and Decomposition"
         contents: 
         - functions.md
         - input.md
         - slides-03-01.qmd
         - slides-03-02.qmd
-        - slides-03-03.qmd
         - assignments-03.qmd
       - section: "Module 4 - Control Flow (if statements)"
         contents:

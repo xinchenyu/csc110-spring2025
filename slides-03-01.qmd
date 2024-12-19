@@ -1,255 +1,201 @@
 ---
-title: "Math in Python (class slides)"
+title: "built-in functions (slides)"
 format: revealjs
 slide-number: true
 ---
 
-# CSc 110 Math in Python
+# CSC 110 Python Functions
 
-## CS Buddy Mentor Program Sign-up
+## Built-in Functions
 
-![](images/frame.png)
-
-
-## The Mathematical Operators
-
--   `+` Addition
--   `-` Subtraction
--   `*` Multiplication
--   `/` Division
--   `//` Integer Division
--   `**` Exponent
--   `%` Modulus
-
-## The order of Operations (PEMDAS)
-
-1.  **P**arentheses,
-2.  **E**xponentiation
-3.  **M**ultiplication and **D**ivision have equal precedence
-4.  **A**ddition and **S**ubtraction have equal precedence
+-   `print()` 
+-   `round()`
+-   `type()`
+-   `input()`
+-   `len()`
+-   `int()`
+-   `float()`
 
 ## Write a function
 
-Write a function called `square_area` that takes in one argument (side length) and calculates the area of a square (a quadrilateral with two sides parallel that are of equal length). 
+Write a Python function that does the following:
 
-The area of a square is calculated by multiplying the side by itself ($area = side^2$). Return the value for calculated area.
-
-Add a comment to your code.
-
-Name your file `square.py` and submit it to attendance on gradescope. 
-
-## Square Area
+1.  Its name is `greeting`
+2.  It takes two arguments, `first_name` and `last_name`
+3.  It returns a string with a greeting using `first_name` and `last_name`
 
 ```{python}
 #| echo: true
 #| eval: false
-def square_area(side):
-  # enter your code here
-
-def main():
-  print(square_area(5)) # 25
-  print(square_area(6)) # 36
-  print(square_area(10)) # 100
-
-main()
+print( greeting("Mickey", "Mouse") ) # Hello, Mickey Mouse!
 ```
 
-## Square Area
+## `input()` function
 
-```{python}
-#| echo: true
-#| eval: true
-def square_area(side):
-  "calculates the area of a square"
-  area = side * side
-  return area
-
-def main():
-  print(square_area(5)) # 25
-  print(square_area(6)) # 36
-  print(square_area(10)) # 100
-
-main()
-```
-
-# Rounding numbers with built-in function `round()`
-
-## `round()`
-
-Use the round() function to get a floating-point number rounded to the specified number of decimals.
-
-Syntax:
+-   The `input()` function prompts the user to input text in the standard output
+-   Whatever is inside the parentheses in `input()` will be written to the standard output (without a trailing newline, which you can add using `\n`).
+-   The function then reads a line from input, converts it to a string (stripping a trailing newline), and returns that
+-   `input()` always returns a string
 
 ```{python}
 #| echo: true
 #| eval: false
-round(number, ndigits*)
-```
-
-The number of digits (`ndigits`) is optional, but we will often round number to two decimals:
-
-```{python}
-#| echo: true
-#| eval: true
-round(392.68750000000006, 2)
-```
-
-## `round()`
-
-Use the round() function to get a floating-point number rounded to the specified number of decimals.
-
-Syntax:
-
-```{python}
-#| echo: true
-#| eval: false
-round(number, ndigits*)
-```
-
-Rounding is done toward the nearest even choice. What would these round to? (discuss with your group)
-
-```{python}
-#| echo: true
-#| eval: false
-round(51.6)
-round(51.4)
-round(51.5)
-round(50.5)
-```
-
-## `round()`
-
-Use the round() function to get a floating-point number rounded to the specified number of decimals.
-
-Syntax:
-
-```{python}
-#| echo: true
-#| eval: false
-round(number, ndigits*)
-```
-
-Rounding is done toward the nearest even choice. What would these round to:
-
-```{python}
-#| echo: true
-#| eval: true
-print(round(51.6))
-print(round(51.4))
-print(round(51.5))
-print(round(50.5))
+input("What's your name?\n")
 ```
 
 ## Write a function
 
-Write a function that calculates the volume of a sphere:
+Write a Python function that does the following:
 
-1.  Its name is `sphere_volume`
-2.  It takes one argument: `radius`
-3.  It calculates the volume of the sphere (use `3.1415` for $\pi$):
-
-$$
-v = {4 / 3} \cdot \pi \cdot radius^3
-$$
-
-4.  It returns the value for the calculated sphere volume
-5.  Test case: `sphere_volume(.75)` should return `1.77`.
-
-## Write a function -- sphere volume
+1.  Its name is `greeting_again` with no parameters
+2.  It first prompts you to enter your first name
+3.  It again prompts you to enter your last name
+3.  It returns a string with the same greeting as `greeting` but replace with your first and last name
 
 ```{python}
 #| echo: true
-#| eval: true
-def sphere_volume(radius):
-  "calculates the volume of a sphere of given radius"
-  volume = (4 / 3) * 3.1415 * radius**3
-  return round(volume, 2)
-
-def main():
-  print(sphere_volume(.75)) # 1.77
-  print(sphere_volume(2)) # 33.51
-  print(sphere_volume(5.5)) # 696.89
-
-main()
+#| eval: false
+print( greeting_again() ) 
 ```
 
 ## Write a function
 
-Write a function that calculates the area of a sphere:
-
-1.  Its name is `sphere_area`
-2.  It takes one argument: `radius`
-3.  It calculates the volume of the sphere (use `3.1415` for $\pi$):
-
-$$
-a = 4 \cdot \pi \cdot radius^2
-$$
-
-4.  It returns the value for the calculated sphere area
-5.  Test case: `sphere_area(.75)` should return `7.07`.
-
-## Write a function -- solutions 1
-
 ```{python}
 #| echo: true
-#| eval: true
-def sphere_area(radius):
-  "calculates the area of a sphere of given radius"
-  area = 4 * 3.1415 * radius**2
-  return round(area, 2)
+#| eval: false
+def greeting(first, last):
+    message = "Hello, " + first + " " + last + "!"
+    return message
 
-def sphere_volume(radius):
-  "calculates the volume of a sphere of given radius"
-  volume = (4 / 3) * 3.1415 * radius**3
-  return round(volume, 2)
+def greeting_again():
+    first = input("Enter your first name:\n")
+    last = input("Enter your last name:\n")
+    message = "Hello, " + first + " " + last + "!"
+    return message
 
 def main():
-  r = .75
-  v = sphere_volume(r)
-  a = sphere_area(r)
-  print(v, a)
+    print(greeting("Mickey", "Mouse"))
+    print(greeting_again())
 
 main()
 ```
 
-## Write a function
-Comparing two formulas:
-$$
-a = 4 \cdot \pi \cdot radius^2
-$$
+## `len()` function
 
-$$
-v = {4 / 3} \cdot \pi \cdot radius^3 
-$$
-We can use area when calculating volume:
-$$
-v = {1 / 3} \cdot a \cdot radius
-$$
-
-Modify your `sphere_volume` function by calling `sphere_area` inside the function.
-
-## Write a function -- solutions 2
+-   The `len()` function can be used with many types -- we will be using it with `string` for now
+-   It returns the number of characters in a string
 
 ```{python}
 #| echo: true
 #| eval: true
-def sphere_area(radius):
-  "calculates the area of a sphere of given radius"
-  area = 4 * 3.1415 * radius**2
-  return round(area, 2)
+character_count = len("Mickey")
+print(character_count)
+```
+
+## Write a function
+
+Write a Python function that does the following:
+
+1.  Its name is `count_characters`
+2.  It takes three string arguments, `a`, `b` and `c`
+3.  It returns the total number of characters for all three strings
 
 
-def sphere_volume(radius):
-  "calculates the volume of a sphere of given radius"
-  volume = (1 / 3) * sphere_area(radius) * radius
-  return round(volume, 2)
+```{python}
+#| echo: true
+#| eval: false
+print( count_characters("hel", "lo", "world") ) # 10
+print( count_characters("", "", "") ) # 0
+print( count_characters(" ", " ", " ") ) # 3
+print( count_characters("10", "2", "3") ) # 4
+```
 
+## Write a function
+```{python}
+#| echo: true
+#| eval: true
+def count_characters(a, b, c):
+    return len(a) + len(b) + len(c)
 
 def main():
-  r = .75
-  v = sphere_volume(r)
-  a = sphere_area(r)
-  print(v, a)
+    print( count_characters("hel", "lo", "world") ) # 10
+    print( count_characters("", "", "") ) # 0
+    print( count_characters(" ", " ", " ") ) # 3
+    print( count_characters("10", "2", "3") ) # 4
+
+main()
+```
+
+
+
+## Quiz 03
+
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+</center>
+
+You have 10 minutes to complete the quiz.
+
+Your formula in your function should be Python code (in other words, do not just copy the formula in the instructions, make it so it uses **actual symbols for Python operators**)
+
+
+## `int()` function
+
+-   The `int()` function can be used to convert a string to an integer type
+-   It only works if the string only contains digits
+
+```{python}
+#| echo: true
+#| eval: true
+age = '35'
+age_int = int(age)
+print(type(age), type(age_int))
+```
+
+## `float()` function
+
+-   The `float()` function can be used to convert a string to a float type
+-   It only works if the string only contains digits and optionally a decimal point
+
+```{python}
+#| echo: true
+#| eval: true
+age = '35'
+age_float = float(age)
+print(type(age), type(age_float))
+```
+
+
+## Write a function
+
+Write a Python function `calculate_year_born` with no parameters. It prompts user to enter their age `input()`. It converts user's age to integer. It calculates (imperfectly) the year a person of `age` was born by subtracting `age` from `2024`. It returns an integer representing the approximate year person of `age` was born.
+
+Name your file `get_input.py`
+
+```{python}
+#| echo: true
+#| eval: false
+print( calculate_year_born() ) # user enters 60, function returns 1964
+```
+
+## Submit attendance
+
+Submit your `get_input.py` file with your solution to gradescope for attendance. Do not call `main()` in your file to get full points.
+
+## Write a function
+
+```{python}
+#| echo: true
+#| eval: false
+def calculate_year_born():
+    str_age = input("what's your age?\n")
+    age = int(str_age)
+    year_born = 2024 - age
+    return year_born
+
+def main():
+    print(calculate_year_born())
 
 main()
 ```

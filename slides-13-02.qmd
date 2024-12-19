@@ -1,5 +1,5 @@
 ---
-title: "mutating dictionaries (class slides)"
+title: "mutating dictionaries (slides)"
 format: revealjs
 slide-number: true
 df-print: kable

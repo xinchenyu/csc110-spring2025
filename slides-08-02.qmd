@@ -1,5 +1,5 @@
 ---
-title: "for loops -- iterating over items (class slides)"
+title: "for loops -- iterating over items (slides)"
 format: revealjs
 slide-number: true
 df-print: kable

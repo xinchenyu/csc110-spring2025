@@ -1,5 +1,5 @@
 ---
-title: "files and strings (class slides)"
+title: "files and strings (slides)"
 format: revealjs
 slide-number: true
 df-print: kable

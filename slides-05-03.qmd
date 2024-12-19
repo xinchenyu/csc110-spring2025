@@ -1,5 +1,5 @@
 ---
-title: "while loop aggregation (class slides)"
+title: "while loop aggregation (slides)"
 format: revealjs
 slide-number: true
 ---

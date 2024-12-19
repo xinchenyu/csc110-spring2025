@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.39">
 
-  <title>CSc 110 Computer Programming I – data structures – review (class slides)</title>
+  <title>CSc 110 Computer Programming I – data structures – review (slides)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -191,7 +191,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">data structures – review (class slides)</h1>
+  <h1 class="title">data structures – review (slides)</h1>
 
 <div class="quarto-title-authors">
 </div>
@@ -232,7 +232,7 @@
 <section id="lists-1" class="slide level2">
 <h2>Lists</h2>
 <p>Indexing to retrieve values:</p>
-<div id="90d168ee" class="cell" data-execution_count="1">
+<div id="51573fbb" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>my_list <span class="op">=</span> [<span class="st">"a"</span>, <span class="dv">1</span>, <span class="st">"b"</span>, <span class="dv">2</span>]</span>
 <span id="cb1-2"><a></a>my_list[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="1">
@@ -240,7 +240,7 @@
 </div>
 </div>
 <p>Indexing to mutate values:</p>
-<div id="2df070df" class="cell" data-execution_count="2">
+<div id="13b484a5" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>my_list[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb3-2"><a></a>my_list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
@@ -273,7 +273,7 @@
 <section id="tuples-1" class="slide level2">
 <h2>Tuples</h2>
 <p>Indexing to retrieve values:</p>
-<div id="ba88360c" class="cell" data-execution_count="3">
+<div id="c5779618" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>my_tuple <span class="op">=</span> (<span class="st">"a"</span>, <span class="dv">1</span>, <span class="st">"b"</span>, <span class="dv">2</span>)</span>
 <span id="cb5-2"><a></a>my_tuple[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
@@ -295,7 +295,7 @@
 <section id="dictionaries-1" class="slide level2">
 <h2>Dictionaries</h2>
 <p>Use key to retrieve values:</p>
-<div id="e4f0f325" class="cell" data-execution_count="4">
+<div id="57d0cd5a" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>my_dict <span class="op">=</span> {<span class="st">"banana"</span>: <span class="dv">10</span>, <span class="st">"apple"</span>: <span class="dv">3</span>, <span class="st">"orange"</span>: <span class="dv">40</span>}</span>
 <span id="cb7-2"><a></a>my_dict[<span class="st">"banana"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
@@ -303,7 +303,7 @@
 </div>
 </div>
 <p>Use key to add <code>key: value</code> pairs:</p>
-<div id="0da39439" class="cell" data-execution_count="5">
+<div id="c529653d" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>my_dict[<span class="st">"pear"</span>] <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb9-2"><a></a>my_dict</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
@@ -311,7 +311,7 @@
 </div>
 </div>
 <p>Use key to mutate value associated with key:</p>
-<div id="aea3d2b3" class="cell" data-execution_count="6">
+<div id="b246e99d" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>my_dict[<span class="st">"pear"</span>] <span class="op">+=</span> <span class="dv">5</span></span>
 <span id="cb11-2"><a></a>my_dict</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
@@ -330,7 +330,7 @@
 <section id="evaluate-the-code" class="slide level2">
 <h2>Evaluate the code</h2>
 <p>Indicate when errors are thrown</p>
-<div id="17a17aff" class="cell" data-execution_count="7">
+<div id="c572e960" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>my_list <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">2</span>]</span>
 <span id="cb13-2"><a></a>my_list.append(<span class="dv">3</span>)</span>
 <span id="cb13-3"><a></a>my_list.insert(<span class="dv">0</span>, <span class="dv">1</span>)</span>
@@ -353,7 +353,7 @@
 <section id="evaluate-the-code-1" class="slide level2">
 <h2>Evaluate the code</h2>
 <p>Indicate when errors are thrown</p>
-<div id="30cb7206" class="cell" data-execution_count="8">
+<div id="920951d2" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a>my_list <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">2</span>]</span>
 <span id="cb14-2"><a></a>my_list.append(<span class="dv">3</span>)</span>
 <span id="cb14-3"><a></a>my_list.insert(<span class="dv">0</span>, <span class="dv">1</span>)</span>
@@ -364,7 +364,7 @@
 <pre><code>[1, 2, 3, 4, 2, 3]</code></pre>
 </div>
 </div>
-<div id="b70f24a0" class="cell" data-execution_count="9">
+<div id="990fb009" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a>my_tuple <span class="op">=</span> (<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">1</span>)</span>
 <span id="cb16-2"><a></a><span class="co"># error --- my_tupple.append(3)</span></span>
 <span id="cb16-3"><a></a>my_tuple <span class="co"># evaluate what this tuple holds at this point</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -372,7 +372,7 @@
 <pre><code>(3, 4, 1)</code></pre>
 </div>
 </div>
-<div id="9bf729e0" class="cell" data-execution_count="10">
+<div id="0bd7b44b" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a>my_dictionary <span class="op">=</span> {<span class="dv">3</span>: <span class="dv">4</span>, <span class="dv">1</span>: <span class="dv">2</span>, <span class="dv">5</span>: <span class="dv">4</span>}</span>
 <span id="cb18-2"><a></a>my_dictionary[<span class="dv">5</span>] <span class="op">=</span> <span class="dv">10</span></span>
 <span id="cb18-3"><a></a>my_dictionary <span class="co"># evaluate what this dictionary holds at this point</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -380,7 +380,7 @@
 <pre><code>{3: 4, 1: 2, 5: 10}</code></pre>
 </div>
 </div>
-<div id="12fd78a9" class="cell" data-execution_count="11">
+<div id="01cf132d" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a><span class="co"># error --- my_dictionary.append(4: 5)</span></span>
 <span id="cb20-2"><a></a>my_dictionary <span class="co"># evaluate what this dictionary holds at this point</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
@@ -391,7 +391,7 @@
 <section id="iterating-over-data-structures" class="slide level2">
 <h2>Iterating over data structures</h2>
 <p>Use <code>for x in data_structure</code> to retrieve values/keys (cannot make changes with this type of loop)</p>
-<div id="d7144b3d" class="cell" data-execution_count="12">
+<div id="cd0b2c85" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a>my_list <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">5</span>]</span>
 <span id="cb22-2"><a></a><span class="cf">for</span> value <span class="kw">in</span> my_list:</span>
 <span id="cb22-3"><a></a>  <span class="bu">print</span>(value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -401,7 +401,7 @@
 5</code></pre>
 </div>
 </div>
-<div id="6f20cf75" class="cell" data-execution_count="13">
+<div id="b8d7a7a7" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a></a>my_tuple <span class="op">=</span> (<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">5</span>)</span>
 <span id="cb24-2"><a></a><span class="cf">for</span> value <span class="kw">in</span> my_tuple:</span>
 <span id="cb24-3"><a></a>  <span class="bu">print</span>(value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -414,7 +414,7 @@
 </section>
 <section id="iterating-over-dictionaries" class="slide level2">
 <h2>Iterating over dictionaries</h2>
-<div id="273287ef" class="cell" data-execution_count="14">
+<div id="4f89f177" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a></a>my_dictionary <span class="op">=</span> {<span class="dv">3</span>: <span class="st">"a"</span>, <span class="dv">5</span>: <span class="st">"b"</span>}</span>
 <span id="cb26-2"><a></a><span class="cf">for</span> key <span class="kw">in</span> my_dictionary:</span>
 <span id="cb26-3"><a></a>  <span class="bu">print</span>(key)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -424,7 +424,7 @@
 </div>
 </div>
 <p>You can change values in a dictionary with <code>for key in dictionary</code></p>
-<div id="e4950a68" class="cell" data-execution_count="15">
+<div id="68330730" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a></a>my_dictionary <span class="op">=</span> {<span class="st">"a"</span>: <span class="dv">2</span>, <span class="st">"b"</span>: <span class="dv">3</span>}</span>
 <span id="cb28-2"><a></a><span class="cf">for</span> key <span class="kw">in</span> my_dictionary:</span>
 <span id="cb28-3"><a></a>  my_dictionary[key] <span class="op">+=</span> <span class="dv">1</span></span>
@@ -437,7 +437,7 @@
 <section id="iterating-over-dictionaries-1" class="slide level2">
 <h2>Iterating over dictionaries</h2>
 <p>Use <code>for x in data_structure.method()</code> for dictionaries</p>
-<div id="6001a425" class="cell" data-execution_count="16">
+<div id="f01e18a5" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a></a>my_dictionary <span class="op">=</span> {<span class="dv">3</span>: <span class="st">"a"</span>, <span class="dv">5</span>: <span class="st">"b"</span>}</span>
 <span id="cb30-2"><a></a><span class="cf">for</span> value <span class="kw">in</span> my_dictionary.values():</span>
 <span id="cb30-3"><a></a>  <span class="bu">print</span>(value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -446,7 +446,7 @@
 b</code></pre>
 </div>
 </div>
-<div id="538b0377" class="cell" data-execution_count="17">
+<div id="5ac33236" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a></a>my_dictionary <span class="op">=</span> {<span class="dv">3</span>: <span class="st">"a"</span>, <span class="dv">5</span>: <span class="st">"b"</span>}</span>
 <span id="cb32-2"><a></a><span class="cf">for</span> key, value <span class="kw">in</span> my_dictionary.items():</span>
 <span id="cb32-3"><a></a>  <span class="bu">print</span>(value)</span>
@@ -468,13 +468,13 @@ b
 <li>Use a <strong>list</strong> for this</li>
 </ol>
 <p>Name your file <code>names.py</code> and submit to Gradescope.</p>
-<div id="319a86b6" class="cell" data-execution_count="18">
+<div id="9f4e0351" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a></a><span class="cf">assert</span> count_names(<span class="st">"names.txt"</span>) <span class="op">==</span> <span class="dv">11</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div id="eab033d2" class="cell" data-execution_count="19">
+<div id="1f5053a0" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a></a><span class="kw">def</span> count_names(file_name):</span>
 <span id="cb35-2"><a></a>  f <span class="op">=</span> <span class="bu">open</span>(file_name, <span class="st">"r"</span>)</span>
 <span id="cb35-3"><a></a>  name_list <span class="op">=</span> []</span>
@@ -500,13 +500,13 @@ b
 <li>It returns an <strong>integer</strong> with the count</li>
 <li>Use a <strong>dictionary</strong> for this</li>
 </ol>
-<div id="6b380a20" class="cell" data-execution_count="20">
+<div id="78e48c80" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a></a><span class="cf">assert</span> count_names(<span class="st">"names.txt"</span>) <span class="op">==</span> <span class="dv">11</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-solution-1" class="slide level2">
 <h2>Write a function – solution</h2>
-<div id="b9bd19e2" class="cell" data-execution_count="21">
+<div id="acb6ecb3" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a></a><span class="kw">def</span> count_names(file_name):</span>
 <span id="cb37-2"><a></a>  f <span class="op">=</span> <span class="bu">open</span>(file_name, <span class="st">"r"</span>)</span>
 <span id="cb37-3"><a></a>  name_dict <span class="op">=</span> {}</span>
@@ -529,7 +529,7 @@ b
 <ul>
 <li>Remove values using <code>for x in list</code>:</li>
 </ul>
-<div id="60773bcc" class="cell" data-execution_count="22">
+<div id="73657dfb" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a></a>my_list <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">2</span>]</span>
 <span id="cb38-2"><a></a><span class="cf">for</span> value <span class="kw">in</span> my_list:</span>
 <span id="cb38-3"><a></a>  my_list.remove(value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -537,7 +537,7 @@ b
 <ul>
 <li>Append values using <code>for x in list</code>:</li>
 </ul>
-<div id="2dba2162" class="cell" data-execution_count="23">
+<div id="099fa546" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a></a>my_list <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">2</span>]</span>
 <span id="cb39-2"><a></a><span class="cf">for</span> value <span class="kw">in</span> my_list:</span>
 <span id="cb39-3"><a></a>  my_list.append(value <span class="op">+</span> <span class="dv">1</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -547,7 +547,7 @@ b
 <h2>Cannot change size of data structure</h2>
 <p>It is not possible to remove or add items to a list or a dictionary inside a <code>for x in data_structure</code> loop. This is what happens when you try to do so:</p>
 <p>Weird behavior:</p>
-<div id="8b79de77" class="cell" data-execution_count="24">
+<div id="e23a608f" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a></a>my_list <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">2</span>]</span>
 <span id="cb40-2"><a></a><span class="cf">for</span> value <span class="kw">in</span> my_list:</span>
 <span id="cb40-3"><a></a>  my_list.remove(value)</span>
@@ -557,7 +557,7 @@ b
 </div>
 </div>
 <p>Infinite loop:</p>
-<div id="854201d9" class="cell" data-execution_count="25">
+<div id="6e7f9a14" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a></a>my_list <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">2</span>]</span>
 <span id="cb42-2"><a></a><span class="cf">for</span> value <span class="kw">in</span> my_list:</span>
 <span id="cb42-3"><a></a>  my_list.append(value <span class="op">+</span> <span class="dv">1</span>) <span class="co"># this causes an infinite loop</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -567,7 +567,7 @@ b
 <h2>Cannot change size of data structure</h2>
 <p>It is not possible to remove or add items to a list or a dictionary inside a <code>for x in data_structure</code> loop. This is what happens when you try to do so:</p>
 <p>Error:</p>
-<div id="c58626b7" class="cell" data-execution_count="26">
+<div id="c93efee8" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a></a>my_dict <span class="op">=</span> {<span class="dv">2</span>: <span class="dv">0</span>, <span class="dv">3</span>: <span class="dv">1</span>, <span class="dv">1</span>: <span class="dv">0</span>, <span class="dv">2</span>: <span class="dv">0</span>}</span>
 <span id="cb43-2"><a></a><span class="cf">for</span> key <span class="kw">in</span> my_dict:</span>
 <span id="cb43-3"><a></a>  my_dict.pop(key) <span class="co"># this causes an error</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

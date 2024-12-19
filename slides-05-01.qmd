@@ -1,5 +1,5 @@
 ---
-title: "while loop intro (class slides)"
+title: "while loop intro (slides)"
 format: revealjs
 slide-number: true
 ---

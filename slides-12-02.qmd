@@ -1,5 +1,5 @@
 ---
-title: "intro to sets (class slides)"
+title: "intro to sets (slides)"
 format: revealjs
 slide-number: true
 df-print: kable

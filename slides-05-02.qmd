@@ -1,5 +1,5 @@
 ---
-title: "loops + strings (class slides)"
+title: "loops + strings (slides)"
 format: revealjs
 slide-number: true
 ---
