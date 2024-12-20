@@ -4,7 +4,7 @@ format: revealjs
 slide-number: true
 ---
 
-# CSC 110 Python Functions - more on decomposition
+# CSC 110 more on decomposition
 
 ## Class activity one
 
