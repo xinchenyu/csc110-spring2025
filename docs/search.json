@@ -8641,7 +8641,7 @@
     "href": "slides-02-02.html#write-functions",
     "title": "decomposition (slides)",
     "section": "Write functions",
-    "text": "Write functions\nWrite print_head, print_neck, and print_body:\n\ndef print_classic_guitar():\n    print_head()\n    print_neck()\n    print_body()\n\ndef print_long_guitar():\n    print_head()\n    print_neck()\n    print_neck()\n    print_body()\n\ndef main():\n    print_classic_guitar() # print classic guitar\n    print_long_guitar() # print long neck guitar\n\nmain()",
+    "text": "Write functions\nWrite functions print_head, print_neck, and print_body:\n\ndef print_classic_guitar():\n    print_head()\n    print_neck()\n    print_body()\n\ndef print_long_guitar():\n    print_head()\n    print_neck()\n    print_neck()\n    print_body()\n\ndef main():\n    print_classic_guitar() # print classic guitar\n    print_long_guitar() # print long neck guitar\n\nmain()",
     "crumbs": [
       "Module 2 - Functions, Operators, Expressions and Decomposition",
       "decomposition (slides)"
@@ -8821,6 +8821,28 @@
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on decomposition (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-02-02.html#program-decomposition",
+    "href": "slides-02-02.html#program-decomposition",
+    "title": "decomposition (slides)",
+    "section": "Program decomposition",
+    "text": "Program decomposition\nProgram decomposition refers to the process of breaking down a complex program into smaller, more manageable, and understandable parts or components.\nIt improves the structural quality of code.",
+    "crumbs": [
+      "Module 2 - Functions, Operators, Expressions and Decomposition",
+      "decomposition (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-02-02.html#discussion",
+    "href": "slides-02-02.html#discussion",
+    "title": "decomposition (slides)",
+    "section": "Discussion",
+    "text": "Discussion\nWork in groups, compare the latter version and the earlier version of program (page 4-6) and discuss:\n\nWhich version is better?\nWhy it is better?",
+    "crumbs": [
+      "Module 2 - Functions, Operators, Expressions and Decomposition",
+      "decomposition (slides)"
     ]
   }
 ]

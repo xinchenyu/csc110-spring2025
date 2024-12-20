@@ -7,6 +7,13 @@ df-print: kable
 
 # CSc 110 - decomposition
 
+
+## Program decomposition
+
+Program decomposition refers to the process of breaking down a complex program into smaller, more manageable, and understandable parts or components.
+
+It improves the structural quality of code.
+
 ## Print a classic guitar
 
 ```{python}
@@ -166,7 +173,7 @@ Read the code for classic guitar, answer the questions:
     
 ## Write functions
 
-Write `print_head`, `print_neck`, and `print_body`:
+Write functions `print_head`, `print_neck`, and `print_body`:
 
 ```{python}
 #| echo: true
@@ -303,3 +310,10 @@ def main():
 main()
 ```
 
+## Discussion
+
+Work in groups, compare the latter version and the earlier version of program (page 4-6) and discuss:
+
+-   Which version is better?
+
+-   Why it is better?
