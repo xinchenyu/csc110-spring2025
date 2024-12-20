@@ -5682,7 +5682,7 @@
     "href": "slides-03-03.html#write-a-function",
     "title": "more on decomposition (slides)",
     "section": "Write a function",
-    "text": "Write a function\nWrite function get_fit that takes the length of a cube (integer) and the name of a side (string)\n\nIt prompts you to the enter the length of the side\nIt calculates the number of cube that fit in the side\nIt print the message and return the number.\n\n\ndef main():\n    cube_len = int(input(\"Cube length? \"))\n    fit_w = get_fit(cube_len, 'width')\n    fit_h = get_fit(cube_len, 'height')\n    fit_l = get_fit(cube_len, 'length')\n    result = fit_w * fit_h * fit_l\n    print(str(result) + \" Rubik's cubes will fit in that container.\")\n\nmain()",
+    "text": "Write a function\nWrite function get_fit that takes the length of a cube (integer) and the name of a side (string)\n\nIt prompts you to the enter the length of the side\nIt calculates the number of cube that can fit in the side\nIt print the message and return the number.\n\n\ndef main():\n    cube_len = int(input(\"Cube length? \"))\n    fit_w = get_fit(cube_len, 'width')\n    fit_h = get_fit(cube_len, 'height')\n    fit_l = get_fit(cube_len, 'length')\n    result = fit_w * fit_h * fit_l\n    print(str(result) + \" Rubik's cubes will fit in that container.\")",
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on decomposition (slides)"
@@ -5693,7 +5693,7 @@
     "href": "slides-03-03.html#write-a-function-answer",
     "title": "more on decomposition (slides)",
     "section": "Write a function – answer",
-    "text": "Write a function – answer\n\ndef get_fit(cube, side):\n    large = int(input(f\"Box {side}? \"))\n    fit = large // cube\n    print(f\"{fit} Rubik's cubes will fit {side}-wise.\")\n    return fit\n\ndef main():\n    cube_len = int(input(\"Cube length? \"))\n    fit_w = get_fit(cube_len, 'width')\n    fit_h = get_fit(cube_len, 'height')\n    fit_l = get_fit(cube_len, 'length')\n    result = fit_w * fit_h * fit_l\n    print(str(result) + \" Rubik's cubes will fit in that container.\")\n\nmain()",
+    "text": "Write a function – answer\n\ndef get_fit(cube, side):\n    large = int(input(\"Box {}? \".format(side)))\n    fit = large // cube\n    print(\"{} Rubik's cubes will fit {}-wise.\".format(fit, side))\n    return fit\n\ndef main():\n    cube_len = int(input(\"Cube length? \"))\n    fit_w = get_fit(cube_len, 'width')\n    fit_h = get_fit(cube_len, 'height')\n    fit_l = get_fit(cube_len, 'length')\n    result = fit_w * fit_h * fit_l\n    print(str(result) + \" Rubik's cubes will fit in that container.\")\n\nmain()",
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on decomposition (slides)"

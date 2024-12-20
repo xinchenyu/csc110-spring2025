@@ -102,7 +102,7 @@ Write function `get_fit` that takes the length of a `cube` (integer) and the nam
 
 -   It prompts you to the enter the length of the `side`
 
--   It calculates the number of `cube` that fit in the `side`
+-   It calculates the number of `cube` that can fit in the `side`
 
 -   It print the message and return the number.
 
@@ -116,8 +116,6 @@ def main():
     fit_l = get_fit(cube_len, 'length')
     result = fit_w * fit_h * fit_l
     print(str(result) + " Rubik's cubes will fit in that container.")
-
-main()
 ```
 
 ## Write a function -- answer
@@ -126,9 +124,9 @@ main()
 #| echo: true
 #| eval: false
 def get_fit(cube, side):
-    large = int(input(f"Box {side}? "))
+    large = int(input("Box {}? ".format(side)))
     fit = large // cube
-    print(f"{fit} Rubik's cubes will fit {side}-wise.")
+    print("{} Rubik's cubes will fit {}-wise.".format(fit, side))
     return fit
 
 def main():

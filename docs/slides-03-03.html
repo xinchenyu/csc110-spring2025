@@ -212,7 +212,7 @@
 </section>
 <section id="rubiks-cubes" class="slide level2">
 <h2>Rubik’s Cubes</h2>
-<div id="785f84ef" class="cell" data-execution_count="1">
+<div id="9e57bba0" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>cube_len <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Cube length? "</span>))</span>
 <span id="cb1-2"><a></a>box_w <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Box width? "</span>))</span>
 <span id="cb1-3"><a></a>box_h <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Box height? "</span>))</span>
@@ -254,7 +254,7 @@
 </section>
 <section id="rubiks-cubes-1" class="slide level2">
 <h2>Rubik’s Cubes</h2>
-<div id="cc4bdf24" class="cell" data-execution_count="2">
+<div id="aa24586a" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>cube_len <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Cube length? "</span>))</span>
 <span id="cb2-2"><a></a>box_w <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Box width? "</span>)) </span>
 <span id="cb2-3"><a></a>box_h <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Box height? "</span>))</span>
@@ -290,28 +290,26 @@
 <p>Write function <code>get_fit</code> that takes the length of a <code>cube</code> (integer) and the name of a <code>side</code> (string)</p>
 <ul>
 <li><p>It prompts you to the enter the length of the <code>side</code></p></li>
-<li><p>It calculates the number of <code>cube</code> that fit in the <code>side</code></p></li>
+<li><p>It calculates the number of <code>cube</code> that can fit in the <code>side</code></p></li>
 <li><p>It print the message and return the number.</p></li>
 </ul>
-<div id="c95b9835" class="cell" data-execution_count="3">
+<div id="93a4ccef" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="kw">def</span> main():</span>
 <span id="cb3-2"><a></a>    cube_len <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Cube length? "</span>))</span>
 <span id="cb3-3"><a></a>    fit_w <span class="op">=</span> get_fit(cube_len, <span class="st">'width'</span>)</span>
 <span id="cb3-4"><a></a>    fit_h <span class="op">=</span> get_fit(cube_len, <span class="st">'height'</span>)</span>
 <span id="cb3-5"><a></a>    fit_l <span class="op">=</span> get_fit(cube_len, <span class="st">'length'</span>)</span>
 <span id="cb3-6"><a></a>    result <span class="op">=</span> fit_w <span class="op">*</span> fit_h <span class="op">*</span> fit_l</span>
-<span id="cb3-7"><a></a>    <span class="bu">print</span>(<span class="bu">str</span>(result) <span class="op">+</span> <span class="st">" Rubik's cubes will fit in that container."</span>)</span>
-<span id="cb3-8"><a></a></span>
-<span id="cb3-9"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-7"><a></a>    <span class="bu">print</span>(<span class="bu">str</span>(result) <span class="op">+</span> <span class="st">" Rubik's cubes will fit in that container."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-answer" class="slide level2">
 <h2>Write a function – answer</h2>
-<div id="f51e7280" class="cell" data-execution_count="4">
+<div id="35c236a4" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="kw">def</span> get_fit(cube, side):</span>
-<span id="cb4-2"><a></a>    large <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="ss">f"Box </span><span class="sc">{</span>side<span class="sc">}</span><span class="ss">? "</span>))</span>
+<span id="cb4-2"><a></a>    large <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Box </span><span class="sc">{}</span><span class="st">? "</span>.<span class="bu">format</span>(side)))</span>
 <span id="cb4-3"><a></a>    fit <span class="op">=</span> large <span class="op">//</span> cube</span>
-<span id="cb4-4"><a></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>fit<span class="sc">}</span><span class="ss"> Rubik's cubes will fit </span><span class="sc">{</span>side<span class="sc">}</span><span class="ss">-wise."</span>)</span>
+<span id="cb4-4"><a></a>    <span class="bu">print</span>(<span class="st">"</span><span class="sc">{}</span><span class="st"> Rubik's cubes will fit </span><span class="sc">{}</span><span class="st">-wise."</span>.<span class="bu">format</span>(fit, side))</span>
 <span id="cb4-5"><a></a>    <span class="cf">return</span> fit</span>
 <span id="cb4-6"><a></a></span>
 <span id="cb4-7"><a></a><span class="kw">def</span> main():</span>
