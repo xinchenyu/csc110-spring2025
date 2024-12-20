@@ -27,6 +27,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-bbe7401fe57d4b791b917637bb662036.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -133,21 +198,132 @@
 
 </section>
 <section>
-<section id="csc-110-python-functions---decomposition" class="title-slide slide level1 center">
-<h1>CSC 110 Python Functions - Decomposition</h1>
+<section id="csc-110-python-functions---more-on-decomposition" class="title-slide slide level1 center">
+<h1>CSC 110 Python Functions - more on decomposition</h1>
 
 </section>
-<section id="built-in-functions" class="slide level2">
-<h2>Built-in Functions</h2>
+<section id="class-activity-one" class="slide level2">
+<h2>Class activity one</h2>
+<p>Read the code and answer the questions:</p>
 <ul>
-<li><code>print()</code></li>
-<li><code>round()</code></li>
-<li><code>type()</code></li>
-<li><code>input()</code></li>
-<li><code>len()</code></li>
-<li><code>int()</code></li>
-<li><code>float()</code></li>
+<li><p>which lines of code are similar?</p></li>
+<li><p>which lines of code are identical?</p></li>
 </ul>
+</section>
+<section id="rubiks-cubes" class="slide level2">
+<h2>Rubik’s Cubes</h2>
+<div id="0091b007" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>cube_len <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Cube length? "</span>))</span>
+<span id="cb1-2"><a></a>box_w <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Box width? "</span>))</span>
+<span id="cb1-3"><a></a>box_h <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Box height? "</span>))</span>
+<span id="cb1-4"><a></a>box_l <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Box length? "</span>))</span>
+<span id="cb1-5"><a></a></span>
+<span id="cb1-6"><a></a>fit_w <span class="op">=</span> box_w <span class="op">//</span> cube_len</span>
+<span id="cb1-7"><a></a>fit_h <span class="op">=</span> box_h <span class="op">//</span> cube_len</span>
+<span id="cb1-8"><a></a>fit_l <span class="op">=</span> box_l <span class="op">//</span> cube_len</span>
+<span id="cb1-9"><a></a></span>
+<span id="cb1-10"><a></a><span class="bu">print</span>(<span class="bu">str</span>(fit_w) <span class="op">+</span> <span class="st">" Rubik's cubes will fit width-wise."</span>)</span>
+<span id="cb1-11"><a></a><span class="bu">print</span>(<span class="bu">str</span>(fit_h) <span class="op">+</span> <span class="st">" Rubik's cubes will fit height-wise."</span>)</span>
+<span id="cb1-12"><a></a><span class="bu">print</span>(<span class="bu">str</span>(fit_l) <span class="op">+</span> <span class="st">" Rubik's cubes will fit length-wise."</span>)</span>
+<span id="cb1-13"><a></a></span>
+<span id="cb1-14"><a></a>res <span class="op">=</span> fit_w <span class="op">*</span> fit_h <span class="op">*</span> fit_l</span>
+<span id="cb1-15"><a></a><span class="bu">print</span>(<span class="bu">str</span>(res)<span class="op">+</span><span class="st">" Rubik's cubes will fit in that container."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="class-activity-one-answer" class="slide level2">
+<h2>Class activity one – answer</h2>
+<p>Read the code and answer the questions:</p>
+<ul>
+<li><p>which lines of code are similar?</p>
+<ul>
+<li>line 2-4, line 6-8, line 10-12</li>
+</ul></li>
+<li><p>which lines of code are identical?</p>
+<ul>
+<li>line 1, line 14-15</li>
+</ul></li>
+</ul>
+</section>
+<section id="class-activity-two" class="slide level2">
+<h2>Class activity two</h2>
+<p>For line 2-4, line 6-8, line 10-12:</p>
+<ul>
+<li><p>which lines can be grouped together into a function?</p></li>
+<li><p>what does the function do?</p></li>
+</ul>
+</section>
+<section id="rubiks-cubes-1" class="slide level2">
+<h2>Rubik’s Cubes</h2>
+<div id="29f87229" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>cube_len <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Cube length? "</span>))</span>
+<span id="cb2-2"><a></a>box_w <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Box width? "</span>)) </span>
+<span id="cb2-3"><a></a>box_h <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Box height? "</span>))</span>
+<span id="cb2-4"><a></a>box_l <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Box length? "</span>))</span>
+<span id="cb2-5"><a></a></span>
+<span id="cb2-6"><a></a>fit_w <span class="op">=</span> box_w <span class="op">//</span> cube_len</span>
+<span id="cb2-7"><a></a>fit_h <span class="op">=</span> box_h <span class="op">//</span> cube_len</span>
+<span id="cb2-8"><a></a>fit_l <span class="op">=</span> box_l <span class="op">//</span> cube_len</span>
+<span id="cb2-9"><a></a></span>
+<span id="cb2-10"><a></a><span class="bu">print</span>(<span class="bu">str</span>(fit_w) <span class="op">+</span> <span class="st">" Rubik's cubes will fit width-wise."</span>)</span>
+<span id="cb2-11"><a></a><span class="bu">print</span>(<span class="bu">str</span>(fit_h) <span class="op">+</span> <span class="st">" Rubik's cubes will fit height-wise."</span>)</span>
+<span id="cb2-12"><a></a><span class="bu">print</span>(<span class="bu">str</span>(fit_l) <span class="op">+</span> <span class="st">" Rubik's cubes will fit length-wise."</span>)</span>
+<span id="cb2-13"><a></a></span>
+<span id="cb2-14"><a></a>res <span class="op">=</span> fit_w <span class="op">*</span> fit_h <span class="op">*</span> fit_l</span>
+<span id="cb2-15"><a></a><span class="bu">print</span>(<span class="bu">str</span>(res)<span class="op">+</span><span class="st">" Rubik's cubes will fit in that container."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="class-activity-two-1" class="slide level2">
+<h2>Class activity two</h2>
+<p>For line 2-4, line 6-8, line 10-12:</p>
+<ul>
+<li><p>which lines can be grouped together into a function?</p>
+<ul>
+<li><p>line 2, 6 and 10</p></li>
+<li><p>line 3, 7 and 11</p></li>
+<li><p>line 4, 8 and 12</p></li>
+</ul></li>
+<li><p>what does the function do?</p></li>
+</ul>
+</section>
+<section id="write-a-function" class="slide level2">
+<h2>Write a function</h2>
+<p>Write function <code>get_fit</code> that takes the length of a <code>cube</code> (integer) and the name of a <code>side</code> (string)</p>
+<ul>
+<li><p>It prompts you to the enter the length of the <code>side</code></p></li>
+<li><p>It calculates the number of <code>cube</code> that fit in the <code>side</code></p></li>
+<li><p>It print the message and return the number.</p></li>
+</ul>
+<div id="3da429a7" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="kw">def</span> main():</span>
+<span id="cb3-2"><a></a>    cube_len <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Cube length? "</span>))</span>
+<span id="cb3-3"><a></a>    fit_w <span class="op">=</span> get_fit(cube_len, <span class="st">'width'</span>)</span>
+<span id="cb3-4"><a></a>    fit_h <span class="op">=</span> get_fit(cube_len, <span class="st">'height'</span>)</span>
+<span id="cb3-5"><a></a>    fit_l <span class="op">=</span> get_fit(cube_len, <span class="st">'length'</span>)</span>
+<span id="cb3-6"><a></a>    result <span class="op">=</span> fit_w <span class="op">*</span> fit_h <span class="op">*</span> fit_l</span>
+<span id="cb3-7"><a></a>    <span class="bu">print</span>(<span class="bu">str</span>(result) <span class="op">+</span> <span class="st">" Rubik's cubes will fit in that container."</span>)</span>
+<span id="cb3-8"><a></a></span>
+<span id="cb3-9"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-a-function-answer" class="slide level2">
+<h2>Write a function – answer</h2>
+<div id="a6c1ab6e" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="kw">def</span> get_fit(cube, side):</span>
+<span id="cb4-2"><a></a>    large <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="ss">f"Box </span><span class="sc">{</span>side<span class="sc">}</span><span class="ss">? "</span>))</span>
+<span id="cb4-3"><a></a>    fit <span class="op">=</span> large <span class="op">//</span> cube</span>
+<span id="cb4-4"><a></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>fit<span class="sc">}</span><span class="ss"> Rubik's cubes will fit </span><span class="sc">{</span>side<span class="sc">}</span><span class="ss">-wise."</span>)</span>
+<span id="cb4-5"><a></a>    <span class="cf">return</span> fit</span>
+<span id="cb4-6"><a></a></span>
+<span id="cb4-7"><a></a><span class="kw">def</span> main():</span>
+<span id="cb4-8"><a></a>    cube_len <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Cube length? "</span>))</span>
+<span id="cb4-9"><a></a>    fit_w <span class="op">=</span> get_fit(cube_len, <span class="st">'width'</span>)</span>
+<span id="cb4-10"><a></a>    fit_h <span class="op">=</span> get_fit(cube_len, <span class="st">'height'</span>)</span>
+<span id="cb4-11"><a></a>    fit_l <span class="op">=</span> get_fit(cube_len, <span class="st">'length'</span>)</span>
+<span id="cb4-12"><a></a>    result <span class="op">=</span> fit_w <span class="op">*</span> fit_h <span class="op">*</span> fit_l</span>
+<span id="cb4-13"><a></a>    <span class="bu">print</span>(<span class="bu">str</span>(result) <span class="op">+</span> <span class="st">" Rubik's cubes will fit in that container."</span>)</span>
+<span id="cb4-14"><a></a></span>
+<span id="cb4-15"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 </section></section>
