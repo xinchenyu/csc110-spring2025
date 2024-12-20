@@ -213,13 +213,13 @@
 <section id="combining-lists" class="slide level2">
 <h2>Combining lists</h2>
 <p>What will happen? Run this code on your computer and on <a href="https://pythontutor.com/visualize.html">Python Tutor</a></p>
-<div id="83332452" class="cell" data-execution_count="1">
+<div id="1501a7fa" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>vegetables <span class="op">=</span> [<span class="st">"kale"</span>, <span class="st">"carrot"</span>, <span class="st">"peas"</span>, <span class="st">"celery"</span>]</span>
 <span id="cb1-2"><a></a>fruits <span class="op">=</span> [<span class="st">"banana"</span>, <span class="st">"tomato"</span>, <span class="st">"pear"</span>]</span>
 <span id="cb1-3"><a></a><span class="bu">print</span>(vegetables <span class="op">+</span> fruits)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Will vegetables be mutated?</p>
-<div id="234dd667" class="cell" data-execution_count="2">
+<div id="bcf3300e" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="kw">def</span> combine_lists(list_1, list_2):</span>
 <span id="cb2-2"><a></a>  list_1 <span class="op">=</span> list_1 <span class="op">+</span> list_2</span>
 <span id="cb2-3"><a></a>  <span class="cf">return</span> list_1</span>
@@ -237,7 +237,7 @@
 <section id="combining-lists-1" class="slide level2">
 <h2>Combining lists</h2>
 <p>Will vegetables be mutated? Run this code on your computer and on <a href="https://pythontutor.com/visualize.html">Python Tutor</a></p>
-<div id="0049f9ef" class="cell" data-execution_count="3">
+<div id="23ae757b" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="kw">def</span> combine_lists(list_1, list_2):</span>
 <span id="cb4-2"><a></a>  <span class="cf">for</span> item <span class="kw">in</span> list_2:</span>
 <span id="cb4-3"><a></a>    list_1.append(item)</span>
@@ -256,7 +256,7 @@
 <section id="combining-lists-2" class="slide level2">
 <h2>Combining lists</h2>
 <p>Will vegetables be mutated? Run this code on your computer and on <a href="https://pythontutor.com/visualize.html">Python Tutor</a></p>
-<div id="6259fce1" class="cell" data-execution_count="4">
+<div id="6faa9c78" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="kw">def</span> combine_lists(list_1, list_2):</span>
 <span id="cb6-2"><a></a>  list_1.extend(list_2)</span>
 <span id="cb6-3"><a></a>  <span class="cf">return</span> list_1</span>
@@ -284,7 +284,7 @@
 <section id="evaluate-the-code" class="slide level2">
 <h2>Evaluate the code</h2>
 <p>Indicate when an <strong>error</strong> occurs.</p>
-<div id="27e312b9" class="cell" data-execution_count="5">
+<div id="a8698413" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">31</span>, <span class="dv">0</span>, <span class="dv">2</span>]</span>
 <span id="cb8-2"><a></a>numbers.append(<span class="dv">40</span>)</span>
 <span id="cb8-3"><a></a>numbers <span class="co"># evaluate this at this point</span></span>
@@ -305,7 +305,7 @@
 </section>
 <section id="evaluate-the-code-solution" class="slide level2">
 <h2>Evaluate the code – solution</h2>
-<div id="f931123c" class="cell" data-execution_count="6">
+<div id="7a886914" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">31</span>, <span class="dv">0</span>, <span class="dv">2</span>]</span>
 <span id="cb9-2"><a></a>numbers.append(<span class="dv">40</span>)</span>
 <span id="cb9-3"><a></a>numbers <span class="co"># evaluate this at this point</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -313,28 +313,28 @@
 <pre><code>[1, 2, 31, 0, 2, 40]</code></pre>
 </div>
 </div>
-<div id="619fa53d" class="cell" data-execution_count="7">
+<div id="8c8d3fd6" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>numbers.insert(<span class="dv">3</span>, <span class="dv">10</span>)</span>
 <span id="cb11-2"><a></a>numbers <span class="co"># evaluate this at this point</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>[1, 2, 31, 10, 0, 2, 40]</code></pre>
 </div>
 </div>
-<div id="8fd4835d" class="cell" data-execution_count="8">
+<div id="68ff049b" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>numbers.remove(<span class="dv">2</span>)</span>
 <span id="cb13-2"><a></a>numbers <span class="co"># evaluate this at this point</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>[1, 31, 10, 0, 2, 40]</code></pre>
 </div>
 </div>
-<div id="d894fe92" class="cell" data-execution_count="9">
+<div id="89bbb247" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a>numbers.pop(<span class="dv">2</span>)</span>
 <span id="cb15-2"><a></a>numbers <span class="co"># evaluate this at this point</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>[1, 31, 0, 2, 40]</code></pre>
 </div>
 </div>
-<div id="3fc5a172" class="cell" data-execution_count="10">
+<div id="6df959f5" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a>new_list <span class="op">=</span> [<span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">60</span>]</span>
 <span id="cb17-2"><a></a>numbers.extend(new_list)</span>
 <span id="cb17-3"><a></a>numbers <span class="co"># evaluate this at this point</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -351,7 +351,7 @@
 <li>It <strong>mutates</strong> the <code>original_list</code> removing values found in <code>to_remove_list</code> and then appending the values in <code>to_append_list</code></li>
 </ol>
 <p>Test case:</p>
-<div id="d8bea90d" class="cell" data-execution_count="11">
+<div id="f309ba72" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a>test_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
 <span id="cb19-2"><a></a>remove_and_append(test_list, [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>], [<span class="dv">10</span>, <span class="dv">11</span>])</span>
 <span id="cb19-3"><a></a><span class="cf">assert</span> test_list <span class="op">==</span> [<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">11</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -359,7 +359,7 @@
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div id="95cb3100" class="cell" data-execution_count="12">
+<div id="c69c25c1" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a><span class="kw">def</span> remove_and_append(original_list, to_remove_list, to_append_list):</span>
 <span id="cb20-2"><a></a>  <span class="cf">for</span> item <span class="kw">in</span> to_remove_list:</span>
 <span id="cb20-3"><a></a>    <span class="cf">if</span> item <span class="kw">in</span> original_list:</span>
@@ -384,7 +384,7 @@
 <li><p>A number <code>n</code> is NOT prime if it is divisible by any integer between 2 and <code>n / 2</code>.</p></li>
 <li><p>The integer 1 is not a prime number.</p></li>
 </ul>
-<div id="4217f895" class="cell" data-execution_count="13">
+<div id="86002a8e" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a><span class="cf">assert</span> is_prime(<span class="dv">4</span>) <span class="op">==</span> <span class="va">False</span> <span class="co"># divisible by 2</span></span>
 <span id="cb22-2"><a></a><span class="cf">assert</span> is_prime(<span class="dv">5</span>) <span class="op">==</span> <span class="va">True</span>  <span class="co"># not divisible by 2</span></span>
 <span id="cb22-3"><a></a><span class="cf">assert</span> is_prime(<span class="dv">6</span>) <span class="op">==</span> <span class="va">False</span> <span class="co"># divisible by 2 or 3</span></span>
@@ -393,7 +393,7 @@
 </section>
 <section id="determining-prime-number---solution" class="slide level2">
 <h2>Determining prime number - solution</h2>
-<div id="95fb07d3" class="cell" data-execution_count="14">
+<div id="a44e7cda" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a></a><span class="kw">def</span> is_prime(n):</span>
 <span id="cb23-2"><a></a>    <span class="cf">if</span> n <span class="op">==</span> <span class="dv">1</span>:</span>
 <span id="cb23-3"><a></a>         <span class="cf">return</span> <span class="va">False</span></span>
@@ -416,7 +416,7 @@
 <section id="write-python-code-1" class="slide level2">
 <h2>Write python code</h2>
 <p>Name your file <code>prime_numbers.py</code> and submit for attendance. Test cases:</p>
-<div id="30ce2289" class="cell" data-execution_count="15">
+<div id="f595d710" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
 <span id="cb25-2"><a></a>    numbers <span class="op">=</span> [<span class="dv">102</span>, <span class="dv">250</span>, <span class="dv">509</span>, <span class="dv">345</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">547</span>]</span>
 <span id="cb25-3"><a></a>    result <span class="op">=</span> create_dictionary(numbers)</span>
@@ -434,7 +434,7 @@
 </section>
 <section id="write-python-code-solution" class="slide level2">
 <h2>Write python code – solution</h2>
-<div id="d9752a0d" class="cell" data-execution_count="16">
+<div id="0ec1d3f9" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a></a><span class="kw">def</span> create_dictionary(numbers):</span>
 <span id="cb26-2"><a></a>    result <span class="op">=</span> {}</span>
 <span id="cb26-3"><a></a>    <span class="cf">for</span> n <span class="kw">in</span> numbers:</span>

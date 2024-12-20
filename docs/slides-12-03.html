@@ -213,7 +213,7 @@
 </section>
 <section id="union" class="slide level2">
 <h2>union</h2>
-<div id="572a1bf3" class="cell" data-execution_count="1">
+<div id="905491c4" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>s1 <span class="op">=</span> {<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>}</span>
 <span id="cb1-2"><a></a>s2 <span class="op">=</span> {<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>}</span>
 <span id="cb1-3"><a></a>s1.union(s2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -225,7 +225,7 @@
 <img data-src="images/union.png" class="r-stretch quarto-figure-center"><p class="caption">union</p></section>
 <section id="intersection" class="slide level2">
 <h2>intersection</h2>
-<div id="82e4512f" class="cell" data-execution_count="2">
+<div id="1fa710b2" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>s1 <span class="op">=</span> {<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>}</span>
 <span id="cb3-2"><a></a>s2 <span class="op">=</span> {<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>}</span>
 <span id="cb3-3"><a></a>s1.intersection(s2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -237,7 +237,7 @@
 <img data-src="images/intersection.png" class="r-stretch quarto-figure-center"><p class="caption">intersection</p></section>
 <section id="evaluate-the-code" class="slide level2">
 <h2>Evaluate the code</h2>
-<div id="588efbc5" class="cell" data-execution_count="3">
+<div id="752e4a45" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>presences <span class="op">=</span> {<span class="st">"Anna"</span>, <span class="st">"Beatrice"</span>, <span class="st">"Claude"</span>}</span>
 <span id="cb5-2"><a></a>absences <span class="op">=</span> {<span class="st">"Elvin"</span>, <span class="st">"Harley"</span>}</span>
 <span id="cb5-3"><a></a>absences.add(<span class="st">"Becca"</span>)</span>
@@ -253,7 +253,7 @@
 </section>
 <section id="evaluate-the-code-1" class="slide level2">
 <h2>Evaluate the code</h2>
-<div id="1150af90" class="cell" data-execution_count="4">
+<div id="819ef4da" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>presences <span class="op">=</span> {<span class="st">"Anna"</span>, <span class="st">"Beatrice"</span>, <span class="st">"Claude"</span>}</span>
 <span id="cb6-2"><a></a>absences <span class="op">=</span> {<span class="st">"Elvin"</span>, <span class="st">"Harley"</span>}</span>
 <span id="cb6-3"><a></a>absences.add(<span class="st">"Becca"</span>)</span>
@@ -262,7 +262,7 @@
 <pre><code>{'Anna', 'Beatrice', 'Becca', 'Claude', 'Elvin', 'Harley'}</code></pre>
 </div>
 </div>
-<div id="7a36407d" class="cell" data-execution_count="5">
+<div id="562b4ead" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>task_1 <span class="op">=</span> {<span class="st">"Anna"</span>, <span class="st">"Beatrice"</span>, <span class="st">"Claude"</span>}</span>
 <span id="cb8-2"><a></a>task_2 <span class="op">=</span> {<span class="st">"Anna"</span>, <span class="st">"Elvin"</span>, <span class="st">"Harley"</span>, <span class="st">"Beatrice"</span>}</span>
 <span id="cb8-3"><a></a>task_1.intersection(task_2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -270,7 +270,7 @@
 <pre><code>{'Anna', 'Beatrice'}</code></pre>
 </div>
 </div>
-<div id="beebd471" class="cell" data-execution_count="6">
+<div id="c0b07a5d" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>task_2.discard(<span class="st">"Anna"</span>)</span>
 <span id="cb10-2"><a></a>task_1.intersection(task_2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
@@ -285,14 +285,14 @@
 <li>It takes two sets are arguments</li>
 <li>It returns <code>False</code> if the sets have no elements in common, <code>True</code> otherwise</li>
 </ol>
-<div id="d7b66c17" class="cell" data-execution_count="7">
+<div id="7f8f7e94" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="cf">assert</span> common_values({<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>}, {<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>}) <span class="op">==</span> <span class="va">True</span></span>
 <span id="cb12-2"><a></a><span class="cf">assert</span> common_values({<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>}, {<span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>}) <span class="op">==</span> <span class="va">False</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div id="255615b2" class="cell" data-execution_count="8">
+<div id="5e8c82ef" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="kw">def</span> common_values(set_1, set_2):</span>
 <span id="cb13-2"><a></a>  <span class="cf">return</span> <span class="bu">len</span>(set_1.intersection(set_2)) <span class="op">!=</span> <span class="dv">0</span></span>
 <span id="cb13-3"><a></a></span>
@@ -312,7 +312,7 @@
 <li>It takes two sets as argument: <code>set_1</code> and <code>set_2</code></li>
 <li>It <strong>mutates</strong> the first set (<code>set_1</code>) removing all elements it has in common with <code>set_2</code></li>
 </ol>
-<div id="1d7d8ff4" class="cell" data-execution_count="9">
+<div id="03e15c2b" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a>test_set <span class="op">=</span> {<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>}</span>
 <span id="cb15-2"><a></a>discard_elements(test_set, {<span class="dv">2</span>})</span>
 <span id="cb15-3"><a></a><span class="cf">assert</span> test_set <span class="op">==</span> {<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -320,7 +320,7 @@
 </section>
 <section id="write-a-function-solution-1" class="slide level2">
 <h2>Write a function – solution</h2>
-<div id="e498d54e" class="cell" data-execution_count="10">
+<div id="cf63c8e6" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="kw">def</span> discard_elements(set_1, set_2):</span>
 <span id="cb16-2"><a></a>  to_remove <span class="op">=</span> set_1.intersection(set_2)</span>
 <span id="cb16-3"><a></a>  <span class="cf">for</span> value <span class="kw">in</span> to_remove:</span>

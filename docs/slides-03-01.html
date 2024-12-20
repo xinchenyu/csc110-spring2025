@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.39">
 
-  <title>CSc 110 Computer Programming I – built-in functions (slides)</title>
+  <title>CSc 110 Computer Programming I – more on Functions (class slides)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -191,205 +191,195 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">built-in functions (slides)</h1>
+  <h1 class="title">more on Functions (class slides)</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
 <section>
-<section id="csc-110-python-functions" class="title-slide slide level1 center">
-<h1>CSC 110 Python Functions</h1>
+<section id="csc-110---more-on-functions-in-python" class="title-slide slide level1 center">
+<h1>CSC 110 - More on Functions in Python</h1>
 
 </section>
-<section id="built-in-functions" class="slide level2">
-<h2>Built-in Functions</h2>
+<section id="function-comments" class="slide level2">
+<h2>Function Comments</h2>
 <ul>
-<li><code>print()</code></li>
-<li><code>round()</code></li>
-<li><code>type()</code></li>
-<li><code>input()</code></li>
-<li><code>len()</code></li>
-<li><code>int()</code></li>
-<li><code>float()</code></li>
+<li>Every function created is required to have a function comment, including main</li>
+<li>Function comments are a multi-line string (as opposed to using <code>#</code> for other comments)</li>
 </ul>
+</section>
+<section id="function-comments-1" class="slide level2">
+<h2>Function Comments</h2>
+<div id="e599990c" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="co">'''</span></span>
+<span id="cb1-2"><a></a><span class="co">Xinchen Yu</span></span>
+<span id="cb1-3"><a></a><span class="co">CSC110</span></span>
+<span id="cb1-4"><a></a><span class="co">Class Demonstration</span></span>
+<span id="cb1-5"><a></a><span class="co">This program has two functions: one to calculate the area of a sphere,</span></span>
+<span id="cb1-6"><a></a><span class="co">the other to calculate the volume of a sphere.</span></span>
+<span id="cb1-7"><a></a><span class="co">The main() function is called to print to the standard output the</span></span>
+<span id="cb1-8"><a></a><span class="co">area and volume of a sphere of radius .75</span></span>
+<span id="cb1-9"><a></a><span class="co">'''</span></span>
+<span id="cb1-10"><a></a><span class="kw">def</span> sphere_area(radius):</span>
+<span id="cb1-11"><a></a>  <span class="co">'''</span></span>
+<span id="cb1-12"><a></a><span class="co">  This function calculates the area of a sphere of given radius.</span></span>
+<span id="cb1-13"><a></a><span class="co">  Args:</span></span>
+<span id="cb1-14"><a></a><span class="co">    radius: integer representing the radius of the sphere</span></span>
+<span id="cb1-15"><a></a><span class="co">  Returns:</span></span>
+<span id="cb1-16"><a></a><span class="co">    The float representing the area of a sphere of the given radius</span></span>
+<span id="cb1-17"><a></a><span class="co">  '''</span></span>
+<span id="cb1-18"><a></a>  area <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> <span class="fl">3.1415</span> <span class="op">*</span> radius<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb1-19"><a></a>  <span class="cf">return</span> <span class="bu">round</span>(area, <span class="dv">2</span>)</span>
+<span id="cb1-20"><a></a></span>
+<span id="cb1-21"><a></a><span class="kw">def</span> sphere_volume(radius):</span>
+<span id="cb1-22"><a></a>  <span class="co">'''</span></span>
+<span id="cb1-23"><a></a><span class="co">  This function calculates the volume of a sphere of given radius.</span></span>
+<span id="cb1-24"><a></a><span class="co">  Args:</span></span>
+<span id="cb1-25"><a></a><span class="co">    radius: integer representing the radius of the sphere</span></span>
+<span id="cb1-26"><a></a><span class="co">  Returns:</span></span>
+<span id="cb1-27"><a></a><span class="co">    The float representing the volume of a sphere of the given radius</span></span>
+<span id="cb1-28"><a></a><span class="co">  '''</span></span>
+<span id="cb1-29"><a></a>  volume <span class="op">=</span> (<span class="dv">1</span> <span class="op">/</span> <span class="dv">3</span>) <span class="op">*</span> sphere_area(radius) <span class="op">*</span> radius</span>
+<span id="cb1-30"><a></a>  <span class="cf">return</span> <span class="bu">round</span>(volume, <span class="dv">2</span>)</span>
+<span id="cb1-31"><a></a></span>
+<span id="cb1-32"><a></a><span class="kw">def</span> main():</span>
+<span id="cb1-33"><a></a>  <span class="co">'''</span></span>
+<span id="cb1-34"><a></a><span class="co">  This function prints the area and volume of a sphere of radius .75.</span></span>
+<span id="cb1-35"><a></a><span class="co">  Args:</span></span>
+<span id="cb1-36"><a></a><span class="co">    None</span></span>
+<span id="cb1-37"><a></a><span class="co">  Returns:</span></span>
+<span id="cb1-38"><a></a><span class="co">    None</span></span>
+<span id="cb1-39"><a></a><span class="co">  '''</span></span>
+<span id="cb1-40"><a></a>  r <span class="op">=</span> <span class="fl">.75</span></span>
+<span id="cb1-41"><a></a>  a <span class="op">=</span> sphere_area(r)</span>
+<span id="cb1-42"><a></a>  v <span class="op">=</span> sphere_volume(r)</span>
+<span id="cb1-43"><a></a>  <span class="bu">print</span>(a, v)</span>
+<span id="cb1-44"><a></a>  </span>
+<span id="cb1-45"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>7.07 1.77</code></pre>
+</div>
+</div>
+</section>
+<section id="global-vs.-local-variables-scope" class="slide level2">
+<h2>Global vs.&nbsp;Local variables (scope)</h2>
+<ul>
+<li>Every variable that is created has a particular scope</li>
+<li>The scope of a variable is the region in the code where the variable can be used or modified</li>
+</ul>
+</section>
+<section id="global-vs.-local-variables-scope-1" class="slide level2">
+<h2>Global vs.&nbsp;Local variables (scope)</h2>
+<ul>
+<li><strong>Local Variables</strong> have local scope – for example, a variable assigned inside a function can only be used or modified within that function</li>
+<li><strong>Global Variables</strong> have global scope – for example, a variable delcared outside a function can be accessed or modified across multiple functions</li>
+</ul>
+</section>
+<section id="global-vs.-local-variables-scope-2" class="slide level2">
+<h2>Global vs.&nbsp;Local variables (scope)</h2>
+<ul>
+<li>In the previous program we wrote (volume and area of sphere), <code>r</code>, <code>v</code> and <code>a</code> are local variables within the <code>main()</code> function.</li>
+<li>The variable <code>radius</code> and <code>area</code> are local within the <code>sphere_area(radius)</code> function scope.</li>
+<li>The variable <code>radius</code> and <code>volume</code> are local within <code>sphere_volume(radius)</code></li>
+</ul>
+</section>
+<section id="global-or-local" class="slide level2">
+<h2>Global or Local?</h2>
+<div id="e8e8e230" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>a <span class="op">=</span> <span class="dv">10</span>               <span class="co"># What are the global and local variables?</span></span>
+<span id="cb3-2"><a></a>b <span class="op">=</span> <span class="dv">5</span>                <span class="co"># Is the output of the two programs the same </span></span>
+<span id="cb3-3"><a></a>                     <span class="co"># or different?</span></span>
+<span id="cb3-4"><a></a><span class="kw">def</span> <span class="bu">sum</span>():</span>
+<span id="cb3-5"><a></a>  <span class="cf">return</span> a <span class="op">+</span> b</span>
+<span id="cb3-6"><a></a></span>
+<span id="cb3-7"><a></a><span class="kw">def</span> main():</span>
+<span id="cb3-8"><a></a>  <span class="bu">print</span>(<span class="bu">sum</span>())</span>
+<span id="cb3-9"><a></a>  </span>
+<span id="cb3-10"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>vs.</p>
+<div id="5efc916e" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="kw">def</span> <span class="bu">sum</span>(a, b):</span>
+<span id="cb4-2"><a></a>  <span class="cf">return</span> a <span class="op">+</span> b</span>
+<span id="cb4-3"><a></a></span>
+<span id="cb4-4"><a></a><span class="kw">def</span> main():</span>
+<span id="cb4-5"><a></a>  <span class="bu">print</span>(<span class="bu">sum</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
+<span id="cb4-6"><a></a>  </span>
+<span id="cb4-7"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="argument-vs.-parameter" class="slide level2">
+<h2>Argument vs.&nbsp;Parameter</h2>
+<ul>
+<li>Never set variables as global variables, pass values to functions when called</li>
+<li>When a function is defined, the variables you want to pass to the function are called <strong>parameter variables</strong></li>
+<li>When the function is then called, the values you pass to the function are called <strong>arguments</strong></li>
+</ul>
+</section>
+<section id="argument-or-parameter" class="slide level2">
+<h2>Argument or Parameter?</h2>
+<div id="ab3b0621" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="co"># The parameters are a and b</span></span>
+<span id="cb5-2"><a></a><span class="kw">def</span> add(a, b):</span>
+<span id="cb5-3"><a></a>    <span class="cf">return</span> a<span class="op">+</span>b</span>
+<span id="cb5-4"><a></a>  </span>
+<span id="cb5-5"><a></a><span class="co"># The arguments being passed through are 5 and 4</span></span>
+<span id="cb5-6"><a></a>add(<span class="dv">5</span>, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="write-a-function" class="slide level2">
 <h2>Write a function</h2>
-<p>Write a Python function that does the following:</p>
-<ol type="1">
-<li>Its name is <code>greeting</code></li>
-<li>It takes two arguments, <code>first_name</code> and <code>last_name</code></li>
-<li>It returns a string with a greeting using <code>first_name</code> and <code>last_name</code></li>
-</ol>
-<div id="849af203" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="bu">print</span>( greeting(<span class="st">"Mickey"</span>, <span class="st">"Mouse"</span>) ) <span class="co"># Hello, Mickey Mouse!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="input-function" class="slide level2">
-<h2><code>input()</code> function</h2>
-<ul>
-<li>The <code>input()</code> function prompts the user to input text in the standard output</li>
-<li>Whatever is inside the parentheses in <code>input()</code> will be written to the standard output (without a trailing newline, which you can add using <code>\n</code>).</li>
-<li>The function then reads a line from input, converts it to a string (stripping a trailing newline), and returns that</li>
-<li><code>input()</code> always returns a string</li>
-</ul>
-<div id="aae38138" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="bu">input</span>(<span class="st">"What's your name?</span><span class="ch">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="write-a-function-1" class="slide level2">
-<h2>Write a function</h2>
-<p>Write a Python function that does the following:</p>
-<ol type="1">
-<li>Its name is <code>greeting_again</code> with no parameters</li>
-<li>It first prompts you to enter your first name</li>
-<li>It again prompts you to enter your last name</li>
-<li>It returns a string with the same greeting as <code>greeting</code> but replace with your first and last name</li>
-</ol>
-<div id="ea082bee" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="bu">print</span>( greeting_again() ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="write-a-function-2" class="slide level2">
-<h2>Write a function</h2>
-<div id="13ef1879" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="kw">def</span> greeting(first, last):</span>
-<span id="cb4-2"><a></a>    message <span class="op">=</span> <span class="st">"Hello, "</span> <span class="op">+</span> first <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> last <span class="op">+</span> <span class="st">"!"</span></span>
-<span id="cb4-3"><a></a>    <span class="cf">return</span> message</span>
-<span id="cb4-4"><a></a></span>
-<span id="cb4-5"><a></a><span class="kw">def</span> greeting_again():</span>
-<span id="cb4-6"><a></a>    first <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Enter your first name:</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb4-7"><a></a>    last <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Enter your last name:</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb4-8"><a></a>    message <span class="op">=</span> <span class="st">"Hello, "</span> <span class="op">+</span> first <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> last <span class="op">+</span> <span class="st">"!"</span></span>
-<span id="cb4-9"><a></a>    <span class="cf">return</span> message</span>
-<span id="cb4-10"><a></a></span>
-<span id="cb4-11"><a></a><span class="kw">def</span> main():</span>
-<span id="cb4-12"><a></a>    <span class="bu">print</span>(greeting(<span class="st">"Mickey"</span>, <span class="st">"Mouse"</span>))</span>
-<span id="cb4-13"><a></a>    <span class="bu">print</span>(greeting_again())</span>
-<span id="cb4-14"><a></a></span>
-<span id="cb4-15"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="len-function" class="slide level2">
-<h2><code>len()</code> function</h2>
-<ul>
-<li>The <code>len()</code> function can be used with many types – we will be using it with <code>string</code> for now</li>
-<li>It returns the number of characters in a string</li>
-</ul>
-<div id="3f723bec" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>character_count <span class="op">=</span> <span class="bu">len</span>(<span class="st">"Mickey"</span>)</span>
-<span id="cb5-2"><a></a><span class="bu">print</span>(character_count)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>6</code></pre>
-</div>
-</div>
-</section>
-<section id="write-a-function-3" class="slide level2">
-<h2>Write a function</h2>
-<p>Write a Python function that does the following:</p>
-<ol type="1">
-<li>Its name is <code>count_characters</code></li>
-<li>It takes three string arguments, <code>a</code>, <code>b</code> and <code>c</code></li>
-<li>It returns the total number of characters for all three strings</li>
-</ol>
-<div id="e25f889d" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="bu">print</span>( count_characters(<span class="st">"hel"</span>, <span class="st">"lo"</span>, <span class="st">"world"</span>) ) <span class="co"># 10</span></span>
-<span id="cb7-2"><a></a><span class="bu">print</span>( count_characters(<span class="st">""</span>, <span class="st">""</span>, <span class="st">""</span>) ) <span class="co"># 0</span></span>
-<span id="cb7-3"><a></a><span class="bu">print</span>( count_characters(<span class="st">" "</span>, <span class="st">" "</span>, <span class="st">" "</span>) ) <span class="co"># 3</span></span>
-<span id="cb7-4"><a></a><span class="bu">print</span>( count_characters(<span class="st">"10"</span>, <span class="st">"2"</span>, <span class="st">"3"</span>) ) <span class="co"># 4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="write-a-function-4" class="slide level2">
-<h2>Write a function</h2>
-<div id="1021da0a" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="kw">def</span> count_characters(a, b, c):</span>
-<span id="cb8-2"><a></a>    <span class="cf">return</span> <span class="bu">len</span>(a) <span class="op">+</span> <span class="bu">len</span>(b) <span class="op">+</span> <span class="bu">len</span>(c)</span>
-<span id="cb8-3"><a></a></span>
-<span id="cb8-4"><a></a><span class="kw">def</span> main():</span>
-<span id="cb8-5"><a></a>    <span class="bu">print</span>( count_characters(<span class="st">"hel"</span>, <span class="st">"lo"</span>, <span class="st">"world"</span>) ) <span class="co"># 10</span></span>
-<span id="cb8-6"><a></a>    <span class="bu">print</span>( count_characters(<span class="st">""</span>, <span class="st">""</span>, <span class="st">""</span>) ) <span class="co"># 0</span></span>
-<span id="cb8-7"><a></a>    <span class="bu">print</span>( count_characters(<span class="st">" "</span>, <span class="st">" "</span>, <span class="st">" "</span>) ) <span class="co"># 3</span></span>
-<span id="cb8-8"><a></a>    <span class="bu">print</span>( count_characters(<span class="st">"10"</span>, <span class="st">"2"</span>, <span class="st">"3"</span>) ) <span class="co"># 4</span></span>
-<span id="cb8-9"><a></a></span>
-<span id="cb8-10"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>10
-0
-3
-4</code></pre>
-</div>
-</div>
-</section>
-<section id="quiz-03" class="slide level2">
-<h2>Quiz 03</h2>
-<center>
-<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;">
-<a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time
-<div id="clock_block_cb650886c4849ee">
-
-</div>
-</div>
-<script type="text/javascript" src="//w.24timezones.com/l.js" async=""></script>
-</center>
-<p>You have 10 minutes to complete the quiz.</p>
-<p>Your formula in your function should be Python code (in other words, do not just copy the formula in the instructions, make it so it uses <strong>actual symbols for Python operators</strong>)</p>
-</section>
-<section id="int-function" class="slide level2">
-<h2><code>int()</code> function</h2>
-<ul>
-<li>The <code>int()</code> function can be used to convert a string to an integer type</li>
-<li>It only works if the string only contains digits</li>
-</ul>
-<div id="51ee5899" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>age <span class="op">=</span> <span class="st">'35'</span></span>
-<span id="cb10-2"><a></a>age_int <span class="op">=</span> <span class="bu">int</span>(age)</span>
-<span id="cb10-3"><a></a><span class="bu">print</span>(<span class="bu">type</span>(age), <span class="bu">type</span>(age_int))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>&lt;class 'str'&gt; &lt;class 'int'&gt;</code></pre>
-</div>
-</div>
-</section>
-<section id="float-function" class="slide level2">
-<h2><code>float()</code> function</h2>
-<ul>
-<li>The <code>float()</code> function can be used to convert a string to a float type</li>
-<li>It only works if the string only contains digits and optionally a decimal point</li>
-</ul>
-<div id="a511cf0f" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>age <span class="op">=</span> <span class="st">'35'</span></span>
-<span id="cb12-2"><a></a>age_float <span class="op">=</span> <span class="bu">float</span>(age)</span>
-<span id="cb12-3"><a></a><span class="bu">print</span>(<span class="bu">type</span>(age), <span class="bu">type</span>(age_float))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>&lt;class 'str'&gt; &lt;class 'float'&gt;</code></pre>
-</div>
-</div>
-</section>
-<section id="write-a-function-5" class="slide level2">
-<h2>Write a function</h2>
-<p>Write a Python function <code>calculate_year_born</code> with no parameters. It prompts user to enter their age <code>input()</code>. It converts user’s age to integer. It calculates (imperfectly) the year a person of <code>age</code> was born by subtracting <code>age</code> from <code>2024</code>. It returns an integer representing the approximate year person of <code>age</code> was born.</p>
-<p>Name your file <code>get_input.py</code></p>
-<div id="0f9447d9" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="bu">print</span>( calculate_year_born() ) <span class="co"># user enters 60, function returns 1964</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<p>Write a Python function called <code>hypotenuse</code> that takes two arguments: <code>a</code> and <code>b</code> representing the length of the two non-hypotenuse sides of a right triangle. The function should calculate the hypotenuse according to the Pythagorean theorem: <span class="math inline">\(c = \sqrt(a^2 + b^2)\)</span>. Return it rounded at two decimals.</p>
+<p>Test cases: <code>hypotenuse(3, 4)</code> should return <code>5.0</code>, <code>hypotenuse(10, 10)</code> should return <code>14.14</code></p>
+<p>Name your file <code>hypotenuse.py</code></p>
 </section>
 <section id="submit-attendance" class="slide level2">
 <h2>Submit attendance</h2>
-<p>Submit your <code>get_input.py</code> file with your solution to gradescope for attendance. Do not call <code>main()</code> in your file to get full points.</p>
+<p>Submit your <code>hypotenuse.py</code> file with your solution to gradescope for attendance</p>
 </section>
-<section id="write-a-function-6" class="slide level2">
+<section id="write-a-function-1" class="slide level2">
 <h2>Write a function</h2>
-<div id="e0865c7e" class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="kw">def</span> calculate_year_born():</span>
-<span id="cb15-2"><a></a>    str_age <span class="op">=</span> <span class="bu">input</span>(<span class="st">"what's your age?</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb15-3"><a></a>    age <span class="op">=</span> <span class="bu">int</span>(str_age)</span>
-<span id="cb15-4"><a></a>    year_born <span class="op">=</span> <span class="dv">2024</span> <span class="op">-</span> age</span>
-<span id="cb15-5"><a></a>    <span class="cf">return</span> year_born</span>
-<span id="cb15-6"><a></a></span>
-<span id="cb15-7"><a></a><span class="kw">def</span> main():</span>
-<span id="cb15-8"><a></a>    <span class="bu">print</span>(calculate_year_born())</span>
-<span id="cb15-9"><a></a></span>
-<span id="cb15-10"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="3df3e7e8" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="kw">def</span> sqrt(n):</span>
+<span id="cb6-2"><a></a>  <span class="co">'''</span></span>
+<span id="cb6-3"><a></a><span class="co">  This function calculates the square root of a number</span></span>
+<span id="cb6-4"><a></a><span class="co">  Args:</span></span>
+<span id="cb6-5"><a></a><span class="co">    n: integer or float</span></span>
+<span id="cb6-6"><a></a><span class="co">  Returns:</span></span>
+<span id="cb6-7"><a></a><span class="co">    The square root of n</span></span>
+<span id="cb6-8"><a></a><span class="co">  '''</span></span>
+<span id="cb6-9"><a></a>  <span class="cf">return</span> n<span class="op">**</span><span class="fl">.5</span></span>
+<span id="cb6-10"><a></a></span>
+<span id="cb6-11"><a></a><span class="kw">def</span> hypotenuse(a, b):</span>
+<span id="cb6-12"><a></a>  <span class="co">'''</span></span>
+<span id="cb6-13"><a></a><span class="co">  This function calculates the hypotenuse of a right angle triangle.</span></span>
+<span id="cb6-14"><a></a><span class="co">  Args:</span></span>
+<span id="cb6-15"><a></a><span class="co">    a: number (integer or float) representing one of the non-hypotenuse sides</span></span>
+<span id="cb6-16"><a></a><span class="co">    b: number (integer or float) representing one of the non-hypotenuse sides</span></span>
+<span id="cb6-17"><a></a><span class="co">  Returns:</span></span>
+<span id="cb6-18"><a></a><span class="co">    Float representing the length of the hypotenuse given a and b</span></span>
+<span id="cb6-19"><a></a><span class="co">  '''</span> </span>
+<span id="cb6-20"><a></a>  h <span class="op">=</span> sqrt(a<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> b<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb6-21"><a></a>  <span class="cf">return</span> <span class="bu">round</span>(h, <span class="dv">2</span>)</span>
+<span id="cb6-22"><a></a></span>
+<span id="cb6-23"><a></a><span class="kw">def</span> main():</span>
+<span id="cb6-24"><a></a>  <span class="co">'''</span></span>
+<span id="cb6-25"><a></a><span class="co">  This function calls the hypotenuse function to calculate and then</span></span>
+<span id="cb6-26"><a></a><span class="co">  print out the hypotenuse of a right angle triangle of sides 3 and 4</span></span>
+<span id="cb6-27"><a></a><span class="co">  and the hypotenuse of a right angle triange of sides 10 and 10</span></span>
+<span id="cb6-28"><a></a><span class="co">  '''</span></span>
+<span id="cb6-29"><a></a>  result <span class="op">=</span> hypotenuse(<span class="dv">3</span>, <span class="dv">4</span>)</span>
+<span id="cb6-30"><a></a>  <span class="bu">print</span>(result)</span>
+<span id="cb6-31"><a></a>  </span>
+<span id="cb6-32"><a></a>  result <span class="op">=</span> hypotenuse(<span class="dv">10</span>, <span class="dv">10</span>)</span>
+<span id="cb6-33"><a></a>  <span class="bu">print</span>(result)</span>
+<span id="cb6-34"><a></a>  </span>
+<span id="cb6-35"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>5.0
+14.14</code></pre>
+</div>
 </div>
 
 

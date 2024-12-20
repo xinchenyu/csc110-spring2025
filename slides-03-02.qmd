@@ -1,144 +1,201 @@
 ---
-title: "more on decomposition (slides)"
+title: "built-in functions (slides)"
 format: revealjs
 slide-number: true
 ---
 
-# CSC 110 more on decomposition
+# CSC 110 Python Functions
 
-## Class activity one
+## Built-in Functions
 
-Read the code and answer the questions:
+-   `print()` 
+-   `round()`
+-   `type()`
+-   `input()`
+-   `len()`
+-   `int()`
+-   `float()`
 
--   which lines of code are similar?
+## Write a function
 
--   which lines of code are identical?
+Write a Python function that does the following:
 
-
-## Rubik’s Cubes
-
-```{python}
-#| echo: true
-#| eval: false
-cube_len = int(input("Cube length? "))
-box_w = int(input("Box width? "))
-box_h = int(input("Box height? "))
-box_l = int(input("Box length? "))
-
-fit_w = box_w // cube_len
-fit_h = box_h // cube_len
-fit_l = box_l // cube_len
-
-print(str(fit_w) + " Rubik's cubes will fit width-wise.")
-print(str(fit_h) + " Rubik's cubes will fit height-wise.")
-print(str(fit_l) + " Rubik's cubes will fit length-wise.")
-
-res = fit_w * fit_h * fit_l
-print(str(res)+" Rubik's cubes will fit in that container.")
-```
-
-
-## Class activity one -- answer
-
-Read the code and answer the questions:
-
--   which lines of code are similar? 
-
-    -   line 2-4, line 6-8, line 10-12
-
--   which lines of code are identical? 
-
-    -   line 1, line 14-15
-    
-    
-## Class activity two
-
-For line 2-4, line 6-8, line 10-12:
-    
--   which lines can be grouped together into a function?
-
--   what does the function do?
-
-## Rubik’s Cubes
+1.  Its name is `greeting`
+2.  It takes two arguments, `first_name` and `last_name`
+3.  It returns a string with a greeting using `first_name` and `last_name`
 
 ```{python}
 #| echo: true
 #| eval: false
-cube_len = int(input("Cube length? "))
-box_w = int(input("Box width? ")) 
-box_h = int(input("Box height? "))
-box_l = int(input("Box length? "))
-
-fit_w = box_w // cube_len
-fit_h = box_h // cube_len
-fit_l = box_l // cube_len
-
-print(str(fit_w) + " Rubik's cubes will fit width-wise.")
-print(str(fit_h) + " Rubik's cubes will fit height-wise.")
-print(str(fit_l) + " Rubik's cubes will fit length-wise.")
-
-res = fit_w * fit_h * fit_l
-print(str(res)+" Rubik's cubes will fit in that container.")
+print( greeting("Mickey", "Mouse") ) # Hello, Mickey Mouse!
 ```
 
-## Class activity two
+## `input()` function
 
-For line 2-4, line 6-8, line 10-12:
-    
--   which lines can be grouped together into a function?
+-   The `input()` function prompts the user to input text in the standard output
+-   Whatever is inside the parentheses in `input()` will be written to the standard output (without a trailing newline, which you can add using `\n`).
+-   The function then reads a line from input, converts it to a string (stripping a trailing newline), and returns that
+-   `input()` always returns a string
 
-    - line 2, 6 and 10
-    
-    - line 3, 7 and 11
-    
-    - line 4, 8 and 12
+```{python}
+#| echo: true
+#| eval: false
+input("What's your name?\n")
+```
 
--   what does the function do?
+## Write a function
+
+Write a Python function that does the following:
+
+1.  Its name is `greeting_again` with no parameters
+2.  It first prompts you to enter your first name
+3.  It again prompts you to enter your last name
+3.  It returns a string with the same greeting as `greeting` but replace with your first and last name
+
+```{python}
+#| echo: true
+#| eval: false
+print( greeting_again() ) 
+```
+
+## Write a function
+
+```{python}
+#| echo: true
+#| eval: false
+def greeting(first, last):
+    message = "Hello, " + first + " " + last + "!"
+    return message
+
+def greeting_again():
+    first = input("Enter your first name:\n")
+    last = input("Enter your last name:\n")
+    message = "Hello, " + first + " " + last + "!"
+    return message
+
+def main():
+    print(greeting("Mickey", "Mouse"))
+    print(greeting_again())
+
+main()
+```
+
+## `len()` function
+
+-   The `len()` function can be used with many types -- we will be using it with `string` for now
+-   It returns the number of characters in a string
+
+```{python}
+#| echo: true
+#| eval: true
+character_count = len("Mickey")
+print(character_count)
+```
+
+## Write a function
+
+Write a Python function that does the following:
+
+1.  Its name is `count_characters`
+2.  It takes three string arguments, `a`, `b` and `c`
+3.  It returns the total number of characters for all three strings
+
+
+```{python}
+#| echo: true
+#| eval: false
+print( count_characters("hel", "lo", "world") ) # 10
+print( count_characters("", "", "") ) # 0
+print( count_characters(" ", " ", " ") ) # 3
+print( count_characters("10", "2", "3") ) # 4
+```
+
+## Write a function
+```{python}
+#| echo: true
+#| eval: true
+def count_characters(a, b, c):
+    return len(a) + len(b) + len(c)
+
+def main():
+    print( count_characters("hel", "lo", "world") ) # 10
+    print( count_characters("", "", "") ) # 0
+    print( count_characters(" ", " ", " ") ) # 3
+    print( count_characters("10", "2", "3") ) # 4
+
+main()
+```
+
+
+
+## Quiz 03
+
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+</center>
+
+You have 10 minutes to complete the quiz.
+
+Your formula in your function should be Python code (in other words, do not just copy the formula in the instructions, make it so it uses **actual symbols for Python operators**)
+
+
+## `int()` function
+
+-   The `int()` function can be used to convert a string to an integer type
+-   It only works if the string only contains digits
+
+```{python}
+#| echo: true
+#| eval: true
+age = '35'
+age_int = int(age)
+print(type(age), type(age_int))
+```
+
+## `float()` function
+
+-   The `float()` function can be used to convert a string to a float type
+-   It only works if the string only contains digits and optionally a decimal point
+
+```{python}
+#| echo: true
+#| eval: true
+age = '35'
+age_float = float(age)
+print(type(age), type(age_float))
+```
 
 
 ## Write a function
 
-Write function `get_fit` that takes the length of a `cube` (integer) and the name of a `side` (string)
+Write a Python function `calculate_year_born` with no parameters. It prompts user to enter their age `input()`. It converts user's age to integer. It calculates (imperfectly) the year a person of `age` was born by subtracting `age` from `2024`. It returns an integer representing the approximate year person of `age` was born.
 
--   It prompts you to the enter the length of the `side`
-
--   It calculates the number of `cube` that fit in the `side`
-
--   It print the message and return the number.
+Name your file `get_input.py`
 
 ```{python}
 #| echo: true
 #| eval: false
-def main():
-    cube_len = int(input("Cube length? "))
-    fit_w = get_fit(cube_len, 'width')
-    fit_h = get_fit(cube_len, 'height')
-    fit_l = get_fit(cube_len, 'length')
-    result = fit_w * fit_h * fit_l
-    print(str(result) + " Rubik's cubes will fit in that container.")
-
-main()
+print( calculate_year_born() ) # user enters 60, function returns 1964
 ```
 
-## Write a function -- answer
+## Submit attendance
+
+Submit your `get_input.py` file with your solution to gradescope for attendance. Do not call `main()` in your file to get full points.
+
+## Write a function
 
 ```{python}
 #| echo: true
 #| eval: false
-def get_fit(cube, side):
-    large = int(input(f"Box {side}? "))
-    fit = large // cube
-    print(f"{fit} Rubik's cubes will fit {side}-wise.")
-    return fit
+def calculate_year_born():
+    str_age = input("what's your age?\n")
+    age = int(str_age)
+    year_born = 2024 - age
+    return year_born
 
 def main():
-    cube_len = int(input("Cube length? "))
-    fit_w = get_fit(cube_len, 'width')
-    fit_h = get_fit(cube_len, 'height')
-    fit_l = get_fit(cube_len, 'length')
-    result = fit_w * fit_h * fit_l
-    print(str(result) + " Rubik's cubes will fit in that container.")
+    print(calculate_year_born())
 
 main()
 ```
-

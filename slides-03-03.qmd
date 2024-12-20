@@ -1,0 +1,144 @@
+---
+title: "more on decomposition (slides)"
+format: revealjs
+slide-number: true
+---
+
+# CSC 110 more on decomposition
+
+## Class activity one
+
+Read the code and answer the questions:
+
+-   which lines of code are similar?
+
+-   which lines of code are identical?
+
+
+## Rubik’s Cubes
+
+```{python}
+#| echo: true
+#| eval: false
+cube_len = int(input("Cube length? "))
+box_w = int(input("Box width? "))
+box_h = int(input("Box height? "))
+box_l = int(input("Box length? "))
+
+fit_w = box_w // cube_len
+fit_h = box_h // cube_len
+fit_l = box_l // cube_len
+
+print(str(fit_w) + " Rubik's cubes will fit width-wise.")
+print(str(fit_h) + " Rubik's cubes will fit height-wise.")
+print(str(fit_l) + " Rubik's cubes will fit length-wise.")
+
+res = fit_w * fit_h * fit_l
+print(str(res)+" Rubik's cubes will fit in that container.")
+```
+
+
+## Class activity one -- answer
+
+Read the code and answer the questions:
+
+-   which lines of code are similar? 
+
+    -   line 2-4, line 6-8, line 10-12
+
+-   which lines of code are identical? 
+
+    -   line 1, line 14-15
+    
+    
+## Class activity two
+
+For line 2-4, line 6-8, line 10-12:
+    
+-   which lines can be grouped together into a function?
+
+-   what does the function do?
+
+## Rubik’s Cubes
+
+```{python}
+#| echo: true
+#| eval: false
+cube_len = int(input("Cube length? "))
+box_w = int(input("Box width? ")) 
+box_h = int(input("Box height? "))
+box_l = int(input("Box length? "))
+
+fit_w = box_w // cube_len
+fit_h = box_h // cube_len
+fit_l = box_l // cube_len
+
+print(str(fit_w) + " Rubik's cubes will fit width-wise.")
+print(str(fit_h) + " Rubik's cubes will fit height-wise.")
+print(str(fit_l) + " Rubik's cubes will fit length-wise.")
+
+res = fit_w * fit_h * fit_l
+print(str(res)+" Rubik's cubes will fit in that container.")
+```
+
+## Class activity two
+
+For line 2-4, line 6-8, line 10-12:
+    
+-   which lines can be grouped together into a function?
+
+    - line 2, 6 and 10
+    
+    - line 3, 7 and 11
+    
+    - line 4, 8 and 12
+
+-   what does the function do?
+
+
+## Write a function
+
+Write function `get_fit` that takes the length of a `cube` (integer) and the name of a `side` (string)
+
+-   It prompts you to the enter the length of the `side`
+
+-   It calculates the number of `cube` that fit in the `side`
+
+-   It print the message and return the number.
+
+```{python}
+#| echo: true
+#| eval: false
+def main():
+    cube_len = int(input("Cube length? "))
+    fit_w = get_fit(cube_len, 'width')
+    fit_h = get_fit(cube_len, 'height')
+    fit_l = get_fit(cube_len, 'length')
+    result = fit_w * fit_h * fit_l
+    print(str(result) + " Rubik's cubes will fit in that container.")
+
+main()
+```
+
+## Write a function -- answer
+
+```{python}
+#| echo: true
+#| eval: false
+def get_fit(cube, side):
+    large = int(input(f"Box {side}? "))
+    fit = large // cube
+    print(f"{fit} Rubik's cubes will fit {side}-wise.")
+    return fit
+
+def main():
+    cube_len = int(input("Cube length? "))
+    fit_w = get_fit(cube_len, 'width')
+    fit_h = get_fit(cube_len, 'height')
+    fit_l = get_fit(cube_len, 'length')
+    result = fit_w * fit_h * fit_l
+    print(str(result) + " Rubik's cubes will fit in that container.")
+
+main()
+```
+
