@@ -212,7 +212,7 @@
 <section id="changing-a-list-in-a-loop" class="slide level2">
 <h2>Changing a list in a loop</h2>
 <p>Changes to individual list elements do not change the list itself</p>
-<div id="bd2b19dc" class="cell" data-execution_count="1">
+<div id="1af74e24" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
 <span id="cb1-2"><a></a><span class="cf">for</span> n <span class="kw">in</span> numbers:</span>
 <span id="cb1-3"><a></a>  n <span class="op">+=</span> <span class="dv">1</span></span>
@@ -222,7 +222,7 @@
 </div>
 </div>
 <p>Use a <code>for i in range</code> loop instead:</p>
-<div id="5e656853" class="cell" data-execution_count="2">
+<div id="63b07aa2" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
 <span id="cb3-2"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(numbers)):</span>
 <span id="cb3-3"><a></a>  numbers[i] <span class="op">+=</span> <span class="dv">1</span></span>
@@ -239,7 +239,7 @@
 <li>It takes a 2D list of integers as argument with at least one inner list</li>
 <li>It <strong>mutates</strong> the list, replace each inner list with a tuple. The tuple is the total and mean of that inner list.</li>
 </ol>
-<div id="5b7f1985" class="cell" data-execution_count="3">
+<div id="625b3d84" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>test_list <span class="op">=</span> [[<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>], [], [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]]</span>
 <span id="cb5-2"><a></a>total_mean(test_list)</span>
 <span id="cb5-3"><a></a><span class="cf">assert</span> test_list <span class="op">==</span> [(<span class="dv">20</span>, <span class="fl">5.0</span>), (<span class="va">None</span>, <span class="va">None</span>), (<span class="dv">9</span>, <span class="fl">3.0</span>)]</span>
@@ -248,7 +248,7 @@
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div id="b64ed379" class="cell" data-execution_count="4">
+<div id="2880d28d" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="kw">def</span> total_mean(lists):</span>
 <span id="cb6-2"><a></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(lists)): <span class="co">#must use for i in range(len(lists))</span></span>
 <span id="cb6-3"><a></a>        total <span class="op">=</span> <span class="va">None</span></span>
@@ -273,7 +273,7 @@
 <section id="removing-list-elements-in-a-loop" class="slide level2">
 <h2>Removing list elements in a <code>loop</code></h2>
 <p>Using a <code>for i in range</code> when removing items in a list throws an error</p>
-<div id="2174e3c5" class="cell" data-execution_count="5">
+<div id="060de931" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
 <span id="cb7-2"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(numbers)):</span>
 <span id="cb7-3"><a></a>  numbers.pop(i)</span>
@@ -286,7 +286,7 @@
 <ul>
 <li>Option 1: <code>while</code> loop without adjusting <code>i</code></li>
 </ul>
-<div id="7a274dd3" class="cell" data-execution_count="6">
+<div id="f0e74042" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
 <span id="cb8-2"><a></a>i <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb8-3"><a></a><span class="cf">while</span> i <span class="op">&lt;</span> <span class="bu">len</span>(numbers):</span>
@@ -299,7 +299,7 @@
 <ul>
 <li>Option 2: <code>for</code> loop but go backwards</li>
 </ul>
-<div id="4dc130ed" class="cell" data-execution_count="7">
+<div id="9deb59e3" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
 <span id="cb10-2"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(numbers)<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>):</span>
 <span id="cb10-3"><a></a>  numbers.pop(i)</span>
@@ -317,7 +317,7 @@
 <li>It <code>mutates</code> and <code>returns</code> the argument list removing all strings that end in vowel</li>
 </ol>
 <p>Name as <code>delete_from_list.py</code>, submit to Gradescope.</p>
-<div id="a91e3b5e" class="cell" data-execution_count="8">
+<div id="f6c1c0a5" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>names <span class="op">=</span> [<span class="st">"Beatrice"</span>, <span class="st">"ASA"</span>, <span class="st">"Philip"</span>, <span class="st">"Anna"</span>, <span class="st">"Peter"</span>]</span>
 <span id="cb12-2"><a></a>remove_names(names)</span>
 <span id="cb12-3"><a></a><span class="cf">assert</span> names <span class="op">==</span> [<span class="st">"Philip"</span>, <span class="st">"Peter"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -325,7 +325,7 @@
 </section>
 <section id="write-a-function-solution-1" class="slide level2">
 <h2>Write a function – solution 1</h2>
-<div id="b59ec8b4" class="cell" data-execution_count="9">
+<div id="efaf936f" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="kw">def</span> remove_names(string_list):</span>
 <span id="cb13-2"><a></a>  i <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb13-3"><a></a>  <span class="cf">while</span> i <span class="op">&lt;</span> <span class="bu">len</span>(string_list):</span>
@@ -345,7 +345,7 @@
 </section>
 <section id="write-a-function-solution-2" class="slide level2">
 <h2>Write a function – solution 2</h2>
-<div id="df9a68ca" class="cell" data-execution_count="10">
+<div id="c4b20ced" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="kw">def</span> remove_names(string_list):</span>
 <span id="cb14-2"><a></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(string_list)<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>):</span>
 <span id="cb14-3"><a></a>    <span class="cf">if</span> string_list[i][<span class="op">-</span><span class="dv">1</span>].lower() <span class="kw">in</span> <span class="st">"aeiou"</span>:</span>
@@ -362,7 +362,7 @@
 </section>
 <section id="removing-elements-from-inner-lists-in-2d-lists" class="slide level2">
 <h2>Removing elements from inner lists in 2D lists</h2>
-<div id="671fda6a" class="cell" data-execution_count="11">
+<div id="2b059058" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a>lists_of_numbers <span class="op">=</span> [ [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">1</span>] ]</span>
 <span id="cb15-2"><a></a><span class="cf">for</span> inner_list <span class="kw">in</span> lists_of_numbers:</span>
 <span id="cb15-3"><a></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(inner_list)<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>):</span>
@@ -381,7 +381,7 @@
 <li>It takes a list of lists of integers as argument</li>
 <li>It <strong>mutates</strong> the inner list, removing odd numbers</li>
 </ol>
-<div id="c656c0ed" class="cell" data-execution_count="12">
+<div id="4ba4174f" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a>lists_of_numbers <span class="op">=</span> [ [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">1</span>] ]</span>
 <span id="cb17-2"><a></a>remove_odds(lists_of_numbers)</span>
 <span id="cb17-3"><a></a><span class="cf">assert</span> lists_of_numbers <span class="op">==</span> [ [<span class="dv">2</span>, <span class="dv">2</span>], [<span class="dv">4</span>, <span class="dv">2</span>] ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -389,7 +389,7 @@
 </section>
 <section id="write-a-function-solution-3" class="slide level2">
 <h2>Write a function – solution</h2>
-<div id="912d70df" class="cell" data-execution_count="13">
+<div id="71705d0e" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="kw">def</span> remove_odds(lists_of_numbers):</span>
 <span id="cb18-2"><a></a>  <span class="cf">for</span> inner_list <span class="kw">in</span> lists_of_numbers:</span>
 <span id="cb18-3"><a></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(inner_list)<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>):</span>

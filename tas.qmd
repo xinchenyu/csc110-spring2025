@@ -7,6 +7,7 @@ The Undergraduate Teaching Assistants (UGTAs or TAs) in this class are here to h
 The best way to talk with a particular TA is via office hours, so check the schedule (scroll down this page).
 
 
+
 # TAs
 
 Undergraduate Teaching Assistants (UGTAs) in the Department of Computer Science assist instructors in delivering undergraduate computer science courses. CS introductory courses utilize active learning and collaborative learning spaces to provide a collaborative and supportive environment for students learning programming skills. All teaching assistants have taken and excelled in the courses they support and are familiar with the material to mentor new students as they learn.
@@ -32,5 +33,7 @@ Interested in becoming a TA in the future? Check out [more information about wha
 # Office Hours
 
 Shown below is the office hours schedule. The in-person office hours are hosted in Gould-Simpson 914. Xinchen's office hours are in GS 829. An (O) next to a name indicates that the office hour is online. For these office hours, check D2L for details.
+
+**Note**: the instructor and TAs are NOT supposed to help you with your assignments before/during/after the class, please go to office hours or post on [piazza](zoom.html) instead.
 
 <iframe src="https://docs.google.com/spreadsheets/d/1SjIKi9f1b8YaMD0rvPUmXC3JrR7nXB3m6gDeLOxpuuU/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="600px"></iframe>

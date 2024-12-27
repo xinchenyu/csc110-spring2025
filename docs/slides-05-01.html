@@ -215,7 +215,7 @@
 <li>A <strong>while</strong> loop allows a programmer to repeat code</li>
 <li>You can think of it as an if-statement with the potential to repeat</li>
 </ul>
-<div id="c2a9e9c1" class="cell" data-execution_count="1">
+<div id="b05a5239" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>statements . . .</span>
 <span id="cb1-2"><a></a></span>
 <span id="cb1-3"><a></a><span class="cf">while</span> conditionA:</span>
@@ -229,7 +229,7 @@
 </section>
 <section id="what-will-happen" class="slide level2">
 <h2>What will happen?</h2>
-<div id="c4513c3c" class="cell" data-execution_count="2">
+<div id="8de751d2" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>number <span class="op">=</span> <span class="dv">15</span></span>
 <span id="cb2-2"><a></a><span class="cf">while</span> number <span class="op">&lt;</span> <span class="dv">50</span>:</span>
 <span id="cb2-3"><a></a>    <span class="bu">print</span>(<span class="st">'number is less than 50'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -252,7 +252,7 @@
 <section id="what-will-happen-1" class="slide level2">
 <h2>What will happen?</h2>
 <p>To ensure our condition (<code>number &lt; 50</code>) will eventually be evaluated as <code>False</code>, we need to updated <code>number</code> inside our loop:</p>
-<div id="de5ebc9c" class="cell" data-execution_count="3">
+<div id="291cd347" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>number <span class="op">=</span> <span class="dv">15</span></span>
 <span id="cb3-2"><a></a><span class="cf">while</span> number <span class="op">&lt;</span> <span class="dv">50</span>:</span>
 <span id="cb3-3"><a></a>    <span class="bu">print</span>(<span class="st">'number is less than 50'</span>)</span>
@@ -267,7 +267,7 @@
 <section id="while-loop-example" class="slide level2">
 <h2>While loop – example</h2>
 <p>Factorial: 5! = 1 * 2 * 3 * 4 * 5 = 120</p>
-<div id="0ae69014" class="cell" data-execution_count="4">
+<div id="75b5d8b3" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="kw">def</span> factorial(n):</span>
 <span id="cb4-2"><a></a>  result <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb4-3"><a></a>  current_n <span class="op">=</span> <span class="dv">1</span></span>
@@ -290,7 +290,7 @@
 <section id="write-a-function" class="slide level2">
 <h2>Write a function</h2>
 <p>Write a function called <code>add_up_to</code> that takes an numeric argument <code>n</code>. The function should add all numbers from 1 to <code>n</code> in a while loop, and then (outside the loop) return the sum</p>
-<div id="db19c56f" class="cell" data-execution_count="5">
+<div id="cc2b8c56" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="bu">print</span>( add_up_to(<span class="dv">5</span>) ) <span class="co"># 15</span></span>
 <span id="cb6-2"><a></a><span class="bu">print</span>( add_up_to(<span class="dv">10</span>) ) <span class="co"># 55</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -298,7 +298,7 @@
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div id="9284ea0c" class="cell" data-execution_count="6">
+<div id="7da1a6c8" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="kw">def</span> add_up_to(n):</span>
 <span id="cb7-2"><a></a>  <span class="bu">sum</span> <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb7-3"><a></a>  current_number <span class="op">=</span> <span class="dv">0</span></span>
@@ -321,7 +321,7 @@
 <section id="age-milestones" class="slide level2">
 <h2>Age milestones</h2>
 <p>Modify <code>main</code> function: use a <code>while</code> loop to request a valid input from the user.</p>
-<div id="38920e62" class="cell" data-execution_count="7">
+<div id="c8f71f73" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="kw">def</span> age_milestones(age):</span>
 <span id="cb9-2"><a></a>  message <span class="op">=</span> <span class="st">""</span></span>
 <span id="cb9-3"><a></a>  <span class="cf">if</span> age <span class="op">&gt;=</span> <span class="dv">18</span>:</span>
@@ -365,7 +365,7 @@ run for president.
 <section id="age-milestones-solution" class="slide level2">
 <h2>Age milestones – solution</h2>
 <p>Modify <code>main</code> function: use a <code>while</code> loop to request a valid input from the user.</p>
-<div id="358d880c" class="cell" data-execution_count="8">
+<div id="43b54d72" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="kw">def</span> age_milestones(age):</span>
 <span id="cb10-2"><a></a>  message <span class="op">=</span> <span class="st">""</span></span>
 <span id="cb10-3"><a></a>  <span class="cf">if</span> age <span class="op">&gt;=</span> <span class="dv">18</span>:</span>
@@ -419,7 +419,7 @@ Let us go for a swim
 </section>
 <section id="write-functions-solution" class="slide level2">
 <h2>Write functions – solution</h2>
-<div id="a13c3d43" class="cell" data-execution_count="9">
+<div id="583a7137" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="kw">def</span> to_do(temp):</span>
 <span id="cb11-2"><a></a>    <span class="cf">if</span> temp <span class="op">&gt;=</span> <span class="dv">86</span> <span class="kw">and</span> temp <span class="op">&lt;</span> <span class="dv">104</span>:</span>
 <span id="cb11-3"><a></a>        <span class="cf">return</span> <span class="st">"go for a swim"</span></span>
