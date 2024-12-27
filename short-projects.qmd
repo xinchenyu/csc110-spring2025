@@ -6,22 +6,22 @@ Short programming projects are due on the same day as programming problems. Whil
 
 The lowest grade for short programming projects will be dropped at the end of the semester. There will be two lab sessions (the weeks of October 15 and November 13) for you to work on a maximum of two short programming project submissions you have missed.
 
-To schedule your lab session go to [the weekly lab session spreadsheet](https://docs.google.com/spreadsheets/d/1vJNf444idLRKBJej3I9MvI7RDSk6ujV2s9kPt7CBA_Q/edit?usp=sharing).
+To schedule your lab session go to [the weekly lab session spreadsheet]().
 
 # Lab Schedule
 
-This is for information only. You need to [sign up for a specific lab session](https://docs.google.com/spreadsheets/d/1vJNf444idLRKBJej3I9MvI7RDSk6ujV2s9kPt7CBA_Q/edit?usp=sharing) to be able to attend it.
+This is for information only. You need to [sign up for a specific lab session]() to be able to attend it.
 
-* [Lab 01](labs/lab01.html): September 3 to September 9 ([slides](labs/lab01-slide.html))
-* [Lab 02](labs/lab02.html): September 10 to September 16 ([slides](labs/lab02-slide.html))
-* [Lab 03](labs/lab03.html): September 17 to September 23 ([slides](labs/lab03-slide.html))
-* [Lab 04](labs/lab04.html): September 24 to September 30 ([slides](labs/lab04-slide.html))
-* [Lab 05](labs/lab05.html): October 01 to October 07 ([slides](labs/lab05-slide.html))
-* [Lab 06](labs/lab06.html): October 08 to October 14 ([slides](labs/lab06-slide.html))
-* CATCH UP WEEK: October 15 to October 21
-* [Lab 07](labs/lab07.html): October 22 to October 28 ([slides](labs/lab07-slide.html))
-* [Lab 08](labs/lab08.html): October 29 to November 04
-* [Lab 09](labs/lab09.html): November 05 to November 12
-* CATCH UP WEEK: November 13 to November 19
-* [Lab 10](labs/lab10.html): November 20 to November 26
-* [Lab 11](labs/lab11.html): December 02 to December 06
+* [Lab 01](labs/lab01.html): Jan 21 to Jan 27 ([slides](labs/lab01-slide.html))
+* [Lab 02](labs/lab02.html): Jan 28 to Feb 3 ([slides](labs/lab02-slide.html))
+* [Lab 03](labs/lab03.html): Feb 04 to Feb 10 ([slides](labs/lab03-slide.html))
+* [Lab 04](labs/lab04.html): Feb 11 to Feb 17 ([slides](labs/lab04-slide.html))
+* [Lab 05](labs/lab05.html): Feb 18 to Feb 24 ([slides](labs/lab05-slide.html))
+* [Lab 06](labs/lab06.html): Feb 25 to Mar 03 ([slides](labs/lab06-slide.html))
+* CATCH UP WEEK: Mar 04 to Mar 07
+* [Lab 07](labs/lab07.html): Mar 18 to Mar 24 ([slides](labs/lab07-slide.html))
+* [Lab 08](labs/lab08.html): Mar 25 to Mar 31
+* [Lab 09](labs/lab09.html): Apr 01 to Apr 07
+* [Lab 10](labs/lab10.html): Apr 08 to Apr 14
+* CATCH UP WEEK: Apr 15 to Apr 21
+* [Lab 11](labs/lab11.html): Apr 22 to Apr 28

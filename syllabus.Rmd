@@ -1,7 +1,7 @@
 ---
 title: "Syllabus"
 author: "Xinchen Yu (she/her/hers)"
-date: "Fall 2024"
+date: "Spring 2025"
 output:
   html_document: default
 subtitle: CSc 110 Computer Programming I
@@ -28,7 +28,7 @@ This course is scheduled to be an in-person course, meeting in-person three time
 -   [Gittings](https://goo.gl/maps/LpwVaL8JVxxRVDfA8) Room 129b, 1:00-1:50pm, MWF
 -   [Gittings](https://goo.gl/maps/LpwVaL8JVxxRVDfA8) Room 129b, 2:00-2:50pm, MWF
 
-This is a four-unit course, meeting in the lecture room three times a week (MWF). The weekly in-person lab sessions are flexible, meaning students have a number of time slots to choose from. To schedule your lab session go to [the weekly lab session spreadsheet](https://docs.google.com/spreadsheets/d/1vJNf444idLRKBJej3I9MvI7RDSk6ujV2s9kPt7CBA_Q/edit?usp=sharing). 
+This is a four-unit course, meeting in the lecture room three times a week (MWF). The weekly in-person lab sessions are flexible, meaning students have a number of time slots to choose from. To schedule your lab session go to [the weekly lab session spreadsheet](). 
 
 Attendance is expected and required.
 
@@ -50,9 +50,9 @@ The prerequisite is a C or better in College Algebra or CSc 101 or appropriate m
         -   Email: xinchenyu\@arizona.edu
         -   Instructor Website: [xinchenyu.github.io](https://xinchenyu.github.io/)
         -   Office hours (open door, drop in, my office [GS](https://goo.gl/maps/h8Vyf7RNQiMAScDY6) 829):
-            -   Wednesday 10:00am to 12:00pm
+            -   Wednesday 9:30am to 11:00am
 
-There will also be many undergraduate TAs. See the class website for their contact info!
+There will also be many undergraduate TAs. See [TAs and Office Hours](tas.html)!
 
 # Course Format and Teaching Methods
 
@@ -105,14 +105,15 @@ Absences pre-approved by the UA Dean of Students (or dean's designee) will be ho
 
 ## Administrative Drops
 
-Every semester, students enroll in introductory CS classes but do not submit any work, resulting in a grade of `E` at the end of the term. To prevent this, at the end of the **second week** (Sep 6), all students who have not submitted/completed **three or more** of the following will be administratively dropped:
+Every semester, students enroll in introductory CS classes but do not submit any work, resulting in a grade of `E` at the end of the term. To prevent this, at the end of the **second week** (Jan 24), all students who have not submitted/completed **three or more** of the following will be administratively dropped:
 
-1.  August 28 quiz
-2.  Class presence on August 30
-3.  September 4 quiz
-4.  [Module 1 Programming Problem 1](assignments-01.html)
-5.  [Module 1 Programming Problem 2](assignments-01.html)
-6.  Class presence on September 6
+1.  Jan 15 quiz
+2.  Class presence on Jan 17
+3.  Class presence on Jan 20
+4.  Jan 22 quiz
+5.  [Module 1 Programming Problem 1](assignments-01.html)
+6.  [Module 1 Programming Problem 2](assignments-01.html)
+
 
 In addition, to ensure your success in this course, and that you are on top of the work that is due every week, administrative drops will be in place throughout the semester. Students who miss coursework for two weeks or more often get an E at the end of the term in this course. After the second week of class, at any point during the semester if you fail to attend class and submit assignments for two consecutive weeks you will be administratively dropped.
 
@@ -125,21 +126,23 @@ In addition, to ensure your success in this course, and that you are on top of t
 
 **Statement on compliance with COVID-19 mitigation guidelines:** As we enter the semester, our health and safety remain the university's highest priority. To protect the health of everyone in this class, students are required to follow the university guidelines on COVID-19 mitigation. Please visit [www.covid19.arizona.edu](https://www.covid19.arizona.edu/).
 
+
 # Makeup Policy for Students Who Register Late
 
 If you register after the first class meeting you may make up missed assignments within your first week of attendance.
 
 # Course Communications
 
-All online communication will be conducted through my official UA e-mail address (xinchenyu\@arizona.edu) D2L, and Piazza.
+All online communication will be conducted through my official UA e-mail address (xinchenyu\@arizona.edu), D2L, and Piazza.
 
 # Required Texts or Readings
 
 All readings, videos, and assignment instructions will be available in the course website.
 
--   Course D2L: <https://d2l.arizona.edu/d2l/home/1493524>
--   Course Gradescope: <https://www.gradescope.com/courses/822022>
--   Course website: <https://xinchenyu.github.io/csc110-fall2024/>
+-   Course D2L: <https://d2l.arizona.edu/d2l/home/1559570>
+-   Course Gradescope: <https://www.gradescope.com/courses/934148>
+-   Course website: <https://xinchenyu.github.io/csc110-spring2025/>
+-   Piazza: <https://piazza.com/arizona/spring2025/csc110)> (Access code: wildcats)
 
 # Assignments and Examinations: Schedule/Due Dates
 
@@ -155,13 +158,13 @@ There will be four exams throughout the course (including the final), for a tota
 
 The midterm exams will be on:
 
--   Midterm Exam 1 - `r schedule %>% filter(exam == "Midterm 1" & term == "fall 2024") %>% pull(formatted_date)`
--   Midterm Exam 2 - `r schedule %>% filter(exam == "Midterm 2" & term == "fall 2024") %>% pull(formatted_date)`
--   Midterm Exam 3 - `r schedule %>% filter(exam == "Midterm 3" & term == "fall 2024") %>% pull(formatted_date)`
+-   Midterm Exam 1 - `r schedule %>% filter(exam == "Midterm 1" & term == "spring 2025") %>% pull(formatted_date)`
+-   Midterm Exam 2 - `r schedule %>% filter(exam == "Midterm 2" & term == "spring 2025") %>% pull(formatted_date)`
+-   Midterm Exam 3 - `r schedule %>% filter(exam == "Midterm 3" & term == "spring 2025") %>% pull(formatted_date)`
 
 You must keep theses dates available. Do not schedule any flights, travel plans, or other conflicts with these exams.
 
-Weekly quizzes will be held on Wednesday every weeks (unless otherwise noted). The 1 (one) lowest grades for quizzes will be dropped from final grade calculations.
+Weekly quizzes will be held on Wednesday every weeks (unless otherwise noted). The 2 (two) lowest grades for quizzes will be dropped from final grade calculations.
 
 ## Late Work
 
@@ -169,7 +172,7 @@ For programming problems and projects, late work is NOT accepted
 
 ## Extra Credit
 
-Up to 1 point of extra credit will be awarded to students who come to office hours in person. Check our office hours schedule on the website <https://xinchenyu.github.io/csc110-fall2024/tas.html> and ask the TA or instructor to submit your points to gradescope. 
+Up to 1 point of extra credit will be awarded to students who come to office hours in person. Check our office hours schedule on the website <https://xinchenyu.github.io/csc110-spring2025/tas.html> and ask the TA or instructor to submit your points to gradescope. 
 
 You are required to ask a question and/or work on an assignment or practice problem with the TA or instructor to receive 0.5 points for each office hour attendance. It is your responsibility to ensure the TA or instructor enter your 0.5 points on gradescope during the session. Instructors will not award you these points at a later date, do not email instructors about getting points at a later date (for example, if you forget to ask the TA to enter your office hour points on gradescope). 
 
@@ -179,13 +182,14 @@ Your first TA office visit should take place before the Midterm 1 date, and the 
 
 The final exam is worth 15%.
 
-The final exam will be on:
+The final exam date and time is to be determined (TBD).
 
--   `r schedule %>% filter(exam == "Final Exam" & term == "fall 2024") %>% pull(formatted_date)` -- `r schedule %>% filter(exam == "Final Exam" & term == "fall 2024") %>% pull(time)`. 
+<!-- -   `r schedule %>% filter(exam == "Final Exam" & term == "spring 2025") %>% pull(formatted_date)` -- `r schedule %>% filter(exam == "Final Exam" & term == "spring 2025") %>% pull(time)`.  --> 
+
 
 You must keep this time available. Do not schedule any flights, travel plans, or other conflicts with these exams.
 
-Common final exam room in [S SCI 100](https://classrooms.registrar.arizona.edu/27/100).
+Common final exam room is TBD.
 
 See also Final Exam Regulations and Schedule: <https://registrar.arizona.edu/finals>
 
@@ -222,7 +226,7 @@ List topics in logical units in a weekly/daily schedule, including assignment du
 
 ```{r}
 schedule %>% 
-  filter(term == "fall 2024") %>% 
+  filter(term == "spring 2025") %>% 
   select(week_number, formatted_start, module, topic) %>% 
   kable(col.names = c("Week", "Start Date", "Module", "Topic"))
 ```
@@ -233,7 +237,7 @@ We won't have classes due to university-wide holidays on the following dates:
 
 ```{r}
 schedule %>% 
-  filter(!is.na(holiday) & term == "fall 2024") %>% 
+  filter(!is.na(holiday) & term == "spring 2025") %>% 
   select(week_number, formatted_date, holiday) %>% 
   kable(col.names = c("Week", "Date", "Holiday"))
 ```
@@ -246,6 +250,14 @@ assignments %>%
   kable(col.names = c("Assessment", "Date", "Time/Location"))
 ```
 
+
+# Transferable Career Skills
+
+In this course, we will focus on the following competencies: 
+
+-   **Technology**: Students will use technology to design and write complete, well-structured programs in Python.
+-   **Teamwork**: The course will include lectures, in-class discussions, and activities, with a strong emphasis on teamwork through group work that requires collaboration with other students during class.
+-   **Communication**: Students are encouraged to emphasize communication by interacting with teaching assistants and using various channels, such as office hours, Gradescope, class discussions, and Piazza, to stay updated on course materials.
 
 
 # Department of Computer Science Code of Conduct

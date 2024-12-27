@@ -220,7 +220,7 @@
 <li>A <strong>sorting algorithm</strong> is an algorithm that puts elements of a list in a certain order</li>
 <li>There are different types of “ordering”:</li>
 </ul>
-<div id="0f77a27b" class="cell" data-execution_count="1">
+<div id="f3f26832" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="co"># ascending numeric order </span></span>
 <span id="cb1-2"><a></a>numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">10</span>]</span>
 <span id="cb1-3"><a></a></span>
@@ -237,7 +237,7 @@
 <ul>
 <li><code>list_var.sort()</code></li>
 </ul>
-<div id="f2013704" class="cell" data-execution_count="2">
+<div id="3c0f15ec" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>items <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">43</span>, <span class="dv">10</span>, <span class="dv">12</span>]</span>
 <span id="cb2-2"><a></a>items.sort()</span>
 <span id="cb2-3"><a></a>items</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -248,7 +248,7 @@
 <ul>
 <li><code>sorted(list_var)</code></li>
 </ul>
-<div id="c3d3a064" class="cell" data-execution_count="3">
+<div id="0a978c2a" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>items <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">43</span>, <span class="dv">10</span>, <span class="dv">12</span>]</span>
 <span id="cb4-2"><a></a><span class="bu">sorted</span>(items)</span>
 <span id="cb4-3"><a></a>items</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -298,14 +298,14 @@
 <li>It iterates over the list, scanning the list to find the smallest number</li>
 <li>Return the index of the smallest number</li>
 </ol>
-<div id="c77d25ab" class="cell" data-execution_count="4">
+<div id="4094149e" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="cf">assert</span> find_min_index([]) <span class="op">==</span> <span class="va">None</span></span>
 <span id="cb6-2"><a></a><span class="cf">assert</span> find_min_index([<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">1</span>, <span class="dv">20</span>, <span class="dv">7</span>, <span class="dv">3</span>, <span class="dv">9</span>]) <span class="op">==</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-selection-sort-step-1-solution" class="slide level2">
 <h2>Write selection sort – step 1 solution</h2>
-<div id="a9b0d4dd" class="cell" data-execution_count="5">
+<div id="49b91fcc" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="kw">def</span> find_min_index(items):</span>
 <span id="cb7-2"><a></a>  min_index <span class="op">=</span> <span class="va">None</span></span>
 <span id="cb7-3"><a></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(items)):</span>
@@ -323,7 +323,7 @@
 <section id="write-selection-sort---step-1-continue" class="slide level2">
 <h2>Write selection sort - step 1 continue</h2>
 <p>Now you found the index of smallest number, let’s make one swap: swap the items at index <code>0</code> and <code>min_index</code>.</p>
-<div id="7549208c" class="cell" data-execution_count="6">
+<div id="e62af749" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>items <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">1</span>, <span class="dv">20</span>, <span class="dv">7</span>, <span class="dv">3</span>, <span class="dv">9</span>]</span>
 <span id="cb8-2"><a></a></span>
 <span id="cb8-3"><a></a>begin_index <span class="op">=</span> <span class="dv">0</span></span>
@@ -338,7 +338,7 @@
 <section id="write-selection-sort---step-2" class="slide level2">
 <h2>Write selection sort - step 2</h2>
 <p>How to find the <code>min_index</code> starting from <code>begin_index</code>? You can call <code>find_min_index</code> function.</p>
-<div id="d8189370" class="cell" data-execution_count="7">
+<div id="9a06489e" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>begin_index <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb9-2"><a></a>items <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">20</span>, <span class="dv">7</span>, <span class="dv">3</span>, <span class="dv">9</span>]</span>
 <span id="cb9-3"><a></a></span>
@@ -350,7 +350,7 @@
 <section id="write-selection-sort---step-2-solution" class="slide level2">
 <h2>Write selection sort - step 2 solution</h2>
 <p>How to find the <code>min_index</code> starting from <code>begin_index</code>? You can call <code>find_min_index</code> function.</p>
-<div id="b1ac2218" class="cell" data-execution_count="8">
+<div id="dc53e24d" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>begin_index <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb10-2"><a></a>items <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">20</span>, <span class="dv">7</span>, <span class="dv">3</span>, <span class="dv">9</span>]</span>
 <span id="cb10-3"><a></a></span>
@@ -367,7 +367,7 @@
 <section id="write-selection-sort---step-2-continue" class="slide level2">
 <h2>Write selection sort - step 2 continue</h2>
 <p>Now you found the index of smallest number starting from <code>begin_index</code>, let’s make another swap:</p>
-<div id="7d7eab82" class="cell" data-execution_count="9">
+<div id="971f9397" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>items <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">20</span>, <span class="dv">7</span>, <span class="dv">3</span>, <span class="dv">9</span>]</span>
 <span id="cb11-2"><a></a></span>
 <span id="cb11-3"><a></a>begin_index <span class="op">=</span> <span class="dv">1</span></span>
@@ -390,7 +390,7 @@
 </section>
 <section id="write-selection-sort-solution" class="slide level2">
 <h2>Write selection sort – solution</h2>
-<div id="dbe19c3b" class="cell" data-execution_count="10">
+<div id="1a2b11c1" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="kw">def</span> find_min_index(items):</span>
 <span id="cb12-2"><a></a>  min_index <span class="op">=</span> <span class="va">None</span></span>
 <span id="cb12-3"><a></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(items)):</span>
@@ -416,7 +416,7 @@
 </section>
 <section id="how-many-total-sweeps-and-swaps-to-sort-this-list" class="slide level2">
 <h2>How many total sweeps and swaps to sort this list?</h2>
-<div id="735e5797" class="cell" data-execution_count="11">
+<div id="bc0ec114" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>numbers <span class="op">=</span> [ <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">4</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
@@ -432,7 +432,7 @@
 </section>
 <section id="how-many-total-sweeps-and-swaps-to-sort-this-list-2" class="slide level2">
 <h2>How many total sweeps and swaps to sort this list?</h2>
-<div id="326565b8" class="cell" data-execution_count="12">
+<div id="3828f35e" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a>numbers <span class="op">=</span> [ <span class="dv">3</span>, <span class="dv">0</span>, <span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">8</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
@@ -471,13 +471,13 @@
 <li>It iterates over the list, comparing each element with the next one, if the next one is smaller, swap elements</li>
 <li>It sweeps the list only once</li>
 </ol>
-<div id="effda49f" class="cell" data-execution_count="13">
+<div id="68ef5efa" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="cf">assert</span> single_sweep_swap([<span class="dv">8</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">1</span>]) <span class="op">==</span> [<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">1</span>, <span class="dv">8</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-bubble-sort-step-1-solution" class="slide level2">
 <h2>Write bubble sort – step 1 solution</h2>
-<div id="86dc5a8c" class="cell" data-execution_count="14">
+<div id="369f60f9" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="kw">def</span> single_sweep_swap(numbers):</span>
 <span id="cb16-2"><a></a>    end <span class="op">=</span> <span class="bu">len</span>(numbers) <span class="op">-</span> <span class="dv">1</span></span>
 <span id="cb16-3"><a></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(end):</span>
@@ -500,14 +500,14 @@
 <li>The <code>end</code> starts at <code>len(items)-1</code></li>
 <li>In each iteration, subtract 1 from the <code>end</code> index</li>
 </ol>
-<div id="2dbd1d94" class="cell" data-execution_count="15">
+<div id="dcb2f6fb" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a><span class="cf">assert</span> bubble_sort([<span class="dv">8</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">1</span>]) <span class="op">==</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">8</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-bubble-sort" class="slide level2">
 <h2>Write bubble sort</h2>
 <p>Replace the two lines of comment with your code:</p>
-<div id="31829aec" class="cell" data-execution_count="16">
+<div id="c47ac2b9" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="kw">def</span> bubble_sort(items):</span>
 <span id="cb18-2"><a></a>  is_sorted <span class="op">=</span> <span class="va">False</span></span>
 <span id="cb18-3"><a></a>  end <span class="op">=</span> <span class="bu">len</span>(items)<span class="op">-</span><span class="dv">1</span></span>
@@ -522,7 +522,7 @@
 </section>
 <section id="write-bubble-sort-solution" class="slide level2">
 <h2>Write bubble sort – solution</h2>
-<div id="f626a294" class="cell" data-execution_count="17">
+<div id="435e8c31" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a><span class="kw">def</span> bubble_sort(items):</span>
 <span id="cb19-2"><a></a>  is_sorted <span class="op">=</span> <span class="va">False</span></span>
 <span id="cb19-3"><a></a>  end <span class="op">=</span> <span class="bu">len</span>(items)<span class="op">-</span><span class="dv">1</span></span>
@@ -547,7 +547,7 @@
 </section>
 <section id="how-many-total-sweeps-and-swaps-to-sort-this-list-4" class="slide level2">
 <h2>How many total sweeps and swaps to sort this list?</h2>
-<div id="b381e320" class="cell" data-execution_count="18">
+<div id="cd898047" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a>numbers <span class="op">=</span> [ <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">4</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
@@ -569,7 +569,7 @@
 </section>
 <section id="how-many-total-sweeps-and-swaps-1" class="slide level2">
 <h2>How many total sweeps and swaps?</h2>
-<div id="d4b2fd33" class="cell" data-execution_count="19">
+<div id="54a5890a" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a>numbers <span class="op">=</span> [ <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">5</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
@@ -597,7 +597,7 @@
 <section id="how-many-total-sweeps-and-swaps-2" class="slide level2">
 <h2>How many total sweeps and swaps?</h2>
 <p>Go to gradescope and answer today’s attendance question:</p>
-<div id="6235e9ff" class="cell" data-execution_count="20">
+<div id="0a4d342c" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a></a>numbers <span class="op">=</span> [ <span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">4</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>

@@ -21,7 +21,7 @@ Short Programming projects are submitted during our weekly 45-minute in-person l
 
 # Programming Problems
 
-Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/822022).
+Programming Problems should be submitted to [gradescope](https://www.gradescope.com/courses/934148).
 
 ## Programming Problem 15
 
