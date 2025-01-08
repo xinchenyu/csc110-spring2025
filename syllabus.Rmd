@@ -98,7 +98,7 @@ Absences may affect a student's final course grade. If you anticipate being abse
 
 If you have any problems coming to class and decide to drop this course, see an advisor if it is after the drop period. Advisors will provide options and alternatives as appropriate for individual student situations.
 
-The UA's policy concerning Class Attendance, Participation, and Administrative Drops is available at <https://catalog.arizona.edu/policy/class-attendance-and-participation>.
+The UA's policy concerning Class Attendance, Participation, and Administrative Drops is available at <https://catalog.arizona.edu/policy/courses-credit/courses/class-attendance-participation>.
 
 The UA policy regarding absences for any sincerely held religious belief, observance or practice will be accommodated where reasonable: [http://policy.arizona.edu/human-resources/religious-accommodation-policy](<http://policy.arizona.edu/human-resources/religious-accommodation-policy>.
 
@@ -116,7 +116,7 @@ Every semester, students enroll in introductory CS classes but do not submit any
 6.  [Module 1 Programming Problem 2](assignments-01.html)
 
 
-In addition, to ensure your success in this course, and that you are on top of the work that is due every week, administrative drops will be in place throughout the semester. Students who miss coursework for two weeks or more often get an E at the end of the term in this course. After the second week of class, at any point during the semester if you fail to attend class and submit assignments for two consecutive weeks you will be administratively dropped.
+April 1 is the last day instructors may administratively drop students. In addition, to ensure your success in this course, and that you are on top of the work that is due every week, administrative drops will be in place throughout the semester. Students who miss coursework for two weeks or more often get an E at the end of the term in this course. After the second week of class, at any point during the semester if you fail to attend class and submit assignments for two consecutive weeks you will be administratively dropped.
 
 ## Illnesses and Emergencies
 
@@ -183,14 +183,14 @@ Your first TA office visit should take place before the Midterm 1 date, and the 
 
 The final exam is worth 15%.
 
-The final exam date and time is to be determined (TBD).
+The final exam date and time is:
 
-<!-- -   `r schedule %>% filter(exam == "Final Exam" & term == "spring 2025") %>% pull(formatted_date)` -- `r schedule %>% filter(exam == "Final Exam" & term == "spring 2025") %>% pull(time)`.  --> 
-
+-  1pm section:  `r schedule %>% filter(exam == "Final Exam 1pm Section" & term == "spring 2025") %>% pull(formatted_date)` -- `r schedule %>% filter(exam == "Final Exam 1pm Section" & term == "spring 2025") %>% pull(time)`.  
+-  2pm section:  `r schedule %>% filter(exam == "Final Exam 2pm Section" & term == "spring 2025") %>% pull(formatted_date)` -- `r schedule %>% filter(exam == "Final Exam 2pm Section" & term == "spring 2025") %>% pull(time)`.
 
 You must keep this time available. Do not schedule any flights, travel plans, or other conflicts with these exams.
 
-Common final exam room is TBD.
+The instructor plans to hold a common final exam and will keep students updated for the final information, including the room, date and time.
 
 See also Final Exam Regulations and Schedule: <https://registrar.arizona.edu/finals>
 

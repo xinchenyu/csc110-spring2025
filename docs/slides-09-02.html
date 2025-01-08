@@ -214,13 +214,13 @@
 <h2>Write a function</h2>
 <p>Its name is <code>sum_all</code> that takes a string <code>filename</code> as argument. It reads the file with <code>filename</code> and iterates over each line in <a href="data/numbers.txt">the file</a>, stripping the line breaks, casting each line as integer (assume each line is a single number), summing each number to a total variable. Return the total.</p>
 <p>Name your file <code>sum_numbers.py</code> and submit to Gradescope.</p>
-<div id="faac8ad6" class="cell" data-execution_count="1">
+<div id="8afb12fe" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="cf">assert</span> sum_all(<span class="st">"numbers.txt"</span>) <span class="op">==</span> <span class="dv">15</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div id="d6c7fb86" class="cell" data-execution_count="2">
+<div id="3254b97b" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="kw">def</span> sum_all(file_name):</span>
 <span id="cb2-2"><a></a>  total <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb2-3"><a></a>  <span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(file_name, <span class="st">"r"</span>):</span>
@@ -265,7 +265,7 @@
 </section>
 <section id="evaluate-the-code" class="slide level2">
 <h2>Evaluate the code</h2>
-<div id="aeecb50b" class="cell" data-execution_count="3">
+<div id="fdb384e8" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>words <span class="op">=</span> <span class="bu">open</span>(<span class="st">'words.txt'</span>, <span class="st">'w'</span>)</span>
 <span id="cb6-2"><a></a>words.write(<span class="st">'The slow wolf'</span>)</span>
 <span id="cb6-3"><a></a>words.write(<span class="st">'jumped over'</span>)</span>
@@ -275,7 +275,7 @@
 </section>
 <section id="evaluate-the-code-1" class="slide level2">
 <h2>Evaluate the code</h2>
-<div id="95d93dbf" class="cell" data-execution_count="4">
+<div id="be5eab0e" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>words <span class="op">=</span> <span class="bu">open</span>(<span class="st">'words.txt'</span>, <span class="st">'w'</span>)</span>
 <span id="cb7-2"><a></a>words.write(<span class="st">'The slow wolf'</span>)</span>
 <span id="cb7-3"><a></a>words.write(<span class="st">'jumped over'</span>)</span>
@@ -287,7 +287,7 @@
 </section>
 <section id="evaluate-the-code-2" class="slide level2">
 <h2>Evaluate the code</h2>
-<div id="10b00d15" class="cell" data-execution_count="5">
+<div id="134d0097" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>words <span class="op">=</span> <span class="bu">open</span>(<span class="st">'words.txt'</span>, <span class="st">'w'</span>)</span>
 <span id="cb9-2"><a></a>words.write(<span class="st">'The slow wolf</span><span class="ch">\n</span><span class="st">'</span>)</span>
 <span id="cb9-3"><a></a>words.write(<span class="st">'jumped over</span><span class="ch">\n</span><span class="st">'</span>)</span>
@@ -297,7 +297,7 @@
 </section>
 <section id="evaluate-the-code-3" class="slide level2">
 <h2>Evaluate the code</h2>
-<div id="07932e88" class="cell" data-execution_count="6">
+<div id="6e2065e0" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>words <span class="op">=</span> <span class="bu">open</span>(<span class="st">'words.txt'</span>, <span class="st">'w'</span>)</span>
 <span id="cb10-2"><a></a>words.write(<span class="st">'The slow wolf</span><span class="ch">\n</span><span class="st">'</span>)</span>
 <span id="cb10-3"><a></a>words.write(<span class="st">'jumped over</span><span class="ch">\n</span><span class="st">'</span>)</span>
@@ -311,7 +311,7 @@
 </section>
 <section id="evaluate-the-code-continued" class="slide level2">
 <h2>Evaluate the code – continued</h2>
-<div id="410aac9f" class="cell" data-execution_count="7">
+<div id="1a4b90f6" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>words <span class="op">=</span> <span class="bu">open</span>(<span class="st">'words.txt'</span>, <span class="st">'a'</span>)</span>
 <span id="cb12-2"><a></a>words.write(<span class="st">' The quick fox</span><span class="ch">\n</span><span class="st">'</span>)</span>
 <span id="cb12-3"><a></a>words.write(<span class="st">'jumped over</span><span class="ch">\n</span><span class="st">'</span>)</span>
@@ -321,7 +321,7 @@
 </section>
 <section id="evaluate-the-code-continued-1" class="slide level2">
 <h2>Evaluate the code – continued</h2>
-<div id="a4b38c0e" class="cell" data-execution_count="8">
+<div id="1dc71363" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>words <span class="op">=</span> <span class="bu">open</span>(<span class="st">'words.txt'</span>, <span class="st">'a'</span>)</span>
 <span id="cb13-2"><a></a>words.write(<span class="st">' The quick fox</span><span class="ch">\n</span><span class="st">'</span>)</span>
 <span id="cb13-3"><a></a>words.write(<span class="st">'jumped over</span><span class="ch">\n</span><span class="st">'</span>)</span>
@@ -337,7 +337,7 @@
 </section>
 <section id="combining-dictionary-with-write" class="slide level2">
 <h2>Combining dictionary with write</h2>
-<div id="cd544ab4" class="cell" data-execution_count="9">
+<div id="1f0ca515" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a>info <span class="op">=</span> {<span class="st">"a"</span>: <span class="dv">2</span>, <span class="st">"b"</span>: <span class="dv">5</span>, <span class="st">"c"</span>: <span class="dv">0</span>}</span>
 <span id="cb15-2"><a></a>output <span class="op">=</span> <span class="bu">open</span>(<span class="st">"count.txt"</span>, <span class="st">"w"</span>)</span>
 <span id="cb15-3"><a></a></span>
@@ -365,14 +365,14 @@
 </ul>
 <p>Name file as <code>read_and_write.py</code>, submit for attendance.</p>
 <p>Test case:</p>
-<div id="be3a4d96" class="cell" data-execution_count="10">
+<div id="b5dd57d1" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a>write_word_count(<span class="st">"alien.txt"</span>)</span>
 <span id="cb17-2"><a></a><span class="co"># writes out out_alien.txt with word counts</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-two-functions-solution" class="slide level2">
 <h2>Write two functions – solution</h2>
-<div id="e81b190c" class="cell" data-execution_count="11">
+<div id="814c209b" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="kw">def</span> count_words(file_name):</span>
 <span id="cb18-2"><a></a>  f <span class="op">=</span> <span class="bu">open</span>(file_name, <span class="st">"r"</span>)</span>
 <span id="cb18-3"><a></a>  counts <span class="op">=</span> {}</span>

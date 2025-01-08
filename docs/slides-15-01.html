@@ -212,7 +212,7 @@
 </section>
 <section id="try-and-except-1" class="slide level2">
 <h2><code>try:</code> and <code>except:</code></h2>
-<div id="29437453" class="cell" data-execution_count="1">
+<div id="a1376349" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>ages <span class="op">=</span> [<span class="dv">35</span>, <span class="dv">35</span>, <span class="dv">23</span>, <span class="dv">18</span>, <span class="dv">45</span>, <span class="dv">18</span>, <span class="dv">72</span>]</span>
 <span id="cb1-2"><a></a><span class="cf">try</span>:</span>
 <span id="cb1-3"><a></a>    <span class="bu">print</span>(ages[<span class="dv">0</span>] <span class="op">+</span> ages[<span class="dv">4</span>])</span>
@@ -222,7 +222,7 @@
 <pre><code>80</code></pre>
 </div>
 </div>
-<div id="78b533bb" class="cell" data-execution_count="2">
+<div id="0b23202a" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>ages <span class="op">=</span> [<span class="dv">35</span>, <span class="dv">35</span>, <span class="dv">23</span>, <span class="dv">18</span>, <span class="dv">45</span>, <span class="dv">18</span>, <span class="dv">72</span>]</span>
 <span id="cb3-2"><a></a><span class="cf">try</span>:</span>
 <span id="cb3-3"><a></a>    <span class="bu">print</span>(ages[<span class="dv">0</span>] <span class="op">+</span> ages[<span class="dv">7</span>])</span>
@@ -235,7 +235,7 @@
 </section>
 <section id="try-and-except-2" class="slide level2">
 <h2><code>try:</code> and <code>except:</code></h2>
-<div id="229e2ad3" class="cell" data-execution_count="3">
+<div id="4564306a" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>ages <span class="op">=</span> [<span class="dv">35</span>, <span class="dv">35</span>, <span class="dv">23</span>, <span class="dv">18</span>, <span class="dv">45</span>, <span class="dv">18</span>, <span class="dv">72</span>]</span>
 <span id="cb5-2"><a></a><span class="cf">try</span>:</span>
 <span id="cb5-3"><a></a>    <span class="bu">print</span>(ages[<span class="dv">0</span>] <span class="op">+</span> ages[<span class="dv">7</span>])</span>
@@ -247,7 +247,7 @@
 Tried to get a value from an index that does not exist in the list</code></pre>
 </div>
 </div>
-<div id="f789843d" class="cell" data-execution_count="4">
+<div id="472fd676" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>ages <span class="op">=</span> [<span class="dv">35</span>, <span class="dv">35</span>, <span class="dv">23</span>, <span class="dv">18</span>, <span class="dv">45</span>, <span class="dv">18</span>, <span class="dv">72</span>]</span>
 <span id="cb7-2"><a></a><span class="bu">print</span>(ages[<span class="dv">0</span>] <span class="op">+</span> ages[<span class="dv">7</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -257,7 +257,7 @@ Tried to get a value from an index that does not exist in the list</code></pre>
 <h2>Attendance</h2>
 <p>Write a python function called <code>valid_input</code> that takes a string as argument and returns False if the string is not a year (check if the length is 4, and if the string is an integer).</p>
 <p>Name your file <code>year_validation.py</code></p>
-<div id="9fcd8fb4" class="cell" data-execution_count="5">
+<div id="9a1b8996" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="bu">print</span>(valid_input(<span class="st">"2023"</span>)) <span class="co"># True</span></span>
 <span id="cb8-2"><a></a><span class="bu">print</span>(valid_input(<span class="st">"20235"</span>)) <span class="co"># False</span></span>
 <span id="cb8-3"><a></a><span class="bu">print</span>(valid_input(<span class="st">"test"</span>)) <span class="co"># False</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -265,7 +265,7 @@ Tried to get a value from an index that does not exist in the list</code></pre>
 </section>
 <section id="attendance---solution" class="slide level2">
 <h2>Attendance - solution</h2>
-<div id="4e393a9b" class="cell" data-execution_count="6">
+<div id="e5d230b0" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="kw">def</span> valid_input(string):</span>
 <span id="cb9-2"><a></a>    <span class="cf">if</span> <span class="bu">len</span>(string) <span class="op">!=</span> <span class="dv">4</span>:</span>
 <span id="cb9-3"><a></a>        <span class="cf">return</span> <span class="va">False</span></span>
@@ -299,13 +299,13 @@ False</code></pre>
 <li>It returns a list with all float numbers in the file</li>
 <li><a href="data/weather.txt">Download test file</a></li>
 </ol>
-<div id="63d868a4" class="cell" data-execution_count="7">
+<div id="133f8fd8" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="bu">print</span>( read_numbers(<span class="st">"weather.txt"</span>) ) <span class="co"># [89.5, 50.2, 93.4, 69.0]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div id="d8836039" class="cell" data-execution_count="8">
+<div id="6bee4f45" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="kw">def</span> read_numbers(file_name):</span>
 <span id="cb12-2"><a></a>  floats <span class="op">=</span> []</span>
 <span id="cb12-3"><a></a>  not_floats <span class="op">=</span> []</span>
@@ -331,7 +331,7 @@ False</code></pre>
 </section>
 <section id="write-a-function-solution-2" class="slide level2">
 <h2>Write a function – solution 2</h2>
-<div id="0dd5f514" class="cell" data-execution_count="9">
+<div id="9fb76e3d" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="kw">def</span> read_numbers(file_name):</span>
 <span id="cb14-2"><a></a>  floats <span class="op">=</span> []</span>
 <span id="cb14-3"><a></a>  not_floats <span class="op">=</span> []</span>

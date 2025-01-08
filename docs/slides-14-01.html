@@ -214,7 +214,7 @@
 <ul>
 <li>How would you retrieve the room where CSC 110, section 2 takes place?</li>
 </ul>
-<div id="473bc6c9" class="cell" data-execution_count="1">
+<div id="63ccca9e" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>course_schedule <span class="op">=</span> { (<span class="st">"CSC 110"</span>, <span class="st">"section 1"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
 <span id="cb1-2"><a></a>                    (<span class="st">"CSC 110"</span>, <span class="st">"section 2"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
 <span id="cb1-3"><a></a>                    (<span class="st">"CSC 110"</span>, <span class="st">"section 3"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
@@ -228,7 +228,7 @@
 <ul>
 <li>How would you retrieve the room where CSC 110, section 2 takes place?</li>
 </ul>
-<div id="1de85de0" class="cell" data-execution_count="2">
+<div id="f0a0a8d4" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>course_schedule <span class="op">=</span> { (<span class="st">"CSC 110"</span>, <span class="st">"section 1"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
 <span id="cb2-2"><a></a>                    (<span class="st">"CSC 110"</span>, <span class="st">"section 2"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
 <span id="cb2-3"><a></a>                    (<span class="st">"CSC 110"</span>, <span class="st">"section 3"</span>) : (<span class="st">"Gittings"</span>, <span class="st">"129b"</span>),</span>
@@ -252,7 +252,7 @@
 <li><p>a string for section (e.g., <code>"section 3"</code>)</p></li>
 </ul>
 <p>It returns a string with the building and room number</p>
-<div id="c8f3bdb5" class="cell" data-execution_count="3">
+<div id="e9061b9b" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>course <span class="op">=</span> <span class="st">"CSC 110"</span></span>
 <span id="cb4-2"><a></a>section <span class="op">=</span> <span class="st">"section 3"</span></span>
 <span id="cb4-3"><a></a><span class="cf">assert</span> retrieve_room(course_schedule, course, section) <span class="op">==</span> <span class="st">"Gittings 129b"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -260,7 +260,7 @@
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div id="57117326" class="cell" data-execution_count="4">
+<div id="976bafba" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="kw">def</span> retrieve_room(course_dict, course, section):</span>
 <span id="cb5-2"><a></a>  building, room <span class="op">=</span>  course_dict[(course, section)]</span>
 <span id="cb5-3"><a></a>  <span class="cf">return</span> building <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> room</span>
@@ -281,7 +281,7 @@
 </section>
 <section id="dictionaries-as-values" class="slide level2">
 <h2>Dictionaries as values</h2>
-<div id="86f6e657" class="cell" data-execution_count="5">
+<div id="97262e1d" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>course_schedule <span class="op">=</span> { <span class="st">"CSC 110"</span>: </span>
 <span id="cb6-2"><a></a>                      {<span class="dv">1</span>: {<span class="st">"building"</span>: <span class="st">"Gittings"</span>, <span class="st">"room"</span>: <span class="st">"129b"</span>},</span>
 <span id="cb6-3"><a></a>                       <span class="dv">2</span>: {<span class="st">"building"</span>: <span class="st">"Gittings"</span>, <span class="st">"room"</span>: <span class="st">"129b"</span>},</span>
@@ -314,7 +314,7 @@
 </section>
 <section id="solutions" class="slide level2">
 <h2>Solutions</h2>
-<div id="028ed216" class="cell" data-execution_count="6">
+<div id="ebc16bba" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="kw">def</span> remove_first(list_of_lists):</span>
 <span id="cb8-2"><a></a>  <span class="cf">for</span> sublist <span class="kw">in</span> list_of_lists:</span>
 <span id="cb8-3"><a></a>    <span class="cf">if</span> <span class="bu">len</span>(sublist) <span class="op">&gt;</span> <span class="dv">0</span>:</span>
@@ -345,7 +345,7 @@
 </section>
 <section id="solutions-1" class="slide level2">
 <h2>Solutions</h2>
-<div id="d306683e" class="cell" data-execution_count="7">
+<div id="35c415b5" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="kw">def</span> censor_consonants(string):</span>
 <span id="cb9-2"><a></a>  new_string <span class="op">=</span> <span class="st">""</span></span>
 <span id="cb9-3"><a></a>  <span class="cf">for</span> char <span class="kw">in</span> string:</span>

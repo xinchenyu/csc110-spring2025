@@ -26,9 +26,12 @@ Midterm (individual) exams (pencil and paper format):
 -   Midterm Exam 2 - `r schedule %>% filter(exam == "Midterm 2" & term == "spring 2025") %>% pull(formatted_date)`
 -   Midterm Exam 3 - `r schedule %>% filter(exam == "Midterm 3" & term == "spring 2025") %>% pull(formatted_date)`
 
-The final exam (pencil and paper format) for all sections location and time is to be determined (TBD).
+The final exam date and time is:
 
-<!-- -   `r schedule %>% filter(exam == "Final Exam" & term == "spring 2025") %>% pull(formatted_date)` -- `r schedule %>% filter(exam == "Final Exam" & term == "spring 2025") %>% pull(time)`.  --> 
+-  1pm section:  `r schedule %>% filter(exam == "Final Exam 1pm Section" & term == "spring 2025") %>% pull(formatted_date)` -- `r schedule %>% filter(exam == "Final Exam 1pm Section" & term == "spring 2025") %>% pull(time)`.  
+-  2pm section:  `r schedule %>% filter(exam == "Final Exam 2pm Section" & term == "spring 2025") %>% pull(formatted_date)` -- `r schedule %>% filter(exam == "Final Exam 2pm Section" & term == "spring 2025") %>% pull(time)`.
+
+The instructor plans to hold a common final exam and will keep students updated for the final information, including the room, date and time.
 
 All assignments that are submitted on Gradescope are due at 9pm (Tuesdays for programming problems, short projects and Thursdays for programming projects).
 
