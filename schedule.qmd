@@ -31,7 +31,7 @@ The final exam date and time is:
 -  1pm section:  `r schedule %>% filter(exam == "Final Exam 1pm Section" & term == "spring 2025") %>% pull(formatted_date)` -- `r schedule %>% filter(exam == "Final Exam 1pm Section" & term == "spring 2025") %>% pull(time)`.  
 -  2pm section:  `r schedule %>% filter(exam == "Final Exam 2pm Section" & term == "spring 2025") %>% pull(formatted_date)` -- `r schedule %>% filter(exam == "Final Exam 2pm Section" & term == "spring 2025") %>% pull(time)`.
 
-The instructor plans to hold a common final exam and will keep students updated for the final information, including the room, date and time.
+You must keep this time available. Do not schedule any flights, travel plans, or other conflicts with these exams.
 
 All assignments that are submitted on Gradescope are due at 9pm (Tuesdays for programming problems, short projects and Thursdays for programming projects).
 

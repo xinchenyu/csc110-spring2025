@@ -323,7 +323,7 @@
     "href": "syllabus.html#final-examination",
     "title": "Syllabus",
     "section": "Final Examination",
-    "text": "Final Examination\nThe final exam is worth 15%.\nThe final exam date and time is:\n\n1pm section: Mon, May 12 – 1:00pm - 3:00pm.\n\n2pm section: Fri, May 09 – 1:00pm - 3:00pm.\n\nYou must keep this time available. Do not schedule any flights, travel plans, or other conflicts with these exams.\nThe instructor plans to hold a common final exam and will keep students updated for the final information, including the room, date and time.\nSee also Final Exam Regulations and Schedule: https://registrar.arizona.edu/finals",
+    "text": "Final Examination\nThe final exam is worth 15%.\nThe final exam date and time is:\n\n1pm section: Mon, May 12 – 1:00pm - 3:00pm.\n\n2pm section: Fri, May 09 – 1:00pm - 3:00pm.\n\nYou must keep this time available. Do not schedule any flights, travel plans, or other conflicts with these exams.\nSee also Final Exam Regulations and Schedule: https://registrar.arizona.edu/finals",
     "crumbs": [
       "Start Here",
       "Syllabus"
@@ -422,7 +422,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Weekly quizzes will always be on Wednesday (when there’s no other evaluations) in class (pencil and paper format).\nMidterm (individual) exams (pencil and paper format):\n\nMidterm Exam 1 - Wednesday, February 19, 2025\nMidterm Exam 2 - Wednesday, March 26, 2025\nMidterm Exam 3 - Wednesday, April 23, 2025\n\nThe final exam date and time is:\n\n1pm section: Monday, May 12, 2025 – 1:00pm - 3:00pm.\n\n2pm section: Friday, May 09, 2025 – 1:00pm - 3:00pm.\n\nThe instructor plans to hold a common final exam and will keep students updated for the final information, including the room, date and time.\nAll assignments that are submitted on Gradescope are due at 9pm (Tuesdays for programming problems, short projects and Thursdays for programming projects).\nIf a week has a midterm (on Wednesday), programming problems and short projects are put off from Tuesday to Friday, programming projects are put off from Thursday to next Monday.",
+    "text": "Weekly quizzes will always be on Wednesday (when there’s no other evaluations) in class (pencil and paper format).\nMidterm (individual) exams (pencil and paper format):\n\nMidterm Exam 1 - Wednesday, February 19, 2025\nMidterm Exam 2 - Wednesday, March 26, 2025\nMidterm Exam 3 - Wednesday, April 23, 2025\n\nThe final exam date and time is:\n\n1pm section: Monday, May 12, 2025 – 1:00pm - 3:00pm.\n\n2pm section: Friday, May 09, 2025 – 1:00pm - 3:00pm.\n\nYou must keep this time available. Do not schedule any flights, travel plans, or other conflicts with these exams.\nAll assignments that are submitted on Gradescope are due at 9pm (Tuesdays for programming problems, short projects and Thursdays for programming projects).\nIf a week has a midterm (on Wednesday), programming problems and short projects are put off from Tuesday to Friday, programming projects are put off from Thursday to next Monday.",
     "crumbs": [
       "Start Here",
       "Schedule"
@@ -2401,7 +2401,7 @@
     "href": "slides-16-01.html#write-a-function---solution",
     "title": "final exam review (slides)",
     "section": "write a function - solution",
-    "text": "write a function - solution\n\ndef create_list(items, n):\n  new_list = [ ]\n  for value in items:\n    new_list.extend([value] * n)\n  return new_list\n\ndef main():\n  items = {\"banana\", \"apple\", \"pear\"}\n  print(create_list(items, 2))  \n  \nmain()\n\n['pear', 'pear', 'apple', 'apple', 'banana', 'banana']",
+    "text": "write a function - solution\n\ndef create_list(items, n):\n  new_list = [ ]\n  for value in items:\n    new_list.extend([value] * n)\n  return new_list\n\ndef main():\n  items = {\"banana\", \"apple\", \"pear\"}\n  print(create_list(items, 2))  \n  \nmain()\n\n['apple', 'apple', 'pear', 'pear', 'banana', 'banana']",
     "crumbs": [
       "Module 16 - Review",
       "final exam review (slides)"
@@ -7955,7 +7955,7 @@
     "href": "slides-06-02.html#random-module",
     "title": "random (slides)",
     "section": "random module",
-    "text": "random module\nWe need to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random() #returns a random float between 0 and 1\nprint(n)\n\nn = random.randint(0, 9) #returns a random integer betweem 0 and 9.\n\n\nprint(n)\n\n0.2669999541769472\n9",
+    "text": "random module\nWe need to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random() #returns a random float between 0 and 1\nprint(n)\n\nn = random.randint(0, 9) #returns a random integer betweem 0 and 9.\n\n\nprint(n)\n\n0.8267732236940353\n7",
     "crumbs": [
       "Module 6 - Data Structures (lists)",
       "random (slides)"
@@ -7977,7 +7977,7 @@
     "href": "slides-06-02.html#write-a-function-solution",
     "title": "random (slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nJune",
+    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nPeter",
     "crumbs": [
       "Module 6 - Data Structures (lists)",
       "random (slides)"

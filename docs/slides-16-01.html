@@ -232,14 +232,14 @@
 <section id="int" class="slide level2">
 <h2>int()</h2>
 <p><code>int</code> on “110”:</p>
-<div id="0341c73b" class="cell" data-execution_count="1">
+<div id="9f11689c" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="bu">int</span>(<span class="st">"110"</span>) <span class="co"># 110</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="1">
 <pre><code>110</code></pre>
 </div>
 </div>
 <p><code>int</code> on “CSC110”:</p>
-<div id="991419bb" class="cell" data-execution_count="2">
+<div id="2d16897f" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="bu">int</span>(<span class="st">"CSC110"</span>) <span class="co"># Error</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Use case: use <code>int()</code> to convert <code>"2"</code> to <code>2</code> when reading and summing the number 2 from a .txt file.</p>
@@ -247,14 +247,14 @@
 <section id="string.isnumeric" class="slide level2">
 <h2>string.isnumeric()</h2>
 <p><code>.isnumeric()</code> on “110”:</p>
-<div id="7adee130" class="cell" data-execution_count="3">
+<div id="14754659" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="co">"110"</span>.isnumeric() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>True</code></pre>
 </div>
 </div>
 <p><code>.isnumeric()</code> on “CSC110”:</p>
-<div id="069edb36" class="cell" data-execution_count="4">
+<div id="b3540aae" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="co">"csc110"</span>.isnumeric() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>False</code></pre>
@@ -264,7 +264,7 @@
 <section id="evaluate-code" class="slide level2">
 <h2>Evaluate code</h2>
 <p>Evaluate last line:</p>
-<div id="fe556a0f" class="cell" data-execution_count="5">
+<div id="6a8bfb83" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>numbers <span class="op">=</span> (<span class="dv">1000</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
 <span id="cb8-2"><a></a>numbers.add(<span class="dv">4</span>)</span>
 <span id="cb8-3"><a></a><span class="bu">print</span>(numbers[<span class="dv">0</span>]) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -273,7 +273,7 @@
 <section id="evaluate-code---answer" class="slide level2">
 <h2>Evaluate code - answer</h2>
 <p>Evaluate last line:</p>
-<div id="4a68a82b" class="cell" data-execution_count="6">
+<div id="4f0bbdbc" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>numbers <span class="op">=</span> (<span class="dv">1000</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
 <span id="cb9-2"><a></a>numbers.add(<span class="dv">4</span>)</span>
 <span id="cb9-3"><a></a><span class="bu">print</span>(numbers[<span class="dv">0</span>]) <span class="co"># Error</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -284,7 +284,7 @@
 <section id="write-to-file---compare-difference" class="slide level2">
 <h2>Write to file - compare difference</h2>
 <p>version 1:</p>
-<div id="370b9c25" class="cell" data-execution_count="7">
+<div id="2a860d1d" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>words <span class="op">=</span> [<span class="st">'quick'</span>, <span class="st">'brown'</span>, <span class="st">'fox'</span>]</span>
 <span id="cb10-2"><a></a>output <span class="op">=</span> <span class="bu">open</span>(<span class="st">"result.txt"</span>, <span class="st">"w"</span>)</span>
 <span id="cb10-3"><a></a><span class="cf">for</span> w <span class="kw">in</span> words:</span>
@@ -292,7 +292,7 @@
 <span id="cb10-5"><a></a>output.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>version 2:</p>
-<div id="8858082e" class="cell" data-execution_count="8">
+<div id="eb7d4506" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>words <span class="op">=</span> [<span class="st">'quick'</span>, <span class="st">'brown'</span>, <span class="st">'fox'</span>]</span>
 <span id="cb11-2"><a></a>output <span class="op">=</span> <span class="bu">open</span>(<span class="st">"result.txt"</span>, <span class="st">"w"</span>)</span>
 <span id="cb11-3"><a></a><span class="cf">for</span> w <span class="kw">in</span> words:</span>
@@ -308,7 +308,7 @@
 <li><p>It takes two arguments, a set of strings and an integer n</p></li>
 <li><p>It returns a list that contains each string from the set repeated n times</p></li>
 </ol>
-<div id="2952fe86" class="cell" data-execution_count="9">
+<div id="97ae3eae" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>items <span class="op">=</span> {<span class="st">"banana"</span>, <span class="st">"apple"</span>, <span class="st">"pear"</span>}</span>
 <span id="cb12-2"><a></a><span class="bu">print</span>(create_list(items, <span class="dv">2</span>)) </span>
 <span id="cb12-3"><a></a><span class="co"># order does not matter</span></span>
@@ -317,7 +317,7 @@
 </section>
 <section id="write-a-function---solution" class="slide level2">
 <h2>write a function - solution</h2>
-<div id="5106c782" class="cell" data-execution_count="10">
+<div id="6a9d9745" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="kw">def</span> create_list(items, n):</span>
 <span id="cb13-2"><a></a>  new_list <span class="op">=</span> [ ]</span>
 <span id="cb13-3"><a></a>  <span class="cf">for</span> value <span class="kw">in</span> items:</span>
@@ -330,7 +330,7 @@
 <span id="cb13-10"><a></a>  </span>
 <span id="cb13-11"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>['pear', 'pear', 'apple', 'apple', 'banana', 'banana']</code></pre>
+<pre><code>['apple', 'apple', 'pear', 'pear', 'banana', 'banana']</code></pre>
 </div>
 </div>
 </section>
@@ -341,7 +341,7 @@
 <li>It takes a variable number of arguments: <code>*values</code></li>
 <li>It returns the highest value in <code>values</code></li>
 </ol>
-<div id="ab9fdfc0" class="cell" data-execution_count="11">
+<div id="4bfd3663" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="cf">assert</span> maximum(<span class="dv">1</span>) <span class="op">==</span> <span class="dv">1</span></span>
 <span id="cb15-2"><a></a><span class="cf">assert</span> maximum(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>) <span class="op">==</span> <span class="dv">6</span></span>
 <span id="cb15-3"><a></a><span class="cf">assert</span> maximum() <span class="op">==</span> <span class="va">None</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -349,7 +349,7 @@
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div id="bbddfe47" class="cell" data-execution_count="12">
+<div id="cf940000" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="kw">def</span> maximum(<span class="op">*</span>values):</span>
 <span id="cb16-2"><a></a>  <span class="bu">max</span> <span class="op">=</span> <span class="va">None</span></span>
 <span id="cb16-3"><a></a>  <span class="cf">for</span> v <span class="kw">in</span> values:</span>
