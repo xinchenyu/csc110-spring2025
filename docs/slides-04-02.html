@@ -208,7 +208,7 @@
 <li><em>Expression</em> evaluates to value</li>
 <li><em>Statement</em> does something</li>
 </ul>
-<div id="57eabc08" class="cell" data-execution_count="1">
+<div id="f3081528" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="dv">3</span> <span class="op">+</span> <span class="dv">4</span> <span class="co"># expression</span></span>
 <span id="cb1-2"><a></a><span class="bu">print</span>(<span class="dv">3</span> <span class="op">+</span> <span class="dv">4</span>) <span class="co"># statement</span></span>
 <span id="cb1-3"><a></a></span>
@@ -238,7 +238,7 @@
 </pre>
 <p>The condition is an expression that is evaluated to a bool.</p>
 <p>Example:</p>
-<div id="39f3981d" class="cell" data-execution_count="2">
+<div id="5ffbc5a9" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="kw">def</span> greeting(name):</span>
 <span id="cb2-2"><a></a>  <span class="cf">if</span> name <span class="op">==</span> <span class="st">"Bond"</span>:</span>
 <span id="cb2-3"><a></a>    <span class="cf">return</span> <span class="st">"Welcome on board 007."</span></span>
@@ -259,7 +259,7 @@
 <section id="conditional-execution" class="slide level2">
 <h2>Conditional execution</h2>
 <p>The computer program branches out, or makes decisions</p>
-<div id="3dbb6cd7" class="cell" data-execution_count="3">
+<div id="53ceab91" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="kw">def</span> greater_than_zero(n):</span>
 <span id="cb3-2"><a></a>  <span class="cf">if</span> n <span class="op">&gt;</span> <span class="dv">0</span>:</span>
 <span id="cb3-3"><a></a>    <span class="cf">return</span> <span class="st">"Greater than zero"</span></span>
@@ -288,7 +288,7 @@ Not greater than zero</code></pre>
 <h2>Write a function</h2>
 <p>Write a Python function called <code>absolute</code> that takes one numeric argument (integer or float) <code>n</code> and returns the absolute value of <code>n</code>: if <code>n</code> is positive, it results <code>n</code>, if <code>n</code> is negative, it returns <code>n * -1</code></p>
 <p>Test cases:</p>
-<div id="ac2d2896" class="cell" data-execution_count="4">
+<div id="3fe63f09" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="bu">print</span>( absolute(<span class="dv">4</span>) ) <span class="co"># 4</span></span>
 <span id="cb5-2"><a></a><span class="bu">print</span>( absolute(<span class="op">-</span><span class="dv">4</span>) ) <span class="co"># 4</span></span>
 <span id="cb5-3"><a></a><span class="bu">print</span>( absolute(<span class="dv">0</span>) ) <span class="co"># 0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -297,7 +297,7 @@ Not greater than zero</code></pre>
 </section>
 <section id="write-a-function-solution-1" class="slide level2">
 <h2>Write a function – solution 1</h2>
-<div id="30841b2b" class="cell" data-execution_count="5">
+<div id="1d824164" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="kw">def</span> absolute(n):</span>
 <span id="cb6-2"><a></a>  <span class="cf">if</span> n <span class="op">&gt;</span> <span class="dv">0</span>:</span>
 <span id="cb6-3"><a></a>    <span class="cf">return</span> n</span>
@@ -319,7 +319,7 @@ Not greater than zero</code></pre>
 </section>
 <section id="write-a-function-solution-2" class="slide level2">
 <h2>Write a function – solution 2</h2>
-<div id="74ac1138" class="cell" data-execution_count="6">
+<div id="2761a410" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="kw">def</span> absolute(n):</span>
 <span id="cb8-2"><a></a>  <span class="cf">if</span> n <span class="op">&gt;</span> <span class="dv">0</span>:</span>
 <span id="cb8-3"><a></a>    <span class="cf">return</span> n</span>
@@ -353,7 +353,7 @@ Not greater than zero</code></pre>
 </ul></li>
 <li>The latter conditions include former so concatenate them</li>
 </ol>
-<div id="de181e82" class="cell" data-execution_count="7">
+<div id="51e6158b" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="bu">print</span>( age_milestones(<span class="dv">18</span>) ) <span class="co"># You may apply to join the military.</span></span>
 <span id="cb10-2"><a></a><span class="bu">print</span>( age_milestones(<span class="dv">30</span>) ) <span class="co"># You may apply to join the military. You may drink.</span></span>
 <span id="cb10-3"><a></a><span class="bu">print</span>( age_milestones(<span class="dv">0</span>) ) <span class="co"># </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -361,7 +361,7 @@ Not greater than zero</code></pre>
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div id="fb403ea2" class="cell" data-execution_count="8">
+<div id="bc2e8a79" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="kw">def</span> age_milestones(age):</span>
 <span id="cb11-2"><a></a>  <span class="co">'''</span></span>
 <span id="cb11-3"><a></a><span class="co">  This function prints an informative message based on,</span></span>
@@ -414,14 +414,14 @@ You may apply to join the military. You may drink.
 <li><code>.isnumeric()</code> returns True if all the characters are numeric (0-9)</li>
 </ul>
 <p>Try these out:</p>
-<div id="beff7810" class="cell" data-execution_count="9">
+<div id="c33f3a32" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>name <span class="op">=</span> <span class="st">"Jimmy42"</span></span>
 <span id="cb13-2"><a></a>name.isnumeric()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>False</code></pre>
 </div>
 </div>
-<div id="5c417b68" class="cell" data-execution_count="10">
+<div id="10516ab0" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a>age <span class="op">=</span> <span class="dv">37</span></span>
 <span id="cb15-2"><a></a>age.isnumeric() <span class="co"># this throws an error</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -439,7 +439,7 @@ You may apply to join the military. You may drink.
 </section>
 <section id="age-milestones" class="slide level2">
 <h2>Age milestones</h2>
-<div id="663340e3" class="cell" data-execution_count="11">
+<div id="ee612c95" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="kw">def</span> age_milestones(age):</span>
 <span id="cb16-2"><a></a>  <span class="co">'''</span></span>
 <span id="cb16-3"><a></a><span class="co">  This function prints an informative message based on,</span></span>

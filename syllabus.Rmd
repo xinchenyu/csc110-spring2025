@@ -185,7 +185,7 @@ The final exam is worth 15%.
 The final exam date, time and room are:
 
 -  1pm section:  `r schedule %>% filter(exam == "Final Exam 1pm Section" & term == "spring 2025") %>% pull(formatted_date)` -- `r schedule %>% filter(exam == "Final Exam 1pm Section" & term == "spring 2025") %>% pull(time)` in [GITT 129B](https://classrooms.registrar.arizona.edu/93/129B).  
--  2pm section:  `r schedule %>% filter(exam == "Final Exam 2pm Section" & term == "spring 2025") %>% pull(formatted_date)` -- `r schedule %>% filter(exam == "Final Exam 2pm Section" & term == "spring 2025") %>% pull(time)` in in [GITT 129B](https://classrooms.registrar.arizona.edu/93/129B).
+-  2pm section:  `r schedule %>% filter(exam == "Final Exam 2pm Section" & term == "spring 2025") %>% pull(formatted_date)` -- `r schedule %>% filter(exam == "Final Exam 2pm Section" & term == "spring 2025") %>% pull(time)` in [GITT 129B](https://classrooms.registrar.arizona.edu/93/129B).
 
 You must keep this time available. Do not schedule any flights, travel plans, or other conflicts with these exams.
 
