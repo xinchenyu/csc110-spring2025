@@ -228,7 +228,7 @@
 </section>
 <section id="while-loops-with-aggregation" class="slide level2">
 <h2><code>while</code> loops with aggregation</h2>
-<div id="fa872cdc" class="cell" data-execution_count="1">
+<div id="afd4066f" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>total <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb1-2"><a></a>index <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb1-3"><a></a><span class="cf">while</span> index <span class="op">&lt;=</span> <span class="dv">5</span>:</span>
@@ -296,14 +296,14 @@ adding 5
 <h2>Write a function</h2>
 <p>Its name is <code>sum_all</code> and takes two numeric arguments: <code>low</code> and <code>high</code>. It runs a loop that iterates through the values <code>low</code> and <code>high</code> summing all values. It returns the sum of all values between <code>low</code> and <code>high</code>.</p>
 <p>HINT: Create a variable that will aggregate the sum. Use <code>while</code> (set the index as the <code>low</code> before the loop, use index in the <code>while</code> condition, update the index inside the loop).</p>
-<div id="274151b1" class="cell" data-execution_count="2">
+<div id="0fc2ff25" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="cf">assert</span> sum_all(<span class="dv">1</span>, <span class="dv">3</span>) <span class="op">==</span> <span class="dv">6</span></span>
 <span id="cb3-2"><a></a><span class="cf">assert</span> sum_all(<span class="dv">0</span>, <span class="dv">5</span>) <span class="op">==</span> <span class="dv">15</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div id="52077c1f" class="cell" data-execution_count="3">
+<div id="f9ca886b" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="kw">def</span> sum_all(low, high):</span>
 <span id="cb4-2"><a></a>  total <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb4-3"><a></a>  index <span class="op">=</span> low</span>
@@ -323,14 +323,14 @@ adding 5
 <h2>Write a function</h2>
 <p>Write a function called <code>count_vowels</code> that takes a string as argument, and returns an integer with the number of vowels in the string.</p>
 <p>HINT: use <code>in</code> to determine if a character is a vowel. The vowels are <code>"a"</code>,<code>"e"</code>,<code>"i"</code>,<code>"o"</code>, and <code>"u"</code>.</p>
-<div id="9a2b9a89" class="cell" data-execution_count="4">
+<div id="7eb82531" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="cf">assert</span> count_vowels(<span class="st">"banana"</span>) <span class="op">==</span> <span class="dv">3</span></span>
 <span id="cb5-2"><a></a><span class="cf">assert</span> count_vowels(<span class="st">"fly"</span>) <span class="op">==</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-solution-1" class="slide level2">
 <h2>Write a function – solution</h2>
-<div id="8db2f8d1" class="cell" data-execution_count="5">
+<div id="53811ecb" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="kw">def</span> count_vowels(string):</span>
 <span id="cb6-2"><a></a>  index <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb6-3"><a></a>  count <span class="op">=</span> <span class="dv">0</span></span>
@@ -356,7 +356,7 @@ adding 5
 <p>Its name is <code>factorial</code> and takes a numeric argument <code>number</code>. It returns the factorial of <code>number</code>. The factorial of a number is the product of that number and every number that comes before it, down to one.</p>
 <p>For example, factorial of 4: <code>1 * 2 * 3 * 4 = 24</code>.</p>
 <p>Name your file <code>factorial.py</code> and submit to Gradescope.</p>
-<div id="a0ee06c0" class="cell" data-execution_count="6">
+<div id="2382600f" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="cf">assert</span> factorial(<span class="dv">4</span>) <span class="op">==</span> <span class="dv">24</span></span>
 <span id="cb8-2"><a></a><span class="cf">assert</span> factorial(<span class="dv">5</span>) <span class="op">==</span> <span class="dv">120</span></span>
 <span id="cb8-3"><a></a><span class="cf">assert</span> factorial(<span class="dv">0</span>) <span class="op">==</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -364,7 +364,7 @@ adding 5
 </section>
 <section id="write-a-function-solution-2" class="slide level2">
 <h2>Write a function – solution</h2>
-<div id="0b340141" class="cell" data-execution_count="7">
+<div id="98504bda" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="kw">def</span> factorial(number):</span>
 <span id="cb9-2"><a></a>  result <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb9-3"><a></a>  index <span class="op">=</span> <span class="dv">1</span></span>
@@ -389,7 +389,7 @@ adding 5
 <li>It returns the <code>base</code> to the power of <code>exp</code></li>
 <li>Don’t use the <code>**</code> operator, use a <code>while</code> loop (define an <code>index</code> before the loop, use <code>index</code> in the <code>while</code> condition, change <code>index</code> inside the loop)</li>
 </ol>
-<div id="9ee51ef7" class="cell" data-execution_count="8">
+<div id="7d78bdc1" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="cf">assert</span> power(<span class="dv">2</span>, <span class="dv">4</span>) <span class="op">==</span> <span class="dv">16</span></span>
 <span id="cb10-2"><a></a><span class="cf">assert</span> power(<span class="dv">3</span>, <span class="dv">2</span>) <span class="op">==</span> <span class="dv">9</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -397,7 +397,7 @@ adding 5
 <section id="write-a-function-solution-3" class="slide level2">
 <h2>Write a function – solution</h2>
 <p>Write more test cases for this function.</p>
-<div id="18af12c0" class="cell" data-execution_count="9">
+<div id="88b17ea5" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="kw">def</span> power(base, exp):</span>
 <span id="cb11-2"><a></a>  result <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb11-3"><a></a>  index <span class="op">=</span> <span class="dv">1</span></span>
@@ -421,14 +421,14 @@ adding 5
 <li>It builds a new string containing only the vowels in the <code>string</code> argument</li>
 <li>It returns new string with vowels only (define an <code>index</code> before the loop, use index in the <code>while</code> condition, change <code>index</code> inside the loop)</li>
 </ol>
-<div id="f8a0c5cf" class="cell" data-execution_count="10">
+<div id="09e52fe7" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="bu">print</span>( vowels_only(<span class="st">"banana"</span>) ) <span class="co"># "aaa"</span></span>
 <span id="cb12-2"><a></a><span class="bu">print</span>( vowels_only(<span class="st">"fly"</span>) ) <span class="co"># ""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-solution-4" class="slide level2">
 <h2>Write a function – solution</h2>
-<div id="4aef18e1" class="cell" data-execution_count="11">
+<div id="446a68be" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="kw">def</span> vowels_only(string):</span>
 <span id="cb13-2"><a></a>  new_string <span class="op">=</span> <span class="st">""</span></span>
 <span id="cb13-3"><a></a>  index <span class="op">=</span> <span class="dv">0</span></span>

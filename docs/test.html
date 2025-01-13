@@ -206,7 +206,7 @@
 <li>Use a <code>for</code> loop (just one) and use the <code>in</code> operator</li>
 </ol>
 <p>Test cases:</p>
-<div id="da2e2aed" class="cell" data-execution_count="1">
+<div id="b4b86140" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="cf">assert</span> detect_duplicate([], []) <span class="op">==</span> <span class="va">False</span></span>
 <span id="cb1-2"><a></a><span class="cf">assert</span> detect_duplicate([<span class="st">"a"</span>, <span class="st">"b"</span>], [<span class="st">"c"</span>, <span class="st">"d"</span>, <span class="st">"a"</span>]) <span class="op">==</span> <span class="va">True</span></span>
 <span id="cb1-3"><a></a><span class="cf">assert</span> detect_duplicate([<span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">0</span>]) <span class="op">==</span> <span class="va">True</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -214,7 +214,7 @@
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div id="832831d3" class="cell" data-execution_count="2">
+<div id="1df97c0e" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="kw">def</span> detect_duplicate(list_a, list_b):</span>
 <span id="cb2-2"><a></a>  <span class="co"># for every index in the second list</span></span>
 <span id="cb2-3"><a></a>  <span class="cf">for</span> index <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(list_b)):</span>
