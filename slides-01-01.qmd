@@ -18,6 +18,7 @@ slide-number: true
 
 -   Xinchen Yu (you can call me Xinchen or Dr. Yu)
 -   Office: Gould-Simpson 829
+-   Office hours: Wednesday 9:30 - 10:00am
 
 ## Who are the teaching assistants? (TAs)
 
@@ -35,7 +36,7 @@ The TAs are responsible for:
 -   Will cover many of the basic principles and concepts, such as
     -   input/output
     -   conditionals and loops (control flow)
-    -   functions
+    -   functions and decomposition
     -   data structures and more!
 -   Prerequisites: College Algebra or CSc 101 or appropriate math placement score
 
@@ -89,7 +90,9 @@ A willingness to:
 
 -   Projects
 
--   Exams and Quizzes (on paper)
+-   Weekly Quizzes on Wednesday (on paper)
+
+-   Midterms and Final Exam (on paper)
 
 ## Exams and Quizzes
 
@@ -99,30 +102,23 @@ Exams are on paper. Why?
 -   You are able to show what you learned
 -   Whiteboard coding interviews are common
 
-## Exams and Quizzes
+## Quiz 01
 
--   Midterm exams and weekly quizzes are always on Wednesday (same room as our lectures)
--   Our first quiz will be on this Wednesday, August 28
+Access gradescope, discuss with your group members and work on quiz 01. Answers can be found at:
 
+-   Syllabus
+-   TAs and Office Hours
+-   Online discussion and office hours
 
-## Syllabus Activity
-
-1.  What is the grade distribution for this class?
-2.  How many days you have for regrade requests?
-3.  When are the exams?
-
-## Attendance
-
-Access gradescope and answer the attendance question.
 
 ## Other Important Dates
 
--   Last day for students to add themselves to a course using UAccess is September 2
--   Last day for students to drop without a grade of W (withdraw) is September 8
+-   Last day for students to add themselves to a course using UAccess is Jan 22
+-   Last day for students to drop without a grade of W (withdraw) is Jan 28
 
 ## Academic integrity
 
--   You yourself do the work
+You yourself do the work.
 
 Examples of breaches of academic integrity:
 
@@ -184,7 +180,7 @@ But come prepared -- do not expect the TAs to solve problems or debug for you (y
 ## How to get help?
 
 -   Come to office hours!
--   Join [Piazza](https://piazza.com/class/lzt00zmitty5rq) and ask questions there
+-   Join [Piazza](https://piazza.com/class/m57b63l0btd7k7) and ask questions there
 -   If you have private questions, generally please make a private Piazza post
 
 # This is a difficult course, but we are here to help you succeed

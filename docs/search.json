@@ -6056,7 +6056,7 @@
     "href": "slides-01-01.html#who-am-i",
     "title": "course introduction (slides)",
     "section": "Who am I?",
-    "text": "Who am I?\n\nXinchen Yu (you can call me Xinchen or Dr. Yu)\nOffice: Gould-Simpson 829",
+    "text": "Who am I?\n\nXinchen Yu (you can call me Xinchen or Dr. Yu)\nOffice: Gould-Simpson 829\nOffice hours: Wednesday 9:30 - 10:00am",
     "crumbs": [
       "Module 1 - Basics",
       "course introduction (slides)"
@@ -6078,7 +6078,7 @@
     "href": "slides-01-01.html#what-is-this-class-anyways",
     "title": "course introduction (slides)",
     "section": "What is this class, anyways?",
-    "text": "What is this class, anyways?\n\nYou will learn how to program in Python (version 3)\nWill cover many of the basic principles and concepts, such as\n\ninput/output\nconditionals and loops (control flow)\nfunctions\ndata structures and more!\n\nPrerequisites: College Algebra or CSc 101 or appropriate math placement score",
+    "text": "What is this class, anyways?\n\nYou will learn how to program in Python (version 3)\nWill cover many of the basic principles and concepts, such as\n\ninput/output\nconditionals and loops (control flow)\nfunctions and decomposition\ndata structures and more!\n\nPrerequisites: College Algebra or CSc 101 or appropriate math placement score",
     "crumbs": [
       "Module 1 - Basics",
       "course introduction (slides)"
@@ -6133,7 +6133,7 @@
     "href": "slides-01-01.html#assessment-structure",
     "title": "course introduction (slides)",
     "section": "Assessment structure",
-    "text": "Assessment structure\n\nProgramming Problems\nShort Projects (to be completed in the lab sessions)\nProjects\nExams and Quizzes (on paper)",
+    "text": "Assessment structure\n\nProgramming Problems\nShort Projects (to be completed in the lab sessions)\nProjects\nWeekly Quizzes on Wednesday (on paper)\nMidterms and Final Exam (on paper)",
     "crumbs": [
       "Module 1 - Basics",
       "course introduction (slides)"
@@ -6177,7 +6177,7 @@
     "href": "slides-01-01.html#attendance",
     "title": "course introduction (slides)",
     "section": "Attendance",
-    "text": "Attendance\nAccess gradescope and answer the attendance question.",
+    "text": "Attendance",
     "crumbs": [
       "Module 1 - Basics",
       "course introduction (slides)"
@@ -6188,7 +6188,7 @@
     "href": "slides-01-01.html#other-important-dates",
     "title": "course introduction (slides)",
     "section": "Other Important Dates",
-    "text": "Other Important Dates\n\nLast day for students to add themselves to a course using UAccess is September 2\nLast day for students to drop without a grade of W (withdraw) is September 8",
+    "text": "Other Important Dates\n\nLast day for students to add themselves to a course using UAccess is Jan 22\nLast day for students to drop without a grade of W (withdraw) is Jan 28",
     "crumbs": [
       "Module 1 - Basics",
       "course introduction (slides)"
@@ -6199,7 +6199,7 @@
     "href": "slides-01-01.html#academic-integrity",
     "title": "course introduction (slides)",
     "section": "Academic integrity",
-    "text": "Academic integrity\n\nYou yourself do the work\n\nExamples of breaches of academic integrity:\n\nHaving a friend do the assignments for you\nUsing generative AI (for example, ChatGPT) solve the assignments for you\nCopying a solution from the internet",
+    "text": "Academic integrity\nYou yourself do the work.\nExamples of breaches of academic integrity:\n\nHaving a friend do the assignments for you\nUsing generative AI (for example, ChatGPT) solve the assignments for you\nCopying a solution from the internet",
     "crumbs": [
       "Module 1 - Basics",
       "course introduction (slides)"
@@ -8865,6 +8865,28 @@
     "crumbs": [
       "Module 1 - Basics",
       "Module 1 Assignments"
+    ]
+  },
+  {
+    "objectID": "slides-01-01.html#in-class-activity",
+    "href": "slides-01-01.html#in-class-activity",
+    "title": "course introduction (slides)",
+    "section": "In-Class Activity",
+    "text": "In-Class Activity\nAccess gradescope, discuss with your group members and work on quiz 01. Answers can be found at:\n\nSyllabus\nTAs and Office Hours\nOnline discussion and office hours",
+    "crumbs": [
+      "Module 1 - Basics",
+      "course introduction (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-01-01.html#quiz-01",
+    "href": "slides-01-01.html#quiz-01",
+    "title": "course introduction (slides)",
+    "section": "Quiz 01",
+    "text": "Quiz 01\nAccess gradescope, discuss with your group members and work on quiz 01. Answers can be found at:\n\nSyllabus\nTAs and Office Hours\nOnline discussion and office hours",
+    "crumbs": [
+      "Module 1 - Basics",
+      "course introduction (slides)"
     ]
   }
 ]

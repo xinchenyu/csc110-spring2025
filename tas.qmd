@@ -40,4 +40,4 @@ Shown below is the office hours schedule. The in-person office hours are hosted 
 
 **Note**: the instructor and TAs are NOT supposed to help you with your assignments before/during/after the class, please go to office hours or post on [piazza](zoom.html) instead.
 
-<iframe src="https://docs.google.com/spreadsheets/d/1SjIKi9f1b8YaMD0rvPUmXC3JrR7nXB3m6gDeLOxpuuU/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="600px"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThLh1d85DbXbS7dut44fZgxhMvuaecom5PyVi73M-MqblzAr33EkNwjU73BFOoGdh55xIDhpqNqv5M/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="600px"></iframe>
