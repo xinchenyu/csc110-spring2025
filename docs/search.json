@@ -6199,7 +6199,7 @@
     "href": "slides-01-01.html#academic-integrity",
     "title": "course introduction (slides)",
     "section": "Academic integrity",
-    "text": "Academic integrity\nYou yourself do the work.\nExamples of breaches of academic integrity:\n\nHaving a friend do the assignments for you\nUsing generative AI (for example, ChatGPT) solve the assignments for you\nCopying a solution from the internet",
+    "text": "Academic integrity\nYou yourself do the work.\nExamples of breaches of academic integrity:\n\nHaving a friend do the assignments for you\nUsing generative AI (for example, ChatGPT) solve the assignments for you\nCopying a solution from the internet\nSharing code is cheating",
     "crumbs": [
       "Module 1 - Basics",
       "course introduction (slides)"
@@ -6276,7 +6276,7 @@
     "href": "slides-01-01.html#how-to-get-help-4",
     "title": "course introduction (slides)",
     "section": "How to get help?",
-    "text": "How to get help?\n\nCome to office hours!\n\nBut come prepared – do not expect the TAs to solve problems or debug for you (you wouldn’t learn to solve them yourself if you are always asking other people to do it for you)\n\n1 point of extra credit if you show up to office hours (read the syllabus for specifics on this)",
+    "text": "How to get help?\nCome to office hours but come prepared!\n👍 start early, check typo, google, rubber duck…\n👎 start late, ask vague questions, ask TA to debug for you\n\nTAs help answer clarification questions\nTAs do not debug for you (you wouldn’t learn to solve them yourself if you are always asking other people to do it for you)",
     "crumbs": [
       "Module 1 - Basics",
       "course introduction (slides)"
@@ -6287,7 +6287,7 @@
     "href": "slides-01-01.html#how-to-get-help-5",
     "title": "course introduction (slides)",
     "section": "How to get help?",
-    "text": "How to get help?\n\nCome to office hours!\nJoin Piazza and ask questions there\nIf you have private questions, generally please make a private Piazza post",
+    "text": "How to get help?\n\nCome to office hours!\n\n1 point of extra credit if you show up to office hours (read the syllabus for specifics on this)\n\nJoin Piazza\n\nask on Piazza: questions about assignments, quizzes, and exams (has private options)\nemail me: only logistics-related questions",
     "crumbs": [
       "Module 1 - Basics",
       "course introduction (slides)"

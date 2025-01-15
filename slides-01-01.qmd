@@ -125,13 +125,7 @@ Examples of breaches of academic integrity:
 -   Having a friend do the assignments for you
 -   Using generative AI (for example, ChatGPT) solve the assignments for you
 -   Copying a solution from the internet
-
-##  Academic integrity
-
--  TAs are not to debug and give answers
--  TAs work with you and answer clarification questions
--  Run things on your computer (it will help you with debugging)
--  Sharing code is cheating
+-   Sharing code is cheating
 
 
 ## Materials
@@ -170,18 +164,26 @@ Also describe the steps you took to try to solve the problem yourself.
 
 ## How to get help?
 
--   Come to office hours!
+Come to office hours but come prepared!
 
-But come prepared -- do not expect the TAs to solve problems or debug for you (you wouldn't learn to solve them yourself if you are always asking other people to do it for you)
+👍  start early, check typo, google, rubber duck...
 
--   1 point of extra credit if you show up to office hours (read the syllabus for specifics on this)
+👎  start late, ask vague questions, ask TA to debug for you
+
+-   TAs help answer clarification questions 
+
+-   TAs do not debug for you (you wouldn't learn to solve them yourself if you are always asking other people to do it for you)
+
 
 
 ## How to get help?
 
 -   Come to office hours!
--   Join [Piazza](https://piazza.com/class/m57b63l0btd7k7) and ask questions there
--   If you have private questions, generally please make a private Piazza post
+    -   1 point of extra credit if you show up to office hours (read the syllabus for specifics on this)
+-   Join [Piazza](https://piazza.com/class/m57b63l0btd7k7) 
+    -   ask on Piazza: questions about assignments, quizzes, and exams (has private options)
+    -   email me: only logistics-related questions
+
 
 # This is a difficult course, but we are here to help you succeed
 
