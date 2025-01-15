@@ -28,7 +28,6 @@ Undergraduate Teaching Assistants (UGTAs) in the Department of Computer Science 
 -   Devyansh Shandilya
 -   Ruby Gilliland
 -   Steven Truong
--   Josh Samadder
 -   Chahat Walia
 -   Dilpreet Choudhary 
 
