@@ -8,7 +8,6 @@ slide-number: true
 
 ## Announcements
 
--   Trouble accessing Gradescope? Use the link on D2L
 -   D2L grades are going to be used to calculate your final grade
 -   Sign-up for your lab session at [xinchenyu.github.io/csc110-spring2025/short-projects.html](https://xinchenyu.github.io/csc110-spring2025/short-projects.html)
 -   Full schedule for office hours can be found at [xinchenyu.github.io/csc110-spring2025/tas.html](https://xinchenyu.github.io/csc110-spring2025/tas.html)
@@ -68,6 +67,28 @@ In your groups, try the following operations:
 print("They sang", "Aa" * 10)
 ```
 
+## String operations 
+
+solution 1:
+```{python}
+#| echo: true
+#| eval: true
+print("They sang", "Aa" * 10)
+```
+
+solution 2:
+```{python}
+#| echo: true
+#| eval: true
+print("They", "sang", "Aa" * 10)
+```
+
+solution 3:
+```{python}
+#| echo: true
+#| eval: true
+print("They" + " "  + "sang" + " " + "Aa" * 10)
+```
 ## Multiple `print` statements
 
 -   What will the standard output display when the code below is run?
@@ -111,6 +132,23 @@ Write a simple program that prints the following output to the python console:
 </pre>
 ```
 
+## Dealing with special characters 
+
+double quotes:
+```{python}
+#| echo: true
+#| eval: true
+print("He said, \"What's up?\"")
+print("Joe's friend didn't reply.")
+```
+
+single quotes:
+```{python}
+#| echo: true
+#| eval: true
+print('He said, "What\'s up?"')
+print('Joe\'s friend didn\'t reply.')
+```
 
 # Variables
 
@@ -133,19 +171,25 @@ family_name = "Silva"
 
 How would we print these variables?
 
-## Statements (vs expressions)
+## Variables improve readability
 
--   *Expressions* represent values or the computation of values
--   *Statements* represent executable steps in a program.
--   Statements often include expressions
-
-Here's a **statement** that invokes the `print` function with the **expression** `3 + 4` as an argument.
-
+Without variables:
 ```{python}
 #| echo: true
-#| eval: false
-print(3 + 4)
+#| eval: true
+print("The total price is ", 100 * 1.08)
 ```
+
+With variables:
+```{python}
+#| echo: true
+#| eval: true
+base_price = 100
+tax_rate = 1.08
+total_price = base_price * tax_rate
+print("The total price is ", total_price)
+```
+
 
 ## Basic Types
 

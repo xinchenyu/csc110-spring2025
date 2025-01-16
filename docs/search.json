@@ -2962,7 +2962,7 @@
     "href": "slides-01-02.html#announcements",
     "title": "python basics (slides)",
     "section": "Announcements",
-    "text": "Announcements\n\nTrouble accessing Gradescope? Use the link on D2L\nD2L grades are going to be used to calculate your final grade\nSign-up for your lab session at xinchenyu.github.io/csc110-spring2025/short-projects.html\nFull schedule for office hours can be found at xinchenyu.github.io/csc110-spring2025/tas.html",
+    "text": "Announcements\n\nD2L grades are going to be used to calculate your final grade\nSign-up for your lab session at xinchenyu.github.io/csc110-spring2025/short-projects.html\nFull schedule for office hours can be found at xinchenyu.github.io/csc110-spring2025/tas.html",
     "crumbs": [
       "Module 1 - Basics",
       "python basics (slides)"
@@ -8887,6 +8887,72 @@
     "crumbs": [
       "Module 1 - Basics",
       "course introduction (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-01-02.html#string-operations---solutions",
+    "href": "slides-01-02.html#string-operations---solutions",
+    "title": "python basics (slides)",
+    "section": "String operations - solutions",
+    "text": "String operations - solutions\nsolution 1:\n\nprint(\"They sang\", \"Aa\" * 10)\n\nThey sang AaAaAaAaAaAaAaAaAaAa\n\n\nsolution 2:\n\nprint(\"They\", \"sang\", \"Aa\" * 10)\n\nThey sang AaAaAaAaAaAaAaAaAaAa\n\n\nsolution 3:\n\nprint(\"They\" + \" \"  + \"sang\" + \" \" + \"Aa\" * 10)\n\nThey sang AaAaAaAaAaAaAaAaAaAa",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-01-02.html#dealing-with-special-characters---solutions",
+    "href": "slides-01-02.html#dealing-with-special-characters---solutions",
+    "title": "python basics (slides)",
+    "section": "Dealing with special characters - solutions",
+    "text": "Dealing with special characters - solutions\n\nprint(\"He said, \\\"What's up?\\\"\")\nprint(\"Joe's friend didn't reply.\")\n\nHe said, \"What's up?\"\nJoe's friend didn't reply.",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-01-02.html#dealing-with-special-characters-1",
+    "href": "slides-01-02.html#dealing-with-special-characters-1",
+    "title": "python basics (slides)",
+    "section": "Dealing with special characters",
+    "text": "Dealing with special characters\ndouble quotes:\n\nprint(\"He said, \\\"What's up?\\\"\")\nprint(\"Joe's friend didn't reply.\")\n\nHe said, \"What's up?\"\nJoe's friend didn't reply.\n\n\nsingle quotes:\n\nprint('He said, \"What\\'s up?\"')\nprint('Joe\\'s friend didn\\'t reply.')\n\nHe said, \"What's up?\"\nJoe's friend didn't reply.",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-01-02.html#string-operations-2",
+    "href": "slides-01-02.html#string-operations-2",
+    "title": "python basics (slides)",
+    "section": "String operations",
+    "text": "String operations\nsolution 1:\n\nprint(\"They sang\", \"Aa\" * 10)\n\nThey sang AaAaAaAaAaAaAaAaAaAa\n\n\nsolution 2:\n\nprint(\"They\", \"sang\", \"Aa\" * 10)\n\nThey sang AaAaAaAaAaAaAaAaAaAa\n\n\nsolution 3:\n\nprint(\"They\" + \" \"  + \"sang\" + \" \" + \"Aa\" * 10)\n\nThey sang AaAaAaAaAaAaAaAaAaAa",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-01-02.html#comparing-code",
+    "href": "slides-01-02.html#comparing-code",
+    "title": "python basics (slides)",
+    "section": "Comparing code",
+    "text": "Comparing code\nWithout variables:\n\nprint(\"The total price is \", 100 * 1.08)\n\nThe total price is  108.0\n\n\nWith variables:\n\nbase_price = 100\ntax_rate = 1.08\ntotal_price = base_price * tax_rate\nprint(\"The total price is \", total_price)\n\nThe total price is  108.0",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-01-02.html#variables-improve-readability",
+    "href": "slides-01-02.html#variables-improve-readability",
+    "title": "python basics (slides)",
+    "section": "Variables improve readability",
+    "text": "Variables improve readability\nWithout variables:\n\nprint(\"The total price is \", 100 * 1.08)\n\nThe total price is  108.0\n\n\nWith variables:\n\nbase_price = 100\ntax_rate = 1.08\ntotal_price = base_price * tax_rate\nprint(\"The total price is \", total_price)\n\nThe total price is  108.0",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
     ]
   }
 ]
