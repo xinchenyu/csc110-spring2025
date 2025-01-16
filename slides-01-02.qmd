@@ -177,7 +177,7 @@ Without variables:
 ```{python}
 #| echo: true
 #| eval: true
-print("The total price is ", 100 * 1.08)
+print("The total price is", 100 * 1.08)
 ```
 
 With variables:
@@ -187,7 +187,7 @@ With variables:
 base_price = 100
 tax_rate = 1.08
 total_price = base_price * tax_rate
-print("The total price is ", total_price)
+print("The total price is", total_price)
 ```
 
 

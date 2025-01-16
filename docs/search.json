@@ -8949,7 +8949,7 @@
     "href": "slides-01-02.html#variables-improve-readability",
     "title": "python basics (slides)",
     "section": "Variables improve readability",
-    "text": "Variables improve readability\nWithout variables:\n\nprint(\"The total price is \", 100 * 1.08)\n\nThe total price is  108.0\n\n\nWith variables:\n\nbase_price = 100\ntax_rate = 1.08\ntotal_price = base_price * tax_rate\nprint(\"The total price is \", total_price)\n\nThe total price is  108.0",
+    "text": "Variables improve readability\nWithout variables:\n\nprint(\"The total price is\", 100 * 1.08)\n\nThe total price is 108.0\n\n\nWith variables:\n\nbase_price = 100\ntax_rate = 1.08\ntotal_price = base_price * tax_rate\nprint(\"The total price is\", total_price)\n\nThe total price is 108.0",
     "crumbs": [
       "Module 1 - Basics",
       "python basics (slides)"
