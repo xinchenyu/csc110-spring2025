@@ -6,11 +6,11 @@ Short programming projects are due on the same day as programming problems. Whil
 
 The lowest grade for short programming projects will be dropped at the end of the semester. There will be two lab sessions (the weeks of October 15 and November 13) for you to work on a maximum of two short programming project submissions you have missed.
 
-To schedule your lab session go to [the weekly lab session spreadsheet]().
+To schedule your lab session go to [the weekly lab session spreadsheet](https://docs.google.com/spreadsheets/d/1-axhANvR1MCWTrIS_gjrdQIbFSn9WTOnQx5wlE9NC7Y/edit?usp=sharing).
 
 # Lab Schedule
 
-This is for information only. You need to [sign up for a specific lab session]() to be able to attend it.
+This is for information only. 
 
 * [Lab 01](labs/lab01.html): Jan 21 to Jan 27 ([slides](labs/lab01-slide.html))
 * [Lab 02](labs/lab02.html): Jan 28 to Feb 3 ([slides](labs/lab02-slide.html))

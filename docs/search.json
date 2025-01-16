@@ -1302,7 +1302,7 @@
     "href": "short-projects.html",
     "title": "Short Projects Dates and Instructions",
     "section": "",
-    "text": "Short programming projects are due on the same day as programming problems. While the instructions for programming problems are on the website, instructions for short projects will be available only during our weekly 50-minute in-person lab sessions.\nThe lowest grade for short programming projects will be dropped at the end of the semester. There will be two lab sessions (the weeks of October 15 and November 13) for you to work on a maximum of two short programming project submissions you have missed.\nTo schedule your lab session go to the weekly lab session spreadsheet.\n\nLab Schedule\nThis is for information only. You need to sign up for a specific lab session to be able to attend it.\n\nLab 01: Jan 21 to Jan 27 (slides)\nLab 02: Jan 28 to Feb 3 (slides)\nLab 03: Feb 04 to Feb 10 (slides)\nLab 04: Feb 11 to Feb 17 (slides)\nLab 05: Feb 18 to Feb 24 (slides)\nLab 06: Feb 25 to Mar 03 (slides)\nCATCH UP WEEK: Mar 04 to Mar 07\nLab 07: Mar 18 to Mar 24 (slides)\nLab 08: Mar 25 to Mar 31\nLab 09: Apr 01 to Apr 07\nLab 10: Apr 08 to Apr 14\nCATCH UP WEEK: Apr 15 to Apr 21\nLab 11: Apr 22 to Apr 28",
+    "text": "Short programming projects are due on the same day as programming problems. While the instructions for programming problems are on the website, instructions for short projects will be available only during our weekly 50-minute in-person lab sessions.\nThe lowest grade for short programming projects will be dropped at the end of the semester. There will be two lab sessions (the weeks of October 15 and November 13) for you to work on a maximum of two short programming project submissions you have missed.\nTo schedule your lab session go to the weekly lab session spreadsheet.\n\nLab Schedule\nThis is for information only.\n\nLab 01: Jan 21 to Jan 27 (slides)\nLab 02: Jan 28 to Feb 3 (slides)\nLab 03: Feb 04 to Feb 10 (slides)\nLab 04: Feb 11 to Feb 17 (slides)\nLab 05: Feb 18 to Feb 24 (slides)\nLab 06: Feb 25 to Mar 03 (slides)\nCATCH UP WEEK: Mar 04 to Mar 07\nLab 07: Mar 18 to Mar 24 (slides)\nLab 08: Mar 25 to Mar 31\nLab 09: Apr 01 to Apr 07\nLab 10: Apr 08 to Apr 14\nCATCH UP WEEK: Apr 15 to Apr 21\nLab 11: Apr 22 to Apr 28",
     "crumbs": [
       "Short Projects",
       "Short Projects Dates and Instructions"
@@ -2401,7 +2401,7 @@
     "href": "slides-16-01.html#write-a-function---solution",
     "title": "final exam review (slides)",
     "section": "write a function - solution",
-    "text": "write a function - solution\n\ndef create_list(items, n):\n  new_list = [ ]\n  for value in items:\n    new_list.extend([value] * n)\n  return new_list\n\ndef main():\n  items = {\"banana\", \"apple\", \"pear\"}\n  print(create_list(items, 2))  \n  \nmain()\n\n['pear', 'pear', 'banana', 'banana', 'apple', 'apple']",
+    "text": "write a function - solution\n\ndef create_list(items, n):\n  new_list = [ ]\n  for value in items:\n    new_list.extend([value] * n)\n  return new_list\n\ndef main():\n  items = {\"banana\", \"apple\", \"pear\"}\n  print(create_list(items, 2))  \n  \nmain()\n\n['apple', 'apple', 'pear', 'pear', 'banana', 'banana']",
     "crumbs": [
       "Module 16 - Review",
       "final exam review (slides)"
@@ -3024,6 +3024,17 @@
     ]
   },
   {
+    "objectID": "slides-01-02.html#string-operations-2",
+    "href": "slides-01-02.html#string-operations-2",
+    "title": "python basics (slides)",
+    "section": "String operations",
+    "text": "String operations\nsolution 1:\n\nprint(\"They sang\", \"Aa\" * 10)\n\nThey sang AaAaAaAaAaAaAaAaAaAa\n\n\nsolution 2:\n\nprint(\"They\", \"sang\", \"Aa\" * 10)\n\nThey sang AaAaAaAaAaAaAaAaAaAa\n\n\nsolution 3:\n\nprint(\"They\" + \" \"  + \"sang\" + \" \" + \"Aa\" * 10)\n\nThey sang AaAaAaAaAaAaAaAaAaAa",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
+    ]
+  },
+  {
     "objectID": "slides-01-02.html#multiple-print-statements",
     "href": "slides-01-02.html#multiple-print-statements",
     "title": "python basics (slides)",
@@ -3057,6 +3068,17 @@
     ]
   },
   {
+    "objectID": "slides-01-02.html#dealing-with-special-characters-1",
+    "href": "slides-01-02.html#dealing-with-special-characters-1",
+    "title": "python basics (slides)",
+    "section": "Dealing with special characters",
+    "text": "Dealing with special characters\ndouble quotes:\n\nprint(\"He said, \\\"What's up?\\\"\")\nprint(\"Joe's friend didn't reply.\")\n\nHe said, \"What's up?\"\nJoe's friend didn't reply.\n\n\nsingle quotes:\n\nprint('He said, \"What\\'s up?\"')\nprint('Joe\\'s friend didn\\'t reply.')\n\nHe said, \"What's up?\"\nJoe's friend didn't reply.",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
+    ]
+  },
+  {
     "objectID": "slides-01-02.html#variables-and-assignment",
     "href": "slides-01-02.html#variables-and-assignment",
     "title": "python basics (slides)",
@@ -3079,11 +3101,11 @@
     ]
   },
   {
-    "objectID": "slides-01-02.html#statements-vs-expressions",
-    "href": "slides-01-02.html#statements-vs-expressions",
+    "objectID": "slides-01-02.html#variables-improve-readability",
+    "href": "slides-01-02.html#variables-improve-readability",
     "title": "python basics (slides)",
-    "section": "Statements (vs expressions)",
-    "text": "Statements (vs expressions)\n\nExpressions represent values or the computation of values\nStatements represent executable steps in a program.\nStatements often include expressions\n\nHere’s a statement that invokes the print function with the expression 3 + 4 as an argument.\n\nprint(3 + 4)",
+    "section": "Variables improve readability",
+    "text": "Variables improve readability\nWithout variables:\n\nprint(\"The total price is\", 100 * 1.08)\n\nThe total price is 108.0\n\n\nWith variables:\n\nbase_price = 100\ntax_rate = 1.08\ntotal_price = base_price * tax_rate\nprint(\"The total price is\", total_price)\n\nThe total price is 108.0",
     "crumbs": [
       "Module 1 - Basics",
       "python basics (slides)"
@@ -6056,7 +6078,7 @@
     "href": "slides-01-01.html#who-am-i",
     "title": "course introduction (slides)",
     "section": "Who am I?",
-    "text": "Who am I?\n\nXinchen Yu (you can call me Xinchen or Dr. Yu)\nOffice: Gould-Simpson 829\nOffice hours: Wednesday 9:30 - 10:00am",
+    "text": "Who am I?\n\nXinchen Yu (you can call me Xinchen or Dr. Yu)\nOffice: Gould-Simpson 829\nOffice hours: Wednesday 10:30am - 12:00pm",
     "crumbs": [
       "Module 1 - Basics",
       "course introduction (slides)"
@@ -6151,33 +6173,11 @@
     ]
   },
   {
-    "objectID": "slides-01-01.html#exams-and-quizzes-1",
-    "href": "slides-01-01.html#exams-and-quizzes-1",
+    "objectID": "slides-01-01.html#quiz-01",
+    "href": "slides-01-01.html#quiz-01",
     "title": "course introduction (slides)",
-    "section": "Exams and Quizzes",
-    "text": "Exams and Quizzes\n\nMidterm exams and weekly quizzes are always on Wednesday (same room as our lectures)\nOur first quiz will be on this Wednesday, August 28",
-    "crumbs": [
-      "Module 1 - Basics",
-      "course introduction (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-01-01.html#syllabus-activity",
-    "href": "slides-01-01.html#syllabus-activity",
-    "title": "course introduction (slides)",
-    "section": "Syllabus Activity",
-    "text": "Syllabus Activity\n\nWhat is the grade distribution for this class?\nHow many days you have for regrade requests?\nWhen are the exams?",
-    "crumbs": [
-      "Module 1 - Basics",
-      "course introduction (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-01-01.html#attendance",
-    "href": "slides-01-01.html#attendance",
-    "title": "course introduction (slides)",
-    "section": "Attendance",
-    "text": "Attendance",
+    "section": "Quiz 01",
+    "text": "Quiz 01\nAccess gradescope, discuss with your group members and work on quiz 01. Answers can be found at:\n\nSyllabus\nTAs and Office Hours\nOnline discussion and office hours",
     "crumbs": [
       "Module 1 - Basics",
       "course introduction (slides)"
@@ -6200,17 +6200,6 @@
     "title": "course introduction (slides)",
     "section": "Academic integrity",
     "text": "Academic integrity\nYou yourself do the work.\nExamples of breaches of academic integrity:\n\nHaving a friend do the assignments for you\nUsing generative AI (for example, ChatGPT) solve the assignments for you\nCopying a solution from the internet\nSharing code is cheating",
-    "crumbs": [
-      "Module 1 - Basics",
-      "course introduction (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-01-01.html#academic-integrity-1",
-    "href": "slides-01-01.html#academic-integrity-1",
-    "title": "course introduction (slides)",
-    "section": "Academic integrity",
-    "text": "Academic integrity\n\nTAs are not to debug and give answers\nTAs work with you and answer clarification questions\nRun things on your computer (it will help you with debugging)\nSharing code is cheating",
     "crumbs": [
       "Module 1 - Basics",
       "course introduction (slides)"
@@ -6496,7 +6485,7 @@
     "href": "index.html",
     "title": "CSc 110 Computer Programming I",
     "section": "",
-    "text": "Welcome to CSc 110!\nThis is an introduction to programming with an emphasis on solving problems drawn from a variety of domains. Topics include basic control and data structures, problem solving strategies, and software development tools and techniques. Specifically, the Python programming language will be taught.\n\nD2L: d2l\nGradescope: Gradescope\nPiazza: Piazza (Access code: wildcats)\n\nWhere to start:\n\nSyllabus\nSchedule\n\n\n\nInstructor Information\n\nXinchen Yu\n\nOffice: Gould-Simpson 829\nEmail: xinchenyu@arizona.edu\nInstructor Website: xinchenyu.github.io\nOffice hours (open door, drop in, my office GS 829):\n\nWednesday 9:30am to 11:00am"
+    "text": "Welcome to CSc 110!\nThis is an introduction to programming with an emphasis on solving problems drawn from a variety of domains. Topics include basic control and data structures, problem solving strategies, and software development tools and techniques. Specifically, the Python programming language will be taught.\n\nD2L: d2l\nGradescope: Gradescope\nPiazza: Piazza (Access code: wildcats)\n\nWhere to start:\n\nSyllabus\nSchedule\n\n\n\nInstructor Information\n\nXinchen Yu\n\nOffice: Gould-Simpson 829\nEmail: xinchenyu@arizona.edu\nInstructor Website: xinchenyu.github.io\nOffice hours (open door, drop in, my office GS 829):\n\nWednesday 10:30am to 12:00pm"
   },
   {
     "objectID": "slides-13-03.html#announcements",
@@ -7955,7 +7944,7 @@
     "href": "slides-06-02.html#random-module",
     "title": "random (slides)",
     "section": "random module",
-    "text": "random module\nWe need to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random() #returns a random float between 0 and 1\nprint(n)\n\nn = random.randint(0, 9) #returns a random integer betweem 0 and 9.\n\n\nprint(n)\n\n0.6798828067844223\n2",
+    "text": "random module\nWe need to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random() #returns a random float between 0 and 1\nprint(n)\n\nn = random.randint(0, 9) #returns a random integer betweem 0 and 9.\n\n\nprint(n)\n\n0.4367642429709302\n8",
     "crumbs": [
       "Module 6 - Data Structures (lists)",
       "random (slides)"
@@ -7977,7 +7966,7 @@
     "href": "slides-06-02.html#write-a-function-solution",
     "title": "random (slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nPeter",
+    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nJoan",
     "crumbs": [
       "Module 6 - Data Structures (lists)",
       "random (slides)"
@@ -8865,94 +8854,6 @@
     "crumbs": [
       "Module 1 - Basics",
       "Module 1 Assignments"
-    ]
-  },
-  {
-    "objectID": "slides-01-01.html#in-class-activity",
-    "href": "slides-01-01.html#in-class-activity",
-    "title": "course introduction (slides)",
-    "section": "In-Class Activity",
-    "text": "In-Class Activity\nAccess gradescope, discuss with your group members and work on quiz 01. Answers can be found at:\n\nSyllabus\nTAs and Office Hours\nOnline discussion and office hours",
-    "crumbs": [
-      "Module 1 - Basics",
-      "course introduction (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-01-01.html#quiz-01",
-    "href": "slides-01-01.html#quiz-01",
-    "title": "course introduction (slides)",
-    "section": "Quiz 01",
-    "text": "Quiz 01\nAccess gradescope, discuss with your group members and work on quiz 01. Answers can be found at:\n\nSyllabus\nTAs and Office Hours\nOnline discussion and office hours",
-    "crumbs": [
-      "Module 1 - Basics",
-      "course introduction (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-01-02.html#string-operations---solutions",
-    "href": "slides-01-02.html#string-operations---solutions",
-    "title": "python basics (slides)",
-    "section": "String operations - solutions",
-    "text": "String operations - solutions\nsolution 1:\n\nprint(\"They sang\", \"Aa\" * 10)\n\nThey sang AaAaAaAaAaAaAaAaAaAa\n\n\nsolution 2:\n\nprint(\"They\", \"sang\", \"Aa\" * 10)\n\nThey sang AaAaAaAaAaAaAaAaAaAa\n\n\nsolution 3:\n\nprint(\"They\" + \" \"  + \"sang\" + \" \" + \"Aa\" * 10)\n\nThey sang AaAaAaAaAaAaAaAaAaAa",
-    "crumbs": [
-      "Module 1 - Basics",
-      "python basics (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-01-02.html#dealing-with-special-characters---solutions",
-    "href": "slides-01-02.html#dealing-with-special-characters---solutions",
-    "title": "python basics (slides)",
-    "section": "Dealing with special characters - solutions",
-    "text": "Dealing with special characters - solutions\n\nprint(\"He said, \\\"What's up?\\\"\")\nprint(\"Joe's friend didn't reply.\")\n\nHe said, \"What's up?\"\nJoe's friend didn't reply.",
-    "crumbs": [
-      "Module 1 - Basics",
-      "python basics (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-01-02.html#dealing-with-special-characters-1",
-    "href": "slides-01-02.html#dealing-with-special-characters-1",
-    "title": "python basics (slides)",
-    "section": "Dealing with special characters",
-    "text": "Dealing with special characters\ndouble quotes:\n\nprint(\"He said, \\\"What's up?\\\"\")\nprint(\"Joe's friend didn't reply.\")\n\nHe said, \"What's up?\"\nJoe's friend didn't reply.\n\n\nsingle quotes:\n\nprint('He said, \"What\\'s up?\"')\nprint('Joe\\'s friend didn\\'t reply.')\n\nHe said, \"What's up?\"\nJoe's friend didn't reply.",
-    "crumbs": [
-      "Module 1 - Basics",
-      "python basics (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-01-02.html#string-operations-2",
-    "href": "slides-01-02.html#string-operations-2",
-    "title": "python basics (slides)",
-    "section": "String operations",
-    "text": "String operations\nsolution 1:\n\nprint(\"They sang\", \"Aa\" * 10)\n\nThey sang AaAaAaAaAaAaAaAaAaAa\n\n\nsolution 2:\n\nprint(\"They\", \"sang\", \"Aa\" * 10)\n\nThey sang AaAaAaAaAaAaAaAaAaAa\n\n\nsolution 3:\n\nprint(\"They\" + \" \"  + \"sang\" + \" \" + \"Aa\" * 10)\n\nThey sang AaAaAaAaAaAaAaAaAaAa",
-    "crumbs": [
-      "Module 1 - Basics",
-      "python basics (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-01-02.html#comparing-code",
-    "href": "slides-01-02.html#comparing-code",
-    "title": "python basics (slides)",
-    "section": "Comparing code",
-    "text": "Comparing code\nWithout variables:\n\nprint(\"The total price is \", 100 * 1.08)\n\nThe total price is  108.0\n\n\nWith variables:\n\nbase_price = 100\ntax_rate = 1.08\ntotal_price = base_price * tax_rate\nprint(\"The total price is \", total_price)\n\nThe total price is  108.0",
-    "crumbs": [
-      "Module 1 - Basics",
-      "python basics (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-01-02.html#variables-improve-readability",
-    "href": "slides-01-02.html#variables-improve-readability",
-    "title": "python basics (slides)",
-    "section": "Variables improve readability",
-    "text": "Variables improve readability\nWithout variables:\n\nprint(\"The total price is\", 100 * 1.08)\n\nThe total price is 108.0\n\n\nWith variables:\n\nbase_price = 100\ntax_rate = 1.08\ntotal_price = base_price * tax_rate\nprint(\"The total price is\", total_price)\n\nThe total price is 108.0",
-    "crumbs": [
-      "Module 1 - Basics",
-      "python basics (slides)"
     ]
   }
 ]

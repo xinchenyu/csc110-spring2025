@@ -18,7 +18,7 @@ slide-number: true
 
 -   Xinchen Yu (you can call me Xinchen or Dr. Yu)
 -   Office: Gould-Simpson 829
--   Office hours: Wednesday 9:30 - 10:00am
+-   Office hours: Wednesday 10:30am - 12:00pm
 
 ## Who are the teaching assistants? (TAs)
 
