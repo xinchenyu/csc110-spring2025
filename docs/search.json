@@ -3050,7 +3050,7 @@
     "href": "slides-01-02.html#multiple-print-statements-1",
     "title": "python basics (slides)",
     "section": "Multiple print statements",
-    "text": "Multiple print statements\n\nBy default, the print function sends the output cursor to the next line after printing\n\n\nprint('Are', end = ' ')\nprint('You', end = ' ')\nprint('In', end = ' ')\nprint('College?', end = ' ')\n\nAre You In College? \n\n\nWhat other characters can you use for values for the end parameter?",
+    "text": "Multiple print statements\n\nBy default, the print function moves the cursor to the next line after printing, unless you specify otherwise.\n\n\nprint('Are', end = ' ')\nprint('You', end = ' ')\nprint('In', end = ' ')\nprint('College?', end = ' ')\n\nAre You In College? \n\n\nWhat other characters can you use for values for the end parameter?",
     "crumbs": [
       "Module 1 - Basics",
       "python basics (slides)"

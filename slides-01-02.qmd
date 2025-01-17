@@ -94,6 +94,7 @@ solution 3:
 #| eval: true
 print("They" + " "  + "sang" + " " + "Aa" * 10)
 ```
+
 ## Multiple `print` statements
 
 -   What will the standard output display when the code below is run?
@@ -109,7 +110,7 @@ print('College?')
 
 ## Multiple `print` statements
 
--   By default, the `print` function sends the output cursor to the next line after printing
+-   By default, the `print` function moves the cursor to the next line after printing, unless you specify otherwise.
 
 ```{python}
 #| echo: true
