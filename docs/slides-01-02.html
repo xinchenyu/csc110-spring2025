@@ -212,6 +212,7 @@
 <li>Sign-up for your lab session at <a href="https://xinchenyu.github.io/csc110-spring2025/short-projects.html">xinchenyu.github.io/csc110-spring2025/short-projects.html</a></li>
 <li>My office hours changed to Wednesday 10:30am-12:00pm.</li>
 <li>Full schedule for office hours can be found at <a href="https://xinchenyu.github.io/csc110-spring2025/tas.html">xinchenyu.github.io/csc110-spring2025/tas.html</a></li>
+<li>Next lecture is Jan 22, next Wednesday.</li>
 </ul>
 </section>
 <section id="did-you-set-up-your-workspace" class="slide level2">
@@ -239,14 +240,14 @@
 <li><code>print()</code> sends characters (strings) to the <strong>standard output</strong></li>
 <li>By default, the <strong>standard output</strong> of a python program goes to the console.</li>
 </ul>
-<div id="77e8d4fd" class="cell" data-execution_count="1">
+<div id="9959d46a" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="bu">print</span>(<span class="st">"some characters"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>some characters</code></pre>
 </div>
 </div>
 <p><br></p>
-<div id="a5d0d1f9" class="cell" data-execution_count="2">
+<div id="83e8def2" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="bu">print</span>(<span class="st">'some characters'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>some characters</code></pre>
@@ -259,7 +260,7 @@
 <ul>
 <li>What will the standard output display when the code below is run?</li>
 </ul>
-<div id="30fa8f4c" class="cell" data-execution_count="3">
+<div id="b162fa16" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="bu">print</span>(<span class="st">"hello"</span> <span class="op">+</span> <span class="st">"world"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
@@ -271,7 +272,7 @@
 <li>String concatenation with <code>+</code> and <code>,</code>. What is the difference?</li>
 <li>Combine both repetition and concatenation to print the following:</li>
 </ul>
-<div id="6e6275d7" class="cell" data-execution_count="4">
+<div id="8bcaa6c8" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>They sang AaAaAaAaAaAaAaAaAaAa</code></pre>
 </div>
@@ -280,21 +281,21 @@
 <section id="string-operations-2" class="slide level2">
 <h2>String operations</h2>
 <p>solution 1:</p>
-<div id="f43e31ab" class="cell" data-execution_count="5">
+<div id="9dad67a5" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="bu">print</span>(<span class="st">"They sang"</span>, <span class="st">"Aa"</span> <span class="op">*</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>They sang AaAaAaAaAaAaAaAaAaAa</code></pre>
 </div>
 </div>
 <p>solution 2:</p>
-<div id="862edfc3" class="cell" data-execution_count="6">
+<div id="f906d020" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="bu">print</span>(<span class="st">"They"</span>, <span class="st">"sang"</span>, <span class="st">"Aa"</span> <span class="op">*</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>They sang AaAaAaAaAaAaAaAaAaAa</code></pre>
 </div>
 </div>
 <p>solution 3:</p>
-<div id="1d530947" class="cell" data-execution_count="7">
+<div id="3f076154" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="bu">print</span>(<span class="st">"They"</span> <span class="op">+</span> <span class="st">" "</span>  <span class="op">+</span> <span class="st">"sang"</span> <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> <span class="st">"Aa"</span> <span class="op">*</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>They sang AaAaAaAaAaAaAaAaAaAa</code></pre>
@@ -306,7 +307,7 @@
 <ul>
 <li>What will the standard output display when the code below is run?</li>
 </ul>
-<div id="7fa509a3" class="cell" data-execution_count="8">
+<div id="7d5224ce" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="bu">print</span>(<span class="st">'Are'</span>)</span>
 <span id="cb13-2"><a></a><span class="bu">print</span>(<span class="st">'You'</span>)</span>
 <span id="cb13-3"><a></a><span class="bu">print</span>(<span class="st">'In'</span>)</span>
@@ -318,7 +319,7 @@
 <ul>
 <li>By default, the <code>print</code> function sends the output cursor to the next line after printing</li>
 </ul>
-<div id="7454fe4e" class="cell" data-execution_count="9">
+<div id="d0b98970" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="bu">print</span>(<span class="st">'Are'</span>, end <span class="op">=</span> <span class="st">' '</span>)</span>
 <span id="cb14-2"><a></a><span class="bu">print</span>(<span class="st">'You'</span>, end <span class="op">=</span> <span class="st">' '</span>)</span>
 <span id="cb14-3"><a></a><span class="bu">print</span>(<span class="st">'In'</span>, end <span class="op">=</span> <span class="st">' '</span>)</span>
@@ -342,7 +343,7 @@
 <section id="dealing-with-special-characters-1" class="slide level2">
 <h2>Dealing with special characters</h2>
 <p>double quotes:</p>
-<div id="362df8ea" class="cell" data-execution_count="10">
+<div id="4823beb6" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="bu">print</span>(<span class="st">"He said, </span><span class="ch">\"</span><span class="st">What's up?</span><span class="ch">\"</span><span class="st">"</span>)</span>
 <span id="cb16-2"><a></a><span class="bu">print</span>(<span class="st">"Joe's friend didn't reply."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -351,7 +352,7 @@ Joe's friend didn't reply.</code></pre>
 </div>
 </div>
 <p>single quotes:</p>
-<div id="e736cf3b" class="cell" data-execution_count="11">
+<div id="eb7725e1" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="bu">print</span>(<span class="st">'He said, "What</span><span class="ch">\'</span><span class="st">s up?"'</span>)</span>
 <span id="cb18-2"><a></a><span class="bu">print</span>(<span class="st">'Joe</span><span class="ch">\'</span><span class="st">s friend didn</span><span class="ch">\'</span><span class="st">t reply.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -376,7 +377,7 @@ Joe's friend didn't reply.</code></pre>
 <section id="demonstration-of-variable-assignment" class="slide level2">
 <h2>Demonstration of variable assignment</h2>
 <p>Variable assignment does not produce any output to the console. Run the following code:</p>
-<div id="ea36f047" class="cell" data-execution_count="12">
+<div id="613f6894" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a>first_name <span class="op">=</span> <span class="st">"Mary"</span></span>
 <span id="cb20-2"><a></a>family_name <span class="op">=</span> <span class="st">"Silva"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -385,14 +386,14 @@ Joe's friend didn't reply.</code></pre>
 <section id="variables-improve-readability" class="slide level2">
 <h2>Variables improve readability</h2>
 <p>Without variables:</p>
-<div id="f9413098" class="cell" data-execution_count="13">
+<div id="40b47519" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a><span class="bu">print</span>(<span class="st">"The total price is"</span>, <span class="dv">100</span> <span class="op">*</span> <span class="fl">1.08</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>The total price is 108.0</code></pre>
 </div>
 </div>
 <p>With variables:</p>
-<div id="1b31617f" class="cell" data-execution_count="14">
+<div id="09ad6e27" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a></a>base_price <span class="op">=</span> <span class="dv">100</span></span>
 <span id="cb23-2"><a></a>tax_rate <span class="op">=</span> <span class="fl">1.08</span></span>
 <span id="cb23-3"><a></a>total_price <span class="op">=</span> base_price <span class="op">*</span> tax_rate</span>
@@ -428,7 +429,7 @@ Joe's friend didn't reply.</code></pre>
 <h2>Operations and Variable Assignments</h2>
 <p>Variable assignments are not like math — they can appear in equations that make no mathematical sense.</p>
 <p><br></p>
-<div id="9d7070b3" class="cell" data-execution_count="15">
+<div id="74d18395" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a>x <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb25-2"><a></a><span class="bu">print</span>(x)</span>
 <span id="cb25-3"><a></a>x <span class="op">=</span> x <span class="op">+</span> <span class="dv">2</span></span>
@@ -450,7 +451,7 @@ Joe's friend didn't reply.</code></pre>
 <h2>Comments</h2>
 <p>Computer program can include comments, which are simply text that is meant to be read, but not executed.</p>
 <p><br></p>
-<div id="10a39a9e" class="cell" data-execution_count="16">
+<div id="295550f3" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a></a><span class="co"># assign a radius value</span></span>
 <span id="cb26-2"><a></a>radius <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb26-3"><a></a><span class="co"># compute the area of a circle</span></span>
