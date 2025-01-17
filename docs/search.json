@@ -2962,7 +2962,7 @@
     "href": "slides-01-02.html#announcements",
     "title": "python basics (slides)",
     "section": "Announcements",
-    "text": "Announcements\n\nD2L grades are going to be used to calculate your final grade\nSign-up for your lab session at xinchenyu.github.io/csc110-spring2025/short-projects.html\nFull schedule for office hours can be found at xinchenyu.github.io/csc110-spring2025/tas.html",
+    "text": "Announcements\n\nSign-up for your lab session at xinchenyu.github.io/csc110-spring2025/short-projects.html\nMy office hours changed to Wednesday 10:30am-12:00pm.\nFull schedule for office hours can be found at xinchenyu.github.io/csc110-spring2025/tas.html",
     "crumbs": [
       "Module 1 - Basics",
       "python basics (slides)"
@@ -8854,6 +8854,17 @@
     "crumbs": [
       "Module 1 - Basics",
       "Module 1 Assignments"
+    ]
+  },
+  {
+    "objectID": "slides-01-02.html#cs-buddy-mentor-program-sign-up",
+    "href": "slides-01-02.html#cs-buddy-mentor-program-sign-up",
+    "title": "python basics (slides)",
+    "section": "CS Buddy Mentor Program Sign-Up",
+    "text": "CS Buddy Mentor Program Sign-Up\n\nsign-up QR Code",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
     ]
   }
 ]

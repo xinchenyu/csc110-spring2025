@@ -6,10 +6,14 @@ slide-number: true
 
 # CSc 110 Python Basics
 
+## CS Buddy Mentor Program Sign-Up
+
+![sign-up QR Code](images/csBuddy.jpeg)
+
 ## Announcements
 
--   D2L grades are going to be used to calculate your final grade
 -   Sign-up for your lab session at [xinchenyu.github.io/csc110-spring2025/short-projects.html](https://xinchenyu.github.io/csc110-spring2025/short-projects.html)
+-   My office hours changed to Wednesday 10:30am-12:00pm.
 -   Full schedule for office hours can be found at [xinchenyu.github.io/csc110-spring2025/tas.html](https://xinchenyu.github.io/csc110-spring2025/tas.html)
 
 ## Did you set up your workspace?
@@ -269,5 +273,4 @@ The purpose of comments is to "document" the program so that subsequent readers 
 
 -  What if we want to get the area of circles when the radius is 1, 2, 3, 4 and 5?
 -  Can we do it more efficiently?
-
 
