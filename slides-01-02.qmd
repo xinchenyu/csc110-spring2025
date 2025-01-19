@@ -208,21 +208,129 @@ Use the function `type()` with each literal type.
 
 ## Operations
 
+-   `+` : plus 
 
+-   `-` : minus
+
+-   `*` : multiple
+
+-   `/` : divide
+
+-   `**` : power
+
+-  `//` : divide and floor
+
+-  `%` : modulos
+   
 <br />
 
+
+## Operations - examples
+
+```{python}
+#| echo: true
+#| eval: true
+print(10 + 5 - 5) # addition and subtraction
+print(10 * 5 / 4) # multiplication and division
+print(25 ** 2) # square 
+print(25 ** 0.5) # square root 
+print(13 // 4) # division and round down to the nearest integer
+print(13 % 4) # remainder 
+```
+
+# Order of Operations
+
+## PEMDAS
+
+-   What does PEMDAS stand for?
+-   The operator precedence:
+    -   **P**arentheses
+    -   **E**xponentiation
+    -   **M**ultiplication and **D**ivision (including // and %)
+    -   **A**ddition and **S**ubtraction
+
+## PEMDAS
+
+What value will each of these variables take on? No computers!
+
 ```{=html}
-<pre style="font-size: 30px">
+<pre>
+a1 = 5 /  5 * 10  * 5
+a2 = 5 / (5 * 10) * 5
 
-   +
-   -
-   *
-   /
-   **
+b1 = 5 *  10 - 2
+b2 = 5 * (10 - 2)
 
+c = (3 // (4 // 5)) + 1
 </pre>
 ```
 
+## PEMDAS -- answer
+
+```{python}
+#| echo: true
+#| eval: true
+a1 = 5 /  5 * 10  * 5
+a2 = 5 / (5 * 10) * 5
+
+b1 = 5 *  10 - 2
+b2 = 5 * (10 - 2)
+
+# c = (3 // (4 // 5)) + 1 ERROR -- Zero Division
+
+print(a1)
+print(a2)
+print(b1)
+print(b2)
+```
+
+Note that the division operator returns a float even when both numerator and denominator are integers
+
+
+# Rounding numbers with built-in function `round()`
+
+## `round()`
+
+Use the round() function to get a floating-point number rounded to the specified number of decimals.
+
+Syntax:
+
+```{python}
+#| echo: true
+#| eval: false
+round(number, ndigits*)
+```
+
+The number of digits (`ndigits`) is optional, but we will often round number to two decimals:
+
+```{python}
+#| echo: true
+#| eval: true
+round(392.68750000000006, 2)
+```
+
+## `round()`
+
+Use the round() function to get a floating-point number rounded to the specified number of decimals.
+
+Syntax:
+
+```{python}
+#| echo: true
+#| eval: false
+round(number, ndigits*)
+```
+
+Rounding is done toward the nearest even choice:
+
+```{python}
+#| echo: true
+#| eval: true
+print(round(51.6))
+print(round(51.4))
+print(round(51.5))
+print(round(50.5))
+```
 
 
 ## Operations and Variable Assignments
@@ -249,30 +357,38 @@ print(x)
 Write code to calculate the area of a circle when radius is 3:
 
 1.  Assign integer 3 to radius
-2.  Calculate the area (use $\pi$ as 3.1415)
+2.  Calculate the area (use $\pi$ as 3.1415) and round it to two decimals
 3.  Print the area
 
 ## Comments
 
-Computer program can include comments, which are simply text that is meant to be read, but not executed.
-
-<br />
+Comments are text that is meant to be read, but not executed. The purpose is to improve readability.
 
 ```{python}
 #| echo: true
-#| eval: false
+#| eval: true
 # assign a radius value
 radius = 3
-# compute the area of a circle
-area = 3.1415 * radius ** 2
+# compute the area of a circle and round to two decimals
+area = round(3.1415 * radius ** 2, 2)
+# print the area
+print(area)
 ```
 
-<br />
-
-The purpose of comments is to "document" the program so that subsequent readers can more easily understand it, or learn things about it (e.g., its original author).
 
 ## Questions
 
 -  What if we want to get the area of circles when the radius is 1, 2, 3, 4 and 5?
 -  Can we do it more efficiently?
 
+
+## Quiz 02
+
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+</center>
+
+You have 5 minutes to complete the quiz.
+
+Your formula in your function should be Python code (in other words, do not just copy the formula in the instructions, make it so it uses **actual symbols for Python operators**)

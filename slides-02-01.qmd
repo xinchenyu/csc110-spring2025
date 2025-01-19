@@ -44,7 +44,6 @@ def add_one(n):
 -   the body (or content) of the function is indented
 -   `return n + 1` is a statement that causes the function to cease and produce the value n + 1
 
-
 ## Function to calculate area of a circle
 
 Remember this from the last set of slides?
@@ -54,30 +53,22 @@ Remember this from the last set of slides?
 #| eval: false
 # assign a radius value
 radius = 3
-# compute the area of a circle
-area = 3.1415 * radius ** 2
+# compute the rounded area of a circle
+area = round(3.1415 * radius ** 2, 2)
+# print the area
+print(area)
 ```
-
-<br />
-
-Calculating the `area` of a circle is an `abstraction`.
-
-In the code above, that is done by a variable *assignment* with a variable named `area`.
-
-Let's create a function called `area`, that given a `radius` parameter, it returns the `area` of the circle.
 
 
 ## Function to calculate area of a circle
 
+Function name is `calculate_area`. Given a `radius` parameter, it returns the rounded `area` of the circle.
 ```{python}
 #| echo: true
 #| eval: false
 def calculate_area(radius):
-  # calculate the area first
   area = 3.1415 * radius ** 2
-  
-  # return calculated area
-  return area
+  return round(area, 2)
 
 def main():
   print(calculate_area(3)) # 28.27
@@ -86,183 +77,6 @@ def main():
 main()
 ```
 
-## Function to calculate the volume of a cylinder
-
-Write a function that does the following:
-
-1.  Its name is `volume`
-2.  It takes two integer arguments: `radius` and `height`
-3.  It calculates the volume of a cylinder, based on `radius` and `height`. Volume is area multiplied by height.
-4.  It returns the float value for calculated volume.
-
-## Submit function to Gradescope
-
--   Name your python script with the `volume` function `cylinder.py`
--   Submit your `.py` file to [Gradescope, Attendance August 30](https://www.gradescope.com/courses/822022)
--   You can resubmit as many times as you need (up to the deadline)
--   You can look at your `Submission History` and activate a previous submission
-
-## Function to calculate the volume of a cylinder
-
-```{python}
-#| echo: true
-#| eval: false
-def volume(radius, height):
-  # calculate the area first
-  area = 3.1415 * radius ** 2
-  
-  # multiply area by height
-  vol = area * height
-  
-  # return calculated volume
-  return vol
-
-def main():
-  print(volume(1, 2)) # 6.283
-  print(volume(6, 10)) # 1130.94
-  print(volume(5, 5)) # 392.68750000000006
-  
-main()
-```
-
-## More operations
-
-Try the following operators with the different types in python:
-
-<br />
-
-```{=html}
-<pre style="font-size: 30px">
-
-   +
-   -
-   *
-   /
-   **
-   
-   //
-   %
-
-</pre>
-```
-
-# Order of Operations
-
-## PEMDAS
-
--   What does PEMDAS stand for?
--   The operator precedence:
-    -   **P**arentheses
-    -   **E**xponentiation
-    -   **M**ultiplication and **D**ivision (including // and %)
-    -   **A**ddition and **S**ubtraction
-
-## PEMDAS
-
-What value will each of these variables take on? No computers!
-
-```{=html}
-<pre>
-a1 = 5 /  5 * 10  * 5
-a2 = 5 / (5 * 10) * 5
-
-b1 = 5 *  10 - 2
-b2 = 5 * (10 - 2)
-
-c = (3 // (4 // 5)) + 1
-</pre>
-```
-## PEMDAS -- answer
-
-```{python}
-#| echo: true
-#| eval: true
-a1 = 5 /  5 * 10  * 5
-a2 = 5 / (5 * 10) * 5
-
-b1 = 5 *  10 - 2
-b2 = 5 * (10 - 2)
-
-# c = (3 // (4 // 5)) + 1 ERROR -- Zero Division
-
-print(a1)
-print(a2)
-print(b1)
-print(b2)
-```
-
-Note that the division operator returns a float even when both numerator and denominator are integers
-
-
-
-
-# Rounding numbers with built-in function `round()`
-
-## `round()`
-
-Use the round() function to get a floating-point number rounded to the specified number of decimals.
-
-Syntax:
-
-```{python}
-#| echo: true
-#| eval: false
-round(number, ndigits*)
-```
-
-The number of digits (`ndigits`) is optional, but we will often round number to two decimals:
-
-```{python}
-#| echo: true
-#| eval: true
-round(392.68750000000006, 2)
-```
-
-## `round()`
-
-Use the round() function to get a floating-point number rounded to the specified number of decimals.
-
-Syntax:
-
-```{python}
-#| echo: true
-#| eval: false
-round(number, ndigits*)
-```
-
-Rounding is done toward the nearest even choice. What would these round to? (discuss with your group)
-
-```{python}
-#| echo: true
-#| eval: false
-round(51.6)
-round(51.4)
-round(51.5)
-round(50.5)
-```
-
-## `round()`
-
-Use the round() function to get a floating-point number rounded to the specified number of decimals.
-
-Syntax:
-
-```{python}
-#| echo: true
-#| eval: false
-round(number, ndigits*)
-```
-
-Rounding is done toward the nearest even choice. What would these round to:
-
-```{python}
-#| echo: true
-#| eval: true
-print(round(51.6))
-print(round(51.4))
-print(round(51.5))
-print(round(50.5))
-```
 
 ## Write a function
 
@@ -276,7 +90,7 @@ $$
 v = {4 / 3} \cdot \pi \cdot radius^3
 $$
 
-4.  It returns the value for the calculated sphere volume
+4.  It returns the rounded value for the calculated volume
 5.  Test case: `sphere_volume(.75)` should return `1.77`.
 
 ## Write a function -- sphere volume
@@ -378,4 +192,42 @@ def main():
 main()
 ```
 
+## Function to calculate the volume of a cylinder
+
+Write a function that does the following:
+
+1.  Its name is `volume`
+2.  It takes two integer arguments: `radius` and `height`
+3.  It calculates the volume of a cylinder, based on `radius` and `height`. Volume is area multiplied by height.
+4.  It returns the float value for calculated volume.
+
+## Submit function to Gradescope
+
+-   Name your python script with the `volume` function `cylinder.py`
+-   Submit your `.py` file to Gradescope, Attendance January 24
+-   You can resubmit as many times as you need (up to the deadline)
+-   You can look at your `Submission History` and activate a previous submission
+
+## Function to calculate the volume of a cylinder
+
+```{python}
+#| echo: true
+#| eval: false
+def volume(radius, height):
+  # calculate the area first
+  area = 3.1415 * radius ** 2
+  
+  # multiply area by height
+  vol = area * height
+  
+  # return calculated volume
+  return vol
+
+def main():
+  print(volume(1, 2)) # 6.283
+  print(volume(6, 10)) # 1130.94
+  print(volume(5, 5)) # 392.68750000000006
+  
+main()
+```
 

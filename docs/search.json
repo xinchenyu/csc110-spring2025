@@ -1727,7 +1727,7 @@
     "href": "slides-02-01.html#function-to-calculate-area-of-a-circle",
     "title": "functions (slides)",
     "section": "Function to calculate area of a circle",
-    "text": "Function to calculate area of a circle\nRemember this from the last set of slides?\n\n# assign a radius value\nradius = 3\n# compute the area of a circle\narea = 3.1415 * radius ** 2\n\n\nCalculating the area of a circle is an abstraction.\nIn the code above, that is done by a variable assignment with a variable named area.\nLet’s create a function called area, that given a radius parameter, it returns the area of the circle.",
+    "text": "Function to calculate area of a circle\nRemember this from the last set of slides?\n\n# assign a radius value\nradius = 3\n# compute the rounded area of a circle\narea = round(3.1415 * radius ** 2, 2)\n# print the area\nprint(area)",
     "crumbs": [
       "Module 2 - Functions, Operators, Expressions and Decomposition",
       "functions (slides)"
@@ -1738,7 +1738,7 @@
     "href": "slides-02-01.html#function-to-calculate-area-of-a-circle-1",
     "title": "functions (slides)",
     "section": "Function to calculate area of a circle",
-    "text": "Function to calculate area of a circle\n\ndef calculate_area(radius):\n  # calculate the area first\n  area = 3.1415 * radius ** 2\n  \n  # return calculated area\n  return area\n\ndef main():\n  print(calculate_area(3)) # 28.27\n  print(calculate_area(6)) # 113.09\n  \nmain()",
+    "text": "Function to calculate area of a circle\nFunction name is calculate_area. Given a radius parameter, it returns the rounded area of the circle.\n\ndef calculate_area(radius):\n  area = 3.1415 * radius ** 2\n  return round(area, 2)\n\ndef main():\n  print(calculate_area(3)) # 28.27\n  print(calculate_area(6)) # 113.09\n  \nmain()",
     "crumbs": [
       "Module 2 - Functions, Operators, Expressions and Decomposition",
       "functions (slides)"
@@ -1760,7 +1760,7 @@
     "href": "slides-02-01.html#submit-function-to-gradescope",
     "title": "functions (slides)",
     "section": "Submit function to Gradescope",
-    "text": "Submit function to Gradescope\n\nName your python script with the volume function cylinder.py\nSubmit your .py file to Gradescope, Attendance August 30\nYou can resubmit as many times as you need (up to the deadline)\nYou can look at your Submission History and activate a previous submission",
+    "text": "Submit function to Gradescope\n\nName your python script with the volume function cylinder.py\nSubmit your .py file to Gradescope, Attendance January 24\nYou can resubmit as many times as you need (up to the deadline)\nYou can look at your Submission History and activate a previous submission",
     "crumbs": [
       "Module 2 - Functions, Operators, Expressions and Decomposition",
       "functions (slides)"
@@ -1859,7 +1859,7 @@
     "href": "slides-02-01.html#write-a-function",
     "title": "functions (slides)",
     "section": "Write a function",
-    "text": "Write a function\nWrite a function that calculates the volume of a sphere:\n\nIts name is sphere_volume\nIt takes one argument: radius\nIt calculates the volume of the sphere (use 3.1415 for \\(\\pi\\)):\n\n\\[\nv = {4 / 3} \\cdot \\pi \\cdot radius^3\n\\]\n\nIt returns the value for the calculated sphere volume\nTest case: sphere_volume(.75) should return 1.77.",
+    "text": "Write a function\nWrite a function that calculates the volume of a sphere:\n\nIts name is sphere_volume\nIt takes one argument: radius\nIt calculates the volume of the sphere (use 3.1415 for \\(\\pi\\)):\n\n\\[\nv = {4 / 3} \\cdot \\pi \\cdot radius^3\n\\]\n\nIt returns the rounded value for the calculated volume\nTest case: sphere_volume(.75) should return 1.77.",
     "crumbs": [
       "Module 2 - Functions, Operators, Expressions and Decomposition",
       "functions (slides)"
@@ -3127,7 +3127,7 @@
     "href": "slides-01-02.html#operations",
     "title": "python basics (slides)",
     "section": "Operations",
-    "text": "Operations\n\n   +\n   -\n   *\n   /\n   **",
+    "text": "Operations\n\n+ : plus\n- : minus\n* : multiple\n/ : divide\n** : power\n// : divide and floor\n% : modulos",
     "crumbs": [
       "Module 1 - Basics",
       "python basics (slides)"
@@ -3149,7 +3149,7 @@
     "href": "slides-01-02.html#combining-variables-and-operations",
     "title": "python basics (slides)",
     "section": "Combining variables and operations",
-    "text": "Combining variables and operations\nWrite code to calculate the area of a circle when radius is 3:\n\nAssign integer 3 to radius\nCalculate the area (use \\(\\pi\\) as 3.1415)\nPrint the area",
+    "text": "Combining variables and operations\nWrite code to calculate the area of a circle when radius is 3:\n\nAssign integer 3 to radius\nCalculate the area (use \\(\\pi\\) as 3.1415) and round it to two decimals\nPrint the area",
     "crumbs": [
       "Module 1 - Basics",
       "python basics (slides)"
@@ -3160,7 +3160,7 @@
     "href": "slides-01-02.html#comments",
     "title": "python basics (slides)",
     "section": "Comments",
-    "text": "Comments\nComputer program can include comments, which are simply text that is meant to be read, but not executed.\n\n\n# assign a radius value\nradius = 3\n# compute the area of a circle\narea = 3.1415 * radius ** 2\n\n\nThe purpose of comments is to “document” the program so that subsequent readers can more easily understand it, or learn things about it (e.g., its original author).",
+    "text": "Comments\nComments are text that is meant to be read, but not executed. The purpose is to improve readability.\n\n# assign a radius value\nradius = 3\n# compute the area of a circle and round to two decimals\narea = round(3.1415 * radius ** 2, 2)\n# print the area\nprint(area)\n\n28.27",
     "crumbs": [
       "Module 1 - Basics",
       "python basics (slides)"
@@ -8862,6 +8862,116 @@
     "title": "python basics (slides)",
     "section": "CS Buddy Mentor Program Sign-Up",
     "text": "CS Buddy Mentor Program Sign-Up\n\nsign-up QR Code",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-01-02.html#round",
+    "href": "slides-01-02.html#round",
+    "title": "python basics (slides)",
+    "section": "round()",
+    "text": "round()\nUse the round() function to get a floating-point number rounded to the specified number of decimals.\nSyntax:\n\nround(number, ndigits*)\n\nThe number of digits (ndigits) is optional, but we will often round number to two decimals:\n\nround(392.68750000000006, 2)\n\n392.69",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-01-02.html#operations-1",
+    "href": "slides-01-02.html#operations-1",
+    "title": "python basics (slides)",
+    "section": "Operations",
+    "text": "Operations\n\nprint(10 + 5 - 5) # addition and subtraction\nprint(10 * 5 / 4) # multiplication and division\nprint(25 ** 2) # square \nprint(25 ** 0.5) # square root \nprint(13 // 4) # division and round down to the nearest integer\nprint(13 % 4) # remainder \n\n10\n12.5\n625\n5.0\n3\n1",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-01-02.html#pemdas",
+    "href": "slides-01-02.html#pemdas",
+    "title": "python basics (slides)",
+    "section": "PEMDAS",
+    "text": "PEMDAS\n\nWhat does PEMDAS stand for?\nThe operator precedence:\n\nParentheses\nExponentiation\nMultiplication and Division (including // and %)\nAddition and Subtraction",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-01-02.html#pemdas-1",
+    "href": "slides-01-02.html#pemdas-1",
+    "title": "python basics (slides)",
+    "section": "PEMDAS",
+    "text": "PEMDAS\nWhat value will each of these variables take on? No computers!\na1 = 5 /  5 * 10  * 5\na2 = 5 / (5 * 10) * 5\n\nb1 = 5 *  10 - 2\nb2 = 5 * (10 - 2)\n\nc = (3 // (4 // 5)) + 1",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-01-02.html#pemdas-answer",
+    "href": "slides-01-02.html#pemdas-answer",
+    "title": "python basics (slides)",
+    "section": "PEMDAS – answer",
+    "text": "PEMDAS – answer\n\na1 = 5 /  5 * 10  * 5\na2 = 5 / (5 * 10) * 5\n\nb1 = 5 *  10 - 2\nb2 = 5 * (10 - 2)\n\n# c = (3 // (4 // 5)) + 1 ERROR -- Zero Division\n\nprint(a1)\nprint(a2)\nprint(b1)\nprint(b2)\n\n50.0\n0.5\n48\n40\n\n\nNote that the division operator returns a float even when both numerator and denominator are integers",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-01-02.html#operations---examples",
+    "href": "slides-01-02.html#operations---examples",
+    "title": "python basics (slides)",
+    "section": "Operations - examples",
+    "text": "Operations - examples\n\nprint(10 + 5 - 5) # addition and subtraction\nprint(10 * 5 / 4) # multiplication and division\nprint(25 ** 2) # square \nprint(25 ** 0.5) # square root \nprint(13 // 4) # division and round down to the nearest integer\nprint(13 % 4) # remainder \n\n10\n12.5\n625\n5.0\n3\n1",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-01-02.html#round-1",
+    "href": "slides-01-02.html#round-1",
+    "title": "python basics (slides)",
+    "section": "round()",
+    "text": "round()\nUse the round() function to get a floating-point number rounded to the specified number of decimals.\nSyntax:\n\nround(number, ndigits*)\n\nRounding is done toward the nearest even choice:\n\nprint(round(51.6))\nprint(round(51.4))\nprint(round(51.5))\nprint(round(50.5))\n\n52\n51\n52\n50",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-01-02.html#function-to-calculate-area-of-a-circle",
+    "href": "slides-01-02.html#function-to-calculate-area-of-a-circle",
+    "title": "python basics (slides)",
+    "section": "Function to calculate area of a circle",
+    "text": "Function to calculate area of a circle\n\ndef calculate_area(radius):\n  # calculate the area first\n  area = 3.1415 * radius ** 2\n  \n  # return calculated area\n  return round(area, 2)\n\ndef main():\n  print(calculate_area(3)) # 28.27\n  print(calculate_area(6)) # 113.09\n  \nmain()",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-01-02.html#questions---answer",
+    "href": "slides-01-02.html#questions---answer",
+    "title": "python basics (slides)",
+    "section": "Questions - Answer",
+    "text": "Questions - Answer\nFunction to calculate area of a circle:\n\ndef calculate_area(radius):\n  # calculate the area first\n  area = 3.1415 * radius ** 2\n  \n  # round the calculated area and return it\n  return round(area, 2)\n\ndef main():\n  print(calculate_area(3)) # 28.27\n  print(calculate_area(6)) # 113.09\n  \nmain()\n\n28.27\n113.09",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-01-02.html#quiz-02",
+    "href": "slides-01-02.html#quiz-02",
+    "title": "python basics (slides)",
+    "section": "Quiz 02",
+    "text": "Quiz 02\n\n\ncurrent time\n\n\n\n\n\n\nYou have 5 minutes to complete the quiz.\nYour formula in your function should be Python code (in other words, do not just copy the formula in the instructions, make it so it uses actual symbols for Python operators)",
     "crumbs": [
       "Module 1 - Basics",
       "python basics (slides)"

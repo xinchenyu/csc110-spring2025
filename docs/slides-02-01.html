@@ -213,7 +213,7 @@
 </section>
 <section id="function-definitions" class="slide level2">
 <h2>Function definitions</h2>
-<div id="77ab68de" class="cell" data-execution_count="1">
+<div id="d4330d87" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="kw">def</span> two():</span>
 <span id="cb1-2"><a></a>  <span class="cf">return</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -227,7 +227,7 @@
 </section>
 <section id="example-of-a-simple-function" class="slide level2">
 <h2>Example of a simple function</h2>
-<div id="674dd8b3" class="cell" data-execution_count="2">
+<div id="edc0868c" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="kw">def</span> add_one(n):</span>
 <span id="cb2-2"><a></a>  <span class="cf">return</span> n <span class="op">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -241,198 +241,28 @@
 <section id="function-to-calculate-area-of-a-circle" class="slide level2">
 <h2>Function to calculate area of a circle</h2>
 <p>Remember this from the last set of slides?</p>
-<div id="b3205072" class="cell" data-execution_count="3">
+<div id="706f72bb" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="co"># assign a radius value</span></span>
 <span id="cb3-2"><a></a>radius <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb3-3"><a></a><span class="co"># compute the area of a circle</span></span>
-<span id="cb3-4"><a></a>area <span class="op">=</span> <span class="fl">3.1415</span> <span class="op">*</span> radius <span class="op">**</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-3"><a></a><span class="co"># compute the rounded area of a circle</span></span>
+<span id="cb3-4"><a></a>area <span class="op">=</span> <span class="bu">round</span>(<span class="fl">3.1415</span> <span class="op">*</span> radius <span class="op">**</span> <span class="dv">2</span>, <span class="dv">2</span>)</span>
+<span id="cb3-5"><a></a><span class="co"># print the area</span></span>
+<span id="cb3-6"><a></a><span class="bu">print</span>(area)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><br></p>
-<p>Calculating the <code>area</code> of a circle is an <code>abstraction</code>.</p>
-<p>In the code above, that is done by a variable <em>assignment</em> with a variable named <code>area</code>.</p>
-<p>Let’s create a function called <code>area</code>, that given a <code>radius</code> parameter, it returns the <code>area</code> of the circle.</p>
 </section>
 <section id="function-to-calculate-area-of-a-circle-1" class="slide level2">
 <h2>Function to calculate area of a circle</h2>
-<div id="73122b45" class="cell" data-execution_count="4">
+<p>Function name is <code>calculate_area</code>. Given a <code>radius</code> parameter, it returns the rounded <code>area</code> of the circle.</p>
+<div id="25618ec2" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="kw">def</span> calculate_area(radius):</span>
-<span id="cb4-2"><a></a>  <span class="co"># calculate the area first</span></span>
-<span id="cb4-3"><a></a>  area <span class="op">=</span> <span class="fl">3.1415</span> <span class="op">*</span> radius <span class="op">**</span> <span class="dv">2</span></span>
-<span id="cb4-4"><a></a>  </span>
-<span id="cb4-5"><a></a>  <span class="co"># return calculated area</span></span>
-<span id="cb4-6"><a></a>  <span class="cf">return</span> area</span>
-<span id="cb4-7"><a></a></span>
-<span id="cb4-8"><a></a><span class="kw">def</span> main():</span>
-<span id="cb4-9"><a></a>  <span class="bu">print</span>(calculate_area(<span class="dv">3</span>)) <span class="co"># 28.27</span></span>
-<span id="cb4-10"><a></a>  <span class="bu">print</span>(calculate_area(<span class="dv">6</span>)) <span class="co"># 113.09</span></span>
-<span id="cb4-11"><a></a>  </span>
-<span id="cb4-12"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="function-to-calculate-the-volume-of-a-cylinder" class="slide level2">
-<h2>Function to calculate the volume of a cylinder</h2>
-<p>Write a function that does the following:</p>
-<ol type="1">
-<li>Its name is <code>volume</code></li>
-<li>It takes two integer arguments: <code>radius</code> and <code>height</code></li>
-<li>It calculates the volume of a cylinder, based on <code>radius</code> and <code>height</code>. Volume is area multiplied by height.</li>
-<li>It returns the float value for calculated volume.</li>
-</ol>
-</section>
-<section id="submit-function-to-gradescope" class="slide level2">
-<h2>Submit function to Gradescope</h2>
-<ul>
-<li>Name your python script with the <code>volume</code> function <code>cylinder.py</code></li>
-<li>Submit your <code>.py</code> file to <a href="https://www.gradescope.com/courses/822022">Gradescope, Attendance August 30</a></li>
-<li>You can resubmit as many times as you need (up to the deadline)</li>
-<li>You can look at your <code>Submission History</code> and activate a previous submission</li>
-</ul>
-</section>
-<section id="function-to-calculate-the-volume-of-a-cylinder-1" class="slide level2">
-<h2>Function to calculate the volume of a cylinder</h2>
-<div id="a2bbe2f1" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="kw">def</span> volume(radius, height):</span>
-<span id="cb5-2"><a></a>  <span class="co"># calculate the area first</span></span>
-<span id="cb5-3"><a></a>  area <span class="op">=</span> <span class="fl">3.1415</span> <span class="op">*</span> radius <span class="op">**</span> <span class="dv">2</span></span>
-<span id="cb5-4"><a></a>  </span>
-<span id="cb5-5"><a></a>  <span class="co"># multiply area by height</span></span>
-<span id="cb5-6"><a></a>  vol <span class="op">=</span> area <span class="op">*</span> height</span>
-<span id="cb5-7"><a></a>  </span>
-<span id="cb5-8"><a></a>  <span class="co"># return calculated volume</span></span>
-<span id="cb5-9"><a></a>  <span class="cf">return</span> vol</span>
-<span id="cb5-10"><a></a></span>
-<span id="cb5-11"><a></a><span class="kw">def</span> main():</span>
-<span id="cb5-12"><a></a>  <span class="bu">print</span>(volume(<span class="dv">1</span>, <span class="dv">2</span>)) <span class="co"># 6.283</span></span>
-<span id="cb5-13"><a></a>  <span class="bu">print</span>(volume(<span class="dv">6</span>, <span class="dv">10</span>)) <span class="co"># 1130.94</span></span>
-<span id="cb5-14"><a></a>  <span class="bu">print</span>(volume(<span class="dv">5</span>, <span class="dv">5</span>)) <span class="co"># 392.68750000000006</span></span>
-<span id="cb5-15"><a></a>  </span>
-<span id="cb5-16"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="more-operations" class="slide level2">
-<h2>More operations</h2>
-<p>Try the following operators with the different types in python:</p>
-<p><br></p>
-<pre style="font-size: 30px">
-   +
-   -
-   *
-   /
-   **
-   
-   //
-   %
-
-</pre>
-</section></section>
-<section>
-<section id="order-of-operations" class="title-slide slide level1 center">
-<h1>Order of Operations</h1>
-
-</section>
-<section id="pemdas" class="slide level2">
-<h2>PEMDAS</h2>
-<ul>
-<li>What does PEMDAS stand for?</li>
-<li>The operator precedence:
-<ul>
-<li><strong>P</strong>arentheses</li>
-<li><strong>E</strong>xponentiation</li>
-<li><strong>M</strong>ultiplication and <strong>D</strong>ivision (including // and %)</li>
-<li><strong>A</strong>ddition and <strong>S</strong>ubtraction</li>
-</ul></li>
-</ul>
-</section>
-<section id="pemdas-1" class="slide level2">
-<h2>PEMDAS</h2>
-<p>What value will each of these variables take on? No computers!</p>
-<pre>a1 = 5 /  5 * 10  * 5
-a2 = 5 / (5 * 10) * 5
-
-b1 = 5 *  10 - 2
-b2 = 5 * (10 - 2)
-
-c = (3 // (4 // 5)) + 1
-</pre>
-</section>
-<section id="pemdas-answer" class="slide level2">
-<h2>PEMDAS – answer</h2>
-<div id="a0edd6d3" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>a1 <span class="op">=</span> <span class="dv">5</span> <span class="op">/</span>  <span class="dv">5</span> <span class="op">*</span> <span class="dv">10</span>  <span class="op">*</span> <span class="dv">5</span></span>
-<span id="cb6-2"><a></a>a2 <span class="op">=</span> <span class="dv">5</span> <span class="op">/</span> (<span class="dv">5</span> <span class="op">*</span> <span class="dv">10</span>) <span class="op">*</span> <span class="dv">5</span></span>
-<span id="cb6-3"><a></a></span>
-<span id="cb6-4"><a></a>b1 <span class="op">=</span> <span class="dv">5</span> <span class="op">*</span>  <span class="dv">10</span> <span class="op">-</span> <span class="dv">2</span></span>
-<span id="cb6-5"><a></a>b2 <span class="op">=</span> <span class="dv">5</span> <span class="op">*</span> (<span class="dv">10</span> <span class="op">-</span> <span class="dv">2</span>)</span>
-<span id="cb6-6"><a></a></span>
-<span id="cb6-7"><a></a><span class="co"># c = (3 // (4 // 5)) + 1 ERROR -- Zero Division</span></span>
-<span id="cb6-8"><a></a></span>
-<span id="cb6-9"><a></a><span class="bu">print</span>(a1)</span>
-<span id="cb6-10"><a></a><span class="bu">print</span>(a2)</span>
-<span id="cb6-11"><a></a><span class="bu">print</span>(b1)</span>
-<span id="cb6-12"><a></a><span class="bu">print</span>(b2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>50.0
-0.5
-48
-40</code></pre>
-</div>
-</div>
-<p>Note that the division operator returns a float even when both numerator and denominator are integers</p>
-</section></section>
-<section>
-<section id="rounding-numbers-with-built-in-function-round" class="title-slide slide level1 center">
-<h1>Rounding numbers with built-in function <code>round()</code></h1>
-
-</section>
-<section id="round" class="slide level2">
-<h2><code>round()</code></h2>
-<p>Use the round() function to get a floating-point number rounded to the specified number of decimals.</p>
-<p>Syntax:</p>
-<div id="c4c9add1" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="bu">round</span>(number, ndigits<span class="op">*</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>The number of digits (<code>ndigits</code>) is optional, but we will often round number to two decimals:</p>
-<div id="d8af7486" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="bu">round</span>(<span class="fl">392.68750000000006</span>, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
-<pre><code>392.69</code></pre>
-</div>
-</div>
-</section>
-<section id="round-1" class="slide level2">
-<h2><code>round()</code></h2>
-<p>Use the round() function to get a floating-point number rounded to the specified number of decimals.</p>
-<p>Syntax:</p>
-<div id="8b082c4c" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="bu">round</span>(number, ndigits<span class="op">*</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Rounding is done toward the nearest even choice. What would these round to? (discuss with your group)</p>
-<div id="b6b6a5d8" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="bu">round</span>(<span class="fl">51.6</span>)</span>
-<span id="cb12-2"><a></a><span class="bu">round</span>(<span class="fl">51.4</span>)</span>
-<span id="cb12-3"><a></a><span class="bu">round</span>(<span class="fl">51.5</span>)</span>
-<span id="cb12-4"><a></a><span class="bu">round</span>(<span class="fl">50.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="round-2" class="slide level2">
-<h2><code>round()</code></h2>
-<p>Use the round() function to get a floating-point number rounded to the specified number of decimals.</p>
-<p>Syntax:</p>
-<div id="0c0807b2" class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="bu">round</span>(number, ndigits<span class="op">*</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Rounding is done toward the nearest even choice. What would these round to:</p>
-<div id="6c97574b" class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="bu">print</span>(<span class="bu">round</span>(<span class="fl">51.6</span>))</span>
-<span id="cb14-2"><a></a><span class="bu">print</span>(<span class="bu">round</span>(<span class="fl">51.4</span>))</span>
-<span id="cb14-3"><a></a><span class="bu">print</span>(<span class="bu">round</span>(<span class="fl">51.5</span>))</span>
-<span id="cb14-4"><a></a><span class="bu">print</span>(<span class="bu">round</span>(<span class="fl">50.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>52
-51
-52
-50</code></pre>
-</div>
+<span id="cb4-2"><a></a>  area <span class="op">=</span> <span class="fl">3.1415</span> <span class="op">*</span> radius <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb4-3"><a></a>  <span class="cf">return</span> <span class="bu">round</span>(area, <span class="dv">2</span>)</span>
+<span id="cb4-4"><a></a></span>
+<span id="cb4-5"><a></a><span class="kw">def</span> main():</span>
+<span id="cb4-6"><a></a>  <span class="bu">print</span>(calculate_area(<span class="dv">3</span>)) <span class="co"># 28.27</span></span>
+<span id="cb4-7"><a></a>  <span class="bu">print</span>(calculate_area(<span class="dv">6</span>)) <span class="co"># 113.09</span></span>
+<span id="cb4-8"><a></a>  </span>
+<span id="cb4-9"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function" class="slide level2">
@@ -447,24 +277,24 @@ c = (3 // (4 // 5)) + 1
 v = {4 / 3} \cdot \pi \cdot radius^3
 \]</span></p>
 <ol start="4" type="1">
-<li>It returns the value for the calculated sphere volume</li>
+<li>It returns the rounded value for the calculated volume</li>
 <li>Test case: <code>sphere_volume(.75)</code> should return <code>1.77</code>.</li>
 </ol>
 </section>
 <section id="write-a-function-sphere-volume" class="slide level2">
 <h2>Write a function – sphere volume</h2>
-<div id="4fadf866" class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="kw">def</span> sphere_volume(radius):</span>
-<span id="cb16-2"><a></a>  <span class="co">"calculates the volume of a sphere of given radius"</span></span>
-<span id="cb16-3"><a></a>  volume <span class="op">=</span> (<span class="dv">4</span> <span class="op">/</span> <span class="dv">3</span>) <span class="op">*</span> <span class="fl">3.1415</span> <span class="op">*</span> radius<span class="op">**</span><span class="dv">3</span></span>
-<span id="cb16-4"><a></a>  <span class="cf">return</span> <span class="bu">round</span>(volume, <span class="dv">2</span>)</span>
-<span id="cb16-5"><a></a></span>
-<span id="cb16-6"><a></a><span class="kw">def</span> main():</span>
-<span id="cb16-7"><a></a>  <span class="bu">print</span>(sphere_volume(<span class="fl">.75</span>)) <span class="co"># 1.77</span></span>
-<span id="cb16-8"><a></a>  <span class="bu">print</span>(sphere_volume(<span class="dv">2</span>)) <span class="co"># 33.51</span></span>
-<span id="cb16-9"><a></a>  <span class="bu">print</span>(sphere_volume(<span class="fl">5.5</span>)) <span class="co"># 696.89</span></span>
-<span id="cb16-10"><a></a></span>
-<span id="cb16-11"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="8acfa6fa" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="kw">def</span> sphere_volume(radius):</span>
+<span id="cb5-2"><a></a>  <span class="co">"calculates the volume of a sphere of given radius"</span></span>
+<span id="cb5-3"><a></a>  volume <span class="op">=</span> (<span class="dv">4</span> <span class="op">/</span> <span class="dv">3</span>) <span class="op">*</span> <span class="fl">3.1415</span> <span class="op">*</span> radius<span class="op">**</span><span class="dv">3</span></span>
+<span id="cb5-4"><a></a>  <span class="cf">return</span> <span class="bu">round</span>(volume, <span class="dv">2</span>)</span>
+<span id="cb5-5"><a></a></span>
+<span id="cb5-6"><a></a><span class="kw">def</span> main():</span>
+<span id="cb5-7"><a></a>  <span class="bu">print</span>(sphere_volume(<span class="fl">.75</span>)) <span class="co"># 1.77</span></span>
+<span id="cb5-8"><a></a>  <span class="bu">print</span>(sphere_volume(<span class="dv">2</span>)) <span class="co"># 33.51</span></span>
+<span id="cb5-9"><a></a>  <span class="bu">print</span>(sphere_volume(<span class="fl">5.5</span>)) <span class="co"># 696.89</span></span>
+<span id="cb5-10"><a></a></span>
+<span id="cb5-11"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1.77
 33.51
@@ -490,24 +320,24 @@ a = 4 \cdot \pi \cdot radius^2
 </section>
 <section id="write-a-function-solutions-1" class="slide level2">
 <h2>Write a function – solutions 1</h2>
-<div id="b865fb4f" class="cell" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="kw">def</span> sphere_area(radius):</span>
-<span id="cb18-2"><a></a>  <span class="co">"calculates the area of a sphere of given radius"</span></span>
-<span id="cb18-3"><a></a>  area <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> <span class="fl">3.1415</span> <span class="op">*</span> radius<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb18-4"><a></a>  <span class="cf">return</span> <span class="bu">round</span>(area, <span class="dv">2</span>)</span>
-<span id="cb18-5"><a></a></span>
-<span id="cb18-6"><a></a><span class="kw">def</span> sphere_volume(radius):</span>
-<span id="cb18-7"><a></a>  <span class="co">"calculates the volume of a sphere of given radius"</span></span>
-<span id="cb18-8"><a></a>  volume <span class="op">=</span> (<span class="dv">4</span> <span class="op">/</span> <span class="dv">3</span>) <span class="op">*</span> <span class="fl">3.1415</span> <span class="op">*</span> radius<span class="op">**</span><span class="dv">3</span></span>
-<span id="cb18-9"><a></a>  <span class="cf">return</span> <span class="bu">round</span>(volume, <span class="dv">2</span>)</span>
-<span id="cb18-10"><a></a></span>
-<span id="cb18-11"><a></a><span class="kw">def</span> main():</span>
-<span id="cb18-12"><a></a>  r <span class="op">=</span> <span class="fl">.75</span></span>
-<span id="cb18-13"><a></a>  v <span class="op">=</span> sphere_volume(r)</span>
-<span id="cb18-14"><a></a>  a <span class="op">=</span> sphere_area(r)</span>
-<span id="cb18-15"><a></a>  <span class="bu">print</span>(v, a)</span>
-<span id="cb18-16"><a></a></span>
-<span id="cb18-17"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="700e4152" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="kw">def</span> sphere_area(radius):</span>
+<span id="cb7-2"><a></a>  <span class="co">"calculates the area of a sphere of given radius"</span></span>
+<span id="cb7-3"><a></a>  area <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> <span class="fl">3.1415</span> <span class="op">*</span> radius<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb7-4"><a></a>  <span class="cf">return</span> <span class="bu">round</span>(area, <span class="dv">2</span>)</span>
+<span id="cb7-5"><a></a></span>
+<span id="cb7-6"><a></a><span class="kw">def</span> sphere_volume(radius):</span>
+<span id="cb7-7"><a></a>  <span class="co">"calculates the volume of a sphere of given radius"</span></span>
+<span id="cb7-8"><a></a>  volume <span class="op">=</span> (<span class="dv">4</span> <span class="op">/</span> <span class="dv">3</span>) <span class="op">*</span> <span class="fl">3.1415</span> <span class="op">*</span> radius<span class="op">**</span><span class="dv">3</span></span>
+<span id="cb7-9"><a></a>  <span class="cf">return</span> <span class="bu">round</span>(volume, <span class="dv">2</span>)</span>
+<span id="cb7-10"><a></a></span>
+<span id="cb7-11"><a></a><span class="kw">def</span> main():</span>
+<span id="cb7-12"><a></a>  r <span class="op">=</span> <span class="fl">.75</span></span>
+<span id="cb7-13"><a></a>  v <span class="op">=</span> sphere_volume(r)</span>
+<span id="cb7-14"><a></a>  a <span class="op">=</span> sphere_area(r)</span>
+<span id="cb7-15"><a></a>  <span class="bu">print</span>(v, a)</span>
+<span id="cb7-16"><a></a></span>
+<span id="cb7-17"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1.77 7.07</code></pre>
 </div>
@@ -527,29 +357,69 @@ v = {1 / 3} \cdot a \cdot radius
 </section>
 <section id="write-a-function-solutions-2" class="slide level2">
 <h2>Write a function – solutions 2</h2>
-<div id="37d631c9" class="cell" data-execution_count="15">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a><span class="kw">def</span> sphere_area(radius):</span>
-<span id="cb20-2"><a></a>  <span class="co">"calculates the area of a sphere of given radius"</span></span>
-<span id="cb20-3"><a></a>  area <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> <span class="fl">3.1415</span> <span class="op">*</span> radius<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb20-4"><a></a>  <span class="cf">return</span> <span class="bu">round</span>(area, <span class="dv">2</span>)</span>
-<span id="cb20-5"><a></a></span>
-<span id="cb20-6"><a></a></span>
-<span id="cb20-7"><a></a><span class="kw">def</span> sphere_volume(radius):</span>
-<span id="cb20-8"><a></a>  <span class="co">"calculates the volume of a sphere of given radius"</span></span>
-<span id="cb20-9"><a></a>  volume <span class="op">=</span> (<span class="dv">1</span> <span class="op">/</span> <span class="dv">3</span>) <span class="op">*</span> sphere_area(radius) <span class="op">*</span> radius</span>
-<span id="cb20-10"><a></a>  <span class="cf">return</span> <span class="bu">round</span>(volume, <span class="dv">2</span>)</span>
-<span id="cb20-11"><a></a></span>
-<span id="cb20-12"><a></a></span>
-<span id="cb20-13"><a></a><span class="kw">def</span> main():</span>
-<span id="cb20-14"><a></a>  r <span class="op">=</span> <span class="fl">.75</span></span>
-<span id="cb20-15"><a></a>  v <span class="op">=</span> sphere_volume(r)</span>
-<span id="cb20-16"><a></a>  a <span class="op">=</span> sphere_area(r)</span>
-<span id="cb20-17"><a></a>  <span class="bu">print</span>(v, a)</span>
-<span id="cb20-18"><a></a></span>
-<span id="cb20-19"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="25c62431" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="kw">def</span> sphere_area(radius):</span>
+<span id="cb9-2"><a></a>  <span class="co">"calculates the area of a sphere of given radius"</span></span>
+<span id="cb9-3"><a></a>  area <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> <span class="fl">3.1415</span> <span class="op">*</span> radius<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb9-4"><a></a>  <span class="cf">return</span> <span class="bu">round</span>(area, <span class="dv">2</span>)</span>
+<span id="cb9-5"><a></a></span>
+<span id="cb9-6"><a></a></span>
+<span id="cb9-7"><a></a><span class="kw">def</span> sphere_volume(radius):</span>
+<span id="cb9-8"><a></a>  <span class="co">"calculates the volume of a sphere of given radius"</span></span>
+<span id="cb9-9"><a></a>  volume <span class="op">=</span> (<span class="dv">1</span> <span class="op">/</span> <span class="dv">3</span>) <span class="op">*</span> sphere_area(radius) <span class="op">*</span> radius</span>
+<span id="cb9-10"><a></a>  <span class="cf">return</span> <span class="bu">round</span>(volume, <span class="dv">2</span>)</span>
+<span id="cb9-11"><a></a></span>
+<span id="cb9-12"><a></a></span>
+<span id="cb9-13"><a></a><span class="kw">def</span> main():</span>
+<span id="cb9-14"><a></a>  r <span class="op">=</span> <span class="fl">.75</span></span>
+<span id="cb9-15"><a></a>  v <span class="op">=</span> sphere_volume(r)</span>
+<span id="cb9-16"><a></a>  a <span class="op">=</span> sphere_area(r)</span>
+<span id="cb9-17"><a></a>  <span class="bu">print</span>(v, a)</span>
+<span id="cb9-18"><a></a></span>
+<span id="cb9-19"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1.77 7.07</code></pre>
 </div>
+</div>
+</section>
+<section id="function-to-calculate-the-volume-of-a-cylinder" class="slide level2">
+<h2>Function to calculate the volume of a cylinder</h2>
+<p>Write a function that does the following:</p>
+<ol type="1">
+<li>Its name is <code>volume</code></li>
+<li>It takes two integer arguments: <code>radius</code> and <code>height</code></li>
+<li>It calculates the volume of a cylinder, based on <code>radius</code> and <code>height</code>. Volume is area multiplied by height.</li>
+<li>It returns the float value for calculated volume.</li>
+</ol>
+</section>
+<section id="submit-function-to-gradescope" class="slide level2">
+<h2>Submit function to Gradescope</h2>
+<ul>
+<li>Name your python script with the <code>volume</code> function <code>cylinder.py</code></li>
+<li>Submit your <code>.py</code> file to Gradescope, Attendance January 24</li>
+<li>You can resubmit as many times as you need (up to the deadline)</li>
+<li>You can look at your <code>Submission History</code> and activate a previous submission</li>
+</ul>
+</section>
+<section id="function-to-calculate-the-volume-of-a-cylinder-1" class="slide level2">
+<h2>Function to calculate the volume of a cylinder</h2>
+<div id="1ab8aa69" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="kw">def</span> volume(radius, height):</span>
+<span id="cb11-2"><a></a>  <span class="co"># calculate the area first</span></span>
+<span id="cb11-3"><a></a>  area <span class="op">=</span> <span class="fl">3.1415</span> <span class="op">*</span> radius <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb11-4"><a></a>  </span>
+<span id="cb11-5"><a></a>  <span class="co"># multiply area by height</span></span>
+<span id="cb11-6"><a></a>  vol <span class="op">=</span> area <span class="op">*</span> height</span>
+<span id="cb11-7"><a></a>  </span>
+<span id="cb11-8"><a></a>  <span class="co"># return calculated volume</span></span>
+<span id="cb11-9"><a></a>  <span class="cf">return</span> vol</span>
+<span id="cb11-10"><a></a></span>
+<span id="cb11-11"><a></a><span class="kw">def</span> main():</span>
+<span id="cb11-12"><a></a>  <span class="bu">print</span>(volume(<span class="dv">1</span>, <span class="dv">2</span>)) <span class="co"># 6.283</span></span>
+<span id="cb11-13"><a></a>  <span class="bu">print</span>(volume(<span class="dv">6</span>, <span class="dv">10</span>)) <span class="co"># 1130.94</span></span>
+<span id="cb11-14"><a></a>  <span class="bu">print</span>(volume(<span class="dv">5</span>, <span class="dv">5</span>)) <span class="co"># 392.68750000000006</span></span>
+<span id="cb11-15"><a></a>  </span>
+<span id="cb11-16"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
