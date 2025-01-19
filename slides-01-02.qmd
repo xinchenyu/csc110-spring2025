@@ -391,4 +391,3 @@ print(area)
 
 You have 5 minutes to complete the quiz.
 
-Your formula in your function should be Python code (in other words, do not just copy the formula in the instructions, make it so it uses **actual symbols for Python operators**)
