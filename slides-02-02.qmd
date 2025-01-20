@@ -169,7 +169,7 @@ Read the code for classic guitar, answer the questions:
     
     -   in the neck: line 6 - 7
     
-    -   in the body: line 9 - 10
+    -   in the body: line 9 - 10 and line 14 - 15
     
 ## Write functions
 
