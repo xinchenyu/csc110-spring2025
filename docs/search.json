@@ -8976,5 +8976,27 @@
       "Module 1 - Basics",
       "python basics (slides)"
     ]
+  },
+  {
+    "objectID": "slides-02-01.html#function-definitions-1",
+    "href": "slides-02-01.html#function-definitions-1",
+    "title": "functions (slides)",
+    "section": "Function definitions",
+    "text": "Function definitions\n\ndef cook_food(order):\n  message = \"Your \" + order + \" is ready!\"\n  return message\n\nmeal = cook_food(\"pasta\")\nprint(meal)\nmeal = cook_food(\"burger\")\nprint(meal)\n\nYour pasta is ready!\nYour burger is ready!\n\n\n\nThe function cook_food prepares a meal.\nThen returns a string that says the meal is ready.\nThe returned message is stored in the meal variable.\nFinally, print function displays that message to the caller.",
+    "crumbs": [
+      "Module 2 - Functions, Operators, Expressions and Decomposition",
+      "functions (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-02-01.html#another-example",
+    "href": "slides-02-01.html#another-example",
+    "title": "functions (slides)",
+    "section": "Another example",
+    "text": "Another example\n\ndef cook_food(order):\n  message = \"Your \" + order + \" is ready!\"\n  return message\n\nmeal = cook_food(\"pasta\")\nprint(meal)\nmeal = cook_food(\"burger\")\nprint(meal)\n\nYour pasta is ready!\nYour burger is ready!\n\n\n\nThe function cook_food prepares a meal.\nThen returns a string that says the meal is ready.\nThe returned message is stored in the meal variable.\nFinally, print function displays that message to the caller.",
+    "crumbs": [
+      "Module 2 - Functions, Operators, Expressions and Decomposition",
+      "functions (slides)"
+    ]
   }
 ]

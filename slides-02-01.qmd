@@ -44,6 +44,26 @@ def add_one(n):
 -   the body (or content) of the function is indented
 -   `return n + 1` is a statement that causes the function to cease and produce the value n + 1
 
+## Another example
+
+```{python}
+#| echo: true
+#| eval: true
+def cook_food(order):
+  message = "Your " + order + " is ready!"
+  return message
+
+meal = cook_food("pasta")
+print(meal)
+meal = cook_food("burger")
+print(meal)
+```
+
+-   The function `cook_food` prepares a meal. 
+-   Then returns a string that says the meal is ready. 
+-   The returned message is stored in the `meal` variable. 
+-   Finally, `print` function displays that message to the caller.
+
 ## Function to calculate area of a circle
 
 Remember this from the last set of slides?
