@@ -205,11 +205,11 @@
 <section id="program-decomposition" class="slide level2">
 <h2>Program decomposition</h2>
 <p>Program decomposition refers to the process of breaking down a complex program into smaller, more manageable, and understandable parts or components.</p>
-<p>It improves the structural quality of code.</p>
+<p>It avoids unnecessary common code and improves the structural quality of code.</p>
 </section>
 <section id="print-a-classic-guitar" class="slide level2">
 <h2>Print a classic guitar</h2>
-<div id="adf185b6" class="cell" data-execution_count="1">
+<div id="96fd9a5b" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="bu">print</span>(<span class="st">"      ___"</span>)</span>
 <span id="cb1-2"><a></a><span class="bu">print</span>(<span class="st">"    o|* *|o"</span>)</span>
 <span id="cb1-3"><a></a><span class="bu">print</span>(<span class="st">"    o|* *|o"</span>)</span>
@@ -234,7 +234,7 @@
 </section>
 <section id="print-a-retro-head-guitar" class="slide level2">
 <h2>Print a retro head guitar</h2>
-<div id="a6d30136" class="cell" data-execution_count="2">
+<div id="0224c80a" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="bu">print</span>(<span class="st">"     ._-_."</span>)</span>
 <span id="cb2-2"><a></a><span class="bu">print</span>(<span class="st">"    +|\G/|+"</span>)</span>
 <span id="cb2-3"><a></a><span class="bu">print</span>(<span class="st">"    +|\./|+"</span>)</span>
@@ -259,7 +259,7 @@
 </section>
 <section id="print-a-retro-head-long-neck-guitar" class="slide level2">
 <h2>Print a retro head long neck guitar</h2>
-<div id="be01da95" class="cell" data-execution_count="3">
+<div id="6ceb732a" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="bu">print</span>(<span class="st">"     ._-_."</span>)</span>
 <span id="cb3-2"><a></a><span class="bu">print</span>(<span class="st">"    +|\G/|+"</span>)</span>
 <span id="cb3-3"><a></a><span class="bu">print</span>(<span class="st">"    +|\./|+"</span>)</span>
@@ -294,16 +294,31 @@
 </section>
 <section id="class-activity-one-answers" class="slide level2">
 <h2>Class activity one – answers</h2>
-<p>Compare the three types of guitar, answer the questions:</p>
+<p>Classic guitar vs.&nbsp;Retro head guitar:</p>
 <ul>
 <li><p>which parts of code are the same?</p>
 <ul>
-<li>the body: line 8 - 20 in classic guitar</li>
+<li><p>the neck</p></li>
+<li><p>the body</p></li>
 </ul></li>
 <li><p>which parts of code are different?</p>
 <ul>
+<li>the head: line 1-4</li>
+</ul></li>
+</ul>
+</section>
+<section id="class-activity-one-answers-1" class="slide level2">
+<h2>Class activity one – answers</h2>
+<p>Retro head guitar vs.&nbsp;Retro head long neck guitar:</p>
+<ul>
+<li><p>which parts of code are the same?</p>
+<ul>
 <li><p>the head</p></li>
-<li><p>the neck</p></li>
+<li><p>the body</p></li>
+</ul></li>
+<li><p>which parts of code are different?</p>
+<ul>
+<li>the neck</li>
 </ul></li>
 </ul>
 </section>
@@ -321,7 +336,7 @@
 </section>
 <section id="print-a-classic-guitar-1" class="slide level2">
 <h2>Print a classic guitar</h2>
-<div id="663e36e5" class="cell" data-execution_count="4">
+<div id="baed2575" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="bu">print</span>(<span class="st">"      ___"</span>)</span>
 <span id="cb4-2"><a></a><span class="bu">print</span>(<span class="st">"    o|* *|o"</span>)</span>
 <span id="cb4-3"><a></a><span class="bu">print</span>(<span class="st">"    o|* *|o"</span>)</span>
@@ -359,7 +374,7 @@
 <section id="write-functions" class="slide level2">
 <h2>Write functions</h2>
 <p>Write functions <code>print_head</code>, <code>print_neck</code>, and <code>print_body</code>:</p>
-<div id="9ddf1c3a" class="cell" data-execution_count="5">
+<div id="341ab550" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="kw">def</span> print_classic_guitar():</span>
 <span id="cb5-2"><a></a>    print_head()</span>
 <span id="cb5-3"><a></a>    print_neck()</span>
@@ -380,45 +395,136 @@
 </section>
 <section id="write-functions-answers" class="slide level2">
 <h2>Write functions – answers</h2>
-<div id="aa703769" class="cell" data-execution_count="6">
+<div id="34a21212" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="kw">def</span> print_head():</span>
 <span id="cb6-2"><a></a>    <span class="bu">print</span>(<span class="st">"      ___"</span>)</span>
-<span id="cb6-3"><a></a>    pattern <span class="op">=</span> <span class="st">"    o|* *|o"</span> <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span></span>
-<span id="cb6-4"><a></a>    <span class="bu">print</span>(pattern <span class="op">*</span> <span class="dv">3</span> <span class="op">+</span> <span class="st">"     \===/"</span>)</span>
-<span id="cb6-5"><a></a></span>
-<span id="cb6-6"><a></a><span class="kw">def</span> print_neck():</span>
-<span id="cb6-7"><a></a>    <span class="bu">print</span>(<span class="st">"      |||"</span> <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span> <span class="op">+</span> <span class="st">"      |||"</span>)</span>
-<span id="cb6-8"><a></a>    </span>
-<span id="cb6-9"><a></a><span class="kw">def</span> print_body():</span>
-<span id="cb6-10"><a></a>    <span class="bu">print</span>(<span class="st">"   ___|||___"</span>)</span>
-<span id="cb6-11"><a></a>    pattern <span class="op">=</span> <span class="st">"  /   |||   \ "</span> <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span> <span class="op">+</span> <span class="st">" /    |||    \ "</span> </span>
-<span id="cb6-12"><a></a>    <span class="bu">print</span>(pattern)</span>
-<span id="cb6-13"><a></a>    <span class="bu">print</span>(<span class="st">"|     |||     |"</span>)</span>
-<span id="cb6-14"><a></a>    <span class="bu">print</span>(<span class="st">" \   (|||)   /"</span>)</span>
-<span id="cb6-15"><a></a>    <span class="bu">print</span>(<span class="st">"  |   |||   |"</span>)</span>
-<span id="cb6-16"><a></a>    <span class="bu">print</span>(pattern)</span>
-<span id="cb6-17"><a></a>    <span class="bu">print</span>(<span class="st">"/     |||     \ "</span>)</span>
-<span id="cb6-18"><a></a>    <span class="bu">print</span>(<span class="st">"|    [===]    |"</span>)</span>
-<span id="cb6-19"><a></a>    <span class="bu">print</span>(<span class="st">" \           /"</span>)</span>
-<span id="cb6-20"><a></a>    <span class="bu">print</span>(<span class="st">"  '.       .'"</span>)</span>
-<span id="cb6-21"><a></a>    <span class="bu">print</span>(<span class="st">"   '-------'"</span>)</span>
-<span id="cb6-22"><a></a></span>
-<span id="cb6-23"><a></a><span class="kw">def</span> print_classic_guitar():</span>
-<span id="cb6-24"><a></a>    print_head()</span>
-<span id="cb6-25"><a></a>    print_neck()</span>
-<span id="cb6-26"><a></a>    print_body()</span>
-<span id="cb6-27"><a></a></span>
-<span id="cb6-28"><a></a><span class="kw">def</span> print_long_guitar():</span>
-<span id="cb6-29"><a></a>    print_head()</span>
-<span id="cb6-30"><a></a>    print_neck()</span>
+<span id="cb6-3"><a></a>    <span class="bu">print</span>(<span class="st">"    o|* *|o"</span>)</span>
+<span id="cb6-4"><a></a>    <span class="bu">print</span>(<span class="st">"    o|* *|o"</span>)</span>
+<span id="cb6-5"><a></a>    <span class="bu">print</span>(<span class="st">"    o|* *|o"</span>)</span>
+<span id="cb6-6"><a></a>    <span class="bu">print</span>(<span class="st">"     \===/"</span>)</span>
+<span id="cb6-7"><a></a></span>
+<span id="cb6-8"><a></a><span class="kw">def</span> print_neck():</span>
+<span id="cb6-9"><a></a>    <span class="bu">print</span>(<span class="st">"      |||"</span> <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span> <span class="op">+</span> <span class="st">"      |||"</span>)</span>
+<span id="cb6-10"><a></a>    </span>
+<span id="cb6-11"><a></a><span class="kw">def</span> print_body():</span>
+<span id="cb6-12"><a></a>    <span class="bu">print</span>(<span class="st">"   ___|||___"</span>)</span>
+<span id="cb6-13"><a></a>    <span class="bu">print</span>(<span class="st">"  /   |||   \ "</span> <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span> <span class="op">+</span> <span class="st">" /    |||    \ "</span>)</span>
+<span id="cb6-14"><a></a>    <span class="bu">print</span>(<span class="st">"|     |||     |"</span>)</span>
+<span id="cb6-15"><a></a>    <span class="bu">print</span>(<span class="st">" \   (|||)   /"</span>)</span>
+<span id="cb6-16"><a></a>    <span class="bu">print</span>(<span class="st">"  |   |||   |"</span>)</span>
+<span id="cb6-17"><a></a>    <span class="bu">print</span>(<span class="st">"  /   |||   \ "</span> <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span> <span class="op">+</span> <span class="st">" /    |||    \ "</span>)</span>
+<span id="cb6-18"><a></a>    <span class="bu">print</span>(<span class="st">"/     |||     \ "</span>)</span>
+<span id="cb6-19"><a></a>    <span class="bu">print</span>(<span class="st">"|    [===]    |"</span>)</span>
+<span id="cb6-20"><a></a>    <span class="bu">print</span>(<span class="st">" \           /"</span>)</span>
+<span id="cb6-21"><a></a>    <span class="bu">print</span>(<span class="st">"  '.       .'"</span>)</span>
+<span id="cb6-22"><a></a>    <span class="bu">print</span>(<span class="st">"   '-------'"</span>)</span>
+<span id="cb6-23"><a></a></span>
+<span id="cb6-24"><a></a><span class="kw">def</span> print_classic_guitar():</span>
+<span id="cb6-25"><a></a>    print_head()</span>
+<span id="cb6-26"><a></a>    print_neck()</span>
+<span id="cb6-27"><a></a>    print_body()</span>
+<span id="cb6-28"><a></a></span>
+<span id="cb6-29"><a></a><span class="kw">def</span> print_long_guitar():</span>
+<span id="cb6-30"><a></a>    print_head()</span>
 <span id="cb6-31"><a></a>    print_neck()</span>
-<span id="cb6-32"><a></a>    print_body()</span>
-<span id="cb6-33"><a></a></span>
-<span id="cb6-34"><a></a><span class="kw">def</span> main():</span>
-<span id="cb6-35"><a></a>    print_classic_guitar() <span class="co"># print classic guitar</span></span>
-<span id="cb6-36"><a></a>    print_long_guitar() <span class="co"># print long neck guitar</span></span>
-<span id="cb6-37"><a></a></span>
-<span id="cb6-38"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-32"><a></a>    print_neck()</span>
+<span id="cb6-33"><a></a>    print_body()</span>
+<span id="cb6-34"><a></a></span>
+<span id="cb6-35"><a></a><span class="kw">def</span> main():</span>
+<span id="cb6-36"><a></a>    print_classic_guitar() <span class="co"># print classic guitar</span></span>
+<span id="cb6-37"><a></a>    print_long_guitar() <span class="co"># print long neck guitar</span></span>
+<span id="cb6-38"><a></a></span>
+<span id="cb6-39"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      ___
+    o|* *|o
+    o|* *|o
+    o|* *|o
+     \===/
+      |||
+      |||
+   ___|||___
+  /   |||   \ 
+ /    |||    \ 
+|     |||     |
+ \   (|||)   /
+  |   |||   |
+  /   |||   \ 
+ /    |||    \ 
+/     |||     \ 
+|    [===]    |
+ \           /
+  '.       .'
+   '-------'
+      ___
+    o|* *|o
+    o|* *|o
+    o|* *|o
+     \===/
+      |||
+      |||
+      |||
+      |||
+   ___|||___
+  /   |||   \ 
+ /    |||    \ 
+|     |||     |
+ \   (|||)   /
+  |   |||   |
+  /   |||   \ 
+ /    |||    \ 
+/     |||     \ 
+|    [===]    |
+ \           /
+  '.       .'
+   '-------'</code></pre>
+</div>
+</div>
+</section>
+<section id="write-functions-improved-answers" class="slide level2">
+<h2>Write functions – improved answers</h2>
+<div id="1ab84032" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="kw">def</span> print_head():</span>
+<span id="cb8-2"><a></a>    <span class="bu">print</span>(<span class="st">"      ___"</span>)</span>
+<span id="cb8-3"><a></a>    pattern <span class="op">=</span> <span class="st">"    o|* *|o"</span></span>
+<span id="cb8-4"><a></a>    <span class="bu">print</span>(pattern)</span>
+<span id="cb8-5"><a></a>    <span class="bu">print</span>(pattern)</span>
+<span id="cb8-6"><a></a>    <span class="bu">print</span>(pattern)</span>
+<span id="cb8-7"><a></a>    <span class="bu">print</span>(<span class="st">"     \===/"</span>)</span>
+<span id="cb8-8"><a></a></span>
+<span id="cb8-9"><a></a><span class="kw">def</span> print_neck():</span>
+<span id="cb8-10"><a></a>    <span class="bu">print</span>(<span class="st">"      |||"</span> <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span> <span class="op">+</span> <span class="st">"      |||"</span>)</span>
+<span id="cb8-11"><a></a>    </span>
+<span id="cb8-12"><a></a><span class="kw">def</span> print_body():</span>
+<span id="cb8-13"><a></a>    <span class="bu">print</span>(<span class="st">"   ___|||___"</span>)</span>
+<span id="cb8-14"><a></a>    pattern <span class="op">=</span> <span class="st">"  /   |||   \ "</span> <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span> <span class="op">+</span> <span class="st">" /    |||    \ "</span> </span>
+<span id="cb8-15"><a></a>    <span class="bu">print</span>(pattern)</span>
+<span id="cb8-16"><a></a>    <span class="bu">print</span>(<span class="st">"|     |||     |"</span>)</span>
+<span id="cb8-17"><a></a>    <span class="bu">print</span>(<span class="st">" \   (|||)   /"</span>)</span>
+<span id="cb8-18"><a></a>    <span class="bu">print</span>(<span class="st">"  |   |||   |"</span>)</span>
+<span id="cb8-19"><a></a>    <span class="bu">print</span>(pattern)</span>
+<span id="cb8-20"><a></a>    <span class="bu">print</span>(<span class="st">"/     |||     \ "</span>)</span>
+<span id="cb8-21"><a></a>    <span class="bu">print</span>(<span class="st">"|    [===]    |"</span>)</span>
+<span id="cb8-22"><a></a>    <span class="bu">print</span>(<span class="st">" \           /"</span>)</span>
+<span id="cb8-23"><a></a>    <span class="bu">print</span>(<span class="st">"  '.       .'"</span>)</span>
+<span id="cb8-24"><a></a>    <span class="bu">print</span>(<span class="st">"   '-------'"</span>)</span>
+<span id="cb8-25"><a></a></span>
+<span id="cb8-26"><a></a><span class="kw">def</span> print_classic_guitar():</span>
+<span id="cb8-27"><a></a>    print_head()</span>
+<span id="cb8-28"><a></a>    print_neck()</span>
+<span id="cb8-29"><a></a>    print_body()</span>
+<span id="cb8-30"><a></a></span>
+<span id="cb8-31"><a></a><span class="kw">def</span> print_long_guitar():</span>
+<span id="cb8-32"><a></a>    print_head()</span>
+<span id="cb8-33"><a></a>    print_neck()</span>
+<span id="cb8-34"><a></a>    print_neck()</span>
+<span id="cb8-35"><a></a>    print_body()</span>
+<span id="cb8-36"><a></a></span>
+<span id="cb8-37"><a></a><span class="kw">def</span> main():</span>
+<span id="cb8-38"><a></a>    print_classic_guitar() <span class="co"># print classic guitar</span></span>
+<span id="cb8-39"><a></a>    print_long_guitar() <span class="co"># print long neck guitar</span></span>
+<span id="cb8-40"><a></a></span>
+<span id="cb8-41"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      ___
     o|* *|o
@@ -468,62 +574,67 @@
 <section id="write-a-function" class="slide level2">
 <h2>Write a function</h2>
 <p>Write <code>print_retro_head</code>:</p>
-<div id="9700679b" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="kw">def</span> print_retro_guitar():</span>
-<span id="cb8-2"><a></a>    print_retro_head()</span>
-<span id="cb8-3"><a></a>    print_neck()</span>
-<span id="cb8-4"><a></a>    print_body()</span>
-<span id="cb8-5"><a></a></span>
-<span id="cb8-6"><a></a><span class="kw">def</span> main():</span>
-<span id="cb8-7"><a></a>    print_classic_guitar() <span class="co"># print classic guitar</span></span>
-<span id="cb8-8"><a></a>    print_long_guitar() <span class="co"># print long neck guitar</span></span>
-<span id="cb8-9"><a></a>    print_retro_guitar() <span class="co"># print retro head guitar</span></span>
-<span id="cb8-10"><a></a></span>
-<span id="cb8-11"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="5f90bf7c" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="kw">def</span> print_retro_guitar():</span>
+<span id="cb10-2"><a></a>    print_retro_head()</span>
+<span id="cb10-3"><a></a>    print_neck()</span>
+<span id="cb10-4"><a></a>    print_body()</span>
+<span id="cb10-5"><a></a></span>
+<span id="cb10-6"><a></a><span class="kw">def</span> main():</span>
+<span id="cb10-7"><a></a>    print_classic_guitar() <span class="co"># print classic guitar</span></span>
+<span id="cb10-8"><a></a>    print_long_guitar() <span class="co"># print long neck guitar</span></span>
+<span id="cb10-9"><a></a>    print_retro_guitar() <span class="co"># print retro head guitar</span></span>
+<span id="cb10-10"><a></a></span>
+<span id="cb10-11"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-answer" class="slide level2">
 <h2>Write a function – answer</h2>
-<div id="dcc32b29" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="kw">def</span> print_head():</span>
-<span id="cb9-2"><a></a>    <span class="bu">print</span>(<span class="st">"      ___"</span>)</span>
-<span id="cb9-3"><a></a>    pattern <span class="op">=</span> <span class="st">"    o|* *|o"</span> <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span></span>
-<span id="cb9-4"><a></a>    <span class="bu">print</span>(pattern <span class="op">*</span> <span class="dv">3</span> <span class="op">+</span> <span class="st">"     \===/"</span>)</span>
-<span id="cb9-5"><a></a></span>
-<span id="cb9-6"><a></a><span class="kw">def</span> print_retro_head():</span>
-<span id="cb9-7"><a></a>    <span class="bu">print</span>(<span class="st">"     ._-_."</span>)</span>
-<span id="cb9-8"><a></a>    <span class="bu">print</span>(<span class="st">"    +|\G/|+"</span>)</span>
-<span id="cb9-9"><a></a>    pattern <span class="op">=</span> <span class="st">"    +|\./|+"</span> <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span></span>
-<span id="cb9-10"><a></a>    <span class="bu">print</span>(pattern <span class="op">*</span> <span class="dv">2</span> <span class="op">+</span> <span class="st">"     \===/"</span>)</span>
-<span id="cb9-11"><a></a>    </span>
-<span id="cb9-12"><a></a><span class="kw">def</span> print_neck():</span>
-<span id="cb9-13"><a></a>    <span class="bu">print</span>(<span class="st">"      |||"</span> <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span> <span class="op">+</span> <span class="st">"      |||"</span>)</span>
-<span id="cb9-14"><a></a>    </span>
-<span id="cb9-15"><a></a><span class="kw">def</span> print_body():</span>
-<span id="cb9-16"><a></a>    <span class="bu">print</span>(<span class="st">"   ___|||___"</span>)</span>
-<span id="cb9-17"><a></a>    pattern <span class="op">=</span> <span class="st">"  /   |||   \ "</span> <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span> <span class="op">+</span> <span class="st">" /    |||    \ "</span> </span>
-<span id="cb9-18"><a></a>    <span class="bu">print</span>(pattern)</span>
-<span id="cb9-19"><a></a>    <span class="bu">print</span>(<span class="st">"|     |||     |"</span>)</span>
-<span id="cb9-20"><a></a>    <span class="bu">print</span>(<span class="st">" \   (|||)   /"</span>)</span>
-<span id="cb9-21"><a></a>    <span class="bu">print</span>(<span class="st">"  |   |||   |"</span>)</span>
-<span id="cb9-22"><a></a>    <span class="bu">print</span>(pattern)</span>
-<span id="cb9-23"><a></a>    <span class="bu">print</span>(<span class="st">"/     |||     \ "</span>)</span>
-<span id="cb9-24"><a></a>    <span class="bu">print</span>(<span class="st">"|    [===]    |"</span>)</span>
-<span id="cb9-25"><a></a>    <span class="bu">print</span>(<span class="st">" \           /"</span>)</span>
-<span id="cb9-26"><a></a>    <span class="bu">print</span>(<span class="st">"  '.       .'"</span>)</span>
-<span id="cb9-27"><a></a>    <span class="bu">print</span>(<span class="st">"   '-------'"</span>)</span>
-<span id="cb9-28"><a></a>    </span>
-<span id="cb9-29"><a></a><span class="kw">def</span> print_retro_guitar():</span>
-<span id="cb9-30"><a></a>    print_retro_head()</span>
-<span id="cb9-31"><a></a>    print_neck()</span>
-<span id="cb9-32"><a></a>    print_body()</span>
-<span id="cb9-33"><a></a></span>
-<span id="cb9-34"><a></a><span class="kw">def</span> main():</span>
-<span id="cb9-35"><a></a>    print_classic_guitar() <span class="co"># print classic guitar</span></span>
-<span id="cb9-36"><a></a>    print_retro_guitar() <span class="co"># print retro head guitar</span></span>
-<span id="cb9-37"><a></a>    print_long_guitar() <span class="co"># print long neck guitar</span></span>
-<span id="cb9-38"><a></a></span>
-<span id="cb9-39"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="b6121e79" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="kw">def</span> print_head():</span>
+<span id="cb11-2"><a></a>    <span class="bu">print</span>(<span class="st">"      ___"</span>)</span>
+<span id="cb11-3"><a></a>    pattern <span class="op">=</span> <span class="st">"    o|* *|o"</span></span>
+<span id="cb11-4"><a></a>    <span class="bu">print</span>(pattern)</span>
+<span id="cb11-5"><a></a>    <span class="bu">print</span>(pattern)</span>
+<span id="cb11-6"><a></a>    <span class="bu">print</span>(pattern)</span>
+<span id="cb11-7"><a></a>    <span class="bu">print</span>(<span class="st">"     \===/"</span>)</span>
+<span id="cb11-8"><a></a></span>
+<span id="cb11-9"><a></a><span class="kw">def</span> print_retro_head():</span>
+<span id="cb11-10"><a></a>    <span class="bu">print</span>(<span class="st">"     ._-_."</span>)</span>
+<span id="cb11-11"><a></a>    <span class="bu">print</span>(<span class="st">"    +|\G/|+"</span>)</span>
+<span id="cb11-12"><a></a>    pattern <span class="op">=</span> <span class="st">"    +|\./|+"</span></span>
+<span id="cb11-13"><a></a>    <span class="bu">print</span>(pattern)</span>
+<span id="cb11-14"><a></a>    <span class="bu">print</span>(pattern)</span>
+<span id="cb11-15"><a></a>    <span class="bu">print</span>(<span class="st">"     \===/"</span>)</span>
+<span id="cb11-16"><a></a>    </span>
+<span id="cb11-17"><a></a><span class="kw">def</span> print_neck():</span>
+<span id="cb11-18"><a></a>    <span class="bu">print</span>(<span class="st">"      |||"</span> <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span> <span class="op">+</span> <span class="st">"      |||"</span>)</span>
+<span id="cb11-19"><a></a>    </span>
+<span id="cb11-20"><a></a><span class="kw">def</span> print_body():</span>
+<span id="cb11-21"><a></a>    <span class="bu">print</span>(<span class="st">"   ___|||___"</span>)</span>
+<span id="cb11-22"><a></a>    pattern <span class="op">=</span> <span class="st">"  /   |||   \ "</span> <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span> <span class="op">+</span> <span class="st">" /    |||    \ "</span> </span>
+<span id="cb11-23"><a></a>    <span class="bu">print</span>(pattern)</span>
+<span id="cb11-24"><a></a>    <span class="bu">print</span>(<span class="st">"|     |||     |"</span>)</span>
+<span id="cb11-25"><a></a>    <span class="bu">print</span>(<span class="st">" \   (|||)   /"</span>)</span>
+<span id="cb11-26"><a></a>    <span class="bu">print</span>(<span class="st">"  |   |||   |"</span>)</span>
+<span id="cb11-27"><a></a>    <span class="bu">print</span>(pattern)</span>
+<span id="cb11-28"><a></a>    <span class="bu">print</span>(<span class="st">"/     |||     \ "</span>)</span>
+<span id="cb11-29"><a></a>    <span class="bu">print</span>(<span class="st">"|    [===]    |"</span>)</span>
+<span id="cb11-30"><a></a>    <span class="bu">print</span>(<span class="st">" \           /"</span>)</span>
+<span id="cb11-31"><a></a>    <span class="bu">print</span>(<span class="st">"  '.       .'"</span>)</span>
+<span id="cb11-32"><a></a>    <span class="bu">print</span>(<span class="st">"   '-------'"</span>)</span>
+<span id="cb11-33"><a></a>    </span>
+<span id="cb11-34"><a></a><span class="kw">def</span> print_retro_guitar():</span>
+<span id="cb11-35"><a></a>    print_retro_head()</span>
+<span id="cb11-36"><a></a>    print_neck()</span>
+<span id="cb11-37"><a></a>    print_body()</span>
+<span id="cb11-38"><a></a></span>
+<span id="cb11-39"><a></a><span class="kw">def</span> main():</span>
+<span id="cb11-40"><a></a>    print_classic_guitar() <span class="co"># print classic guitar</span></span>
+<span id="cb11-41"><a></a>    print_retro_guitar() <span class="co"># print retro head guitar</span></span>
+<span id="cb11-42"><a></a>    print_long_guitar() <span class="co"># print long neck guitar</span></span>
+<span id="cb11-43"><a></a></span>
+<span id="cb11-44"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      ___
     o|* *|o
@@ -592,9 +703,9 @@
 </section>
 <section id="discussion" class="slide level2">
 <h2>Discussion</h2>
-<p>Work in groups, compare the latter version and the earlier version of program (page 4-6) and discuss:</p>
+<p>Download and run <a href="data/guitar_old.py">old guitar file</a> and <a href="data/guitar_new.py">new guitar file</a>:</p>
 <ul>
-<li><p>Which version is better?</p></li>
+<li><p>Which version is more readable?</p></li>
 <li><p>Why it is better?</p></li>
 </ul>
 

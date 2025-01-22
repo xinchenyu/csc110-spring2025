@@ -12,7 +12,7 @@ df-print: kable
 
 Program decomposition refers to the process of breaking down a complex program into smaller, more manageable, and understandable parts or components.
 
-It improves the structural quality of code.
+It avoids unnecessary common code and improves the structural quality of code.
 
 ## Print a classic guitar
 
@@ -107,16 +107,31 @@ Compare the three types of guitar, answer the questions:
 
 ## Class activity one -- answers
 
-Compare the three types of guitar, answer the questions:
+Classic guitar vs. Retro head guitar:
 
 -   which parts of code are the same?
 
-    -   the body: line 8 - 20 in classic guitar   
+    -   the neck
+    
+    -   the body
 
 -   which parts of code are different?
 
+    -   the head: line 1-4
+    
+
+## Class activity one -- answers
+
+Retro head guitar vs. Retro head long neck guitar:
+
+-   which parts of code are the same?
+
     -   the head
     
+    -   the body
+
+-   which parts of code are different?
+
     -   the neck
 
 ## Class activity two
@@ -196,16 +211,64 @@ def main():
 main()
 ```
 
-
-## Write functions -- answers
+## Write functions -- answers 
 
 ```{python}
 #| echo: true
 #| eval: true
 def print_head():
     print("      ___")
-    pattern = "    o|* *|o" + "\n"
-    print(pattern * 3 + "     \===/")
+    print("    o|* *|o")
+    print("    o|* *|o")
+    print("    o|* *|o")
+    print("     \===/")
+
+def print_neck():
+    print("      |||" + "\n" + "      |||")
+    
+def print_body():
+    print("   ___|||___")
+    print("  /   |||   \ " + "\n" + " /    |||    \ ")
+    print("|     |||     |")
+    print(" \   (|||)   /")
+    print("  |   |||   |")
+    print("  /   |||   \ " + "\n" + " /    |||    \ ")
+    print("/     |||     \ ")
+    print("|    [===]    |")
+    print(" \           /")
+    print("  '.       .'")
+    print("   '-------'")
+
+def print_classic_guitar():
+    print_head()
+    print_neck()
+    print_body()
+
+def print_long_guitar():
+    print_head()
+    print_neck()
+    print_neck()
+    print_body()
+
+def main():
+    print_classic_guitar() # print classic guitar
+    print_long_guitar() # print long neck guitar
+
+main()
+```
+
+## Write functions -- improved answers
+
+```{python}
+#| echo: true
+#| eval: true
+def print_head():
+    print("      ___")
+    pattern = "    o|* *|o"
+    print(pattern)
+    print(pattern)
+    print(pattern)
+    print("     \===/")
 
 def print_neck():
     print("      |||" + "\n" + "      |||")
@@ -271,14 +334,19 @@ main()
 #| eval: true
 def print_head():
     print("      ___")
-    pattern = "    o|* *|o" + "\n"
-    print(pattern * 3 + "     \===/")
+    pattern = "    o|* *|o"
+    print(pattern)
+    print(pattern)
+    print(pattern)
+    print("     \===/")
 
 def print_retro_head():
     print("     ._-_.")
     print("    +|\G/|+")
-    pattern = "    +|\./|+" + "\n"
-    print(pattern * 2 + "     \===/")
+    pattern = "    +|\./|+"
+    print(pattern)
+    print(pattern)
+    print("     \===/")
     
 def print_neck():
     print("      |||" + "\n" + "      |||")
@@ -312,8 +380,8 @@ main()
 
 ## Discussion
 
-Work in groups, compare the latter version and the earlier version of program (page 4-6) and discuss:
+Download and run [old guitar file](data/guitar_old.py) and [new guitar file](data/guitar_new.py):
 
--   Which version is better?
+-   Which version is more readable?
 
 -   Why it is better?
