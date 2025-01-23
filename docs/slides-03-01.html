@@ -211,7 +211,7 @@
 </section>
 <section id="function-comments-1" class="slide level2">
 <h2>Function Comments</h2>
-<div id="6bd7ab1d" class="cell" data-execution_count="1">
+<div id="4038083d" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="co">'''</span></span>
 <span id="cb1-2"><a></a><span class="co">Xinchen Yu</span></span>
 <span id="cb1-3"><a></a><span class="co">CSC110</span></span>
@@ -286,7 +286,7 @@
 </section>
 <section id="global-or-local" class="slide level2">
 <h2>Global or Local?</h2>
-<div id="db1d8378" class="cell" data-execution_count="2">
+<div id="d06a67ab" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>a <span class="op">=</span> <span class="dv">10</span>               <span class="co"># What are the global and local variables?</span></span>
 <span id="cb3-2"><a></a>b <span class="op">=</span> <span class="dv">5</span>                <span class="co"># Is the output of the two programs the same </span></span>
 <span id="cb3-3"><a></a>                     <span class="co"># or different?</span></span>
@@ -299,7 +299,7 @@
 <span id="cb3-10"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>vs.</p>
-<div id="ba74cc40" class="cell" data-execution_count="3">
+<div id="0ef6aa98" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="kw">def</span> <span class="bu">sum</span>(a, b):</span>
 <span id="cb4-2"><a></a>  <span class="cf">return</span> a <span class="op">+</span> b</span>
 <span id="cb4-3"><a></a></span>
@@ -319,7 +319,7 @@
 </section>
 <section id="argument-or-parameter" class="slide level2">
 <h2>Argument or Parameter?</h2>
-<div id="e3a7201e" class="cell" data-execution_count="4">
+<div id="73067f63" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="co"># The parameters are a and b</span></span>
 <span id="cb5-2"><a></a><span class="kw">def</span> add(a, b):</span>
 <span id="cb5-3"><a></a>    <span class="cf">return</span> a<span class="op">+</span>b</span>
@@ -328,58 +328,35 @@
 <span id="cb5-6"><a></a>add(<span class="dv">5</span>, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="write-a-function" class="slide level2">
-<h2>Write a function</h2>
-<p>Write a Python function called <code>hypotenuse</code> that takes two arguments: <code>a</code> and <code>b</code> representing the length of the two non-hypotenuse sides of a right triangle. The function should calculate the hypotenuse according to the Pythagorean theorem: <span class="math inline">\(c = \sqrt(a^2 + b^2)\)</span>. Return it rounded at two decimals.</p>
-<p>Test cases: <code>hypotenuse(3, 4)</code> should return <code>5.0</code>, <code>hypotenuse(10, 10)</code> should return <code>14.14</code></p>
-<p>Name your file <code>hypotenuse.py</code></p>
+<section id="function-to-calculate-the-volume-of-a-cylinder" class="slide level2">
+<h2>Function to calculate the volume of a cylinder</h2>
+<p>Write a function that does the following:</p>
+<ol type="1">
+<li>Its name is <code>volume</code></li>
+<li>It takes two integer arguments: <code>radius</code> and <code>height</code></li>
+<li>It calculates the volume of a cylinder, based on <code>radius</code> and <code>height</code>. Volume is area multiplied by height.</li>
+<li>It returns the float value for calculated volume.</li>
+</ol>
 </section>
-<section id="submit-attendance" class="slide level2">
-<h2>Submit attendance</h2>
-<p>Submit your <code>hypotenuse.py</code> file with your solution to gradescope for attendance</p>
-</section>
-<section id="write-a-function-1" class="slide level2">
-<h2>Write a function</h2>
-<div id="b0635406" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="kw">def</span> sqrt(n):</span>
-<span id="cb6-2"><a></a>  <span class="co">'''</span></span>
-<span id="cb6-3"><a></a><span class="co">  This function calculates the square root of a number</span></span>
-<span id="cb6-4"><a></a><span class="co">  Args:</span></span>
-<span id="cb6-5"><a></a><span class="co">    n: integer or float</span></span>
-<span id="cb6-6"><a></a><span class="co">  Returns:</span></span>
-<span id="cb6-7"><a></a><span class="co">    The square root of n</span></span>
-<span id="cb6-8"><a></a><span class="co">  '''</span></span>
-<span id="cb6-9"><a></a>  <span class="cf">return</span> n<span class="op">**</span><span class="fl">.5</span></span>
+<section id="function-to-calculate-the-volume-of-a-cylinder-1" class="slide level2">
+<h2>Function to calculate the volume of a cylinder</h2>
+<div id="cf9dc632" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="kw">def</span> volume(radius, height):</span>
+<span id="cb6-2"><a></a>  <span class="co"># calculate the area first</span></span>
+<span id="cb6-3"><a></a>  area <span class="op">=</span> <span class="fl">3.1415</span> <span class="op">*</span> radius <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb6-4"><a></a>  </span>
+<span id="cb6-5"><a></a>  <span class="co"># multiply area by height</span></span>
+<span id="cb6-6"><a></a>  vol <span class="op">=</span> area <span class="op">*</span> height</span>
+<span id="cb6-7"><a></a>  </span>
+<span id="cb6-8"><a></a>  <span class="co"># return calculated volume</span></span>
+<span id="cb6-9"><a></a>  <span class="cf">return</span> vol</span>
 <span id="cb6-10"><a></a></span>
-<span id="cb6-11"><a></a><span class="kw">def</span> hypotenuse(a, b):</span>
-<span id="cb6-12"><a></a>  <span class="co">'''</span></span>
-<span id="cb6-13"><a></a><span class="co">  This function calculates the hypotenuse of a right angle triangle.</span></span>
-<span id="cb6-14"><a></a><span class="co">  Args:</span></span>
-<span id="cb6-15"><a></a><span class="co">    a: number (integer or float) representing one of the non-hypotenuse sides</span></span>
-<span id="cb6-16"><a></a><span class="co">    b: number (integer or float) representing one of the non-hypotenuse sides</span></span>
-<span id="cb6-17"><a></a><span class="co">  Returns:</span></span>
-<span id="cb6-18"><a></a><span class="co">    Float representing the length of the hypotenuse given a and b</span></span>
-<span id="cb6-19"><a></a><span class="co">  '''</span> </span>
-<span id="cb6-20"><a></a>  h <span class="op">=</span> sqrt(a<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> b<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb6-21"><a></a>  <span class="cf">return</span> <span class="bu">round</span>(h, <span class="dv">2</span>)</span>
-<span id="cb6-22"><a></a></span>
-<span id="cb6-23"><a></a><span class="kw">def</span> main():</span>
-<span id="cb6-24"><a></a>  <span class="co">'''</span></span>
-<span id="cb6-25"><a></a><span class="co">  This function calls the hypotenuse function to calculate and then</span></span>
-<span id="cb6-26"><a></a><span class="co">  print out the hypotenuse of a right angle triangle of sides 3 and 4</span></span>
-<span id="cb6-27"><a></a><span class="co">  and the hypotenuse of a right angle triange of sides 10 and 10</span></span>
-<span id="cb6-28"><a></a><span class="co">  '''</span></span>
-<span id="cb6-29"><a></a>  result <span class="op">=</span> hypotenuse(<span class="dv">3</span>, <span class="dv">4</span>)</span>
-<span id="cb6-30"><a></a>  <span class="bu">print</span>(result)</span>
-<span id="cb6-31"><a></a>  </span>
-<span id="cb6-32"><a></a>  result <span class="op">=</span> hypotenuse(<span class="dv">10</span>, <span class="dv">10</span>)</span>
-<span id="cb6-33"><a></a>  <span class="bu">print</span>(result)</span>
-<span id="cb6-34"><a></a>  </span>
-<span id="cb6-35"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>5.0
-14.14</code></pre>
-</div>
+<span id="cb6-11"><a></a><span class="kw">def</span> main():</span>
+<span id="cb6-12"><a></a>  <span class="bu">print</span>(volume(<span class="dv">1</span>, <span class="dv">2</span>)) <span class="co"># 6.283</span></span>
+<span id="cb6-13"><a></a>  <span class="bu">print</span>(volume(<span class="dv">6</span>, <span class="dv">10</span>)) <span class="co"># 1130.94</span></span>
+<span id="cb6-14"><a></a>  <span class="bu">print</span>(volume(<span class="dv">5</span>, <span class="dv">5</span>)) <span class="co"># 392.68750000000006</span></span>
+<span id="cb6-15"><a></a>  </span>
+<span id="cb6-16"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

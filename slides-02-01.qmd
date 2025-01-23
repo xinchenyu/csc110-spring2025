@@ -212,42 +212,56 @@ def main():
 main()
 ```
 
-## Function to calculate the volume of a cylinder
+## Write a function
 
-Write a function that does the following:
+Write a Python function named `hypotenuse` that takes two arguments: `a` and `b` representing the length of the two non-hypotenuse sides of a right triangle.
+The function calculate the hypotenuse according to the Pythagorean theorem: $c = \sqrt(a^2 + b^2)$. Return it rounded at two decimals.
 
-1.  Its name is `volume`
-2.  It takes two integer arguments: `radius` and `height`
-3.  It calculates the volume of a cylinder, based on `radius` and `height`. Volume is area multiplied by height.
-4.  It returns the float value for calculated volume.
+Test cases: `hypotenuse(3, 4)` should return `5.0`, `hypotenuse(10, 10)` should return `14.14`
 
-## Submit function to Gradescope
+Name your file `hypotenuse.py` and submit to gradescope.
 
--   Name your python script with the `volume` function `cylinder.py`
--   Submit your `.py` file to Gradescope, Attendance January 24
--   You can resubmit as many times as you need (up to the deadline)
--   You can look at your `Submission History` and activate a previous submission
 
-## Function to calculate the volume of a cylinder
+## Write a function
 
 ```{python}
+#| eval: true
 #| echo: true
-#| eval: false
-def volume(radius, height):
-  # calculate the area first
-  area = 3.1415 * radius ** 2
-  
-  # multiply area by height
-  vol = area * height
-  
-  # return calculated volume
-  return vol
+def sqrt(n):
+  '''
+  This function calculates the square root of a number
+  Args:
+    n: integer or float
+  Returns:
+    The square root of n
+  '''
+  return n**0.5
+
+def hypotenuse(a, b):
+  '''
+  This function calculates the hypotenuse of a right angle triangle.
+  Args:
+    a: number (integer or float) representing one of the non-hypotenuse sides
+    b: number (integer or float) representing one of the non-hypotenuse sides
+  Returns:
+    Float representing the length of the hypotenuse given a and b
+  ''' 
+  h = sqrt(a**2 + b**2)
+  return round(h, 2)
 
 def main():
-  print(volume(1, 2)) # 6.283
-  print(volume(6, 10)) # 1130.94
-  print(volume(5, 5)) # 392.68750000000006
+  '''
+  This function calls the hypotenuse function to calculate and then
+  print out the hypotenuse of a right angle triangle of sides 3 and 4
+  and the hypotenuse of a right angle triange of sides 10 and 10
+  '''
+  result = hypotenuse(3, 4)
+  print(result)
+  
+  result = hypotenuse(10, 10)
+  print(result)
   
 main()
 ```
+
 

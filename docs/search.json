@@ -9042,5 +9042,60 @@
       "Module 2 - Functions, Operators, Expressions and Decomposition",
       "decomposition (slides)"
     ]
+  },
+  {
+    "objectID": "slides-02-01.html#write-a-function-3",
+    "href": "slides-02-01.html#write-a-function-3",
+    "title": "functions (slides)",
+    "section": "Write a function",
+    "text": "Write a function\nWrite a Python function named hypotenuse that takes two arguments: a and b representing the length of the two non-hypotenuse sides of a right triangle. The function calculate the hypotenuse according to the Pythagorean theorem: \\(c = \\sqrt(a^2 + b^2)\\). Return it rounded at two decimals.\nTest cases: hypotenuse(3, 4) should return 5.0, hypotenuse(10, 10) should return 14.14\nName your file hypotenuse.py and submit to gradescope.",
+    "crumbs": [
+      "Module 2 - Functions, Operators, Expressions and Decomposition",
+      "functions (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-02-01.html#submit-attendance",
+    "href": "slides-02-01.html#submit-attendance",
+    "title": "functions (slides)",
+    "section": "Submit attendance",
+    "text": "Submit attendance\nSubmit your hypotenuse.py file with your solution to gradescope for attendance",
+    "crumbs": [
+      "Module 2 - Functions, Operators, Expressions and Decomposition",
+      "functions (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-02-01.html#write-a-function-4",
+    "href": "slides-02-01.html#write-a-function-4",
+    "title": "functions (slides)",
+    "section": "Write a function",
+    "text": "Write a function\n\ndef sqrt(n):\n  '''\n  This function calculates the square root of a number\n  Args:\n    n: integer or float\n  Returns:\n    The square root of n\n  '''\n  return n**0.5\n\ndef hypotenuse(a, b):\n  '''\n  This function calculates the hypotenuse of a right angle triangle.\n  Args:\n    a: number (integer or float) representing one of the non-hypotenuse sides\n    b: number (integer or float) representing one of the non-hypotenuse sides\n  Returns:\n    Float representing the length of the hypotenuse given a and b\n  ''' \n  h = sqrt(a**2 + b**2)\n  return round(h, 2)\n\ndef main():\n  '''\n  This function calls the hypotenuse function to calculate and then\n  print out the hypotenuse of a right angle triangle of sides 3 and 4\n  and the hypotenuse of a right angle triange of sides 10 and 10\n  '''\n  result = hypotenuse(3, 4)\n  print(result)\n  \n  result = hypotenuse(10, 10)\n  print(result)\n  \nmain()\n\n5.0\n14.14",
+    "crumbs": [
+      "Module 2 - Functions, Operators, Expressions and Decomposition",
+      "functions (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-03-01.html#function-to-calculate-the-volume-of-a-cylinder",
+    "href": "slides-03-01.html#function-to-calculate-the-volume-of-a-cylinder",
+    "title": "more on Functions (class slides)",
+    "section": "Function to calculate the volume of a cylinder",
+    "text": "Function to calculate the volume of a cylinder\nWrite a function that does the following:\n\nIts name is volume\nIt takes two integer arguments: radius and height\nIt calculates the volume of a cylinder, based on radius and height. Volume is area multiplied by height.\nIt returns the float value for calculated volume.",
+    "crumbs": [
+      "Module 3 - More on Functions and Decomposition",
+      "more on Functions (class slides)"
+    ]
+  },
+  {
+    "objectID": "slides-03-01.html#function-to-calculate-the-volume-of-a-cylinder-1",
+    "href": "slides-03-01.html#function-to-calculate-the-volume-of-a-cylinder-1",
+    "title": "more on Functions (class slides)",
+    "section": "Function to calculate the volume of a cylinder",
+    "text": "Function to calculate the volume of a cylinder\n\ndef volume(radius, height):\n  # calculate the area first\n  area = 3.1415 * radius ** 2\n  \n  # multiply area by height\n  vol = area * height\n  \n  # return calculated volume\n  return vol\n\ndef main():\n  print(volume(1, 2)) # 6.283\n  print(volume(6, 10)) # 1130.94\n  print(volume(5, 5)) # 392.68750000000006\n  \nmain()",
+    "crumbs": [
+      "Module 3 - More on Functions and Decomposition",
+      "more on Functions (class slides)"
+    ]
   }
 ]
