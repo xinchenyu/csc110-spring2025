@@ -134,6 +134,35 @@ Retro head guitar vs. Retro head long neck guitar:
 
     -   the neck
 
+## Decomposition
+
+```{python}
+#| echo: true
+#| eval: false
+def print_classic_guitar():
+    print_head()
+    print_neck()
+    print_body()
+
+def print_retro_guitar():
+    print_retro_head()
+    print_neck()
+    print_body()
+    
+def print_long_guitar():
+    print_head()
+    print_neck()
+    print_neck()
+    print_body()
+
+def main():
+    print_classic_guitar() # print classic guitar
+    print_retro_guitar() # print retro head guitar
+    print_long_guitar() # print long neck guitar
+
+main()
+```
+
 ## Class activity two
 
 Read the code for classic guitar, answer the questions:
@@ -347,7 +376,7 @@ def print_retro_head():
     print(pattern)
     print(pattern)
     print("     \===/")
-    
+
 def print_neck():
     print("      |||" + "\n" + "      |||")
     
@@ -364,9 +393,20 @@ def print_body():
     print(" \           /")
     print("  '.       .'")
     print("   '-------'")
-    
+
+def print_classic_guitar():
+    print_head()
+    print_neck()
+    print_body()
+
 def print_retro_guitar():
     print_retro_head()
+    print_neck()
+    print_body()
+    
+def print_long_guitar():
+    print_head()
+    print_neck()
     print_neck()
     print_body()
 

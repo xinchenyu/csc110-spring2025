@@ -1489,7 +1489,7 @@
     "href": "slides-02-02.html#write-a-function-answer",
     "title": "decomposition (slides)",
     "section": "Write a function – answer",
-    "text": "Write a function – answer\n\ndef print_head():\n    print(\"      ___\")\n    pattern = \"    o|* *|o\"\n    print(pattern)\n    print(pattern)\n    print(pattern)\n    print(\"     \\===/\")\n\ndef print_retro_head():\n    print(\"     ._-_.\")\n    print(\"    +|\\G/|+\")\n    pattern = \"    +|\\./|+\"\n    print(pattern)\n    print(pattern)\n    print(\"     \\===/\")\n    \ndef print_neck():\n    print(\"      |||\" + \"\\n\" + \"      |||\")\n    \ndef print_body():\n    print(\"   ___|||___\")\n    pattern = \"  /   |||   \\ \" + \"\\n\" + \" /    |||    \\ \" \n    print(pattern)\n    print(\"|     |||     |\")\n    print(\" \\   (|||)   /\")\n    print(\"  |   |||   |\")\n    print(pattern)\n    print(\"/     |||     \\ \")\n    print(\"|    [===]    |\")\n    print(\" \\           /\")\n    print(\"  '.       .'\")\n    print(\"   '-------'\")\n    \ndef print_retro_guitar():\n    print_retro_head()\n    print_neck()\n    print_body()\n\ndef main():\n    print_classic_guitar() # print classic guitar\n    print_retro_guitar() # print retro head guitar\n    print_long_guitar() # print long neck guitar\n\nmain()\n\n      ___\n    o|* *|o\n    o|* *|o\n    o|* *|o\n     \\===/\n      |||\n      |||\n   ___|||___\n  /   |||   \\ \n /    |||    \\ \n|     |||     |\n \\   (|||)   /\n  |   |||   |\n  /   |||   \\ \n /    |||    \\ \n/     |||     \\ \n|    [===]    |\n \\           /\n  '.       .'\n   '-------'\n     ._-_.\n    +|\\G/|+\n    +|\\./|+\n    +|\\./|+\n     \\===/\n      |||\n      |||\n   ___|||___\n  /   |||   \\ \n /    |||    \\ \n|     |||     |\n \\   (|||)   /\n  |   |||   |\n  /   |||   \\ \n /    |||    \\ \n/     |||     \\ \n|    [===]    |\n \\           /\n  '.       .'\n   '-------'\n      ___\n    o|* *|o\n    o|* *|o\n    o|* *|o\n     \\===/\n      |||\n      |||\n      |||\n      |||\n   ___|||___\n  /   |||   \\ \n /    |||    \\ \n|     |||     |\n \\   (|||)   /\n  |   |||   |\n  /   |||   \\ \n /    |||    \\ \n/     |||     \\ \n|    [===]    |\n \\           /\n  '.       .'\n   '-------'",
+    "text": "Write a function – answer\n\ndef print_head():\n    print(\"      ___\")\n    pattern = \"    o|* *|o\"\n    print(pattern)\n    print(pattern)\n    print(pattern)\n    print(\"     \\===/\")\n\ndef print_retro_head():\n    print(\"     ._-_.\")\n    print(\"    +|\\G/|+\")\n    pattern = \"    +|\\./|+\"\n    print(pattern)\n    print(pattern)\n    print(\"     \\===/\")\n\ndef print_neck():\n    print(\"      |||\" + \"\\n\" + \"      |||\")\n    \ndef print_body():\n    print(\"   ___|||___\")\n    pattern = \"  /   |||   \\ \" + \"\\n\" + \" /    |||    \\ \" \n    print(pattern)\n    print(\"|     |||     |\")\n    print(\" \\   (|||)   /\")\n    print(\"  |   |||   |\")\n    print(pattern)\n    print(\"/     |||     \\ \")\n    print(\"|    [===]    |\")\n    print(\" \\           /\")\n    print(\"  '.       .'\")\n    print(\"   '-------'\")\n\ndef print_classic_guitar():\n    print_head()\n    print_neck()\n    print_body()\n\ndef print_retro_guitar():\n    print_retro_head()\n    print_neck()\n    print_body()\n    \ndef print_long_guitar():\n    print_head()\n    print_neck()\n    print_neck()\n    print_body()\n\ndef main():\n    print_classic_guitar() # print classic guitar\n    print_retro_guitar() # print retro head guitar\n    print_long_guitar() # print long neck guitar\n\nmain()\n\n      ___\n    o|* *|o\n    o|* *|o\n    o|* *|o\n     \\===/\n      |||\n      |||\n   ___|||___\n  /   |||   \\ \n /    |||    \\ \n|     |||     |\n \\   (|||)   /\n  |   |||   |\n  /   |||   \\ \n /    |||    \\ \n/     |||     \\ \n|    [===]    |\n \\           /\n  '.       .'\n   '-------'\n     ._-_.\n    +|\\G/|+\n    +|\\./|+\n    +|\\./|+\n     \\===/\n      |||\n      |||\n   ___|||___\n  /   |||   \\ \n /    |||    \\ \n|     |||     |\n \\   (|||)   /\n  |   |||   |\n  /   |||   \\ \n /    |||    \\ \n/     |||     \\ \n|    [===]    |\n \\           /\n  '.       .'\n   '-------'\n      ___\n    o|* *|o\n    o|* *|o\n    o|* *|o\n     \\===/\n      |||\n      |||\n      |||\n      |||\n   ___|||___\n  /   |||   \\ \n /    |||    \\ \n|     |||     |\n \\   (|||)   /\n  |   |||   |\n  /   |||   \\ \n /    |||    \\ \n/     |||     \\ \n|    [===]    |\n \\           /\n  '.       .'\n   '-------'",
     "crumbs": [
       "Module 2 - Functions, Operators, Expressions and Decomposition",
       "decomposition (slides)"
@@ -9096,6 +9096,39 @@
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on Functions (class slides)"
+    ]
+  },
+  {
+    "objectID": "slides-02-02.html#class-activity-one-answers-2",
+    "href": "slides-02-02.html#class-activity-one-answers-2",
+    "title": "decomposition (slides)",
+    "section": "Class activity one – answers",
+    "text": "Class activity one – answers\n\ndef print_classic_guitar():\n    print_head()\n    print_neck()\n    print_body()\n\ndef print_retro_guitar():\n    print_retro_head()\n    print_neck()\n    print_body()\n    \ndef print_long_guitar():\n    print_head()\n    print_neck()\n    print_neck()\n    print_body()\n\ndef main():\n    print_classic_guitar() # print classic guitar\n    print_retro_guitar() # print retro head guitar\n    print_long_guitar() # print long neck guitar\n\nmain()",
+    "crumbs": [
+      "Module 2 - Functions, Operators, Expressions and Decomposition",
+      "decomposition (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-02-02.html#class-activity-one-conclusion",
+    "href": "slides-02-02.html#class-activity-one-conclusion",
+    "title": "decomposition (slides)",
+    "section": "Class activity one – conclusion",
+    "text": "Class activity one – conclusion\n\ndef print_classic_guitar():\n    print_head()\n    print_neck()\n    print_body()\n\ndef print_retro_guitar():\n    print_retro_head()\n    print_neck()\n    print_body()\n    \ndef print_long_guitar():\n    print_head()\n    print_neck()\n    print_neck()\n    print_body()\n\ndef main():\n    print_classic_guitar() # print classic guitar\n    print_retro_guitar() # print retro head guitar\n    print_long_guitar() # print long neck guitar\n\nmain()",
+    "crumbs": [
+      "Module 2 - Functions, Operators, Expressions and Decomposition",
+      "decomposition (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-02-02.html#decomposition",
+    "href": "slides-02-02.html#decomposition",
+    "title": "decomposition (slides)",
+    "section": "Decomposition",
+    "text": "Decomposition\n\ndef print_classic_guitar():\n    print_head()\n    print_neck()\n    print_body()\n\ndef print_retro_guitar():\n    print_retro_head()\n    print_neck()\n    print_body()\n    \ndef print_long_guitar():\n    print_head()\n    print_neck()\n    print_neck()\n    print_body()\n\ndef main():\n    print_classic_guitar() # print classic guitar\n    print_retro_guitar() # print retro head guitar\n    print_long_guitar() # print long neck guitar\n\nmain()",
+    "crumbs": [
+      "Module 2 - Functions, Operators, Expressions and Decomposition",
+      "decomposition (slides)"
     ]
   }
 ]
