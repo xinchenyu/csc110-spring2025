@@ -99,7 +99,7 @@ print("   '-------'")
 
 ## Class activity one
 
-Compare the three types of guitar, answer the questions:
+Compare the three types of guitar, write your asnwers:
 
 -   which parts of code are the same?
 
@@ -165,7 +165,7 @@ main()
 
 ## Class activity two
 
-Read the code for classic guitar, answer the questions:
+Read the code for classic guitar, write your asnwers:
 
 -   which lines of code are the same?
 
@@ -257,11 +257,13 @@ def print_neck():
     
 def print_body():
     print("   ___|||___")
-    print("  /   |||   \ " + "\n" + " /    |||    \ ")
+    print("  /   |||   \ ")
+    print(" /    |||    \ ")
     print("|     |||     |")
     print(" \   (|||)   /")
     print("  |   |||   |")
-    print("  /   |||   \ " + "\n" + " /    |||    \ ")
+    print("  /   |||   \ ")
+    print(" /    |||    \ ")
     print("/     |||     \ ")
     print("|    [===]    |")
     print(" \           /")
