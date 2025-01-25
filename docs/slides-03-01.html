@@ -202,66 +202,6 @@
 <h1>CSC 110 - More on Functions in Python</h1>
 
 </section>
-<section id="function-comments" class="slide level2">
-<h2>Function Comments</h2>
-<ul>
-<li>Every function created is required to have a function comment, including main</li>
-<li>Function comments are a multi-line string (as opposed to using <code>#</code> for other comments)</li>
-</ul>
-</section>
-<section id="function-comments-1" class="slide level2">
-<h2>Function Comments</h2>
-<div id="4038083d" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="co">'''</span></span>
-<span id="cb1-2"><a></a><span class="co">Xinchen Yu</span></span>
-<span id="cb1-3"><a></a><span class="co">CSC110</span></span>
-<span id="cb1-4"><a></a><span class="co">Class Demonstration</span></span>
-<span id="cb1-5"><a></a><span class="co">This program has two functions: one to calculate the area of a sphere,</span></span>
-<span id="cb1-6"><a></a><span class="co">the other to calculate the volume of a sphere.</span></span>
-<span id="cb1-7"><a></a><span class="co">The main() function is called to print to the standard output the</span></span>
-<span id="cb1-8"><a></a><span class="co">area and volume of a sphere of radius .75</span></span>
-<span id="cb1-9"><a></a><span class="co">'''</span></span>
-<span id="cb1-10"><a></a><span class="kw">def</span> sphere_area(radius):</span>
-<span id="cb1-11"><a></a>  <span class="co">'''</span></span>
-<span id="cb1-12"><a></a><span class="co">  This function calculates the area of a sphere of given radius.</span></span>
-<span id="cb1-13"><a></a><span class="co">  Args:</span></span>
-<span id="cb1-14"><a></a><span class="co">    radius: integer representing the radius of the sphere</span></span>
-<span id="cb1-15"><a></a><span class="co">  Returns:</span></span>
-<span id="cb1-16"><a></a><span class="co">    The float representing the area of a sphere of the given radius</span></span>
-<span id="cb1-17"><a></a><span class="co">  '''</span></span>
-<span id="cb1-18"><a></a>  area <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> <span class="fl">3.1415</span> <span class="op">*</span> radius<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb1-19"><a></a>  <span class="cf">return</span> <span class="bu">round</span>(area, <span class="dv">2</span>)</span>
-<span id="cb1-20"><a></a></span>
-<span id="cb1-21"><a></a><span class="kw">def</span> sphere_volume(radius):</span>
-<span id="cb1-22"><a></a>  <span class="co">'''</span></span>
-<span id="cb1-23"><a></a><span class="co">  This function calculates the volume of a sphere of given radius.</span></span>
-<span id="cb1-24"><a></a><span class="co">  Args:</span></span>
-<span id="cb1-25"><a></a><span class="co">    radius: integer representing the radius of the sphere</span></span>
-<span id="cb1-26"><a></a><span class="co">  Returns:</span></span>
-<span id="cb1-27"><a></a><span class="co">    The float representing the volume of a sphere of the given radius</span></span>
-<span id="cb1-28"><a></a><span class="co">  '''</span></span>
-<span id="cb1-29"><a></a>  volume <span class="op">=</span> (<span class="dv">1</span> <span class="op">/</span> <span class="dv">3</span>) <span class="op">*</span> sphere_area(radius) <span class="op">*</span> radius</span>
-<span id="cb1-30"><a></a>  <span class="cf">return</span> <span class="bu">round</span>(volume, <span class="dv">2</span>)</span>
-<span id="cb1-31"><a></a></span>
-<span id="cb1-32"><a></a><span class="kw">def</span> main():</span>
-<span id="cb1-33"><a></a>  <span class="co">'''</span></span>
-<span id="cb1-34"><a></a><span class="co">  This function prints the area and volume of a sphere of radius .75.</span></span>
-<span id="cb1-35"><a></a><span class="co">  Args:</span></span>
-<span id="cb1-36"><a></a><span class="co">    None</span></span>
-<span id="cb1-37"><a></a><span class="co">  Returns:</span></span>
-<span id="cb1-38"><a></a><span class="co">    None</span></span>
-<span id="cb1-39"><a></a><span class="co">  '''</span></span>
-<span id="cb1-40"><a></a>  r <span class="op">=</span> <span class="fl">.75</span></span>
-<span id="cb1-41"><a></a>  a <span class="op">=</span> sphere_area(r)</span>
-<span id="cb1-42"><a></a>  v <span class="op">=</span> sphere_volume(r)</span>
-<span id="cb1-43"><a></a>  <span class="bu">print</span>(a, v)</span>
-<span id="cb1-44"><a></a>  </span>
-<span id="cb1-45"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>7.07 1.77</code></pre>
-</div>
-</div>
-</section>
 <section id="global-vs.-local-variables-scope" class="slide level2">
 <h2>Global vs.&nbsp;Local variables (scope)</h2>
 <ul>
@@ -276,37 +216,29 @@
 <li><strong>Global Variables</strong> have global scope – for example, a variable delcared outside a function can be accessed or modified across multiple functions</li>
 </ul>
 </section>
-<section id="global-vs.-local-variables-scope-2" class="slide level2">
-<h2>Global vs.&nbsp;Local variables (scope)</h2>
-<ul>
-<li>In the previous program we wrote (volume and area of sphere), <code>r</code>, <code>v</code> and <code>a</code> are local variables within the <code>main()</code> function.</li>
-<li>The variable <code>radius</code> and <code>area</code> are local within the <code>sphere_area(radius)</code> function scope.</li>
-<li>The variable <code>radius</code> and <code>volume</code> are local within <code>sphere_volume(radius)</code></li>
-</ul>
-</section>
 <section id="global-or-local" class="slide level2">
 <h2>Global or Local?</h2>
-<div id="d06a67ab" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>a <span class="op">=</span> <span class="dv">10</span>               <span class="co"># What are the global and local variables?</span></span>
-<span id="cb3-2"><a></a>b <span class="op">=</span> <span class="dv">5</span>                <span class="co"># Is the output of the two programs the same </span></span>
-<span id="cb3-3"><a></a>                     <span class="co"># or different?</span></span>
-<span id="cb3-4"><a></a><span class="kw">def</span> <span class="bu">sum</span>():</span>
-<span id="cb3-5"><a></a>  <span class="cf">return</span> a <span class="op">+</span> b</span>
-<span id="cb3-6"><a></a></span>
-<span id="cb3-7"><a></a><span class="kw">def</span> main():</span>
-<span id="cb3-8"><a></a>  <span class="bu">print</span>(<span class="bu">sum</span>())</span>
-<span id="cb3-9"><a></a>  </span>
-<span id="cb3-10"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="45b81219" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>a <span class="op">=</span> <span class="dv">10</span>               <span class="co"># What are the global and local variables?</span></span>
+<span id="cb1-2"><a></a>b <span class="op">=</span> <span class="dv">5</span>                <span class="co"># Is the output of the two programs the same </span></span>
+<span id="cb1-3"><a></a>                     <span class="co"># or different?</span></span>
+<span id="cb1-4"><a></a><span class="kw">def</span> <span class="bu">sum</span>():</span>
+<span id="cb1-5"><a></a>  <span class="cf">return</span> a <span class="op">+</span> b</span>
+<span id="cb1-6"><a></a></span>
+<span id="cb1-7"><a></a><span class="kw">def</span> main():</span>
+<span id="cb1-8"><a></a>  <span class="bu">print</span>(<span class="bu">sum</span>())</span>
+<span id="cb1-9"><a></a>  </span>
+<span id="cb1-10"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>vs.</p>
-<div id="0ef6aa98" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="kw">def</span> <span class="bu">sum</span>(a, b):</span>
-<span id="cb4-2"><a></a>  <span class="cf">return</span> a <span class="op">+</span> b</span>
-<span id="cb4-3"><a></a></span>
-<span id="cb4-4"><a></a><span class="kw">def</span> main():</span>
-<span id="cb4-5"><a></a>  <span class="bu">print</span>(<span class="bu">sum</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
-<span id="cb4-6"><a></a>  </span>
-<span id="cb4-7"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="b0c24f2a" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="kw">def</span> <span class="bu">sum</span>(a, b):</span>
+<span id="cb2-2"><a></a>  <span class="cf">return</span> a <span class="op">+</span> b</span>
+<span id="cb2-3"><a></a></span>
+<span id="cb2-4"><a></a><span class="kw">def</span> main():</span>
+<span id="cb2-5"><a></a>  <span class="bu">print</span>(<span class="bu">sum</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
+<span id="cb2-6"><a></a>  </span>
+<span id="cb2-7"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="argument-vs.-parameter" class="slide level2">
@@ -319,13 +251,154 @@
 </section>
 <section id="argument-or-parameter" class="slide level2">
 <h2>Argument or Parameter?</h2>
-<div id="73067f63" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="co"># The parameters are a and b</span></span>
-<span id="cb5-2"><a></a><span class="kw">def</span> add(a, b):</span>
-<span id="cb5-3"><a></a>    <span class="cf">return</span> a<span class="op">+</span>b</span>
-<span id="cb5-4"><a></a>  </span>
-<span id="cb5-5"><a></a><span class="co"># The arguments being passed through are 5 and 4</span></span>
-<span id="cb5-6"><a></a>add(<span class="dv">5</span>, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="3e2505fc" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="co"># The parameters are a and b</span></span>
+<span id="cb3-2"><a></a><span class="kw">def</span> add(a, b):</span>
+<span id="cb3-3"><a></a>    <span class="cf">return</span> a<span class="op">+</span>b</span>
+<span id="cb3-4"><a></a>  </span>
+<span id="cb3-5"><a></a><span class="co"># The arguments being passed through are 5 and 4</span></span>
+<span id="cb3-6"><a></a>add(<span class="dv">5</span>, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-functions" class="slide level2">
+<h2>Write functions</h2>
+<p>Write two functions: <code>sphere_area</code> and <code>sphere_volume</code> that calculates the area and the volume of a sphere:</p>
+<p>use <code>3.1415</code> for <span class="math inline">\(\pi\)</span> and return the rounded value.</p>
+<p><span class="math display">\[
+a = 4 \cdot \pi \cdot radius^2
+\]</span></p>
+<p><span class="math display">\[
+v = {4 / 3} \cdot \pi \cdot radius^3
+\]</span> Name your file as <code>sphere.py</code> and submit to gradescope.</p>
+<p>Test case:</p>
+<div id="6d3ede39" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>r <span class="op">=</span> <span class="fl">0.75</span></span>
+<span id="cb4-2"><a></a><span class="bu">print</span>(sphere_area(r)) <span class="co"># 7.07</span></span>
+<span id="cb4-3"><a></a><span class="bu">print</span>(sphere_volume(r)) <span class="co"># 1.77</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="write-a-function-solutions-1" class="slide level2">
+<h2>Write a function – solutions 1</h2>
+<div id="7439af9e" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="kw">def</span> sphere_area(radius):</span>
+<span id="cb5-2"><a></a>  <span class="co">"calculates the area of a sphere of given radius"</span></span>
+<span id="cb5-3"><a></a>  area <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> <span class="fl">3.1415</span> <span class="op">*</span> radius<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb5-4"><a></a>  <span class="cf">return</span> <span class="bu">round</span>(area, <span class="dv">2</span>)</span>
+<span id="cb5-5"><a></a></span>
+<span id="cb5-6"><a></a><span class="kw">def</span> sphere_volume(radius):</span>
+<span id="cb5-7"><a></a>  <span class="co">"calculates the volume of a sphere of given radius"</span></span>
+<span id="cb5-8"><a></a>  volume <span class="op">=</span> (<span class="dv">4</span> <span class="op">/</span> <span class="dv">3</span>) <span class="op">*</span> <span class="fl">3.1415</span> <span class="op">*</span> radius<span class="op">**</span><span class="dv">3</span></span>
+<span id="cb5-9"><a></a>  <span class="cf">return</span> <span class="bu">round</span>(volume, <span class="dv">2</span>)</span>
+<span id="cb5-10"><a></a></span>
+<span id="cb5-11"><a></a><span class="kw">def</span> main():</span>
+<span id="cb5-12"><a></a>  r <span class="op">=</span> <span class="fl">.75</span></span>
+<span id="cb5-13"><a></a>  v <span class="op">=</span> sphere_volume(r)</span>
+<span id="cb5-14"><a></a>  a <span class="op">=</span> sphere_area(r)</span>
+<span id="cb5-15"><a></a>  <span class="bu">print</span>(v, a)</span>
+<span id="cb5-16"><a></a></span>
+<span id="cb5-17"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1.77 7.07</code></pre>
+</div>
+</div>
+</section>
+<section id="write-a-function" class="slide level2">
+<h2>Write a function</h2>
+<p>Comparing two formulas: <span class="math display">\[
+a = 4 \cdot \pi \cdot radius^2
+\]</span></p>
+<p><span class="math display">\[
+v = {4 / 3} \cdot \pi \cdot radius^3
+\]</span> We can use area when calculating volume: <span class="math display">\[
+v = {1 / 3} \cdot a \cdot radius
+\]</span></p>
+<p>Modify your <code>sphere_volume</code> function by calling <code>sphere_area</code> inside the function.</p>
+</section>
+<section id="write-a-function-solutions-2" class="slide level2">
+<h2>Write a function – solutions 2</h2>
+<div id="a6bd9527" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="kw">def</span> sphere_area(radius):</span>
+<span id="cb7-2"><a></a>  <span class="co">"calculates the area of a sphere of given radius"</span></span>
+<span id="cb7-3"><a></a>  area <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> <span class="fl">3.1415</span> <span class="op">*</span> radius<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb7-4"><a></a>  <span class="cf">return</span> <span class="bu">round</span>(area, <span class="dv">2</span>)</span>
+<span id="cb7-5"><a></a></span>
+<span id="cb7-6"><a></a></span>
+<span id="cb7-7"><a></a><span class="kw">def</span> sphere_volume(radius):</span>
+<span id="cb7-8"><a></a>  <span class="co">"calculates the volume of a sphere of given radius"</span></span>
+<span id="cb7-9"><a></a>  volume <span class="op">=</span> (<span class="dv">1</span> <span class="op">/</span> <span class="dv">3</span>) <span class="op">*</span> sphere_area(radius) <span class="op">*</span> radius</span>
+<span id="cb7-10"><a></a>  <span class="cf">return</span> <span class="bu">round</span>(volume, <span class="dv">2</span>)</span>
+<span id="cb7-11"><a></a></span>
+<span id="cb7-12"><a></a></span>
+<span id="cb7-13"><a></a><span class="kw">def</span> main():</span>
+<span id="cb7-14"><a></a>  r <span class="op">=</span> <span class="fl">.75</span></span>
+<span id="cb7-15"><a></a>  v <span class="op">=</span> sphere_volume(r)</span>
+<span id="cb7-16"><a></a>  a <span class="op">=</span> sphere_area(r)</span>
+<span id="cb7-17"><a></a>  <span class="bu">print</span>(v, a)</span>
+<span id="cb7-18"><a></a></span>
+<span id="cb7-19"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1.77 7.07</code></pre>
+</div>
+</div>
+</section>
+<section id="function-comments" class="slide level2">
+<h2>Function Comments</h2>
+<ul>
+<li>Every function created is required to have a function comment, including main</li>
+<li>Function comments are a multi-line string (as opposed to using <code>#</code> for other comments)</li>
+</ul>
+</section>
+<section id="function-comments-1" class="slide level2">
+<h2>Function Comments</h2>
+<div id="6b5c7669" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="co">'''</span></span>
+<span id="cb9-2"><a></a><span class="co">Xinchen Yu</span></span>
+<span id="cb9-3"><a></a><span class="co">CSC110</span></span>
+<span id="cb9-4"><a></a><span class="co">Class Demonstration</span></span>
+<span id="cb9-5"><a></a><span class="co">This program has two functions: one to calculate the area of a sphere,</span></span>
+<span id="cb9-6"><a></a><span class="co">the other to calculate the volume of a sphere.</span></span>
+<span id="cb9-7"><a></a><span class="co">The main() function is called to print to the standard output the</span></span>
+<span id="cb9-8"><a></a><span class="co">area and volume of a sphere of radius .75</span></span>
+<span id="cb9-9"><a></a><span class="co">'''</span></span>
+<span id="cb9-10"><a></a><span class="kw">def</span> sphere_area(radius):</span>
+<span id="cb9-11"><a></a>  <span class="co">'''</span></span>
+<span id="cb9-12"><a></a><span class="co">  This function calculates the area of a sphere of given radius.</span></span>
+<span id="cb9-13"><a></a><span class="co">  Args:</span></span>
+<span id="cb9-14"><a></a><span class="co">    radius: integer representing the radius of the sphere</span></span>
+<span id="cb9-15"><a></a><span class="co">  Returns:</span></span>
+<span id="cb9-16"><a></a><span class="co">    The float representing the area of a sphere of the given radius</span></span>
+<span id="cb9-17"><a></a><span class="co">  '''</span></span>
+<span id="cb9-18"><a></a>  area <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> <span class="fl">3.1415</span> <span class="op">*</span> radius<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb9-19"><a></a>  <span class="cf">return</span> <span class="bu">round</span>(area, <span class="dv">2</span>)</span>
+<span id="cb9-20"><a></a></span>
+<span id="cb9-21"><a></a><span class="kw">def</span> sphere_volume(radius):</span>
+<span id="cb9-22"><a></a>  <span class="co">'''</span></span>
+<span id="cb9-23"><a></a><span class="co">  This function calculates the volume of a sphere of given radius.</span></span>
+<span id="cb9-24"><a></a><span class="co">  Args:</span></span>
+<span id="cb9-25"><a></a><span class="co">    radius: integer representing the radius of the sphere</span></span>
+<span id="cb9-26"><a></a><span class="co">  Returns:</span></span>
+<span id="cb9-27"><a></a><span class="co">    The float representing the volume of a sphere of the given radius</span></span>
+<span id="cb9-28"><a></a><span class="co">  '''</span></span>
+<span id="cb9-29"><a></a>  volume <span class="op">=</span> (<span class="dv">1</span> <span class="op">/</span> <span class="dv">3</span>) <span class="op">*</span> sphere_area(radius) <span class="op">*</span> radius</span>
+<span id="cb9-30"><a></a>  <span class="cf">return</span> <span class="bu">round</span>(volume, <span class="dv">2</span>)</span>
+<span id="cb9-31"><a></a></span>
+<span id="cb9-32"><a></a><span class="kw">def</span> main():</span>
+<span id="cb9-33"><a></a>  <span class="co">'''</span></span>
+<span id="cb9-34"><a></a><span class="co">  This function prints the area and volume of a sphere of radius .75.</span></span>
+<span id="cb9-35"><a></a><span class="co">  Args:</span></span>
+<span id="cb9-36"><a></a><span class="co">    None</span></span>
+<span id="cb9-37"><a></a><span class="co">  Returns:</span></span>
+<span id="cb9-38"><a></a><span class="co">    None</span></span>
+<span id="cb9-39"><a></a><span class="co">  '''</span></span>
+<span id="cb9-40"><a></a>  r <span class="op">=</span> <span class="fl">.75</span></span>
+<span id="cb9-41"><a></a>  a <span class="op">=</span> sphere_area(r)</span>
+<span id="cb9-42"><a></a>  v <span class="op">=</span> sphere_volume(r)</span>
+<span id="cb9-43"><a></a>  <span class="bu">print</span>(a, v)</span>
+<span id="cb9-44"><a></a>  </span>
+<span id="cb9-45"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>7.07 1.77</code></pre>
+</div>
 </div>
 </section>
 <section id="function-to-calculate-the-volume-of-a-cylinder" class="slide level2">
@@ -340,23 +413,23 @@
 </section>
 <section id="function-to-calculate-the-volume-of-a-cylinder-1" class="slide level2">
 <h2>Function to calculate the volume of a cylinder</h2>
-<div id="cf9dc632" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="kw">def</span> volume(radius, height):</span>
-<span id="cb6-2"><a></a>  <span class="co"># calculate the area first</span></span>
-<span id="cb6-3"><a></a>  area <span class="op">=</span> <span class="fl">3.1415</span> <span class="op">*</span> radius <span class="op">**</span> <span class="dv">2</span></span>
-<span id="cb6-4"><a></a>  </span>
-<span id="cb6-5"><a></a>  <span class="co"># multiply area by height</span></span>
-<span id="cb6-6"><a></a>  vol <span class="op">=</span> area <span class="op">*</span> height</span>
-<span id="cb6-7"><a></a>  </span>
-<span id="cb6-8"><a></a>  <span class="co"># return calculated volume</span></span>
-<span id="cb6-9"><a></a>  <span class="cf">return</span> vol</span>
-<span id="cb6-10"><a></a></span>
-<span id="cb6-11"><a></a><span class="kw">def</span> main():</span>
-<span id="cb6-12"><a></a>  <span class="bu">print</span>(volume(<span class="dv">1</span>, <span class="dv">2</span>)) <span class="co"># 6.283</span></span>
-<span id="cb6-13"><a></a>  <span class="bu">print</span>(volume(<span class="dv">6</span>, <span class="dv">10</span>)) <span class="co"># 1130.94</span></span>
-<span id="cb6-14"><a></a>  <span class="bu">print</span>(volume(<span class="dv">5</span>, <span class="dv">5</span>)) <span class="co"># 392.68750000000006</span></span>
-<span id="cb6-15"><a></a>  </span>
-<span id="cb6-16"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="79ffa1b7" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="kw">def</span> volume(radius, height):</span>
+<span id="cb11-2"><a></a>  <span class="co"># calculate the area first</span></span>
+<span id="cb11-3"><a></a>  area <span class="op">=</span> <span class="fl">3.1415</span> <span class="op">*</span> radius <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb11-4"><a></a>  </span>
+<span id="cb11-5"><a></a>  <span class="co"># multiply area by height</span></span>
+<span id="cb11-6"><a></a>  vol <span class="op">=</span> area <span class="op">*</span> height</span>
+<span id="cb11-7"><a></a>  </span>
+<span id="cb11-8"><a></a>  <span class="co"># return calculated volume</span></span>
+<span id="cb11-9"><a></a>  <span class="cf">return</span> vol</span>
+<span id="cb11-10"><a></a></span>
+<span id="cb11-11"><a></a><span class="kw">def</span> main():</span>
+<span id="cb11-12"><a></a>  <span class="bu">print</span>(volume(<span class="dv">1</span>, <span class="dv">2</span>)) <span class="co"># 6.283</span></span>
+<span id="cb11-13"><a></a>  <span class="bu">print</span>(volume(<span class="dv">6</span>, <span class="dv">10</span>)) <span class="co"># 1130.94</span></span>
+<span id="cb11-14"><a></a>  <span class="bu">print</span>(volume(<span class="dv">5</span>, <span class="dv">5</span>)) <span class="co"># 392.68750000000006</span></span>
+<span id="cb11-15"><a></a>  </span>
+<span id="cb11-16"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

@@ -6,6 +6,157 @@ slide-number: true
 
 # CSC 110 - More on Functions in Python
 
+## Global vs. Local variables (scope)
+
+-   Every variable that is created has a particular scope
+-   The scope of a variable is the region in the code where the variable can be used or modified
+
+## Global vs. Local variables (scope)
+
+-   **Local Variables** have local scope -- for example, a variable assigned inside a function can only be used or modified within that function
+-   **Global Variables** have global scope -- for example, a variable delcared outside a function can be accessed or modified across multiple functions
+
+## Global or Local?
+
+```{python}
+#| eval: false
+#| echo: true
+a = 10               # What are the global and local variables?
+b = 5                # Is the output of the two programs the same 
+                     # or different?
+def sum():
+  return a + b
+
+def main():
+  print(sum())
+  
+main()
+```
+
+vs.
+
+```{python}
+#| eval: false
+#| echo: true
+def sum(a, b):
+  return a + b
+
+def main():
+  print(sum(10, 5))
+  
+main()
+```
+
+## Argument vs. Parameter
+
+-   Never set variables as global variables, pass values to functions when called
+-   When a function is defined, the variables you want to pass to the function are called **parameter variables**
+-   When the function is then called, the values you pass to the function are called **arguments**
+
+## Argument or Parameter?
+
+```{python}
+#| eval: false
+#| echo: true
+# The parameters are a and b
+def add(a, b):
+    return a+b
+  
+# The arguments being passed through are 5 and 4
+add(5, 4)
+```
+
+## Write functions
+
+Write two functions: `sphere_area` and `sphere_volume` that calculates the area and the volume of a sphere:
+
+use `3.1415` for $\pi$ and return the rounded value.
+
+$$
+a = 4 \cdot \pi \cdot radius^2
+$$
+
+$$
+v = {4 / 3} \cdot \pi \cdot radius^3 
+$$
+Name your file as `sphere.py` and submit to gradescope.
+
+Test case:
+```{python}
+#| echo: true
+#| eval: false
+r = 0.75
+print(sphere_area(r)) # 7.07
+print(sphere_volume(r)) # 1.77
+```
+
+
+## Write a function -- solutions 1
+
+```{python}
+#| echo: true
+#| eval: true
+def sphere_area(radius):
+  "calculates the area of a sphere of given radius"
+  area = 4 * 3.1415 * radius**2
+  return round(area, 2)
+
+def sphere_volume(radius):
+  "calculates the volume of a sphere of given radius"
+  volume = (4 / 3) * 3.1415 * radius**3
+  return round(volume, 2)
+
+def main():
+  r = .75
+  v = sphere_volume(r)
+  a = sphere_area(r)
+  print(v, a)
+
+main()
+```
+
+## Write a function
+Comparing two formulas:
+$$
+a = 4 \cdot \pi \cdot radius^2
+$$
+
+$$
+v = {4 / 3} \cdot \pi \cdot radius^3 
+$$
+We can use area when calculating volume:
+$$
+v = {1 / 3} \cdot a \cdot radius
+$$
+
+Modify your `sphere_volume` function by calling `sphere_area` inside the function.
+
+## Write a function -- solutions 2
+
+```{python}
+#| echo: true
+#| eval: true
+def sphere_area(radius):
+  "calculates the area of a sphere of given radius"
+  area = 4 * 3.1415 * radius**2
+  return round(area, 2)
+
+
+def sphere_volume(radius):
+  "calculates the volume of a sphere of given radius"
+  volume = (1 / 3) * sphere_area(radius) * radius
+  return round(volume, 2)
+
+
+def main():
+  r = .75
+  v = sphere_volume(r)
+  a = sphere_area(r)
+  print(v, a)
+
+main()
+```
+
 ## Function Comments
 
 -   Every function created is required to have a function comment, including main
@@ -61,72 +212,6 @@ def main():
   print(a, v)
   
 main()
-```
-
-## Global vs. Local variables (scope)
-
--   Every variable that is created has a particular scope
--   The scope of a variable is the region in the code where the variable can be used or modified
-
-## Global vs. Local variables (scope)
-
--   **Local Variables** have local scope -- for example, a variable assigned inside a function can only be used or modified within that function
--   **Global Variables** have global scope -- for example, a variable delcared outside a function can be accessed or modified across multiple functions
-
-## Global vs. Local variables (scope)
-
--   In the previous program we wrote (volume and area of sphere), `r`, `v` and `a` are local variables within the `main()` function.
--   The variable `radius` and `area` are local within the `sphere_area(radius)` function scope.
--   The variable `radius` and `volume` are local within `sphere_volume(radius)`
-
-## Global or Local?
-
-```{python}
-#| eval: false
-#| echo: true
-a = 10               # What are the global and local variables?
-b = 5                # Is the output of the two programs the same 
-                     # or different?
-def sum():
-  return a + b
-
-def main():
-  print(sum())
-  
-main()
-```
-
-vs.
-
-```{python}
-#| eval: false
-#| echo: true
-def sum(a, b):
-  return a + b
-
-def main():
-  print(sum(10, 5))
-  
-main()
-```
-
-## Argument vs. Parameter
-
--   Never set variables as global variables, pass values to functions when called
--   When a function is defined, the variables you want to pass to the function are called **parameter variables**
--   When the function is then called, the values you pass to the function are called **arguments**
-
-## Argument or Parameter?
-
-```{python}
-#| eval: false
-#| echo: true
-# The parameters are a and b
-def add(a, b):
-    return a+b
-  
-# The arguments being passed through are 5 and 4
-add(5, 4)
 ```
 
 
