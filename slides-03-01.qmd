@@ -19,31 +19,43 @@ slide-number: true
 ## Global or Local?
 
 ```{python}
-#| eval: false
+#| eval: true
 #| echo: true
-a = 10               # What are the global and local variables?
-b = 5                # Is the output of the two programs the same 
-                     # or different?
+a = 10              
+b = 5               
+
 def sum():
-  return a + b
+    return a + b
+
+def multiply():
+    return a * b
 
 def main():
-  print(sum())
-  
+    print(sum())
+    print(multiply())
+
 main()
 ```
 
-vs.
+## Global or Local?
 
 ```{python}
-#| eval: false
+#| eval: true
 #| echo: true
 def sum(a, b):
-  return a + b
+    return a + b
+
+def multiply(a, b):
+    return a * b
 
 def main():
-  print(sum(10, 5))
-  
+    a = 5
+    b = 10
+    print(sum(a, b))
+    print(multiply(a, b))
+    a = 10
+    print(multiply(a, b))
+
 main()
 ```
 
@@ -91,7 +103,7 @@ print(sphere_volume(r)) # 1.77
 ```
 
 
-## Write a function -- solutions 1
+## Write functions -- solutions 1
 
 ```{python}
 #| echo: true
@@ -115,7 +127,7 @@ def main():
 main()
 ```
 
-## Write a function
+## Write functions
 Comparing two formulas:
 $$
 a = 4 \cdot \pi \cdot radius^2
@@ -131,7 +143,7 @@ $$
 
 Modify your `sphere_volume` function by calling `sphere_area` inside the function.
 
-## Write a function -- solutions 2
+## Write functions -- solutions 2
 
 ```{python}
 #| echo: true

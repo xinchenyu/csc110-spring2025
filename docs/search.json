@@ -3332,7 +3332,7 @@
     "href": "slides-03-01.html#global-or-local",
     "title": "more on Functions (class slides)",
     "section": "Global or Local?",
-    "text": "Global or Local?\n\na = 10               # What are the global and local variables?\nb = 5                # Is the output of the two programs the same \n                     # or different?\ndef sum():\n  return a + b\n\ndef main():\n  print(sum())\n  \nmain()\n\nvs.\n\ndef sum(a, b):\n  return a + b\n\ndef main():\n  print(sum(10, 5))\n  \nmain()",
+    "text": "Global or Local?\n\na = 10              \nb = 5               \n\ndef sum():\n    return a + b\n\ndef multiply():\n    return a * b\n\ndef main():\n    print(sum())\n    print(multiply())\n\nmain()\n\n15\n50",
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on Functions (class slides)"
@@ -9181,6 +9181,50 @@
     "title": "more on Functions (class slides)",
     "section": "Write functions",
     "text": "Write functions\nWrite two functions: sphere_area and sphere_volume that calculates the area and the volume of a sphere:\nuse 3.1415 for \\(\\pi\\) and return the rounded value.\n\\[\na = 4 \\cdot \\pi \\cdot radius^2\n\\]\n\\[\nv = {4 / 3} \\cdot \\pi \\cdot radius^3\n\\] Name your file as sphere.py and submit to gradescope.\nTest case:\n\nr = 0.75\nprint(sphere_area(r)) # 7.07\nprint(sphere_volume(r)) # 1.77",
+    "crumbs": [
+      "Module 3 - More on Functions and Decomposition",
+      "more on Functions (class slides)"
+    ]
+  },
+  {
+    "objectID": "slides-03-01.html#global-or-local-1",
+    "href": "slides-03-01.html#global-or-local-1",
+    "title": "more on Functions (class slides)",
+    "section": "Global or Local?",
+    "text": "Global or Local?\n\ndef sum(a, b):\n    return a + b\n\ndef multiply(a, b):\n    return a * b\n\ndef main():\n    a = 5\n    b = 10\n    print(sum(a, b))\n    print(multiply(a, b))\n    a = 10\n    print(multiply(a, b))\n\nmain()\n\n15\n50\n100",
+    "crumbs": [
+      "Module 3 - More on Functions and Decomposition",
+      "more on Functions (class slides)"
+    ]
+  },
+  {
+    "objectID": "slides-03-01.html#write-functions-solutions-1",
+    "href": "slides-03-01.html#write-functions-solutions-1",
+    "title": "more on Functions (class slides)",
+    "section": "Write functions – solutions 1",
+    "text": "Write functions – solutions 1\n\ndef sphere_area(radius):\n  \"calculates the area of a sphere of given radius\"\n  area = 4 * 3.1415 * radius**2\n  return round(area, 2)\n\ndef sphere_volume(radius):\n  \"calculates the volume of a sphere of given radius\"\n  volume = (4 / 3) * 3.1415 * radius**3\n  return round(volume, 2)\n\ndef main():\n  r = .75\n  v = sphere_volume(r)\n  a = sphere_area(r)\n  print(v, a)\n\nmain()\n\n1.77 7.07",
+    "crumbs": [
+      "Module 3 - More on Functions and Decomposition",
+      "more on Functions (class slides)"
+    ]
+  },
+  {
+    "objectID": "slides-03-01.html#write-functions-1",
+    "href": "slides-03-01.html#write-functions-1",
+    "title": "more on Functions (class slides)",
+    "section": "Write functions",
+    "text": "Write functions\nComparing two formulas: \\[\na = 4 \\cdot \\pi \\cdot radius^2\n\\]\n\\[\nv = {4 / 3} \\cdot \\pi \\cdot radius^3\n\\] We can use area when calculating volume: \\[\nv = {1 / 3} \\cdot a \\cdot radius\n\\]\nModify your sphere_volume function by calling sphere_area inside the function.",
+    "crumbs": [
+      "Module 3 - More on Functions and Decomposition",
+      "more on Functions (class slides)"
+    ]
+  },
+  {
+    "objectID": "slides-03-01.html#write-functions-solutions-2",
+    "href": "slides-03-01.html#write-functions-solutions-2",
+    "title": "more on Functions (class slides)",
+    "section": "Write functions – solutions 2",
+    "text": "Write functions – solutions 2\n\ndef sphere_area(radius):\n  \"calculates the area of a sphere of given radius\"\n  area = 4 * 3.1415 * radius**2\n  return round(area, 2)\n\n\ndef sphere_volume(radius):\n  \"calculates the volume of a sphere of given radius\"\n  volume = (1 / 3) * sphere_area(radius) * radius\n  return round(volume, 2)\n\n\ndef main():\n  r = .75\n  v = sphere_volume(r)\n  a = sphere_area(r)\n  print(v, a)\n\nmain()\n\n1.77 7.07",
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on Functions (class slides)"
