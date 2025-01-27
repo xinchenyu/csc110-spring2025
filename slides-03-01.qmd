@@ -21,8 +21,8 @@ slide-number: true
 ```{python}
 #| eval: true
 #| echo: true
-a = 10              
-b = 5               
+a = 5              
+b = 10               
 
 def sum():
     return a + b

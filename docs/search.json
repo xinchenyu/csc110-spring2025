@@ -3332,7 +3332,7 @@
     "href": "slides-03-01.html#global-or-local",
     "title": "more on Functions (class slides)",
     "section": "Global or Local?",
-    "text": "Global or Local?\n\na = 10              \nb = 5               \n\ndef sum():\n    return a + b\n\ndef multiply():\n    return a * b\n\ndef main():\n    print(sum())\n    print(multiply())\n\nmain()\n\n15\n50",
+    "text": "Global or Local?\n\na = 5              \nb = 10               \n\ndef sum():\n    return a + b\n\ndef multiply():\n    return a * b\n\ndef main():\n    print(sum())\n    print(multiply())\n\nmain()\n\n15\n50",
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on Functions (class slides)"
