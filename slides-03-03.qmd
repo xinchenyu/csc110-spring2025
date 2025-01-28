@@ -8,11 +8,9 @@ slide-number: true
 
 ## Class activity one
 
-Read the code and answer the questions:
+Read the code, discuss, and answer the question using 1-2 sentences (in natural language):
 
--   which lines of code are similar?
-
--   which lines of code are identical?
+-   What problem does the code solve?
 
 
 ## Rubik’s Cubes
@@ -37,8 +35,15 @@ res = fit_w * fit_h * fit_l
 print(str(res)+" Rubik's cubes will fit in that container.")
 ```
 
+## Class activity two
 
-## Class activity one -- answer
+Read the code and answer the questions:
+
+-   which lines of code are similar?
+
+-   which lines of code are unique?
+
+## Class activity two -- answer
 
 Read the code and answer the questions:
 
@@ -46,12 +51,12 @@ Read the code and answer the questions:
 
     -   line 2-4, line 6-8, line 10-12
 
--   which lines of code are identical? 
+-   which lines of code are unique? 
 
     -   line 1, line 14-15
     
     
-## Class activity two
+## Class activity three
 
 For line 2-4, line 6-8, line 10-12:
     
@@ -81,7 +86,7 @@ res = fit_w * fit_h * fit_l
 print(str(res)+" Rubik's cubes will fit in that container.")
 ```
 
-## Class activity two
+## Class activity three
 
 For line 2-4, line 6-8, line 10-12:
     
@@ -105,6 +110,8 @@ Write function `get_fit` that takes the length of a `cube` (integer) and the nam
 -   It calculates the number of `cube` that can fit in the `side`
 
 -   It print the message and return the number.
+
+Name your file as `cubes.py` and submit to Gradescope.
 
 ```{python}
 #| echo: true

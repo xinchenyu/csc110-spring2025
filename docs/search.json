@@ -5638,7 +5638,7 @@
     "href": "slides-03-03.html#class-activity-one",
     "title": "more on decomposition (slides)",
     "section": "Class activity one",
-    "text": "Class activity one\nRead the code and answer the questions:\n\nwhich lines of code are similar?\nwhich lines of code are identical?",
+    "text": "Class activity one\nRead the code, discuss, and answer the question using 1-2 sentences (in natural language):\n\nWhat problem does the code solve?",
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on decomposition (slides)"
@@ -5671,7 +5671,7 @@
     "href": "slides-03-03.html#class-activity-two",
     "title": "more on decomposition (slides)",
     "section": "Class activity two",
-    "text": "Class activity two\nFor line 2-4, line 6-8, line 10-12:\n\nwhich lines can be grouped together into a function?\nwhat does the function do?",
+    "text": "Class activity two\nRead the code and answer the questions:\n\nwhich lines of code are similar?\nwhich lines of code are unique?",
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on decomposition (slides)"
@@ -5704,7 +5704,7 @@
     "href": "slides-03-03.html#write-a-function",
     "title": "more on decomposition (slides)",
     "section": "Write a function",
-    "text": "Write a function\nWrite function get_fit that takes the length of a cube (integer) and the name of a side (string)\n\nIt prompts you to the enter the length of the side\nIt calculates the number of cube that can fit in the side\nIt print the message and return the number.\n\n\ndef main():\n    cube_len = int(input(\"Cube length? \"))\n    fit_w = get_fit(cube_len, 'width')\n    fit_h = get_fit(cube_len, 'height')\n    fit_l = get_fit(cube_len, 'length')\n    result = fit_w * fit_h * fit_l\n    print(str(result) + \" Rubik's cubes will fit in that container.\")",
+    "text": "Write a function\nWrite function get_fit that takes the length of a cube (integer) and the name of a side (string)\n\nIt prompts you to the enter the length of the side\nIt calculates the number of cube that can fit in the side\nIt print the message and return the number.\n\nName your file as cubes.py and submit to Gradescope.\n\ndef main():\n    cube_len = int(input(\"Cube length? \"))\n    fit_w = get_fit(cube_len, 'width')\n    fit_h = get_fit(cube_len, 'height')\n    fit_l = get_fit(cube_len, 'length')\n    result = fit_w * fit_h * fit_l\n    print(str(result) + \" Rubik's cubes will fit in that container.\")",
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on decomposition (slides)"
@@ -9228,6 +9228,39 @@
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on Functions (class slides)"
+    ]
+  },
+  {
+    "objectID": "slides-03-03.html#class-activity-two-answer",
+    "href": "slides-03-03.html#class-activity-two-answer",
+    "title": "more on decomposition (slides)",
+    "section": "Class activity two – answer",
+    "text": "Class activity two – answer\nRead the code and answer the questions:\n\nwhich lines of code are similar?\n\nline 2-4, line 6-8, line 10-12\n\nwhich lines of code are unique?\n\nline 1, line 14-15",
+    "crumbs": [
+      "Module 3 - More on Functions and Decomposition",
+      "more on decomposition (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-03-03.html#class-activity-three",
+    "href": "slides-03-03.html#class-activity-three",
+    "title": "more on decomposition (slides)",
+    "section": "Class activity three",
+    "text": "Class activity three\nFor line 2-4, line 6-8, line 10-12:\n\nwhich lines can be grouped together into a function?\nwhat does the function do?",
+    "crumbs": [
+      "Module 3 - More on Functions and Decomposition",
+      "more on decomposition (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-03-03.html#class-activity-three-1",
+    "href": "slides-03-03.html#class-activity-three-1",
+    "title": "more on decomposition (slides)",
+    "section": "Class activity three",
+    "text": "Class activity three\nFor line 2-4, line 6-8, line 10-12:\n\nwhich lines can be grouped together into a function?\n\nline 2, 6 and 10\nline 3, 7 and 11\nline 4, 8 and 12\n\nwhat does the function do?",
+    "crumbs": [
+      "Module 3 - More on Functions and Decomposition",
+      "more on decomposition (slides)"
     ]
   }
 ]
