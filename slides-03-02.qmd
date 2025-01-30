@@ -169,7 +169,11 @@ print(type(age), type(age_float))
 
 ## Write a function
 
-Write a Python function `calculate_year_born` with no parameters. It prompts user to enter their age `input()`. It converts user's age to integer. It calculates (imperfectly) the year a person of `age` was born by subtracting `age` from `2025`. It returns an integer representing the approximate year person of `age` was born.
+Write a Python function `calculate_year_born` with no parameters. It prompts user to enter their age `input()`. 
+
+It converts user's `age` to integer and calculates (imperfectly) the year a person of `age` was born by subtracting `age` from `2025`. 
+
+It returns an integer representing the approximate year person of `age` was born.
 
 
 ```{python}

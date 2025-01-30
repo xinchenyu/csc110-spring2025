@@ -5429,7 +5429,7 @@
     "href": "slides-03-02.html#write-a-function-5",
     "title": "built-in functions (slides)",
     "section": "Write a function",
-    "text": "Write a function\nWrite a Python function calculate_year_born with no parameters. It prompts user to enter their age input(). It converts user’s age to integer. It calculates (imperfectly) the year a person of age was born by subtracting age from 2025. It returns an integer representing the approximate year person of age was born.\n\nprint( calculate_year_born() ) # user enters 60, function returns 1965",
+    "text": "Write a function\nWrite a Python function calculate_year_born with no parameters. It prompts user to enter their age input().\nIt converts user’s age to integer and calculates (imperfectly) the year a person of age was born by subtracting age from 2025.\nIt returns an integer representing the approximate year person of age was born.\n\nprint( calculate_year_born() ) # user enters 60, function returns 1965",
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "built-in functions (slides)"
@@ -5638,7 +5638,7 @@
     "href": "slides-03-03.html#class-activity-one",
     "title": "more on decomposition (slides)",
     "section": "Class activity one",
-    "text": "Class activity one\nRead the code, discuss, and answer the question using 1-2 sentences (in natural language):\n\nWhat problem does the code solve?",
+    "text": "Class activity one\nRead the code, discuss and answer the question in 1-2 sentences using natural language:\n\nWhat problem does the code solve?",
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on decomposition (slides)"
@@ -5671,7 +5671,7 @@
     "href": "slides-03-03.html#class-activity-two",
     "title": "more on decomposition (slides)",
     "section": "Class activity two",
-    "text": "Class activity two\nRead the code and answer the questions:\n\nwhich lines of code are similar?\nwhich lines of code are unique?",
+    "text": "Class activity two\nRead the code and write the questions:\n\nwhich lines of code are similar?\nwhich lines of code are unique?\nwhich lines can be grouped together into a function? what does the function do?",
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on decomposition (slides)"
@@ -9235,7 +9235,7 @@
     "href": "slides-03-03.html#class-activity-two-answer",
     "title": "more on decomposition (slides)",
     "section": "Class activity two – answer",
-    "text": "Class activity two – answer\nRead the code and answer the questions:\n\nwhich lines of code are similar?\n\nline 2-4, line 6-8, line 10-12\n\nwhich lines of code are unique?\n\nline 1, line 14-15",
+    "text": "Class activity two – answer\nRead the code and write the questions:\n\nwhich lines of code are similar?\n\nline 2-4, line 6-8, line 10-12\n\nwhich lines of code are unique?\n\nline 1, line 14-15",
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on decomposition (slides)"
@@ -9258,6 +9258,61 @@
     "title": "more on decomposition (slides)",
     "section": "Class activity three",
     "text": "Class activity three\nFor line 2-4, line 6-8, line 10-12:\n\nwhich lines can be grouped together into a function?\n\nline 2, 6 and 10\nline 3, 7 and 11\nline 4, 8 and 12\n\nwhat does the function do?",
+    "crumbs": [
+      "Module 3 - More on Functions and Decomposition",
+      "more on decomposition (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-03-03.html#class-activity-two-answers",
+    "href": "slides-03-03.html#class-activity-two-answers",
+    "title": "more on decomposition (slides)",
+    "section": "Class activity two – answers",
+    "text": "Class activity two – answers\nRead the code and write the questions:\n\nwhich lines of code are similar?\n\nline 2-4, line 6-8, line 10-12\n\nwhich lines of code are unique?\n\nline 1, line 14-15",
+    "crumbs": [
+      "Module 3 - More on Functions and Decomposition",
+      "more on decomposition (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-03-03.html#class-activity-two-answers-continued",
+    "href": "slides-03-03.html#class-activity-two-answers-continued",
+    "title": "more on decomposition (slides)",
+    "section": "Class activity two – answers continued",
+    "text": "Class activity two – answers continued\nwhich lines can be grouped together into a function?\n\nline 2, 6 and 10; line 3, 7 and 11; line 4, 8 and 12.\n\nGiven the length of a cube and a side of a box:\n\nit prompts the user to type the length of side\nit calculate the number of cubes that can fit into the side\nit print a message",
+    "crumbs": [
+      "Module 3 - More on Functions and Decomposition",
+      "more on decomposition (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-03-03.html#activity-two-answers",
+    "href": "slides-03-03.html#activity-two-answers",
+    "title": "more on decomposition (slides)",
+    "section": "Activity two – answers",
+    "text": "Activity two – answers\nRead the code and write the questions:\n\nwhich lines of code are similar?\n\nline 2-4, line 6-8, line 10-12\n\nwhich lines of code are unique?\n\nline 1, line 14-15",
+    "crumbs": [
+      "Module 3 - More on Functions and Decomposition",
+      "more on decomposition (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-03-03.html#activity-two-answers-continued",
+    "href": "slides-03-03.html#activity-two-answers-continued",
+    "title": "more on decomposition (slides)",
+    "section": "Activity two – answers continued",
+    "text": "Activity two – answers continued\nwhich lines can be grouped together into a function?\n\nline 2, 6, 10; line 3, 7, 11; line 4, 8, 12.\n\nGiven the length of a cube and the name of a box side:\n\nIt prompts you to the enter the length of the side\nIt calculates the number of cube that can fit in the side\nIt print the message and return the number.",
+    "crumbs": [
+      "Module 3 - More on Functions and Decomposition",
+      "more on decomposition (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-03-03.html#activity-two",
+    "href": "slides-03-03.html#activity-two",
+    "title": "more on decomposition (slides)",
+    "section": "Activity two",
+    "text": "Activity two\nRead the code and write the questions:\n\nwhich lines of code are similar?\nwhich lines of code are unique?\nwhich lines can be grouped together into a function? what does the function do?",
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on decomposition (slides)"

@@ -204,14 +204,14 @@
 </section>
 <section id="class-activity-one" class="slide level2">
 <h2>Class activity one</h2>
-<p>Read the code, discuss, and answer the question using 1-2 sentences (in natural language):</p>
+<p>Read the code, discuss and answer the question in 1-2 sentences using natural language:</p>
 <ul>
 <li>What problem does the code solve?</li>
 </ul>
 </section>
 <section id="rubiks-cubes" class="slide level2">
 <h2>Rubik’s Cubes</h2>
-<div id="2ad18288" class="cell" data-execution_count="1">
+<div id="693a30e3" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>cube_len <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Cube length? "</span>))</span>
 <span id="cb1-2"><a></a>box_w <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Box width? "</span>))</span>
 <span id="cb1-3"><a></a>box_h <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Box height? "</span>))</span>
@@ -229,39 +229,18 @@
 <span id="cb1-15"><a></a><span class="bu">print</span>(<span class="bu">str</span>(res)<span class="op">+</span><span class="st">" Rubik's cubes will fit in that container."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="class-activity-two" class="slide level2">
-<h2>Class activity two</h2>
-<p>Read the code and answer the questions:</p>
+<section id="activity-two" class="slide level2">
+<h2>Activity two</h2>
+<p>Read the code and write the questions:</p>
 <ul>
 <li><p>which lines of code are similar?</p></li>
 <li><p>which lines of code are unique?</p></li>
-</ul>
-</section>
-<section id="class-activity-two-answer" class="slide level2">
-<h2>Class activity two – answer</h2>
-<p>Read the code and answer the questions:</p>
-<ul>
-<li><p>which lines of code are similar?</p>
-<ul>
-<li>line 2-4, line 6-8, line 10-12</li>
-</ul></li>
-<li><p>which lines of code are unique?</p>
-<ul>
-<li>line 1, line 14-15</li>
-</ul></li>
-</ul>
-</section>
-<section id="class-activity-three" class="slide level2">
-<h2>Class activity three</h2>
-<p>For line 2-4, line 6-8, line 10-12:</p>
-<ul>
-<li><p>which lines can be grouped together into a function?</p></li>
-<li><p>what does the function do?</p></li>
+<li><p>which lines can be grouped together into a function? what does the function do?</p></li>
 </ul>
 </section>
 <section id="rubiks-cubes-1" class="slide level2">
 <h2>Rubik’s Cubes</h2>
-<div id="47f9ca6e" class="cell" data-execution_count="2">
+<div id="5f2ca793" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>cube_len <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Cube length? "</span>))</span>
 <span id="cb2-2"><a></a>box_w <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Box width? "</span>)) </span>
 <span id="cb2-3"><a></a>box_h <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Box height? "</span>))</span>
@@ -279,17 +258,31 @@
 <span id="cb2-15"><a></a><span class="bu">print</span>(<span class="bu">str</span>(res)<span class="op">+</span><span class="st">" Rubik's cubes will fit in that container."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="class-activity-three-1" class="slide level2">
-<h2>Class activity three</h2>
-<p>For line 2-4, line 6-8, line 10-12:</p>
+<section id="activity-two-answers" class="slide level2">
+<h2>Activity two – answers</h2>
+<p>Read the code and write the questions:</p>
 <ul>
-<li><p>which lines can be grouped together into a function?</p>
+<li><p>which lines of code are similar?</p>
 <ul>
-<li><p>line 2, 6 and 10</p></li>
-<li><p>line 3, 7 and 11</p></li>
-<li><p>line 4, 8 and 12</p></li>
+<li>line 2-4, line 6-8, line 10-12</li>
 </ul></li>
-<li><p>what does the function do?</p></li>
+<li><p>which lines of code are unique?</p>
+<ul>
+<li>line 1, line 14-15</li>
+</ul></li>
+</ul>
+</section>
+<section id="activity-two-answers-continued" class="slide level2">
+<h2>Activity two – answers continued</h2>
+<p>which lines can be grouped together into a function?</p>
+<ul>
+<li>line 2, 6, 10; line 3, 7, 11; line 4, 8, 12.</li>
+</ul>
+<p>Given the length of a cube and the name of a box side:</p>
+<ul>
+<li><p>It prompts you to the enter the length of the side</p></li>
+<li><p>It calculates the number of cube that can fit in the side</p></li>
+<li><p>It print the message and return the number.</p></li>
 </ul>
 </section>
 <section id="write-a-function" class="slide level2">
@@ -301,7 +294,7 @@
 <li><p>It print the message and return the number.</p></li>
 </ul>
 <p>Name your file as <code>cubes.py</code> and submit to Gradescope.</p>
-<div id="9e13af28" class="cell" data-execution_count="3">
+<div id="870767bd" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="kw">def</span> main():</span>
 <span id="cb3-2"><a></a>    cube_len <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Cube length? "</span>))</span>
 <span id="cb3-3"><a></a>    fit_w <span class="op">=</span> get_fit(cube_len, <span class="st">'width'</span>)</span>
@@ -313,7 +306,7 @@
 </section>
 <section id="write-a-function-answer" class="slide level2">
 <h2>Write a function – answer</h2>
-<div id="2f5d9d63" class="cell" data-execution_count="4">
+<div id="2bd1b8a7" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="kw">def</span> get_fit(cube, side):</span>
 <span id="cb4-2"><a></a>    large <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Box </span><span class="sc">{}</span><span class="st">? "</span>.<span class="bu">format</span>(side)))</span>
 <span id="cb4-3"><a></a>    fit <span class="op">=</span> large <span class="op">//</span> cube</span>
