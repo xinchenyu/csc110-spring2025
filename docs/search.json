@@ -9301,7 +9301,7 @@
     "href": "slides-03-03.html#activity-two-answers-continued",
     "title": "more on decomposition (slides)",
     "section": "Activity two – answers continued",
-    "text": "Activity two – answers continued\nwhich lines can be grouped together into a function?\n\nline 2, 6, 10; line 3, 7, 11; line 4, 8, 12.\n\nGiven the length of a cube and the name of a box side:\n\nIt prompts you to the enter the length of the side\nIt calculates the number of cube that can fit in the side\nIt print the message and return the number.",
+    "text": "Activity two – answers continued\nGiven the length of a cube and the name of a box side:\n\nIt prompts you to the enter the length of the side\nIt calculates the number of cube that can fit in the side\nIt print the message and return the number.",
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on decomposition (slides)"
@@ -9313,6 +9313,28 @@
     "title": "more on decomposition (slides)",
     "section": "Activity two",
     "text": "Activity two\nRead the code and write the questions:\n\nwhich lines of code are similar?\nwhich lines of code are unique?\nwhich lines can be grouped together into a function? what does the function do?",
+    "crumbs": [
+      "Module 3 - More on Functions and Decomposition",
+      "more on decomposition (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-03-03.html#activity-two-answers-continued-1",
+    "href": "slides-03-03.html#activity-two-answers-continued-1",
+    "title": "more on decomposition (slides)",
+    "section": "Activity two – answers continued",
+    "text": "Activity two – answers continued\nGiven the length of a cube and the name of a box side:\n\nIt prompts you to the enter the length of the side\nIt calculates the number of cube that can fit in the side\nIt print the message and return the number.",
+    "crumbs": [
+      "Module 3 - More on Functions and Decomposition",
+      "more on decomposition (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-03-03.html#activity-two-continued",
+    "href": "slides-03-03.html#activity-two-continued",
+    "title": "more on decomposition (slides)",
+    "section": "Activity two – continued",
+    "text": "Activity two – continued\nWhich lines can be grouped together into a function?\n\nline 2, 6, 10:\n\n\nbox_w = int(input(\"Box width? \")) \n\nfit_w = box_w // cube_len\n\nprint(str(fit_w) + \" Rubik's cubes will fit width-wise.\")\n\nWhat are the parameters of this function? In other words, what information must be known beforehand?",
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on decomposition (slides)"

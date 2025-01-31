@@ -79,14 +79,27 @@ Read the code and write the questions:
 -   which lines of code are unique? 
 
     -   line 1, line 14-15
-    
+
+## Activity two -- continued
+
+Which lines can be grouped together into a function?
+
+- line 2, 6, 10:
+
+```{python}
+#| echo: true
+#| eval: false
+box_w = int(input("Box width? ")) 
+
+fit_w = box_w // cube_len
+
+print(str(fit_w) + " Rubik's cubes will fit width-wise.")
+```
+
+What are the parameters of this function? In other words, what information must be known beforehand?
+
 ## Activity two -- answers continued
 
-which lines can be grouped together into a function?
-
-- line 2, 6, 10; line 3, 7, 11; line 4, 8, 12.
-
-    
 Given the length of a cube and the name of a box side:
 
 -   It prompts you to the enter the length of the side
