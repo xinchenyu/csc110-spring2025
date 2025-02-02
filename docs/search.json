@@ -2522,7 +2522,7 @@
     "href": "slides-04-01.html#evaluate-the-expressions",
     "title": "more expressions (slides)",
     "section": "Evaluate the expressions",
-    "text": "Evaluate the expressions\n\n3**2 &lt; 25**0.5\n9 % 3 == 8 % 2\n10 // 3 &gt; 9 // 3\n14 % 2 != 15 % 2",
+    "text": "Evaluate the expressions\nEvaluation the expressions on your whiteboard and answer attendance questions on Gradescope.\n\n3**2 &lt; 25**0.5\n9 % 3 == 8 % 2\n10 // 3 &gt; 9 // 3\n14 % 2 != 15 % 2",
     "crumbs": [
       "Module 4 - Control Flow (if statements)",
       "more expressions (slides)"
@@ -9338,6 +9338,28 @@
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on decomposition (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-04-01.html#review-of-operations",
+    "href": "slides-04-01.html#review-of-operations",
+    "title": "more expressions (slides)",
+    "section": "Review of operations",
+    "text": "Review of operations\n\n+ : plus\n- : minus\n* : multiple\n/ : divide\n** : power\n// : divide and floor\n% : modulos",
+    "crumbs": [
+      "Module 4 - Control Flow (if statements)",
+      "more expressions (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-04-01.html#review-of-arithmetic-operations",
+    "href": "slides-04-01.html#review-of-arithmetic-operations",
+    "title": "more expressions (slides)",
+    "section": "Review of arithmetic operations",
+    "text": "Review of arithmetic operations\n\n+ : plus\n- : minus\n* : multiple\n/ : divide\n** : power\n// : divide and floor\n% : modulos",
+    "crumbs": [
+      "Module 4 - Control Flow (if statements)",
+      "more expressions (slides)"
     ]
   }
 ]

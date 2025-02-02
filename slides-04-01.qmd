@@ -6,6 +6,24 @@ slide-number: true
 
 # CSc 110 More expressions
 
+## Review of arithmetic operations
+
+-   `+` : plus 
+
+-   `-` : minus
+
+-   `*` : multiple
+
+-   `/` : divide
+
+-   `**` : power
+
+-  `//` : divide and floor
+
+-  `%` : modulos
+   
+<br />
+
 ## Review of previous expressions
 
 Evaluate the expressions below:
@@ -120,8 +138,10 @@ Comparison Operators:
 
 Order of operations: arithmetic operators come before comparison operators.
 
+
 ## Evaluate the expressions
 
+Evaluation the expressions on your whiteboard and answer attendance questions on Gradescope.
 ```{python}
 #| eval: false
 #| echo: true
@@ -156,6 +176,24 @@ Order of operations: arithmetic operators come before comparison operators.
 #| echo: true
 14 % 2 != 15 % 2
 ```
+
+## Evaluation order
+
+-   `(expressions...)`
+
+-   `**` : Exponentiation
+
+-   `*, /, //, %` : Multiplication, Division, Floor Division and Remainder
+
+-   `+, -` : Addition and subtraction
+
+-   `<, <=, >, >=, !=, ==` : Comparisons
+
+-   `not x` : Boolean NOT
+
+-   `and` : Boolean AND
+
+-   `or` : Boolean OR
 
 ## not
 
@@ -182,89 +220,6 @@ Order of operations: arithmetic operators come before comparison operators.
 | True  or False | True    |
 | False or False  | False   |
 
-
-## and, or, not
-
--   What will be the result of the following expressions:
-
-```{python}
-#| eval: false
-#| echo: true
-not True
-
-True and True
-True or True
-
-False and True
-False or True
-
-False and False
-False or False
-```
-
-## and, or, not
-
--   What will be the result of the following expressions:
-
-```{python}
-#| eval: true
-#| echo: true
-not True
-```
-
-```{python}
-#| eval: true
-#| echo: true
-True and True
-```
-
-```{python}
-#| eval: true
-#| echo: true
-True or True
-```
-
-```{python}
-#| eval: true
-#| echo: true
-False and True
-```
-
-```{python}
-#| eval: true
-#| echo: true
-False or True
-```
-
-```{python}
-#| eval: true
-#| echo: true
-False and False
-```
-
-```{python}
-#| eval: true
-#| echo: true
-False or False
-```
-
-## Evaluation order
-
--   `(expressions...)`
-
--   `**` : Exponentiation
-
--   `*, /, //, %` : Multiplication, Division, Floor Division and Remainder
-
--   `+, -` : Addition and subtraction
-
--   `<, <=, >, >=, !=, ==` : Comparisons
-
--   `not x` : Boolean NOT
-
--   `and` : Boolean AND
-
--   `or` : Boolean OR
 
 ## Evaluate the expressions
 
