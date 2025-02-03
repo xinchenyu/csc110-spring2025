@@ -151,31 +151,6 @@ Evaluation the expressions on your whiteboard and answer attendance questions on
 14 % 2 != 15 % 2
 ```
 
-## Evaluate the expressions
-
-```{python}
-#| eval: true
-#| echo: true
-3**2 < 25**0.5
-```
-
-```{python}
-#| eval: true
-#| echo: true
-9 % 3 == 8 % 2
-```
-
-```{python}
-#| eval: true
-#| echo: true
-10 // 3 > 9 // 3
-```
-
-```{python}
-#| eval: true
-#| echo: true
-14 % 2 != 15 % 2
-```
 
 ## Evaluation order
 

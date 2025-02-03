@@ -2533,7 +2533,7 @@
     "href": "slides-04-01.html#evaluate-the-expressions-1",
     "title": "more expressions (slides)",
     "section": "Evaluate the expressions",
-    "text": "Evaluate the expressions\n\n3**2 &lt; 25**0.5\n\nFalse\n\n\n\n9 % 3 == 8 % 2\n\nTrue\n\n\n\n10 // 3 &gt; 9 // 3\n\nFalse\n\n\n\n14 % 2 != 15 % 2\n\nTrue",
+    "text": "Evaluate the expressions\n\nnot 2**3 == 8 and 4 % 2 == 0\n25*0.5 &gt; 5**2 or 4 &lt;= 2**2\n4 % 2 == 0 or 4 // 0 == 0\n4 % 2 != 1\nnot 0\nnot 1",
     "crumbs": [
       "Module 4 - Control Flow (if statements)",
       "more expressions (slides)"
@@ -2610,7 +2610,7 @@
     "href": "slides-04-01.html#evaluate-the-expressions-2",
     "title": "more expressions (slides)",
     "section": "Evaluate the expressions",
-    "text": "Evaluate the expressions\n\nnot 2**3 == 8 and 4 % 2 == 0\n25*0.5 &gt; 5**2 or 4 &lt;= 2**2\n4 % 2 == 0 or 4 // 0 == 0\n4 % 2 != 1\nnot 0\nnot 1",
+    "text": "Evaluate the expressions\n\nnot 2**3 == 8 and 4 % 2 == 0\n\nFalse\n\n\n\n25*0.5 &gt; 5**2 or 4 &lt;= 2**2\n\nTrue\n\n\n\n4 % 2 == 0 or 4 // 0 == 0\n\nTrue\n\n\n\n4 % 2 != 1\n\nTrue\n\n\n\nnot 0\n\nTrue\n\n\n\nnot 1\n\nFalse",
     "crumbs": [
       "Module 4 - Control Flow (if statements)",
       "more expressions (slides)"
