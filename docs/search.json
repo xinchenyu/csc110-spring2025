@@ -2830,7 +2830,7 @@
     "href": "slides-04-02.html#write-a-function",
     "title": "if statements (slides)",
     "section": "Write a function",
-    "text": "Write a function\nWrite a Python function called absolute that takes one numeric argument (integer or float) n and returns the absolute value of n: if n is positive, it results n, if n is negative, it returns n * -1\nTest cases:\n\nprint( absolute(4) ) # 4\nprint( absolute(-4) ) # 4\nprint( absolute(0) ) # 0\n\nName your file absolute.py and submit to gradescope for attendance",
+    "text": "Write a function\nWrite a Python function called absolute that takes one numeric argument (integer or float) n and returns the absolute value of n: if n is positive, it results n, if n is negative, it returns n * -1\nTest cases:\n\nprint( absolute(4) ) # 4\nprint( absolute(-4) ) # 4\nprint( absolute(0) ) # 0",
     "crumbs": [
       "Module 4 - Control Flow (if statements)",
       "if statements (slides)"
@@ -9360,6 +9360,17 @@
     "crumbs": [
       "Module 4 - Control Flow (if statements)",
       "more expressions (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-04-02.html#quiz-04",
+    "href": "slides-04-02.html#quiz-04",
+    "title": "if statements (slides)",
+    "section": "Quiz 04",
+    "text": "Quiz 04\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.\nNo need to write main() function.",
+    "crumbs": [
+      "Module 4 - Control Flow (if statements)",
+      "if statements (slides)"
     ]
   }
 ]

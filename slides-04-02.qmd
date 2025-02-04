@@ -108,8 +108,6 @@ print( absolute(-4) ) # 4
 print( absolute(0) ) # 0
 ```
 
-Name your file `absolute.py` and submit to gradescope for attendance
-
 
 ## Write a function -- solution 1
 
@@ -151,6 +149,7 @@ Which lines run in the function `absolute`?
 
 -   When expression `n > 0` is `True`, line `3` runs (`return` is used to exit a function and returns a value)
 -   When expression `n > 0` is `False`, line `4` runs (skip line `3`)
+
 
 ## Write a function
 
@@ -202,6 +201,17 @@ def main():
  
 main()
 ```
+
+## Quiz 04
+
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+</center>
+
+You have 10 minutes to complete the quiz.
+
+No need to write `main()` function.
 
 # Input validation
 
