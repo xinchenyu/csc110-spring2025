@@ -24,30 +24,30 @@ else:
 ```
 
 
-## if elif else
+## Compare the functions
 
-Compare the two functions
 ```{python}
 #| eval: true
 #| echo: true
-def func_one(n):
+def func_one(a):
   message = ""
-  if n % 3 == 0:
-    message += "Fizz"
-  if n % 5 == 0:  # n % 5 == 0 is independent from n % 3 == 0
-    message += "Buzz" 
+  if a >= 18:
+    message += 'You may apply to join the military.'
+  if a >= 35:  # independent from a >= 18
+    message += ' You may run for president.'
   return message
 
-def func_two(n):
+def func_two(a):
   message = ""
-  if n % 3 == 0:
-    message += "Fizz"
-  elif n % 5 == 0:  # n % 5 == 0 only runs when n % 3 == 0 is False
-    message += "Buzz"
+  if a >= 18:
+    message += 'You may apply to join the military.'
+  elif a >= 35:  # only runs when a >= 18 is False
+    message += ' You may run for president.'
   return message
 
 def main():
-  print(func_one(15), func_two(15))
+  print(func_one(40))
+  print(func_two(40))
   
 main()
 ```
@@ -99,7 +99,9 @@ Write a function that does the following:
 1. It takes three numeric arguments
 1. It returns the highest value
 
-Test cases
+Name your file `max_of_three` and submit to Gradescope.
+
+Test cases:
 
 ```{python}
 #| eval: false

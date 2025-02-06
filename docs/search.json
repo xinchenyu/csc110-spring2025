@@ -2643,7 +2643,7 @@
     "href": "slides-04-03.html#if-elif-else-1",
     "title": "if elif else statements (slides)",
     "section": "if elif else",
-    "text": "if elif else\nCompare the two functions\n\ndef func_one(n):\n  message = \"\"\n  if n % 3 == 0:\n    message += \"Fizz\"\n  if n % 5 == 0:  # n % 5 == 0 is independent from n % 3 == 0\n    message += \"Buzz\" \n  return message\n\ndef func_two(n):\n  message = \"\"\n  if n % 3 == 0:\n    message += \"Fizz\"\n  elif n % 5 == 0:  # n % 5 == 0 only runs when n % 3 == 0 is False\n    message += \"Buzz\"\n  return message\n\ndef main():\n  print(func_one(15), func_two(15))\n  \nmain()\n\nFizzBuzz Fizz",
+    "text": "if elif else\nCompare the two functions\n\ndef func_one(a):\n  message = \"\"\n  if a &gt;= 18:\n    message += 'You may apply to join the military.'\n  if a &gt;= 35:  # independent from a &gt;= 18\n    message += ' You may run for president.'\n  return message\n\ndef func_two(a):\n  message = \"\"\n  if a &gt;= 18:\n    message += 'You may apply to join the military.'\n  elif a &gt;= 35:  # only runs when a &gt;= 18 is False\n    message += ' You may run for president.'\n  return message\n\ndef main():\n  print(func_one(40))\n  print(func_two(40))\n  \nmain()\n\nYou may apply to join the military. You may run for president.\nYou may apply to join the military.",
     "crumbs": [
       "Module 4 - Control Flow (if statements)",
       "if elif else statements (slides)"
@@ -2676,7 +2676,7 @@
     "href": "slides-04-03.html#write-a-function-1",
     "title": "if elif else statements (slides)",
     "section": "Write a function",
-    "text": "Write a function\nWrite a function that does the following:\n\nIts name is max_of_three\nIt takes three numeric arguments\nIt returns the highest value\n\nTest cases\n\nprint( max_of_three(-1, 3, 3) ) # 3\nprint( max_of_three(-1, -3, 0) ) # 0\nprint( max_of_three(5, 5, 10) ) # 10",
+    "text": "Write a function\nWrite a function that does the following:\n\nIts name is max_of_three\nIt takes three numeric arguments\nIt returns the highest value\n\nName your file max_of_three and submit to Gradescope.\nTest cases:\n\nprint( max_of_three(-1, 3, 3) ) # 3\nprint( max_of_three(-1, -3, 0) ) # 0\nprint( max_of_three(5, 5, 10) ) # 10",
     "crumbs": [
       "Module 4 - Control Flow (if statements)",
       "if elif else statements (slides)"
@@ -9371,6 +9371,17 @@
     "crumbs": [
       "Module 4 - Control Flow (if statements)",
       "if statements (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-04-03.html#compare-the-functions",
+    "href": "slides-04-03.html#compare-the-functions",
+    "title": "if elif else statements (slides)",
+    "section": "Compare the functions",
+    "text": "Compare the functions\n\ndef func_one(a):\n  message = \"\"\n  if a &gt;= 18:\n    message += 'You may apply to join the military.'\n  if a &gt;= 35:  # independent from a &gt;= 18\n    message += ' You may run for president.'\n  return message\n\ndef func_two(a):\n  message = \"\"\n  if a &gt;= 18:\n    message += 'You may apply to join the military.'\n  elif a &gt;= 35:  # only runs when a &gt;= 18 is False\n    message += ' You may run for president.'\n  return message\n\ndef main():\n  print(func_one(40))\n  print(func_two(40))\n  \nmain()\n\nYou may apply to join the military. You may run for president.\nYou may apply to join the military.",
+    "crumbs": [
+      "Module 4 - Control Flow (if statements)",
+      "if elif else statements (slides)"
     ]
   }
 ]
