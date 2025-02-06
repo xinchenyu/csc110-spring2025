@@ -99,7 +99,7 @@ Write a function that does the following:
 1. It takes three numeric arguments
 1. It returns the highest value
 
-Name your file `max_of_three` and submit to Gradescope.
+Name your file `max_of_three.py` and submit to Gradescope.
 
 Test cases:
 

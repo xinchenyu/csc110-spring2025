@@ -2676,7 +2676,7 @@
     "href": "slides-04-03.html#write-a-function-1",
     "title": "if elif else statements (slides)",
     "section": "Write a function",
-    "text": "Write a function\nWrite a function that does the following:\n\nIts name is max_of_three\nIt takes three numeric arguments\nIt returns the highest value\n\nName your file max_of_three and submit to Gradescope.\nTest cases:\n\nprint( max_of_three(-1, 3, 3) ) # 3\nprint( max_of_three(-1, -3, 0) ) # 0\nprint( max_of_three(5, 5, 10) ) # 10",
+    "text": "Write a function\nWrite a function that does the following:\n\nIts name is max_of_three\nIt takes three numeric arguments\nIt returns the highest value\n\nName your file max_of_three.py and submit to Gradescope.\nTest cases:\n\nprint( max_of_three(-1, 3, 3) ) # 3\nprint( max_of_three(-1, -3, 0) ) # 0\nprint( max_of_three(5, 5, 10) ) # 10",
     "crumbs": [
       "Module 4 - Control Flow (if statements)",
       "if elif else statements (slides)"
