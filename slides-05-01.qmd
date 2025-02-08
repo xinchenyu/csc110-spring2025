@@ -8,7 +8,7 @@ slide-number: true
 
 ## Announcements
 
-* Midterm 1 October 2 -- BRING PHOTO ID
+* Midterm 1 Febuary 19 -- BRING PHOTO ID
 * Modules 1 to 5 -- study guide under [practice problems](practice-01.html) page on website
 
 ## While loops
@@ -75,10 +75,10 @@ Factorial: 5! = 1 * 2 * 3 * 4 * 5 = 120
 #| echo: true
 def factorial(n):
   result = 1
-  current_n = 1
-  while current_n <= n:
-    result = result * current_n
-    current_n += 1
+  current = 1
+  while current <= n:
+    result = result * current
+    current += 1
   return result
 
 def main():
@@ -87,6 +87,19 @@ def main():
   
 main()
 ```
+
+## `while` loops table
+
+Consider `n = 5`, start with `result = 1`, `current = 1`:
+
+| `current <= 5`   | result = result * current | current += 1 |
+| :-------: |:-------: |:-------: |
+| True | result = 1 * 1 | current = 1 + 1 |
+| True | result = 1 * 2 | current = 2 + 1 |
+| True | result = 2 * 3 | current = 3 + 1 |
+| True | result = 6 * 4 | current = 4 + 1 |
+| True | result = 24 * 5 | current = 5 + 1 |
+| False | - | - |
 
 ## Write a function
 
@@ -109,10 +122,10 @@ Name your file `sum_up.py` and submit it to attendance on gradescope
 #| echo: true
 def add_up_to(n):
   sum = 0
-  current_number = 0
-  while current_number <= n:
-    sum += current_number
-    current_number += 1
+  current = 0
+  while current <= n:
+    sum += current
+    current += 1
   return sum
 
 def main():

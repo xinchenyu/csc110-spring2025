@@ -16,7 +16,9 @@ Notebooks:
 2.  [Practice Problems Module 3](https://colab.research.google.com/drive/1xiy29NCz8eDEj6oUka1R3ClZLlbDGQU6?usp=sharing)
 3.  [Practice Problems Module 4](https://colab.research.google.com/drive/1kvtwM7BI0oRe4SQwPseEPGHZBNGSPfC_?usp=sharing)
 4.  [Practice Problems Module   5](https://colab.research.google.com/drive/1t6KM7sWKXAocI6voVTJUohL701lgUrka#scrollTo=fRl8yxnyOtQh)
-<!-- Midterm 1 (Modules 1-5) + [Study Guide 1](pdfs/study-guide-1.pdf) --> 
+
+Midterm 1 (Modules 1-5) + [Study Guide 1](pdfs/study-guide-1.pdf)
+
 5.  [Practice Problems Module 6](https://colab.research.google.com/drive/1VPJpoTznvYNmbYtgutE-oH2EH05uB-0z?usp=sharing)
 6.  [Practice Problems Module 7 I](https://colab.research.google.com/drive/1UYy4lNegTp0P-A2pRCiJTsEHr2sXBfgY?usp=sharing)
 7.  [Practice Problems Module 7 II](https://colab.research.google.com/drive/1mVFmcnLB8Gh10YC-jCHII6h5hQosZL60?usp=sharing)
