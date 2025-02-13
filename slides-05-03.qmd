@@ -6,25 +6,21 @@ slide-number: true
 
 # CSc 110 - while loop aggregation
 
-## Announcement
-
-Review session next Tuesday, October 1, starting at 5pm.
-
--   Location: Gittings 129b (same as lecture room).
 
 ## `while` loops
 
--   Using an index variable:
+-   Using an `index` variable:
     -   Defined before the loop
-    -   Used in the condition of the loop
+    -   Used in the **condition** of the loop
     -   Changed within the loop
--   Using a temporary variable for aggregation:
+-   Using a `temporary variable` for aggregation:
     -   Defined before the loop
     -   Changed within the loop
-    -   Returned outside the loop
+    -   **Returned** outside the loop
 
 ## `while` loops with aggregation
 
+Adding numbers from 1 to 5:
 ```{python}
 #| eval: true
 #| echo: true

@@ -3955,7 +3955,7 @@
     "href": "slides-05-03.html#while-loops-with-aggregation",
     "title": "while loop aggregation (slides)",
     "section": "while loops with aggregation",
-    "text": "while loops with aggregation\n\ntotal = 0\nindex = 1\nwhile index &lt;= 5:\n    print('adding ' + str(index))\n    total = total + index\n    index = index + 1\n    \nprint(total)\n\nadding 1\nadding 2\nadding 3\nadding 4\nadding 5\n15",
+    "text": "while loops with aggregation\nAdding numbers from 1 to 5:\n\ntotal = 0\nindex = 1\nwhile index &lt;= 5:\n    print('adding ' + str(index))\n    total = total + index\n    index = index + 1\n    \nprint(total)\n\nadding 1\nadding 2\nadding 3\nadding 4\nadding 5\n15",
     "crumbs": [
       "Module 5 - Control Flow (while statements)",
       "while loop aggregation (slides)"
