@@ -5,7 +5,7 @@ The `while` statement allows you to repeatedly execute a block of statements as 
 Example:
 
 ``` python
-def guessing_game(n):
+def guessing_game(number):
   running = True
   while running:
       guess = int(input('Enter an integer : '))
