@@ -7284,7 +7284,7 @@
     "href": "slides-06-01.html#sequences",
     "title": "lists (slides)",
     "section": "Sequences",
-    "text": "Sequences\nWe’ve worked with strings, which are sequences in Python. Sequences can be indexed with [ ]:\n\nword = \"uncopyrightable\"\nword[0] # returns first character in string\n\n'u'\n\n\n\nword[1] # returns second character in string\n\n'n'\n\n\nWe also have lists in Python, which are also sequences and can indexed with [ ]:\n\nnumbers = [4, 2, 5, 7]\nnumbers[0] # returns first item in list\n\n4",
+    "text": "Sequences\nWe’ve worked with strings, which are sequences in Python. Sequences can be indexed with [ ]:\n\nword = \"lotion\"\nword[0] # returns first character in string\n\n'l'\n\n\n\nword[1] # returns second character in string\n\n'o'\n\n\nWe also have lists in Python, which are also sequences and can indexed with [ ]:\n\nnumbers = ['l', 'o', 't', 'i', 'o', 'n']\nnumbers[0] # returns first item in list\n\n'l'",
     "crumbs": [
       "Module 6 - Data Structures (lists)",
       "lists (slides)"
@@ -7306,7 +7306,7 @@
     "href": "slides-06-01.html#creating-lists",
     "title": "lists (slides)",
     "section": "Creating lists",
-    "text": "Creating lists\n\n# empty list\nno_numbers = []\n\n# list of integers\nnumbers = [1, 5, 2, 10, 7]\n\n# list of strings\nnames = ['ron', 'joe', 'kyle']\n\n# mixed types list\nvalues = [1, 1.15, 7, 1.75, 'those']",
+    "text": "Creating lists\n\n# empty list\nno_numbers = []\n\n# list of integers\nnumbers = [1, 5, 2, 10, 7]\n\n# list of strings\nnames = ['SZA', 'JVKE', 'Bruno Mars']\n\n# mixed types list\nvalues = [2, 1.15, 7, 1.75, 'those']\nprint(values[0] * values[1])\n\n2.3",
     "crumbs": [
       "Module 6 - Data Structures (lists)",
       "lists (slides)"
@@ -7339,7 +7339,7 @@
     "href": "slides-06-01.html#write-a-function",
     "title": "lists (slides)",
     "section": "Write a function",
-    "text": "Write a function\nIts name is sum_all that takes a list of values as an argument. It runs a loop that iterates through the number in values summing all numbers. It returns the sum of all numbers in values. HINT: a) create a variable that accumulate the sum and b) use while.\nName your file sum_list.py and submit to Gradescope.\n\nassert sum_all([2, 2, 2]) == 6\nassert sum_all([1, 2, 1, 1]) == 5\nassert sum_all([]) == 0",
+    "text": "Write a function\nIts name is sum_all that takes a list of values as an argument. It runs a loop that iterates through the number in values summing all numbers. It returns the sum of all numbers in values. HINT: a) create a variable that accumulate the sum and b) use while.\nName your file sum_list.py and submit to Gradescope.\n\nassert sum_all([2, 2, 2]) == 6\nassert sum_all([2, 1, 5, 2, 3]) == 13\nassert sum_all([]) == 0",
     "crumbs": [
       "Module 6 - Data Structures (lists)",
       "lists (slides)"
@@ -7350,7 +7350,7 @@
     "href": "slides-06-01.html#write-a-function-solution",
     "title": "lists (slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\nAdd test cases to the solution below:\n\ndef sum_all(values):\n  total = 0\n  index = 0\n  while index &lt; len(values):\n    total += values[index]\n    index += 1\n  return total\n\ndef main():\n  assert sum_all([2, 2, 2]) == 6\n  assert sum_all([1, 2, 1, 1]) == 5\n  assert sum_all([]) == 0\n    \nmain()",
+    "text": "Write a function – solution\n\ndef sum_all(values):\n  total = 0\n  index = 0\n  while index &lt; len(values):\n    total += values[index]\n    index += 1\n  return total\n\ndef main():\n  assert sum_all([2, 2, 2]) == 6\n  assert sum_all([2, 1, 5, 2, 3]) == 13\n  assert sum_all([]) == 0\n    \nmain()",
     "crumbs": [
       "Module 6 - Data Structures (lists)",
       "lists (slides)"
@@ -7944,7 +7944,7 @@
     "href": "slides-06-02.html#random-module",
     "title": "random (slides)",
     "section": "random module",
-    "text": "random module\nWe need to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random() #returns a random float between 0 and 1\nprint(n)\n\nn = random.randint(0, 9) #returns a random integer betweem 0 and 9.\n\n\nprint(n)\n\n0.4367642429709302\n8",
+    "text": "random module\nWe need to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random() #returns a random float between 0 and 1\nprint(n)\n\nn = random.randint(0, 9) #returns a random integer betweem 0 and 9.\n\n\nprint(n)\n\n0.13781753740146263\n2",
     "crumbs": [
       "Module 6 - Data Structures (lists)",
       "random (slides)"
@@ -7966,7 +7966,7 @@
     "href": "slides-06-02.html#write-a-function-solution",
     "title": "random (slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nJoan",
+    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nJune",
     "crumbs": [
       "Module 6 - Data Structures (lists)",
       "random (slides)"
@@ -9470,6 +9470,28 @@
     "crumbs": [
       "Module 5 - Control Flow (while statements)",
       "loops + strings (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-06-01.html#announcement",
+    "href": "slides-06-01.html#announcement",
+    "title": "lists (slides)",
+    "section": "Announcement",
+    "text": "Announcement\nReview session tomorrow (Tuesday, Feb 18)\n\nLocation: Gittings 129b\nTime: 5 : 00-7 : 00 pm",
+    "crumbs": [
+      "Module 6 - Data Structures (lists)",
+      "lists (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-06-01.html#updating-lists",
+    "href": "slides-06-01.html#updating-lists",
+    "title": "lists (slides)",
+    "section": "Updating lists",
+    "text": "Updating lists\n\nnames = ['SZA', 'JVKE', 'Bruno Mars']\n\n# mutate list using the index\nnames[1] = \"Billie Eilish\"\n\nnames\n\n['SZA', 'Billie Eilish', 'Bruno Mars']",
+    "crumbs": [
+      "Module 6 - Data Structures (lists)",
+      "lists (slides)"
     ]
   }
 ]

@@ -7,13 +7,6 @@ df-print: kable
 
 # CSC 110 -- Generating Random Numbers and Other Important Functions and Methods
 
-## Announcement
-
-* Check gradescope for grades
-* Lecture next Friday, Oct 11 will be on Zoom.
-  * You can also come here and watch the recording so that TAs can help
-  * Attendance window will be 9am - 9pm 
-
 ## random module
 
 We need to `import` the module `random`

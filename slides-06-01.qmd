@@ -7,6 +7,14 @@ df-print: kable
 
 # CSc 110 - Lists
 
+## Announcement
+
+Review session tomorrow (Tuesday, Feb 18) 
+
+-   Location: Gittings 129b 
+
+-   Time: 5 : 00-7 : 00 pm
+
 ## Sequences
 
 We've worked with `strings`, which are sequences in Python. Sequences can be indexed with `[ ]`:
@@ -14,7 +22,7 @@ We've worked with `strings`, which are sequences in Python. Sequences can be ind
 ```{python}
 #| eval: true
 #| echo: true
-word = "uncopyrightable"
+word = "lotion"
 word[0] # returns first character in string
 ```
 
@@ -29,7 +37,7 @@ We also have `lists` in Python, which are also sequences and can indexed with `[
 ```{python}
 #| eval: true
 #| echo: true
-numbers = [4, 2, 5, 7]
+numbers = ['l', 'o', 't', 'i', 'o', 'n']
 numbers[0] # returns first item in list
 ```
 
@@ -54,59 +62,13 @@ no_numbers = []
 numbers = [1, 5, 2, 10, 7]
 
 # list of strings
-names = ['ron', 'joe', 'kyle']
+names = ['SZA', 'JVKE', 'Bruno Mars']
 
 # mixed types list
-values = [1, 1.15, 7, 1.75, 'those']
+values = [2, 1.15, 7, 1.75, 'those']
+print(values[0] * values[1])
 ```
 
-## Evaluate the expressions
-
-```{python}
-#| eval: false
-#| echo: true
-numbers = [2, 3, 2, 4, 5]
-numbers[1] + numbers[4]
-
-numbers = [2.0, 3, 1.3, 4]
-numbers[0] * numbers[2]
-
-words = ['the', 'bear', 'in', 'the', 'tree']
-words[3] + words[4] + words[1]
-
-floats = [1.2, 3.4, 0.3, 1.0, 3.2]
-len(floats)
-```
-
-## Evaluate the expressions
-
-```{python}
-#| eval: true
-#| echo: true
-numbers = [2, 3, 2, 4, 5]
-numbers[1] + numbers[4]
-```
-
-```{python}
-#| eval: true
-#| echo: true
-numbers = [2.0, 3, 1.3, 4]
-numbers[0] * numbers[2]
-```
-
-```{python}
-#| eval: true
-#| echo: true
-words = ['the', 'bear', 'in', 'the', 'tree']
-words[3] + words[4] + words[1]
-```
-
-```{python}
-#| eval: true
-#| echo: true
-floats = [1.2, 3.4, 0.3, 1.0, 3.2]
-len(floats)
-```
 
 ## Write a function
 
@@ -121,14 +83,12 @@ Name your file `sum_list.py` and submit to Gradescope.
 #| eval: false
 #| echo: true
 assert sum_all([2, 2, 2]) == 6
-assert sum_all([1, 2, 1, 1]) == 5
+assert sum_all([2, 1, 5, 2, 3]) == 13
 assert sum_all([]) == 0
 ```
 
 
 ## Write a function -- solution
-
-Add test cases to the solution below:
 
 ```{python}
 #| eval: true
@@ -143,7 +103,7 @@ def sum_all(values):
 
 def main():
   assert sum_all([2, 2, 2]) == 6
-  assert sum_all([1, 2, 1, 1]) == 5
+  assert sum_all([2, 1, 5, 2, 3]) == 13
   assert sum_all([]) == 0
     
 main()
@@ -357,6 +317,18 @@ def main():
 main()
 ```
 
+## Updating lists
+
+```{python}
+#| eval: true
+#| echo: true
+names = ['SZA', 'JVKE', 'Bruno Mars']
+
+# mutate list using the index
+names[1] = "Billie Eilish"
+
+names
+```
 
 ## Write a function
 
