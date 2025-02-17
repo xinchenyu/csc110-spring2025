@@ -7306,7 +7306,7 @@
     "href": "slides-06-01.html#creating-lists",
     "title": "lists (slides)",
     "section": "Creating lists",
-    "text": "Creating lists\n\n# empty list\nno_numbers = []\n\n# list of integers\nnumbers = [1, 5, 2, 10, 7]\n\n# list of strings\nnames = ['SZA', 'JVKE', 'Bruno Mars']\n\n# mixed types list\nvalues = [2, 1.15, 7, 1.75, 'those']\nprint(values[0] * values[1])\n\n2.3",
+    "text": "Creating lists\n\n# empty list\nno_numbers = []\n\n# list of integers\nnumbers = [1, 5, 2, 10, 7]\n\n# list of strings\nnames = ['SZA', 'JVKE', 'Bruno Mars', 'Doechii']\n\n# mixed types list\nvalues = [2, 1.15, 7, 1.75, 'those']\nprint(values[0] * values[1])\n\n2.3",
     "crumbs": [
       "Module 6 - Data Structures (lists)",
       "lists (slides)"
