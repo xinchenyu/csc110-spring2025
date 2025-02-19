@@ -26,6 +26,7 @@ format: revealjs
 
 <font color="red">No breaks during the exam. Use the restroom now.</font>
 
+* A maximum of two people per table, seated diagonally.
 * Have your photo ID handy
 * Put away earbuds, headphones, phones, laptops, calculators, smart watches, etc. 
 
