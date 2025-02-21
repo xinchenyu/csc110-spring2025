@@ -298,6 +298,7 @@ assert max_list([2, 1, 3, 1]) == 3
 
 ## Max solution - empty lists
 
+Can we swap the two expressions at `line 5`?
 ```{python}
 #| eval: true
 #| echo: true
@@ -335,8 +336,6 @@ names
 Its name is `double` that takes a list of numeric variables as argument.
 It iterates over the list (use `while`) doubling (multiplying by two) each value in the list.
 It returns the modified list.
-
-Name your file `double.py` and submit it to gradescope.
 
 
 ```{python}
