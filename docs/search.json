@@ -5077,7 +5077,7 @@
     "href": "slides-07-01.html#lists-are-mutable",
     "title": "mutability (slides)",
     "section": "Lists are mutable",
-    "text": "Lists are mutable\n(strings are not)\nBecause lists are mutable:\n\nonce a list is changed inside a function, that change persists when the function has finished running\nif your function changes a list, you don’t strictly need to return that list – we will be returning because that’s what you need to be doing in the future",
+    "text": "Lists are mutable\n(strings are not)\nBecause lists are mutable:\n\nonce a list is changed inside a function, that change persists when the function has finished running",
     "crumbs": [
       "Module 7 - Control Flow (for statements)",
       "mutability (slides)"
@@ -5088,7 +5088,7 @@
     "href": "slides-07-01.html#write-a-function",
     "title": "mutability (slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is make_all_even\nIt takes one argument, a list of integers\nIt iterates over the list, changing odd numbers to even number (even up)\n\n\ntest_integers = [1, 2, 3, 4]\nassert make_all_even(test_integers) == test_integers\nassert test_integers == [2, 2, 4, 4]",
+    "text": "Write a function\n\nIts name is make_even\nIt takes one argument, a list of integers\nIt iterates over the list, changing odd numbers to even number (even up)\n\nName your file make_even.py and submit to Gradescope.\n\nintegers = [1, 2, 3, 4]\nmake_even(integers)\nassert integers == [2, 2, 4, 4] # change persists",
     "crumbs": [
       "Module 7 - Control Flow (for statements)",
       "mutability (slides)"
@@ -5099,7 +5099,7 @@
     "href": "slides-07-01.html#write-a-function-solution-1",
     "title": "mutability (slides)",
     "section": "Write a function – solution 1",
-    "text": "Write a function – solution 1\n\ndef make_all_even(integers):\n  index = 0\n  while index &lt; len(integers):\n    if integers[index] % 2 == 1:\n      integers[index] += 1\n    index += 1\n  return integers\n      \ndef main():\n  test_integers = [1, 2, 3, 4]\n  make_all_even(test_integers)\n  assert test_integers == [2, 2, 4, 4]\n  \nmain()\n\nLet’s visualize this on Python Tutor",
+    "text": "Write a function – solution 1\n\ndef make_even(integers):\n  index = 0\n  while index &lt; len(integers):\n    if integers[index] % 2 == 1:\n      integers[index] += 1\n    index += 1\n  return integers\n      \ndef main():\n  integers = [1, 2, 3, 4]\n  make_even(integers)\n  assert integers == [2, 2, 4, 4]\n  \nmain()\n\nLet’s visualize this on Python Tutor",
     "crumbs": [
       "Module 7 - Control Flow (for statements)",
       "mutability (slides)"
@@ -5110,7 +5110,7 @@
     "href": "slides-07-01.html#write-a-function-solution-2",
     "title": "mutability (slides)",
     "section": "Write a function – solution 2",
-    "text": "Write a function – solution 2\n\ndef make_all_even(integers):\n  index = 0\n  while index &lt; len(integers):\n    integers[index] += integers[index] % 2\n    index += 1\n  return integers\n      \ndef main():\n  test_integers = [1, 2, 3, 4]\n  make_all_even(test_integers)\n  assert test_integers == [2, 2, 4, 4]\n  \nmain()",
+    "text": "Write a function – solution 2\n\ndef make_even(integers):\n  index = 0\n  while index &lt; len(integers):\n    integers[index] += integers[index] % 2\n    index += 1\n  return integers\n      \ndef main():\n  test_integers = [1, 2, 3, 4]\n  make_even(test_integers)\n  assert test_integers == [2, 2, 4, 4]\n  \nmain()\n\nIf we remove the return statement on line 6, will the function still work properly?",
     "crumbs": [
       "Module 7 - Control Flow (for statements)",
       "mutability (slides)"
@@ -5121,7 +5121,7 @@
     "href": "slides-07-01.html#object-references",
     "title": "mutability (slides)",
     "section": "Object References",
-    "text": "Object References\n\nA variable doesn’t store values, it stores a reference to an object that lives in your computer memory (RAM)\nThe same variable name can be pointed to a different object\n\n\ntitle = \"Dr.\"\ntitle = \"Ms.\"\n\n\nA variable name can point to an object that is already referenced by another variable\n\n\nlast_name = \"Brown\"\nname = last_name",
+    "text": "Object References\n\nA variable doesn’t store values, it stores a reference to an object that lives in your computer memory (RAM)\nIf you assign a value to an existing object, the variable references that object\n\n\nlast_name = \"Brown\"\nname = last_name # both reference the same object \"Brown\"\n\n\nIf you assign it to a new object, the object is created, placed in memory, and then the variable references it\n\n\ntitle = \"Dr.\"\ntitle = \"Ms.\" # \"Dr.\" object will be removed from memory",
     "crumbs": [
       "Module 7 - Control Flow (for statements)",
       "mutability (slides)"
@@ -5132,7 +5132,7 @@
     "href": "slides-07-01.html#examples",
     "title": "mutability (slides)",
     "section": "Examples",
-    "text": "Examples\nStrings are not mutable\n\ntitle = \"Dr.\"\nlast_name = \"Brown\"\nprint(title + \" \" + last_name)\n\ntitle = \"Ms.\"\nprint(title + \" \" + last_name)\n\nname = last_name # both point to the same object\nlast_name = \"Silva\" # a new object created, last_name point to the new object\nprint(title + \" \" + name) # name still point to the original string\n\nDr. Brown\nMs. Brown\nMs. Brown\n\n\nVisualize these examples in Python Tutor",
+    "text": "Examples\nStrings are not mutable\n\ntitle = \"Dr.\"\nlast_name = \"Brown\"\nprint(title + \" \" + last_name)\n\ntitle = \"Ms.\"\nprint(title + \" \" + last_name)\n\nname = last_name # both point to the same object\nlast_name = \"Silva\" # a new object created, last_name point to the new \nprint(title + \" \" + name) # name still point to the original string\n\nDr. Brown\nMs. Brown\nMs. Brown\n\n\nVisualize these examples in Python Tutor",
     "crumbs": [
       "Module 7 - Control Flow (for statements)",
       "mutability (slides)"
@@ -5143,7 +5143,7 @@
     "href": "slides-07-01.html#examples-1",
     "title": "mutability (slides)",
     "section": "Examples",
-    "text": "Examples\nLists are mutable\n\nnames = [\"Dr.\", \"Brown\"]\nprint(names[0] + \" \" + names[1])\n\nnames[0] = \"Ms.\"\nprint(names[0] + \" \" + names[1])\n\nnames_copy = names # both point to the same object\nnames[1] = \"Silva\" # the object been mutated, no new object created\nprint(names_copy[0] + \" \" + names_copy[1]) # both name and name_copy point to the mutated object\n\nDr. Brown\nMs. Brown\nMs. Silva\n\n\nVisualize these examples in Python Tutor",
+    "text": "Examples\nLists are mutable\n\nnames = [\"Dr.\", \"Brown\"]\nprint(names[0] + \" \" + names[1])\n\nnames[0] = \"Ms.\"\nprint(names[0] + \" \" + names[1])\n\nnames_copy = names # both point to the same object\nnames[1] = \"Silva\" # the object been mutated, no new object created\nprint(names_copy[0] + \" \" + names_copy[1]) # both point to the mutated object\n\nDr. Brown\nMs. Brown\nMs. Silva\n\n\nVisualize these examples in Python Tutor",
     "crumbs": [
       "Module 7 - Control Flow (for statements)",
       "mutability (slides)"
@@ -5165,7 +5165,7 @@
     "href": "slides-07-01.html#object-references-1",
     "title": "mutability (slides)",
     "section": "Object references",
-    "text": "Object references\n\nA variable does not actually hold the value of the object within it\nInstead, it’s a reference to the object\n\nThe object is “sitting” somewhere in your computer’s memory (RAM)",
+    "text": "Object references\n\nIf you assign a value to an existing object, the variable references that object\n\n\nlast_name = \"Brown\"\nname = last_name\n\n\nIf you assign it to a new object, the object is created, placed in memory, and then the variable references it\n\n\ntitle = \"Dr.\"\ntitle = \"Ms.\" # \"Dr.\" object will be removed from memory\n\n\nWhen there’s no variable pointing to an object anymore, that object is removed from memory by Python’s Garbage Collector (so don’t have to worry about memory leaks)",
     "crumbs": [
       "Module 7 - Control Flow (for statements)",
       "mutability (slides)"
@@ -5176,7 +5176,7 @@
     "href": "slides-07-01.html#object-references-2",
     "title": "mutability (slides)",
     "section": "Object references",
-    "text": "Object references\n\nIf you assign a value to an existing object, the variable references that object\n\n\nlast_name = \"Brown\"\nname = last_name\n\n\nIf you assign it to a new object, the object is created, placed in memory, and then the variable references it\n\n\ntitle = \"Dr.\"\ntitle = \"Ms.\" # \"Dr.\" object will be removed from memory\n\n\nWhen there’s no variable pointing to an object anymore, that object is removed from memory by Python’s Garbage Collector (so you don’t have to worry about memory leaks)",
+    "text": "Object references\n\nIf you assign a value to an existing object, the variable references that object\n\n\nlast_name = \"Brown\"\nname = last_name\n\n\nIf you assign it to a new object, the object is created, placed in memory, and then the variable references it\n\n\ntitle = \"Dr.\"\ntitle = \"Ms.\" # \"Dr.\" object will be removed from memory\n\n\nWhen there’s no variable pointing to an object anymore, that object is removed from memory by Python’s Garbage Collector (so don’t have to worry about memory leaks)",
     "crumbs": [
       "Module 7 - Control Flow (for statements)",
       "mutability (slides)"
@@ -5209,7 +5209,7 @@
     "href": "slides-07-01.html#write-two-functions",
     "title": "mutability (slides)",
     "section": "Write two functions",
-    "text": "Write two functions\n\nNames are remove_vowels_list and remove_vowels_string\nThe first function takes a list of characters as argument, the second takes a single string\nThe first function removes (use .pop(index)) all vowels from the characters list, the second creates a new_string with only characters that are not vowels\nThe first function returns the original argument list, the second function returns the new_string\n\n\nassert remove_vowels_list([\"b\", \"a\", \"n\", \"a\", \"n\", \"a\"]) == [\"b\", \"n\", \"n\"]\nassert remove_vowels_string(\"banana\") == \"bnn\"",
+    "text": "Write two functions\n\nThe first function returns the original argument list by removing vowels.\nThe second function returns a string without vowels.\n\nNote: list is mutable, but string is not.\n\nassert remove_vowels_list([\"b\", \"a\", \"n\", \"a\", \"n\", \"a\"]) == [\"b\", \"n\", \"n\"]\nassert remove_vowels_string(\"banana\") == \"bnn\"",
     "crumbs": [
       "Module 7 - Control Flow (for statements)",
       "mutability (slides)"
@@ -9492,6 +9492,39 @@
     "crumbs": [
       "Module 6 - Data Structures (lists)",
       "lists (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-07-01.html#write-a-function-solution-2-1",
+    "href": "slides-07-01.html#write-a-function-solution-2-1",
+    "title": "mutability (slides)",
+    "section": "Write a function – solution 2",
+    "text": "Write a function – solution 2\n\ndef make_even(integers):\n  index = 0\n  while index &lt; len(integers):\n    integers[index] += integers[index] % 2\n    index += 1\n      \ndef main():\n  test_integers = [1, 2, 3, 4]\n  make_even(test_integers)\n  assert test_integers == [2, 2, 4, 4]\n  \nmain()\n\nIf we remove the return statement on line 6, will the function still work properly? Yes!",
+    "crumbs": [
+      "Module 7 - Control Flow (for statements)",
+      "mutability (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-07-01.html#pop-and-while-loop",
+    "href": "slides-07-01.html#pop-and-while-loop",
+    "title": "mutability (slides)",
+    "section": ".pop() and while loop",
+    "text": ".pop() and while loop\nPop all the items using a while loop:\n\nsongs = [\"Lavender Haze\", \"Calm Down\", \"As It Was\", \"Her\"]\nindex = 0\nwhile index &lt; len(songs):\n  songs.pop(index)\n  \nprint(songs)\n\n[]",
+    "crumbs": [
+      "Module 7 - Control Flow (for statements)",
+      "mutability (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-07-01.html#pop-items-using-while-loop",
+    "href": "slides-07-01.html#pop-items-using-while-loop",
+    "title": "mutability (slides)",
+    "section": ".pop() items using while loop",
+    "text": ".pop() items using while loop\n\nsongs = [\"Lavender Haze\", \"Calm Down\", \"As It Was\", \"Her\"]\nindex = 0\nwhile index &lt; len(songs):\n  songs.pop(index)\n  \nprint(songs)\n\n[]\n\n\nWhy we don’t update index in the while loop?",
+    "crumbs": [
+      "Module 7 - Control Flow (for statements)",
+      "mutability (slides)"
     ]
   }
 ]
