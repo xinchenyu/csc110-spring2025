@@ -85,7 +85,7 @@ main()
 
 ## Write a function
 
-It returns a list of integers that represent the indices of the vowels in the original list.
+It returns a list of integers that represent the indices of the vowels in the string
 
 Name file `indices_of_vowels.py` and submit to Gradescope. 
 

@@ -4835,7 +4835,7 @@
     "href": "slides-07-02.html#write-a-function-1",
     "title": "for loops with range (slides)",
     "section": "Write a function",
-    "text": "Write a function\nIt returns a list of integers that represent the indices of the vowels in the original list.\nName file indices_of_vowels.py and submit to Gradescope.\nUse a for loop.\nTest cases:\n\nassert indices_of_vowels(\"hello\") == [1, 4]\nassert indices_of_vowels(\"\") == []\nassert indices_of_vowels(\"aeiou\") == [0, 1, 2, 3, 4]",
+    "text": "Write a function\nIt returns a list of integers that represent the indices of the vowels in the string\nName file indices_of_vowels.py and submit to Gradescope.\nUse a for loop.\nTest cases:\n\nassert indices_of_vowels(\"hello\") == [1, 4]\nassert indices_of_vowels(\"\") == []\nassert indices_of_vowels(\"aeiou\") == [0, 1, 2, 3, 4]",
     "crumbs": [
       "Module 7 - Control Flow (for statements)",
       "for loops with range (slides)"
