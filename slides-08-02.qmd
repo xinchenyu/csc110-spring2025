@@ -7,14 +7,6 @@ df-print: kable
 
 # CSc 110 - the other type of `for` loop
 
-## Announcements
-
-* Midterm 2 will be on next Wednesday, Oct 23.
-* Review session next Tuesday, Oct 22 5-7pm
-  * Location: Gittings 129b 
-* Study guide: [xinchenyu.github.io/csc110-fall2024/pdfs/study-guide-2.pdf](https://xinchenyu.github.io/csc110-fall2024/pdfs/study-guide-2.pdf) 
-  
-
 ## Review of `for in range():`
 
 ```{python}
@@ -112,6 +104,68 @@ main()
 ```
 
 
+## Write a function
+
+It returns the highest value in the numbers.
+
+Use `for x in list:`
+
+Test cases:
+
+```{python}
+#| eval: false
+#| echo: true
+assert max_list([]) == None
+assert max_list([2, 2, 1]) == 2
+assert max_list([1, -3]) == 1 
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def max_list(numbers):
+    max = None
+    for n in numbers:
+        if max == None or n > max:
+            max = n
+    return max
+
+def main():
+  assert max_list([]) == None
+  assert max_list([2, 2, 1]) == 2
+  assert max_list([1, -3]) == 1 
+  print("pass")
+  
+main()
+```
+
+## A Note on Lists
+
+`for i in range(len(list)):` VS. `for x in list:`
+
+-   Use option 1 if you want to mutate the list.
+
+```{python}
+#| echo: true
+#| eval: true
+numbers = [2, 1, 4]
+for i in range(len(numbers)):
+  numbers[i] += 1
+numbers
+```
+
+-   Use either options if you only need to get the values.
+
+```{python}
+#| echo: true
+#| eval: true
+numbers = [2, 1, 4]
+for n in numbers:
+  print(n)
+```
+
 ## Quiz 07
 
 <center>
@@ -122,45 +176,6 @@ main()
 You have 10 minutes to complete the quiz.
 
 No need to write `main()` function.
-
-## Write a function
-
-1. Its name is `max_list` that takes a list of numbers as argument.
-2. It mutates the list, multiply each number by 2
-3. It returns the highest value in the mutated numbers
-
-Test cases:
-
-```{python}
-#| eval: false
-#| echo: true
-assert max_list([]) == None
-assert max_list([2, 2, 1]) == 4
-assert max_list([1, -3]) == 2 
-```
-
-## Write a function -- solution
-
-```{python}
-#| eval: true
-#| echo: true
-def max_list(numbers):
-    max = None
-    for i in range(len(numbers)):
-        numbers[i] *= 2
-    for i in range(len(numbers)):
-        if max == None or numbers[i] > max:
-            max = numbers[i]
-    return max
-
-def main():
-  assert max_list([]) == None
-  assert max_list([2, 2, 1]) == 4
-  assert max_list([1, -3]) == 2 
-  print("pass")
-  
-main()
-```
 
 ## Write a function
 
