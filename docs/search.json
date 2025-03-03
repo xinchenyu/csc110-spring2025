@@ -7119,7 +7119,7 @@
     "href": "slides-08-01.html#the-in-operator",
     "title": "intro to dictionaries (slides)",
     "section": "The in operator",
-    "text": "The in operator\nWith strings:\n\n\"a\" in \"aeiou\"\n\nTrue\n\n\nWith lists:\n\n1 in [1, 2, 3, 4, 5]\n\nTrue\n\n\nAnd dictionary keys:\n\nword_count = {\"and\": 324, \"why\": 134, \"cannot\": 76, \"Sanded\": 13}\n\"why\" in word_count\n\nTrue",
+    "text": "The in operator\nWith strings:\n\n\"a\" in \"aeiou\"\n\nTrue\n\n\nWith lists:\n\n1 in [1, 2, 3, 4, 5]\n\nTrue\n\n\nCheck if an item is a dictionary key:\n\nword_count = {\"and\": 324, \"why\": 134, \"cannot\": 76, \"Sanded\": 13}\n\"why\" in word_count\n\nTrue",
     "crumbs": [
       "Module 8 - Data Structures (dictionaries)",
       "intro to dictionaries (slides)"

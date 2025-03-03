@@ -199,7 +199,7 @@ With lists:
 1 in [1, 2, 3, 4, 5]
 ```
 
-And dictionary keys:
+Check if an item is a dictionary key:
 
 ```{python}
 #| eval: true
