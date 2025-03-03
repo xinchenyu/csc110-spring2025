@@ -1419,6 +1419,28 @@
     ]
   },
   {
+    "objectID": "slides-02-02.html#class-activity-one-answers-1",
+    "href": "slides-02-02.html#class-activity-one-answers-1",
+    "title": "decomposition (slides)",
+    "section": "Class activity one – answers",
+    "text": "Class activity one – answers\nRetro head guitar vs. Retro head long neck guitar:\n\nwhich parts of code are the same?\n\nthe head\nthe body\n\nwhich parts of code are different?\n\nthe neck",
+    "crumbs": [
+      "Module 2 - Functions, Operators, Expressions and Decomposition",
+      "decomposition (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-02-02.html#decomposition",
+    "href": "slides-02-02.html#decomposition",
+    "title": "decomposition (slides)",
+    "section": "Decomposition",
+    "text": "Decomposition\n\ndef print_classic_guitar():\n    print_head()\n    print_neck()\n    print_body()\n\ndef print_retro_guitar():\n    print_retro_head()\n    print_neck()\n    print_body()\n    \ndef print_long_guitar():\n    print_head()\n    print_neck()\n    print_neck()\n    print_body()\n\ndef main():\n    print_classic_guitar() # print classic guitar\n    print_retro_guitar() # print retro head guitar\n    print_long_guitar() # print long neck guitar\n\nmain()",
+    "crumbs": [
+      "Module 2 - Functions, Operators, Expressions and Decomposition",
+      "decomposition (slides)"
+    ]
+  },
+  {
     "objectID": "slides-02-02.html#class-activity-two",
     "href": "slides-02-02.html#class-activity-two",
     "title": "decomposition (slides)",
@@ -1468,6 +1490,17 @@
     "title": "decomposition (slides)",
     "section": "Write functions – answers",
     "text": "Write functions – answers\n\ndef print_head():\n    print(\"      ___\")\n    print(\"    o|* *|o\")\n    print(\"    o|* *|o\")\n    print(\"    o|* *|o\")\n    print(\"     \\===/\")\n\ndef print_neck():\n    print(\"      |||\" + \"\\n\" + \"      |||\")\n    \ndef print_body():\n    print(\"   ___|||___\")\n    print(\"  /   |||   \\ \")\n    print(\" /    |||    \\ \")\n    print(\"|     |||     |\")\n    print(\" \\   (|||)   /\")\n    print(\"  |   |||   |\")\n    print(\"  /   |||   \\ \")\n    print(\" /    |||    \\ \")\n    print(\"/     |||     \\ \")\n    print(\"|    [===]    |\")\n    print(\" \\           /\")\n    print(\"  '.       .'\")\n    print(\"   '-------'\")\n\ndef print_classic_guitar():\n    print_head()\n    print_neck()\n    print_body()\n\ndef print_long_guitar():\n    print_head()\n    print_neck()\n    print_neck()\n    print_body()\n\ndef main():\n    print_classic_guitar() # print classic guitar\n    print_long_guitar() # print long neck guitar\n\nmain()\n\n      ___\n    o|* *|o\n    o|* *|o\n    o|* *|o\n     \\===/\n      |||\n      |||\n   ___|||___\n  /   |||   \\ \n /    |||    \\ \n|     |||     |\n \\   (|||)   /\n  |   |||   |\n  /   |||   \\ \n /    |||    \\ \n/     |||     \\ \n|    [===]    |\n \\           /\n  '.       .'\n   '-------'\n      ___\n    o|* *|o\n    o|* *|o\n    o|* *|o\n     \\===/\n      |||\n      |||\n      |||\n      |||\n   ___|||___\n  /   |||   \\ \n /    |||    \\ \n|     |||     |\n \\   (|||)   /\n  |   |||   |\n  /   |||   \\ \n /    |||    \\ \n/     |||     \\ \n|    [===]    |\n \\           /\n  '.       .'\n   '-------'",
+    "crumbs": [
+      "Module 2 - Functions, Operators, Expressions and Decomposition",
+      "decomposition (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-02-02.html#write-functions-improved-answers",
+    "href": "slides-02-02.html#write-functions-improved-answers",
+    "title": "decomposition (slides)",
+    "section": "Write functions – improved answers",
+    "text": "Write functions – improved answers\n\ndef print_head():\n    print(\"      ___\")\n    pattern = \"    o|* *|o\"\n    print(pattern)\n    print(pattern)\n    print(pattern)\n    print(\"     \\===/\")\n\ndef print_neck():\n    print(\"      |||\" + \"\\n\" + \"      |||\")\n    \ndef print_body():\n    print(\"   ___|||___\")\n    pattern = \"  /   |||   \\ \" + \"\\n\" + \" /    |||    \\ \" \n    print(pattern)\n    print(\"|     |||     |\")\n    print(\" \\   (|||)   /\")\n    print(\"  |   |||   |\")\n    print(pattern)\n    print(\"/     |||     \\ \")\n    print(\"|    [===]    |\")\n    print(\" \\           /\")\n    print(\"  '.       .'\")\n    print(\"   '-------'\")\n\ndef print_classic_guitar():\n    print_head()\n    print_neck()\n    print_body()\n\ndef print_long_guitar():\n    print_head()\n    print_neck()\n    print_neck()\n    print_body()\n\ndef main():\n    print_classic_guitar() # print classic guitar\n    print_long_guitar() # print long neck guitar\n\nmain()\n\n      ___\n    o|* *|o\n    o|* *|o\n    o|* *|o\n     \\===/\n      |||\n      |||\n   ___|||___\n  /   |||   \\ \n /    |||    \\ \n|     |||     |\n \\   (|||)   /\n  |   |||   |\n  /   |||   \\ \n /    |||    \\ \n/     |||     \\ \n|    [===]    |\n \\           /\n  '.       .'\n   '-------'\n      ___\n    o|* *|o\n    o|* *|o\n    o|* *|o\n     \\===/\n      |||\n      |||\n      |||\n      |||\n   ___|||___\n  /   |||   \\ \n /    |||    \\ \n|     |||     |\n \\   (|||)   /\n  |   |||   |\n  /   |||   \\ \n /    |||    \\ \n/     |||     \\ \n|    [===]    |\n \\           /\n  '.       .'\n   '-------'",
     "crumbs": [
       "Module 2 - Functions, Operators, Expressions and Decomposition",
       "decomposition (slides)"
@@ -1723,6 +1756,17 @@
     ]
   },
   {
+    "objectID": "slides-02-01.html#another-example",
+    "href": "slides-02-01.html#another-example",
+    "title": "functions (slides)",
+    "section": "Another example",
+    "text": "Another example\n\ndef cook_food(order):\n  message = \"Your \" + order + \" is ready!\"\n  return message\n\nmeal = cook_food(\"pasta\")\nprint(meal)\nmeal = cook_food(\"burger\")\nprint(meal)\n\nYour pasta is ready!\nYour burger is ready!\n\n\n\nThe function cook_food prepares a meal.\nThen returns a string that says the meal is ready.\nThe returned message is stored in the meal variable.\nFinally, print function displays that message to the caller.",
+    "crumbs": [
+      "Module 2 - Functions, Operators, Expressions and Decomposition",
+      "functions (slides)"
+    ]
+  },
+  {
     "objectID": "slides-02-01.html#function-to-calculate-area-of-a-circle",
     "href": "slides-02-01.html#function-to-calculate-area-of-a-circle",
     "title": "functions (slides)",
@@ -1739,116 +1783,6 @@
     "title": "functions (slides)",
     "section": "Function to calculate area of a circle",
     "text": "Function to calculate area of a circle\nFunction name is calculate_area. Given a radius parameter, it returns the rounded area of the circle.\n\ndef calculate_area(radius):\n  area = 3.1415 * radius ** 2\n  return round(area, 2)\n\ndef main():\n  print(calculate_area(3)) # 28.27\n  print(calculate_area(6)) # 113.09\n  \nmain()",
-    "crumbs": [
-      "Module 2 - Functions, Operators, Expressions and Decomposition",
-      "functions (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-02-01.html#function-to-calculate-the-volume-of-a-cylinder",
-    "href": "slides-02-01.html#function-to-calculate-the-volume-of-a-cylinder",
-    "title": "functions (slides)",
-    "section": "Function to calculate the volume of a cylinder",
-    "text": "Function to calculate the volume of a cylinder\nWrite a function that does the following:\n\nIts name is volume\nIt takes two integer arguments: radius and height\nIt calculates the volume of a cylinder, based on radius and height. Volume is area multiplied by height.\nIt returns the float value for calculated volume.",
-    "crumbs": [
-      "Module 2 - Functions, Operators, Expressions and Decomposition",
-      "functions (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-02-01.html#submit-function-to-gradescope",
-    "href": "slides-02-01.html#submit-function-to-gradescope",
-    "title": "functions (slides)",
-    "section": "Submit function to Gradescope",
-    "text": "Submit function to Gradescope\n\nName your python script with the volume function cylinder.py\nSubmit your .py file to Gradescope, Attendance January 24\nYou can resubmit as many times as you need (up to the deadline)\nYou can look at your Submission History and activate a previous submission",
-    "crumbs": [
-      "Module 2 - Functions, Operators, Expressions and Decomposition",
-      "functions (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-02-01.html#function-to-calculate-the-volume-of-a-cylinder-1",
-    "href": "slides-02-01.html#function-to-calculate-the-volume-of-a-cylinder-1",
-    "title": "functions (slides)",
-    "section": "Function to calculate the volume of a cylinder",
-    "text": "Function to calculate the volume of a cylinder\n\ndef volume(radius, height):\n  # calculate the area first\n  area = 3.1415 * radius ** 2\n  \n  # multiply area by height\n  vol = area * height\n  \n  # return calculated volume\n  return vol\n\ndef main():\n  print(volume(1, 2)) # 6.283\n  print(volume(6, 10)) # 1130.94\n  print(volume(5, 5)) # 392.68750000000006\n  \nmain()",
-    "crumbs": [
-      "Module 2 - Functions, Operators, Expressions and Decomposition",
-      "functions (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-02-01.html#more-operations",
-    "href": "slides-02-01.html#more-operations",
-    "title": "functions (slides)",
-    "section": "More operations",
-    "text": "More operations\nTry the following operators with the different types in python:\n\n   +\n   -\n   *\n   /\n   **\n   \n   //\n   %",
-    "crumbs": [
-      "Module 2 - Functions, Operators, Expressions and Decomposition",
-      "functions (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-02-01.html#pemdas",
-    "href": "slides-02-01.html#pemdas",
-    "title": "functions (slides)",
-    "section": "PEMDAS",
-    "text": "PEMDAS\n\nWhat does PEMDAS stand for?\nThe operator precedence:\n\nParentheses\nExponentiation\nMultiplication and Division (including // and %)\nAddition and Subtraction",
-    "crumbs": [
-      "Module 2 - Functions, Operators, Expressions and Decomposition",
-      "functions (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-02-01.html#pemdas-1",
-    "href": "slides-02-01.html#pemdas-1",
-    "title": "functions (slides)",
-    "section": "PEMDAS",
-    "text": "PEMDAS\nWhat value will each of these variables take on? No computers!\na1 = 5 /  5 * 10  * 5\na2 = 5 / (5 * 10) * 5\n\nb1 = 5 *  10 - 2\nb2 = 5 * (10 - 2)\n\nc = (3 // (4 // 5)) + 1",
-    "crumbs": [
-      "Module 2 - Functions, Operators, Expressions and Decomposition",
-      "functions (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-02-01.html#pemdas-answer",
-    "href": "slides-02-01.html#pemdas-answer",
-    "title": "functions (slides)",
-    "section": "PEMDAS – answer",
-    "text": "PEMDAS – answer\n\na1 = 5 /  5 * 10  * 5\na2 = 5 / (5 * 10) * 5\n\nb1 = 5 *  10 - 2\nb2 = 5 * (10 - 2)\n\n# c = (3 // (4 // 5)) + 1 ERROR -- Zero Division\n\nprint(a1)\nprint(a2)\nprint(b1)\nprint(b2)\n\n50.0\n0.5\n48\n40\n\n\nNote that the division operator returns a float even when both numerator and denominator are integers",
-    "crumbs": [
-      "Module 2 - Functions, Operators, Expressions and Decomposition",
-      "functions (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-02-01.html#round",
-    "href": "slides-02-01.html#round",
-    "title": "functions (slides)",
-    "section": "round()",
-    "text": "round()\nUse the round() function to get a floating-point number rounded to the specified number of decimals.\nSyntax:\n\nround(number, ndigits*)\n\nThe number of digits (ndigits) is optional, but we will often round number to two decimals:\n\nround(392.68750000000006, 2)\n\n392.69",
-    "crumbs": [
-      "Module 2 - Functions, Operators, Expressions and Decomposition",
-      "functions (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-02-01.html#round-1",
-    "href": "slides-02-01.html#round-1",
-    "title": "functions (slides)",
-    "section": "round()",
-    "text": "round()\nUse the round() function to get a floating-point number rounded to the specified number of decimals.\nSyntax:\n\nround(number, ndigits*)\n\nRounding is done toward the nearest even choice. What would these round to? (discuss with your group)\n\nround(51.6)\nround(51.4)\nround(51.5)\nround(50.5)",
-    "crumbs": [
-      "Module 2 - Functions, Operators, Expressions and Decomposition",
-      "functions (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-02-01.html#round-2",
-    "href": "slides-02-01.html#round-2",
-    "title": "functions (slides)",
-    "section": "round()",
-    "text": "round()\nUse the round() function to get a floating-point number rounded to the specified number of decimals.\nSyntax:\n\nround(number, ndigits*)\n\nRounding is done toward the nearest even choice. What would these round to:\n\nprint(round(51.6))\nprint(round(51.4))\nprint(round(51.5))\nprint(round(50.5))\n\n52\n51\n52\n50",
     "crumbs": [
       "Module 2 - Functions, Operators, Expressions and Decomposition",
       "functions (slides)"
@@ -1915,6 +1849,28 @@
     "title": "functions (slides)",
     "section": "Write a function – solutions 2",
     "text": "Write a function – solutions 2\n\ndef sphere_area(radius):\n  \"calculates the area of a sphere of given radius\"\n  area = 4 * 3.1415 * radius**2\n  return round(area, 2)\n\n\ndef sphere_volume(radius):\n  \"calculates the volume of a sphere of given radius\"\n  volume = (1 / 3) * sphere_area(radius) * radius\n  return round(volume, 2)\n\n\ndef main():\n  r = .75\n  v = sphere_volume(r)\n  a = sphere_area(r)\n  print(v, a)\n\nmain()\n\n1.77 7.07",
+    "crumbs": [
+      "Module 2 - Functions, Operators, Expressions and Decomposition",
+      "functions (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-02-01.html#write-a-function-3",
+    "href": "slides-02-01.html#write-a-function-3",
+    "title": "functions (slides)",
+    "section": "Write a function",
+    "text": "Write a function\nWrite a Python function named hypotenuse that takes two arguments: a and b representing the length of the two non-hypotenuse sides of a right triangle. The function calculate the hypotenuse according to the Pythagorean theorem: \\(c = \\sqrt(a^2 + b^2)\\). Return it rounded at two decimals.\nTest cases: hypotenuse(3, 4) should return 5.0, hypotenuse(10, 10) should return 14.14\nName your file hypotenuse.py and submit to gradescope.",
+    "crumbs": [
+      "Module 2 - Functions, Operators, Expressions and Decomposition",
+      "functions (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-02-01.html#write-a-function-4",
+    "href": "slides-02-01.html#write-a-function-4",
+    "title": "functions (slides)",
+    "section": "Write a function",
+    "text": "Write a function\n\ndef sqrt(n):\n  '''\n  This function calculates the square root of a number\n  Args:\n    n: integer or float\n  Returns:\n    The square root of n\n  '''\n  return n**0.5\n\ndef hypotenuse(a, b):\n  '''\n  This function calculates the hypotenuse of a right angle triangle.\n  Args:\n    a: number (integer or float) representing one of the non-hypotenuse sides\n    b: number (integer or float) representing one of the non-hypotenuse sides\n  Returns:\n    Float representing the length of the hypotenuse given a and b\n  ''' \n  h = sqrt(a**2 + b**2)\n  return round(h, 2)\n\ndef main():\n  '''\n  This function calls the hypotenuse function to calculate and then\n  print out the hypotenuse of a right angle triangle of sides 3 and 4\n  and the hypotenuse of a right angle triange of sides 10 and 10\n  '''\n  result = hypotenuse(3, 4)\n  print(result)\n  \n  result = hypotenuse(10, 10)\n  print(result)\n  \nmain()\n\n5.0\n14.14",
     "crumbs": [
       "Module 2 - Functions, Operators, Expressions and Decomposition",
       "functions (slides)"
@@ -2441,6 +2397,17 @@
     ]
   },
   {
+    "objectID": "slides-04-01.html#review-of-arithmetic-operations",
+    "href": "slides-04-01.html#review-of-arithmetic-operations",
+    "title": "more expressions (slides)",
+    "section": "Review of arithmetic operations",
+    "text": "Review of arithmetic operations\n\n+ : plus\n- : minus\n* : multiple\n/ : divide\n** : power\n// : divide and floor\n% : modulos",
+    "crumbs": [
+      "Module 4 - Control Flow (if statements)",
+      "more expressions (slides)"
+    ]
+  },
+  {
     "objectID": "slides-04-01.html#review-of-previous-expressions",
     "href": "slides-04-01.html#review-of-previous-expressions",
     "title": "more expressions (slides)",
@@ -2529,11 +2496,11 @@
     ]
   },
   {
-    "objectID": "slides-04-01.html#evaluate-the-expressions-1",
-    "href": "slides-04-01.html#evaluate-the-expressions-1",
+    "objectID": "slides-04-01.html#evaluation-order",
+    "href": "slides-04-01.html#evaluation-order",
     "title": "more expressions (slides)",
-    "section": "Evaluate the expressions",
-    "text": "Evaluate the expressions\n\nnot 2**3 == 8 and 4 % 2 == 0\n25*0.5 &gt; 5**2 or 4 &lt;= 2**2\n4 % 2 == 0 or 4 // 0 == 0\n4 % 2 != 1\nnot 0\nnot 1",
+    "section": "Evaluation order",
+    "text": "Evaluation order\n\n(expressions...)\n** : Exponentiation\n*, /, //, % : Multiplication, Division, Floor Division and Remainder\n+, - : Addition and subtraction\n&lt;, &lt;=, &gt;, &gt;=, !=, == : Comparisons\nnot x : Boolean NOT\nand : Boolean AND\nor : Boolean OR",
     "crumbs": [
       "Module 4 - Control Flow (if statements)",
       "more expressions (slides)"
@@ -2573,33 +2540,11 @@
     ]
   },
   {
-    "objectID": "slides-04-01.html#and-or-not",
-    "href": "slides-04-01.html#and-or-not",
+    "objectID": "slides-04-01.html#evaluate-the-expressions-1",
+    "href": "slides-04-01.html#evaluate-the-expressions-1",
     "title": "more expressions (slides)",
-    "section": "and, or, not",
-    "text": "and, or, not\n\nWhat will be the result of the following expressions:\n\n\nnot True\n\nTrue and True\nTrue or True\n\nFalse and True\nFalse or True\n\nFalse and False\nFalse or False",
-    "crumbs": [
-      "Module 4 - Control Flow (if statements)",
-      "more expressions (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-04-01.html#and-or-not-1",
-    "href": "slides-04-01.html#and-or-not-1",
-    "title": "more expressions (slides)",
-    "section": "and, or, not",
-    "text": "and, or, not\n\nWhat will be the result of the following expressions:\n\n\nnot True\n\nFalse\n\n\n\nTrue and True\n\nTrue\n\n\n\nTrue or True\n\nTrue\n\n\n\nFalse and True\n\nFalse\n\n\n\nFalse or True\n\nTrue\n\n\n\nFalse and False\n\nFalse\n\n\n\nFalse or False\n\nFalse",
-    "crumbs": [
-      "Module 4 - Control Flow (if statements)",
-      "more expressions (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-04-01.html#evaluation-order",
-    "href": "slides-04-01.html#evaluation-order",
-    "title": "more expressions (slides)",
-    "section": "Evaluation order",
-    "text": "Evaluation order\n\n(expressions...)\n** : Exponentiation\n*, /, //, % : Multiplication, Division, Floor Division and Remainder\n+, - : Addition and subtraction\n&lt;, &lt;=, &gt;, &gt;=, !=, == : Comparisons\nnot x : Boolean NOT\nand : Boolean AND\nor : Boolean OR",
+    "section": "Evaluate the expressions",
+    "text": "Evaluate the expressions\n\nnot 2**3 == 8 and 4 % 2 == 0\n25*0.5 &gt; 5**2 or 4 &lt;= 2**2\n4 % 2 == 0 or 4 // 0 == 0\n4 % 2 != 1\nnot 0\nnot 1",
     "crumbs": [
       "Module 4 - Control Flow (if statements)",
       "more expressions (slides)"
@@ -2608,17 +2553,6 @@
   {
     "objectID": "slides-04-01.html#evaluate-the-expressions-2",
     "href": "slides-04-01.html#evaluate-the-expressions-2",
-    "title": "more expressions (slides)",
-    "section": "Evaluate the expressions",
-    "text": "Evaluate the expressions\n\nnot 2**3 == 8 and 4 % 2 == 0\n\nFalse\n\n\n\n25*0.5 &gt; 5**2 or 4 &lt;= 2**2\n\nTrue\n\n\n\n4 % 2 == 0 or 4 // 0 == 0\n\nTrue\n\n\n\n4 % 2 != 1\n\nTrue\n\n\n\nnot 0\n\nTrue\n\n\n\nnot 1\n\nFalse",
-    "crumbs": [
-      "Module 4 - Control Flow (if statements)",
-      "more expressions (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-04-01.html#evaluate-the-expressions-3",
-    "href": "slides-04-01.html#evaluate-the-expressions-3",
     "title": "more expressions (slides)",
     "section": "Evaluate the expressions",
     "text": "Evaluate the expressions\n\nnot 2**3 == 8 and 4 % 2 == 0\n\nFalse\n\n\n\n25*0.5 &gt; 5**2 or 4 &lt;= 2**2\n\nTrue\n\n\n\n4 % 2 == 0 or 4 // 0 == 0\n\nTrue\n\n\n\n4 % 2 != 1\n\nTrue\n\n\n\nnot 0\n\nTrue\n\n\n\nnot 1\n\nFalse",
@@ -2639,11 +2573,11 @@
     ]
   },
   {
-    "objectID": "slides-04-03.html#if-elif-else-1",
-    "href": "slides-04-03.html#if-elif-else-1",
+    "objectID": "slides-04-03.html#compare-the-functions",
+    "href": "slides-04-03.html#compare-the-functions",
     "title": "if elif else statements (slides)",
-    "section": "if elif else",
-    "text": "if elif else\nCompare the two functions\n\ndef func_one(a):\n  message = \"\"\n  if a &gt;= 18:\n    message += 'You may apply to join the military.'\n  if a &gt;= 35:  # independent from a &gt;= 18\n    message += ' You may run for president.'\n  return message\n\ndef func_two(a):\n  message = \"\"\n  if a &gt;= 18:\n    message += 'You may apply to join the military.'\n  elif a &gt;= 35:  # only runs when a &gt;= 18 is False\n    message += ' You may run for president.'\n  return message\n\ndef main():\n  print(func_one(40))\n  print(func_two(40))\n  \nmain()\n\nYou may apply to join the military. You may run for president.\nYou may apply to join the military.",
+    "section": "Compare the functions",
+    "text": "Compare the functions\n\ndef func_one(a):\n  message = \"\"\n  if a &gt;= 18:\n    message += 'You may apply to join the military.'\n  if a &gt;= 35:  # independent from a &gt;= 18\n    message += ' You may run for president.'\n  return message\n\ndef func_two(a):\n  message = \"\"\n  if a &gt;= 18:\n    message += 'You may apply to join the military.'\n  elif a &gt;= 35:  # only runs when a &gt;= 18 is False\n    message += ' You may run for president.'\n  return message\n\ndef main():\n  print(func_one(40))\n  print(func_two(40))\n  \nmain()\n\nYou may apply to join the military. You may run for president.\nYou may apply to join the military.",
     "crumbs": [
       "Module 4 - Control Flow (if statements)",
       "if elif else statements (slides)"
@@ -2710,17 +2644,6 @@
     "title": "if elif else statements (slides)",
     "section": "Write a function – solution 3",
     "text": "Write a function – solution 3\n\ndef max_of_two(x, y):\n  if x &gt;= y:\n    return x\n  else:\n    return y\n\ndef max_of_three(x, y, z):\n  max_x_y = max_of_two(x, y)\n  return max_of_two(max_x_y, z)\n\ndef main():\n  print( max_of_three(-1, 3, 3) ) # 3\n  print( max_of_three(-1, -3, 0) ) # 0\n  print( max_of_three(5, 5, 10) ) # 10\n\nmain()\n\n3\n0\n10",
-    "crumbs": [
-      "Module 4 - Control Flow (if statements)",
-      "if elif else statements (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-04-03.html#quiz-04",
-    "href": "slides-04-03.html#quiz-04",
-    "title": "if elif else statements (slides)",
-    "section": "Quiz 04",
-    "text": "Quiz 04\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.\nNo need to write main() function.",
     "crumbs": [
       "Module 4 - Control Flow (if statements)",
       "if elif else statements (slides)"
@@ -2881,6 +2804,17 @@
     ]
   },
   {
+    "objectID": "slides-04-02.html#quiz-04",
+    "href": "slides-04-02.html#quiz-04",
+    "title": "if statements (slides)",
+    "section": "Quiz 04",
+    "text": "Quiz 04\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.\nNo need to write main() function.",
+    "crumbs": [
+      "Module 4 - Control Flow (if statements)",
+      "if statements (slides)"
+    ]
+  },
+  {
     "objectID": "slides-04-02.html#string-methods",
     "href": "slides-04-02.html#string-methods",
     "title": "if statements (slides)",
@@ -2955,6 +2889,17 @@
     "crumbs": [
       "Programming Projects",
       "Programming Project 1"
+    ]
+  },
+  {
+    "objectID": "slides-01-02.html#cs-buddy-mentor-program-sign-up",
+    "href": "slides-01-02.html#cs-buddy-mentor-program-sign-up",
+    "title": "python basics (slides)",
+    "section": "CS Buddy Mentor Program Sign-Up",
+    "text": "CS Buddy Mentor Program Sign-Up\n\nsign-up QR Code",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
     ]
   },
   {
@@ -3134,6 +3079,72 @@
     ]
   },
   {
+    "objectID": "slides-01-02.html#operations---examples",
+    "href": "slides-01-02.html#operations---examples",
+    "title": "python basics (slides)",
+    "section": "Operations - examples",
+    "text": "Operations - examples\n\nprint(10 + 5 - 5) # addition and subtraction\nprint(10 * 5 / 4) # multiplication and division\nprint(25 ** 2) # square \nprint(25 ** 0.5) # square root \nprint(13 // 4) # division and round down to the nearest integer\nprint(13 % 4) # remainder \n\n10\n12.5\n625\n5.0\n3\n1",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-01-02.html#pemdas",
+    "href": "slides-01-02.html#pemdas",
+    "title": "python basics (slides)",
+    "section": "PEMDAS",
+    "text": "PEMDAS\n\nWhat does PEMDAS stand for?\nThe operator precedence:\n\nParentheses\nExponentiation\nMultiplication and Division (including // and %)\nAddition and Subtraction",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-01-02.html#pemdas-1",
+    "href": "slides-01-02.html#pemdas-1",
+    "title": "python basics (slides)",
+    "section": "PEMDAS",
+    "text": "PEMDAS\nWhat value will each of these variables take on? No computers!\na1 = 5 /  5 * 10  * 5\na2 = 5 / (5 * 10) * 5\n\nb1 = 5 *  10 - 2\nb2 = 5 * (10 - 2)\n\nc = (3 // (4 // 5)) + 1",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-01-02.html#pemdas-answer",
+    "href": "slides-01-02.html#pemdas-answer",
+    "title": "python basics (slides)",
+    "section": "PEMDAS – answer",
+    "text": "PEMDAS – answer\n\na1 = 5 /  5 * 10  * 5\na2 = 5 / (5 * 10) * 5\n\nb1 = 5 *  10 - 2\nb2 = 5 * (10 - 2)\n\n# c = (3 // (4 // 5)) + 1 ERROR -- Zero Division\n\nprint(a1)\nprint(a2)\nprint(b1)\nprint(b2)\n\n50.0\n0.5\n48\n40\n\n\nNote that the division operator returns a float even when both numerator and denominator are integers",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-01-02.html#round",
+    "href": "slides-01-02.html#round",
+    "title": "python basics (slides)",
+    "section": "round()",
+    "text": "round()\nUse the round() function to get a floating-point number rounded to the specified number of decimals.\nSyntax:\n\nround(number, ndigits*)\n\nThe number of digits (ndigits) is optional, but we will often round number to two decimals:\n\nround(392.68750000000006, 2)\n\n392.69",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-01-02.html#round-1",
+    "href": "slides-01-02.html#round-1",
+    "title": "python basics (slides)",
+    "section": "round()",
+    "text": "round()\nUse the round() function to get a floating-point number rounded to the specified number of decimals.\nSyntax:\n\nround(number, ndigits*)\n\nRounding is done toward the nearest even choice:\n\nprint(round(51.6))\nprint(round(51.4))\nprint(round(51.5))\nprint(round(50.5))\n\n52\n51\n52\n50",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
+    ]
+  },
+  {
     "objectID": "slides-01-02.html#operations-and-variable-assignments",
     "href": "slides-01-02.html#operations-and-variable-assignments",
     "title": "python basics (slides)",
@@ -3172,6 +3183,17 @@
     "title": "python basics (slides)",
     "section": "Questions",
     "text": "Questions\n\nWhat if we want to get the area of circles when the radius is 1, 2, 3, 4 and 5?\nCan we do it more efficiently?",
+    "crumbs": [
+      "Module 1 - Basics",
+      "python basics (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-01-02.html#quiz-02",
+    "href": "slides-01-02.html#quiz-02",
+    "title": "python basics (slides)",
+    "section": "Quiz 02",
+    "text": "Quiz 02\n\n\ncurrent time\n\n\n\n\n\n\nYou have 5 minutes to complete the quiz.",
     "crumbs": [
       "Module 1 - Basics",
       "python basics (slides)"
@@ -3273,28 +3295,6 @@
     "text": "ASCII stands for American Standard Code for Information Interchange, and it represents all characters in English. Nowadays we usually use UTF-8 encoding instead os ASCII because we use more characters (emojis, for example).\nHere’s the decimal values for the characters we encounter in this course:\n\n\n\nord(char)\nchar\n\n\n\n\n32\nspace\n\n\n33\n!\n\n\n34\n”\n\n\n35\n#\n\n\n36\n$\n\n\n37\n%\n\n\n38\n&\n\n\n39\n’\n\n\n40\n(\n\n\n41\n)\n\n\n42\n*\n\n\n43\n+\n\n\n44\n,\n\n\n45\n-\n\n\n46\n.\n\n\n47\n/\n\n\n48\n0\n\n\n49\n1\n\n\n50\n2\n\n\n51\n3\n\n\n52\n4\n\n\n53\n5\n\n\n54\n6\n\n\n55\n7\n\n\n56\n8\n\n\n57\n9\n\n\n58\n:\n\n\n59\n;\n\n\n60\n&lt;\n\n\n61\n=\n\n\n62\n&gt;\n\n\n63\n?\n\n\n64\n@\n\n\n65\nA\n\n\n66\nB\n\n\n67\nC\n\n\n68\nD\n\n\n69\nE\n\n\n70\nF\n\n\n71\nG\n\n\n72\nH\n\n\n73\nI\n\n\n74\nJ\n\n\n75\nK\n\n\n76\nL\n\n\n77\nM\n\n\n78\nN\n\n\n79\nO\n\n\n80\nP\n\n\n81\nQ\n\n\n82\nR\n\n\n83\nS\n\n\n84\nT\n\n\n85\nU\n\n\n86\nV\n\n\n87\nW\n\n\n88\nX\n\n\n89\nY\n\n\n90\nZ\n\n\n91\n[\n\n\n92\n\\\n\n\n93\n]\n\n\n94\n^\n\n\n95\n_\n\n\n96\n`\n\n\n97\na\n\n\n98\nb\n\n\n99\nc\n\n\n100\nd\n\n\n101\ne\n\n\n102\nf\n\n\n103\ng\n\n\n104\nh\n\n\n105\ni\n\n\n106\nj\n\n\n107\nk\n\n\n108\nl\n\n\n109\nm\n\n\n110\nn\n\n\n111\no\n\n\n112\np\n\n\n113\nq\n\n\n114\nr\n\n\n115\ns\n\n\n116\nt\n\n\n117\nu\n\n\n118\nv\n\n\n119\nw\n\n\n120\nx\n\n\n121\ny\n\n\n122\nz\n\n\n123\n{\n\n\n124\n|\n\n\n125\n}"
   },
   {
-    "objectID": "slides-03-01.html#function-comments",
-    "href": "slides-03-01.html#function-comments",
-    "title": "more on Functions (class slides)",
-    "section": "Function Comments",
-    "text": "Function Comments\n\nEvery function created is required to have a function comment, including main\nFunction comments are a multi-line string (as opposed to using # for other comments)",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "more on Functions (class slides)"
-    ]
-  },
-  {
-    "objectID": "slides-03-01.html#function-comments-1",
-    "href": "slides-03-01.html#function-comments-1",
-    "title": "more on Functions (class slides)",
-    "section": "Function Comments",
-    "text": "Function Comments\n\n'''\nXinchen Yu\nCSC110\nClass Demonstration\nThis program has two functions: one to calculate the area of a sphere,\nthe other to calculate the volume of a sphere.\nThe main() function is called to print to the standard output the\narea and volume of a sphere of radius .75\n'''\ndef sphere_area(radius):\n  '''\n  This function calculates the area of a sphere of given radius.\n  Args:\n    radius: integer representing the radius of the sphere\n  Returns:\n    The float representing the area of a sphere of the given radius\n  '''\n  area = 4 * 3.1415 * radius**2\n  return round(area, 2)\n\ndef sphere_volume(radius):\n  '''\n  This function calculates the volume of a sphere of given radius.\n  Args:\n    radius: integer representing the radius of the sphere\n  Returns:\n    The float representing the volume of a sphere of the given radius\n  '''\n  volume = (1 / 3) * sphere_area(radius) * radius\n  return round(volume, 2)\n\ndef main():\n  '''\n  This function prints the area and volume of a sphere of radius .75.\n  Args:\n    None\n  Returns:\n    None\n  '''\n  r = .75\n  a = sphere_area(r)\n  v = sphere_volume(r)\n  print(a, v)\n  \nmain()\n\n7.07 1.77",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "more on Functions (class slides)"
-    ]
-  },
-  {
     "objectID": "slides-03-01.html#global-vs.-local-variables-scope",
     "href": "slides-03-01.html#global-vs.-local-variables-scope",
     "title": "more on Functions (class slides)",
@@ -3317,22 +3317,22 @@
     ]
   },
   {
-    "objectID": "slides-03-01.html#global-vs.-local-variables-scope-2",
-    "href": "slides-03-01.html#global-vs.-local-variables-scope-2",
+    "objectID": "slides-03-01.html#global-or-local",
+    "href": "slides-03-01.html#global-or-local",
     "title": "more on Functions (class slides)",
-    "section": "Global vs. Local variables (scope)",
-    "text": "Global vs. Local variables (scope)\n\nIn the previous program we wrote (volume and area of sphere), r, v and a are local variables within the main() function.\nThe variable radius and area are local within the sphere_area(radius) function scope.\nThe variable radius and volume are local within sphere_volume(radius)",
+    "section": "Global or Local?",
+    "text": "Global or Local?\n\na = 5              \nb = 10               \n\ndef sum():\n    return a + b\n\ndef multiply():\n    return a * b\n\ndef main():\n    print(sum())\n    print(multiply())\n\nmain()\n\n15\n50",
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on Functions (class slides)"
     ]
   },
   {
-    "objectID": "slides-03-01.html#global-or-local",
-    "href": "slides-03-01.html#global-or-local",
+    "objectID": "slides-03-01.html#global-or-local-1",
+    "href": "slides-03-01.html#global-or-local-1",
     "title": "more on Functions (class slides)",
     "section": "Global or Local?",
-    "text": "Global or Local?\n\na = 5              \nb = 10               \n\ndef sum():\n    return a + b\n\ndef multiply():\n    return a * b\n\ndef main():\n    print(sum())\n    print(multiply())\n\nmain()\n\n15\n50",
+    "text": "Global or Local?\n\ndef sum(a, b):\n    return a + b\n\ndef multiply(a, b):\n    return a * b\n\ndef main():\n    a = 5\n    b = 10\n    print(sum(a, b))\n    print(multiply(a, b))\n    a = 10\n    print(multiply(a, b))\n\nmain()\n\n15\n50\n100",
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on Functions (class slides)"
@@ -3361,33 +3361,88 @@
     ]
   },
   {
-    "objectID": "slides-03-01.html#write-a-function",
-    "href": "slides-03-01.html#write-a-function",
+    "objectID": "slides-03-01.html#write-functions",
+    "href": "slides-03-01.html#write-functions",
     "title": "more on Functions (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\nComparing two formulas: \\[\na = 4 \\cdot \\pi \\cdot radius^2\n\\]\n\\[\nv = {4 / 3} \\cdot \\pi \\cdot radius^3\n\\] We can use area when calculating volume: \\[\nv = {1 / 3} \\cdot a \\cdot radius\n\\]\nModify your sphere_volume function by calling sphere_area inside the function.",
+    "section": "Write functions",
+    "text": "Write functions\nWrite two functions: sphere_area and sphere_volume that calculates the area and the volume of a sphere:\nuse 3.1415 for \\(\\pi\\) and return the rounded value.\n\\[\na = 4 \\cdot \\pi \\cdot radius^2\n\\]\n\\[\nv = {4 / 3} \\cdot \\pi \\cdot radius^3\n\\] Name your file as sphere.py and submit to gradescope.\nTest case:\n\nr = 0.75\nprint(sphere_area(r)) # 7.07\nprint(sphere_volume(r)) # 1.77",
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on Functions (class slides)"
     ]
   },
   {
-    "objectID": "slides-03-01.html#submit-attendance",
-    "href": "slides-03-01.html#submit-attendance",
+    "objectID": "slides-03-01.html#write-functions-solutions-1",
+    "href": "slides-03-01.html#write-functions-solutions-1",
     "title": "more on Functions (class slides)",
-    "section": "Submit attendance",
-    "text": "Submit attendance\nSubmit your hypotenuse.py file with your solution to gradescope for attendance",
+    "section": "Write functions – solutions 1",
+    "text": "Write functions – solutions 1\n\ndef sphere_area(radius):\n  \"calculates the area of a sphere of given radius\"\n  area = 4 * 3.1415 * radius**2\n  return round(area, 2)\n\ndef sphere_volume(radius):\n  \"calculates the volume of a sphere of given radius\"\n  volume = (4 / 3) * 3.1415 * radius**3\n  return round(volume, 2)\n\ndef main():\n  r = .75\n  v = sphere_volume(r)\n  a = sphere_area(r)\n  print(v, a)\n\nmain()\n\n1.77 7.07",
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on Functions (class slides)"
     ]
   },
   {
-    "objectID": "slides-03-01.html#write-a-function-1",
-    "href": "slides-03-01.html#write-a-function-1",
+    "objectID": "slides-03-01.html#write-functions-1",
+    "href": "slides-03-01.html#write-functions-1",
     "title": "more on Functions (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\nComparing two formulas: \\[\na = 4 \\cdot \\pi \\cdot radius^2\n\\]\n\\[\nv = {4 / 3} \\cdot \\pi \\cdot radius^3\n\\] We can use area when calculating volume: \\[\nv = {1 / 3} \\cdot a \\cdot radius\n\\]\nModify your sphere_volume function by calling sphere_area inside the function.",
+    "section": "Write functions",
+    "text": "Write functions\nComparing two formulas: \\[\na = 4 \\cdot \\pi \\cdot radius^2\n\\]\n\\[\nv = {4 / 3} \\cdot \\pi \\cdot radius^3\n\\] We can use area when calculating volume: \\[\nv = {1 / 3} \\cdot a \\cdot radius\n\\]\nModify your sphere_volume function by calling sphere_area inside the function.",
+    "crumbs": [
+      "Module 3 - More on Functions and Decomposition",
+      "more on Functions (class slides)"
+    ]
+  },
+  {
+    "objectID": "slides-03-01.html#write-functions-solutions-2",
+    "href": "slides-03-01.html#write-functions-solutions-2",
+    "title": "more on Functions (class slides)",
+    "section": "Write functions – solutions 2",
+    "text": "Write functions – solutions 2\n\ndef sphere_area(radius):\n  \"calculates the area of a sphere of given radius\"\n  area = 4 * 3.1415 * radius**2\n  return round(area, 2)\n\n\ndef sphere_volume(radius):\n  \"calculates the volume of a sphere of given radius\"\n  volume = (1 / 3) * sphere_area(radius) * radius\n  return round(volume, 2)\n\n\ndef main():\n  r = .75\n  v = sphere_volume(r)\n  a = sphere_area(r)\n  print(v, a)\n\nmain()\n\n1.77 7.07",
+    "crumbs": [
+      "Module 3 - More on Functions and Decomposition",
+      "more on Functions (class slides)"
+    ]
+  },
+  {
+    "objectID": "slides-03-01.html#function-comments",
+    "href": "slides-03-01.html#function-comments",
+    "title": "more on Functions (class slides)",
+    "section": "Function Comments",
+    "text": "Function Comments\n\nEvery function created is required to have a function comment, including main\nFunction comments are a multi-line string (as opposed to using # for other comments)",
+    "crumbs": [
+      "Module 3 - More on Functions and Decomposition",
+      "more on Functions (class slides)"
+    ]
+  },
+  {
+    "objectID": "slides-03-01.html#function-comments-1",
+    "href": "slides-03-01.html#function-comments-1",
+    "title": "more on Functions (class slides)",
+    "section": "Function Comments",
+    "text": "Function Comments\n\n'''\nXinchen Yu\nCSC110\nClass Demonstration\nThis program has two functions: one to calculate the area of a sphere,\nthe other to calculate the volume of a sphere.\nThe main() function is called to print to the standard output the\narea and volume of a sphere of radius .75\n'''\ndef sphere_area(radius):\n  '''\n  This function calculates the area of a sphere of given radius.\n  Args:\n    radius: integer representing the radius of the sphere\n  Returns:\n    The float representing the area of a sphere of the given radius\n  '''\n  area = 4 * 3.1415 * radius**2\n  return round(area, 2)\n\ndef sphere_volume(radius):\n  '''\n  This function calculates the volume of a sphere of given radius.\n  Args:\n    radius: integer representing the radius of the sphere\n  Returns:\n    The float representing the volume of a sphere of the given radius\n  '''\n  volume = (1 / 3) * sphere_area(radius) * radius\n  return round(volume, 2)\n\ndef main():\n  '''\n  This function prints the area and volume of a sphere of radius .75.\n  Args:\n    None\n  Returns:\n    None\n  '''\n  r = .75\n  a = sphere_area(r)\n  v = sphere_volume(r)\n  print(a, v)\n  \nmain()\n\n7.07 1.77",
+    "crumbs": [
+      "Module 3 - More on Functions and Decomposition",
+      "more on Functions (class slides)"
+    ]
+  },
+  {
+    "objectID": "slides-03-01.html#function-to-calculate-the-volume-of-a-cylinder",
+    "href": "slides-03-01.html#function-to-calculate-the-volume-of-a-cylinder",
+    "title": "more on Functions (class slides)",
+    "section": "Function to calculate the volume of a cylinder",
+    "text": "Function to calculate the volume of a cylinder\nWrite a function that does the following:\n\nIts name is volume\nIt takes two integer arguments: radius and height\nIt calculates the volume of a cylinder, based on radius and height. Volume is area multiplied by height.\nIt returns the float value for calculated volume.",
+    "crumbs": [
+      "Module 3 - More on Functions and Decomposition",
+      "more on Functions (class slides)"
+    ]
+  },
+  {
+    "objectID": "slides-03-01.html#function-to-calculate-the-volume-of-a-cylinder-1",
+    "href": "slides-03-01.html#function-to-calculate-the-volume-of-a-cylinder-1",
+    "title": "more on Functions (class slides)",
+    "section": "Function to calculate the volume of a cylinder",
+    "text": "Function to calculate the volume of a cylinder\n\ndef volume(radius, height):\n  # calculate the area first\n  area = 3.1415 * radius ** 2\n  \n  # multiply area by height\n  vol = area * height\n  \n  # return calculated volume\n  return vol\n\ndef main():\n  print(volume(1, 2)) # 6.283\n  print(volume(6, 10)) # 1130.94\n  print(volume(5, 5)) # 392.68750000000006\n  \nmain()",
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on Functions (class slides)"
@@ -3929,17 +3984,6 @@
     ]
   },
   {
-    "objectID": "slides-05-03.html#announcement",
-    "href": "slides-05-03.html#announcement",
-    "title": "while loop aggregation (slides)",
-    "section": "Announcement",
-    "text": "Announcement\nReview session next Tuesday, October 1, starting at 5pm.\n\nLocation: Gittings 129b (same as lecture room).",
-    "crumbs": [
-      "Module 5 - Control Flow (while statements)",
-      "while loop aggregation (slides)"
-    ]
-  },
-  {
     "objectID": "slides-05-03.html#while-loops",
     "href": "slides-05-03.html#while-loops",
     "title": "while loop aggregation (slides)",
@@ -4369,6 +4413,17 @@
     ]
   },
   {
+    "objectID": "slides-05-01.html#while-loops-table",
+    "href": "slides-05-01.html#while-loops-table",
+    "title": "while loop intro (slides)",
+    "section": "while loops table",
+    "text": "while loops table\nConsider n = 5, start with result = 1, current = 1:\n\n\n\ncurrent &lt;= 5\nresult = result * current\ncurrent += 1\n\n\n\n\nTrue\nresult = 1 * 1\ncurrent = 1 + 1\n\n\nTrue\nresult = 1 * 2\ncurrent = 2 + 1\n\n\nTrue\nresult = 2 * 3\ncurrent = 3 + 1\n\n\nTrue\nresult = 6 * 4\ncurrent = 4 + 1\n\n\nTrue\nresult = 24 * 5\ncurrent = 5 + 1\n\n\nFalse\n-\n-",
+    "crumbs": [
+      "Module 5 - Control Flow (while statements)",
+      "while loop intro (slides)"
+    ]
+  },
+  {
     "objectID": "slides-05-01.html#write-a-function",
     "href": "slides-05-01.html#write-a-function",
     "title": "while loop intro (slides)",
@@ -4534,28 +4589,6 @@
     ]
   },
   {
-    "objectID": "slides-05-02.html#evaluate-expressions",
-    "href": "slides-05-02.html#evaluate-expressions",
-    "title": "loops + strings (slides)",
-    "section": "Evaluate expressions",
-    "text": "Evaluate expressions\n\nmy_str = \"Clint Eastwood\"\nmy_str[11] + my_str[1] + my_str[13]\n\nmy_str = \"cider\"\nmy_str[0] + my_str[4] + my_str[1] + my_str[3] + my_str[2]\n\nmy_str = \"dusty\"\nmy_str[2] + my_str[3] + my_str[1] + my_str[0] + my_str[4]",
-    "crumbs": [
-      "Module 5 - Control Flow (while statements)",
-      "loops + strings (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-05-02.html#evaluate-expressions-1",
-    "href": "slides-05-02.html#evaluate-expressions-1",
-    "title": "loops + strings (slides)",
-    "section": "Evaluate expressions",
-    "text": "Evaluate expressions\n\nmy_str = \"Clint Eastwood\"\nmy_str[11] + my_str[1] + my_str[13]\n\n'old'\n\n\n\nmy_str = \"cider\"\nmy_str[0] + my_str[4] + my_str[1] + my_str[3] + my_str[2]\n\n'cried'\n\n\n\nmy_str = \"dusty\"\nmy_str[2] + my_str[3] + my_str[1] + my_str[0] + my_str[4]\n\n'study'",
-    "crumbs": [
-      "Module 5 - Control Flow (while statements)",
-      "loops + strings (slides)"
-    ]
-  },
-  {
     "objectID": "slides-05-02.html#write-a-function",
     "href": "slides-05-02.html#write-a-function",
     "title": "loops + strings (slides)",
@@ -4589,33 +4622,44 @@
     ]
   },
   {
-    "objectID": "slides-05-02.html#evaluate-the-expressions",
-    "href": "slides-05-02.html#evaluate-the-expressions",
+    "objectID": "slides-05-02.html#question",
+    "href": "slides-05-02.html#question",
     "title": "loops + strings (slides)",
-    "section": "Evaluate the expressions",
-    "text": "Evaluate the expressions\n\n\"a\" in \"aeiou\"\n\nTrue\n\n\n\n\"b\" in \"aeiou\"\n\nFalse\n\n\n\nnot \"b\" in \"aeiou\"\n\nTrue\n\n\n\n\"0\" in \"0987654321.\"\n\nTrue\n\n\n\n\"10.0\" in  \"0987654321.\"\n\nFalse",
+    "section": "Question",
+    "text": "Question\nHow to check if a string can be converted to an integer or float?\n\n\"BladeRunner2049\" will return False\n\"2049\" will return True\n\"12.5\" will return True",
     "crumbs": [
       "Module 5 - Control Flow (while statements)",
       "loops + strings (slides)"
     ]
   },
   {
-    "objectID": "slides-05-02.html#evaluate-the-expressions-1",
-    "href": "slides-05-02.html#evaluate-the-expressions-1",
+    "objectID": "slides-05-02.html#question-1",
+    "href": "slides-05-02.html#question-1",
     "title": "loops + strings (slides)",
-    "section": "Evaluate the expressions",
-    "text": "Evaluate the expressions\n\n\"a\" in \"aeiou\"\n\nTrue\n\n\n\n\"b\" in \"aeiou\"\n\nFalse\n\n\n\nnot \"b\" in \"aeiou\"\n\nTrue\n\n\n\n\"0\" in \"0987654321.\"\n\nTrue\n\n\n\n\"10.0\" in  \"0987654321.\"\n\nFalse",
+    "section": "Question",
+    "text": "Question\nHow to check if a string can be converted to an integer or float?\nCan we use the string method.isnumeric()?\n\nuser_input = \"BladeRunner2049\"\nuser_input.isnumeric()\n\nFalse\n\n\n\nuser_input = \"2049\"\nuser_input.isnumeric()\n\nTrue\n\n\n\nuser_input = \"12.5\"\nuser_input.isnumeric()\n\nFalse",
     "crumbs": [
       "Module 5 - Control Flow (while statements)",
       "loops + strings (slides)"
     ]
   },
   {
-    "objectID": "slides-05-02.html#before-we-proceed-a-refresher",
-    "href": "slides-05-02.html#before-we-proceed-a-refresher",
+    "objectID": "slides-05-02.html#iterating-a-string",
+    "href": "slides-05-02.html#iterating-a-string",
     "title": "loops + strings (slides)",
-    "section": "Before we proceed, a refresher …",
-    "text": "Before we proceed, a refresher …\nHow to check if a string can be converted to an integer or float?\nCan we use the string method.isnumeric()?\n\nuser_input = \"BladeRunner2049\"\nuser_input.isnumeric()\n\nFalse\n\n\n\nuser_input = \"2049\"\nuser_input.isnumeric()\n\nTrue\n\n\n\nuser_input = \"12.5\"\nuser_input.isnumeric()\n\nFalse",
+    "section": "Iterating a string",
+    "text": "Iterating a string\n\nOne technique that can be used to control the number of loop iterations is using an index variable\nFor while loops, an index variable is:\n\nDefined before the loop\nUsed in the condition of the loop\nIncremented within the loop",
+    "crumbs": [
+      "Module 5 - Control Flow (while statements)",
+      "loops + strings (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-05-02.html#iterating-a-string-1",
+    "href": "slides-05-02.html#iterating-a-string-1",
+    "title": "loops + strings (slides)",
+    "section": "Iterating a string",
+    "text": "Iterating a string\nPrint characters at even indices.\n\nword = \"BladeRunner2049\"\nindex = 0\nwhile index &lt; len(word):\n    print(word[index])\n    # Can add other lines here too\n    index = index + 2\n\nB\na\ne\nu\nn\nr\n0\n9",
     "crumbs": [
       "Module 5 - Control Flow (while statements)",
       "loops + strings (slides)"
@@ -4633,77 +4677,11 @@
     ]
   },
   {
-    "objectID": "slides-05-02.html#write-a-function-solution",
-    "href": "slides-05-02.html#write-a-function-solution",
-    "title": "loops + strings (slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef is_numeric_one_char(string):\n  return string[0] in \"0123456789\"\n\ndef main():\n  assert is_numeric_one_char(\"0\") == True\n  assert is_numeric_one_char(\"000\")  == True\n  assert is_numeric_one_char(\"9\") == True\n  assert is_numeric_one_char(\"a\") == False\n  \nmain()",
-    "crumbs": [
-      "Module 5 - Control Flow (while statements)",
-      "loops + strings (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-05-02.html#improving-on-is_numeric_one_char",
-    "href": "slides-05-02.html#improving-on-is_numeric_one_char",
-    "title": "loops + strings (slides)",
-    "section": "Improving on is_numeric_one_char()",
-    "text": "Improving on is_numeric_one_char()\nHow to check every character in a string of any length?\nFor example, how to check if every character in \"BladeRunner2049\" is a digit (0-9)?",
-    "crumbs": [
-      "Module 5 - Control Flow (while statements)",
-      "loops + strings (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-05-02.html#while-loops-using-an-index",
-    "href": "slides-05-02.html#while-loops-using-an-index",
-    "title": "loops + strings (slides)",
-    "section": "While loops – using an index",
-    "text": "While loops – using an index\n\nOne technique that can be used to control the number of loop iterations is using an index variable\nFor while loops, an index variable is:\n\nDefined before the loop\nUsed in the condition of the loop\nIncremented within the loop",
-    "crumbs": [
-      "Module 5 - Control Flow (while statements)",
-      "loops + strings (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-05-02.html#while-loops-using-an-index-1",
-    "href": "slides-05-02.html#while-loops-using-an-index-1",
-    "title": "loops + strings (slides)",
-    "section": "While loops – using an index",
-    "text": "While loops – using an index\nPrint characters at even indices.\n\nword = \"BladeRunner2049\"\nindex = 0\nwhile index &lt; len(word):\n    print(word[index])\n    # Can add other lines here too\n    index = index + 2\n\nB\na\ne\nu\nn\nr\n0\n9",
-    "crumbs": [
-      "Module 5 - Control Flow (while statements)",
-      "loops + strings (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-05-02.html#improve-on-is_numeric_one_char",
-    "href": "slides-05-02.html#improve-on-is_numeric_one_char",
-    "title": "loops + strings (slides)",
-    "section": "Improve on is_numeric_one_char()",
-    "text": "Improve on is_numeric_one_char()\nFunction name is_numeric that takes one string argument of any length (assume length &gt; 0).\nIt returns True if every character in the argument is a digit (0-9), False otherwise (if any character is not a digit).\nUse in operator instead of built-in function isnumeric().\n\nassert is_numeric(\"0\") == True\nassert is_numeric(\"1090\") == True\nassert is_numeric(\"95\") ==  True\nassert is_numeric(\"10a\") == False",
-    "crumbs": [
-      "Module 5 - Control Flow (while statements)",
-      "loops + strings (slides)"
-    ]
-  },
-  {
     "objectID": "slides-05-02.html#is_numeric-solution",
     "href": "slides-05-02.html#is_numeric-solution",
     "title": "loops + strings (slides)",
     "section": "is_numeric() solution",
     "text": "is_numeric() solution\nHow do we change our function so that the last test case (“1.2.3”) returns False instead?\n\ndef is_numeric(my_string):\n  index = 0\n  while index &lt; len(my_string):\n    if my_string[index] not in \"0123456789.\":\n      return False\n    index += 1\n  return True\n\ndef main():\n  assert is_numeric(\"BladeRunner2049\") == False\n  assert is_numeric(\"2049\") == True\n  assert is_numeric(\"12.5\") == True\n  assert is_numeric(\"1.2.3\") == True # how to return False?\n  \nmain()",
-    "crumbs": [
-      "Module 5 - Control Flow (while statements)",
-      "loops + strings (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-05-02.html#quiz-05",
-    "href": "slides-05-02.html#quiz-05",
-    "title": "loops + strings (slides)",
-    "section": "Quiz 05",
-    "text": "Quiz 05\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.\nNo need to write main() function.",
     "crumbs": [
       "Module 5 - Control Flow (while statements)",
       "loops + strings (slides)"
@@ -4723,28 +4701,6 @@
   {
     "objectID": "slides-05-02.html#is_numeric-solution-2",
     "href": "slides-05-02.html#is_numeric-solution-2",
-    "title": "loops + strings (slides)",
-    "section": "is_numeric() – solution 2",
-    "text": "is_numeric() – solution 2\n\ndef is_numeric(my_string):\n  # create control variable for one decimal point\n  decimal_point = False\n  # create index variable\n  index = 0\n  while index &lt; len(my_string):\n    # first check, can character be found in a number?\n    if my_string[index] not in \"0123456789.\":\n      return False\n    # second check, if a period, has a period been found before?\n    if my_string[index] == \".\":\n      if decimal_point: # a previous period was detected\n        return False\n      else: # first period detected\n        decimal_point = True\n    # increment index  \n    index += 1\n  # while loop executed without returning False\n  # that means every character is valid, so return True\n  return True\n\ndef main():\n  assert is_numeric(\"234\") == True\n  assert is_numeric(\"abc\") == False\n  assert is_numeric(\"12c\") ==  False\n  assert is_numeric(\"12.3\") == True\n  assert is_numeric(\"1.2.3\") == False\n  \nmain()",
-    "crumbs": [
-      "Module 5 - Control Flow (while statements)",
-      "loops + strings (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-05-02.html#is_numeric-solution-1-1",
-    "href": "slides-05-02.html#is_numeric-solution-1-1",
-    "title": "loops + strings (slides)",
-    "section": "is_numeric() – solution 1",
-    "text": "is_numeric() – solution 1\n\ndef is_numeric(my_string):\n  index = 0\n  count_period = 0\n  while index &lt; len(my_string):\n    if my_string[index] == \".\":\n      count_period += 1\n    if my_string[index] not in \"0123456789.\" or count_period &gt; 1:\n      return False\n    index += 1\n  return True\n\ndef main():\n  assert is_numeric(\"234\") == True\n  assert is_numeric(\"abc\") == False\n  assert is_numeric(\"12c\") ==  False\n  assert is_numeric(\"12.3\") == True\n  assert is_numeric(\"1.2.3\") == False\n  \nmain()",
-    "crumbs": [
-      "Module 5 - Control Flow (while statements)",
-      "loops + strings (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-05-02.html#is_numeric-solution-2-1",
-    "href": "slides-05-02.html#is_numeric-solution-2-1",
     "title": "loops + strings (slides)",
     "section": "is_numeric() – solution 2",
     "text": "is_numeric() – solution 2\n\ndef is_numeric(my_string):\n  # create control variable for one decimal point\n  decimal_point = False\n  # create index variable\n  index = 0\n  while index &lt; len(my_string):\n    # first check, can character be found in a number?\n    if my_string[index] not in \"0123456789.\":\n      return False\n    # second check, if a period, has a period been found before?\n    if my_string[index] == \".\":\n      if decimal_point: # a previous period was detected\n        return False\n      else: # first period detected\n        decimal_point = True\n    # increment index  \n    index += 1\n  # while loop executed without returning False\n  # that means every character is valid, so return True\n  return True\n\ndef main():\n  assert is_numeric(\"234\") == True\n  assert is_numeric(\"abc\") == False\n  assert is_numeric(\"12c\") ==  False\n  assert is_numeric(\"12.3\") == True\n  assert is_numeric(\"1.2.3\") == False\n  \nmain()",
@@ -5150,39 +5106,6 @@
     ]
   },
   {
-    "objectID": "slides-07-01.html#another-example",
-    "href": "slides-07-01.html#another-example",
-    "title": "mutability (slides)",
-    "section": "Another example",
-    "text": "Another example\n\nnumbers = [50, 30, 80]\nsame_numbers = numbers\nsame_numbers[1] = 3000\nnumbers = \"look, numbers\"\nsame_numbers = numbers\nsame_numbers += \"!\"\n\nVisualize these examples in Python Tutor",
-    "crumbs": [
-      "Module 7 - Control Flow (for statements)",
-      "mutability (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-07-01.html#object-references-1",
-    "href": "slides-07-01.html#object-references-1",
-    "title": "mutability (slides)",
-    "section": "Object references",
-    "text": "Object references\n\nIf you assign a value to an existing object, the variable references that object\n\n\nlast_name = \"Brown\"\nname = last_name\n\n\nIf you assign it to a new object, the object is created, placed in memory, and then the variable references it\n\n\ntitle = \"Dr.\"\ntitle = \"Ms.\" # \"Dr.\" object will be removed from memory\n\n\nWhen there’s no variable pointing to an object anymore, that object is removed from memory by Python’s Garbage Collector (so don’t have to worry about memory leaks)",
-    "crumbs": [
-      "Module 7 - Control Flow (for statements)",
-      "mutability (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-07-01.html#object-references-2",
-    "href": "slides-07-01.html#object-references-2",
-    "title": "mutability (slides)",
-    "section": "Object references",
-    "text": "Object references\n\nIf you assign a value to an existing object, the variable references that object\n\n\nlast_name = \"Brown\"\nname = last_name\n\n\nIf you assign it to a new object, the object is created, placed in memory, and then the variable references it\n\n\ntitle = \"Dr.\"\ntitle = \"Ms.\" # \"Dr.\" object will be removed from memory\n\n\nWhen there’s no variable pointing to an object anymore, that object is removed from memory by Python’s Garbage Collector (so don’t have to worry about memory leaks)",
-    "crumbs": [
-      "Module 7 - Control Flow (for statements)",
-      "mutability (slides)"
-    ]
-  },
-  {
     "objectID": "slides-07-01.html#summary",
     "href": "slides-07-01.html#summary",
     "title": "mutability (slides)",
@@ -5199,6 +5122,17 @@
     "title": "mutability (slides)",
     "section": ".pop() list method",
     "text": ".pop() list method\nWe will be using a few built-in list methods\nHere’s how .pop() works:\n\nsongs = [\"Lavender Haze\", \"Calm Down\", \"As It Was\", \"Her\"]\nsongs\n\n['Lavender Haze', 'Calm Down', 'As It Was', 'Her']\n\n\n\nsongs.pop(0) # 'Her' index moves from 3 to 2\nsongs\n\n['Calm Down', 'As It Was', 'Her']\n\n\n\nsongs.pop(0) # 'Her' index moves from 2 to 1\nsongs\n\n['As It Was', 'Her']",
+    "crumbs": [
+      "Module 7 - Control Flow (for statements)",
+      "mutability (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-07-01.html#pop-items-using-while-loop",
+    "href": "slides-07-01.html#pop-items-using-while-loop",
+    "title": "mutability (slides)",
+    "section": ".pop() items using while loop",
+    "text": ".pop() items using while loop\n\nsongs = [\"Lavender Haze\", \"Calm Down\", \"As It Was\", \"Her\"]\nindex = 0\nwhile index &lt; len(songs):\n  songs.pop(index)\n  \nprint(songs)\n\n[]\n\n\nWhy we don’t update index in the while loop?",
     "crumbs": [
       "Module 7 - Control Flow (for statements)",
       "mutability (slides)"
@@ -5271,17 +5205,6 @@
     ]
   },
   {
-    "objectID": "slides-07-01.html#quiz-06",
-    "href": "slides-07-01.html#quiz-06",
-    "title": "mutability (slides)",
-    "section": "Quiz 06",
-    "text": "Quiz 06\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.\nNo need to write main() function.",
-    "crumbs": [
-      "Module 7 - Control Flow (for statements)",
-      "mutability (slides)"
-    ]
-  },
-  {
     "objectID": "slides-07-01.html#write-a-function-2",
     "href": "slides-07-01.html#write-a-function-2",
     "title": "mutability (slides)",
@@ -5298,6 +5221,17 @@
     "title": "mutability (slides)",
     "section": "Write a function – solution",
     "text": "Write a function – solution\n\ndef reverse_list(items):\n  index = len(items) - 1 # initialize index\n  inverted_list = []\n  while index &gt;= 0:\n    inverted_list.append(items[index])\n    index -= 1\n  return inverted_list\n    \ndef main():\n  strings = [\"banana\", \"apple\", \"grape\"]\n  assert reverse_list(strings) == [\"grape\", \"apple\", \"banana\"]\n  assert strings == [\"banana\", \"apple\", \"grape\"]\n  print(\"Passed test\")\n  \nmain()\n\nPassed test",
+    "crumbs": [
+      "Module 7 - Control Flow (for statements)",
+      "mutability (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-07-01.html#quiz-06",
+    "href": "slides-07-01.html#quiz-06",
+    "title": "mutability (slides)",
+    "section": "Quiz 06",
+    "text": "Quiz 06\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.\nNo need to write main() function.",
     "crumbs": [
       "Module 7 - Control Flow (for statements)",
       "mutability (slides)"
@@ -5430,17 +5364,6 @@
     "title": "built-in functions (slides)",
     "section": "Write a function",
     "text": "Write a function\nWrite a Python function calculate_year_born with no parameters. It prompts user to enter their age input().\nIt converts user’s age to integer and calculates (imperfectly) the year a person of age was born by subtracting age from 2025.\nIt returns an integer representing the approximate year person of age was born.\n\nprint( calculate_year_born() ) # user enters 60, function returns 1965",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "built-in functions (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-03-02.html#submit-attendance",
-    "href": "slides-03-02.html#submit-attendance",
-    "title": "built-in functions (slides)",
-    "section": "Submit attendance",
-    "text": "Submit attendance\nSubmit your get_input.py file with your solution to gradescope for attendance. Do not call main() in your file to get full points.",
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "built-in functions (slides)"
@@ -5656,22 +5579,11 @@
     ]
   },
   {
-    "objectID": "slides-03-03.html#class-activity-one-answer",
-    "href": "slides-03-03.html#class-activity-one-answer",
+    "objectID": "slides-03-03.html#activity-two",
+    "href": "slides-03-03.html#activity-two",
     "title": "more on decomposition (slides)",
-    "section": "Class activity one – answer",
-    "text": "Class activity one – answer\nRead the code and answer the questions:\n\nwhich lines of code are similar?\n\nline 2-4, line 6-8, line 10-12\n\nwhich lines of code are identical?\n\nline 1, line 14-15",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "more on decomposition (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-03-03.html#class-activity-two",
-    "href": "slides-03-03.html#class-activity-two",
-    "title": "more on decomposition (slides)",
-    "section": "Class activity two",
-    "text": "Class activity two\nRead the code and write the questions:\n\nwhich lines of code are similar?\nwhich lines of code are unique?\nwhich lines can be grouped together into a function? what does the function do?",
+    "section": "Activity two",
+    "text": "Activity two\nRead the code and write the questions:\n\nwhich lines of code are similar?\nwhich lines of code are unique?\nwhich lines can be grouped together into a function? what does the function do?",
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on decomposition (slides)"
@@ -5689,11 +5601,33 @@
     ]
   },
   {
-    "objectID": "slides-03-03.html#class-activity-two-1",
-    "href": "slides-03-03.html#class-activity-two-1",
+    "objectID": "slides-03-03.html#activity-two-answers",
+    "href": "slides-03-03.html#activity-two-answers",
     "title": "more on decomposition (slides)",
-    "section": "Class activity two",
-    "text": "Class activity two\nFor line 2-4, line 6-8, line 10-12:\n\nwhich lines can be grouped together into a function?\n\nline 2, 6 and 10\nline 3, 7 and 11\nline 4, 8 and 12\n\nwhat does the function do?",
+    "section": "Activity two – answers",
+    "text": "Activity two – answers\nRead the code and write the questions:\n\nwhich lines of code are similar?\n\nline 2-4, line 6-8, line 10-12\n\nwhich lines of code are unique?\n\nline 1, line 14-15",
+    "crumbs": [
+      "Module 3 - More on Functions and Decomposition",
+      "more on decomposition (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-03-03.html#activity-two-continued",
+    "href": "slides-03-03.html#activity-two-continued",
+    "title": "more on decomposition (slides)",
+    "section": "Activity two – continued",
+    "text": "Activity two – continued\nWhich lines can be grouped together into a function?\n\nline 2, 6, 10:\n\n\nbox_w = int(input(\"Box width? \")) \n\nfit_w = box_w // cube_len\n\nprint(str(fit_w) + \" Rubik's cubes will fit width-wise.\")\n\nWhat are the parameters of this function? In other words, what information must be known beforehand?",
+    "crumbs": [
+      "Module 3 - More on Functions and Decomposition",
+      "more on decomposition (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-03-03.html#activity-two-answers-continued",
+    "href": "slides-03-03.html#activity-two-answers-continued",
+    "title": "more on decomposition (slides)",
+    "section": "Activity two – answers continued",
+    "text": "Activity two – answers continued\nGiven the length of a cube and the name of a box side:\n\nIt prompts you to the enter the length of the side\nIt calculates the number of cube that can fit in the side\nIt print the message and return the number.",
     "crumbs": [
       "Module 3 - More on Functions and Decomposition",
       "more on decomposition (slides)"
@@ -6485,7 +6419,7 @@
     "href": "index.html",
     "title": "CSc 110 Computer Programming I",
     "section": "",
-    "text": "Welcome to CSc 110!\nThis is an introduction to programming with an emphasis on solving problems drawn from a variety of domains. Topics include basic control and data structures, problem solving strategies, and software development tools and techniques. Specifically, the Python programming language will be taught.\n\nD2L: d2l\nGradescope: Gradescope\nPiazza: Piazza (Access code: wildcats)\n\nWhere to start:\n\nSyllabus\nSchedule\n\n\n\nInstructor Information\n\nXinchen Yu\n\nOffice: Gould-Simpson 829\nEmail: xinchenyu@arizona.edu\nInstructor Website: xinchenyu.github.io\nOffice hours (open door, drop in, my office GS 829):\n\nWednesday 10:30am to 12:00pm"
+    "text": "Welcome to CSc 110!\nThis is an introduction to programming with an emphasis on solving problems drawn from a variety of domains. Topics include basic control and data structures, problem solving strategies, and software development tools and techniques. Specifically, the Python programming language will be taught.\n\nD2L: d2l\nGradescope: Gradescope\nPiazza: Piazza (Access code: wildcats)\n\nWhere to start:\n\nSyllabus\nSchedule\n\n\n\nInstructor Information\n\nXinchen Yu\n\nOffice: Gould-Simpson 829\nEmail: xinchenyu@arizona.edu\nInstructor Website: xinchenyu.github.io\nOffice hours (open door, drop in, my office GS 829):\n\nWednesday 10:00am to 11:00am"
   },
   {
     "objectID": "slides-13-03.html#announcements",
@@ -6631,17 +6565,6 @@
     ]
   },
   {
-    "objectID": "slides-08-02.html#announcements",
-    "href": "slides-08-02.html#announcements",
-    "title": "for loops – iterating over items (slides)",
-    "section": "Announcements",
-    "text": "Announcements\n\nMidterm 2 will be on next Wednesday, Oct 23.\nReview session next Tuesday, Oct 22 5-7pm\n\nLocation: Gittings 129b\n\nStudy guide: xinchenyu.github.io/csc110-fall2024/pdfs/study-guide-2.pdf",
-    "crumbs": [
-      "Module 8 - Data Structures (dictionaries)",
-      "for loops -- iterating over items (slides)"
-    ]
-  },
-  {
     "objectID": "slides-08-02.html#review-of-for-in-range",
     "href": "slides-08-02.html#review-of-for-in-range",
     "title": "for loops – iterating over items (slides)",
@@ -6708,17 +6631,6 @@
     ]
   },
   {
-    "objectID": "slides-08-02.html#quiz-07",
-    "href": "slides-08-02.html#quiz-07",
-    "title": "for loops – iterating over items (slides)",
-    "section": "Quiz 07",
-    "text": "Quiz 07\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.\nNo need to write main() function.",
-    "crumbs": [
-      "Module 8 - Data Structures (dictionaries)",
-      "for loops -- iterating over items (slides)"
-    ]
-  },
-  {
     "objectID": "slides-08-02.html#write-a-function-1",
     "href": "slides-08-02.html#write-a-function-1",
     "title": "for loops – iterating over items (slides)",
@@ -6735,6 +6647,28 @@
     "title": "for loops – iterating over items (slides)",
     "section": "Write a function – solution",
     "text": "Write a function – solution\n\ndef max_list(numbers):\n    max = None\n    for n in numbers:\n        if max == None or n &gt; max:\n            max = n\n    return max\n\ndef main():\n  assert max_list([]) == None\n  assert max_list([2, 2, 1]) == 2\n  assert max_list([1, -3]) == 1 \n  print(\"pass\")\n  \nmain()\n\npass",
+    "crumbs": [
+      "Module 8 - Data Structures (dictionaries)",
+      "for loops -- iterating over items (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-08-02.html#a-note-on-lists",
+    "href": "slides-08-02.html#a-note-on-lists",
+    "title": "for loops – iterating over items (slides)",
+    "section": "A Note on Lists",
+    "text": "A Note on Lists\nfor i in range(len(list)): VS. for x in list:\n\nUse option 1 if you want to mutate the list.\n\n\nnumbers = [2, 1, 4]\nfor i in range(len(numbers)):\n  numbers[i] += 1\nnumbers\n\n[3, 2, 5]\n\n\n\nUse either options if you only need to get the values.\n\n\nnumbers = [2, 1, 4]\nfor n in numbers:\n  print(n)\n\n2\n1\n4",
+    "crumbs": [
+      "Module 8 - Data Structures (dictionaries)",
+      "for loops -- iterating over items (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-08-02.html#quiz-07",
+    "href": "slides-08-02.html#quiz-07",
+    "title": "for loops – iterating over items (slides)",
+    "section": "Quiz 07",
+    "text": "Quiz 07\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.\nNo need to write main() function.",
     "crumbs": [
       "Module 8 - Data Structures (dictionaries)",
       "for loops -- iterating over items (slides)"
@@ -7005,17 +6939,6 @@
     ]
   },
   {
-    "objectID": "slides-08-01.html#mapping-and-lists-1",
-    "href": "slides-08-01.html#mapping-and-lists-1",
-    "title": "intro to dictionaries (slides)",
-    "section": "Mapping and Lists",
-    "text": "Mapping and Lists\n\nnumbers = [12, 49, -2, 26, 5, 17, -6]\n\n# Using the key 3 to lookup the associated value of 26\n# and then save the value into variable\nnew = numbers[3]\n\n# Modifying the list so that the key 5 now maps to 77\n# instead of 17\nnumbers[5] = 77",
-    "crumbs": [
-      "Module 8 - Data Structures (dictionaries)",
-      "intro to dictionaries (slides)"
-    ]
-  },
-  {
     "objectID": "slides-08-01.html#dictionary",
     "href": "slides-08-01.html#dictionary",
     "title": "intro to dictionaries (slides)",
@@ -7054,28 +6977,6 @@
     "title": "intro to dictionaries (slides)",
     "section": "Evaluate the expressions",
     "text": "Evaluate the expressions\n\nword_count = {\"and\": 324, \"why\": 134, \"cannot\": 76, \"sanded\": 13}\nword_count[\"cannot\"] = 90\nword_count[\"and\"] = 110\nword_count[\"foot\"] = \"feet\"\nword_count[\"and\"] += 10\n\n# what will these evaluate to?\nword_count[\"and\"]\n\n120\n\n\n\nword_count[\"cannot\"]\n\n90\n\n\n\nword_count[\"foot\"]\n\n'feet'",
-    "crumbs": [
-      "Module 8 - Data Structures (dictionaries)",
-      "intro to dictionaries (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-08-01.html#evaluate-the-expressions-2",
-    "href": "slides-08-01.html#evaluate-the-expressions-2",
-    "title": "intro to dictionaries (slides)",
-    "section": "Evaluate the expressions",
-    "text": "Evaluate the expressions\n\nnum_to_player = {}   # A valid, but empty dictionary\nnum_to_player[13] = \"Paul George\"\nnum_to_player[3]  = \"Chris Paul\"\nnum_to_player[23] = \"Lebron James\"\nnum_to_player[13] = \"James Harden\"\n\n# what will these evaluate to?\nnum_to_player[23]\n\n'Lebron James'\n\n\n\nnum_to_player[3]\n\n'Chris Paul'\n\n\n\nnum_to_player[13]\n\n'James Harden'\n\n\n\nnum_to_player\n\n{13: 'James Harden', 3: 'Chris Paul', 23: 'Lebron James'}",
-    "crumbs": [
-      "Module 8 - Data Structures (dictionaries)",
-      "intro to dictionaries (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-08-01.html#evaluate-the-expressions-3",
-    "href": "slides-08-01.html#evaluate-the-expressions-3",
-    "title": "intro to dictionaries (slides)",
-    "section": "Evaluate the expressions",
-    "text": "Evaluate the expressions\n\nnum_to_player = {}   # A valid, but empty dictionary\nnum_to_player[13] = \"Paul George\"\nnum_to_player[3]  = \"Chris Paul\"\nnum_to_player[23] = \"Lebron James\"\nnum_to_player[13] = \"James Harden\"\n\n# what will these evaluate to?\nnum_to_player[23]\n\n'Lebron James'\n\n\n\nnum_to_player[3]\n\n'Chris Paul'\n\n\n\nnum_to_player[13]\n\n'James Harden'\n\n\n\nnum_to_player\n\n{13: 'James Harden', 3: 'Chris Paul', 23: 'Lebron James'}",
     "crumbs": [
       "Module 8 - Data Structures (dictionaries)",
       "intro to dictionaries (slides)"
@@ -7280,6 +7181,17 @@
     ]
   },
   {
+    "objectID": "slides-06-01.html#announcement",
+    "href": "slides-06-01.html#announcement",
+    "title": "lists (slides)",
+    "section": "Announcement",
+    "text": "Announcement\nReview session tomorrow (Tuesday, Feb 18)\n\nLocation: Gittings 129b\nTime: 5 - 7 : 00 pm",
+    "crumbs": [
+      "Module 6 - Data Structures (lists)",
+      "lists (slides)"
+    ]
+  },
+  {
     "objectID": "slides-06-01.html#sequences",
     "href": "slides-06-01.html#sequences",
     "title": "lists (slides)",
@@ -7307,28 +7219,6 @@
     "title": "lists (slides)",
     "section": "Creating lists",
     "text": "Creating lists\n\n# empty list\nno_numbers = []\n\n# list of integers\nnumbers = [1, 5, 2, 10, 7]\n\n# list of strings\nnames = ['SZA', 'JVKE', 'Bruno Mars', 'Doechii']\n\n# mixed types list\nvalues = [2, 1.15, 7, 1.75, 'those']\nprint(values[0] * values[1])\n\n2.3",
-    "crumbs": [
-      "Module 6 - Data Structures (lists)",
-      "lists (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-06-01.html#evaluate-the-expressions",
-    "href": "slides-06-01.html#evaluate-the-expressions",
-    "title": "lists (slides)",
-    "section": "Evaluate the expressions",
-    "text": "Evaluate the expressions\n\nnumbers = [2, 3, 2, 4, 5]\nnumbers[1] + numbers[4]\n\nnumbers = [2.0, 3, 1.3, 4]\nnumbers[0] * numbers[2]\n\nwords = ['the', 'bear', 'in', 'the', 'tree']\nwords[3] + words[4] + words[1]\n\nfloats = [1.2, 3.4, 0.3, 1.0, 3.2]\nlen(floats)",
-    "crumbs": [
-      "Module 6 - Data Structures (lists)",
-      "lists (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-06-01.html#evaluate-the-expressions-1",
-    "href": "slides-06-01.html#evaluate-the-expressions-1",
-    "title": "lists (slides)",
-    "section": "Evaluate the expressions",
-    "text": "Evaluate the expressions\n\nnumbers = [2, 3, 2, 4, 5]\nnumbers[1] + numbers[4]\n\n8\n\n\n\nnumbers = [2.0, 3, 1.3, 4]\nnumbers[0] * numbers[2]\n\n2.6\n\n\n\nwords = ['the', 'bear', 'in', 'the', 'tree']\nwords[3] + words[4] + words[1]\n\n'thetreebear'\n\n\n\nfloats = [1.2, 3.4, 0.3, 1.0, 3.2]\nlen(floats)\n\n5",
     "crumbs": [
       "Module 6 - Data Structures (lists)",
       "lists (slides)"
@@ -7450,6 +7340,17 @@
     "title": "lists (slides)",
     "section": "Max solution - empty lists",
     "text": "Max solution - empty lists\nCan we swap the two expressions at line 5?\n\ndef max_list(numbers):\n  max = None\n  index = 0\n  while index &lt; len(numbers):\n    if max == None or numbers[index] &gt; max:\n      max = numbers[index]\n    index += 1\n  return max\n\ndef main():\n  print( max_list([2, 1, 3, 1]) ) # 3\n  print( max_list([]) ) # None\n\nmain()\n\n3\nNone",
+    "crumbs": [
+      "Module 6 - Data Structures (lists)",
+      "lists (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-06-01.html#updating-lists",
+    "href": "slides-06-01.html#updating-lists",
+    "title": "lists (slides)",
+    "section": "Updating lists",
+    "text": "Updating lists\n\nnames = ['SZA', 'JVKE', 'Bruno Mars']\n\n# mutate list using the index\nnames[1] = \"Billie Eilish\"\n\nnames\n\n['SZA', 'Billie Eilish', 'Bruno Mars']",
     "crumbs": [
       "Module 6 - Data Structures (lists)",
       "lists (slides)"
@@ -7929,22 +7830,11 @@
     ]
   },
   {
-    "objectID": "slides-06-02.html#announcement",
-    "href": "slides-06-02.html#announcement",
-    "title": "random (slides)",
-    "section": "Announcement",
-    "text": "Announcement\n\nCheck gradescope for grades\nLecture next Friday, Oct 11 will be on Zoom.\n\nYou can also come here and watch the recording so that TAs can help\nAttendance window will be 9am - 9pm",
-    "crumbs": [
-      "Module 6 - Data Structures (lists)",
-      "random (slides)"
-    ]
-  },
-  {
     "objectID": "slides-06-02.html#random-module",
     "href": "slides-06-02.html#random-module",
     "title": "random (slides)",
     "section": "random module",
-    "text": "random module\nWe need to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random() #returns a random float between 0 and 1\nprint(n)\n\nn = random.randint(0, 9) #returns a random integer betweem 0 and 9.\n\n\nprint(n)\n\n0.13781753740146263\n2",
+    "text": "random module\nWe need to import the module random\nWhat do the functions .random() and .randint() return?\n\nimport random\n\nn = random.random() #returns a random float between 0 and 1\nprint(n)\n\nn = random.randint(0, 9) #returns a random integer betweem 0 and 9.\n\n\nprint(n)\n\n0.8734221981946652\n5",
     "crumbs": [
       "Module 6 - Data Structures (lists)",
       "random (slides)"
@@ -7966,7 +7856,7 @@
     "href": "slides-06-02.html#write-a-function-solution",
     "title": "random (slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nJune",
+    "text": "Write a function – solution\n\nimport random\n\ndef pick_winner(names):\n  index = random.randint(0, len(names) - 1)\n  return names[index]\n\nif __name__ == \"__main__\":\n  winner = pick_winner([\"Peter\", \"Joan\", \"Mary\", \"June\"])\n  print(winner)\n\nJoan",
     "crumbs": [
       "Module 6 - Data Structures (lists)",
       "random (slides)"
@@ -8854,688 +8744,6 @@
     "crumbs": [
       "Module 1 - Basics",
       "Module 1 Assignments"
-    ]
-  },
-  {
-    "objectID": "slides-01-02.html#cs-buddy-mentor-program-sign-up",
-    "href": "slides-01-02.html#cs-buddy-mentor-program-sign-up",
-    "title": "python basics (slides)",
-    "section": "CS Buddy Mentor Program Sign-Up",
-    "text": "CS Buddy Mentor Program Sign-Up\n\nsign-up QR Code",
-    "crumbs": [
-      "Module 1 - Basics",
-      "python basics (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-01-02.html#round",
-    "href": "slides-01-02.html#round",
-    "title": "python basics (slides)",
-    "section": "round()",
-    "text": "round()\nUse the round() function to get a floating-point number rounded to the specified number of decimals.\nSyntax:\n\nround(number, ndigits*)\n\nThe number of digits (ndigits) is optional, but we will often round number to two decimals:\n\nround(392.68750000000006, 2)\n\n392.69",
-    "crumbs": [
-      "Module 1 - Basics",
-      "python basics (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-01-02.html#operations-1",
-    "href": "slides-01-02.html#operations-1",
-    "title": "python basics (slides)",
-    "section": "Operations",
-    "text": "Operations\n\nprint(10 + 5 - 5) # addition and subtraction\nprint(10 * 5 / 4) # multiplication and division\nprint(25 ** 2) # square \nprint(25 ** 0.5) # square root \nprint(13 // 4) # division and round down to the nearest integer\nprint(13 % 4) # remainder \n\n10\n12.5\n625\n5.0\n3\n1",
-    "crumbs": [
-      "Module 1 - Basics",
-      "python basics (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-01-02.html#pemdas",
-    "href": "slides-01-02.html#pemdas",
-    "title": "python basics (slides)",
-    "section": "PEMDAS",
-    "text": "PEMDAS\n\nWhat does PEMDAS stand for?\nThe operator precedence:\n\nParentheses\nExponentiation\nMultiplication and Division (including // and %)\nAddition and Subtraction",
-    "crumbs": [
-      "Module 1 - Basics",
-      "python basics (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-01-02.html#pemdas-1",
-    "href": "slides-01-02.html#pemdas-1",
-    "title": "python basics (slides)",
-    "section": "PEMDAS",
-    "text": "PEMDAS\nWhat value will each of these variables take on? No computers!\na1 = 5 /  5 * 10  * 5\na2 = 5 / (5 * 10) * 5\n\nb1 = 5 *  10 - 2\nb2 = 5 * (10 - 2)\n\nc = (3 // (4 // 5)) + 1",
-    "crumbs": [
-      "Module 1 - Basics",
-      "python basics (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-01-02.html#pemdas-answer",
-    "href": "slides-01-02.html#pemdas-answer",
-    "title": "python basics (slides)",
-    "section": "PEMDAS – answer",
-    "text": "PEMDAS – answer\n\na1 = 5 /  5 * 10  * 5\na2 = 5 / (5 * 10) * 5\n\nb1 = 5 *  10 - 2\nb2 = 5 * (10 - 2)\n\n# c = (3 // (4 // 5)) + 1 ERROR -- Zero Division\n\nprint(a1)\nprint(a2)\nprint(b1)\nprint(b2)\n\n50.0\n0.5\n48\n40\n\n\nNote that the division operator returns a float even when both numerator and denominator are integers",
-    "crumbs": [
-      "Module 1 - Basics",
-      "python basics (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-01-02.html#operations---examples",
-    "href": "slides-01-02.html#operations---examples",
-    "title": "python basics (slides)",
-    "section": "Operations - examples",
-    "text": "Operations - examples\n\nprint(10 + 5 - 5) # addition and subtraction\nprint(10 * 5 / 4) # multiplication and division\nprint(25 ** 2) # square \nprint(25 ** 0.5) # square root \nprint(13 // 4) # division and round down to the nearest integer\nprint(13 % 4) # remainder \n\n10\n12.5\n625\n5.0\n3\n1",
-    "crumbs": [
-      "Module 1 - Basics",
-      "python basics (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-01-02.html#round-1",
-    "href": "slides-01-02.html#round-1",
-    "title": "python basics (slides)",
-    "section": "round()",
-    "text": "round()\nUse the round() function to get a floating-point number rounded to the specified number of decimals.\nSyntax:\n\nround(number, ndigits*)\n\nRounding is done toward the nearest even choice:\n\nprint(round(51.6))\nprint(round(51.4))\nprint(round(51.5))\nprint(round(50.5))\n\n52\n51\n52\n50",
-    "crumbs": [
-      "Module 1 - Basics",
-      "python basics (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-01-02.html#function-to-calculate-area-of-a-circle",
-    "href": "slides-01-02.html#function-to-calculate-area-of-a-circle",
-    "title": "python basics (slides)",
-    "section": "Function to calculate area of a circle",
-    "text": "Function to calculate area of a circle\n\ndef calculate_area(radius):\n  # calculate the area first\n  area = 3.1415 * radius ** 2\n  \n  # return calculated area\n  return round(area, 2)\n\ndef main():\n  print(calculate_area(3)) # 28.27\n  print(calculate_area(6)) # 113.09\n  \nmain()",
-    "crumbs": [
-      "Module 1 - Basics",
-      "python basics (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-01-02.html#questions---answer",
-    "href": "slides-01-02.html#questions---answer",
-    "title": "python basics (slides)",
-    "section": "Questions - Answer",
-    "text": "Questions - Answer\nFunction to calculate area of a circle:\n\ndef calculate_area(radius):\n  # calculate the area first\n  area = 3.1415 * radius ** 2\n  \n  # round the calculated area and return it\n  return round(area, 2)\n\ndef main():\n  print(calculate_area(3)) # 28.27\n  print(calculate_area(6)) # 113.09\n  \nmain()\n\n28.27\n113.09",
-    "crumbs": [
-      "Module 1 - Basics",
-      "python basics (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-01-02.html#quiz-02",
-    "href": "slides-01-02.html#quiz-02",
-    "title": "python basics (slides)",
-    "section": "Quiz 02",
-    "text": "Quiz 02\n\n\ncurrent time\n\n\n\n\n\n\nYou have 5 minutes to complete the quiz.",
-    "crumbs": [
-      "Module 1 - Basics",
-      "python basics (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-02-01.html#function-definitions-1",
-    "href": "slides-02-01.html#function-definitions-1",
-    "title": "functions (slides)",
-    "section": "Function definitions",
-    "text": "Function definitions\n\ndef cook_food(order):\n  message = \"Your \" + order + \" is ready!\"\n  return message\n\nmeal = cook_food(\"pasta\")\nprint(meal)\nmeal = cook_food(\"burger\")\nprint(meal)\n\nYour pasta is ready!\nYour burger is ready!\n\n\n\nThe function cook_food prepares a meal.\nThen returns a string that says the meal is ready.\nThe returned message is stored in the meal variable.\nFinally, print function displays that message to the caller.",
-    "crumbs": [
-      "Module 2 - Functions, Operators, Expressions and Decomposition",
-      "functions (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-02-01.html#another-example",
-    "href": "slides-02-01.html#another-example",
-    "title": "functions (slides)",
-    "section": "Another example",
-    "text": "Another example\n\ndef cook_food(order):\n  message = \"Your \" + order + \" is ready!\"\n  return message\n\nmeal = cook_food(\"pasta\")\nprint(meal)\nmeal = cook_food(\"burger\")\nprint(meal)\n\nYour pasta is ready!\nYour burger is ready!\n\n\n\nThe function cook_food prepares a meal.\nThen returns a string that says the meal is ready.\nThe returned message is stored in the meal variable.\nFinally, print function displays that message to the caller.",
-    "crumbs": [
-      "Module 2 - Functions, Operators, Expressions and Decomposition",
-      "functions (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-02-02.html#class-activity-one-answers-1",
-    "href": "slides-02-02.html#class-activity-one-answers-1",
-    "title": "decomposition (slides)",
-    "section": "Class activity one – answers",
-    "text": "Class activity one – answers\nRetro head guitar vs. Retro head long neck guitar:\n\nwhich parts of code are the same?\n\nthe head\nthe body\n\nwhich parts of code are different?\n\nthe neck",
-    "crumbs": [
-      "Module 2 - Functions, Operators, Expressions and Decomposition",
-      "decomposition (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-02-02.html#write-functions-phase-1-answers",
-    "href": "slides-02-02.html#write-functions-phase-1-answers",
-    "title": "decomposition (slides)",
-    "section": "Write functions – phase 1 answers",
-    "text": "Write functions – phase 1 answers\n\ndef print_head():\n    print(\"      ___\")\n    print(\"    o|* *|o\")\n    print(\"    o|* *|o\")\n    print(\"    o|* *|o\")\n    print(\"     \\===/\")\n\ndef print_neck():\n    print(\"      |||\" + \"\\n\" + \"      |||\")\n    \ndef print_body():\n    print(\"   ___|||___\")\n    print(\"  /   |||   \\ \" + \"\\n\" + \" /    |||    \\ \")\n    print(\"|     |||     |\")\n    print(\" \\   (|||)   /\")\n    print(\"  |   |||   |\")\n    print(\"  /   |||   \\ \" + \"\\n\" + \" /    |||    \\ \")\n    print(\"/     |||     \\ \")\n    print(\"|    [===]    |\")\n    print(\" \\           /\")\n    print(\"  '.       .'\")\n    print(\"   '-------'\")\n\ndef print_classic_guitar():\n    print_head()\n    print_neck()\n    print_body()\n\ndef print_long_guitar():\n    print_head()\n    print_neck()\n    print_neck()\n    print_body()\n\ndef main():\n    print_classic_guitar() # print classic guitar\n    print_long_guitar() # print long neck guitar\n\nmain()\n\n      ___\n    o|* *|o\n    o|* *|o\n    o|* *|o\n     \\===/\n      |||\n      |||\n   ___|||___\n  /   |||   \\ \n /    |||    \\ \n|     |||     |\n \\   (|||)   /\n  |   |||   |\n  /   |||   \\ \n /    |||    \\ \n/     |||     \\ \n|    [===]    |\n \\           /\n  '.       .'\n   '-------'\n      ___\n    o|* *|o\n    o|* *|o\n    o|* *|o\n     \\===/\n      |||\n      |||\n      |||\n      |||\n   ___|||___\n  /   |||   \\ \n /    |||    \\ \n|     |||     |\n \\   (|||)   /\n  |   |||   |\n  /   |||   \\ \n /    |||    \\ \n/     |||     \\ \n|    [===]    |\n \\           /\n  '.       .'\n   '-------'",
-    "crumbs": [
-      "Module 2 - Functions, Operators, Expressions and Decomposition",
-      "decomposition (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-02-02.html#write-functions-phase-2-answers",
-    "href": "slides-02-02.html#write-functions-phase-2-answers",
-    "title": "decomposition (slides)",
-    "section": "Write functions – phase 2 answers",
-    "text": "Write functions – phase 2 answers\n\ndef print_head():\n    print(\"      ___\")\n    pattern = \"    o|* *|o\"\n    print(pattern)\n    print(pattern)\n    print(pattern)\n    print(\"     \\===/\")\n\ndef print_neck():\n    print(\"      |||\" + \"\\n\" + \"      |||\")\n    \ndef print_body():\n    print(\"   ___|||___\")\n    pattern = \"  /   |||   \\ \" + \"\\n\" + \" /    |||    \\ \" \n    print(pattern)\n    print(\"|     |||     |\")\n    print(\" \\   (|||)   /\")\n    print(\"  |   |||   |\")\n    print(pattern)\n    print(\"/     |||     \\ \")\n    print(\"|    [===]    |\")\n    print(\" \\           /\")\n    print(\"  '.       .'\")\n    print(\"   '-------'\")\n\ndef print_classic_guitar():\n    print_head()\n    print_neck()\n    print_body()\n\ndef print_long_guitar():\n    print_head()\n    print_neck()\n    print_neck()\n    print_body()\n\ndef main():\n    print_classic_guitar() # print classic guitar\n    print_long_guitar() # print long neck guitar\n\nmain()\n\n      ___\n    o|* *|o\n    o|* *|o\n    o|* *|o\n     \\===/\n      |||\n      |||\n   ___|||___\n  /   |||   \\ \n /    |||    \\ \n|     |||     |\n \\   (|||)   /\n  |   |||   |\n  /   |||   \\ \n /    |||    \\ \n/     |||     \\ \n|    [===]    |\n \\           /\n  '.       .'\n   '-------'\n      ___\n    o|* *|o\n    o|* *|o\n    o|* *|o\n     \\===/\n      |||\n      |||\n      |||\n      |||\n   ___|||___\n  /   |||   \\ \n /    |||    \\ \n|     |||     |\n \\   (|||)   /\n  |   |||   |\n  /   |||   \\ \n /    |||    \\ \n/     |||     \\ \n|    [===]    |\n \\           /\n  '.       .'\n   '-------'",
-    "crumbs": [
-      "Module 2 - Functions, Operators, Expressions and Decomposition",
-      "decomposition (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-02-02.html#write-functions-improved-answers",
-    "href": "slides-02-02.html#write-functions-improved-answers",
-    "title": "decomposition (slides)",
-    "section": "Write functions – improved answers",
-    "text": "Write functions – improved answers\n\ndef print_head():\n    print(\"      ___\")\n    pattern = \"    o|* *|o\"\n    print(pattern)\n    print(pattern)\n    print(pattern)\n    print(\"     \\===/\")\n\ndef print_neck():\n    print(\"      |||\" + \"\\n\" + \"      |||\")\n    \ndef print_body():\n    print(\"   ___|||___\")\n    pattern = \"  /   |||   \\ \" + \"\\n\" + \" /    |||    \\ \" \n    print(pattern)\n    print(\"|     |||     |\")\n    print(\" \\   (|||)   /\")\n    print(\"  |   |||   |\")\n    print(pattern)\n    print(\"/     |||     \\ \")\n    print(\"|    [===]    |\")\n    print(\" \\           /\")\n    print(\"  '.       .'\")\n    print(\"   '-------'\")\n\ndef print_classic_guitar():\n    print_head()\n    print_neck()\n    print_body()\n\ndef print_long_guitar():\n    print_head()\n    print_neck()\n    print_neck()\n    print_body()\n\ndef main():\n    print_classic_guitar() # print classic guitar\n    print_long_guitar() # print long neck guitar\n\nmain()\n\n      ___\n    o|* *|o\n    o|* *|o\n    o|* *|o\n     \\===/\n      |||\n      |||\n   ___|||___\n  /   |||   \\ \n /    |||    \\ \n|     |||     |\n \\   (|||)   /\n  |   |||   |\n  /   |||   \\ \n /    |||    \\ \n/     |||     \\ \n|    [===]    |\n \\           /\n  '.       .'\n   '-------'\n      ___\n    o|* *|o\n    o|* *|o\n    o|* *|o\n     \\===/\n      |||\n      |||\n      |||\n      |||\n   ___|||___\n  /   |||   \\ \n /    |||    \\ \n|     |||     |\n \\   (|||)   /\n  |   |||   |\n  /   |||   \\ \n /    |||    \\ \n/     |||     \\ \n|    [===]    |\n \\           /\n  '.       .'\n   '-------'",
-    "crumbs": [
-      "Module 2 - Functions, Operators, Expressions and Decomposition",
-      "decomposition (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-02-01.html#write-a-function-3",
-    "href": "slides-02-01.html#write-a-function-3",
-    "title": "functions (slides)",
-    "section": "Write a function",
-    "text": "Write a function\nWrite a Python function named hypotenuse that takes two arguments: a and b representing the length of the two non-hypotenuse sides of a right triangle. The function calculate the hypotenuse according to the Pythagorean theorem: \\(c = \\sqrt(a^2 + b^2)\\). Return it rounded at two decimals.\nTest cases: hypotenuse(3, 4) should return 5.0, hypotenuse(10, 10) should return 14.14\nName your file hypotenuse.py and submit to gradescope.",
-    "crumbs": [
-      "Module 2 - Functions, Operators, Expressions and Decomposition",
-      "functions (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-02-01.html#submit-attendance",
-    "href": "slides-02-01.html#submit-attendance",
-    "title": "functions (slides)",
-    "section": "Submit attendance",
-    "text": "Submit attendance\nSubmit your hypotenuse.py file with your solution to gradescope for attendance",
-    "crumbs": [
-      "Module 2 - Functions, Operators, Expressions and Decomposition",
-      "functions (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-02-01.html#write-a-function-4",
-    "href": "slides-02-01.html#write-a-function-4",
-    "title": "functions (slides)",
-    "section": "Write a function",
-    "text": "Write a function\n\ndef sqrt(n):\n  '''\n  This function calculates the square root of a number\n  Args:\n    n: integer or float\n  Returns:\n    The square root of n\n  '''\n  return n**0.5\n\ndef hypotenuse(a, b):\n  '''\n  This function calculates the hypotenuse of a right angle triangle.\n  Args:\n    a: number (integer or float) representing one of the non-hypotenuse sides\n    b: number (integer or float) representing one of the non-hypotenuse sides\n  Returns:\n    Float representing the length of the hypotenuse given a and b\n  ''' \n  h = sqrt(a**2 + b**2)\n  return round(h, 2)\n\ndef main():\n  '''\n  This function calls the hypotenuse function to calculate and then\n  print out the hypotenuse of a right angle triangle of sides 3 and 4\n  and the hypotenuse of a right angle triange of sides 10 and 10\n  '''\n  result = hypotenuse(3, 4)\n  print(result)\n  \n  result = hypotenuse(10, 10)\n  print(result)\n  \nmain()\n\n5.0\n14.14",
-    "crumbs": [
-      "Module 2 - Functions, Operators, Expressions and Decomposition",
-      "functions (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-03-01.html#function-to-calculate-the-volume-of-a-cylinder",
-    "href": "slides-03-01.html#function-to-calculate-the-volume-of-a-cylinder",
-    "title": "more on Functions (class slides)",
-    "section": "Function to calculate the volume of a cylinder",
-    "text": "Function to calculate the volume of a cylinder\nWrite a function that does the following:\n\nIts name is volume\nIt takes two integer arguments: radius and height\nIt calculates the volume of a cylinder, based on radius and height. Volume is area multiplied by height.\nIt returns the float value for calculated volume.",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "more on Functions (class slides)"
-    ]
-  },
-  {
-    "objectID": "slides-03-01.html#function-to-calculate-the-volume-of-a-cylinder-1",
-    "href": "slides-03-01.html#function-to-calculate-the-volume-of-a-cylinder-1",
-    "title": "more on Functions (class slides)",
-    "section": "Function to calculate the volume of a cylinder",
-    "text": "Function to calculate the volume of a cylinder\n\ndef volume(radius, height):\n  # calculate the area first\n  area = 3.1415 * radius ** 2\n  \n  # multiply area by height\n  vol = area * height\n  \n  # return calculated volume\n  return vol\n\ndef main():\n  print(volume(1, 2)) # 6.283\n  print(volume(6, 10)) # 1130.94\n  print(volume(5, 5)) # 392.68750000000006\n  \nmain()",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "more on Functions (class slides)"
-    ]
-  },
-  {
-    "objectID": "slides-02-02.html#class-activity-one-answers-2",
-    "href": "slides-02-02.html#class-activity-one-answers-2",
-    "title": "decomposition (slides)",
-    "section": "Class activity one – answers",
-    "text": "Class activity one – answers\n\ndef print_classic_guitar():\n    print_head()\n    print_neck()\n    print_body()\n\ndef print_retro_guitar():\n    print_retro_head()\n    print_neck()\n    print_body()\n    \ndef print_long_guitar():\n    print_head()\n    print_neck()\n    print_neck()\n    print_body()\n\ndef main():\n    print_classic_guitar() # print classic guitar\n    print_retro_guitar() # print retro head guitar\n    print_long_guitar() # print long neck guitar\n\nmain()",
-    "crumbs": [
-      "Module 2 - Functions, Operators, Expressions and Decomposition",
-      "decomposition (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-02-02.html#class-activity-one-conclusion",
-    "href": "slides-02-02.html#class-activity-one-conclusion",
-    "title": "decomposition (slides)",
-    "section": "Class activity one – conclusion",
-    "text": "Class activity one – conclusion\n\ndef print_classic_guitar():\n    print_head()\n    print_neck()\n    print_body()\n\ndef print_retro_guitar():\n    print_retro_head()\n    print_neck()\n    print_body()\n    \ndef print_long_guitar():\n    print_head()\n    print_neck()\n    print_neck()\n    print_body()\n\ndef main():\n    print_classic_guitar() # print classic guitar\n    print_retro_guitar() # print retro head guitar\n    print_long_guitar() # print long neck guitar\n\nmain()",
-    "crumbs": [
-      "Module 2 - Functions, Operators, Expressions and Decomposition",
-      "decomposition (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-02-02.html#decomposition",
-    "href": "slides-02-02.html#decomposition",
-    "title": "decomposition (slides)",
-    "section": "Decomposition",
-    "text": "Decomposition\n\ndef print_classic_guitar():\n    print_head()\n    print_neck()\n    print_body()\n\ndef print_retro_guitar():\n    print_retro_head()\n    print_neck()\n    print_body()\n    \ndef print_long_guitar():\n    print_head()\n    print_neck()\n    print_neck()\n    print_body()\n\ndef main():\n    print_classic_guitar() # print classic guitar\n    print_retro_guitar() # print retro head guitar\n    print_long_guitar() # print long neck guitar\n\nmain()",
-    "crumbs": [
-      "Module 2 - Functions, Operators, Expressions and Decomposition",
-      "decomposition (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-03-01.html#write-a-function-sphere-volume",
-    "href": "slides-03-01.html#write-a-function-sphere-volume",
-    "title": "more on Functions (class slides)",
-    "section": "Write a function – sphere volume",
-    "text": "Write a function – sphere volume\n\ndef sphere_volume(radius):\n  \"calculates the volume of a sphere of given radius\"\n  volume = (4 / 3) * 3.1415 * radius**3\n  return round(volume, 2)\n\ndef main():\n  print(sphere_volume(.75)) # 1.77\n  print(sphere_volume(2)) # 33.51\n  print(sphere_volume(5.5)) # 696.89\n\nmain()\n\n1.77\n33.51\n696.89",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "more on Functions (class slides)"
-    ]
-  },
-  {
-    "objectID": "slides-03-01.html#write-a-function-solutions-1",
-    "href": "slides-03-01.html#write-a-function-solutions-1",
-    "title": "more on Functions (class slides)",
-    "section": "Write a function – solutions 1",
-    "text": "Write a function – solutions 1\n\ndef sphere_area(radius):\n  \"calculates the area of a sphere of given radius\"\n  area = 4 * 3.1415 * radius**2\n  return round(area, 2)\n\ndef sphere_volume(radius):\n  \"calculates the volume of a sphere of given radius\"\n  volume = (4 / 3) * 3.1415 * radius**3\n  return round(volume, 2)\n\ndef main():\n  r = .75\n  v = sphere_volume(r)\n  a = sphere_area(r)\n  print(v, a)\n\nmain()\n\n1.77 7.07",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "more on Functions (class slides)"
-    ]
-  },
-  {
-    "objectID": "slides-03-01.html#write-a-function-2",
-    "href": "slides-03-01.html#write-a-function-2",
-    "title": "more on Functions (class slides)",
-    "section": "Write a function",
-    "text": "Write a function\nComparing two formulas: \\[\na = 4 \\cdot \\pi \\cdot radius^2\n\\]\n\\[\nv = {4 / 3} \\cdot \\pi \\cdot radius^3\n\\] We can use area when calculating volume: \\[\nv = {1 / 3} \\cdot a \\cdot radius\n\\]\nModify your sphere_volume function by calling sphere_area inside the function.",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "more on Functions (class slides)"
-    ]
-  },
-  {
-    "objectID": "slides-03-01.html#write-a-function-solutions-2",
-    "href": "slides-03-01.html#write-a-function-solutions-2",
-    "title": "more on Functions (class slides)",
-    "section": "Write a function – solutions 2",
-    "text": "Write a function – solutions 2\n\ndef sphere_area(radius):\n  \"calculates the area of a sphere of given radius\"\n  area = 4 * 3.1415 * radius**2\n  return round(area, 2)\n\n\ndef sphere_volume(radius):\n  \"calculates the volume of a sphere of given radius\"\n  volume = (1 / 3) * sphere_area(radius) * radius\n  return round(volume, 2)\n\n\ndef main():\n  r = .75\n  v = sphere_volume(r)\n  a = sphere_area(r)\n  print(v, a)\n\nmain()\n\n1.77 7.07",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "more on Functions (class slides)"
-    ]
-  },
-  {
-    "objectID": "slides-03-01.html#write-functions",
-    "href": "slides-03-01.html#write-functions",
-    "title": "more on Functions (class slides)",
-    "section": "Write functions",
-    "text": "Write functions\nWrite two functions: sphere_area and sphere_volume that calculates the area and the volume of a sphere:\nuse 3.1415 for \\(\\pi\\) and return the rounded value.\n\\[\na = 4 \\cdot \\pi \\cdot radius^2\n\\]\n\\[\nv = {4 / 3} \\cdot \\pi \\cdot radius^3\n\\] Name your file as sphere.py and submit to gradescope.\nTest case:\n\nr = 0.75\nprint(sphere_area(r)) # 7.07\nprint(sphere_volume(r)) # 1.77",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "more on Functions (class slides)"
-    ]
-  },
-  {
-    "objectID": "slides-03-01.html#global-or-local-1",
-    "href": "slides-03-01.html#global-or-local-1",
-    "title": "more on Functions (class slides)",
-    "section": "Global or Local?",
-    "text": "Global or Local?\n\ndef sum(a, b):\n    return a + b\n\ndef multiply(a, b):\n    return a * b\n\ndef main():\n    a = 5\n    b = 10\n    print(sum(a, b))\n    print(multiply(a, b))\n    a = 10\n    print(multiply(a, b))\n\nmain()\n\n15\n50\n100",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "more on Functions (class slides)"
-    ]
-  },
-  {
-    "objectID": "slides-03-01.html#write-functions-solutions-1",
-    "href": "slides-03-01.html#write-functions-solutions-1",
-    "title": "more on Functions (class slides)",
-    "section": "Write functions – solutions 1",
-    "text": "Write functions – solutions 1\n\ndef sphere_area(radius):\n  \"calculates the area of a sphere of given radius\"\n  area = 4 * 3.1415 * radius**2\n  return round(area, 2)\n\ndef sphere_volume(radius):\n  \"calculates the volume of a sphere of given radius\"\n  volume = (4 / 3) * 3.1415 * radius**3\n  return round(volume, 2)\n\ndef main():\n  r = .75\n  v = sphere_volume(r)\n  a = sphere_area(r)\n  print(v, a)\n\nmain()\n\n1.77 7.07",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "more on Functions (class slides)"
-    ]
-  },
-  {
-    "objectID": "slides-03-01.html#write-functions-1",
-    "href": "slides-03-01.html#write-functions-1",
-    "title": "more on Functions (class slides)",
-    "section": "Write functions",
-    "text": "Write functions\nComparing two formulas: \\[\na = 4 \\cdot \\pi \\cdot radius^2\n\\]\n\\[\nv = {4 / 3} \\cdot \\pi \\cdot radius^3\n\\] We can use area when calculating volume: \\[\nv = {1 / 3} \\cdot a \\cdot radius\n\\]\nModify your sphere_volume function by calling sphere_area inside the function.",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "more on Functions (class slides)"
-    ]
-  },
-  {
-    "objectID": "slides-03-01.html#write-functions-solutions-2",
-    "href": "slides-03-01.html#write-functions-solutions-2",
-    "title": "more on Functions (class slides)",
-    "section": "Write functions – solutions 2",
-    "text": "Write functions – solutions 2\n\ndef sphere_area(radius):\n  \"calculates the area of a sphere of given radius\"\n  area = 4 * 3.1415 * radius**2\n  return round(area, 2)\n\n\ndef sphere_volume(radius):\n  \"calculates the volume of a sphere of given radius\"\n  volume = (1 / 3) * sphere_area(radius) * radius\n  return round(volume, 2)\n\n\ndef main():\n  r = .75\n  v = sphere_volume(r)\n  a = sphere_area(r)\n  print(v, a)\n\nmain()\n\n1.77 7.07",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "more on Functions (class slides)"
-    ]
-  },
-  {
-    "objectID": "slides-03-03.html#class-activity-two-answer",
-    "href": "slides-03-03.html#class-activity-two-answer",
-    "title": "more on decomposition (slides)",
-    "section": "Class activity two – answer",
-    "text": "Class activity two – answer\nRead the code and write the questions:\n\nwhich lines of code are similar?\n\nline 2-4, line 6-8, line 10-12\n\nwhich lines of code are unique?\n\nline 1, line 14-15",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "more on decomposition (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-03-03.html#class-activity-three",
-    "href": "slides-03-03.html#class-activity-three",
-    "title": "more on decomposition (slides)",
-    "section": "Class activity three",
-    "text": "Class activity three\nFor line 2-4, line 6-8, line 10-12:\n\nwhich lines can be grouped together into a function?\nwhat does the function do?",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "more on decomposition (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-03-03.html#class-activity-three-1",
-    "href": "slides-03-03.html#class-activity-three-1",
-    "title": "more on decomposition (slides)",
-    "section": "Class activity three",
-    "text": "Class activity three\nFor line 2-4, line 6-8, line 10-12:\n\nwhich lines can be grouped together into a function?\n\nline 2, 6 and 10\nline 3, 7 and 11\nline 4, 8 and 12\n\nwhat does the function do?",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "more on decomposition (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-03-03.html#class-activity-two-answers",
-    "href": "slides-03-03.html#class-activity-two-answers",
-    "title": "more on decomposition (slides)",
-    "section": "Class activity two – answers",
-    "text": "Class activity two – answers\nRead the code and write the questions:\n\nwhich lines of code are similar?\n\nline 2-4, line 6-8, line 10-12\n\nwhich lines of code are unique?\n\nline 1, line 14-15",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "more on decomposition (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-03-03.html#class-activity-two-answers-continued",
-    "href": "slides-03-03.html#class-activity-two-answers-continued",
-    "title": "more on decomposition (slides)",
-    "section": "Class activity two – answers continued",
-    "text": "Class activity two – answers continued\nwhich lines can be grouped together into a function?\n\nline 2, 6 and 10; line 3, 7 and 11; line 4, 8 and 12.\n\nGiven the length of a cube and a side of a box:\n\nit prompts the user to type the length of side\nit calculate the number of cubes that can fit into the side\nit print a message",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "more on decomposition (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-03-03.html#activity-two-answers",
-    "href": "slides-03-03.html#activity-two-answers",
-    "title": "more on decomposition (slides)",
-    "section": "Activity two – answers",
-    "text": "Activity two – answers\nRead the code and write the questions:\n\nwhich lines of code are similar?\n\nline 2-4, line 6-8, line 10-12\n\nwhich lines of code are unique?\n\nline 1, line 14-15",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "more on decomposition (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-03-03.html#activity-two-answers-continued",
-    "href": "slides-03-03.html#activity-two-answers-continued",
-    "title": "more on decomposition (slides)",
-    "section": "Activity two – answers continued",
-    "text": "Activity two – answers continued\nGiven the length of a cube and the name of a box side:\n\nIt prompts you to the enter the length of the side\nIt calculates the number of cube that can fit in the side\nIt print the message and return the number.",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "more on decomposition (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-03-03.html#activity-two",
-    "href": "slides-03-03.html#activity-two",
-    "title": "more on decomposition (slides)",
-    "section": "Activity two",
-    "text": "Activity two\nRead the code and write the questions:\n\nwhich lines of code are similar?\nwhich lines of code are unique?\nwhich lines can be grouped together into a function? what does the function do?",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "more on decomposition (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-03-03.html#activity-two-answers-continued-1",
-    "href": "slides-03-03.html#activity-two-answers-continued-1",
-    "title": "more on decomposition (slides)",
-    "section": "Activity two – answers continued",
-    "text": "Activity two – answers continued\nGiven the length of a cube and the name of a box side:\n\nIt prompts you to the enter the length of the side\nIt calculates the number of cube that can fit in the side\nIt print the message and return the number.",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "more on decomposition (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-03-03.html#activity-two-continued",
-    "href": "slides-03-03.html#activity-two-continued",
-    "title": "more on decomposition (slides)",
-    "section": "Activity two – continued",
-    "text": "Activity two – continued\nWhich lines can be grouped together into a function?\n\nline 2, 6, 10:\n\n\nbox_w = int(input(\"Box width? \")) \n\nfit_w = box_w // cube_len\n\nprint(str(fit_w) + \" Rubik's cubes will fit width-wise.\")\n\nWhat are the parameters of this function? In other words, what information must be known beforehand?",
-    "crumbs": [
-      "Module 3 - More on Functions and Decomposition",
-      "more on decomposition (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-04-01.html#review-of-operations",
-    "href": "slides-04-01.html#review-of-operations",
-    "title": "more expressions (slides)",
-    "section": "Review of operations",
-    "text": "Review of operations\n\n+ : plus\n- : minus\n* : multiple\n/ : divide\n** : power\n// : divide and floor\n% : modulos",
-    "crumbs": [
-      "Module 4 - Control Flow (if statements)",
-      "more expressions (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-04-01.html#review-of-arithmetic-operations",
-    "href": "slides-04-01.html#review-of-arithmetic-operations",
-    "title": "more expressions (slides)",
-    "section": "Review of arithmetic operations",
-    "text": "Review of arithmetic operations\n\n+ : plus\n- : minus\n* : multiple\n/ : divide\n** : power\n// : divide and floor\n% : modulos",
-    "crumbs": [
-      "Module 4 - Control Flow (if statements)",
-      "more expressions (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-04-02.html#quiz-04",
-    "href": "slides-04-02.html#quiz-04",
-    "title": "if statements (slides)",
-    "section": "Quiz 04",
-    "text": "Quiz 04\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.\nNo need to write main() function.",
-    "crumbs": [
-      "Module 4 - Control Flow (if statements)",
-      "if statements (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-04-03.html#compare-the-functions",
-    "href": "slides-04-03.html#compare-the-functions",
-    "title": "if elif else statements (slides)",
-    "section": "Compare the functions",
-    "text": "Compare the functions\n\ndef func_one(a):\n  message = \"\"\n  if a &gt;= 18:\n    message += 'You may apply to join the military.'\n  if a &gt;= 35:  # independent from a &gt;= 18\n    message += ' You may run for president.'\n  return message\n\ndef func_two(a):\n  message = \"\"\n  if a &gt;= 18:\n    message += 'You may apply to join the military.'\n  elif a &gt;= 35:  # only runs when a &gt;= 18 is False\n    message += ' You may run for president.'\n  return message\n\ndef main():\n  print(func_one(40))\n  print(func_two(40))\n  \nmain()\n\nYou may apply to join the military. You may run for president.\nYou may apply to join the military.",
-    "crumbs": [
-      "Module 4 - Control Flow (if statements)",
-      "if elif else statements (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-05-01.html#while-loops-table",
-    "href": "slides-05-01.html#while-loops-table",
-    "title": "while loop intro (slides)",
-    "section": "while loops table",
-    "text": "while loops table\nConsider n = 5, start with result = 1, current = 1:\n\n\n\ncurrent &lt;= 5\nresult = result * current\ncurrent += 1\n\n\n\n\nTrue\nresult = 1 * 1\ncurrent = 1 + 1\n\n\nTrue\nresult = 1 * 2\ncurrent = 2 + 1\n\n\nTrue\nresult = 2 * 3\ncurrent = 3 + 1\n\n\nTrue\nresult = 6 * 4\ncurrent = 4 + 1\n\n\nTrue\nresult = 24 * 5\ncurrent = 5 + 1\n\n\nFalse\n-\n-",
-    "crumbs": [
-      "Module 5 - Control Flow (while statements)",
-      "while loop intro (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-05-02.html#write-your-own-is_numeric",
-    "href": "slides-05-02.html#write-your-own-is_numeric",
-    "title": "loops + strings (slides)",
-    "section": "Write your own is_numeric()",
-    "text": "Write your own is_numeric()\nFunction name is_numeric that takes one string argument of any length (assume length &gt; 0).\nIt returns True if every character in the argument is a digit (0-9) or a period (.), False otherwise.\nUse in operator instead of built-in function isnumeric().\n\nassert is_numeric(\"95\") == True\nassert is_numeric(\"1090\") == True\nassert is_numeric(\"10a\") == False\nassert is_numeric(\"12.5\") == True",
-    "crumbs": [
-      "Module 5 - Control Flow (while statements)",
-      "loops + strings (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-05-02.html#write-your-own-is_numeric-1",
-    "href": "slides-05-02.html#write-your-own-is_numeric-1",
-    "title": "loops + strings (slides)",
-    "section": "Write your own is_numeric()",
-    "text": "Write your own is_numeric()\nFunction name is_numeric that takes one string argument of any length (assume length &gt; 0).\nIt returns True if every character in the argument is a digit (0-9) or a period (.), False otherwise.\nUse in operator instead of built-in function isnumeric().\n\nassert is_numeric(\"95\") == True\nassert is_numeric(\"1090\") == True\nassert is_numeric(\"10a\") == False\nassert is_numeric(\"12.5\") == True",
-    "crumbs": [
-      "Module 5 - Control Flow (while statements)",
-      "loops + strings (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-05-02.html#question",
-    "href": "slides-05-02.html#question",
-    "title": "loops + strings (slides)",
-    "section": "Question",
-    "text": "Question\nHow to check if a string can be converted to an integer or float?\n\n\"BladeRunner2049\" will return False\n\"2049\" will return True\n\"12.5\" will return True",
-    "crumbs": [
-      "Module 5 - Control Flow (while statements)",
-      "loops + strings (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-05-02.html#question-1",
-    "href": "slides-05-02.html#question-1",
-    "title": "loops + strings (slides)",
-    "section": "Question",
-    "text": "Question\nHow to check if a string can be converted to an integer or float?\nCan we use the string method.isnumeric()?\n\nuser_input = \"BladeRunner2049\"\nuser_input.isnumeric()\n\nFalse\n\n\n\nuser_input = \"2049\"\nuser_input.isnumeric()\n\nTrue\n\n\n\nuser_input = \"12.5\"\nuser_input.isnumeric()\n\nFalse",
-    "crumbs": [
-      "Module 5 - Control Flow (while statements)",
-      "loops + strings (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-05-02.html#iterating-a-string",
-    "href": "slides-05-02.html#iterating-a-string",
-    "title": "loops + strings (slides)",
-    "section": "Iterating a string",
-    "text": "Iterating a string\n\nOne technique that can be used to control the number of loop iterations is using an index variable\nFor while loops, an index variable is:\n\nDefined before the loop\nUsed in the condition of the loop\nIncremented within the loop",
-    "crumbs": [
-      "Module 5 - Control Flow (while statements)",
-      "loops + strings (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-05-02.html#iterating-a-string-1",
-    "href": "slides-05-02.html#iterating-a-string-1",
-    "title": "loops + strings (slides)",
-    "section": "Iterating a string",
-    "text": "Iterating a string\nPrint characters at even indices.\n\nword = \"BladeRunner2049\"\nindex = 0\nwhile index &lt; len(word):\n    print(word[index])\n    # Can add other lines here too\n    index = index + 2\n\nB\na\ne\nu\nn\nr\n0\n9",
-    "crumbs": [
-      "Module 5 - Control Flow (while statements)",
-      "loops + strings (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-05-02.html#write-your-own-and-better-is_numeric",
-    "href": "slides-05-02.html#write-your-own-and-better-is_numeric",
-    "title": "loops + strings (slides)",
-    "section": "Write your own (and better) is_numeric()",
-    "text": "Write your own (and better) is_numeric()\nFunction name is_numeric that takes one string argument of any length (assume length &gt; 0).\nIt returns True if every character in the argument is a digit (0-9) or a period (.), False otherwise.\nUse in operator instead of built-in function isnumeric().\n\nassert is_numeric(\"95\") == True\nassert is_numeric(\"1090\") == True\nassert is_numeric(\"10a\") == False\nassert is_numeric(\"12.5\") == True",
-    "crumbs": [
-      "Module 5 - Control Flow (while statements)",
-      "loops + strings (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-06-01.html#announcement",
-    "href": "slides-06-01.html#announcement",
-    "title": "lists (slides)",
-    "section": "Announcement",
-    "text": "Announcement\nReview session tomorrow (Tuesday, Feb 18)\n\nLocation: Gittings 129b\nTime: 5 - 7 : 00 pm",
-    "crumbs": [
-      "Module 6 - Data Structures (lists)",
-      "lists (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-06-01.html#updating-lists",
-    "href": "slides-06-01.html#updating-lists",
-    "title": "lists (slides)",
-    "section": "Updating lists",
-    "text": "Updating lists\n\nnames = ['SZA', 'JVKE', 'Bruno Mars']\n\n# mutate list using the index\nnames[1] = \"Billie Eilish\"\n\nnames\n\n['SZA', 'Billie Eilish', 'Bruno Mars']",
-    "crumbs": [
-      "Module 6 - Data Structures (lists)",
-      "lists (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-07-01.html#write-a-function-solution-2-1",
-    "href": "slides-07-01.html#write-a-function-solution-2-1",
-    "title": "mutability (slides)",
-    "section": "Write a function – solution 2",
-    "text": "Write a function – solution 2\n\ndef make_even(integers):\n  index = 0\n  while index &lt; len(integers):\n    integers[index] += integers[index] % 2\n    index += 1\n      \ndef main():\n  test_integers = [1, 2, 3, 4]\n  make_even(test_integers)\n  assert test_integers == [2, 2, 4, 4]\n  \nmain()\n\nIf we remove the return statement on line 6, will the function still work properly? Yes!",
-    "crumbs": [
-      "Module 7 - Control Flow (for statements)",
-      "mutability (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-07-01.html#pop-and-while-loop",
-    "href": "slides-07-01.html#pop-and-while-loop",
-    "title": "mutability (slides)",
-    "section": ".pop() and while loop",
-    "text": ".pop() and while loop\nPop all the items using a while loop:\n\nsongs = [\"Lavender Haze\", \"Calm Down\", \"As It Was\", \"Her\"]\nindex = 0\nwhile index &lt; len(songs):\n  songs.pop(index)\n  \nprint(songs)\n\n[]",
-    "crumbs": [
-      "Module 7 - Control Flow (for statements)",
-      "mutability (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-07-01.html#pop-items-using-while-loop",
-    "href": "slides-07-01.html#pop-items-using-while-loop",
-    "title": "mutability (slides)",
-    "section": ".pop() items using while loop",
-    "text": ".pop() items using while loop\n\nsongs = [\"Lavender Haze\", \"Calm Down\", \"As It Was\", \"Her\"]\nindex = 0\nwhile index &lt; len(songs):\n  songs.pop(index)\n  \nprint(songs)\n\n[]\n\n\nWhy we don’t update index in the while loop?",
-    "crumbs": [
-      "Module 7 - Control Flow (for statements)",
-      "mutability (slides)"
-    ]
-  },
-  {
-    "objectID": "slides-08-02.html#a-note-on-lists",
-    "href": "slides-08-02.html#a-note-on-lists",
-    "title": "for loops – iterating over items (slides)",
-    "section": "A Note on Lists",
-    "text": "A Note on Lists\nfor i in range(len(list)): VS. for x in list:\n\nUse option 1 if you want to mutate the list.\n\n\nnumbers = [2, 1, 4]\nfor i in range(len(numbers)):\n  numbers[i] += 1\nnumbers\n\n[3, 2, 5]\n\n\n\nUse either options if you only need to get the values.\n\n\nnumbers = [2, 1, 4]\nfor n in numbers:\n  print(n)\n\n2\n1\n4",
-    "crumbs": [
-      "Module 8 - Data Structures (dictionaries)",
-      "for loops -- iterating over items (slides)"
     ]
   }
 ]
