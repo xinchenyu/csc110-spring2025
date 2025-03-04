@@ -46,37 +46,14 @@ for n in numbers:
 
 ## Write a function
 
-Modify your `count_vowels` and `count_chars` functions.
+Modify your `count_chars` function.
 Use `for x in string` instead of `for x in range(len(string))`.
 
 ```{python}
 #| eval: false
 #| echo: true
-assert count_vowels("") == {"a": 0, "e": 0, "i": 0, "o": 0, "u": 0}
-assert count_vowels("banana") == {"a": 3, "e": 0, "i": 0, "o": 0, "u": 0}
 assert count_chars("") == {}
 assert count_chars("banana") == {"b": 1, "a": 3, "n": 2}
-```
-
-## Write a function -- solution
-
-```{python}
-#| eval: true
-#| echo: true
-def count_vowels(string):
-  counts = {"a": 0, "e": 0, "i": 0, "o": 0, "u": 0}
-  for char in string:
-    if char in counts:
-      counts[char] += 1
-  return counts
-
-def main():
-  assert count_vowels("") == {"a": 0, "e": 0, "i": 0, "o": 0, "u": 0}
-  assert count_vowels("banana") == {"a": 3, "e": 0, "i": 0, "o": 0, "u": 0}
-  print("Passed all tests.")
-  
-main()
-    
 ```
 
 
@@ -103,6 +80,184 @@ def main():
 main()
 ```
 
+## A Note on two methods
+
+`for i in range(len(list)):` VS. `for x in list:`
+
+-   Mutate the list: `option 1` (need to use index `i` to mutate)
+
+```{python}
+#| echo: true
+#| eval: true
+numbers = [2, 1, 4]
+for i in range(len(numbers)):
+  numbers[i] += 1
+numbers
+```
+
+-   Get the values: `both options`
+
+```{python}
+#| echo: true
+#| eval: true
+numbers = [2, 1, 4]
+for n in numbers:
+  print(n)
+```
+
+
+## Write a function
+
+It returns a dictionary that maps each negative value in `numbers` to its frequency in `numbers`.
+
+```{python}
+#| eval: false
+#| echo: true
+assert tally_negatives([1, -2, 0, -4, -2]) == {-2: 2, -4: 1}
+assert tally_negatives([]) == {}
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def tally_negatives(numbers):
+  tally = {}
+  for n in numbers:
+    if n < 0:
+      if n not in tally:
+        tally[n] = 0
+      tally[n] += 1
+  return tally
+
+def main():
+  assert tally_negatives([1, -2, 0, -4, -2]) == {-2: 2, -4: 1}
+  assert tally_negatives([]) == {}
+  print("Passed all tests.")
+  
+main()
+```
+
+
+## Iterating a dictionary 
+
+Iterating keys: 
+```{python}
+#| eval: true
+#| echo: true
+scores = {'A': 10, 'B': 25, 'C': 27, 'D': 10}
+for key in scores:
+  print(key)
+```
+
+Another option: `dict.keys()`:
+```{python}
+#| eval: true
+#| echo: true
+scores = {'A': 10, 'B': 25, 'C': 27, 'D': 10}
+for key in scores.keys():
+  print(key)
+```
+
+## Iterating a dictionary 
+
+Iterating values: `dict.values()`:
+```{python}
+#| eval: true
+#| echo: true
+scores = {'A': 10, 'B': 25, 'C': 27, 'D': 10}
+for value in scores.values():
+  print(value)
+```
+
+Iterating both keys and values: `dict.items()`
+```{python}
+#| eval: true
+#| echo: true
+scores = {'A': 10, 'B': 25, 'C': 27, 'D': 10}
+for key, value in scores.items():
+  print(key, value)
+```
+
+
+## Write a function
+
+It returns a list with all the keys and values in the `dictionary`.
+
+Test cases:
+
+```{python}
+#| eval: false
+#| echo: true
+assert keys_and_values({'A': 10, 'B': 25, 'C': 27, 'D': 10, 'E': 5}) == \
+    ['A', 10, 'B', 25, 'C', 27, 'D', 10, 'E', 5]
+```
+
+## Write a function -- solution
+
+```{python}
+#| eval: true
+#| echo: true
+def keys_and_values(dictionary):
+  new_list = []
+  for key, value in dictionary.items():
+    new_list.append(key)
+    new_list.append(value)
+  return new_list
+
+def main():
+  assert keys_and_values({'A': 10, 'B': 25, 'C': 27, 'D': 10, 'E': 5}) == ['A', 10, 'B', 25, 'C', 27, 'D', 10, 'E', 5]
+  
+main()
+```
+
+## Quiz 07
+
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+</center>
+
+You have 10 minutes to complete the quiz.
+
+No need to write `main()` function.
+
+## Write a function
+
+It mutates `dict_1`, by adding to it all key-values pairs in `dict_2`. If a key is in both dictionaries, the values are added.
+
+
+Test cases:
+
+```{python}
+#| echo: true
+#| eval: false
+dict_1 = {"a": 20, "e": 5}
+dict_2 = {"e": 10, "i": 2}
+assert merge_dictionaries(dict_1, dict_2) == {"a": 20, "e": 15, "i": 2}
+```
+
+## Write a function -- solution
+
+```{python}
+#| echo: true
+#| eval: true
+def merge_dictionaries(dict_1, dict_2):
+  for key, value in dict_2.items():
+    if key in dict_1:
+      dict_1[key] += value
+    else:
+      dict_1[key] = value
+  return dict_1
+      
+def main():
+  dict_1 = {"a": 20, "e": 5}
+  dict_2 = {"e": 10, "i": 2}
+  assert merge_dictionaries(dict_1, dict_2) == {"a": 20, "e": 15, "i": 2}
+  
+main()
+```
 
 ## Write a function
 
@@ -140,220 +295,3 @@ def main():
   
 main()
 ```
-
-## A Note on Lists
-
-`for i in range(len(list)):` VS. `for x in list:`
-
--   Use option 1 if you want to mutate the list.
-
-```{python}
-#| echo: true
-#| eval: true
-numbers = [2, 1, 4]
-for i in range(len(numbers)):
-  numbers[i] += 1
-numbers
-```
-
--   Use either options if you only need to get the values.
-
-```{python}
-#| echo: true
-#| eval: true
-numbers = [2, 1, 4]
-for n in numbers:
-  print(n)
-```
-
-## Quiz 07
-
-<center>
-<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
-<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
-</center>
-
-You have 10 minutes to complete the quiz.
-
-No need to write `main()` function.
-
-## Write a function
-
-1. Its name is `tally_negatives`
-1. It takes a list of `numbers` as argument
-1. It returns a dictionary that maps each negative value in `numbers` to its frequency in `numbers`
-
-Name your file as `tally_negatives.py` and submit to gradescope. Test cases:
-
-```{python}
-#| eval: false
-#| echo: true
-assert  tally_negatives([1, -2, 0, -4, -2]) == {-2: 2, -4: 1}
-assert tally_negatives([]) == {}
-```
-
-## Write a function -- solution
-
-```{python}
-#| eval: true
-#| echo: true
-def tally_negatives(numbers):
-  tally = {}
-  for n in numbers:
-    if n < 0:
-      if n not in tally:
-        tally[n] = 0
-      tally[n] += 1
-  return tally
-
-def main():
-  assert  tally_negatives([1, -2, 0, -4, -2]) == {-2: 2, -4: 1}
-  assert tally_negatives([]) == {}
-  print("Passed all tests.")
-  
-main()
-```
-
-
-## What happens when we do `for k in dictionary:`
-
-```{python}
-#| eval: true
-#| echo: true
-scores = {'A': 10, 'B': 25, 'C': 27, 'D': 10, 'E': 5}
-for key in scores:
-  print(key)
-```
-
-## Methods for dictionaries
-
-We can use `.values()` to get only the values in a dictionary:
-
-```{python}
-#| eval: true
-#| echo: true
-scores = {'A': 10, 'B': 25, 'C': 27, 'D': 10, 'E': 5}
-scores.values()
-```
-
-We can use `.keys()` to get only the keys in a dictionary:
-
-```{python}
-#| eval: true
-#| echo: true
-scores = {'A': 10, 'B': 25, 'C': 27, 'D': 10, 'E': 5}
-scores.keys()
-```
-
-We can use `.items()` to get tuples for keys and values:
-
-```{python}
-#| eval: true
-#| echo: true
-scores = {'A': 10, 'B': 25, 'C': 27, 'D': 10, 'E': 5}
-scores.items()
-```
-
-## `for x in list`
-
-```{python}
-#| eval: true
-#| echo: true
-scores = {'A': 10, 'B': 25, 'C': 27, 'D': 10, 'E': 5}
-for value in scores.values():
-  print(value)
-```
-
-
-```{python}
-#| eval: true
-#| echo: true
-scores = {'A': 10, 'B': 25, 'C': 27, 'D': 10, 'E': 5}
-for key in scores.keys():
-  print(key)
-```
-
-## `for key, value in dictionary.items()`
-
-```{python}
-#| eval: true
-#| echo: true
-scores = {'A': 10, 'B': 25, 'C': 27, 'D': 10, 'E': 5}
-for key, value in scores.items():
-  print(key, value)
-```
-
-
-## Write a function
-
-1. Its name is `keys_and_values`
-1. It takes a `dictionary` as argument
-1. It returns a list with all the keys and values in the `dictionary`
-
-Test cases:
-
-```{python}
-#| eval: false
-#| echo: true
-assert keys_and_values({'A': 10, 'B': 25, 'C': 27, 'D': 10, 'E': 5}) == \
-    ['A', 10, 'B', 25, 'C', 27, 'D', 10, 'E', 5]
-```
-
-## Write a function -- solution
-
-```{python}
-#| eval: true
-#| echo: true
-def keys_and_values(dictionary):
-  new_list = []
-  for key, value in dictionary.items():
-    new_list.append(key)
-    new_list.append(value)
-  return new_list
-
-def main():
-  assert keys_and_values({'A': 10, 'B': 25, 'C': 27, 'D': 10, 'E': 5}) == ['A', 10, 'B', 25, 'C', 27, 'D', 10, 'E', 5]
-  
-main()
-```
-
-## Write a function
-
-1. Its name is `merge_dictionaries`
-1. It takes two arguments: `dict_1` and `dict_2`
-1. It mutates `dict_1`, by adding to it all key-values pairs in `dict_2`
-1. If a key is in both dictionaries, the values are added
-1. Don't use `.update()`
-
-Test cases:
-
-```{python}
-#| echo: true
-#| eval: false
-dict_1 = {"a": 20, "e": 5}
-dict_2 = {"e": 10, "i": 2}
-assert merge_dictionaries(dict_1, dict_2) == {"a": 20, "e": 15, "i": 2}
-```
-
-## Write a function -- solution
-
-```{python}
-#| echo: true
-#| eval: true
-def merge_dictionaries(dict_1, dict_2):
-  for key, value in dict_2.items():
-    if key in dict_1:
-      dict_1[key] += value
-    else:
-      dict_1[key] = value
-  return dict_1
-      
-def main():
-  dict_1 = {"a": 20, "e": 5}
-  dict_2 = {"e": 10, "i": 2}
-  assert merge_dictionaries(dict_1, dict_2) == {"a": 20, "e": 15, "i": 2}
-  
-main()
-```
-
-
