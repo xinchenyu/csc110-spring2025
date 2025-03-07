@@ -8,6 +8,18 @@ df-print: kable
 
 # CSC -- Final exam review
 
+## Q & A session
+
+What questions should I ask?
+
+*   When you can't solve the problem without the solution
+*   When the solution doesn’t make sense to you
+*   When you don’t understand why points were deducted
+*   When you solve it in another way but not sure if it is correct
+
+We do not answer questions on projects due today.
+
+
 ## Announcements
 
 Final exam 
