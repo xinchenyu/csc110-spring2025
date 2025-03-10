@@ -5011,7 +5011,7 @@
     "href": "practice-01.html",
     "title": "Practice Problems",
     "section": "",
-    "text": "I’ve created a Google colab notebook with practice exercises, and test cases. Here are the instructions to use the notebook:\n\nAccess notebook on google colab – you need to be signed in with a google account\nIf a black screen shows up, click on the “open with Google colab” at the top of the screen\nRun the first chunk of code. No need to change it, just make sure you run it by hovering over the [ ] on the left upper corner of the code chunk and then pressing the ► button that appears\nScroll down and follow the instructions to write different functions. Make sure you run your code by hovering over the [ ] on the left upper corner of the code chunk and then pressing the ► button that appears\nRun the following chunk with the testing (the one that calls the pass_or_fail function)\n\nNotebooks:\n\nPractice Problems Module 2\nPractice Problems Module 3\nPractice Problems Module 4\nPractice Problems Module 5\n\nMidterm 1 (Modules 1-5) + Study Guide 1\n\nPractice Problems Module 6\nPractice Problems Module 7 I\nPractice Problems Module 7 II\nExtra Practice Problems\nPractice Problems Module 7\nPractice Problems Module 8 I\nPractice Problems Module 8 II \nPractice Problems Module 9\nPractice Problems Module 10\nPractice Problems Module 11\nPractice Problems Module 11\nPractice Problems Module 12 \nPractice Problems Module 13\nPractice problems Module 13\nPractice Problems Module 14\n\n\nVideo demonstration\n\n\n\nSolutions\nI highly recommend you do not look at the solutions before you try writing the practice functions yourself. Once you wrote your functions, you can compare yours with my solutions:\n\nSolutions for practice problems Module 2\nSolutions for practice problems Module 3\nSolutions for practice problems Module 4\nSolutions for practice problems Module 5\nSolutions for practice problems Module 6\nSolutions for practice problems Module 7 I\nSolutions for practice problems Module 7 II\nSolutions for practice problems\nSolutions for practice problems Module 7 III\nSolutions for practice problems Module 8 I\nSolutions for practice problems Module 8 II\nSolutions for practice problems Module 9\nSolutions for practice problems Module 10\nSolutions for practice problems Module 11\nSolutions for practice problems Module 11\n[Solutions for practice problems Module 12\nSolutions for practice problems Module 13\nSolutions for practice problems Module 13 II\nSolutions for practice problems Module 14",
+    "text": "I’ve created a Google colab notebook with practice exercises, and test cases. Here are the instructions to use the notebook:\n\nAccess notebook on google colab – you need to be signed in with a google account\nIf a black screen shows up, click on the “open with Google colab” at the top of the screen\nRun the first chunk of code. No need to change it, just make sure you run it by hovering over the [ ] on the left upper corner of the code chunk and then pressing the ► button that appears\nScroll down and follow the instructions to write different functions. Make sure you run your code by hovering over the [ ] on the left upper corner of the code chunk and then pressing the ► button that appears\nRun the following chunk with the testing (the one that calls the pass_or_fail function)\n\nNotebooks:\n\nPractice Problems Module 2\nPractice Problems Module 3\nPractice Problems Module 4\nPractice Problems Module 5\n\nMidterm 1 (Modules 1-5) + Study Guide 1\n\nPractice Problems Module 6\nPractice Problems Module 7 I\nPractice Problems Module 7 II\nExtra Practice Problems\nPractice Problems Module 7\nPractice Problems Module 8 I\nPractice Problems Module 8 II\n\nMidterm 2 (Modules 1-8) + Study Guide 2\n\nPractice Problems Module 9\nPractice Problems Module 10\nPractice Problems Module 11\nPractice Problems Module 11\nPractice Problems Module 12 \nPractice Problems Module 13\nPractice problems Module 13\nPractice Problems Module 14\n\n\nVideo demonstration\n\n\n\nSolutions\nI highly recommend you do not look at the solutions before you try writing the practice functions yourself. Once you wrote your functions, you can compare yours with my solutions:\n\nSolutions for practice problems Module 2\nSolutions for practice problems Module 3\nSolutions for practice problems Module 4\nSolutions for practice problems Module 5\nSolutions for practice problems Module 6\nSolutions for practice problems Module 7 I\nSolutions for practice problems Module 7 II\nSolutions for practice problems\nSolutions for practice problems Module 7 III\nSolutions for practice problems Module 8 I\nSolutions for practice problems Module 8 II\nSolutions for practice problems Module 9\nSolutions for practice problems Module 10\nSolutions for practice problems Module 11\nSolutions for practice problems Module 11\n[Solutions for practice problems Module 12\nSolutions for practice problems Module 13\nSolutions for practice problems Module 13 II\nSolutions for practice problems Module 14",
     "crumbs": [
       "Extra Resources",
       "Practice Problems"
@@ -6767,7 +6767,7 @@
     "href": "slides-08-02.html#write-a-function-4",
     "title": "for loops – iterating over items (slides)",
     "section": "Write a function",
-    "text": "Write a function\nIt returns the highest value in the numbers.\nUse for x in list:\nTest cases:\n\nassert max_list([]) == None\nassert max_list([2, 2, 1]) == 2\nassert max_list([1, -3]) == 1",
+    "text": "Write a function\nIt mutate the list, multiply every number by 2. It returns the highest value in the mutated list.\nTest cases:\n\nassert max_list([2, 2, 1]) == 4\nassert max_list([5, 2, 1]) == 10\nassert max_list([]) == None",
     "crumbs": [
       "Module 8 - Data Structures (dictionaries)",
       "for loops -- iterating over items (slides)"
@@ -8821,6 +8821,61 @@
     "crumbs": [
       "Module 16 - Review",
       "final exam review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-08-02.html#write-a-function-solution-1-1",
+    "href": "slides-08-02.html#write-a-function-solution-1-1",
+    "title": "for loops – iterating over items (slides)",
+    "section": "Write a function – solution 1",
+    "text": "Write a function – solution 1\n\ndef max_list(numbers):\n    max = None\n    for i in range(len(numbers)):\n        numbers[i] *= 2\n    for n in numbers:\n        if max == None or n &gt; max:\n            max =  n\n    return max\n\ndef main():\n  assert max_list([2, 2, 1]) == 4\n  assert max_list([5, 2, 1]) == 10\n  assert max_list([]) == None\n  print(\"pass\")\n  \nmain()\n\npass",
+    "crumbs": [
+      "Module 8 - Data Structures (dictionaries)",
+      "for loops -- iterating over items (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-08-02.html#write-a-function-solution-2-1",
+    "href": "slides-08-02.html#write-a-function-solution-2-1",
+    "title": "for loops – iterating over items (slides)",
+    "section": "Write a function – solution 2",
+    "text": "Write a function – solution 2\n\ndef max_list(numbers):\n    max = None\n    for i in range(len(numbers)):\n        numbers[i] *= 2\n        if max == None or numbers[i] &gt; max:\n            max = numbers[i]\n    return max\n\ndef main():\n  assert max_list([2, 2, 1]) == 4\n  assert max_list([5, 2, 1]) == 10\n  assert max_list([]) == None\n  print(\"pass\")\n  \nmain()\n\npass",
+    "crumbs": [
+      "Module 8 - Data Structures (dictionaries)",
+      "for loops -- iterating over items (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-08-02.html#write-a-function-solution-1-continued",
+    "href": "slides-08-02.html#write-a-function-solution-1-continued",
+    "title": "for loops – iterating over items (slides)",
+    "section": "Write a function – solution 1 continued",
+    "text": "Write a function – solution 1 continued\n\nline 3: can we use for x in list?\nline 5: can we use for i in range(len(list))?\n\n\ndef max_list(numbers):\n    max = None\n    for i in range(len(numbers)):\n        numbers[i] *= 2\n    for n in numbers:\n        if max == None or n &gt; max:\n            max =  n\n    return max",
+    "crumbs": [
+      "Module 8 - Data Structures (dictionaries)",
+      "for loops -- iterating over items (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-08-02.html#write-a-function-solution-1-continue",
+    "href": "slides-08-02.html#write-a-function-solution-1-continue",
+    "title": "for loops – iterating over items (slides)",
+    "section": "Write a function – solution 1 continue",
+    "text": "Write a function – solution 1 continue\n\nline 3: can we use for x in list?\nline 5: can we use for i in range(len(list))?\n\n\ndef max_list(numbers):\n    max = None\n    for i in range(len(numbers)):\n        numbers[i] *= 2\n    for n in numbers:\n        if max == None or n &gt; max:\n            max =  n\n    return max",
+    "crumbs": [
+      "Module 8 - Data Structures (dictionaries)",
+      "for loops -- iterating over items (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-08-02.html#write-a-function-solution-2-continue",
+    "href": "slides-08-02.html#write-a-function-solution-2-continue",
+    "title": "for loops – iterating over items (slides)",
+    "section": "Write a function – solution 2 continue",
+    "text": "Write a function – solution 2 continue\n\nline 3: can we use for x in list?\n\n\ndef max_list(numbers):\n    max = None\n    for i in range(len(numbers)):\n        numbers[i] *= 2\n        if max == None or numbers[i] &gt; max:\n            max = numbers[i]\n    return max",
+    "crumbs": [
+      "Module 8 - Data Structures (dictionaries)",
+      "for loops -- iterating over items (slides)"
     ]
   }
 ]
