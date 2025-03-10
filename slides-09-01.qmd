@@ -34,12 +34,14 @@ df-print: kable
 
 ## Absolute vs Relative path
 
-- A path describes a location.
-    -   */home/doc/example.txt*
     
 - An **absolute path** describes the location from the root directory. 
 
+  -   */home/doc/example.txt*
+
 - A **relative** path describes the location of a file relative to the current (working) directory.
+
+  -   if `.py` and `example.txt` are in the same folder, the relative path is the filename itself - *example.txt*
 
 ## Opening and closing a file
 
@@ -76,6 +78,7 @@ line = info.readline()
 info.close()
 
 print(line)
+assert line == "The quick brown fox\n"
 ```
 
 ## Reading three lines 
@@ -214,11 +217,11 @@ info.close()
 
 ## Write a function
 
-1.  Its name is `lines_and_words`
-2.  It takes a string called `file_name`
-3.  It opens the file with `file_name` in read mode
-4.  It iterates over the file's lines, splitting each line by space (remember to strip the line breaks)
-5.  It returns a list of lists, where each inner-list is a line containing all the words in that line
+-   It opens the file in read mode.
+
+-   It iterates over the lines, stripping the line breaks and splitting each line by space.
+
+-   It returns a list of lists, where each inner-list is a line containing all the words in that line
 
 Test case ([download text file](data/info.txt)):
 

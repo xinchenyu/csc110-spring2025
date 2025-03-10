@@ -4153,7 +4153,7 @@
     "href": "slides-09-01.html#absolute-vs-relative-path",
     "title": "files (slides)",
     "section": "Absolute vs Relative path",
-    "text": "Absolute vs Relative path\n\nA path describes a location.\n\n/home/doc/example.txt\n\nAn absolute path describes the location from the root directory.\nA relative path describes the location of a file relative to the current (working) directory.",
+    "text": "Absolute vs Relative path\n\nAn absolute path describes the location from the root directory.\n\n/home/doc/example.txt\n\nA relative path describes the location of a file relative to the current (working) directory.\n\nif .py and example.txt are in the same folder, the relative path is the filename itself - example.txt",
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files (slides)"
@@ -4175,7 +4175,7 @@
     "href": "slides-09-01.html#reading-a-line",
     "title": "files (slides)",
     "section": "Reading a line",
-    "text": "Reading a line\nUse info object and call readline()to read a line\nread_file.py\n\ninfo = open('info.txt', 'r')\nline = info.readline()\ninfo.close()\n\nprint(line)\n\nThe quick brown fox",
+    "text": "Reading a line\nUse info object and call readline()to read a line\nread_file.py\n\ninfo = open('info.txt', 'r')\nline = info.readline()\ninfo.close()\n\nprint(line)\nassert line == \"The quick brown fox\\n\"\n\nThe quick brown fox",
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files (slides)"
@@ -4274,7 +4274,7 @@
     "href": "slides-09-01.html#write-a-function-1",
     "title": "files (slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is lines_and_words\nIt takes a string called file_name\nIt opens the file with file_name in read mode\nIt iterates over the file’s lines, splitting each line by space (remember to strip the line breaks)\nIt returns a list of lists, where each inner-list is a line containing all the words in that line\n\nTest case (download text file):\n\nassert lines_and_words(\"info.txt\") == [ ['The', 'quick', 'brown', 'fox'], \n                                        ['jumped', 'over'], ['the', 'lazy'],\n                                        ['bear'], ['sitting', 'by', 'the', 'tree'] ]",
+    "text": "Write a function\n\nIt opens the file in read mode.\nIt iterates over the lines, stripping the line breaks and splitting each line by space.\nIt returns a list of lists, where each inner-list is a line containing all the words in that line\n\nTest case (download text file):\n\nassert lines_and_words(\"info.txt\") == [ ['The', 'quick', 'brown', 'fox'], \n                                        ['jumped', 'over'], ['the', 'lazy'],\n                                        ['bear'], ['sitting', 'by', 'the', 'tree'] ]",
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files (slides)"
