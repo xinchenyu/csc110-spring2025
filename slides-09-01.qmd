@@ -5,8 +5,34 @@ slide-number: true
 df-print: kable
 ---
 
-# CSc 110 - files
 
+## Announcements
+
+-   Midterm 2 on March 26, next Wednesday
+
+    - modules 1 - 8
+    
+    - [study guide 2](https://xinchenyu.github.io/csc110-spring2025/practice-01.html)
+
+## Key Concepts
+
+-   iterating a string/list/dictionary (+ if statements)
+
+    - while loop, for loops (two ways, difference?)
+    
+    -   draw a loop table
+
+-   purpose of iterating, for example:
+
+    -   mutate (list/dictionary methods)
+    
+    -   aggregate (e.g., sum, factorial)
+    
+    -   get max or min
+    
+    -   concatenate strings (string methods)
+
+# CSc 110 - files
 
 ## Files and file systems
 
