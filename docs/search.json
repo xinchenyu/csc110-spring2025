@@ -8982,7 +8982,7 @@
     "href": "slides-09-01.html#more-string-methods-1",
     "title": "files (slides)",
     "section": "More string methods",
-    "text": "More string methods\nWhat do the .strip() and .split(\" \") do?\n\ninfo = open('info.txt', 'r')\n\nline = info.readline()\nprint(line)\n\nline = line.strip(\"\\n\")\nprint(line)\n\nwords = line.split(\" \")\nprint(words)\n\ninfo.close()\n\nThe quick brown fox\n\nThe quick brown fox\n['The', 'quick', 'brown', 'fox']",
+    "text": "More string methods\n.strip() and .split(\" \")\n\ninfo = open('info.txt', 'r')\n\nline = info.readline()\nprint(line)\n\nline = line.strip(\"\\n\")\nprint(line)\n\nwords = line.split(\" \")\nprint(words)\n\ninfo.close()\n\nThe quick brown fox\n\nThe quick brown fox\n['The', 'quick', 'brown', 'fox']",
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files (slides)"
@@ -9005,6 +9005,28 @@
     "title": "files (slides)",
     "section": "Quiz 08",
     "text": "Quiz 08\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.\nNo need to write main() function.",
+    "crumbs": [
+      "Module 9 - Reading and Writing Text Files",
+      "files (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-09-01.html#more-string-methods-3",
+    "href": "slides-09-01.html#more-string-methods-3",
+    "title": "files (slides)",
+    "section": "More string methods",
+    "text": "More string methods\nUse only .strip():\n\nname = \"The-quick-brown-fox$\"\n\nprint(name.strip('$'))\n\nThe-quick-brown-fox\n\n\nUse .strip() and .split(\" \"):\n\nname = \"The-quick-brown-fox$\"\n\nprint(name.strip('$').split('-'))\n\n['The', 'quick', 'brown', 'fox']",
+    "crumbs": [
+      "Module 9 - Reading and Writing Text Files",
+      "files (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-09-01.html#write-your-code",
+    "href": "slides-09-01.html#write-your-code",
+    "title": "files (slides)",
+    "section": "Write your code",
+    "text": "Write your code\nUse .strip() and .split(\" \") to print a list: ['The', 'quick', 'brown', 'fox']\n\nname = \"The-quick-brown-fox$\"",
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files (slides)"

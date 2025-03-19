@@ -203,7 +203,7 @@ Here are some other useful string methods:
 
 ## More string methods
 
-What do the `.strip()` and `.split(" ")` do?
+`.strip()` and `.split(" ")`
 ```{python}
 #| eval: true
 #| echo: true
@@ -220,6 +220,17 @@ print(words)
 
 info.close()
 ```
+
+## Write your code
+
+Use `.strip()` and `.split(" ")` to print a list: `['The', 'quick', 'brown', 'fox']`
+
+```{python}
+#| eval: false
+#| echo: true
+name = "The-quick-brown-fox$"
+```
+
 
 ## More string methods
 
