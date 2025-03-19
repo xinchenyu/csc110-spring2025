@@ -201,44 +201,44 @@ Here are some other useful string methods:
 -   `string.strip(chars)` -- removes any of the characters in chars from the beginning or end of string, returns a string
 -   `string.split(chars)` -- splits string at the chars, returns a list
 
-## More string methods -- `.strip()`
+## More string methods
 
+What do the `.strip()` and `.split(" ")` do?
 ```{python}
 #| eval: true
 #| echo: true
 info = open('info.txt', 'r')
 
-first_line = info.readline()
-second_line = info.readline()
-print(first_line)
-print(second_line)
+line = info.readline()
+print(line)
 
+line = line.strip("\n")
+print(line)
 
-first_line = first_line.strip("\n")
-second_line = second_line.strip("\n")
-print(first_line)
-print(second_line)
+words = line.split(" ")
+print(words)
 
 info.close()
 ```
 
-## More string methods -- `.split(" ")`
+## More string methods
 
+Use only `.strip()`:
 ```{python}
 #| eval: true
 #| echo: true
-info = open('info.txt', 'r')
+name = "The-quick-brown-fox$"
 
-first_line = info.readline().strip("\n")
-second_line = info.readline().strip("\n")
+print(name.strip('$'))
+```
 
-first_line_words = first_line.split(" ")
-second_line_words = second_line.split(" ")
+Use `.strip()` and `.split(" ")`:
+```{python}
+#| eval: true
+#| echo: true
+name = "The-quick-brown-fox$"
 
-print(first_line_words)
-print(second_line_words)
-
-info.close()
+print(name.strip('$').split('-'))
 ```
 
 ## Write a function
@@ -283,9 +283,9 @@ main()
 
 ## Write a function
 
-1.  Its name is `count_words`
-2.  It takes a string `file_name` as argument
-3.  It returns a dictionary with word counts
+It takes a string `file_name` as argument and returns a dictionary with word counts.
+
+Use `str.lower()` to convert a string to lowercase. 
 
 Test case:
 
@@ -325,3 +325,13 @@ def main():
 main()
 ```
 
+## Quiz 08
+
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+</center>
+
+You have 10 minutes to complete the quiz.
+
+No need to write `main()` function.

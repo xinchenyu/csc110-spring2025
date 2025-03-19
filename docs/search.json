@@ -3713,7 +3713,7 @@
     "href": "slides-09-02.html#string-methods",
     "title": "files and strings (slides)",
     "section": "String methods",
-    "text": "String methods\n\nstring.strip(chars) – removes any of the characters in chars from the beginning or end of string, returns a string\nstring.split(chars) – splits string at the chars, returns a list\nstring.lower(string) – forces all characters to lowercase, returns a string",
+    "text": "String methods\n\nstring.strip(chars) – removes any of the characters in chars from the beginning or end of string, returns a string\nstring.split(chars) – splits string at the chars, returns a list\nstring.lower() – forces all characters to lowercase, returns a string",
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files and strings (slides)"
@@ -4252,7 +4252,7 @@
     "href": "slides-09-01.html#more-string-methods-.strip",
     "title": "files (slides)",
     "section": "More string methods – .strip()",
-    "text": "More string methods – .strip()\n\ninfo = open('info.txt', 'r')\n\nfirst_line = info.readline()\nsecond_line = info.readline()\nprint(first_line)\nprint(second_line)\n\n\nfirst_line = first_line.strip(\"\\n\")\nsecond_line = second_line.strip(\"\\n\")\nprint(first_line)\nprint(second_line)\n\ninfo.close()\n\nThe quick brown fox\n\njumped over\n\nThe quick brown fox\njumped over",
+    "text": "More string methods – .strip()\n\ninfo = open('info.txt', 'r')\n\nline = info.readline()\nprint(line)\n\nline = line.strip(\"\\n\")\nprint(line)\n\nwords = line.split(\" \")\nprint(words)\n\ninfo.close()\n\nThe quick brown fox\n\nThe quick brown fox\n['The', 'quick', 'brown', 'fox']",
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files (slides)"
@@ -4296,7 +4296,7 @@
     "href": "slides-09-01.html#write-a-function-2",
     "title": "files (slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is count_words\nIt takes a string file_name as argument\nIt returns a dictionary with word counts\n\nTest case:\n\nassert count_words(\"info.txt\") == {\"the\": 3, \"quick\": 1, \"brown\": 1,\n                                   \"fox\": 1 , \"jumped\": 1, \"over\": 1, \n                                   \"lazy\": 1, \"bear\": 1, \"sitting\": 1,\n                                   \"by\": 1, \"tree\": 1}",
+    "text": "Write a function\nIt takes a string file_name as argument and returns a dictionary with word counts.\nUse str.lower() to convert a string to lowercase.\nTest case:\n\nassert count_words(\"info.txt\") == {\"the\": 3, \"quick\": 1, \"brown\": 1,\n                                   \"fox\": 1 , \"jumped\": 1, \"over\": 1, \n                                   \"lazy\": 1, \"bear\": 1, \"sitting\": 1,\n                                   \"by\": 1, \"tree\": 1}",
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files (slides)"
@@ -8928,6 +8928,83 @@
     "title": "files (slides)",
     "section": "Key Concepts",
     "text": "Key Concepts\n\niterating a string/list/dictionary (+ if statements)\n\nwhile loop, for loops (two ways, difference?)\ndraw a loop table\n\npurpose of iterating, for example:\n\nmutate (list/dictionary methods)\naggregate (e.g., sum, factorial)\nget max or min\nconcatenate strings (string methods)",
+    "crumbs": [
+      "Module 9 - Reading and Writing Text Files",
+      "files (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-09-01.html#string-methods-.strip-and-.split",
+    "href": "slides-09-01.html#string-methods-.strip-and-.split",
+    "title": "files (slides)",
+    "section": "String methods – .strip() and .split(\" \")",
+    "text": "String methods – .strip() and .split(\" \")\n\ninfo = open('info.txt', 'r')\n\nline = info.readline()\nprint(line)\n\nline = line.strip(\"\\n\")\nprint(line)\n\nwords = line.split(\" \")\nprint(words)\n\ninfo.close()\n\nThe quick brown fox\n\nThe quick brown fox\n['The', 'quick', 'brown', 'fox']",
+    "crumbs": [
+      "Module 9 - Reading and Writing Text Files",
+      "files (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-09-01.html#combine-.split",
+    "href": "slides-09-01.html#combine-.split",
+    "title": "files (slides)",
+    "section": "Combine .split(\" \")",
+    "text": "Combine .split(\" \")\n\ninfo = open('info.txt', 'r')\n\nfirst_line = info.readline().strip(\"\\n\")\nsecond_line = info.readline().strip(\"\\n\")\n\nfirst_line_words = first_line.split(\" \")\nsecond_line_words = second_line.split(\" \")\n\nprint(first_line_words)\nprint(second_line_words)\n\ninfo.close()\n\n['The', 'quick', 'brown', 'fox']\n['jumped', 'over']",
+    "crumbs": [
+      "Module 9 - Reading and Writing Text Files",
+      "files (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-09-01.html#strip-and-.split",
+    "href": "slides-09-01.html#strip-and-.split",
+    "title": "files (slides)",
+    "section": ".strip() and .split(\" \")",
+    "text": ".strip() and .split(\" \")\nWhat do the .strip() and .split(\" \") do?\n\ninfo = open('info.txt', 'r')\n\nline = info.readline()\nprint(line)\n\nline = line.strip(\"\\n\")\nprint(line)\n\nwords = line.split(\" \")\nprint(words)\n\ninfo.close()\n\nThe quick brown fox\n\nThe quick brown fox\n['The', 'quick', 'brown', 'fox']",
+    "crumbs": [
+      "Module 9 - Reading and Writing Text Files",
+      "files (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-09-01.html#str.strip-and-str.split",
+    "href": "slides-09-01.html#str.strip-and-str.split",
+    "title": "files (slides)",
+    "section": "str.strip() and str.split(\" \")",
+    "text": "str.strip() and str.split(\" \")\n\ninfo = open('info.txt', 'r')\n\nline = info.readline()\nprint(line)\n\nline = line.strip(\"\\n\")\nprint(line)\n\nwords = line.split(\" \")\nprint(words)\n\ninfo.close()\n\nThe quick brown fox\n\nThe quick brown fox\n['The', 'quick', 'brown', 'fox']",
+    "crumbs": [
+      "Module 9 - Reading and Writing Text Files",
+      "files (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-09-01.html#more-string-methods-1",
+    "href": "slides-09-01.html#more-string-methods-1",
+    "title": "files (slides)",
+    "section": "More string methods",
+    "text": "More string methods\nWhat do the .strip() and .split(\" \") do?\n\ninfo = open('info.txt', 'r')\n\nline = info.readline()\nprint(line)\n\nline = line.strip(\"\\n\")\nprint(line)\n\nwords = line.split(\" \")\nprint(words)\n\ninfo.close()\n\nThe quick brown fox\n\nThe quick brown fox\n['The', 'quick', 'brown', 'fox']",
+    "crumbs": [
+      "Module 9 - Reading and Writing Text Files",
+      "files (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-09-01.html#more-string-methods-2",
+    "href": "slides-09-01.html#more-string-methods-2",
+    "title": "files (slides)",
+    "section": "More string methods",
+    "text": "More string methods\nUse only .strip():\n\nname = \"The-quick-brown-fox$\"\n\nprint(name.strip('$'))\n\nThe-quick-brown-fox\n\n\nUse .strip() and .split(\" \"):\n\nname = \"The-quick-brown-fox$\"\n\nprint(name.strip('$').split('-'))\n\n['The', 'quick', 'brown', 'fox']",
+    "crumbs": [
+      "Module 9 - Reading and Writing Text Files",
+      "files (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-09-01.html#quiz-08",
+    "href": "slides-09-01.html#quiz-08",
+    "title": "files (slides)",
+    "section": "Quiz 08",
+    "text": "Quiz 08\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.\nNo need to write main() function.",
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files (slides)"

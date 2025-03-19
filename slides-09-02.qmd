@@ -12,7 +12,7 @@ df-print: kable
 
 -   `string.strip(chars)` -- removes any of the characters in chars from the beginning or end of string, returns a string
 -   `string.split(chars)` -- splits string at the chars, returns a list
--   `string.lower(string)` -- forces all characters to lowercase, returns a string
+-   `string.lower()` -- forces all characters to lowercase, returns a string
 
 ## Write a function
 
