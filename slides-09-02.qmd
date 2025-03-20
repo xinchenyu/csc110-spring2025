@@ -7,21 +7,39 @@ df-print: kable
 
 # CSc 110 - files and strings
 
+## Review - iterating lines in a file
 
-## String methods
+```{python}
+#| eval: true
+#| echo: true
+info = open('info.txt', 'r')
+for line in info:
+    print(line)
+info.close()
+```
+
+
+## Review - string methods
 
 -   `string.strip(chars)` -- removes any of the characters in chars from the beginning or end of string, returns a string
 -   `string.split(chars)` -- splits string at the chars, returns a list
 -   `string.lower()` -- forces all characters to lowercase, returns a string
 
+
 ## Write a function
 
-Its name is `sum_all` that takes a string `filename` as argument.
-It reads the file with `filename` and iterates over each line in [the file](data/numbers.txt), stripping the line breaks, casting each line as integer (assume each line is a single number), summing each number to a total variable. Return the total.
+It reads the file with filename, iterates over each line in the [numbers.txt](data/numbers.txt) and return the sum. Submit your attendance.
 
-Name your file `sum_numbers.py` and submit to Gradescope.
+numbers.txt
+```{html}
+1
+0
+5
+7
+2
+```
 
-
+sum_numbers.py
 ```{python}
 #| echo: true
 #| eval: false
@@ -35,7 +53,8 @@ assert sum_all("numbers.txt") == 15
 #| eval: true
 def sum_all(file_name):
   total = 0
-  for line in open(file_name, "r"):
+  f = open(file_name, "r")
+  for line in f:
     number = int(line.strip("\n"))
     total += number
   return total
@@ -53,35 +72,32 @@ main()
 
     -   Use **'r'** for reading the contents of a file
 
--   To write to a file: use
+-   To write to a file: 
 
     -   Use **'a'** to append to the existing file content
 
-    -   Use **'w'** to write to a file, and replace existing content
+    -   Use **'w'** to replace existing content and write to a file
 
-## Writing to a file
+## Write function
 
--   After you have opened the file in either **'a'** or **'w'** mode
+```{python}
+#| eval: false
+#| echo: true
+# opened the file in w mode
+f = open('words.txt', 'w')
 
-    ```         
-    a_file = open(file_name, mode)
-    ```
+# write text content to the file
+f.write("Let us start a story.")
 
--   Use the **write** function to write text content to the file
+# close the file
+f.close()
+```
 
-    ```         
-    a_file.write('put this content in a file')
-    ```
-
--   When finished writing, **close** the file **a_file.close()**
-
-## Create a file
-
-words.txt
-
+You will see `words.txt` in your folder.
 ```{html}
 Let us start a story.
 ```
+
 
 ## Evaluate the code
 
@@ -151,7 +167,7 @@ the bear
 #| echo: true
 #| eval: true
 words = open('words.txt', 'a')
-words.write(' The quick fox\n')
+words.write('The quick fox\n')
 words.write('jumped over\n')
 words.write('the bear')
 words.close()
@@ -163,7 +179,7 @@ words.close()
 #| echo: true
 #| eval: true
 words = open('words.txt', 'a')
-words.write(' The quick fox\n')
+words.write('The quick fox\n')
 words.write('jumped over\n')
 words.write('the bear')
 words.close()
@@ -174,12 +190,37 @@ words.txt
 ```{html}
 The slow wolf
 jumped over
-the bear The quick fox
+the bearThe quick fox
 jumped over
 the bear
 ```
 
-## Combining dictionary with write
+## Write key, value to a file
+
+Replace line 4 and line 5 with your code
+```{python}
+#| eval: false
+#| echo: true
+info = {"a": 2, "b": 5, "c": 0}
+output = open("count.txt", "w")
+
+# write code
+# write code
+output.write("end")
+
+output.close()
+```
+
+count.txt
+
+```{html}
+a, 2
+b, 5
+c, 0
+end   
+```
+
+## Write key, value to a file
 
 ```{python}
 #| eval: false
@@ -210,15 +251,13 @@ end
     *  `write_word_count` call `count_words`, iterate it and write a comma separated file ("out_" + `file_name`). 
 *   [Download test file](data/alien.txt)
 
-Name file as `read_and_write.py`, submit for attendance.
-
 Test case:
 
 ```{python}
 #| eval: false
 #| echo: true
 write_word_count("alien.txt")
-# writes out out_alien.txt with word counts
+# writes to out_alien.txt with word counts
 ```
 
 ## Write two functions -- solution
@@ -226,22 +265,22 @@ write_word_count("alien.txt")
 ```{python}
 #| eval: true
 #| echo: true
-def count_words(file_name):
-  f = open(file_name, "r")
+def count_words(filename):
+  f = open(filename, "r")
   counts = {}
   for line in f:
     words = line.strip("\n").split(" ")
     for w in words:
-      lower_case_w = w.lower()
-      if lower_case_w not in counts:
-        counts[lower_case_w] = 1
+      lower_w = w.lower()
+      if lower_w not in counts:
+        counts[lower_w] = 1
       else:
-        counts[lower_case_w] += 1
+        counts[lower_w] += 1
   return counts
 
-def write_word_count(file_name):
-  count_dict = count_words(file_name)
-  output_file = open("out_" + file_name, "w")
+def write_word_count(filename):
+  count_dict = count_words(filename)
+  output_file = open("out_" + filename, "w")
   for key, value in count_dict.items():
     output_file.write(key + "," + str(value) + "\n")
   output_file.close()

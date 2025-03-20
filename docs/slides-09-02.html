@@ -202,8 +202,28 @@
 <h1>CSc 110 - files and strings</h1>
 
 </section>
-<section id="string-methods" class="slide level2">
-<h2>String methods</h2>
+<section id="review---iterating-lines-in-a-file" class="slide level2">
+<h2>Review - iterating lines in a file</h2>
+<div id="fdc0e6f0" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>info <span class="op">=</span> <span class="bu">open</span>(<span class="st">'info.txt'</span>, <span class="st">'r'</span>)</span>
+<span id="cb1-2"><a></a><span class="cf">for</span> line <span class="kw">in</span> info:</span>
+<span id="cb1-3"><a></a>    <span class="bu">print</span>(line)</span>
+<span id="cb1-4"><a></a>info.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The quick brown fox
+
+jumped over
+
+the lazy
+
+bear
+
+sitting by the tree</code></pre>
+</div>
+</div>
+</section>
+<section id="review---string-methods" class="slide level2">
+<h2>Review - string methods</h2>
 <ul>
 <li><code>string.strip(chars)</code> – removes any of the characters in chars from the beginning or end of string, returns a string</li>
 <li><code>string.split(chars)</code> – splits string at the chars, returns a list</li>
@@ -212,26 +232,33 @@
 </section>
 <section id="write-a-function" class="slide level2">
 <h2>Write a function</h2>
-<p>Its name is <code>sum_all</code> that takes a string <code>filename</code> as argument. It reads the file with <code>filename</code> and iterates over each line in <a href="data/numbers.txt">the file</a>, stripping the line breaks, casting each line as integer (assume each line is a single number), summing each number to a total variable. Return the total.</p>
-<p>Name your file <code>sum_numbers.py</code> and submit to Gradescope.</p>
-<div id="c1e3ec64" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="cf">assert</span> sum_all(<span class="st">"numbers.txt"</span>) <span class="op">==</span> <span class="dv">15</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>It reads the file with filename, iterates over each line in the <a href="data/numbers.txt">numbers.txt</a> and return the sum. Submit your attendance.</p>
+<p>numbers.txt</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource {html} number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>1</span>
+<span id="cb3-2"><a></a>0</span>
+<span id="cb3-3"><a></a>5</span>
+<span id="cb3-4"><a></a>7</span>
+<span id="cb3-5"><a></a>2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>sum_numbers.py</p>
+<div id="1f089a8c" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="cf">assert</span> sum_all(<span class="st">"numbers.txt"</span>) <span class="op">==</span> <span class="dv">15</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div id="237b1078" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="kw">def</span> sum_all(file_name):</span>
-<span id="cb2-2"><a></a>  total <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb2-3"><a></a>  <span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(file_name, <span class="st">"r"</span>):</span>
-<span id="cb2-4"><a></a>    number <span class="op">=</span> <span class="bu">int</span>(line.strip(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>))</span>
-<span id="cb2-5"><a></a>    total <span class="op">+=</span> number</span>
-<span id="cb2-6"><a></a>  <span class="cf">return</span> total</span>
-<span id="cb2-7"><a></a></span>
-<span id="cb2-8"><a></a><span class="kw">def</span> main():</span>
-<span id="cb2-9"><a></a>  <span class="cf">assert</span> sum_all(<span class="st">"numbers.txt"</span>) <span class="op">==</span> <span class="dv">15</span></span>
-<span id="cb2-10"><a></a></span>
-<span id="cb2-11"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="0f11946b" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="kw">def</span> sum_all(file_name):</span>
+<span id="cb5-2"><a></a>  total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb5-3"><a></a>  f <span class="op">=</span> <span class="bu">open</span>(file_name, <span class="st">"r"</span>)</span>
+<span id="cb5-4"><a></a>  <span class="cf">for</span> line <span class="kw">in</span> f:</span>
+<span id="cb5-5"><a></a>    number <span class="op">=</span> <span class="bu">int</span>(line.strip(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>))</span>
+<span id="cb5-6"><a></a>    total <span class="op">+=</span> number</span>
+<span id="cb5-7"><a></a>  <span class="cf">return</span> total</span>
+<span id="cb5-8"><a></a></span>
+<span id="cb5-9"><a></a><span class="kw">def</span> main():</span>
+<span id="cb5-10"><a></a>  <span class="cf">assert</span> sum_all(<span class="st">"numbers.txt"</span>) <span class="op">==</span> <span class="dv">15</span></span>
+<span id="cb5-11"><a></a></span>
+<span id="cb5-12"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="modes" class="slide level2">
@@ -241,117 +268,136 @@
 <ul>
 <li>Use <strong>‘r’</strong> for reading the contents of a file</li>
 </ul></li>
-<li><p>To write to a file: use</p>
+<li><p>To write to a file:</p>
 <ul>
 <li><p>Use <strong>‘a’</strong> to append to the existing file content</p></li>
-<li><p>Use <strong>‘w’</strong> to write to a file, and replace existing content</p></li>
+<li><p>Use <strong>‘w’</strong> to replace existing content and write to a file</p></li>
 </ul></li>
 </ul>
 </section>
-<section id="writing-to-a-file" class="slide level2">
-<h2>Writing to a file</h2>
-<ul>
-<li><p>After you have opened the file in either <strong>‘a’</strong> or <strong>‘w’</strong> mode</p>
-<pre><code>a_file = open(file_name, mode)</code></pre></li>
-<li><p>Use the <strong>write</strong> function to write text content to the file</p>
-<pre><code>a_file.write('put this content in a file')</code></pre></li>
-<li><p>When finished writing, <strong>close</strong> the file <strong>a_file.close()</strong></p></li>
-</ul>
-</section>
-<section id="create-a-file" class="slide level2">
-<h2>Create a file</h2>
-<p>words.txt</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource {html} number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a></a>Let us start a story.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="write-function" class="slide level2">
+<h2>Write function</h2>
+<div id="d0ccf2f2" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="co"># opened the file in w mode</span></span>
+<span id="cb6-2"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'words.txt'</span>, <span class="st">'w'</span>)</span>
+<span id="cb6-3"><a></a></span>
+<span id="cb6-4"><a></a><span class="co"># write text content to the file</span></span>
+<span id="cb6-5"><a></a>f.write(<span class="st">"Let us start a story."</span>)</span>
+<span id="cb6-6"><a></a></span>
+<span id="cb6-7"><a></a><span class="co"># close the file</span></span>
+<span id="cb6-8"><a></a>f.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You will see <code>words.txt</code> in your folder.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource {html} number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a></a>Let us start a story.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="evaluate-the-code" class="slide level2">
 <h2>Evaluate the code</h2>
-<div id="bd459e1a" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>words <span class="op">=</span> <span class="bu">open</span>(<span class="st">'words.txt'</span>, <span class="st">'w'</span>)</span>
-<span id="cb6-2"><a></a>words.write(<span class="st">'The slow wolf'</span>)</span>
-<span id="cb6-3"><a></a>words.write(<span class="st">'jumped over'</span>)</span>
-<span id="cb6-4"><a></a>words.write(<span class="st">'the bear'</span>)</span>
-<span id="cb6-5"><a></a>words.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="f1273c3c" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>words <span class="op">=</span> <span class="bu">open</span>(<span class="st">'words.txt'</span>, <span class="st">'w'</span>)</span>
+<span id="cb8-2"><a></a>words.write(<span class="st">'The slow wolf'</span>)</span>
+<span id="cb8-3"><a></a>words.write(<span class="st">'jumped over'</span>)</span>
+<span id="cb8-4"><a></a>words.write(<span class="st">'the bear'</span>)</span>
+<span id="cb8-5"><a></a>words.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="evaluate-the-code-1" class="slide level2">
 <h2>Evaluate the code</h2>
-<div id="dfe0f648" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>words <span class="op">=</span> <span class="bu">open</span>(<span class="st">'words.txt'</span>, <span class="st">'w'</span>)</span>
-<span id="cb7-2"><a></a>words.write(<span class="st">'The slow wolf'</span>)</span>
-<span id="cb7-3"><a></a>words.write(<span class="st">'jumped over'</span>)</span>
-<span id="cb7-4"><a></a>words.write(<span class="st">'the bear'</span>)</span>
-<span id="cb7-5"><a></a>words.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="f27acafe" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>words <span class="op">=</span> <span class="bu">open</span>(<span class="st">'words.txt'</span>, <span class="st">'w'</span>)</span>
+<span id="cb9-2"><a></a>words.write(<span class="st">'The slow wolf'</span>)</span>
+<span id="cb9-3"><a></a>words.write(<span class="st">'jumped over'</span>)</span>
+<span id="cb9-4"><a></a>words.write(<span class="st">'the bear'</span>)</span>
+<span id="cb9-5"><a></a>words.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>words.txt</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource {html} number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a></a>The slow wolfjumped overthe bear</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource {html} number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a></a>The slow wolfjumped overthe bear</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="evaluate-the-code-2" class="slide level2">
 <h2>Evaluate the code</h2>
-<div id="009a4937" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>words <span class="op">=</span> <span class="bu">open</span>(<span class="st">'words.txt'</span>, <span class="st">'w'</span>)</span>
-<span id="cb9-2"><a></a>words.write(<span class="st">'The slow wolf</span><span class="ch">\n</span><span class="st">'</span>)</span>
-<span id="cb9-3"><a></a>words.write(<span class="st">'jumped over</span><span class="ch">\n</span><span class="st">'</span>)</span>
-<span id="cb9-4"><a></a>words.write(<span class="st">'the bear'</span>)</span>
-<span id="cb9-5"><a></a>words.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="221d366a" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>words <span class="op">=</span> <span class="bu">open</span>(<span class="st">'words.txt'</span>, <span class="st">'w'</span>)</span>
+<span id="cb11-2"><a></a>words.write(<span class="st">'The slow wolf</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb11-3"><a></a>words.write(<span class="st">'jumped over</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb11-4"><a></a>words.write(<span class="st">'the bear'</span>)</span>
+<span id="cb11-5"><a></a>words.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="evaluate-the-code-3" class="slide level2">
 <h2>Evaluate the code</h2>
-<div id="7cc3606b" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>words <span class="op">=</span> <span class="bu">open</span>(<span class="st">'words.txt'</span>, <span class="st">'w'</span>)</span>
-<span id="cb10-2"><a></a>words.write(<span class="st">'The slow wolf</span><span class="ch">\n</span><span class="st">'</span>)</span>
-<span id="cb10-3"><a></a>words.write(<span class="st">'jumped over</span><span class="ch">\n</span><span class="st">'</span>)</span>
-<span id="cb10-4"><a></a>words.write(<span class="st">'the bear'</span>)</span>
-<span id="cb10-5"><a></a>words.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>words.txt</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource {html} number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a></a>The slow wolf</span>
-<span id="cb11-2"><a></a>jumped over</span>
-<span id="cb11-3"><a></a>the bear</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="evaluate-the-code-continued" class="slide level2">
-<h2>Evaluate the code – continued</h2>
-<div id="02b76397" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>words <span class="op">=</span> <span class="bu">open</span>(<span class="st">'words.txt'</span>, <span class="st">'a'</span>)</span>
-<span id="cb12-2"><a></a>words.write(<span class="st">' The quick fox</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<div id="532d1fcc" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>words <span class="op">=</span> <span class="bu">open</span>(<span class="st">'words.txt'</span>, <span class="st">'w'</span>)</span>
+<span id="cb12-2"><a></a>words.write(<span class="st">'The slow wolf</span><span class="ch">\n</span><span class="st">'</span>)</span>
 <span id="cb12-3"><a></a>words.write(<span class="st">'jumped over</span><span class="ch">\n</span><span class="st">'</span>)</span>
 <span id="cb12-4"><a></a>words.write(<span class="st">'the bear'</span>)</span>
 <span id="cb12-5"><a></a>words.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>words.txt</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource {html} number-lines code-with-copy"><code class="sourceCode"><span id="cb13-1"><a></a>The slow wolf</span>
+<span id="cb13-2"><a></a>jumped over</span>
+<span id="cb13-3"><a></a>the bear</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="evaluate-the-code-continued" class="slide level2">
+<h2>Evaluate the code – continued</h2>
+<div id="73e9e392" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a>words <span class="op">=</span> <span class="bu">open</span>(<span class="st">'words.txt'</span>, <span class="st">'a'</span>)</span>
+<span id="cb14-2"><a></a>words.write(<span class="st">'The quick fox</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb14-3"><a></a>words.write(<span class="st">'jumped over</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb14-4"><a></a>words.write(<span class="st">'the bear'</span>)</span>
+<span id="cb14-5"><a></a>words.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="evaluate-the-code-continued-1" class="slide level2">
 <h2>Evaluate the code – continued</h2>
-<div id="3bf9e9c7" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>words <span class="op">=</span> <span class="bu">open</span>(<span class="st">'words.txt'</span>, <span class="st">'a'</span>)</span>
-<span id="cb13-2"><a></a>words.write(<span class="st">' The quick fox</span><span class="ch">\n</span><span class="st">'</span>)</span>
-<span id="cb13-3"><a></a>words.write(<span class="st">'jumped over</span><span class="ch">\n</span><span class="st">'</span>)</span>
-<span id="cb13-4"><a></a>words.write(<span class="st">'the bear'</span>)</span>
-<span id="cb13-5"><a></a>words.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="9c6df088" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a>words <span class="op">=</span> <span class="bu">open</span>(<span class="st">'words.txt'</span>, <span class="st">'a'</span>)</span>
+<span id="cb15-2"><a></a>words.write(<span class="st">'The quick fox</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb15-3"><a></a>words.write(<span class="st">'jumped over</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb15-4"><a></a>words.write(<span class="st">'the bear'</span>)</span>
+<span id="cb15-5"><a></a>words.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>words.txt</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource {html} number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a></a>The slow wolf</span>
-<span id="cb14-2"><a></a>jumped over</span>
-<span id="cb14-3"><a></a>the bear The quick fox</span>
-<span id="cb14-4"><a></a>jumped over</span>
-<span id="cb14-5"><a></a>the bear</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource {html} number-lines code-with-copy"><code class="sourceCode"><span id="cb16-1"><a></a>The slow wolf</span>
+<span id="cb16-2"><a></a>jumped over</span>
+<span id="cb16-3"><a></a>the bearThe quick fox</span>
+<span id="cb16-4"><a></a>jumped over</span>
+<span id="cb16-5"><a></a>the bear</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="combining-dictionary-with-write" class="slide level2">
-<h2>Combining dictionary with write</h2>
-<div id="2cbbd484" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a>info <span class="op">=</span> {<span class="st">"a"</span>: <span class="dv">2</span>, <span class="st">"b"</span>: <span class="dv">5</span>, <span class="st">"c"</span>: <span class="dv">0</span>}</span>
-<span id="cb15-2"><a></a>output <span class="op">=</span> <span class="bu">open</span>(<span class="st">"count.txt"</span>, <span class="st">"w"</span>)</span>
-<span id="cb15-3"><a></a></span>
-<span id="cb15-4"><a></a><span class="cf">for</span> key, value <span class="kw">in</span> info.items():</span>
-<span id="cb15-5"><a></a>  output.write(key <span class="op">+</span> <span class="st">", "</span> <span class="op">+</span> <span class="bu">str</span>(value) <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb15-6"><a></a>output.write(<span class="st">"end"</span>)</span>
-<span id="cb15-7"><a></a></span>
-<span id="cb15-8"><a></a>output.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="write-key-value-to-a-file" class="slide level2">
+<h2>Write key, value to a file</h2>
+<p>Replace line 4 and line 5 with your code</p>
+<div id="9140fc6b" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a>info <span class="op">=</span> {<span class="st">"a"</span>: <span class="dv">2</span>, <span class="st">"b"</span>: <span class="dv">5</span>, <span class="st">"c"</span>: <span class="dv">0</span>}</span>
+<span id="cb17-2"><a></a>output <span class="op">=</span> <span class="bu">open</span>(<span class="st">"count.txt"</span>, <span class="st">"w"</span>)</span>
+<span id="cb17-3"><a></a></span>
+<span id="cb17-4"><a></a><span class="co"># write code</span></span>
+<span id="cb17-5"><a></a><span class="co"># write code</span></span>
+<span id="cb17-6"><a></a>output.write(<span class="st">"end"</span>)</span>
+<span id="cb17-7"><a></a></span>
+<span id="cb17-8"><a></a>output.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>count.txt</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource {html} number-lines code-with-copy"><code class="sourceCode"><span id="cb16-1"><a></a>a, 2</span>
-<span id="cb16-2"><a></a>b, 5</span>
-<span id="cb16-3"><a></a>c, 0</span>
-<span id="cb16-4"><a></a>end   </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource {html} number-lines code-with-copy"><code class="sourceCode"><span id="cb18-1"><a></a>a, 2</span>
+<span id="cb18-2"><a></a>b, 5</span>
+<span id="cb18-3"><a></a>c, 0</span>
+<span id="cb18-4"><a></a>end   </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="write-key-value-to-a-file-1" class="slide level2">
+<h2>Write key, value to a file</h2>
+<div id="8192e6df" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a>info <span class="op">=</span> {<span class="st">"a"</span>: <span class="dv">2</span>, <span class="st">"b"</span>: <span class="dv">5</span>, <span class="st">"c"</span>: <span class="dv">0</span>}</span>
+<span id="cb19-2"><a></a>output <span class="op">=</span> <span class="bu">open</span>(<span class="st">"count.txt"</span>, <span class="st">"w"</span>)</span>
+<span id="cb19-3"><a></a></span>
+<span id="cb19-4"><a></a><span class="cf">for</span> key, value <span class="kw">in</span> info.items():</span>
+<span id="cb19-5"><a></a>  output.write(key <span class="op">+</span> <span class="st">", "</span> <span class="op">+</span> <span class="bu">str</span>(value) <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb19-6"><a></a>output.write(<span class="st">"end"</span>)</span>
+<span id="cb19-7"><a></a></span>
+<span id="cb19-8"><a></a>output.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>count.txt</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource {html} number-lines code-with-copy"><code class="sourceCode"><span id="cb20-1"><a></a>a, 2</span>
+<span id="cb20-2"><a></a>b, 5</span>
+<span id="cb20-3"><a></a>c, 0</span>
+<span id="cb20-4"><a></a>end   </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="write-two-functions" class="slide level2">
 <h2>Write two functions</h2>
@@ -363,40 +409,39 @@
 </ul></li>
 <li><a href="data/alien.txt">Download test file</a></li>
 </ul>
-<p>Name file as <code>read_and_write.py</code>, submit for attendance.</p>
 <p>Test case:</p>
-<div id="f5ba240d" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a>write_word_count(<span class="st">"alien.txt"</span>)</span>
-<span id="cb17-2"><a></a><span class="co"># writes out out_alien.txt with word counts</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="4b0055d7" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a>write_word_count(<span class="st">"alien.txt"</span>)</span>
+<span id="cb21-2"><a></a><span class="co"># writes to out_alien.txt with word counts</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-two-functions-solution" class="slide level2">
 <h2>Write two functions – solution</h2>
-<div id="ea5aa80b" class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="kw">def</span> count_words(file_name):</span>
-<span id="cb18-2"><a></a>  f <span class="op">=</span> <span class="bu">open</span>(file_name, <span class="st">"r"</span>)</span>
-<span id="cb18-3"><a></a>  counts <span class="op">=</span> {}</span>
-<span id="cb18-4"><a></a>  <span class="cf">for</span> line <span class="kw">in</span> f:</span>
-<span id="cb18-5"><a></a>    words <span class="op">=</span> line.strip(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>).split(<span class="st">" "</span>)</span>
-<span id="cb18-6"><a></a>    <span class="cf">for</span> w <span class="kw">in</span> words:</span>
-<span id="cb18-7"><a></a>      lower_case_w <span class="op">=</span> w.lower()</span>
-<span id="cb18-8"><a></a>      <span class="cf">if</span> lower_case_w <span class="kw">not</span> <span class="kw">in</span> counts:</span>
-<span id="cb18-9"><a></a>        counts[lower_case_w] <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb18-10"><a></a>      <span class="cf">else</span>:</span>
-<span id="cb18-11"><a></a>        counts[lower_case_w] <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb18-12"><a></a>  <span class="cf">return</span> counts</span>
-<span id="cb18-13"><a></a></span>
-<span id="cb18-14"><a></a><span class="kw">def</span> write_word_count(file_name):</span>
-<span id="cb18-15"><a></a>  count_dict <span class="op">=</span> count_words(file_name)</span>
-<span id="cb18-16"><a></a>  output_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">"out_"</span> <span class="op">+</span> file_name, <span class="st">"w"</span>)</span>
-<span id="cb18-17"><a></a>  <span class="cf">for</span> key, value <span class="kw">in</span> count_dict.items():</span>
-<span id="cb18-18"><a></a>    output_file.write(key <span class="op">+</span> <span class="st">","</span> <span class="op">+</span> <span class="bu">str</span>(value) <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb18-19"><a></a>  output_file.close()</span>
-<span id="cb18-20"><a></a>  </span>
-<span id="cb18-21"><a></a><span class="kw">def</span> main(): </span>
-<span id="cb18-22"><a></a>  write_word_count(<span class="st">"alien.txt"</span>)</span>
-<span id="cb18-23"><a></a>  </span>
-<span id="cb18-24"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="da7ecd2c" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a><span class="kw">def</span> count_words(filename):</span>
+<span id="cb22-2"><a></a>  f <span class="op">=</span> <span class="bu">open</span>(filename, <span class="st">"r"</span>)</span>
+<span id="cb22-3"><a></a>  counts <span class="op">=</span> {}</span>
+<span id="cb22-4"><a></a>  <span class="cf">for</span> line <span class="kw">in</span> f:</span>
+<span id="cb22-5"><a></a>    words <span class="op">=</span> line.strip(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>).split(<span class="st">" "</span>)</span>
+<span id="cb22-6"><a></a>    <span class="cf">for</span> w <span class="kw">in</span> words:</span>
+<span id="cb22-7"><a></a>      lower_w <span class="op">=</span> w.lower()</span>
+<span id="cb22-8"><a></a>      <span class="cf">if</span> lower_w <span class="kw">not</span> <span class="kw">in</span> counts:</span>
+<span id="cb22-9"><a></a>        counts[lower_w] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb22-10"><a></a>      <span class="cf">else</span>:</span>
+<span id="cb22-11"><a></a>        counts[lower_w] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb22-12"><a></a>  <span class="cf">return</span> counts</span>
+<span id="cb22-13"><a></a></span>
+<span id="cb22-14"><a></a><span class="kw">def</span> write_word_count(filename):</span>
+<span id="cb22-15"><a></a>  count_dict <span class="op">=</span> count_words(filename)</span>
+<span id="cb22-16"><a></a>  output_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">"out_"</span> <span class="op">+</span> filename, <span class="st">"w"</span>)</span>
+<span id="cb22-17"><a></a>  <span class="cf">for</span> key, value <span class="kw">in</span> count_dict.items():</span>
+<span id="cb22-18"><a></a>    output_file.write(key <span class="op">+</span> <span class="st">","</span> <span class="op">+</span> <span class="bu">str</span>(value) <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb22-19"><a></a>  output_file.close()</span>
+<span id="cb22-20"><a></a>  </span>
+<span id="cb22-21"><a></a><span class="kw">def</span> main(): </span>
+<span id="cb22-22"><a></a>  write_word_count(<span class="st">"alien.txt"</span>)</span>
+<span id="cb22-23"><a></a>  </span>
+<span id="cb22-24"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

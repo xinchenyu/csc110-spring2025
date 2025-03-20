@@ -3724,7 +3724,7 @@
     "href": "slides-09-02.html#write-a-function",
     "title": "files and strings (slides)",
     "section": "Write a function",
-    "text": "Write a function\nIts name is sum_all that takes a string filename as argument. It reads the file with filename and iterates over each line in the file, stripping the line breaks, casting each line as integer (assume each line is a single number), summing each number to a total variable. Return the total.\nName your file sum_numbers.py and submit to Gradescope.\n\nassert sum_all(\"numbers.txt\") == 15",
+    "text": "Write a function\nIt reads the file with filename, iterates over each line in the numbers.txt and return the sum. Submit your attendance.\nnumbers.txt\n1\n0\n5\n7\n2\nsum_numbers.py\n\nassert sum_all(\"numbers.txt\") == 15",
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files and strings (slides)"
@@ -3735,7 +3735,7 @@
     "href": "slides-09-02.html#write-a-function-solution",
     "title": "files and strings (slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef sum_all(file_name):\n  total = 0\n  for line in open(file_name, \"r\"):\n    number = int(line.strip(\"\\n\"))\n    total += number\n  return total\n\ndef main():\n  assert sum_all(\"numbers.txt\") == 15\n\nmain()",
+    "text": "Write a function – solution\n\ndef sum_all(file_name):\n  total = 0\n  f = open(file_name, \"r\")\n  for line in f:\n    number = int(line.strip(\"\\n\"))\n    total += number\n  return total\n\ndef main():\n  assert sum_all(\"numbers.txt\") == 15\n\nmain()",
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files and strings (slides)"
@@ -3746,7 +3746,7 @@
     "href": "slides-09-02.html#modes",
     "title": "files and strings (slides)",
     "section": "Modes",
-    "text": "Modes\n\nTo read a file:\n\nUse ‘r’ for reading the contents of a file\n\nTo write to a file: use\n\nUse ‘a’ to append to the existing file content\nUse ‘w’ to write to a file, and replace existing content",
+    "text": "Modes\n\nTo read a file:\n\nUse ‘r’ for reading the contents of a file\n\nTo write to a file:\n\nUse ‘a’ to append to the existing file content\nUse ‘w’ to replace existing content and write to a file",
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files and strings (slides)"
@@ -3823,7 +3823,7 @@
     "href": "slides-09-02.html#evaluate-the-code-continued",
     "title": "files and strings (slides)",
     "section": "Evaluate the code – continued",
-    "text": "Evaluate the code – continued\n\nwords = open('words.txt', 'a')\nwords.write(' The quick fox\\n')\nwords.write('jumped over\\n')\nwords.write('the bear')\nwords.close()",
+    "text": "Evaluate the code – continued\n\nwords = open('words.txt', 'a')\nwords.write('The quick fox\\n')\nwords.write('jumped over\\n')\nwords.write('the bear')\nwords.close()",
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files and strings (slides)"
@@ -3834,7 +3834,7 @@
     "href": "slides-09-02.html#evaluate-the-code-continued-1",
     "title": "files and strings (slides)",
     "section": "Evaluate the code – continued",
-    "text": "Evaluate the code – continued\n\nwords = open('words.txt', 'a')\nwords.write(' The quick fox\\n')\nwords.write('jumped over\\n')\nwords.write('the bear')\nwords.close()\n\nwords.txt\nThe slow wolf\njumped over\nthe bear The quick fox\njumped over\nthe bear",
+    "text": "Evaluate the code – continued\n\nwords = open('words.txt', 'a')\nwords.write('The quick fox\\n')\nwords.write('jumped over\\n')\nwords.write('the bear')\nwords.close()\n\nwords.txt\nThe slow wolf\njumped over\nthe bearThe quick fox\njumped over\nthe bear",
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files and strings (slides)"
@@ -3856,7 +3856,7 @@
     "href": "slides-09-02.html#write-two-functions",
     "title": "files and strings (slides)",
     "section": "Write two functions",
-    "text": "Write two functions\n\nBoth functions takes a string file_name as argument:\n\ncount_words count frequency of each lowercase word, return a dictionary.\nwrite_word_count call count_words, iterate it and write a comma separated file (“out_” + file_name).\n\nDownload test file\n\nName file as read_and_write.py, submit for attendance.\nTest case:\n\nwrite_word_count(\"alien.txt\")\n# writes out out_alien.txt with word counts",
+    "text": "Write two functions\n\nBoth functions takes a string file_name as argument:\n\ncount_words count frequency of each lowercase word, return a dictionary.\nwrite_word_count call count_words, iterate it and write a comma separated file (“out_” + file_name).\n\nDownload test file\n\nTest case:\n\nwrite_word_count(\"alien.txt\")\n# writes to out_alien.txt with word counts",
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files and strings (slides)"
@@ -3867,7 +3867,7 @@
     "href": "slides-09-02.html#write-two-functions-solution",
     "title": "files and strings (slides)",
     "section": "Write two functions – solution",
-    "text": "Write two functions – solution\n\ndef count_words(file_name):\n  f = open(file_name, \"r\")\n  counts = {}\n  for line in f:\n    words = line.strip(\"\\n\").split(\" \")\n    for w in words:\n      lower_case_w = w.lower()\n      if lower_case_w not in counts:\n        counts[lower_case_w] = 1\n      else:\n        counts[lower_case_w] += 1\n  return counts\n\ndef write_word_count(file_name):\n  count_dict = count_words(file_name)\n  output_file = open(\"out_\" + file_name, \"w\")\n  for key, value in count_dict.items():\n    output_file.write(key + \",\" + str(value) + \"\\n\")\n  output_file.close()\n  \ndef main(): \n  write_word_count(\"alien.txt\")\n  \nmain()",
+    "text": "Write two functions – solution\n\ndef count_words(filename):\n  f = open(filename, \"r\")\n  counts = {}\n  for line in f:\n    words = line.strip(\"\\n\").split(\" \")\n    for w in words:\n      lower_w = w.lower()\n      if lower_w not in counts:\n        counts[lower_w] = 1\n      else:\n        counts[lower_w] += 1\n  return counts\n\ndef write_word_count(filename):\n  count_dict = count_words(filename)\n  output_file = open(\"out_\" + filename, \"w\")\n  for key, value in count_dict.items():\n    output_file.write(key + \",\" + str(value) + \"\\n\")\n  output_file.close()\n  \ndef main(): \n  write_word_count(\"alien.txt\")\n  \nmain()",
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files and strings (slides)"
@@ -9030,6 +9030,116 @@
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-09-02.html#review---iteratering-a-file",
+    "href": "slides-09-02.html#review---iteratering-a-file",
+    "title": "files and strings (slides)",
+    "section": "Review - iteratering a file",
+    "text": "Review - iteratering a file\n\ninfo = open('info.txt', 'r')\nfor line in info:\n    print(line)\ninfo.close()\n\nThe quick brown fox\n\njumped over\n\nthe lazy\n\nbear\n\nsitting by the tree",
+    "crumbs": [
+      "Module 9 - Reading and Writing Text Files",
+      "files and strings (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-09-02.html#review---string-methods",
+    "href": "slides-09-02.html#review---string-methods",
+    "title": "files and strings (slides)",
+    "section": "Review - string methods",
+    "text": "Review - string methods\n\nstring.strip(chars) – removes any of the characters in chars from the beginning or end of string, returns a string\nstring.split(chars) – splits string at the chars, returns a list\nstring.lower() – forces all characters to lowercase, returns a string",
+    "crumbs": [
+      "Module 9 - Reading and Writing Text Files",
+      "files and strings (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-09-02.html#review---iteratering-a-file-1",
+    "href": "slides-09-02.html#review---iteratering-a-file-1",
+    "title": "files and strings (slides)",
+    "section": "Review - iteratering a file",
+    "text": "Review - iteratering a file\n\ninfo = open('info.txt', 'r')\nfor line in info:\n    print(line.strip('\\n'))\ninfo.close()\n\nThe quick brown fox\njumped over\nthe lazy\nbear\nsitting by the tree",
+    "crumbs": [
+      "Module 9 - Reading and Writing Text Files",
+      "files and strings (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-09-02.html#review---iteratering-lines-in-a-file",
+    "href": "slides-09-02.html#review---iteratering-lines-in-a-file",
+    "title": "files and strings (slides)",
+    "section": "Review - iteratering lines in a file",
+    "text": "Review - iteratering lines in a file\n\ninfo = open('info.txt', 'r')\nfor line in info:\n    print(line.strip)\ninfo.close()\n\n&lt;built-in method strip of str object at 0x7ff2291ab3f0&gt;\n&lt;built-in method strip of str object at 0x7ff228dbc0b0&gt;\n&lt;built-in method strip of str object at 0x7ff238c918b0&gt;\n&lt;built-in method strip of str object at 0x7ff238c911f0&gt;\n&lt;built-in method strip of str object at 0x7ff2291ab3f0&gt;",
+    "crumbs": [
+      "Module 9 - Reading and Writing Text Files",
+      "files and strings (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-09-02.html#review---iterating-lines-in-a-file",
+    "href": "slides-09-02.html#review---iterating-lines-in-a-file",
+    "title": "files and strings (slides)",
+    "section": "Review - iterating lines in a file",
+    "text": "Review - iterating lines in a file\n\ninfo = open('info.txt', 'r')\nfor line in info:\n    print(line)\ninfo.close()\n\nThe quick brown fox\n\njumped over\n\nthe lazy\n\nbear\n\nsitting by the tree",
+    "crumbs": [
+      "Module 9 - Reading and Writing Text Files",
+      "files and strings (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-09-02.html#review---iterating-lines-in-a-file-1",
+    "href": "slides-09-02.html#review---iterating-lines-in-a-file-1",
+    "title": "files and strings (slides)",
+    "section": "Review - iterating lines in a file",
+    "text": "Review - iterating lines in a file\n\ninfo = open('info.txt', 'r')\nfor line in info:\n    print(line.strip('\\n'))\ninfo.close()\n\nThe quick brown fox\njumped over\nthe lazy\nbear\nsitting by the tree",
+    "crumbs": [
+      "Module 9 - Reading and Writing Text Files",
+      "files and strings (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-09-02.html#writing-to-a-file-1",
+    "href": "slides-09-02.html#writing-to-a-file-1",
+    "title": "files and strings (slides)",
+    "section": "Writing to a file",
+    "text": "Writing to a file\n\nAfter you have opened the file in either ‘a’ or ‘w’ mode\na_file = open(file_name, mode)\nUse the write function to write text content to the file\na_file.write('put this content in a file')\nWhen finished writing, close the file a_file.close()",
+    "crumbs": [
+      "Module 9 - Reading and Writing Text Files",
+      "files and strings (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-09-02.html#write-function",
+    "href": "slides-09-02.html#write-function",
+    "title": "files and strings (slides)",
+    "section": "Write function",
+    "text": "Write function\n\n# opened the file in w mode\nf = open('words.txt', 'w')\n\n# write text content to the file\nf.write(\"Let us start a story.\")\n\n# close the file\nf.close()\n\nYou will see words.txt in your folder.\nLet us start a story.",
+    "crumbs": [
+      "Module 9 - Reading and Writing Text Files",
+      "files and strings (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-09-02.html#write-key-value-to-a-file",
+    "href": "slides-09-02.html#write-key-value-to-a-file",
+    "title": "files and strings (slides)",
+    "section": "Write key, value to a file",
+    "text": "Write key, value to a file\nReplace line 4 and line 5 with your code\n\ninfo = {\"a\": 2, \"b\": 5, \"c\": 0}\noutput = open(\"count.txt\", \"w\")\n\n# write code\n# write code\noutput.write(\"end\")\n\noutput.close()\n\ncount.txt\na, 2\nb, 5\nc, 0\nend",
+    "crumbs": [
+      "Module 9 - Reading and Writing Text Files",
+      "files and strings (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-09-02.html#write-key-value-to-a-file-1",
+    "href": "slides-09-02.html#write-key-value-to-a-file-1",
+    "title": "files and strings (slides)",
+    "section": "Write key, value to a file",
+    "text": "Write key, value to a file\n\ninfo = {\"a\": 2, \"b\": 5, \"c\": 0}\noutput = open(\"count.txt\", \"w\")\n\nfor key, value in info.items():\n  output.write(key + \", \" + str(value) + \"\\n\")\noutput.write(\"end\")\n\noutput.close()\n\ncount.txt\na, 2\nb, 5\nc, 0\nend",
+    "crumbs": [
+      "Module 9 - Reading and Writing Text Files",
+      "files and strings (slides)"
     ]
   }
 ]
