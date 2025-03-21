@@ -104,11 +104,11 @@ Let us start a story.
 ```{python}
 #| echo: true
 #| eval: true
-words = open('words.txt', 'w')
-words.write('The slow wolf')
-words.write('jumped over')
-words.write('the bear')
-words.close()
+f = open('words.txt', 'w')
+f.write('The slow wolf')
+f.write('jumped over')
+f.write('the bear')
+f.close()
 ```
 
 ## Evaluate the code
@@ -116,11 +116,11 @@ words.close()
 ```{python}
 #| echo: true
 #| eval: true
-words = open('words.txt', 'w')
-words.write('The slow wolf')
-words.write('jumped over')
-words.write('the bear')
-words.close()
+f = open('words.txt', 'w')
+f.write('The slow wolf')
+f.write('jumped over')
+f.write('the bear')
+f.close()
 ```
 
 words.txt
@@ -134,11 +134,11 @@ The slow wolfjumped overthe bear
 ```{python}
 #| echo: true
 #| eval: true
-words = open('words.txt', 'w')
-words.write('The slow wolf\n')
-words.write('jumped over\n')
-words.write('the bear')
-words.close()
+f = open('words.txt', 'w')
+f.write('The slow wolf\n')
+f.write('jumped over\n')
+f.write('the bear')
+f.close()
 ```
 
 ## Evaluate the code
@@ -146,11 +146,11 @@ words.close()
 ```{python}
 #| echo: true
 #| eval: true
-words = open('words.txt', 'w')
-words.write('The slow wolf\n')
-words.write('jumped over\n')
-words.write('the bear')
-words.close()
+f = open('words.txt', 'w')
+f.write('The slow wolf\n')
+f.write('jumped over\n')
+f.write('the bear')
+f.close()
 ```
 
 words.txt
@@ -166,11 +166,11 @@ the bear
 ```{python}
 #| echo: true
 #| eval: true
-words = open('words.txt', 'a')
-words.write('The quick fox\n')
-words.write('jumped over\n')
-words.write('the bear')
-words.close()
+f = open('words.txt', 'a')
+f.write('The quick fox\n')
+f.write('jumped over\n')
+f.write('the bear')
+f.close()
 ```
 
 ## Evaluate the code -- continued
@@ -178,11 +178,11 @@ words.close()
 ```{python}
 #| echo: true
 #| eval: true
-words = open('words.txt', 'a')
-words.write('The quick fox\n')
-words.write('jumped over\n')
-words.write('the bear')
-words.close()
+f = open('words.txt', 'a')
+f.write('The quick fox\n')
+f.write('jumped over\n')
+f.write('the bear')
+f.close()
 ```
 
 words.txt

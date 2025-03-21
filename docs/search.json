@@ -3779,7 +3779,7 @@
     "href": "slides-09-02.html#evaluate-the-code",
     "title": "files and strings (slides)",
     "section": "Evaluate the code",
-    "text": "Evaluate the code\n\nwords = open('words.txt', 'w')\nwords.write('The slow wolf')\nwords.write('jumped over')\nwords.write('the bear')\nwords.close()",
+    "text": "Evaluate the code\n\nf = open('words.txt', 'w')\nf.write('The slow wolf')\nf.write('jumped over')\nf.write('the bear')\nf.close()",
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files and strings (slides)"
@@ -3790,7 +3790,7 @@
     "href": "slides-09-02.html#evaluate-the-code-1",
     "title": "files and strings (slides)",
     "section": "Evaluate the code",
-    "text": "Evaluate the code\n\nwords = open('words.txt', 'w')\nwords.write('The slow wolf')\nwords.write('jumped over')\nwords.write('the bear')\nwords.close()\n\nwords.txt\nThe slow wolfjumped overthe bear",
+    "text": "Evaluate the code\n\nf = open('words.txt', 'w')\nf.write('The slow wolf')\nf.write('jumped over')\nf.write('the bear')\nf.close()\n\nwords.txt\nThe slow wolfjumped overthe bear",
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files and strings (slides)"
@@ -3801,7 +3801,7 @@
     "href": "slides-09-02.html#evaluate-the-code-2",
     "title": "files and strings (slides)",
     "section": "Evaluate the code",
-    "text": "Evaluate the code\n\nwords = open('words.txt', 'w')\nwords.write('The slow wolf\\n')\nwords.write('jumped over\\n')\nwords.write('the bear')\nwords.close()",
+    "text": "Evaluate the code\n\nf = open('words.txt', 'w')\nf.write('The slow wolf\\n')\nf.write('jumped over\\n')\nf.write('the bear')\nf.close()",
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files and strings (slides)"
@@ -3812,7 +3812,7 @@
     "href": "slides-09-02.html#evaluate-the-code-3",
     "title": "files and strings (slides)",
     "section": "Evaluate the code",
-    "text": "Evaluate the code\n\nwords = open('words.txt', 'w')\nwords.write('The slow wolf\\n')\nwords.write('jumped over\\n')\nwords.write('the bear')\nwords.close()\n\nwords.txt\nThe slow wolf\njumped over\nthe bear",
+    "text": "Evaluate the code\n\nf = open('words.txt', 'w')\nf.write('The slow wolf\\n')\nf.write('jumped over\\n')\nf.write('the bear')\nf.close()\n\nwords.txt\nThe slow wolf\njumped over\nthe bear",
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files and strings (slides)"
@@ -3823,7 +3823,7 @@
     "href": "slides-09-02.html#evaluate-the-code-continued",
     "title": "files and strings (slides)",
     "section": "Evaluate the code – continued",
-    "text": "Evaluate the code – continued\n\nwords = open('words.txt', 'a')\nwords.write('The quick fox\\n')\nwords.write('jumped over\\n')\nwords.write('the bear')\nwords.close()",
+    "text": "Evaluate the code – continued\n\nf = open('words.txt', 'a')\nf.write('The quick fox\\n')\nf.write('jumped over\\n')\nf.write('the bear')\nf.close()",
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files and strings (slides)"
@@ -3834,7 +3834,7 @@
     "href": "slides-09-02.html#evaluate-the-code-continued-1",
     "title": "files and strings (slides)",
     "section": "Evaluate the code – continued",
-    "text": "Evaluate the code – continued\n\nwords = open('words.txt', 'a')\nwords.write('The quick fox\\n')\nwords.write('jumped over\\n')\nwords.write('the bear')\nwords.close()\n\nwords.txt\nThe slow wolf\njumped over\nthe bearThe quick fox\njumped over\nthe bear",
+    "text": "Evaluate the code – continued\n\nf = open('words.txt', 'a')\nf.write('The quick fox\\n')\nf.write('jumped over\\n')\nf.write('the bear')\nf.close()\n\nwords.txt\nThe slow wolf\njumped over\nthe bearThe quick fox\njumped over\nthe bear",
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files and strings (slides)"
