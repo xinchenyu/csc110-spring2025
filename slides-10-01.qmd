@@ -59,10 +59,24 @@ my_tuple[1] = 99 # will fail and cause an exception
 
 * They are a little more efficient than lists
 * They can be used as dictionary keys (**important**)
-* They are used in Python a lot, so you need to understand them, even if you don't use them
 * When functions return multiple values, it returns a tuple
 
-## Returning multiple values in a function
+## Why use tuples?
+
+Tuples can be used as dictionary keys (lists cannot).
+```{python}
+#| eval: true
+#| echo: true
+coordinates = {
+    (40.7128, -74.0060): "New York",
+    (34.0522, -118.2437): "Los Angeles",
+    (51.5074, -0.1278): "London"
+}
+
+coordinates
+```
+
+## Returning multiple values 
 
 ```{python}
 #| eval: true
@@ -85,9 +99,7 @@ main()
 
 ## Write a function
 
-1. Its name is `low_high`
-1. It takes two numbers as argument: `x` and `y`
-1. It returns a tuple with the lowest number first, the highest number second
+1. It takes two numbers `x` and `y` and returns a tuple with the lowest number first, the highest number second.
 
 ```{python}
 #| eval: false
@@ -119,10 +131,7 @@ main()
 
 ## Write a function
 
-1. Its name is `sum_and_multiplication`
-1. It takes a `dictionary` as argument
-1. It iterates over the dictionary values, summing all the values and multiplying all the values (create two separate variables, one for the addition and another for the multiplication)
-1. It returns the sum and the multiplication of the values in the dictionary
+It takes a `dictionary` as argument and returns the sum and the multiplication of the values in the dictionary
 
 ```{python}
 #| eval: false
@@ -179,9 +188,7 @@ main()
 
 ## Write a function
 
-1. Its name is `odds_and_evens`
-1. It takes one list of `integers` as argument
-1. It returns two lists: one with all the odd numbers in `integers`, and another with all the even numbers in `integers`
+It takes one list of `integers` as argument and returns two lists: one with all the odd numbers and the other with all the even numbers.
 
 ```{python}
 #| eval: false

@@ -1617,7 +1617,7 @@
     "href": "slides-10-01.html#why-use-tuples",
     "title": "returning tuples (slides)",
     "section": "Why use tuples?",
-    "text": "Why use tuples?\n\nThey are a little more efficient than lists\nThey can be used as dictionary keys (important)\nThey are used in Python a lot, so you need to understand them, even if you don’t use them\nWhen functions return multiple values, it returns a tuple",
+    "text": "Why use tuples?\n\nThey are a little more efficient than lists\nThey can be used as dictionary keys (important)\nWhen functions return multiple values, it returns a tuple",
     "crumbs": [
       "Module 10 - Data Structures (tuples)",
       "returning tuples (slides)"
@@ -1639,7 +1639,7 @@
     "href": "slides-10-01.html#write-a-function",
     "title": "returning tuples (slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is low_high\nIt takes two numbers as argument: x and y\nIt returns a tuple with the lowest number first, the highest number second\n\n\nassert low_high(4, 2) == (2, 4)\nassert low_high(1, 5) == (1, 5)",
+    "text": "Write a function\n\nIt takes two numbers x and y and returns a tuple with the lowest number first, the highest number second.\n\n\nassert low_high(4, 2) == (2, 4)\nassert low_high(1, 5) == (1, 5)",
     "crumbs": [
       "Module 10 - Data Structures (tuples)",
       "returning tuples (slides)"
@@ -1661,7 +1661,7 @@
     "href": "slides-10-01.html#write-a-function-1",
     "title": "returning tuples (slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is sum_and_multiplication\nIt takes a dictionary as argument\nIt iterates over the dictionary values, summing all the values and multiplying all the values (create two separate variables, one for the addition and another for the multiplication)\nIt returns the sum and the multiplication of the values in the dictionary\n\n\ntest_dict = {\"a\": 2, \"b\": 3, \"c\": 5}\ntotal, mult = sum_and_multiplication(test_dict)\nassert total == 10\nassert mult == 30",
+    "text": "Write a function\nIt takes a dictionary as argument and returns the sum and the multiplication of the values in the dictionary\n\ntest_dict = {\"a\": 2, \"b\": 3, \"c\": 5}\ntotal, mult = sum_and_multiplication(test_dict)\nassert total == 10\nassert mult == 30",
     "crumbs": [
       "Module 10 - Data Structures (tuples)",
       "returning tuples (slides)"
@@ -1694,7 +1694,7 @@
     "href": "slides-10-01.html#write-a-function-2",
     "title": "returning tuples (slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is odds_and_evens\nIt takes one list of integers as argument\nIt returns two lists: one with all the odd numbers in integers, and another with all the even numbers in integers\n\n\nassert odds_and_evens([2,6,1]) == ([1], [2,6])",
+    "text": "Write a function\nIt takes one list of integers as argument and returns two lists: one with all the odd numbers and the other with all the even numbers.\n\nassert odds_and_evens([2,6,1]) == ([1], [2,6])",
     "crumbs": [
       "Module 10 - Data Structures (tuples)",
       "returning tuples (slides)"
@@ -3856,7 +3856,7 @@
     "href": "slides-09-02.html#write-two-functions",
     "title": "files and strings (slides)",
     "section": "Write two functions",
-    "text": "Write two functions\n\nBoth functions takes a string file_name as argument:\n\ncount_words count frequency of each lowercase word, return a dictionary.\nwrite_word_count call count_words, iterate it and write a comma separated file (“out_” + file_name).\n\nDownload test file\n\nTest case:\n\nwrite_word_count(\"alien.txt\")\n# writes to out_alien.txt with word counts",
+    "text": "Write two functions\n\nBoth functions takes a string file_name as argument:\n\ncount_words count frequency of each lowercase word, return a dictionary.\nwrite_word_count call count_words, iterate it and write a comma separated file (“out_” + file_name).\n\nDownload test file. Name your file as read_and_write.py.\n\nTest case:\n\nwrite_word_count(\"alien.txt\")\n# writes to out_alien.txt with word counts",
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files and strings (slides)"
@@ -9140,6 +9140,28 @@
     "crumbs": [
       "Module 9 - Reading and Writing Text Files",
       "files and strings (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-10-01.html#why-use-tuples-1",
+    "href": "slides-10-01.html#why-use-tuples-1",
+    "title": "returning tuples (slides)",
+    "section": "Why use tuples?",
+    "text": "Why use tuples?\nTuples can be used as dictionary keys (lists cannot).\n\ncoordinates = {\n    (40.7128, -74.0060): \"New York\",\n    (34.0522, -118.2437): \"Los Angeles\",\n    (51.5074, -0.1278): \"London\"\n}\n\ncoordinates\n\n{(40.7128, -74.006): 'New York',\n (34.0522, -118.2437): 'Los Angeles',\n (51.5074, -0.1278): 'London'}",
+    "crumbs": [
+      "Module 10 - Data Structures (tuples)",
+      "returning tuples (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-10-01.html#returning-multiple-values",
+    "href": "slides-10-01.html#returning-multiple-values",
+    "title": "returning tuples (slides)",
+    "section": "Returning multiple values",
+    "text": "Returning multiple values\n\ndef descr_stats(numbers):\n  total = 0\n  for n in numbers:\n    total += n\n  return total, total/len(numbers)\n\ndef main():\n  grades = [90, 87, 83, 95, 100]\n  print(descr_stats(grades))\n  total, mean = descr_stats(grades)\n  assert total == 455\n  assert mean == 91.0\n\nmain()\n\n(455, 91.0)",
+    "crumbs": [
+      "Module 10 - Data Structures (tuples)",
+      "returning tuples (slides)"
     ]
   }
 ]
