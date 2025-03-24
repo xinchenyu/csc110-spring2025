@@ -56,42 +56,6 @@ def main():
 main()
 ```
 
-## Write a function
-
-1.  Its name is `maximum`
-2.  It takes a variable number of arguments: `*values`
-3.  It returns the highest value in `values`
-
-```{python}
-#| eval: false
-#| echo: true
-assert maximum(1) == 1
-assert maximum(3,1) == 3
-assert maximum(2,4,6) == 6
-assert maximum() == None
-```
-
-## Write a function -- solution
-
-```{python}
-#| eval: true
-#| echo: true
-def maximum(*values):
-  max = None
-  for v in values:
-    if max == None or v > max:
-      max = v
-  return max
-
-def main():
-  assert maximum(1) == 1
-  assert maximum(3,1) == 3
-  assert maximum(2,4,6) == 6
-  assert maximum() == None
-  print("Passed all tests")
-  
-main()
-```
 
 ## Write a function
 

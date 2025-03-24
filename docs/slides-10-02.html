@@ -205,7 +205,7 @@
 <section id="variable-length-parameter" class="slide level2">
 <h2>Variable length parameter</h2>
 <p>Sometimes you want to handle a variable number of parameters (like <code>print</code> does)</p>
-<div id="897f2ffc" class="cell" data-execution_count="1">
+<div id="f3fa609a" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="bu">print</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1 2 3 4 5</code></pre>
@@ -215,7 +215,7 @@
 <section id="variable-length-parameter-1" class="slide level2">
 <h2>Variable length parameter</h2>
 <p>Add a <code>*</code> before your parameter name so that it accepts a variable number of arguments, gathering them into a tuple</p>
-<div id="4be9834d" class="cell" data-execution_count="2">
+<div id="4e2aa310" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="kw">def</span> func(<span class="op">*</span>values):</span>
 <span id="cb3-2"><a></a>  <span class="bu">print</span>(values)</span>
 <span id="cb3-3"><a></a>  <span class="cf">for</span> v <span class="kw">in</span> values:</span>
@@ -239,7 +239,7 @@ fox</code></pre>
 <section id="variable-length-parameter-2" class="slide level2">
 <h2>Variable length parameter</h2>
 <p>Add a <code>*</code> before your parameter name so that it accepts a variable number of arguments, gathering them into a tuple</p>
-<div id="b29c8e11" class="cell" data-execution_count="3">
+<div id="27867274" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="kw">def</span> concatenate(<span class="op">*</span>values):</span>
 <span id="cb5-2"><a></a>  new_string <span class="op">=</span> <span class="st">""</span></span>
 <span id="cb5-3"><a></a>  <span class="cf">for</span> v <span class="kw">in</span> values:</span>
@@ -258,76 +258,39 @@ fox</code></pre>
 <section id="write-a-function" class="slide level2">
 <h2>Write a function</h2>
 <ol type="1">
-<li>Its name is <code>maximum</code></li>
-<li>It takes a variable number of arguments: <code>*values</code></li>
-<li>It returns the highest value in <code>values</code></li>
-</ol>
-<div id="229f9722" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="cf">assert</span> maximum(<span class="dv">1</span>) <span class="op">==</span> <span class="dv">1</span></span>
-<span id="cb7-2"><a></a><span class="cf">assert</span> maximum(<span class="dv">3</span>,<span class="dv">1</span>) <span class="op">==</span> <span class="dv">3</span></span>
-<span id="cb7-3"><a></a><span class="cf">assert</span> maximum(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>) <span class="op">==</span> <span class="dv">6</span></span>
-<span id="cb7-4"><a></a><span class="cf">assert</span> maximum() <span class="op">==</span> <span class="va">None</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="write-a-function-solution" class="slide level2">
-<h2>Write a function – solution</h2>
-<div id="07d9f9dc" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="kw">def</span> maximum(<span class="op">*</span>values):</span>
-<span id="cb8-2"><a></a>  <span class="bu">max</span> <span class="op">=</span> <span class="va">None</span></span>
-<span id="cb8-3"><a></a>  <span class="cf">for</span> v <span class="kw">in</span> values:</span>
-<span id="cb8-4"><a></a>    <span class="cf">if</span> <span class="bu">max</span> <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span> v <span class="op">&gt;</span> <span class="bu">max</span>:</span>
-<span id="cb8-5"><a></a>      <span class="bu">max</span> <span class="op">=</span> v</span>
-<span id="cb8-6"><a></a>  <span class="cf">return</span> <span class="bu">max</span></span>
-<span id="cb8-7"><a></a></span>
-<span id="cb8-8"><a></a><span class="kw">def</span> main():</span>
-<span id="cb8-9"><a></a>  <span class="cf">assert</span> maximum(<span class="dv">1</span>) <span class="op">==</span> <span class="dv">1</span></span>
-<span id="cb8-10"><a></a>  <span class="cf">assert</span> maximum(<span class="dv">3</span>,<span class="dv">1</span>) <span class="op">==</span> <span class="dv">3</span></span>
-<span id="cb8-11"><a></a>  <span class="cf">assert</span> maximum(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>) <span class="op">==</span> <span class="dv">6</span></span>
-<span id="cb8-12"><a></a>  <span class="cf">assert</span> maximum() <span class="op">==</span> <span class="va">None</span></span>
-<span id="cb8-13"><a></a>  <span class="bu">print</span>(<span class="st">"Passed all tests"</span>)</span>
-<span id="cb8-14"><a></a>  </span>
-<span id="cb8-15"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Passed all tests</code></pre>
-</div>
-</div>
-</section>
-<section id="write-a-function-1" class="slide level2">
-<h2>Write a function</h2>
-<ol type="1">
 <li>Its name is <code>min_max</code></li>
 <li>It takes a variable number of arguments: <code>*values</code></li>
 <li>It returns the highest and lowest values in <code>values</code></li>
 </ol>
 <p>Name your file <code>min_max_tuple.py</code>, submit to Gradescope.</p>
-<div id="14c7e35f" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="cf">assert</span> min_max(<span class="dv">1</span>) <span class="op">==</span> (<span class="dv">1</span>, <span class="dv">1</span>)</span>
-<span id="cb10-2"><a></a><span class="cf">assert</span> min_max(<span class="dv">3</span>,<span class="dv">1</span>) <span class="op">==</span> (<span class="dv">1</span>, <span class="dv">3</span>)</span>
-<span id="cb10-3"><a></a><span class="cf">assert</span> min_max(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>) <span class="op">==</span> (<span class="dv">2</span>, <span class="dv">6</span>)</span>
-<span id="cb10-4"><a></a><span class="cf">assert</span> min_max() <span class="op">==</span> (<span class="va">None</span>, <span class="va">None</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="a2c504c7" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="cf">assert</span> min_max(<span class="dv">1</span>) <span class="op">==</span> (<span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb7-2"><a></a><span class="cf">assert</span> min_max(<span class="dv">3</span>,<span class="dv">1</span>) <span class="op">==</span> (<span class="dv">1</span>, <span class="dv">3</span>)</span>
+<span id="cb7-3"><a></a><span class="cf">assert</span> min_max(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>) <span class="op">==</span> (<span class="dv">2</span>, <span class="dv">6</span>)</span>
+<span id="cb7-4"><a></a><span class="cf">assert</span> min_max() <span class="op">==</span> (<span class="va">None</span>, <span class="va">None</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="write-a-function-solution-1" class="slide level2">
+<section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div id="4c36b256" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="kw">def</span> min_max(<span class="op">*</span>values):</span>
-<span id="cb11-2"><a></a>  <span class="bu">max</span> <span class="op">=</span> <span class="va">None</span></span>
-<span id="cb11-3"><a></a>  <span class="bu">min</span> <span class="op">=</span> <span class="va">None</span></span>
-<span id="cb11-4"><a></a>  <span class="cf">for</span> v <span class="kw">in</span> values:</span>
-<span id="cb11-5"><a></a>    <span class="cf">if</span> <span class="bu">max</span> <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span> v <span class="op">&gt;</span> <span class="bu">max</span>:</span>
-<span id="cb11-6"><a></a>      <span class="bu">max</span> <span class="op">=</span> v</span>
-<span id="cb11-7"><a></a>    <span class="cf">if</span> <span class="bu">min</span> <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span> v <span class="op">&lt;</span> <span class="bu">min</span>:</span>
-<span id="cb11-8"><a></a>      <span class="bu">min</span> <span class="op">=</span> v</span>
-<span id="cb11-9"><a></a>  <span class="cf">return</span> <span class="bu">min</span>, <span class="bu">max</span></span>
-<span id="cb11-10"><a></a></span>
-<span id="cb11-11"><a></a><span class="kw">def</span> main():</span>
-<span id="cb11-12"><a></a>  <span class="cf">assert</span> min_max(<span class="dv">1</span>) <span class="op">==</span> (<span class="dv">1</span>, <span class="dv">1</span>)</span>
-<span id="cb11-13"><a></a>  <span class="cf">assert</span> min_max(<span class="dv">3</span>,<span class="dv">1</span>) <span class="op">==</span> (<span class="dv">1</span>, <span class="dv">3</span>)</span>
-<span id="cb11-14"><a></a>  <span class="cf">assert</span> min_max(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>) <span class="op">==</span> (<span class="dv">2</span>, <span class="dv">6</span>)</span>
-<span id="cb11-15"><a></a>  <span class="cf">assert</span> min_max() <span class="op">==</span> (<span class="va">None</span>, <span class="va">None</span>)</span>
-<span id="cb11-16"><a></a>  <span class="bu">print</span>(<span class="st">"Passed all tests"</span>)</span>
-<span id="cb11-17"><a></a>  </span>
-<span id="cb11-18"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="76f12333" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="kw">def</span> min_max(<span class="op">*</span>values):</span>
+<span id="cb8-2"><a></a>  <span class="bu">max</span> <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb8-3"><a></a>  <span class="bu">min</span> <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb8-4"><a></a>  <span class="cf">for</span> v <span class="kw">in</span> values:</span>
+<span id="cb8-5"><a></a>    <span class="cf">if</span> <span class="bu">max</span> <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span> v <span class="op">&gt;</span> <span class="bu">max</span>:</span>
+<span id="cb8-6"><a></a>      <span class="bu">max</span> <span class="op">=</span> v</span>
+<span id="cb8-7"><a></a>    <span class="cf">if</span> <span class="bu">min</span> <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span> v <span class="op">&lt;</span> <span class="bu">min</span>:</span>
+<span id="cb8-8"><a></a>      <span class="bu">min</span> <span class="op">=</span> v</span>
+<span id="cb8-9"><a></a>  <span class="cf">return</span> <span class="bu">min</span>, <span class="bu">max</span></span>
+<span id="cb8-10"><a></a></span>
+<span id="cb8-11"><a></a><span class="kw">def</span> main():</span>
+<span id="cb8-12"><a></a>  <span class="cf">assert</span> min_max(<span class="dv">1</span>) <span class="op">==</span> (<span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb8-13"><a></a>  <span class="cf">assert</span> min_max(<span class="dv">3</span>,<span class="dv">1</span>) <span class="op">==</span> (<span class="dv">1</span>, <span class="dv">3</span>)</span>
+<span id="cb8-14"><a></a>  <span class="cf">assert</span> min_max(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>) <span class="op">==</span> (<span class="dv">2</span>, <span class="dv">6</span>)</span>
+<span id="cb8-15"><a></a>  <span class="cf">assert</span> min_max() <span class="op">==</span> (<span class="va">None</span>, <span class="va">None</span>)</span>
+<span id="cb8-16"><a></a>  <span class="bu">print</span>(<span class="st">"Passed all tests"</span>)</span>
+<span id="cb8-17"><a></a>  </span>
+<span id="cb8-18"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Passed all tests</code></pre>
 </div>
