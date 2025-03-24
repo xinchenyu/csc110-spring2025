@@ -1639,7 +1639,7 @@
     "href": "slides-10-01.html#write-a-function",
     "title": "returning tuples (slides)",
     "section": "Write a function",
-    "text": "Write a function\nIt takes a dictionary as argument and returns the sum and the multiplication of the values in the dictionary\n\ntest_dict = {\"a\": 2, \"b\": 3, \"c\": 5}\ntotal, mult = sum_and_multiplication(test_dict)\nassert total == 10\nassert mult == 30",
+    "text": "Write a function\nIt calculates and returns the total and average of all people’s numbers.\n\ngrades = ['Eric', 90, 'Sam', 87, 'Josh', 83, 'Susan', 100]\ntotal, mean = descr_stats(grades)\nassert total == 360\nassert mean == 90.0",
     "crumbs": [
       "Module 10 - Data Structures (tuples)",
       "returning tuples (slides)"
@@ -1650,7 +1650,7 @@
     "href": "slides-10-01.html#write-a-function-solution",
     "title": "returning tuples (slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\nIt calculates and returns the total and average of all people’s numbers.\n\ngrades = ['Eric', 90, 'Sam', 87, 'Josh', 83, 'Susan', 100]\ntotal, mean = descr_stats(grades)\nassert total == 360\nassert mean == 90.0",
+    "text": "Write a function – solution\n\ndef descr_stats(numbers):\n  total = 0\n  count = 0\n  for i in range(1, len(numbers), 2):\n    total += numbers[i]\n    count += 1\n  return total, total/count\n\ndef main():\n  grades = ['Eric', 90, 'Sam', 87, 'Josh', 83, 'Susan', 100]\n  print(descr_stats(grades))\n  total, mean = descr_stats(grades)\n  assert total == 360\n  assert mean == 90.0\n\nmain()\n\n(360, 90.0)",
     "crumbs": [
       "Module 10 - Data Structures (tuples)",
       "returning tuples (slides)"
@@ -1661,7 +1661,7 @@
     "href": "slides-10-01.html#write-a-function-1",
     "title": "returning tuples (slides)",
     "section": "Write a function",
-    "text": "Write a function\nIt takes one list of integers as argument and returns two lists: one with all the odd numbers and the other with all the even numbers.\n\nassert odds_and_evens([2,6,1]) == ([1], [2,6])",
+    "text": "Write a function\nIt takes a dictionary as argument and returns the sum and the multiplication of the values in the dictionary\n\ntest_dict = {\"a\": 2, \"b\": 3, \"c\": 5}\ntotal, mult = sum_and_multiplication(test_dict)\nassert total == 10\nassert mult == 30",
     "crumbs": [
       "Module 10 - Data Structures (tuples)",
       "returning tuples (slides)"
@@ -1671,8 +1671,8 @@
     "objectID": "slides-10-01.html#write-a-function-solution-1",
     "href": "slides-10-01.html#write-a-function-solution-1",
     "title": "returning tuples (slides)",
-    "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef descr_stats(numbers):\n  total = 0\n  count = 0\n  for i in range(1, len(numbers), 2):\n    total += numbers[i]\n    count += 1\n  return total, total/count\n\ndef main():\n  grades = ['Eric', 90, 'Sam', 87, 'Josh', 83, 'Susan', 100]\n  print(descr_stats(grades))\n  total, mean = descr_stats(grades)\n  assert total == 360\n  assert mean == 90.0\n\nmain()\n\n(360, 90.0)",
+    "section": "Write a function – solution 1",
+    "text": "Write a function – solution 1\n\ndef sum_and_multiplication(dictionary):\n  total = 0\n  multiplication = 1\n  for k in dictionary:\n    total += dictionary[k]\n    multiplication *= dictionary[k]\n  return total, multiplication\n\ndef main():\n  test_dict = {\"a\": 2, \"b\": 3, \"c\": 5}\n  total, mult = sum_and_multiplication(test_dict)\n  assert total == 10\n  assert mult == 30\n  \nmain()",
     "crumbs": [
       "Module 10 - Data Structures (tuples)",
       "returning tuples (slides)"

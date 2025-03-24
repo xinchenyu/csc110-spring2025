@@ -96,7 +96,7 @@ def main():
 main()
 ```
 
-## Write a function -- solution
+## Write a function 
 
 It calculates and returns the total and average of all people's numbers.
 
