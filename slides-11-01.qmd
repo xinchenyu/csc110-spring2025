@@ -29,8 +29,8 @@ lists[0][0]
 
 ## 2D lists
 
--   The "first dimension" is the outer list
--   The "second dimension" are the inner lists
+-   The "first dimension": index of the outer list
+-   The "second dimension": index of the inner list
 
 ```{python}
 #| eval: true
@@ -121,10 +121,7 @@ for i in range(len(items)):
 
 ## Write a function
 
-1.  Its name is `flatten`
-2.  It takes one parameter, which is a list of lists of integers: `numbers`
-3.  It returns a single list that flattens that list of lists into a single list that contains exactly the same values
-4.  Do not use any list methods besides `.append()`
+It returns a single list that flattens that list of lists into a single list that contains exactly the same values. Do not use any list methods besides `.append()`.
 
 ```{python}
 #| eval: false
@@ -157,11 +154,9 @@ main()
 
 ## Write a function
 
-1.  Its name is `get_highest_average`
-2.  It takes an argument, `lists`, which is a 2D list of numbers (floats or integers)
-3.  It calculates the mean of each sublist, and returns the highest average
+It takes an argument, `lists`, which is a 2D list of numbers (floats or integers) and calculates the average of each sublist, and returns the highest average.
 
-Name your solution `two_d_highest_average.py` and submit it to gradescope
+Name file `two_d_highest_average.py` and submit to gradescope.
 
 ```{python}
 #| eval: false
@@ -171,70 +166,8 @@ assert get_highest_average([[], []]) == None
 assert get_highest_average([]) == None
 ```
 
-## Write a function
-
-An illustration:
-
-```{mermaid}
-%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '24px', 'fontFamily': 'Inter'}}}%%
-
-flowchart LR
-  A["[[ ],  <br>  [2, 3, 7], <br> [15, 21, 3, 24], <br> [6, 4] ]"] --> B("len([]) > 0 ?") 
-  A --> SS("len([2, 3, 7]) > 0 ?") --> id1[calculate mean: 4]
-  A --> SSS("len([15, 2, 3, 8]) > 0 ?") --> id2[calculate mean: 7]
-  A --> SSSS("len([6, 4]) > 0 ?") --> id3[calculate mean: 5]
-  id1 --> E["[4, 7, 5]"]
-  id2 --> E
-  id3 --> E
-  
-  E --> id4[highest mean: 7]
-  
-
-  style id1 fill:#ffd5f1,stroke:#333,stroke-width:2px
-  style id2 fill:#ffd5f1,stroke:#333,stroke-width:2px
-  style id3 fill:#ffd5f1,stroke:#333,stroke-width:2px
-  style id4 fill:#feffad,stroke:#333,stroke-width:2px
-```
-
 
 ## Write a function -- solution 1
-
-```{python}
-#| eval: true
-#| echo: true
-def get_highest_average(lists):
-    means = []
-    highest_mean = None
-    for i in range(len(lists)):
-        if len(lists[i]) > 0:
-            total = 0
-            for j in range(len(lists[i])):
-                total += lists[i][j]
-            mean = total/len(lists[i])
-            means.append(mean)
-    for n in means:
-        if highest_mean == None or n > highest_mean:
-            highest_mean = n
-    return highest_mean
-
-def main():
-    assert get_highest_average([[1, 1, 1], [2, 2]]) == 2
-    assert get_highest_average([[1, 1, 1], []]) == 1
-    assert get_highest_average([[], []]) == None
-    assert get_highest_average([]) == None
-    
-    weeks = [ [100, 100, 105, 105, 102, 102, 100],
-              [70, 71, 75, 72, 81, 80, 74],
-              [78, 72, 74, 71, 70, 70, 70],
-              [30, 32, 40, 38, 31, 32, 30] ]
-    average = get_highest_average(weeks)
-    assert average == 102
-  
-main()
-      
-```
-
-## Write a function
 
 An illustration:
 
@@ -257,7 +190,7 @@ flowchart LR
 
 ```
 
-## Write a function -- solution 2
+## Write a function -- solution 1
 
 ```{python}
 #| eval: true
@@ -291,3 +224,70 @@ main()
       
 ```
 
+## Write a function -- solution 2
+
+An illustration:
+
+```{mermaid}
+%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '24px', 'fontFamily': 'Inter'}}}%%
+
+flowchart LR
+  A["[[ ],  <br>  [2, 3, 7], <br> [15, 21, 3, 24], <br> [6, 4] ]"] --> B("len([]) > 0 ?") 
+  A --> SS("len([2, 3, 7]) > 0 ?") --> id1[calculate mean: 4]
+  A --> SSS("len([15, 2, 3, 8]) > 0 ?") --> id2[calculate mean: 7]
+  A --> SSSS("len([6, 4]) > 0 ?") --> id3[calculate mean: 5]
+  id1 --> E["[4, 7, 5]"]
+  id2 --> E
+  id3 --> E
+  
+  E --> id4[highest mean: 7]
+  
+
+  style id1 fill:#ffd5f1,stroke:#333,stroke-width:2px
+  style id2 fill:#ffd5f1,stroke:#333,stroke-width:2px
+  style id3 fill:#ffd5f1,stroke:#333,stroke-width:2px
+  style id4 fill:#feffad,stroke:#333,stroke-width:2px
+```
+
+
+## Write a function -- solution 2
+
+```{python}
+#| eval: true
+#| echo: true
+def max_list(numbers):
+  max = None
+  for n in numbers:
+    if max == None or n > max:
+      max = n
+  return max
+
+def get_highest_average(lists):
+    means = []
+    highest_mean = None
+    for i in range(len(lists)):
+        if len(lists[i]) > 0:
+            total = 0
+            for j in range(len(lists[i])):
+                total += lists[i][j]
+            mean = total/len(lists[i])
+            means.append(mean)
+    highest_mean = max_list(means)
+    return highest_mean
+
+def main():
+    assert get_highest_average([[1, 1, 1], [2, 2]]) == 2
+    assert get_highest_average([[1, 1, 1], []]) == 1
+    assert get_highest_average([[], []]) == None
+    assert get_highest_average([]) == None
+    
+    weeks = [ [100, 100, 105, 105, 102, 102, 100],
+              [70, 71, 75, 72, 81, 80, 74],
+              [78, 72, 74, 71, 70, 70, 70],
+              [30, 32, 40, 38, 31, 32, 30] ]
+    average = get_highest_average(weeks)
+    assert average == 102
+  
+main()
+      
+```
