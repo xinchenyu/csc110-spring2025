@@ -70,10 +70,7 @@ for i in range(len(people)):
 
 ## Write a function
 
-1. Function name is `nested_max`
-1. It takes a 2D list of numbers as argument
-1. It iterates over every item in each sublist to find the highest number
-1. It returns the highest number in all lists
+It returns the highest value among all the numbers in the list.
 
 Test cases
 ```{python}
@@ -85,7 +82,7 @@ assert nested_max([[1, 2, 3, 2, 1],
                    [0, 1]]) == 5
 ```
 
-## Write a function -- solution 1
+## Write a function -- solution
 
 
 ```{python}
@@ -108,35 +105,6 @@ def main():
 main()
 ```
 
-## Write a function -- solution 2
-
-
-```{python}
-#| eval: true
-#| echo: true
-def max_list(numbers):
-  max = None
-  for i in range(len(numbers)):
-    if max == None or numbers[i] > max:
-      max = numbers[i]
-  return max
-
-def nested_max(lists):
-  max = None
-  for i in range(len(lists)):
-    max_of_sublist = max_list(lists[i])
-    if max == None or  max_of_sublist > max:
-      max = max_of_sublist
-  return max
-
-def main():
-  assert nested_max([[], []]) == None
-  assert nested_max([[1, 2, 3, 2, 1],
-                     [2, 3, 2, 1, 5],
-                     [0, 1]]) == 5
-  print("Passed all tests")
-main()
-```
 
 ## Loop Table
 
@@ -195,12 +163,9 @@ as_hux(df, add_colnames = TRUE) %>%
 
 ## Write a function
 
-1. Function name is `nested_min`
-1. It takes a 2D list of numbers as argument
-1. It iterates over every item in each sublist to find the lowest number
-1. It returns the lowest number in all lists
+It returns the lowest number in all inner lists.
 
-Test cases
+Test cases:
 ```{python}
 #| eval: false
 #| echo: true
@@ -232,6 +197,16 @@ def main():
   print("Passed all tests")
 main()
 ```
+
+## Quiz 09
+
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+</center>
+
+You have 10 minutes to complete the quiz.
+
 
 ## Mutate nested lists
 
@@ -332,11 +307,3 @@ def main():
 main()
 ```
 
-## Quiz 09
-
-<center>
-<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
-<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
-</center>
-
-You have 10 minutes to complete the quiz.

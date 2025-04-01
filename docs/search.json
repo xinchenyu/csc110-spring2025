@@ -5418,7 +5418,7 @@
     "href": "slides-11-02.html#write-a-function",
     "title": "nested for loops (slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nFunction name is nested_max\nIt takes a 2D list of numbers as argument\nIt iterates over every item in each sublist to find the highest number\nIt returns the highest number in all lists\n\nTest cases\n\nassert nested_max([[], []]) == None\nassert nested_max([[1, 2, 3, 2, 1],\n                   [2, 3, 2, 1, 5],\n                   [0, 1]]) == 5",
+    "text": "Write a function\nIt returns the highest value among all the numbers in the list.\nTest cases\n\nassert nested_max([[], []]) == None\nassert nested_max([[1, 2, 3, 2, 1],\n                   [2, 3, 2, 1, 5],\n                   [0, 1]]) == 5",
     "crumbs": [
       "Module 11 - Data Structures (2D lists)",
       "nested for loops (slides)"
@@ -5428,8 +5428,8 @@
     "objectID": "slides-11-02.html#write-a-function-solution-1",
     "href": "slides-11-02.html#write-a-function-solution-1",
     "title": "nested for loops (slides)",
-    "section": "Write a function – solution 1",
-    "text": "Write a function – solution 1\n\ndef nested_max(lists):\n  max = None\n  for i in range(len(lists)):\n    for j in range(len(lists[i])):\n      if max == None or lists[i][j] &gt; max:\n        max = lists[i][j]\n  return max\n\ndef main():\n  assert nested_max([[], []]) == None\n  assert nested_max([[1, 2, 3, 2, 1],\n                     [2, 3, 2, 1, 5],\n                     [0, 1]]) == 5\n  print(\"Passed all tests\")\nmain()\n\nPassed all tests",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\n\ndef nested_min(lists):\n  min = None\n  for i in range(len(lists)):\n    for j in range(len(lists[i])):\n      if min == None or lists[i][j] &lt; min:\n        min = lists[i][j]\n  return min\n\ndef main():\n  assert nested_min([[], []]) == None\n  assert nested_min([[1, 2, 3, 2, 1],\n                     [2, 3, 2, 1, 5],\n                     [0, 1]]) == 0\n  print(\"Passed all tests\")\nmain()\n\nPassed all tests",
     "crumbs": [
       "Module 11 - Data Structures (2D lists)",
       "nested for loops (slides)"
@@ -5439,8 +5439,8 @@
     "objectID": "slides-11-02.html#write-a-function-solution-2",
     "href": "slides-11-02.html#write-a-function-solution-2",
     "title": "nested for loops (slides)",
-    "section": "Write a function – solution 2",
-    "text": "Write a function – solution 2\n\ndef max_list(numbers):\n  max = None\n  for i in range(len(numbers)):\n    if max == None or numbers[i] &gt; max:\n      max = numbers[i]\n  return max\n\ndef nested_max(lists):\n  max = None\n  for i in range(len(lists)):\n    max_of_sublist = max_list(lists[i])\n    if max == None or  max_of_sublist &gt; max:\n      max = max_of_sublist\n  return max\n\ndef main():\n  assert nested_max([[], []]) == None\n  assert nested_max([[1, 2, 3, 2, 1],\n                     [2, 3, 2, 1, 5],\n                     [0, 1]]) == 5\n  print(\"Passed all tests\")\nmain()\n\nPassed all tests",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\n\ndef double_nested(lists):\n  for i in range(len(lists)):\n    for j in range(len(lists[i])):\n      lists[i][j] *= 2\n  return lists\n\ndef main():\n  assert double_nested([[], []]) == [[], []]\n  assert double_nested([[1, 2, 3, 2, 1],\n                        [0, 1]]) == [[2, 4, 6, 4, 2],\n                                     [0, 2]]\n  print(\"Passed all tests\")\nmain()\n\nPassed all tests",
     "crumbs": [
       "Module 11 - Data Structures (2D lists)",
       "nested for loops (slides)"
@@ -5473,7 +5473,7 @@
     "href": "slides-11-02.html#write-a-function-1",
     "title": "nested for loops (slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nFunction name is nested_min\nIt takes a 2D list of numbers as argument\nIt iterates over every item in each sublist to find the lowest number\nIt returns the lowest number in all lists\n\nTest cases\n\nassert nested_min([[], []]) == None\nassert nested_min([[1, 2, 3, 2, 1],\n                   [2, 3, 2, 1, 5],\n                   [0, 1]]) == 0",
+    "text": "Write a function\nIt returns the lowest number in all inner lists.\nTest cases:\n\nassert nested_min([[], []]) == None\nassert nested_min([[1, 2, 3, 2, 1],\n                   [2, 3, 2, 1, 5],\n                   [0, 1]]) == 0",
     "crumbs": [
       "Module 11 - Data Structures (2D lists)",
       "nested for loops (slides)"
@@ -5484,7 +5484,7 @@
     "href": "slides-11-02.html#write-a-function-solution",
     "title": "nested for loops (slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef nested_min(lists):\n  min = None\n  for i in range(len(lists)):\n    for j in range(len(lists[i])):\n      if min == None or lists[i][j] &lt; min:\n        min = lists[i][j]\n  return min\n\ndef main():\n  assert nested_min([[], []]) == None\n  assert nested_min([[1, 2, 3, 2, 1],\n                     [2, 3, 2, 1, 5],\n                     [0, 1]]) == 0\n  print(\"Passed all tests\")\nmain()\n\nPassed all tests",
+    "text": "Write a function – solution\n\ndef nested_max(lists):\n  max = None\n  for i in range(len(lists)):\n    for j in range(len(lists[i])):\n      if max == None or lists[i][j] &gt; max:\n        max = lists[i][j]\n  return max\n\ndef main():\n  assert nested_max([[], []]) == None\n  assert nested_max([[1, 2, 3, 2, 1],\n                     [2, 3, 2, 1, 5],\n                     [0, 1]]) == 5\n  print(\"Passed all tests\")\nmain()\n\nPassed all tests",
     "crumbs": [
       "Module 11 - Data Structures (2D lists)",
       "nested for loops (slides)"
@@ -5517,7 +5517,7 @@
     "href": "slides-11-02.html#write-a-function-solution-3",
     "title": "nested for loops (slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef double_nested(lists):\n  for i in range(len(lists)):\n    for j in range(len(lists[i])):\n      lists[i][j] *= 2\n  return lists\n\ndef main():\n  assert double_nested([[], []]) == [[], []]\n  assert double_nested([[1, 2, 3, 2, 1],\n                        [0, 1]]) == [[2, 4, 6, 4, 2],\n                                     [0, 2]]\n  print(\"Passed all tests\")\nmain()\n\nPassed all tests",
+    "text": "Write a function – solution\n\ndef reverse_strings_nested(strings):\n  for i in range(len(strings)):\n    for j in range(len(strings[i])):\n      strings[i][j] = strings[i][j][::-1]\n  return strings\n\ndef main():\n  original_strings = [[\"desserts\", \"raw\", \"live\"],\n                      [\"smart\", \"knits\"]]\n  reverse_strings_nested(original_strings)   \n  assert  original_strings == [[\"stressed\", \"war\", \"evil\"],\n                               [\"trams\", \"stink\"]]\n  \n  print(original_strings)\n  print(\"Passed test\")\n  \nmain()\n\n[['stressed', 'war', 'evil'], ['trams', 'stink']]\nPassed test",
     "crumbs": [
       "Module 11 - Data Structures (2D lists)",
       "nested for loops (slides)"
