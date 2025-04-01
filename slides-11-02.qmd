@@ -83,8 +83,6 @@ assert nested_max([[1, 2, 3, 2, 1],
 ```
 
 ## Write a function -- solution
-
-
 ```{python}
 #| eval: true
 #| echo: true
@@ -105,6 +103,34 @@ def main():
 main()
 ```
 
+
+## Read solution: correct or not?
+
+```{python}
+#| eval: false
+#| echo: true
+def max_list(numbers):
+  max = None
+  for n in numbers:
+    if max == None or n > max:
+      max = n
+  return max
+
+def nested_max(lists):
+  max = None
+  for i in range(len(lists)):
+    max_of_sublist = max_list(lists[i])
+    if max == None or  max_of_sublist > max:
+      max = max_of_sublist
+  return max
+
+def main():
+  assert nested_max([[1, 2, 3, 2, 1],
+                     [],
+                     [5, 1]]) == 5
+
+main()
+```
 
 ## Loop Table
 

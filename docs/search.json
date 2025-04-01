@@ -9207,5 +9207,27 @@
       "Module 11 - Data Structures (2D lists)",
       "more on for loops (slides)"
     ]
+  },
+  {
+    "objectID": "slides-11-02.html#correct-or-not",
+    "href": "slides-11-02.html#correct-or-not",
+    "title": "nested for loops (slides)",
+    "section": "Correct or not?",
+    "text": "Correct or not?\n\ndef max_list(numbers):\n  max = None\n  for n in numbers:\n    if max == None or n &gt; max:\n      max = n\n  return max\n\ndef nested_max(lists):\n  max = None\n  for i in range(len(lists)):\n    max_of_sublist = max_list(lists[i])\n    if max == None or  max_of_sublist &gt; max:\n      max = max_of_sublist\n  return max\n\ndef main():\n  assert nested_max([[], []]) == None\n  assert nested_max([[1, 2, 3, 2, 1],\n                     [],\n                     [5, 1]]) == 5\n\nmain()",
+    "crumbs": [
+      "Module 11 - Data Structures (2D lists)",
+      "nested for loops (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-11-02.html#read-solution-correct-or-not",
+    "href": "slides-11-02.html#read-solution-correct-or-not",
+    "title": "nested for loops (slides)",
+    "section": "Read solution: correct or not?",
+    "text": "Read solution: correct or not?\n\ndef max_list(numbers):\n  max = None\n  for n in numbers:\n    if max == None or n &gt; max:\n      max = n\n  return max\n\ndef nested_max(lists):\n  max = None\n  for i in range(len(lists)):\n    max_of_sublist = max_list(lists[i])\n    if max == None or  max_of_sublist &gt; max:\n      max = max_of_sublist\n  return max\n\ndef main():\n  assert nested_max([[1, 2, 3, 2, 1],\n                     [],\n                     [5, 1]]) == 5\n\nmain()",
+    "crumbs": [
+      "Module 11 - Data Structures (2D lists)",
+      "nested for loops (slides)"
+    ]
   }
 ]
