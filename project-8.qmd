@@ -112,7 +112,7 @@ Next, work reading the input file and replacing misspelled words. At this point,
 
 ## (3) Handle Punctuation / Handle Capitalization
 
-You might find one or the other of these easier or harder, so choose whichever you think you will be able to accomplish more quickly. Once you have one working, move to the other! Handling punctuation is extra credit.
+You might find one or the other of these easier or harder, so choose whichever you think you will be able to accomplish more quickly. Once you have one working, move to the other! Handling punctuation is mandatory.
 
 ## (4) Write out output file
 
