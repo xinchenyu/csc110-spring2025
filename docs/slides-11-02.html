@@ -293,44 +293,18 @@ A</code></pre>
 </div>
 </div>
 </section>
-<section id="read-solution-correct-or-not" class="slide level2">
-<h2>Read solution: correct or not?</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="kw">def</span> max_list(numbers):</span>
-<span id="cb14-2"><a></a>  <span class="bu">max</span> <span class="op">=</span> <span class="va">None</span></span>
-<span id="cb14-3"><a></a>  <span class="cf">for</span> n <span class="kw">in</span> numbers:</span>
-<span id="cb14-4"><a></a>    <span class="cf">if</span> <span class="bu">max</span> <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span> n <span class="op">&gt;</span> <span class="bu">max</span>:</span>
-<span id="cb14-5"><a></a>      <span class="bu">max</span> <span class="op">=</span> n</span>
-<span id="cb14-6"><a></a>  <span class="cf">return</span> <span class="bu">max</span></span>
-<span id="cb14-7"><a></a></span>
-<span id="cb14-8"><a></a><span class="kw">def</span> nested_max(lists):</span>
-<span id="cb14-9"><a></a>  <span class="bu">max</span> <span class="op">=</span> <span class="va">None</span></span>
-<span id="cb14-10"><a></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(lists)):</span>
-<span id="cb14-11"><a></a>    max_of_sublist <span class="op">=</span> max_list(lists[i])</span>
-<span id="cb14-12"><a></a>    <span class="cf">if</span> <span class="bu">max</span> <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span>  max_of_sublist <span class="op">&gt;</span> <span class="bu">max</span>:</span>
-<span id="cb14-13"><a></a>      <span class="bu">max</span> <span class="op">=</span> max_of_sublist</span>
-<span id="cb14-14"><a></a>  <span class="cf">return</span> <span class="bu">max</span></span>
-<span id="cb14-15"><a></a></span>
-<span id="cb14-16"><a></a><span class="kw">def</span> main():</span>
-<span id="cb14-17"><a></a>  <span class="cf">assert</span> nested_max([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>],</span>
-<span id="cb14-18"><a></a>                     [],</span>
-<span id="cb14-19"><a></a>                     [<span class="dv">5</span>, <span class="dv">1</span>]]) <span class="op">==</span> <span class="dv">5</span></span>
-<span id="cb14-20"><a></a></span>
-<span id="cb14-21"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
 <section id="loop-table" class="slide level2">
 <h2>Loop Table</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="kw">def</span> nested_max(lists):</span>
-<span id="cb15-2"><a></a>  <span class="bu">max</span> <span class="op">=</span> <span class="va">None</span></span>
-<span id="cb15-3"><a></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(lists)):</span>
-<span id="cb15-4"><a></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(lists[i])):</span>
-<span id="cb15-5"><a></a>      <span class="cf">if</span> <span class="bu">max</span> <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span> lists[i][j] <span class="op">&gt;</span> <span class="bu">max</span>:</span>
-<span id="cb15-6"><a></a>        <span class="bu">max</span> <span class="op">=</span> lists[i][j]</span>
-<span id="cb15-7"><a></a>  <span class="cf">return</span> <span class="bu">max</span></span>
-<span id="cb15-8"><a></a></span>
-<span id="cb15-9"><a></a>max_nested([[], [], [<span class="dv">2</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">5</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="kw">def</span> nested_max(lists):</span>
+<span id="cb14-2"><a></a>  <span class="bu">max</span> <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb14-3"><a></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(lists)):</span>
+<span id="cb14-4"><a></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(lists[i])):</span>
+<span id="cb14-5"><a></a>      <span class="cf">if</span> <span class="bu">max</span> <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span> lists[i][j] <span class="op">&gt;</span> <span class="bu">max</span>:</span>
+<span id="cb14-6"><a></a>        <span class="bu">max</span> <span class="op">=</span> lists[i][j]</span>
+<span id="cb14-7"><a></a>  <span class="cf">return</span> <span class="bu">max</span></span>
+<span id="cb14-8"><a></a></span>
+<span id="cb14-9"><a></a>max_nested([[], [], [<span class="dv">2</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">5</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Draw a loop table with:</p>
 <ul>
@@ -341,11 +315,11 @@ A</code></pre>
 <section id="loop-table-solution" class="slide level2">
 <h2>Loop Table – solution</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a>max_nested([[], [], [<span class="dv">2</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">5</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a>max_nested([[], [], [<span class="dv">2</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">5</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<table class="huxtable" data-quarto-disable-processing="true" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; ; margin-left: auto; margin-right: auto;  " id="tab:unnamed-chunk-12">
+<table class="huxtable" data-quarto-disable-processing="true" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; ; margin-left: auto; margin-right: auto;  " id="tab:unnamed-chunk-11">
 <colgroup><col><col><col><col><col></colgroup><tbody><tr>
 <th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">i</th><th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">j</th><th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">len(lists[i])</th><th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">lists[i][j]</th><th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">max</th></tr>
 <tr>
@@ -363,6 +337,32 @@ A</code></pre>
 </tbody></table>
 
 </div>
+</div>
+</section>
+<section id="read-solution-correct-or-not" class="slide level2">
+<h2>Read solution: correct or not?</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="kw">def</span> max_list(numbers):</span>
+<span id="cb16-2"><a></a>  <span class="bu">max</span> <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb16-3"><a></a>  <span class="cf">for</span> n <span class="kw">in</span> numbers:</span>
+<span id="cb16-4"><a></a>    <span class="cf">if</span> <span class="bu">max</span> <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span> n <span class="op">&gt;</span> <span class="bu">max</span>:</span>
+<span id="cb16-5"><a></a>      <span class="bu">max</span> <span class="op">=</span> n</span>
+<span id="cb16-6"><a></a>  <span class="cf">return</span> <span class="bu">max</span></span>
+<span id="cb16-7"><a></a></span>
+<span id="cb16-8"><a></a><span class="kw">def</span> nested_max(lists):</span>
+<span id="cb16-9"><a></a>  <span class="bu">max</span> <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb16-10"><a></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(lists)):</span>
+<span id="cb16-11"><a></a>    max_of_sublist <span class="op">=</span> max_list(lists[i])</span>
+<span id="cb16-12"><a></a>    <span class="cf">if</span> <span class="bu">max</span> <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span>  max_of_sublist <span class="op">&gt;</span> <span class="bu">max</span>:</span>
+<span id="cb16-13"><a></a>      <span class="bu">max</span> <span class="op">=</span> max_of_sublist</span>
+<span id="cb16-14"><a></a>  <span class="cf">return</span> <span class="bu">max</span></span>
+<span id="cb16-15"><a></a></span>
+<span id="cb16-16"><a></a><span class="kw">def</span> main():</span>
+<span id="cb16-17"><a></a>  <span class="cf">assert</span> nested_max([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>],</span>
+<span id="cb16-18"><a></a>                     [],</span>
+<span id="cb16-19"><a></a>                     [<span class="dv">5</span>, <span class="dv">1</span>]]) <span class="op">==</span> <span class="dv">5</span></span>
+<span id="cb16-20"><a></a></span>
+<span id="cb16-21"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-1" class="slide level2">
