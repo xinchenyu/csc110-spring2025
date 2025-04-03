@@ -5506,7 +5506,7 @@
     "href": "slides-11-02.html#write-a-function-2",
     "title": "nested for loops (slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nFunction name is double_nested\nIt takes a 2D list of numbers as argument\nIt mutates the sublist items by multiplying each number in each sublist by 2\nIt returns the argument list\n\nTest cases\n\nassert double_nested([[], []]) == [[], []]\nassert double_nested([[1, 2, 3, 2, 1],\n                     [0, 1]]) == [[2, 4, 6, 4, 2],\n                                  [0, 2]]",
+    "text": "Write a function\nIt mutates the sublist items by multiplying each number in each sublist by 2 and returns the argument list.\nTest cases\n\nassert double_nested([[], []]) == [[], []]\nassert double_nested([[1, 2, 3, 2, 1],\n                     [0, 1]]) == [[2, 4, 6, 4, 2],\n                                  [0, 2]]",
     "crumbs": [
       "Module 11 - Data Structures (2D lists)",
       "nested for loops (slides)"
@@ -5517,7 +5517,7 @@
     "href": "slides-11-02.html#write-a-function-solution-3",
     "title": "nested for loops (slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef reverse_strings_nested(strings):\n  for i in range(len(strings)):\n    for j in range(len(strings[i])):\n      strings[i][j] = strings[i][j][::-1]\n  return strings\n\ndef main():\n  original_strings = [[\"desserts\", \"raw\", \"live\"],\n                      [\"smart\", \"knits\"]]\n  reverse_strings_nested(original_strings)   \n  assert  original_strings == [[\"stressed\", \"war\", \"evil\"],\n                               [\"trams\", \"stink\"]]\n  \n  print(original_strings)\n  print(\"Passed test\")\n  \nmain()\n\n[['stressed', 'war', 'evil'], ['trams', 'stink']]\nPassed test",
+    "text": "Write a function – solution\n\ndef reverse_strings_nested(strings):\n  for i in range(len(strings)):\n    for j in range(len(strings[i])):\n      strings[i][j] = strings[i][j][::-1]\n  return strings\n\ndef main():\n  original_strings = [[\"desserts\", \"raw\", \"live\"],\n                      [\"smart\", \"knits\"]]\n  reverse_strings_nested(original_strings)   \n  assert  original_strings == [[\"stressed\", \"war\", \"evil\"],\n                               [\"trams\", \"stink\"]]\n  \n  print(original_strings)\n  \nmain()\n\n[['stressed', 'war', 'evil'], ['trams', 'stink']]",
     "crumbs": [
       "Module 11 - Data Structures (2D lists)",
       "nested for loops (slides)"
@@ -5528,7 +5528,7 @@
     "href": "slides-11-02.html#write-a-function-3",
     "title": "nested for loops (slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nFunction name is reverse_strings_nested\nIt takes a 2D list of strings as argument\nIt mutates the sublist items by reversing each string (you can use string[::-1] to reverse it)\nIt returns the argument list\n\nTest cases:\n\nassert reverse_strings_nested([[\"desserts\", \"raw\", \"live\"],\n                               [\"smart\", \"knits\"]]) == [[\"stressed\", \"war\", \"evil\"],\n                                                        [\"trams\", \"stink\"]]",
+    "text": "Write a function\nIt mutates the sublist items by reversing each string (use string[::-1] to reverse it) and returns the argument list.\nName file reverse_strings.py and submit your attendance.\nTest cases:\n\nassert reverse_strings_nested([[\"desserts\", \"raw\", \"live\"],\n                               [\"smart\", \"knits\"]]) == [[\"stressed\", \"war\", \"evil\"],\n                                                        [\"trams\", \"stink\"]]",
     "crumbs": [
       "Module 11 - Data Structures (2D lists)",
       "nested for loops (slides)"

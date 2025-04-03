@@ -254,10 +254,7 @@ people
 
 ## Write a function
 
-1. Function name is `double_nested`
-1. It takes a 2D list of numbers as argument
-1. It mutates the sublist items by multiplying each number in each sublist by 2
-1. It returns the argument list
+It mutates the sublist items by multiplying each number in each sublist by 2 and returns the argument list.
 
 Test cases
 ```{python}
@@ -292,10 +289,9 @@ main()
 
 ## Write a function
 
-1. Function name is `reverse_strings_nested`
-1. It takes a 2D list of strings as argument
-1. It mutates the sublist items by reversing each string (you can use `string[::-1]` to reverse it)
-1. It returns the argument list
+It mutates the sublist items by reversing each string (use `string[::-1]` to reverse it) and returns the argument list.
+
+Name file `reverse_strings.py` and submit your attendance.
 
 Test cases:
 
@@ -326,7 +322,6 @@ def main():
                                ["trams", "stink"]]
   
   print(original_strings)
-  print("Passed test")
   
 main()
 ```
