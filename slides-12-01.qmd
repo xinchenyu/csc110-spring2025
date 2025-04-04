@@ -18,7 +18,7 @@ df-print: kable
 Other ways for update: `my_l[i] += v`, `my_d[i] += v`
 
 |   Method    | List | Dictionary | Tuple |
-|:------|:----------:|:--------------:|:-----------:|
+|:------:|:----------|:--------------|:-----------|
 |  Create  |  my_l = [] |   my_d = {}   |   my_t = ()  |
 |  Retrieve  |    my_l[i] |    my_d[k]   |  my_t[i]  |
 |  Update |  my_l[i] = v  |  my_d[k] = v    |    -  |
