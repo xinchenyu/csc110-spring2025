@@ -9229,5 +9229,38 @@
       "Module 11 - Data Structures (2D lists)",
       "nested for loops (slides)"
     ]
+  },
+  {
+    "objectID": "slides-12-01.html#lists-2",
+    "href": "slides-12-01.html#lists-2",
+    "title": "data structures – review (slides)",
+    "section": "Lists",
+    "text": "Lists\nIndexing to retrieve values:\n\nmy_list = [\"a\", 1, \"b\", 2]\nmy_list[0]\n\n'a'\n\n\nIndexing to mutate values:\n\nmy_list[0] = 5\nmy_list\n\n[5, 1, 'b', 2]",
+    "crumbs": [
+      "Module 12 - Data Structures (sets)",
+      "data structures -- review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-12-01.html#data-structures---a-comparison",
+    "href": "slides-12-01.html#data-structures---a-comparison",
+    "title": "data structures – review (slides)",
+    "section": "Data Structures - a comparison",
+    "text": "Data Structures - a comparison\n\n\n\n\n\n\n\n\n\nMethod\nList\nDictionary\nTuple\n\n\n\n\nCreate\nmy_l = []\nmy_d = {}\nmy_t = ()\n\n\nRetrieve\nmy_l[i]\nmy_d[k]\nmy_t[i]\n\n\nUpdate\nmy_l[i] = v\nmy_d[k] = v\n-\n\n\nAdd\nmy_l.insert(i, v)  my_l.append(v)\nmy_d[k] = v\n-\n\n\nDelete\nmy_l.pop(i)  my_l.remove(v)\nmy_d.pop(k)\n-",
+    "crumbs": [
+      "Module 12 - Data Structures (sets)",
+      "data structures -- review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-12-01.html#a-comparison",
+    "href": "slides-12-01.html#a-comparison",
+    "title": "data structures – review (slides)",
+    "section": "A comparison",
+    "text": "A comparison\nOther ways for update: my_l[i] += v, my_d[i] += v\n\n\n\n\n\n\n\n\n\nMethod\nList\nDictionary\nTuple\n\n\n\n\nCreate\nmy_l = []\nmy_d = {}\nmy_t = ()\n\n\nRetrieve\nmy_l[i]\nmy_d[k]\nmy_t[i]\n\n\nUpdate\nmy_l[i] = v\nmy_d[k] = v\n-\n\n\nAdd\nmy_l.insert(i, v)  my_l.append(v)\nmy_d[k] = v\n-\n\n\nDelete\nmy_l.pop(i)  my_l.remove(v)\nmy_d.pop(k)\n-",
+    "crumbs": [
+      "Module 12 - Data Structures (sets)",
+      "data structures -- review (slides)"
+    ]
   }
 ]

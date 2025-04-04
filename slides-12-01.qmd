@@ -7,16 +7,24 @@ df-print: kable
 
 # CSc 110 - Data Structures
 
-## Announcements
-
-* No lecture, office hours, and lab on Monday, Nov 11
-
-
 ## Data Structures in Python
 
 -   lists (mutable)
 -   dictionaries (mutable)
 -   tuples (immutable)
+
+## A comparison
+
+Other ways for update: `my_l[i] += v`, `my_d[i] += v`
+
+|   Method    | List | Dictionary | Tuple |
+|:------|:----------:|:--------------:|:-----------:|
+|  Create  |  my_l = [] |   my_d = {}   |   my_t = ()  |
+|  Retrieve  |    my_l[i] |    my_d[k]   |  my_t[i]  |
+|  Update |  my_l[i] = v  |  my_d[k] = v    |    -  |
+|  Add  | my_l.insert(i, v) <br> my_l.append(v)    |     my_d[k] = v   |     -  |
+|  Delete  |  my_l.pop(i) <br> my_l.remove(v) |  my_d.pop(k)    |     -  |
+
 
 ## Lists
 
