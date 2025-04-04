@@ -9262,5 +9262,38 @@
       "Module 12 - Data Structures (sets)",
       "data structures -- review (slides)"
     ]
+  },
+  {
+    "objectID": "slides-12-01.html#a-comparison---fill-the-blank",
+    "href": "slides-12-01.html#a-comparison---fill-the-blank",
+    "title": "data structures – review (slides)",
+    "section": "A comparison - fill the blank",
+    "text": "A comparison - fill the blank\nuse i to represent index, v to represent value:\n\n\n\nMethod\nList\nDictionary\nTuple\n\n\n\n\nCreate\nmy_l = []\n\nmy_t = ()\n\n\nRetrieve\nmy_l[i]\nmy_d[k]\n\n\n\nUpdate\n\n\n\n\n\nAdd\n\nmy_d[k] = v\n\n\n\nDelete\nmy_l.pop(i)  my_l.remove(v)",
+    "crumbs": [
+      "Module 12 - Data Structures (sets)",
+      "data structures -- review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-12-01.html#a-comparison---fill-the-missing-cells",
+    "href": "slides-12-01.html#a-comparison---fill-the-missing-cells",
+    "title": "data structures – review (slides)",
+    "section": "A comparison - fill the missing cells",
+    "text": "A comparison - fill the missing cells\nuse i to represent index, v to represent value:\n\n\n\nMethod\nList\nDictionary\nTuple\n\n\n\n\nCreate\nmy_l = []\n\nmy_t = ()\n\n\nRetrieve\nmy_l[i]\nmy_d[k]\n\n\n\nUpdate\n\n\n\n\n\nAdd\n\nmy_d[k] = v\n\n\n\nDelete\nmy_l.pop(i)  my_l.remove(v)",
+    "crumbs": [
+      "Module 12 - Data Structures (sets)",
+      "data structures -- review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-12-01.html#a-comparison---fill-in-the-missing-cells",
+    "href": "slides-12-01.html#a-comparison---fill-in-the-missing-cells",
+    "title": "data structures – review (slides)",
+    "section": "A comparison - fill in the missing cells",
+    "text": "A comparison - fill in the missing cells\nuse i to represent index, v to represent value:\n\n\n\nMethod\nList\nDictionary\nTuple\n\n\n\n\nCreate\nmy_l = []\n\nmy_t = ()\n\n\nRetrieve\nmy_l[i]\nmy_d[k]\n\n\n\nUpdate\n\n\n\n\n\nAdd\n\nmy_d[k] = v\n\n\n\nDelete\nmy_l.pop(i)  my_l.remove(v)",
+    "crumbs": [
+      "Module 12 - Data Structures (sets)",
+      "data structures -- review (slides)"
+    ]
   }
 ]

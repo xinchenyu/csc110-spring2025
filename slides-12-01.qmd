@@ -13,6 +13,18 @@ df-print: kable
 -   dictionaries (mutable)
 -   tuples (immutable)
 
+## A comparison - fill in the missing cells
+
+use `i` to represent index, `v` to represent value:
+
+|   Method    | List | Dictionary | Tuple |
+|:------------:|:----------|:--------------|:-----------|
+|  Create  |  my_l = [] |      |   my_t = ()  |
+|  Retrieve  |    my_l[i] |    my_d[k]   |    |
+|  Update |   |      |      |
+|  Add  |     |     my_d[k] = v   |       |
+|  Delete  |  my_l.pop(i) <br> my_l.remove(v) |     |       |
+
 ## A comparison
 
 Other ways for update: `my_l[i] += v`, `my_d[i] += v`
