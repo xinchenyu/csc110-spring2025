@@ -341,9 +341,9 @@ def main():
 main()
 ```
 
-## Can we change size of data structure?
+## Can we change size while iterating?
 
-Go to [Python Tutor](https://pythontutor.com/) and visualize the following execution. 
+Go to [Python Tutor](https://pythontutor.com/) and visualize the execution. 
 
 -   Remove values using `for x in list`:
 ```{python}
@@ -363,9 +363,9 @@ for value in my_list:
   my_list.append(value + 1) 
 ```
 
-## Cannot change size of data structure
+## Cannot change size while iterating
 
-It is not possible to remove or add items to a list or a dictionary inside a `for x in data_structure` loop. This is what happens when you try to do so:
+It's not possible to remove or add items to a list/dictionary inside a `for x in data_structure` loop:
 
 Weird behavior:
 
@@ -388,16 +388,16 @@ for value in my_list:
   my_list.append(value + 1) # this causes an infinite loop
 ```
 
-## Cannot change size of data structure
+## Cannot change size while iterating
 
-It is not possible to remove or add items to a list or a dictionary inside a `for x in data_structure` loop. This is what happens when you try to do so:
+It's not possible to remove or add items to a list/dictionary inside a `for x in data_structure` loop:
 
 Error:
 
 ```{python}
 #| eval: false
 #| echo: true
-my_dict = {2: 0, 3: 1, 1: 0, 2: 0}
+my_dict = {2: 0, 3: 1, 1: 0}
 for key in my_dict:
   my_dict.pop(key) # this causes an error
 ```

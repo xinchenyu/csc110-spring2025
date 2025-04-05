@@ -9295,5 +9295,126 @@
       "Module 12 - Data Structures (sets)",
       "data structures -- review (slides)"
     ]
+  },
+  {
+    "objectID": "slides-12-01.html#can-we-iterate-and-change-size",
+    "href": "slides-12-01.html#can-we-iterate-and-change-size",
+    "title": "data structures – review (slides)",
+    "section": "Can we iterate and change size?",
+    "text": "Can we iterate and change size?\nGo to Python Tutor and visualize the following execution.\n\nRemove values using for x in list:\n\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.remove(value)\n\n\nAppend values using for x in list:\n\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.append(value + 1)",
+    "crumbs": [
+      "Module 12 - Data Structures (sets)",
+      "data structures -- review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-12-01.html#can-we-iterate-at-the-same-time-change-size",
+    "href": "slides-12-01.html#can-we-iterate-at-the-same-time-change-size",
+    "title": "data structures – review (slides)",
+    "section": "Can we iterate at the same time change size?",
+    "text": "Can we iterate at the same time change size?\nGo to Python Tutor and visualize the following execution.\n\nRemove values using for x in list:\n\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.remove(value)\n\n\nAppend values using for x in list:\n\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.append(value + 1)",
+    "crumbs": [
+      "Module 12 - Data Structures (sets)",
+      "data structures -- review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-12-01.html#iterate-at-the-same-time-change-size",
+    "href": "slides-12-01.html#iterate-at-the-same-time-change-size",
+    "title": "data structures – review (slides)",
+    "section": "Iterate at the same time change size?",
+    "text": "Iterate at the same time change size?\nGo to Python Tutor and visualize the following execution.\n\nRemove values using for x in list:\n\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.remove(value)\n\n\nAppend values using for x in list:\n\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.append(value + 1)",
+    "crumbs": [
+      "Module 12 - Data Structures (sets)",
+      "data structures -- review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-12-01.html#iterate-and-change-size-at-the-same-time",
+    "href": "slides-12-01.html#iterate-and-change-size-at-the-same-time",
+    "title": "data structures – review (slides)",
+    "section": "Iterate and change size at the same time?",
+    "text": "Iterate and change size at the same time?\nGo to Python Tutor and visualize the following execution.\n\nRemove values using for x in list:\n\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.remove(value)\n\n\nAppend values using for x in list:\n\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.append(value + 1)",
+    "crumbs": [
+      "Module 12 - Data Structures (sets)",
+      "data structures -- review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-12-01.html#simultaneously-iterate-and-change-size",
+    "href": "slides-12-01.html#simultaneously-iterate-and-change-size",
+    "title": "data structures – review (slides)",
+    "section": "Simultaneously iterate and change size?",
+    "text": "Simultaneously iterate and change size?\nGo to Python Tutor and visualize the following execution.\n\nRemove values using for x in list:\n\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.remove(value)\n\n\nAppend values using for x in list:\n\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.append(value + 1)",
+    "crumbs": [
+      "Module 12 - Data Structures (sets)",
+      "data structures -- review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-12-01.html#can-we-iterate-while-changing-size",
+    "href": "slides-12-01.html#can-we-iterate-while-changing-size",
+    "title": "data structures – review (slides)",
+    "section": "Can we iterate while changing size?",
+    "text": "Can we iterate while changing size?\nGo to Python Tutor and visualize the execution.\n\nRemove values using for x in list:\n\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.remove(value)\n\n\nAppend values using for x in list:\n\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.append(value + 1)",
+    "crumbs": [
+      "Module 12 - Data Structures (sets)",
+      "data structures -- review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-12-01.html#cannot-iterate-while-changing-size",
+    "href": "slides-12-01.html#cannot-iterate-while-changing-size",
+    "title": "data structures – review (slides)",
+    "section": "Cannot iterate while changing size",
+    "text": "Cannot iterate while changing size\nIt’s not possible to remove or add items to a list/dictionary inside a for x in data_structure loop:\nWeird behavior:\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.remove(value)\nmy_list\n\n[3, 2]\n\n\nInfinite loop:\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.append(value + 1) # this causes an infinite loop",
+    "crumbs": [
+      "Module 12 - Data Structures (sets)",
+      "data structures -- review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-12-01.html#cannot-iterate-while-changing-size-1",
+    "href": "slides-12-01.html#cannot-iterate-while-changing-size-1",
+    "title": "data structures – review (slides)",
+    "section": "Cannot iterate while changing size",
+    "text": "Cannot iterate while changing size\nIt’s not possible to remove or add items to a list/dictionary inside a for x in data_structure loop:\nError:\n\nmy_dict = {2: 0, 3: 1, 1: 0}\nfor key in my_dict:\n  my_dict.pop(key) # this causes an error",
+    "crumbs": [
+      "Module 12 - Data Structures (sets)",
+      "data structures -- review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-12-01.html#can-we-change-size-while-iterating",
+    "href": "slides-12-01.html#can-we-change-size-while-iterating",
+    "title": "data structures – review (slides)",
+    "section": "Can we change size while iterating?",
+    "text": "Can we change size while iterating?\nGo to Python Tutor and visualize the execution.\n\nRemove values using for x in list:\n\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.remove(value)\n\n\nAppend values using for x in list:\n\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.append(value + 1)",
+    "crumbs": [
+      "Module 12 - Data Structures (sets)",
+      "data structures -- review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-12-01.html#cannot-change-size-while-iterating",
+    "href": "slides-12-01.html#cannot-change-size-while-iterating",
+    "title": "data structures – review (slides)",
+    "section": "Cannot change size while iterating",
+    "text": "Cannot change size while iterating\nIt’s not possible to remove or add items to a list/dictionary inside a for x in data_structure loop:\nWeird behavior:\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.remove(value)\nmy_list\n\n[3, 2]\n\n\nInfinite loop:\n\nmy_list = [2, 3, 1, 2]\nfor value in my_list:\n  my_list.append(value + 1) # this causes an infinite loop",
+    "crumbs": [
+      "Module 12 - Data Structures (sets)",
+      "data structures -- review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-12-01.html#cannot-change-size-while-iterating-1",
+    "href": "slides-12-01.html#cannot-change-size-while-iterating-1",
+    "title": "data structures – review (slides)",
+    "section": "Cannot change size while iterating",
+    "text": "Cannot change size while iterating\nIt’s not possible to remove or add items to a list/dictionary inside a for x in data_structure loop:\nError:\n\nmy_dict = {2: 0, 3: 1, 1: 0}\nfor key in my_dict:\n  my_dict.pop(key) # this causes an error",
+    "crumbs": [
+      "Module 12 - Data Structures (sets)",
+      "data structures -- review (slides)"
+    ]
   }
 ]
