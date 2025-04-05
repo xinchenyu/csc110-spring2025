@@ -7,13 +7,6 @@ df-print: kable
 
 # CSc 110 - Intro to Sets
 
-## Announcements
-
-* Midterm 3 will be on next Wednesday, Nov 20.
-* Review session next Tuesday, Nov 19, 5-7pm
-  * Location: Gittings 129b 
-* Study guide: [xinchenyu.github.io/csc110-fall2024/pdfs/study-guide-3.pdf](https://xinchenyu.github.io/csc110-fall2024/pdfs/study-guide-3.pdf) 
-
 ## Data Structures in Python
 
 -   lists (mutable)
@@ -63,55 +56,24 @@ df-print: kable
 
 -   use `for x in set` to iterate over the elements in a set
 
+-   You can also use `in` and `len()` with sets 
 
 ## Set methods
 
 * `.add(value)` adds an element to the set
 * `.discard(value)` discards the specified value
 
-You can also use the operator `in` and the function `len()` with sets 
-
-Use the function `set()` to convert a list to a set, and `list()` to convert a set into a list
-
-## Evaluate the code
-
-```{python}
-#| eval: false
-#| echo: true
-numbers = {5, 7, 10, 5, 3, 5, 9, 8, 20, 5}
-numbers  # evaluate what this set holds at this point
-
-numbers.add(30)
-numbers  # evaluate what this set holds at this point
-
-numbers.discard(10)
-numbers  # evaluate what this set holds at this point
-```
-
-
-## Evaluate the code
+Use `set()` to convert a list to a set, and `list()` to convert a set into a list:
 
 ```{python}
 #| eval: true
 #| echo: true
-numbers = {5, 7, 10, 5, 3, 5, 9, 8, 20, 5}
-numbers
+numbers = [5, 5, 6, 6]
+numbers_set = set(numbers)
+numbers_list = list(numbers_set)
+print(numbers_set, numbers_list)
 ```
 
-```{python}
-#| eval: true
-#| echo: true
-numbers.add(30)
-numbers
-```
-
-
-```{python}
-#| eval: true
-#| echo: true
-numbers.discard(10)
-numbers
-```
 
 ## Evaluate the code
 

@@ -1126,7 +1126,7 @@
     "href": "slides-12-02.html#sets",
     "title": "intro to sets (slides)",
     "section": "Sets",
-    "text": "Sets\n\nstore:\n\ndo NOT store items in the order you created them\nCANNOT use square brackets to retrieve an item\ndo NOT allow repeated items to be stored\n\nuse set() to initiate an empty set\nuse curly brackets ({}) for creating a set with values\nuse for x in set to iterate over the elements in a set",
+    "text": "Sets\n\nstore:\n\ndo NOT store items in the order you created them\nCANNOT use square brackets to retrieve an item\ndo NOT allow repeated items to be stored\n\nuse set() to initiate an empty set\nuse curly brackets ({}) for creating a set with values\nuse for x in set to iterate over the elements in a set\nYou can also use in and len() with sets",
     "crumbs": [
       "Module 12 - Data Structures (sets)",
       "intro to sets (slides)"
@@ -1137,7 +1137,7 @@
     "href": "slides-12-02.html#set-methods",
     "title": "intro to sets (slides)",
     "section": "Set methods",
-    "text": "Set methods\n\n.add(value) adds an element to the set\n.discard(value) discards the specified value\n\nYou can also use the operator in and the function len() with sets\nUse the function set() to convert a list to a set, and list() to convert a set into a list",
+    "text": "Set methods\n\n.add(value) adds an element to the set\n.discard(value) discards the specified value\n\nUse set() to convert a list to a set, and list() to convert a set into a list:\n\nnumbers = [5, 5, 6, 6]\nnumbers_set = set(numbers)\nnumbers_list = list(numbers_set)\nprint(numbers_set, numbers_list)\n\n{5, 6} [5, 6]",
     "crumbs": [
       "Module 12 - Data Structures (sets)",
       "intro to sets (slides)"
@@ -1148,7 +1148,7 @@
     "href": "slides-12-02.html#evaluate-the-code",
     "title": "intro to sets (slides)",
     "section": "Evaluate the code",
-    "text": "Evaluate the code\n\nnumbers = {5, 7, 10, 5, 3, 5, 9, 8, 20, 5}\nnumbers  # evaluate what this set holds at this point\n\nnumbers.add(30)\nnumbers  # evaluate what this set holds at this point\n\nnumbers.discard(10)\nnumbers  # evaluate what this set holds at this point",
+    "text": "Evaluate the code\n\nnumbers_list = [2, 1, 2, 1, 3, 4, 1]\nnumbers_list # evaluate this line\n\nnumbers_set = set(numbers_list)\nnumbers_set # evaluate this line\n\nnumbers_set.add(1)\nnumbers_set.add(2)\nnumbers_set # evaluate this line\n\nnumbers_set.add(5)\nnumbers_set # evaluate this line\n\nnumbers_set.discard(6)\nnumbers_set.discard(1)\nnumbers_set # evaluate this line",
     "crumbs": [
       "Module 12 - Data Structures (sets)",
       "intro to sets (slides)"
@@ -1159,7 +1159,7 @@
     "href": "slides-12-02.html#evaluate-the-code-1",
     "title": "intro to sets (slides)",
     "section": "Evaluate the code",
-    "text": "Evaluate the code\n\nnumbers = {5, 7, 10, 5, 3, 5, 9, 8, 20, 5}\nnumbers\n\n{3, 5, 7, 8, 9, 10, 20}\n\n\n\nnumbers.add(30)\nnumbers\n\n{3, 5, 7, 8, 9, 10, 20, 30}\n\n\n\nnumbers.discard(10)\nnumbers\n\n{3, 5, 7, 8, 9, 20, 30}",
+    "text": "Evaluate the code\n\nnumbers_list = [2, 1, 2, 1, 3, 4, 1]\nnumbers_list # evaluate this line\n\n[2, 1, 2, 1, 3, 4, 1]\n\n\n\nnumbers_set = set(numbers_list)\nnumbers_set # evaluate this line\n\n{1, 2, 3, 4}\n\n\n\nnumbers_set.add(1)\nnumbers_set.add(2)\nnumbers_set # evaluate this line\n\n{1, 2, 3, 4}\n\n\n\nnumbers_set.add(5)\nnumbers_set # evaluate this line\n\n{1, 2, 3, 4, 5}\n\n\n\nnumbers_set.discard(6)\nnumbers_set.discard(1)\nnumbers_set # evaluate this line\n\n{2, 3, 4, 5}",
     "crumbs": [
       "Module 12 - Data Structures (sets)",
       "intro to sets (slides)"
