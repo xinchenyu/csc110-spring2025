@@ -117,6 +117,8 @@ def main():
     
     # call a function for checking if a word is found on a line and where it is (index), passing in the needed arguments
     
+    # print the dictionary with words as keys and their positions as values
+
 main()
 ```
 
@@ -152,6 +154,8 @@ def main():
     # call a function to save all the words in the 4 directions for all the indices using a dictionary, passing in the needed arguments
     
     # call a function for checking if a word is found in any one of the 4 directions (the value) and where it is (the key), passing in the needed arguments
+    
+    # print the dictionary with words as keys and their positions as values
     
 if __name__ == '__main__':
     main()
