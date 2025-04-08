@@ -7801,7 +7801,7 @@
     "href": "project-11.html#output",
     "title": "Programming Project 11",
     "section": "Output",
-    "text": "Output\nThe program should return a dictionary with the starting row / col locations for each word found. Your code should have a function called search that returns this dictionary. The formatting of the return dictionary should be something like:\n\n{\"word1\": [1, 1], \"word2\": [5, 5]}",
+    "text": "Output\nThe program should return a dictionary with the starting row / col locations for each word found. Your code should have a main function and you need to call the main function to print this dictionary. The formatting of the dictionary should be something like:\n\n{\"word1\": [1, 1], \"word2\": [5, 5]}",
     "crumbs": [
       "Programming Projects",
       "Programming Project 11"
@@ -7812,7 +7812,7 @@
     "href": "project-11.html#reading-in-input-files",
     "title": "Programming Project 11",
     "section": "(1) Reading in input files",
-    "text": "(1) Reading in input files\nCreate a function that will be responsible for opening up the words file and reading in the information. You can pass the file name into this function via arguments / parameters. The function should iterate through the lines and create a dictionary that maps the forwards-spelling to the backwards spelling. After the data is read in, the function should return the dictionary back to main.\nNext, open word input grid file up.\nYour functions for this part should be called text_to_dictionary and load_search_grid.",
+    "text": "(1) Reading in input files\nCreate a function that will be responsible for opening up the words file and reading in the information. You can pass the file name into this function via arguments / parameters. The function should iterate through the lines and create a dictionary that maps the forwards-spelling to the backwards spelling. After the data is read in, the function should return the dictionary back to main. Next, open word input grid file up.",
     "crumbs": [
       "Programming Projects",
       "Programming Project 11"

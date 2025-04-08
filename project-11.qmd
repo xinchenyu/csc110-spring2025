@@ -22,7 +22,7 @@ This programming project is an adaptation of Ben Dicken's WordSearch Programming
 
 In this assignment, you will be tasked with writing a program that finds certain words within a wordsearch grid and returns the word mapped to the line and starting character location of each word. The information of the board, and the words will be provided via files you will need to read in. 
 
-You should name the file `wordsearch.py`. Your code should have a function called `search` that returns a dictionary (see specification below).
+You should name the file `wordsearch.py`. Your code should have a `main` function that print a dictionary (see specification below).
 
 ## Words text file
 
@@ -54,7 +54,7 @@ The puzzle file could have more or less Rows/Columns depending on each test case
 
 ## Output
 
-The program should return a dictionary with the starting row / col locations for each word found. Your code should have a function called `search` that returns this dictionary. The formatting of the return dictionary should be something like:
+The program should return a dictionary with the starting row / col locations for each word found. Your code should have a `main` function and you need to call the `main` function to print this dictionary. The formatting of the dictionary should be something like:
 
 ```{python}
 #| eval: false
@@ -86,7 +86,7 @@ V B U L L E T
 A M E R I C A
 </pre>
 
-Your program should return:
+Your program should return and print:
 
 ```{python}
 #| eval: false
@@ -97,25 +97,34 @@ Your program should return:
  "star": [4, 5]}
 ```
 
-For example, when searching for the word `star`, the starting position is row 4 and column 5 for the letter `s`. A word in the grid can be horizontal or vertical, the order of letters may go forward or backward. Consider the cases when a word only show up once in the grid.
+A word in the grid can be horizontal or vertical, the order of letters may go forward or backward. For example, when searching for the word `star`, the starting position is row 4 and column 5 for the letter `s` (vertical backward direction). Another example is the word `bullet`, the starting position is row 6 and column 2 for the letter `b` (horizontal forward direction). Consider the cases when a word only show up once in the grid.
 
 # Development Strategy 1
 
-This section covers how you should go about structuring and implementing the code. In total, your program should have at least 5 functions. My recommendation for these five functions:
+This section covers how you should go about structuring and implementing the code. In total, your program should have at least 4 functions. My recommendation for these functions:
 
-* A function to load in the forwards words, computes the backwards version of each word, and save into a dictionary
-* One for transposing the grid
-* One for searching through lines
-* One for checking if a word is found on a line and where it is (index)
-* You may have other functions as well. You should build this program in the following sequence:
+```{python}
+#| eval: false
+
+# All your functions are defined here
+
+def main():
+    # call a function to load in the forwards words, computes the backwards version of each word, and save into a dictionary, passing in the needed arguments
+    
+    # call a function for transposing the grid, passing in the needed arguments
+
+    # call a function for searching through lines, passing in the needed arguments
+    
+    # call a function for checking if a word is found on a line and where it is (index), passing in the needed arguments
+    
+main()
+```
+
+You may have other functions as well and use your preferred names for them, but you MUST call your `main` function when submitting your file. You may build this program in the following sequence:
 
 ## (1) Reading in input files
 
-Create a function that will be responsible for opening up the words file and reading in the information. You can pass the file name into this function via arguments / parameters. The function should iterate through the lines and create a dictionary that maps the forwards-spelling to the backwards spelling. After the data is read in, the function should return the dictionary back to main.
-
-Next, open word input grid file up.
-
-Your functions for this part should be called `text_to_dictionary` and `load_search_grid`.
+Create a function that will be responsible for opening up the words file and reading in the information. You can pass the file name into this function via arguments / parameters. The function should iterate through the lines and create a dictionary that maps the forwards-spelling to the backwards spelling. After the data is read in, the function should return the dictionary back to main. Next, open word input grid file up.
 
 ## (2) Word search
 
@@ -131,27 +140,24 @@ In vertical search, you have to search for the words in the columns of the grid,
 
 You may also consider another strategy: 
 
-* A function to load in the words and save into a list
-* One to get each word of the 4 directions at each position
-  * The 4 directions are: horizontal forward, horizontal backward, vertical forward, and vertical backward
-  * For example, for position `[2, 2]`, the words are: `navybm`, `ns`, `nzzaql` and `nr`
-* One to save all the words in the 4 directions for all the indices using a dictionary
-* One for checking if a word is found in any one of the 4 directions (the value) and where it is (the key)
-* You may have other functions as well. You should build this program in the following sequence:
-
-# Example run
-
 ```{python}
-#| echo: true
 #| eval: false
+# All your functions are defined here
+
+def main():
+    # call a function to load in the words and save into a list, passing in the needed arguments
+    
+    # call a function to get each word of the 4 directions at each position, passing in the needed arguments
+
+    # call a function to save all the words in the 4 directions for all the indices using a dictionary, passing in the needed arguments
+    
+    # call a function for checking if a word is found in any one of the 4 directions (the value) and where it is (the key), passing in the needed arguments
+    
 if __name__ == '__main__':
-    word_bank = text_to_dictionary("words.txt")
-    grid = load_search_grid("grid.txt")
-    assert search(word_bank, grid) == {"army": [1, 6],
-                                       "bullet": [6, 2],
-                                       "america": [7, 1],
-                                       "navy": [2, 2],
-                                       "star": [4, 5]}
-    print("Passed test.")
+    main()
 ```
 
+
+The 4 directions are: horizontal forward, horizontal backward, vertical forward, and vertical backward. For example, for position `[2, 2]`, the words are: `navybm`, `ns`, `nzzaql` and `nr`.
+
+You may have other functions as well and use your preferred names for them, but you MUST call your `main` function when submitting your file. 
