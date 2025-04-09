@@ -56,22 +56,38 @@ df-print: kable
 
 -   use `for x in set` to iterate over the elements in a set
 
--   You can also use `in` and `len()` with sets 
 
 ## Set methods
 
 * `.add(value)` adds an element to the set
 * `.discard(value)` discards the specified value
 
-Use `set()` to convert a list to a set, and `list()` to convert a set into a list:
+-   You can also use `in` and `len()` with sets 
+
+## Converting data structure 
+
+-   `set()` to convert a list/tuple into a set
 
 ```{python}
 #| eval: true
 #| echo: true
-numbers = [5, 5, 6, 6]
-numbers_set = set(numbers)
-numbers_list = list(numbers_set)
-print(numbers_set, numbers_list)
+print(set([3, 2, 2, 1]), set((3, 2, 2, 1)))
+```
+
+-   `list()` to convert a set/tuple into a list
+
+```{python}
+#| eval: true
+#| echo: true
+print(list({3, 2, 2, 1}), list((3, 2, 2, 1)))
+```
+
+-   `tuple()` to convert a list/set into a tuple
+
+```{python}
+#| eval: true
+#| echo: true
+print(tuple({3, 2, 2, 1}), tuple([3, 2, 2, 1]))
 ```
 
 
@@ -228,5 +244,14 @@ def main():
   
 main()
 ```
+
+## Quiz 10
+
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+</center>
+
+You have 10 minutes to complete the quiz.
 
 

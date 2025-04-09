@@ -1126,7 +1126,7 @@
     "href": "slides-12-02.html#sets",
     "title": "intro to sets (slides)",
     "section": "Sets",
-    "text": "Sets\n\nstore:\n\ndo NOT store items in the order you created them\nCANNOT use square brackets to retrieve an item\ndo NOT allow repeated items to be stored\n\nuse set() to initiate an empty set\nuse curly brackets ({}) for creating a set with values\nuse for x in set to iterate over the elements in a set\nYou can also use in and len() with sets",
+    "text": "Sets\n\nstore:\n\ndo NOT store items in the order you created them\nCANNOT use square brackets to retrieve an item\ndo NOT allow repeated items to be stored\n\nuse set() to initiate an empty set\nuse curly brackets ({}) for creating a set with values\nuse for x in set to iterate over the elements in a set",
     "crumbs": [
       "Module 12 - Data Structures (sets)",
       "intro to sets (slides)"
@@ -1137,7 +1137,7 @@
     "href": "slides-12-02.html#set-methods",
     "title": "intro to sets (slides)",
     "section": "Set methods",
-    "text": "Set methods\n\n.add(value) adds an element to the set\n.discard(value) discards the specified value\n\nUse set() to convert a list to a set, and list() to convert a set into a list:\n\nnumbers = [5, 5, 6, 6]\nnumbers_set = set(numbers)\nnumbers_list = list(numbers_set)\nprint(numbers_set, numbers_list)\n\n{5, 6} [5, 6]",
+    "text": "Set methods\n\n.add(value) adds an element to the set\n.discard(value) discards the specified value\nYou can also use in and len() with sets",
     "crumbs": [
       "Module 12 - Data Structures (sets)",
       "intro to sets (slides)"
@@ -9415,6 +9415,39 @@
     "crumbs": [
       "Module 12 - Data Structures (sets)",
       "data structures -- review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-12-02.html#data-structure-convertion",
+    "href": "slides-12-02.html#data-structure-convertion",
+    "title": "intro to sets (slides)",
+    "section": "Data structure convertion",
+    "text": "Data structure convertion\n\nset() to convert a list/tuple into a set\nlist() to convert a set/tuple into a list\ntuple to convert a list/set into a tuple\n\n\nnumbers = [5, 5, 6, 6]\nnumbers_set = set(numbers)\nnumbers_list = list(numbers_set)\nprint(numbers_set, numbers_list)\n\n{5, 6} [5, 6]",
+    "crumbs": [
+      "Module 12 - Data Structures (sets)",
+      "intro to sets (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-12-02.html#converting-data-structure",
+    "href": "slides-12-02.html#converting-data-structure",
+    "title": "intro to sets (slides)",
+    "section": "Converting data structure",
+    "text": "Converting data structure\n\nset() to convert a list/tuple into a set\n\n\nprint(set([3, 2, 2, 1]), set((3, 2, 2, 1)))\n\n{1, 2, 3} {1, 2, 3}\n\n\n\nlist() to convert a set/tuple into a list\n\n\nprint(list({3, 2, 2, 1}), list((3, 2, 2, 1)))\n\n[1, 2, 3] [3, 2, 2, 1]\n\n\n\ntuple() to convert a list/set into a tuple\n\n\nprint(tuple({3, 2, 2, 1}), tuple([3, 2, 2, 1]))\n\n(1, 2, 3) (3, 2, 2, 1)",
+    "crumbs": [
+      "Module 12 - Data Structures (sets)",
+      "intro to sets (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-12-02.html#quiz-10",
+    "href": "slides-12-02.html#quiz-10",
+    "title": "intro to sets (slides)",
+    "section": "Quiz 10",
+    "text": "Quiz 10\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.",
+    "crumbs": [
+      "Module 12 - Data Structures (sets)",
+      "intro to sets (slides)"
     ]
   }
 ]
