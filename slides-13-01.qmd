@@ -39,9 +39,7 @@ numbers
 
 ## Write a function
 
-1. Its name is `total_mean`
-1. It takes a 2D list of integers as argument with at least one inner list
-1. It **mutates** the list, replace each inner list with a tuple. The tuple is the total and mean of that inner list.
+It takes a 2D list of integers as argument with at least one inner list. It **mutates** the list, replace each inner list with a tuple. The tuple is the total and mean of that inner list.
 
 ```{python}
 #| echo: true
@@ -52,6 +50,27 @@ assert test_list == [(20, 5.0), (None, None), (9, 3.0)]
 assert total_mean([[2, 4, 6, 8], [], [2, 3, 4]]) == [(20, 5.0), (None, None), (9, 3.0)]
 ```
 
+
+## Write a function -- solution
+
+line 2: can we use for sublist in lists?
+
+line 7: can we use for n in lists[i]?
+```{python}
+#| echo: true
+#| eval: true
+def total_mean(lists):
+    for i in range(len(lists)): # 
+        total = None
+        mean = None
+        if len(lists[i]) > 0: 
+            total = 0
+            for j in range(len(lists[i])): # 
+                total += lists[i][j]
+            mean = total/len(lists[i])
+        lists[i] = total, mean 
+    return lists
+```
 
 ## Write a function -- solution
 
@@ -79,10 +98,9 @@ def main():
 main()
 ```
 
-
 ## Removing list elements in a `loop`
 
-Using a `for i in range` when removing items in a list throws an error
+Using a `for i in range` when removing items in a list throws an error. Visualize the execution in [Python Tutor](https://pythontutor.com/).
 
 ```{python}
 #| echo: true

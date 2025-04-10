@@ -5891,7 +5891,7 @@
     "href": "slides-13-01.html#write-a-function",
     "title": "mutating lists (slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is total_mean\nIt takes a 2D list of integers as argument with at least one inner list\nIt mutates the list, replace each inner list with a tuple. The tuple is the total and mean of that inner list.\n\n\ntest_list = [[2, 4, 6, 8], [], [2, 3, 4]]\ntotal_mean(test_list)\nassert test_list == [(20, 5.0), (None, None), (9, 3.0)]\nassert total_mean([[2, 4, 6, 8], [], [2, 3, 4]]) == [(20, 5.0), (None, None), (9, 3.0)]",
+    "text": "Write a function\nIt takes a 2D list of integers as argument with at least one inner list. It mutates the list, replace each inner list with a tuple. The tuple is the total and mean of that inner list.\n\ntest_list = [[2, 4, 6, 8], [], [2, 3, 4]]\ntotal_mean(test_list)\nassert test_list == [(20, 5.0), (None, None), (9, 3.0)]\nassert total_mean([[2, 4, 6, 8], [], [2, 3, 4]]) == [(20, 5.0), (None, None), (9, 3.0)]",
     "crumbs": [
       "Module 13 - Control Flow with different Data Structures",
       "mutating lists (slides)"
@@ -5902,7 +5902,7 @@
     "href": "slides-13-01.html#write-a-function-solution",
     "title": "mutating lists (slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef total_mean(lists):\n    for i in range(len(lists)): #must use for i in range(len(lists))\n        total = None\n        mean = None\n        if len(lists[i]) &gt; 0: \n            total = 0\n            for j in range(len(lists[i])): #can also use for n in lists[i]\n                total += lists[i][j]\n            mean = total/len(lists[i])\n        lists[i] = total, mean #need to use i to mutate lists\n    return lists\n    \ndef main():\n  test_list = [[2, 4, 6, 8], [], [2, 3, 4]]\n  total_mean(test_list)\n  assert test_list == [(20, 5.0), (None, None), (9, 3.0)]\n  assert total_mean([[2, 4, 6, 8], [], [2, 3, 4]]) == [(20, 5.0), (None, None), (9, 3.0)]\n  \nmain()",
+    "text": "Write a function – solution\nline 2: can we use for sublist in lists?\nline 7: can we use for n in lists[i]?\n\ndef total_mean(lists):\n    for i in range(len(lists)): # \n        total = None\n        mean = None\n        if len(lists[i]) &gt; 0: \n            total = 0\n            for j in range(len(lists[i])): # \n                total += lists[i][j]\n            mean = total/len(lists[i])\n        lists[i] = total, mean \n    return lists",
     "crumbs": [
       "Module 13 - Control Flow with different Data Structures",
       "mutating lists (slides)"
@@ -5913,7 +5913,7 @@
     "href": "slides-13-01.html#removing-list-elements-in-a-loop",
     "title": "mutating lists (slides)",
     "section": "Removing list elements in a loop",
-    "text": "Removing list elements in a loop\nUsing a for i in range when removing items in a list throws an error\n\nnumbers = [1, 2, 1, 4, 5]\nfor i in range(len(numbers)):\n  numbers.pop(i)\nnumbers\n\nERROR",
+    "text": "Removing list elements in a loop\nUsing a for i in range when removing items in a list throws an error. Visualize the execution in Python Tutor.\n\nnumbers = [1, 2, 1, 4, 5]\nfor i in range(len(numbers)):\n  numbers.pop(i)\nnumbers\n\nERROR",
     "crumbs": [
       "Module 13 - Control Flow with different Data Structures",
       "mutating lists (slides)"
@@ -5945,8 +5945,8 @@
     "objectID": "slides-13-01.html#write-a-function-solution-1",
     "href": "slides-13-01.html#write-a-function-solution-1",
     "title": "mutating lists (slides)",
-    "section": "Write a function – solution 1",
-    "text": "Write a function – solution 1\n\ndef remove_names(string_list):\n  i = 0\n  while i &lt; len(string_list):\n    if string_list[i][-1].lower() in \"aeiou\":\n      string_list.pop(i)\n    else:\n      i += 1\n  return string_list\n      \ndef main():\n  names = [\"Beatrice\", \"ASA\", \"Philip\", \"Anna\", \"Peter\"]\n  remove_names(names)\n  assert names == [\"Philip\", \"Peter\"]\n\nmain()",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\n\ndef total_mean(lists):\n    for i in range(len(lists)): #must use for i in range(len(lists))\n        total = None\n        mean = None\n        if len(lists[i]) &gt; 0: \n            total = 0\n            for j in range(len(lists[i])): #can also use for n in lists[i]\n                total += lists[i][j]\n            mean = total/len(lists[i])\n        lists[i] = total, mean #need to use i to mutate lists\n    return lists\n    \ndef main():\n  test_list = [[2, 4, 6, 8], [], [2, 3, 4]]\n  total_mean(test_list)\n  assert test_list == [(20, 5.0), (None, None), (9, 3.0)]\n  assert total_mean([[2, 4, 6, 8], [], [2, 3, 4]]) == [(20, 5.0), (None, None), (9, 3.0)]\n  \nmain()",
     "crumbs": [
       "Module 13 - Control Flow with different Data Structures",
       "mutating lists (slides)"
@@ -9448,6 +9448,17 @@
     "crumbs": [
       "Module 12 - Data Structures (sets)",
       "intro to sets (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-13-01.html#write-a-function-solution-1-1",
+    "href": "slides-13-01.html#write-a-function-solution-1-1",
+    "title": "mutating lists (slides)",
+    "section": "Write a function – solution 1",
+    "text": "Write a function – solution 1\n\ndef remove_names(string_list):\n  i = 0\n  while i &lt; len(string_list):\n    if string_list[i][-1].lower() in \"aeiou\":\n      string_list.pop(i)\n    else:\n      i += 1\n  return string_list\n      \ndef main():\n  names = [\"Beatrice\", \"ASA\", \"Philip\", \"Anna\", \"Peter\"]\n  remove_names(names)\n  assert names == [\"Philip\", \"Peter\"]\n\nmain()",
+    "crumbs": [
+      "Module 13 - Control Flow with different Data Structures",
+      "mutating lists (slides)"
     ]
   }
 ]
