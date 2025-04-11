@@ -5913,7 +5913,7 @@
     "href": "slides-13-01.html#removing-list-elements-in-a-loop",
     "title": "mutating lists (slides)",
     "section": "Removing list elements in a loop",
-    "text": "Removing list elements in a loop\nUsing a for i in range when removing items in a list throws an error. Visualize the execution in Python Tutor.\n\nnumbers = [1, 2, 1, 4, 5]\nfor i in range(len(numbers)):\n  numbers.pop(i)\nnumbers\n\nERROR",
+    "text": "Removing list elements in a loop\nfor i in range when removing list items throws an ERROR.\n\nnumbers = [1, 2, 1, 4, 5]\nfor i in range(len(numbers)):\n  numbers.pop(i)\nnumbers\n\nERROR",
     "crumbs": [
       "Module 13 - Control Flow with different Data Structures",
       "mutating lists (slides)"
@@ -5924,7 +5924,7 @@
     "href": "slides-13-01.html#removing-list-elements-in-a-loop-1",
     "title": "mutating lists (slides)",
     "section": "Removing list elements in a loop",
-    "text": "Removing list elements in a loop\n\nOption 1: while loop without adjusting i\n\n\nnumbers = [1, 2, 1, 4, 5]\ni = 0\nwhile i &lt; len(numbers):\n  numbers.pop(i)\nnumbers\n\n[]\n\n\n\nOption 2: for loop but go backwards\n\n\nnumbers = [1, 2, 1, 4, 5]\nfor i in range(len(numbers)-1, -1, -1):\n  numbers.pop(i)\nnumbers\n\n[]",
+    "text": "Removing list elements in a loop\nVisualize the execution in Python Tutor.\n\nOption 1: while loop without adjusting i\n\n\nnumbers = [1, 2, 1, 4, 5]\ni = 0\nwhile i &lt; len(numbers):\n  numbers.pop(i)\nnumbers\n\n[]\n\n\n\nOption 2: for loop but go backwards\n\n\nnumbers = [1, 2, 1, 4, 5]\nfor i in range(len(numbers)-1, -1, -1):\n  numbers.pop(i)\nnumbers\n\n[]",
     "crumbs": [
       "Module 13 - Control Flow with different Data Structures",
       "mutating lists (slides)"
