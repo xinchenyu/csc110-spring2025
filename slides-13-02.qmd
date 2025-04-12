@@ -28,9 +28,7 @@ names_ages
 
 ## Write a function
 
-1.  Its name is `sales_tax`
-2.  It takes a dictionary as argument, with string keys and float values
-3.  It **mutates** the dictionary, multiplying each value by 0.056 and rounding the result to two decimals
+It **mutates** the dictionary, multiplying each value by 0.056 and rounding the result to two decimals
 
 Name file as `sales_tax.py` and submit to Gradescope
 

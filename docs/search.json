@@ -5990,7 +5990,7 @@
     "href": "slides-13-01.html#write-a-function-solution-3",
     "title": "mutating lists (slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef remove_odds(lists_of_numbers):\n  for inner_list in lists_of_numbers:\n    for i in range(len(inner_list)-1, -1, -1):\n      if inner_list[i] % 2 != 0:\n        inner_list.pop(i)\n  return lists_of_numbers\n\ndef main():\n  test_list = [ [2, 3, 1, 2], [4, 5, 2, 1] ]\n  remove_odds(test_list)\n  assert test_list == [ [2, 2], [4, 2] ]\n  print(test_list) # [ [2, 2], [4, 2] ]\n  \nmain()\n\n[[2, 2], [4, 2]]",
+    "text": "Write a function – solution\n\ndef remove_odds(lists):\n  for i in range(len(lists)):\n    for j in range(len(lists[i])-1, -1, -1):\n      if lists[i][j] % 2 != 0:\n        lists[i].pop(j)\n  return lists_of_numbers\n\ndef main():\n  test_list = [ [2, 3, 1, 2], [4, 5, 2, 1] ]\n  remove_odds(test_list)\n  assert test_list == [ [2, 2], [4, 2] ]\n  print(test_list) # [ [2, 2], [4, 2] ]\n  \nmain()\n\n[[2, 2], [4, 2]]",
     "crumbs": [
       "Module 13 - Control Flow with different Data Structures",
       "mutating lists (slides)"
@@ -6309,7 +6309,7 @@
     "href": "slides-13-02.html#write-a-function",
     "title": "mutating dictionaries (slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is sales_tax\nIt takes a dictionary as argument, with string keys and float values\nIt mutates the dictionary, multiplying each value by 0.056 and rounding the result to two decimals\n\nName file as sales_tax.py and submit to Gradescope\n\ngroceries = {\"banana\": 2.50, \"milk\": 4.25, \"bread\": 3.68}\nsales_tax(groceries)\nassert groceries == {'banana': 0.14, 'milk': 0.24, 'bread': 0.21}",
+    "text": "Write a function\nIt mutates the dictionary, multiplying each value by 0.056 and rounding the result to two decimals\nName file as sales_tax.py and submit to Gradescope\n\ngroceries = {\"banana\": 2.50, \"milk\": 4.25, \"bread\": 3.68}\nsales_tax(groceries)\nassert groceries == {'banana': 0.14, 'milk': 0.24, 'bread': 0.21}",
     "crumbs": [
       "Module 13 - Control Flow with different Data Structures",
       "mutating dictionaries (slides)"
@@ -9456,6 +9456,94 @@
     "title": "mutating lists (slides)",
     "section": "Write a function – solution 1",
     "text": "Write a function – solution 1\n\ndef remove_names(string_list):\n  i = 0\n  while i &lt; len(string_list):\n    if string_list[i][-1].lower() in \"aeiou\":\n      string_list.pop(i)\n    else:\n      i += 1\n  return string_list\n      \ndef main():\n  names = [\"Beatrice\", \"ASA\", \"Philip\", \"Anna\", \"Peter\"]\n  remove_names(names)\n  assert names == [\"Philip\", \"Peter\"]\n\nmain()",
+    "crumbs": [
+      "Module 13 - Control Flow with different Data Structures",
+      "mutating lists (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-13-01.html#write-a-function-solution-4",
+    "href": "slides-13-01.html#write-a-function-solution-4",
+    "title": "mutating lists (slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\nline 2: can we use for innerlist in lists?\nline 3: can we use for n in lists[i]?\n\ndef remove_odds(lists):\n  for i in range(len(lists)): #\n    for j in range(len(lists[i])-1, -1, -1): #\n      if lists[i][j] % 2 != 0:\n        lists[i].pop(j)\n  return lists_of_numbers",
+    "crumbs": [
+      "Module 13 - Control Flow with different Data Structures",
+      "mutating lists (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-13-01.html#write-a-function-solution-5",
+    "href": "slides-13-01.html#write-a-function-solution-5",
+    "title": "mutating lists (slides)",
+    "section": "Write a function – solution",
+    "text": "Write a function – solution\n\ndef remove_odds(lists):\n  for inner_list in lists:\n    for i in range(len(inner_list)-1, -1, -1):\n      if inner_list[i] % 2 != 0:\n        inner_list.pop(i)\n  return lists\n\ndef main():\n  test_list = [ [2, 3, 1, 2], [4, 5, 2, 1] ]\n  remove_odds(test_list)\n  assert test_list == [ [2, 2], [4, 2] ]\n  print(test_list) # [ [2, 2], [4, 2] ]\n  \nmain()\n\n[[2, 2], [4, 2]]",
+    "crumbs": [
+      "Module 13 - Control Flow with different Data Structures",
+      "mutating lists (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-13-01.html#write-a-function-solution-2-1",
+    "href": "slides-13-01.html#write-a-function-solution-2-1",
+    "title": "mutating lists (slides)",
+    "section": "Write a function – solution 2",
+    "text": "Write a function – solution 2\n\ndef remove_odds(lists):\n  for inner_list in lists:\n    for i in range(len(inner_list)-1, -1, -1):\n      if inner_list[i] % 2 != 0:\n        inner_list.pop(i)\n  return lists\n\ndef main():\n  test_list = [ [2, 3, 1, 2], [4, 5, 2, 1] ]\n  remove_odds(test_list)\n  assert test_list == [ [2, 2], [4, 2] ]\n  print(test_list) # [ [2, 2], [4, 2] ]\n  \nmain()\n\n[[2, 2], [4, 2]]",
+    "crumbs": [
+      "Module 13 - Control Flow with different Data Structures",
+      "mutating lists (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-13-01.html#write-a-function-questions",
+    "href": "slides-13-01.html#write-a-function-questions",
+    "title": "mutating lists (slides)",
+    "section": "Write a function – questions",
+    "text": "Write a function – questions\nline 2: can we use for innerlist in lists?\nline 3: can we use for n in lists[i]?\n\ndef remove_odds(lists):\n  for i in range(len(lists)): #\n    for j in range(len(lists[i])-1, -1, -1): #\n      if lists[i][j] % 2 != 0:\n        lists[i].pop(j)\n  return lists_of_numbers",
+    "crumbs": [
+      "Module 13 - Control Flow with different Data Structures",
+      "mutating lists (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-13-01.html#write-a-function-answers",
+    "href": "slides-13-01.html#write-a-function-answers",
+    "title": "mutating lists (slides)",
+    "section": "Write a function – answers",
+    "text": "Write a function – answers\n\ndef remove_odds(lists):\n  for inner_list in lists: # yes we can\n    for i in range(len(inner_list)-1, -1, -1): # no \n      if inner_list[i] % 2 != 0:\n        inner_list.pop(i)\n  return lists\n\ndef main():\n  test_list = [ [2, 3, 1, 2], [4, 5, 2, 1] ]\n  remove_odds(test_list)\n  assert test_list == [ [2, 2], [4, 2] ]\n  print(test_list) # [ [2, 2], [4, 2] ]\n  \nmain()\n\n[[2, 2], [4, 2]]",
+    "crumbs": [
+      "Module 13 - Control Flow with different Data Structures",
+      "mutating lists (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-13-01.html#write-the-ouput",
+    "href": "slides-13-01.html#write-the-ouput",
+    "title": "mutating lists (slides)",
+    "section": "Write the ouput",
+    "text": "Write the ouput\ndata.txt\nharsh sitting spins\ndaybed trees\ncode.py\n\ndef write_result(input_filename, output_filename):\n  data = open(input_filename, 'r')\n  result = open(output_filename, 'w')\n  for line in data:\n    words = line.strip().split(' ')\n    for word in words:\n      if x[0] == x[-1]:\n        result.write(word + '\\n')\n  data.close()\n  result.close()\n  \nif __name__ == '__main__':\n  write_result('data.txt', 'result.txt')",
+    "crumbs": [
+      "Module 13 - Control Flow with different Data Structures",
+      "mutating lists (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-13-01.html#determine-the-ouput-of-result.txt",
+    "href": "slides-13-01.html#determine-the-ouput-of-result.txt",
+    "title": "mutating lists (slides)",
+    "section": "Determine the ouput of result.txt",
+    "text": "Determine the ouput of result.txt\ndata.txt\nharsh sitting spins\ndaybed trees fox a b c\ncode.py\n\ndef write_result(input_filename, output_filename):\n  data = open(input_filename, 'r')\n  result = open(output_filename, 'w')\n  for line in data:\n    words = line.strip().split(' ')\n    for w in words:\n      if w[0] == w[-1]:\n        result.write(w + '\\n')\n  data.close()\n  result.close()\n  \nif __name__ == '__main__':\n  write_result('data.txt', 'result.txt')",
+    "crumbs": [
+      "Module 13 - Control Flow with different Data Structures",
+      "mutating lists (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-13-01.html#determine-the-ouput",
+    "href": "slides-13-01.html#determine-the-ouput",
+    "title": "mutating lists (slides)",
+    "section": "Determine the ouput",
+    "text": "Determine the ouput\ndata.txt\nharsh sitting spins\ndaybed trees fox a b c\ncode.py\n\ndef write_result(input_filename, output_filename):\n  data = open(input_filename, 'r')\n  result = open(output_filename, 'w')\n  for line in data:\n    words = line.strip().split(' ')\n    for w in words:\n      if w[0] == w[-1]:\n        result.write(w + '\\n')\n  data.close()\n  result.close()\n  \nif __name__ == '__main__':\n  write_result('data.txt', 'result.txt')",
     "crumbs": [
       "Module 13 - Control Flow with different Data Structures",
       "mutating lists (slides)"

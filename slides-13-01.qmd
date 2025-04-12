@@ -230,11 +230,11 @@ assert lists_of_numbers == [ [2, 2], [4, 2] ]
 ```{python}
 #| eval: true
 #| echo: true
-def remove_odds(lists_of_numbers):
-  for inner_list in lists_of_numbers:
-    for i in range(len(inner_list)-1, -1, -1):
-      if inner_list[i] % 2 != 0:
-        inner_list.pop(i)
+def remove_odds(lists):
+  for i in range(len(lists)):
+    for j in range(len(lists[i])-1, -1, -1):
+      if lists[i][j] % 2 != 0:
+        lists[i].pop(j)
   return lists_of_numbers
 
 def main():
@@ -246,3 +246,67 @@ def main():
 main()
 ```
 
+## Write a function -- questions
+
+line 2: can we use `for innerlist in lists`?
+
+line 3: can we use `for n in lists[i]`?
+
+```{python}
+#| eval: true
+#| echo: true
+def remove_odds(lists):
+  for i in range(len(lists)): #
+    for j in range(len(lists[i])-1, -1, -1): #
+      if lists[i][j] % 2 != 0:
+        lists[i].pop(j)
+  return lists_of_numbers
+```
+
+## Write a function -- answers
+
+```{python}
+#| eval: true
+#| echo: true
+def remove_odds(lists):
+  for inner_list in lists: # yes we can
+    for i in range(len(inner_list)-1, -1, -1): # no 
+      if inner_list[i] % 2 != 0:
+        inner_list.pop(i)
+  return lists
+
+def main():
+  test_list = [ [2, 3, 1, 2], [4, 5, 2, 1] ]
+  remove_odds(test_list)
+  assert test_list == [ [2, 2], [4, 2] ]
+  print(test_list) # [ [2, 2], [4, 2] ]
+  
+main()
+```
+
+## Determine the ouput 
+
+data.txt
+```{html}
+harsh sitting spins
+daybed trees fox a b c
+```
+
+code.py
+```{python}
+#| eval: false
+#| echo: true
+def write_result(input_filename, output_filename):
+  data = open(input_filename, 'r')
+  result = open(output_filename, 'w')
+  for line in data:
+    words = line.strip().split(' ')
+    for w in words:
+      if w[0] == w[-1]:
+        result.write(w + '\n')
+  data.close()
+  result.close()
+  
+if __name__ == '__main__':
+  write_result('data.txt', 'result.txt')
+```
