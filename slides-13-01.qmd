@@ -235,7 +235,7 @@ def remove_odds(lists):
     for j in range(len(lists[i])-1, -1, -1):
       if lists[i][j] % 2 != 0:
         lists[i].pop(j)
-  return lists_of_numbers
+  return lists
 
 def main():
   test_list = [ [2, 3, 1, 2], [4, 5, 2, 1] ]
@@ -250,7 +250,7 @@ main()
 
 line 2: can we use `for innerlist in lists`?
 
-line 3: can we use `for n in lists[i]`?
+line 3: can we use `for X in list`?
 
 ```{python}
 #| eval: true
@@ -260,7 +260,7 @@ def remove_odds(lists):
     for j in range(len(lists[i])-1, -1, -1): #
       if lists[i][j] % 2 != 0:
         lists[i].pop(j)
-  return lists_of_numbers
+  return lists
 ```
 
 ## Write a function -- answers

@@ -5990,7 +5990,7 @@
     "href": "slides-13-01.html#write-a-function-solution-3",
     "title": "mutating lists (slides)",
     "section": "Write a function – solution",
-    "text": "Write a function – solution\n\ndef remove_odds(lists):\n  for i in range(len(lists)):\n    for j in range(len(lists[i])-1, -1, -1):\n      if lists[i][j] % 2 != 0:\n        lists[i].pop(j)\n  return lists_of_numbers\n\ndef main():\n  test_list = [ [2, 3, 1, 2], [4, 5, 2, 1] ]\n  remove_odds(test_list)\n  assert test_list == [ [2, 2], [4, 2] ]\n  print(test_list) # [ [2, 2], [4, 2] ]\n  \nmain()\n\n[[2, 2], [4, 2]]",
+    "text": "Write a function – solution\n\ndef remove_odds(lists):\n  for i in range(len(lists)):\n    for j in range(len(lists[i])-1, -1, -1):\n      if lists[i][j] % 2 != 0:\n        lists[i].pop(j)\n  return lists\n\ndef main():\n  test_list = [ [2, 3, 1, 2], [4, 5, 2, 1] ]\n  remove_odds(test_list)\n  assert test_list == [ [2, 2], [4, 2] ]\n  print(test_list) # [ [2, 2], [4, 2] ]\n  \nmain()\n\n[[2, 2], [4, 2]]",
     "crumbs": [
       "Module 13 - Control Flow with different Data Structures",
       "mutating lists (slides)"
@@ -9499,7 +9499,7 @@
     "href": "slides-13-01.html#write-a-function-questions",
     "title": "mutating lists (slides)",
     "section": "Write a function – questions",
-    "text": "Write a function – questions\nline 2: can we use for innerlist in lists?\nline 3: can we use for n in lists[i]?\n\ndef remove_odds(lists):\n  for i in range(len(lists)): #\n    for j in range(len(lists[i])-1, -1, -1): #\n      if lists[i][j] % 2 != 0:\n        lists[i].pop(j)\n  return lists_of_numbers",
+    "text": "Write a function – questions\nline 2: can we use for innerlist in lists?\nline 3: can we use for X in list?\n\ndef remove_odds(lists):\n  for i in range(len(lists)): #\n    for j in range(len(lists[i])-1, -1, -1): #\n      if lists[i][j] % 2 != 0:\n        lists[i].pop(j)\n  return lists",
     "crumbs": [
       "Module 13 - Control Flow with different Data Structures",
       "mutating lists (slides)"
