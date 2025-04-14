@@ -6353,7 +6353,7 @@
     "href": "slides-13-02.html#write-a-function-1",
     "title": "mutating dictionaries (slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is remove_records\nIt takes a dictionary as argument, with string keys\nIt mutates and returns the dictionary argument removing keys that start and end with the same character\n\n\nstudents = {\"Anna\": \"A\", \"Peter\": \"B\", \"Bob\": \"D\", \"Cedric\": \"A\"}\nremove_records(students)\nassert students == {\"Peter\": \"B\"}",
+    "text": "Write a function\nIt takes a dictionary as argument, with string keys. It mutates and returns the dictionary argument removing keys that start and end with the same character\n\nstudents = {\"Anna\": \"A\", \"Peter\": \"B\", \"Bob\": \"D\", \"Cedric\": \"A\"}\nremove_records(students)\nassert students == {\"Peter\": \"B\"}",
     "crumbs": [
       "Module 13 - Control Flow with different Data Structures",
       "mutating dictionaries (slides)"
@@ -6375,7 +6375,7 @@
     "href": "slides-13-02.html#write-a-function-2",
     "title": "mutating dictionaries (slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is repetition\nIt takes a dictionary as argument, with strings as keys and integers as values (assume all values are positive)\nIt mutates and returns the dictionary, replacing each value with a list of the key repeated by the value\n\n\ntest_dictionary = {\"a\": 5, \"b\": 2, \"c\": 3}\nrepetition(test_dictionary)\nassert test_dictionary == {\"a\": [\"a\", \"a\", \"a\", \"a\", \"a\"], \n                           \"b\": [\"b\", \"b\"], \"c\": [\"c\", \"c\", \"c\"] }",
+    "text": "Write a function\nIt takes a dictionary as argument, with strings as keys and integers as values (assume all values are positive). It mutates and returns the dictionary, replacing each value with a list of the key repeated by the value.\n\ntest_dictionary = {\"a\": 5, \"b\": 2, \"c\": 3}\nrepetition(test_dictionary)\nassert test_dictionary == {\"a\": [\"a\", \"a\", \"a\", \"a\", \"a\"], \n                           \"b\": [\"b\", \"b\"], \"c\": [\"c\", \"c\", \"c\"] }",
     "crumbs": [
       "Module 13 - Control Flow with different Data Structures",
       "mutating dictionaries (slides)"
@@ -6397,7 +6397,7 @@
     "href": "slides-13-02.html#write-a-function-3",
     "title": "mutating dictionaries (slides)",
     "section": "Write a function",
-    "text": "Write a function\n\nIts name is get_names\nIt has two parameters: a dictionary that maps one-letter strings to lists of strings, and a string\nIt returns a list with strings (names) from the lists in the dictionary that include the second parameter (string) as a substring (this search is not case sensitive)\n\nTest case:\n\nnames = {\"R\": [\"Randy\", \"Roger\"], \"S\": [\"Steve\", \"Sally\"], \"T\": [\"Tanner\"]}\nassert get_names(names, \"er\") == [\"Roger\", \"Tanner\"]",
+    "text": "Write a function\nIt has two parameters: a dictionary that maps one-letter strings to lists of strings, and a string. It returns a list with strings (names) from the lists in the dictionary that include the second parameter (string) as a substring (this search is not case sensitive)\nTest case:\n\nnames = {\"R\": [\"Randy\", \"Roger\"], \"S\": [\"Steve\", \"Sally\"], \"T\": [\"Tanner\"]}\nassert get_names(names, \"er\") == [\"Roger\", \"Tanner\"]",
     "crumbs": [
       "Module 13 - Control Flow with different Data Structures",
       "mutating dictionaries (slides)"
@@ -9547,6 +9547,28 @@
     "crumbs": [
       "Module 13 - Control Flow with different Data Structures",
       "mutating lists (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-13-02.html#create-a-list-with-duplicate-items",
+    "href": "slides-13-02.html#create-a-list-with-duplicate-items",
+    "title": "mutating dictionaries (slides)",
+    "section": "Create a list with duplicate items",
+    "text": "Create a list with duplicate items\nCreate a list with a total of five 'a':\n\nnew_list = ['a'] * 5\nnew_list\n\n['a', 'a', 'a', 'a', 'a']\n\n\nCreate a list with a total of three 1:\n\nnew_list = [1] * 3\nnew_list\n\n[1, 1, 1]",
+    "crumbs": [
+      "Module 13 - Control Flow with different Data Structures",
+      "mutating dictionaries (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-13-02.html#quiz-11",
+    "href": "slides-13-02.html#quiz-11",
+    "title": "mutating dictionaries (slides)",
+    "section": "Quiz 11",
+    "text": "Quiz 11\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.",
+    "crumbs": [
+      "Module 13 - Control Flow with different Data Structures",
+      "mutating dictionaries (slides)"
     ]
   }
 ]
