@@ -10,8 +10,9 @@ df-print: kable
 ## Announcements
 
 * Fill out SCS at [scsonline.ucatt.arizona.edu](https://scsonline.ucatt.arizona.edu/index.php)
-* If 80% of students complete the survey, I'll replace one of your lowest quizzes grade with full points (2.5/2.5 pts)
-* Final exam on Dec 13
+* If 80% of students complete the survey, one of your lowest quizzes grade will be replaced with full points (2.5/2.5 pts)
+* Review session next Tuesday at 5pm.
+* Midterm 3 next Wednesday, Apr 23.
 
 ## Combining lists
 
