@@ -7141,7 +7141,7 @@
     "href": "slides-14-01.html#write-functions-side-by-side",
     "title": "combining data structures (slides)",
     "section": "Write functions side-by-side",
-    "text": "Write functions side-by-side\nWrite a function called remove_first that takes in a list of lists (2D list) and removes the first element of each sublist.\nWrite a function called remove_odds that takes in a list of list (2D list) of numbers and removes all values that are odd.\nName your file removing.py and submit it to gradescope for attendance",
+    "text": "Write functions side-by-side\nWrite a function called remove_first that takes in a list of lists (2D list) and removes the first element of each sublist.\nWrite a function called remove_odds that takes in a list of list (2D list) of numbers and removes all values that are odd.",
     "crumbs": [
       "Module 14 - Combining Data Structures and Sorting Lists",
       "combining data structures (slides)"
