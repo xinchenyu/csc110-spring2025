@@ -7449,7 +7449,7 @@
     "href": "slides-14-02.html#selection-sort",
     "title": "sorting (slides)",
     "section": "Selection sort",
-    "text": "Selection sort\nSelection sort is a very simple sorting algorithm\n\nScan the list and find the smallest element\nSwap this element with the beginning element\nContinue these steps for the remaining list, not including the element just swapped\nRepeat",
+    "text": "Selection sort\nSelection sort uses in-place sorting\n\nWatch visualization and describe: how selection sort works?\nhttps://visualgo.net/en/sorting",
     "crumbs": [
       "Module 14 - Combining Data Structures and Sorting Lists",
       "sorting (slides)"
@@ -7460,7 +7460,7 @@
     "href": "slides-14-02.html#selection-sort-1",
     "title": "sorting (slides)",
     "section": "Selection sort",
-    "text": "Selection sort\n\nVisualizing sorting algorithms with graphics can give one a better understanding\nhttps://visualgo.net/en/sorting",
+    "text": "Selection sort\n\nScan the list and find the smallest element\nSwap this element with the beginning element\nContinue these steps for the remaining list, not including the element just swapped\nRepeat",
     "crumbs": [
       "Module 14 - Combining Data Structures and Sorting Lists",
       "sorting (slides)"
@@ -7537,7 +7537,7 @@
     "href": "slides-14-02.html#write-selection-sort---step-3",
     "title": "sorting (slides)",
     "section": "Write selection sort - step 3",
-    "text": "Write selection sort - step 3\n\nFunction name is selection_sort that mutates the list argument and sort it\nIt iterates over the list, call find_min_index to find the index of smallest element\nIt swaps the smallest element found in each iteration with the beginning element\nSet a begin_index before while loop, in each iteration add 1 to begin_index",
+    "text": "Write selection sort - step 3\n\nFunction name is selection_sort that mutates the list argument and sort it\nIterate over the list, call find_min_index to find the index of smallest element\nSwap the smallest element found in each iteration with the beginning one\nUse a while loop, set a begin_index before loop, in each iteration add 1 to begin_index",
     "crumbs": [
       "Module 14 - Combining Data Structures and Sorting Lists",
       "sorting (slides)"
@@ -7570,7 +7570,7 @@
     "href": "slides-14-02.html#how-many-total-sweeps-and-swaps-to-sort-this-list-1",
     "title": "sorting (slides)",
     "section": "How many total sweeps and swaps to sort this list?",
-    "text": "How many total sweeps and swaps to sort this list?\n[3, 1, 7, 2, 4] sweep\n[1, 3, 7, 2, 4] swap and sweep\n[1, 2, 7, 3, 4] swap and sweep\n[1, 2, 3, 7, 4] swap and sweep\n[1, 2, 3, 4, 7] swap\n4 sweeps\n4 swaps (worst case scenario)",
+    "text": "How many total sweeps and swaps to sort this list?\n\nnumbers = [ 3, 0, 7, 2, 4, 8 ]",
     "crumbs": [
       "Module 14 - Combining Data Structures and Sorting Lists",
       "sorting (slides)"
@@ -7581,7 +7581,7 @@
     "href": "slides-14-02.html#how-many-total-sweeps-and-swaps-to-sort-this-list-2",
     "title": "sorting (slides)",
     "section": "How many total sweeps and swaps to sort this list?",
-    "text": "How many total sweeps and swaps to sort this list?\n\nnumbers = [ 3, 0, 7, 2, 4, 8 ]",
+    "text": "How many total sweeps and swaps to sort this list?\n[ 3, 0, 7, 2, 4, 8 ] sweep\n[ 0, 3, 7, 2, 4, 8] swap and sweep\n[ 0, 2, 7, 3, 4, 8 ] swap and sweep\n[ 0, 2, 3, 7, 4, 8 ] swap and sweep\n[ 0, 2, 3, 4, 7, 8 ] swap and sweep\n5 sweeps, 4 swaps",
     "crumbs": [
       "Module 14 - Combining Data Structures and Sorting Lists",
       "sorting (slides)"
@@ -7592,7 +7592,7 @@
     "href": "slides-14-02.html#how-many-total-sweeps-and-swaps-to-sort-this-list-3",
     "title": "sorting (slides)",
     "section": "How many total sweeps and swaps to sort this list?",
-    "text": "How many total sweeps and swaps to sort this list?\n[ 3, 0, 7, 2, 4, 8 ] sweep\n[ 0, 3, 7, 2, 4, 8] swap and sweep\n[ 0, 2, 7, 3, 4, 8 ] swap and sweep\n[ 0, 2, 3, 7, 4, 8 ] swap and sweep\n[ 0, 2, 3, 4, 7, 8 ] swap and sweep\n5 sweeps, 4 swaps",
+    "text": "How many total sweeps and swaps to sort this list?\n\nnumbers = [ 3, 1, 7, 2, 4 ]",
     "crumbs": [
       "Module 14 - Combining Data Structures and Sorting Lists",
       "sorting (slides)"
@@ -7691,7 +7691,7 @@
     "href": "slides-14-02.html#how-many-total-sweeps-and-swaps",
     "title": "sorting (slides)",
     "section": "How many total sweeps and swaps?",
-    "text": "How many total sweeps and swaps?\n\n[ 3, 1, 7, 2, 4 ] first sweep\n\n[ 1, 3, 7, 2, 4 ] swap\n[ 1, 3, 2, 7, 4 ] swap\n[ 1, 3, 2, 4, 7 ] swap\n\n[ 1, 3, 2, 4, 7 ] second sweep\n\n[ 1, 2, 3, 4, 7 ] swap\n\n[ 1, 2, 3, 4, 7 ] third sweep",
+    "text": "How many total sweeps and swaps?\n\n[ 3, 1,  7, 2, 4 ] sweep, begin_index: 0\n\n\n[ 1,  3,  7,  2,  4 ] swap and sweep, begin_index: 1\n\n\n[ 1, 2,  7,   3,  4 ] swap and sweep, begin_index: 2\n\n\n[ 1, 2, 3,  7, 4  ] swap and sweep: begin_index: 3\n\n\n[ 1, 2, 3, 4, 7 ] swap\n\n4 sweeps, 4 swaps (worst case scenario)",
     "crumbs": [
       "Module 14 - Combining Data Structures and Sorting Lists",
       "sorting (slides)"
@@ -7702,7 +7702,7 @@
     "href": "slides-14-02.html#how-many-total-sweeps-and-swaps-1",
     "title": "sorting (slides)",
     "section": "How many total sweeps and swaps?",
-    "text": "How many total sweeps and swaps?\n\nnumbers = [ 3, 1, 7, 2, 4, 8, 5 ]",
+    "text": "How many total sweeps and swaps?\n\n[ 3, 1, 7, 2, 4 ] first sweep\n\n[ 1, 3, 7, 2, 4 ] swap\n[ 1, 3, 2, 7, 4 ] swap\n[ 1, 3, 2, 4, 7 ] swap\n\n[ 1, 3, 2, 4, 7 ] second sweep\n\n[ 1, 2, 3, 4, 7 ] swap\n\n[ 1, 2, 3, 4, 7 ] third sweep",
     "crumbs": [
       "Module 14 - Combining Data Structures and Sorting Lists",
       "sorting (slides)"
@@ -7735,7 +7735,7 @@
     "href": "slides-14-02.html#how-many-total-sweeps-and-swaps-2",
     "title": "sorting (slides)",
     "section": "How many total sweeps and swaps?",
-    "text": "How many total sweeps and swaps?\nGo to gradescope and answer today’s attendance question:\n\nnumbers = [ 1, 5, 5, 7, 2, 4 ]",
+    "text": "How many total sweeps and swaps?\n\nnumbers = [ 3, 1, 7, 2, 4, 8, 5 ]",
     "crumbs": [
       "Module 14 - Combining Data Structures and Sorting Lists",
       "sorting (slides)"
@@ -9569,6 +9569,17 @@
     "crumbs": [
       "Module 13 - Control Flow with different Data Structures",
       "mutating dictionaries (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-14-02.html#how-many-total-sweeps-and-swaps-3",
+    "href": "slides-14-02.html#how-many-total-sweeps-and-swaps-3",
+    "title": "sorting (slides)",
+    "section": "How many total sweeps and swaps?",
+    "text": "How many total sweeps and swaps?\nGo to gradescope and answer today’s attendance question:\n\nnumbers = [ 1, 5, 5, 7, 2, 4 ]",
+    "crumbs": [
+      "Module 14 - Combining Data Structures and Sorting Lists",
+      "sorting (slides)"
     ]
   }
 ]
