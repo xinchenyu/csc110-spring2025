@@ -65,9 +65,11 @@ items
 
 ## Selection sort
 
-**Selection sort uses in-place sorting**
+Watch visualization of selection sort and discuss:
 
--   Watch visualization and describe: how selection sort works?
+-   in-place sorting or out-of-place?
+
+-   how selection sort works?
 
 -   <https://visualgo.net/en/sorting>
 

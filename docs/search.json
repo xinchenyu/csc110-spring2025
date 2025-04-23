@@ -2357,7 +2357,7 @@
     "href": "slides-16-01.html#write-a-function---solution",
     "title": "final exam review (slides)",
     "section": "write a function - solution",
-    "text": "write a function - solution\n\ndef create_list(items, n):\n  new_list = [ ]\n  for value in items:\n    new_list.extend([value] * n)\n  return new_list\n\ndef main():\n  items = {\"banana\", \"apple\", \"pear\"}\n  print(create_list(items, 2))  \n  \nmain()\n\n['apple', 'apple', 'pear', 'pear', 'banana', 'banana']",
+    "text": "write a function - solution\n\ndef create_list(items, n):\n  new_list = [ ]\n  for value in items:\n    new_list.extend([value] * n)\n  return new_list\n\ndef main():\n  items = {\"banana\", \"apple\", \"pear\"}\n  print(create_list(items, 2))  \n  \nmain()\n\n['banana', 'banana', 'pear', 'pear', 'apple', 'apple']",
     "crumbs": [
       "Module 16 - Review",
       "final exam review (slides)"
@@ -7449,7 +7449,7 @@
     "href": "slides-14-02.html#selection-sort",
     "title": "sorting (slides)",
     "section": "Selection sort",
-    "text": "Selection sort\nSelection sort uses in-place sorting\n\nWatch visualization and describe: how selection sort works?\nhttps://visualgo.net/en/sorting",
+    "text": "Selection sort\nWatch visualization of selection sort and discuss:\n\nin-place sorting or out-of-place?\nhow selection sort works?\nhttps://visualgo.net/en/sorting",
     "crumbs": [
       "Module 14 - Combining Data Structures and Sorting Lists",
       "sorting (slides)"
@@ -9580,6 +9580,83 @@
     "crumbs": [
       "Module 14 - Combining Data Structures and Sorting Lists",
       "sorting (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-16-01.html#string-methods",
+    "href": "slides-16-01.html#string-methods",
+    "title": "final exam review (slides)",
+    "section": "string methods",
+    "text": "string methods\n\nstring is not mutable, means every string method will return a new string\nindexing a string\n\n\n(\"Jimmy42\"[0], \"Jimmy42\"[-1])\n\n('J', '2')\n\n\n\nslicing a string\n\n\n(\"Jimmy42\"[:2], \"Jimmy42\"[1:3])\n\n('Ji', 'im')",
+    "crumbs": [
+      "Module 16 - Review",
+      "final exam review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-16-01.html#string-methods-1",
+    "href": "slides-16-01.html#string-methods-1",
+    "title": "final exam review (slides)",
+    "section": "string methods",
+    "text": "string methods\n\n.isnumeric() returns True if all the chars are numeric (0-9)\n\n\n(\"Jimmy42\".isnumeric(), \"42\".isnumeric())\n\n(False, True)\n\n\n\n.lower() returns a string with all lowercase chars\n.strip() removing chars in the beginning or end\n\n\n\"Jimmy42\".strip('42')\n\n'Jimmy'\n\n\n\n.split() return a list by splitting strings by char\n\n\n\"Jimmy42Jimmy42Jimmy\".split('42')\n\n['Jimmy', 'Jimmy', 'Jimmy']",
+    "crumbs": [
+      "Module 16 - Review",
+      "final exam review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-16-01.html#string-iteration-concatenation",
+    "href": "slides-16-01.html#string-iteration-concatenation",
+    "title": "final exam review (slides)",
+    "section": "string: iteration + concatenation",
+    "text": "string: iteration + concatenation\nWrite a function consonants_only. It returns a new string keeping only consonants.\n\nassert consonants_only(\"apple\") == \"ppl\"\nassert consonants_only(\"banana\") == \"bnn\"",
+    "crumbs": [
+      "Module 16 - Review",
+      "final exam review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-16-01.html#string-iteration-concatenation-1",
+    "href": "slides-16-01.html#string-iteration-concatenation-1",
+    "title": "final exam review (slides)",
+    "section": "string: iteration + concatenation",
+    "text": "string: iteration + concatenation\nWrite a function consonants_only. It returns a new string keeping only consonants.\n\ndef consonants_only(string):\n  new_string = \"\"\n  for char in string:\n    if char not in \"aeiou\":\n      new_string += char\n  return new_string\n\ndef main():\n  assert consonants_only(\"apple\") == \"ppl\"\n  assert consonants_only(\"banana\") == \"bnn\"\n  \nmain()",
+    "crumbs": [
+      "Module 16 - Review",
+      "final exam review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-16-01.html#concatenating-a-string",
+    "href": "slides-16-01.html#concatenating-a-string",
+    "title": "final exam review (slides)",
+    "section": "concatenating a string",
+    "text": "concatenating a string",
+    "crumbs": [
+      "Module 16 - Review",
+      "final exam review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-16-01.html#stringconcatenation",
+    "href": "slides-16-01.html#stringconcatenation",
+    "title": "final exam review (slides)",
+    "section": "string:concatenation",
+    "text": "string:concatenation\n\nage_milestones",
+    "crumbs": [
+      "Module 16 - Review",
+      "final exam review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-16-01.html#string-concatenation",
+    "href": "slides-16-01.html#string-concatenation",
+    "title": "final exam review (slides)",
+    "section": "string: concatenation",
+    "text": "string: concatenation\n\nage_milestones()\nfour_letter_anagram()\nremove_vowels_string()\nevery_two_together()\nwrite_word_count()\nconcatenate()\ncensor_consonants()",
+    "crumbs": [
+      "Module 16 - Review",
+      "final exam review (slides)"
     ]
   }
 ]
