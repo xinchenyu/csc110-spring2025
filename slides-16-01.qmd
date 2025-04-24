@@ -13,9 +13,9 @@ df-print: kable
 
 Final exam 
 
--   Time: this Friday Dec 13, **6:00 - 8:00pm** 
+-   1pm: Monday May 12, **1:00 - 3:00pm**,  **GITT 129B**
 
--   Location: **S SCI 100**
+-   2pm: Friday May 09, **1:00 - 3:00pm**,  **GITT 129B**
 
 -   Bring your photo ID
 
@@ -41,6 +41,7 @@ Final exam
 #| echo: true
 ("Jimmy42"[:2], "Jimmy42"[1:3])
 ```
+
 ## string methods
 
 -   `.isnumeric()` returns True if all the chars are numeric (0-9)
@@ -71,104 +72,112 @@ Final exam
 
 ## string: concatenation
 
--   [age_milestones()](slides-04-02.html#/write-a-function-1)
+-   [age_milestones](slides-04-02.html#/write-a-function-1)
 
--   [four_letter_anagram()](slides-05-02.html#/write-a-function)
+-   [four_letter_anagram](slides-05-02.html#/write-a-function)
 
--   [remove_vowels_string()](slides-07-01.html#/write-two-functions)
+-   [remove_vowels_string](slides-07-01.html#/write-two-functions)
 
--   [every_two_together()](slides-07-02.html#/write-a-function-2)
+-   [every_two_together](slides-07-02.html#/write-a-function-2)
 
--   [write_word_count()](slides-09-02.html#/write-two-functions)
+-   [write_word_count](slides-09-02.html#/write-two-functions)
 
--   [concatenate()](slides-10-02.html#/variable-length-parameter-2)
+-   [concatenate](slides-10-02.html#/variable-length-parameter-2)
 
--   [censor_consonants()](slides-14-01.html#/write-functions-side-by-side-1)
+-   [censor_consonants](slides-14-01.html#/write-functions-side-by-side-1)
 
 
-## int() 
+## string: iteration
 
-`int` on "110":
-```{python}
-#| eval: true
-#| echo: true
-int("110") # 110
-```
+-   [is_numeric](slides-05-02.html#/write-a-function-1)
 
-`int` on "CSC110":
-```{python}
-#| eval: false
-#| echo: true
-int("CSC110") # Error
-```
+-   [count_vowels](slides-05-03.html#/write-a-function-1)
 
-Use case: use `int()` to convert `"2"` to `2` when reading and summing the number 2 from a .txt file.
+-   [vowels_only](slides-05-03.html#/write-a-function-4)
 
-## string.isnumeric()
+-   [remove_vowels_string](slides-07-01.html#/write-two-functions)
 
-`.isnumeric()` on "110":
-```{python}
-#| eval: true
-#| echo: true
-"110".isnumeric() 
-```
+-   [indices_of_vowels](slides-07-01.html#/write-a-function-1)
 
-`.isnumeric()` on "CSC110":
-```{python}
-#| eval: true
-#| echo: true
-"csc110".isnumeric() 
-```
+-   [count_chars](slides-08-01.html#/write-a-function-1)
 
-## Evaluate code
+-   [censor_consonants](slides-14-01.html#/write-functions-side-by-side-1)
 
-Evaluate last line:
-```{python}
-#| eval: false
-#| echo: true
-numbers = (1000, 1, 2, 3)
-numbers.add(4)
-print(numbers[0]) 
-```
+# Review of lists
 
-## Evaluate code - answer
+## list methods
 
-Evaluate last line:
-```{python}
-#| eval: false
-#| echo: true
-numbers = (1000, 1, 2, 3)
-numbers.add(4)
-print(numbers[0]) # Error
-```
+-   `list[index] = value` mutate a list value using index
 
-Correct: `Error` (code won't proceed to last line)
+-   `.append(value)` append an item to the end of a list
 
-Incorrect: `1000` 
+-   `.insert(index, value)` insert a value at index
 
-## Write to file - compare difference
+-   `.pop(index)` remove an item at index
 
-version 1:
-```{python}
-#| eval: false
-#| echo: true
-words = ['quick', 'brown', 'fox']
-output = open("result.txt", "w")
-for w in words:
-  output.write(w + ' ')
-output.close()
-```
+-   `.remove(value)` remove a value
 
-version 2:
-```{python}
-#| eval: false
-#| echo: true
-words = ['quick', 'brown', 'fox']
-output = open("result.txt", "w")
-for w in words:
-  output.write(w + '\n')
-output.close()
-```
+-   `list[index_a:index_b]` [list slicing](slides-06-01.html?q=slici#/slicing-lists)
+
+-    2D lists
+
+## list: iterate with mutation
+
+-   [double](slides-06-01.html#/write-a-function-1)
+
+-   [make_even](slides-07-01.html#/write-a-function)
+
+-   [make_all_even](slides-07-02.html#/write-a-function-solution)
+
+-   [max_list](slides-08-02.html#/write-a-function-4)
+
+-   [total_mean](slides-13-01.html#/write-a-function)
+
+-   [remove_names](slides-13-01.html#/write-a-function-1)
+
+-   [remove_odds](slides-13-01.html#/write-a-function-2)
+
+-   [replace_consonants](slides-14-01.html#/write-functions-side-by-side-1)
+
+## list: iterate without mutation
+
+
+-   [max_list](slides-06-01.html#/max-of-list-solution)
+
+-   [sum_all](slides-06-01.html?q=sum_all#/write-a-function)
+
+-   [every_two_together](slides-07-02.html#/write-a-function-2)
+
+-   [every_two](slides-07-02.html#/write-a-function-3)
+
+-   [count_words](slides-09-01.html#/write-a-function-2)
+
+-   [descr_stats](slides-10-01.html#/write-a-function)
+
+-   [flatten](slides-11-01.html#/write-a-function)
+
+-   [get_highest_average](slides-11-01.html#/write-a-function-1)
+
+
+# Review of dictionaries
+
+## dictionary methods
+
+-   `dict[key] = value` mutate a value using key
+
+-   `dict[key] = value` add a new key-value pair
+
+-   `dict.pop(key)` remove a key-value pair using key
+
+-   `for k in dict:` iterate only the keys
+
+-   `for v in dict.values():` iterate only the values
+
+-   `for k, v in dict.items():` iterate both
+
+## dictionary: iterate with mutation
+
+## dictionary: iterate with mutation
 
 ## write a function
 

@@ -206,8 +206,8 @@
 <h2>Announcements</h2>
 <p>Final exam</p>
 <ul>
-<li><p>Time: this Friday Dec 13, <strong>6:00 - 8:00pm</strong></p></li>
-<li><p>Location: <strong>S SCI 100</strong></p></li>
+<li><p>1pm: Monday May 12, <strong>1:00 - 3:00pm</strong>, <strong>GITT 129B</strong></p></li>
+<li><p>2pm: Friday May 09, <strong>1:00 - 3:00pm</strong>, <strong>GITT 129B</strong></p></li>
 <li><p>Bring your photo ID</p></li>
 </ul>
 </section></section>
@@ -222,18 +222,18 @@
 <li><p>string is not mutable, means every string method will return a new string</p></li>
 <li><p>indexing a string</p></li>
 </ul>
-<div id="04c8063b" class="cell" data-execution_count="1">
+<div id="953d7d31" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>(<span class="st">"Jimmy42"</span>[<span class="dv">0</span>], <span class="st">"Jimmy42"</span>[<span class="op">-</span><span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
+<div class="cell-output cell-output-display" data-execution_count="82">
 <pre><code>('J', '2')</code></pre>
 </div>
 </div>
 <ul>
 <li>slicing a string</li>
 </ul>
-<div id="93b188ce" class="cell" data-execution_count="2">
+<div id="dc3024db" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>(<span class="st">"Jimmy42"</span>[:<span class="dv">2</span>], <span class="st">"Jimmy42"</span>[<span class="dv">1</span>:<span class="dv">3</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="83">
 <pre><code>('Ji', 'im')</code></pre>
 </div>
 </div>
@@ -243,9 +243,9 @@
 <ul>
 <li><code>.isnumeric()</code> returns True if all the chars are numeric (0-9)</li>
 </ul>
-<div id="b0681cd2" class="cell" data-execution_count="3">
+<div id="dc1c4653" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>(<span class="st">"Jimmy42"</span>.isnumeric(), <span class="st">"42"</span>.isnumeric())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="84">
 <pre><code>(False, True)</code></pre>
 </div>
 </div>
@@ -253,18 +253,18 @@
 <li><p><code>.lower()</code> returns a string with all lowercase chars</p></li>
 <li><p><code>.strip()</code> removing chars in the beginning or end</p></li>
 </ul>
-<div id="9018f9e8" class="cell" data-execution_count="4">
+<div id="5e0ab65d" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="co">"Jimmy42"</span>.strip(<span class="st">'42'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
+<div class="cell-output cell-output-display" data-execution_count="85">
 <pre><code>'Jimmy'</code></pre>
 </div>
 </div>
 <ul>
 <li><code>.split()</code> return a list by splitting strings by char</li>
 </ul>
-<div id="e4ac6781" class="cell" data-execution_count="5">
+<div id="c1cc5d1a" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="co">"Jimmy42Jimmy42Jimmy"</span>.split(<span class="st">'42'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="86">
 <pre><code>['Jimmy', 'Jimmy', 'Jimmy']</code></pre>
 </div>
 </div>
@@ -272,85 +272,91 @@
 <section id="string-concatenation" class="slide level2">
 <h2>string: concatenation</h2>
 <ul>
-<li><p><a href="slides-04-02.html#/write-a-function-1">age_milestones()</a></p></li>
-<li><p><a href="slides-05-02.html#/write-a-function">four_letter_anagram()</a></p></li>
-<li><p><a href="slides-07-01.html#/write-two-functions">remove_vowels_string()</a></p></li>
-<li><p><a href="slides-07-02.html#/write-a-function-2">every_two_together()</a></p></li>
-<li><p><a href="slides-09-02.html#/write-two-functions">write_word_count()</a></p></li>
-<li><p><a href="slides-10-02.html#/variable-length-parameter-2">concatenate()</a></p></li>
-<li><p><a href="slides-14-01.html#/write-functions-side-by-side-1">censor_consonants()</a></p></li>
+<li><p><a href="slides-04-02.html#/write-a-function-1">age_milestones</a></p></li>
+<li><p><a href="slides-05-02.html#/write-a-function">four_letter_anagram</a></p></li>
+<li><p><a href="slides-07-01.html#/write-two-functions">remove_vowels_string</a></p></li>
+<li><p><a href="slides-07-02.html#/write-a-function-2">every_two_together</a></p></li>
+<li><p><a href="slides-09-02.html#/write-two-functions">write_word_count</a></p></li>
+<li><p><a href="slides-10-02.html#/variable-length-parameter-2">concatenate</a></p></li>
+<li><p><a href="slides-14-01.html#/write-functions-side-by-side-1">censor_consonants</a></p></li>
 </ul>
 </section>
-<section id="int" class="slide level2">
-<h2>int()</h2>
-<p><code>int</code> on “110”:</p>
-<div id="27a63dc0" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="bu">int</span>(<span class="st">"110"</span>) <span class="co"># 110</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
-<pre><code>110</code></pre>
-</div>
-</div>
-<p><code>int</code> on “CSC110”:</p>
-<div id="d0793ce9" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="bu">int</span>(<span class="st">"CSC110"</span>) <span class="co"># Error</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Use case: use <code>int()</code> to convert <code>"2"</code> to <code>2</code> when reading and summing the number 2 from a .txt file.</p>
+<section id="string-iteration" class="slide level2">
+<h2>string: iteration</h2>
+<ul>
+<li><p><a href="slides-05-02.html#/write-a-function-1">is_numeric</a></p></li>
+<li><p><a href="slides-05-03.html#/write-a-function-1">count_vowels</a></p></li>
+<li><p><a href="slides-05-03.html#/write-a-function-4">vowels_only</a></p></li>
+<li><p><a href="slides-07-01.html#/write-two-functions">remove_vowels_string</a></p></li>
+<li><p><a href="slides-07-01.html#/write-a-function-1">indices_of_vowels</a></p></li>
+<li><p><a href="slides-08-01.html#/write-a-function-1">count_chars</a></p></li>
+<li><p><a href="slides-14-01.html#/write-functions-side-by-side-1">censor_consonants</a></p></li>
+</ul>
+</section></section>
+<section>
+<section id="review-of-lists" class="title-slide slide level1 center">
+<h1>Review of lists</h1>
+
 </section>
-<section id="string.isnumeric" class="slide level2">
-<h2>string.isnumeric()</h2>
-<p><code>.isnumeric()</code> on “110”:</p>
-<div id="3cf89ad8" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="co">"110"</span>.isnumeric() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
-<pre><code>True</code></pre>
-</div>
-</div>
-<p><code>.isnumeric()</code> on “CSC110”:</p>
-<div id="40237409" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="co">"csc110"</span>.isnumeric() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
-<pre><code>False</code></pre>
-</div>
-</div>
+<section id="list-methods" class="slide level2">
+<h2>list methods</h2>
+<ul>
+<li><p><code>list[index] = value</code> mutate a list value using index</p></li>
+<li><p><code>.append(value)</code> append an item to the end of a list</p></li>
+<li><p><code>.insert(index, value)</code> insert a value at index</p></li>
+<li><p><code>.pop(index)</code> remove an item at index</p></li>
+<li><p><code>.remove(value)</code> remove a value</p></li>
+<li><p><code>list[index_a:index_b]</code> <a href="slides-06-01.html?q=slici#/slicing-lists">list slicing</a></p></li>
+<li><p>2D lists</p></li>
+</ul>
 </section>
-<section id="evaluate-code" class="slide level2">
-<h2>Evaluate code</h2>
-<p>Evaluate last line:</p>
-<div id="30c13325" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a>numbers <span class="op">=</span> (<span class="dv">1000</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
-<span id="cb18-2"><a></a>numbers.add(<span class="dv">4</span>)</span>
-<span id="cb18-3"><a></a><span class="bu">print</span>(numbers[<span class="dv">0</span>]) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="list-iterate-with-mutation" class="slide level2">
+<h2>list: iterate with mutation</h2>
+<ul>
+<li><p><a href="slides-06-01.html#/write-a-function-1">double</a></p></li>
+<li><p><a href="slides-07-01.html#/write-a-function">make_even</a></p></li>
+<li><p><a href="slides-07-02.html#/write-a-function-solution">make_all_even</a></p></li>
+<li><p><a href="slides-08-02.html#/write-a-function-4">max_list</a></p></li>
+<li><p><a href="slides-13-01.html#/write-a-function">total_mean</a></p></li>
+<li><p><a href="slides-13-01.html#/write-a-function-1">remove_names</a></p></li>
+<li><p><a href="slides-13-01.html#/write-a-function-2">remove_odds</a></p></li>
+<li><p><a href="slides-14-01.html#/write-functions-side-by-side-1">replace_consonants</a></p></li>
+</ul>
 </section>
-<section id="evaluate-code---answer" class="slide level2">
-<h2>Evaluate code - answer</h2>
-<p>Evaluate last line:</p>
-<div id="83d92107" class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a>numbers <span class="op">=</span> (<span class="dv">1000</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
-<span id="cb19-2"><a></a>numbers.add(<span class="dv">4</span>)</span>
-<span id="cb19-3"><a></a><span class="bu">print</span>(numbers[<span class="dv">0</span>]) <span class="co"># Error</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Correct: <code>Error</code> (code won’t proceed to last line)</p>
-<p>Incorrect: <code>1000</code></p>
+<section id="list-iterate-without-mutation" class="slide level2">
+<h2>list: iterate without mutation</h2>
+<ul>
+<li><p><a href="slides-06-01.html#/max-of-list-solution">max_list</a></p></li>
+<li><p><a href="slides-06-01.html?q=sum_all#/write-a-function">sum_all</a></p></li>
+<li><p><a href="slides-07-02.html#/write-a-function-2">every_two_together</a></p></li>
+<li><p><a href="slides-07-02.html#/write-a-function-3">every_two</a></p></li>
+<li><p><a href="slides-09-01.html#/write-a-function-2">count_words</a></p></li>
+<li><p><a href="slides-10-01.html#/write-a-function">descr_stats</a></p></li>
+<li><p><a href="slides-11-01.html#/write-a-function">flatten</a></p></li>
+<li><p><a href="slides-11-01.html#/write-a-function-1">get_highest_average</a></p></li>
+</ul>
+</section></section>
+<section>
+<section id="review-of-dictionaries" class="title-slide slide level1 center">
+<h1>Review of dictionaries</h1>
+
 </section>
-<section id="write-to-file---compare-difference" class="slide level2">
-<h2>Write to file - compare difference</h2>
-<p>version 1:</p>
-<div id="50846ea9" class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a>words <span class="op">=</span> [<span class="st">'quick'</span>, <span class="st">'brown'</span>, <span class="st">'fox'</span>]</span>
-<span id="cb20-2"><a></a>output <span class="op">=</span> <span class="bu">open</span>(<span class="st">"result.txt"</span>, <span class="st">"w"</span>)</span>
-<span id="cb20-3"><a></a><span class="cf">for</span> w <span class="kw">in</span> words:</span>
-<span id="cb20-4"><a></a>  output.write(w <span class="op">+</span> <span class="st">' '</span>)</span>
-<span id="cb20-5"><a></a>output.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>version 2:</p>
-<div id="47d30f35" class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a>words <span class="op">=</span> [<span class="st">'quick'</span>, <span class="st">'brown'</span>, <span class="st">'fox'</span>]</span>
-<span id="cb21-2"><a></a>output <span class="op">=</span> <span class="bu">open</span>(<span class="st">"result.txt"</span>, <span class="st">"w"</span>)</span>
-<span id="cb21-3"><a></a><span class="cf">for</span> w <span class="kw">in</span> words:</span>
-<span id="cb21-4"><a></a>  output.write(w <span class="op">+</span> <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
-<span id="cb21-5"><a></a>output.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="dictionary-methods" class="slide level2">
+<h2>dictionary methods</h2>
+<ul>
+<li><p><code>dict[key] = value</code> mutate a value using key</p></li>
+<li><p><code>dict[key] = value</code> add a new key-value pair</p></li>
+<li><p><code>dict.pop(key)</code> remove a key-value pair using key</p></li>
+<li><p><code>for k in dict:</code> iterate only the keys</p></li>
+<li><p><code>for v in dict.values():</code> iterate only the values</p></li>
+<li><p><code>for k, v in dict.items():</code> iterate both</p></li>
+</ul>
+</section>
+<section id="dictionary-iterate-with-mutation" class="slide level2">
+<h2>dictionary: iterate with mutation</h2>
+</section>
+<section id="dictionary-iterate-with-mutation-1" class="slide level2">
+<h2>dictionary: iterate with mutation</h2>
 </section>
 <section id="write-a-function" class="slide level2">
 <h2>write a function</h2>
@@ -360,29 +366,29 @@
 <li><p>It takes two arguments, a set of strings and an integer n</p></li>
 <li><p>It returns a list that contains each string from the set repeated n times</p></li>
 </ol>
-<div id="da81718f" class="cell" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a>items <span class="op">=</span> {<span class="st">"banana"</span>, <span class="st">"apple"</span>, <span class="st">"pear"</span>}</span>
-<span id="cb22-2"><a></a><span class="bu">print</span>(create_list(items, <span class="dv">2</span>)) </span>
-<span id="cb22-3"><a></a><span class="co"># order does not matter</span></span>
-<span id="cb22-4"><a></a><span class="co"># ['banana', 'banana', 'apple', 'apple', 'pear', 'pear']</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="42956737" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>items <span class="op">=</span> {<span class="st">"banana"</span>, <span class="st">"apple"</span>, <span class="st">"pear"</span>}</span>
+<span id="cb11-2"><a></a><span class="bu">print</span>(create_list(items, <span class="dv">2</span>)) </span>
+<span id="cb11-3"><a></a><span class="co"># order does not matter</span></span>
+<span id="cb11-4"><a></a><span class="co"># ['banana', 'banana', 'apple', 'apple', 'pear', 'pear']</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function---solution" class="slide level2">
 <h2>write a function - solution</h2>
-<div id="16c0f624" class="cell" data-execution_count="15">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a></a><span class="kw">def</span> create_list(items, n):</span>
-<span id="cb23-2"><a></a>  new_list <span class="op">=</span> [ ]</span>
-<span id="cb23-3"><a></a>  <span class="cf">for</span> value <span class="kw">in</span> items:</span>
-<span id="cb23-4"><a></a>    new_list.extend([value] <span class="op">*</span> n)</span>
-<span id="cb23-5"><a></a>  <span class="cf">return</span> new_list</span>
-<span id="cb23-6"><a></a></span>
-<span id="cb23-7"><a></a><span class="kw">def</span> main():</span>
-<span id="cb23-8"><a></a>  items <span class="op">=</span> {<span class="st">"banana"</span>, <span class="st">"apple"</span>, <span class="st">"pear"</span>}</span>
-<span id="cb23-9"><a></a>  <span class="bu">print</span>(create_list(items, <span class="dv">2</span>))  </span>
-<span id="cb23-10"><a></a>  </span>
-<span id="cb23-11"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="429fc43a" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="kw">def</span> create_list(items, n):</span>
+<span id="cb12-2"><a></a>  new_list <span class="op">=</span> [ ]</span>
+<span id="cb12-3"><a></a>  <span class="cf">for</span> value <span class="kw">in</span> items:</span>
+<span id="cb12-4"><a></a>    new_list.extend([value] <span class="op">*</span> n)</span>
+<span id="cb12-5"><a></a>  <span class="cf">return</span> new_list</span>
+<span id="cb12-6"><a></a></span>
+<span id="cb12-7"><a></a><span class="kw">def</span> main():</span>
+<span id="cb12-8"><a></a>  items <span class="op">=</span> {<span class="st">"banana"</span>, <span class="st">"apple"</span>, <span class="st">"pear"</span>}</span>
+<span id="cb12-9"><a></a>  <span class="bu">print</span>(create_list(items, <span class="dv">2</span>))  </span>
+<span id="cb12-10"><a></a>  </span>
+<span id="cb12-11"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>['banana', 'banana', 'pear', 'pear', 'apple', 'apple']</code></pre>
+<pre><code>['apple', 'apple', 'pear', 'pear', 'banana', 'banana']</code></pre>
 </div>
 </div>
 </section>
@@ -393,28 +399,28 @@
 <li>It takes a variable number of arguments: <code>*values</code></li>
 <li>It returns the highest value in <code>values</code></li>
 </ol>
-<div id="94234ab7" class="cell" data-execution_count="16">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a><span class="cf">assert</span> maximum(<span class="dv">1</span>) <span class="op">==</span> <span class="dv">1</span></span>
-<span id="cb25-2"><a></a><span class="cf">assert</span> maximum(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>) <span class="op">==</span> <span class="dv">6</span></span>
-<span id="cb25-3"><a></a><span class="cf">assert</span> maximum() <span class="op">==</span> <span class="va">None</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="9d5cd923" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="cf">assert</span> maximum(<span class="dv">1</span>) <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb14-2"><a></a><span class="cf">assert</span> maximum(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>) <span class="op">==</span> <span class="dv">6</span></span>
+<span id="cb14-3"><a></a><span class="cf">assert</span> maximum() <span class="op">==</span> <span class="va">None</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div id="2d3453fc" class="cell" data-execution_count="17">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a></a><span class="kw">def</span> maximum(<span class="op">*</span>values):</span>
-<span id="cb26-2"><a></a>  <span class="bu">max</span> <span class="op">=</span> <span class="va">None</span></span>
-<span id="cb26-3"><a></a>  <span class="cf">for</span> v <span class="kw">in</span> values:</span>
-<span id="cb26-4"><a></a>    <span class="cf">if</span> <span class="bu">max</span> <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span> v <span class="op">&gt;</span> <span class="bu">max</span>:</span>
-<span id="cb26-5"><a></a>      <span class="bu">max</span> <span class="op">=</span> v</span>
-<span id="cb26-6"><a></a>  <span class="cf">return</span> <span class="bu">max</span></span>
-<span id="cb26-7"><a></a></span>
-<span id="cb26-8"><a></a><span class="kw">def</span> main():</span>
-<span id="cb26-9"><a></a>  <span class="cf">assert</span> maximum(<span class="dv">1</span>) <span class="op">==</span> <span class="dv">1</span></span>
-<span id="cb26-10"><a></a>  <span class="cf">assert</span> maximum(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>) <span class="op">==</span> <span class="dv">6</span></span>
-<span id="cb26-11"><a></a>  <span class="cf">assert</span> maximum() <span class="op">==</span> <span class="va">None</span></span>
-<span id="cb26-12"><a></a></span>
-<span id="cb26-13"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="c68efe67" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="kw">def</span> maximum(<span class="op">*</span>values):</span>
+<span id="cb15-2"><a></a>  <span class="bu">max</span> <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb15-3"><a></a>  <span class="cf">for</span> v <span class="kw">in</span> values:</span>
+<span id="cb15-4"><a></a>    <span class="cf">if</span> <span class="bu">max</span> <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span> v <span class="op">&gt;</span> <span class="bu">max</span>:</span>
+<span id="cb15-5"><a></a>      <span class="bu">max</span> <span class="op">=</span> v</span>
+<span id="cb15-6"><a></a>  <span class="cf">return</span> <span class="bu">max</span></span>
+<span id="cb15-7"><a></a></span>
+<span id="cb15-8"><a></a><span class="kw">def</span> main():</span>
+<span id="cb15-9"><a></a>  <span class="cf">assert</span> maximum(<span class="dv">1</span>) <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb15-10"><a></a>  <span class="cf">assert</span> maximum(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>) <span class="op">==</span> <span class="dv">6</span></span>
+<span id="cb15-11"><a></a>  <span class="cf">assert</span> maximum() <span class="op">==</span> <span class="va">None</span></span>
+<span id="cb15-12"><a></a></span>
+<span id="cb15-13"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Can we change the order of <code>max == None</code> and <code>v &gt; max</code>?</p>
 <p>No we CANNOT. Try it on your own laptop.</p>

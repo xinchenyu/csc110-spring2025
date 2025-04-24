@@ -2269,7 +2269,7 @@
     "href": "slides-16-01.html#announcements",
     "title": "final exam review (slides)",
     "section": "Announcements",
-    "text": "Announcements\nFinal exam\n\nTime: this Friday Dec 13, 6:00 - 8:00pm\nLocation: S SCI 100\nBring your photo ID",
+    "text": "Announcements\nFinal exam\n\n1pm: Monday May 12, 1:00 - 3:00pm, GITT 129B\n2pm: Friday May 09, 1:00 - 3:00pm, GITT 129B\nBring your photo ID",
     "crumbs": [
       "Module 16 - Review",
       "final exam review (slides)"
@@ -2357,7 +2357,7 @@
     "href": "slides-16-01.html#write-a-function---solution",
     "title": "final exam review (slides)",
     "section": "write a function - solution",
-    "text": "write a function - solution\n\ndef create_list(items, n):\n  new_list = [ ]\n  for value in items:\n    new_list.extend([value] * n)\n  return new_list\n\ndef main():\n  items = {\"banana\", \"apple\", \"pear\"}\n  print(create_list(items, 2))  \n  \nmain()\n\n['banana', 'banana', 'pear', 'pear', 'apple', 'apple']",
+    "text": "write a function - solution\n\ndef create_list(items, n):\n  new_list = [ ]\n  for value in items:\n    new_list.extend([value] * n)\n  return new_list\n\ndef main():\n  items = {\"banana\", \"apple\", \"pear\"}\n  print(create_list(items, 2))  \n  \nmain()\n\n['apple', 'apple', 'pear', 'pear', 'banana', 'banana']",
     "crumbs": [
       "Module 16 - Review",
       "final exam review (slides)"
@@ -9653,7 +9653,84 @@
     "href": "slides-16-01.html#string-concatenation",
     "title": "final exam review (slides)",
     "section": "string: concatenation",
-    "text": "string: concatenation\n\nage_milestones()\nfour_letter_anagram()\nremove_vowels_string()\nevery_two_together()\nwrite_word_count()\nconcatenate()\ncensor_consonants()",
+    "text": "string: concatenation\n\nage_milestones\nfour_letter_anagram\nremove_vowels_string\nevery_two_together\nwrite_word_count\nconcatenate\ncensor_consonants",
+    "crumbs": [
+      "Module 16 - Review",
+      "final exam review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-16-01.html#string-iteration",
+    "href": "slides-16-01.html#string-iteration",
+    "title": "final exam review (slides)",
+    "section": "string: iteration",
+    "text": "string: iteration\n\nis_numeric\ncount_vowels\nvowels_only\nremove_vowels_string\nindices_of_vowels\ncount_chars\ncensor_consonants",
+    "crumbs": [
+      "Module 16 - Review",
+      "final exam review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-16-01.html#list-methods",
+    "href": "slides-16-01.html#list-methods",
+    "title": "final exam review (slides)",
+    "section": "list methods",
+    "text": "list methods\n\nlist[index] = value mutate a list value using index\n.append(value) append an item to the end of a list\n.insert(index, value) insert a value at index\n.pop(index) remove an item at index\n.remove(value) remove a value\nlist[index_a:index_b] list slicing\n2D lists",
+    "crumbs": [
+      "Module 16 - Review",
+      "final exam review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-16-01.html#list-iterate-with-mutation",
+    "href": "slides-16-01.html#list-iterate-with-mutation",
+    "title": "final exam review (slides)",
+    "section": "list: iterate with mutation",
+    "text": "list: iterate with mutation\n\ndouble\nmake_even\nmake_all_even\nmax_list\ntotal_mean\nremove_names\nremove_odds\nreplace_consonants",
+    "crumbs": [
+      "Module 16 - Review",
+      "final exam review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-16-01.html#list-iterate-without-mutation",
+    "href": "slides-16-01.html#list-iterate-without-mutation",
+    "title": "final exam review (slides)",
+    "section": "list: iterate without mutation",
+    "text": "list: iterate without mutation\n\nmax_list\nsum_all\nevery_two_together\nevery_two\ncount_words\ndescr_stats\nflatten\nget_highest_average",
+    "crumbs": [
+      "Module 16 - Review",
+      "final exam review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-16-01.html#dictionary-methods",
+    "href": "slides-16-01.html#dictionary-methods",
+    "title": "final exam review (slides)",
+    "section": "dictionary methods",
+    "text": "dictionary methods\n\ndict[key] = value mutate a value using key\ndict[key] = value add a new key-value pair\ndict.pop(key) remove a key-value pair using key\nfor k in dict: iterate only the keys\nfor v in dict.values(): iterate only the values\nfor k, v in dict.items(): iterate both",
+    "crumbs": [
+      "Module 16 - Review",
+      "final exam review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-16-01.html#dictionary-iterate-with-mutation",
+    "href": "slides-16-01.html#dictionary-iterate-with-mutation",
+    "title": "final exam review (slides)",
+    "section": "dictionary: iterate with mutation",
+    "text": "dictionary: iterate with mutation",
+    "crumbs": [
+      "Module 16 - Review",
+      "final exam review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-16-01.html#dictionary-iterate-with-mutation-1",
+    "href": "slides-16-01.html#dictionary-iterate-with-mutation-1",
+    "title": "final exam review (slides)",
+    "section": "dictionary: iterate with mutation",
+    "text": "dictionary: iterate with mutation",
     "crumbs": [
       "Module 16 - Review",
       "final exam review (slides)"
