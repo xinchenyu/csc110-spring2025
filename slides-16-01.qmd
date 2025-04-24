@@ -117,6 +117,8 @@ Final exam
 
 -   `.remove(value)` remove a value
 
+-   `.extend(list_b)` concatenate with another list
+
 -   `list[index_a:index_b]` [list slicing](slides-06-01.html?q=slici#/slicing-lists)
 
 -    2D lists
@@ -140,7 +142,6 @@ Final exam
 -   [replace_consonants](slides-14-01.html#/write-functions-side-by-side-1)
 
 ## list: iterate without mutation
-
 
 -   [max_list](slides-06-01.html#/max-of-list-solution)
 
@@ -175,9 +176,43 @@ Final exam
 
 -   `for k, v in dict.items():` iterate both
 
-## dictionary: iterate with mutation
+## mutating a dictionary
 
-## dictionary: iterate with mutation
+-   [count_vowels](slides-08-01.html#/write-a-function)
+
+-   [sales_tax](slides-13-02.html#/write-a-function)
+
+-   [remove_records](slides-13-02.html#/write-a-function-1)
+
+-   [repetition](slides-13-02.html#/write-a-function-2)
+
+
+## adding to a dictionary
+
+-   [count_chars](slides-08-01.html#/write-a-function-1)
+
+-   [count_words](slides-09-01.html#/write-a-function-2)
+
+-   [count_names](slides-12-01.html#/write-a-function-solution-1)
+
+-   [create_dictionary](slides-13-03.html#/write-python-code-solution)
+
+
+## iterating a dictionary
+
+-   [merge_dictionaries](slides-08-02.html#/write-a-function-3)
+
+-   [sum_and_multiplication](slides-10-01.html#/write-a-function-1)
+
+-   [get_names](slides-13-02.html#/write-a-function-solution-3)
+
+-   [repetition](slides-13-02.html#/write-a-function-2)
+
+-   [sales_tax](slides-13-02.html#/write-a-function)
+
+# Final exam also includes reading, aggregating or writing to files, and sortings
+
+# More practice problems
 
 ## write a function
 
@@ -254,23 +289,7 @@ Can we change the order of `max == None` and `v > max`?
 
 No we CANNOT. Try it on your own laptop.
 
-## More concepts
-
--   loop table (1D and 2D lists)
-
--   sorting (number of sweeps and swaps)
-
--   string methods
-
-    * iterate string
-
--   data structures and their mutability
-
-    * iterate data structures
-  
-    * if conditions
-    
--   reading, aggregating or writing to files   
+ 
 
 
 

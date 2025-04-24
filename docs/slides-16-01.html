@@ -222,18 +222,18 @@
 <li><p>string is not mutable, means every string method will return a new string</p></li>
 <li><p>indexing a string</p></li>
 </ul>
-<div id="953d7d31" class="cell" data-execution_count="1">
+<div id="cae88a29" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>(<span class="st">"Jimmy42"</span>[<span class="dv">0</span>], <span class="st">"Jimmy42"</span>[<span class="op">-</span><span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="82">
+<div class="cell-output cell-output-display" data-execution_count="1">
 <pre><code>('J', '2')</code></pre>
 </div>
 </div>
 <ul>
 <li>slicing a string</li>
 </ul>
-<div id="dc3024db" class="cell" data-execution_count="2">
+<div id="e59b2fa5" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>(<span class="st">"Jimmy42"</span>[:<span class="dv">2</span>], <span class="st">"Jimmy42"</span>[<span class="dv">1</span>:<span class="dv">3</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="83">
+<div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>('Ji', 'im')</code></pre>
 </div>
 </div>
@@ -243,9 +243,9 @@
 <ul>
 <li><code>.isnumeric()</code> returns True if all the chars are numeric (0-9)</li>
 </ul>
-<div id="dc1c4653" class="cell" data-execution_count="3">
+<div id="df60c709" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>(<span class="st">"Jimmy42"</span>.isnumeric(), <span class="st">"42"</span>.isnumeric())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="84">
+<div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>(False, True)</code></pre>
 </div>
 </div>
@@ -253,18 +253,18 @@
 <li><p><code>.lower()</code> returns a string with all lowercase chars</p></li>
 <li><p><code>.strip()</code> removing chars in the beginning or end</p></li>
 </ul>
-<div id="5e0ab65d" class="cell" data-execution_count="4">
+<div id="7df45fee" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="co">"Jimmy42"</span>.strip(<span class="st">'42'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="85">
+<div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>'Jimmy'</code></pre>
 </div>
 </div>
 <ul>
 <li><code>.split()</code> return a list by splitting strings by char</li>
 </ul>
-<div id="c1cc5d1a" class="cell" data-execution_count="5">
+<div id="73ec97ee" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="co">"Jimmy42Jimmy42Jimmy"</span>.split(<span class="st">'42'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="86">
+<div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>['Jimmy', 'Jimmy', 'Jimmy']</code></pre>
 </div>
 </div>
@@ -306,6 +306,7 @@
 <li><p><code>.insert(index, value)</code> insert a value at index</p></li>
 <li><p><code>.pop(index)</code> remove an item at index</p></li>
 <li><p><code>.remove(value)</code> remove a value</p></li>
+<li><p><code>.extend(list_b)</code> concatenate with another list</p></li>
 <li><p><code>list[index_a:index_b]</code> <a href="slides-06-01.html?q=slici#/slicing-lists">list slicing</a></p></li>
 <li><p>2D lists</p></li>
 </ul>
@@ -352,11 +353,43 @@
 <li><p><code>for k, v in dict.items():</code> iterate both</p></li>
 </ul>
 </section>
-<section id="dictionary-iterate-with-mutation" class="slide level2">
-<h2>dictionary: iterate with mutation</h2>
+<section id="mutating-a-dictionary" class="slide level2">
+<h2>mutating a dictionary</h2>
+<ul>
+<li><p><a href="slides-08-01.html#/write-a-function">count_vowels</a></p></li>
+<li><p><a href="slides-13-02.html#/write-a-function">sales_tax</a></p></li>
+<li><p><a href="slides-13-02.html#/write-a-function-1">remove_records</a></p></li>
+<li><p><a href="slides-13-02.html#/write-a-function-2">repetition</a></p></li>
+</ul>
 </section>
-<section id="dictionary-iterate-with-mutation-1" class="slide level2">
-<h2>dictionary: iterate with mutation</h2>
+<section id="adding-to-a-dictionary" class="slide level2">
+<h2>adding to a dictionary</h2>
+<ul>
+<li><p><a href="slides-08-01.html#/write-a-function-1">count_chars</a></p></li>
+<li><p><a href="slides-09-01.html#/write-a-function-2">count_words</a></p></li>
+<li><p><a href="slides-12-01.html#/write-a-function-solution-1">count_names</a></p></li>
+<li><p><a href="slides-13-03.html#/write-python-code-solution">create_dictionary</a></p></li>
+</ul>
+</section>
+<section id="iterating-a-dictionary" class="slide level2">
+<h2>iterating a dictionary</h2>
+<ul>
+<li><p><a href="slides-08-02.html#/write-a-function-3">merge_dictionaries</a></p></li>
+<li><p><a href="slides-10-01.html#/write-a-function-1">sum_and_multiplication</a></p></li>
+<li><p><a href="slides-13-02.html#/write-a-function-solution-3">get_names</a></p></li>
+<li><p><a href="slides-13-02.html#/write-a-function-2">repetition</a></p></li>
+<li><p><a href="slides-13-02.html#/write-a-function">sales_tax</a></p></li>
+</ul>
+</section></section>
+<section id="final-exam-also-includes-reading-aggregating-or-writing-to-files-and-sortings" class="title-slide slide level1 center">
+<h1>Final exam also includes reading, aggregating or writing to files, and sortings</h1>
+
+</section>
+
+<section>
+<section id="more-practice-problems" class="title-slide slide level1 center">
+<h1>More practice problems</h1>
+
 </section>
 <section id="write-a-function" class="slide level2">
 <h2>write a function</h2>
@@ -366,7 +399,7 @@
 <li><p>It takes two arguments, a set of strings and an integer n</p></li>
 <li><p>It returns a list that contains each string from the set repeated n times</p></li>
 </ol>
-<div id="42956737" class="cell" data-execution_count="6">
+<div id="9b71cd72" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>items <span class="op">=</span> {<span class="st">"banana"</span>, <span class="st">"apple"</span>, <span class="st">"pear"</span>}</span>
 <span id="cb11-2"><a></a><span class="bu">print</span>(create_list(items, <span class="dv">2</span>)) </span>
 <span id="cb11-3"><a></a><span class="co"># order does not matter</span></span>
@@ -375,7 +408,7 @@
 </section>
 <section id="write-a-function---solution" class="slide level2">
 <h2>write a function - solution</h2>
-<div id="429fc43a" class="cell" data-execution_count="7">
+<div id="ae701bf5" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="kw">def</span> create_list(items, n):</span>
 <span id="cb12-2"><a></a>  new_list <span class="op">=</span> [ ]</span>
 <span id="cb12-3"><a></a>  <span class="cf">for</span> value <span class="kw">in</span> items:</span>
@@ -399,7 +432,7 @@
 <li>It takes a variable number of arguments: <code>*values</code></li>
 <li>It returns the highest value in <code>values</code></li>
 </ol>
-<div id="9d5cd923" class="cell" data-execution_count="8">
+<div id="93246c00" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="cf">assert</span> maximum(<span class="dv">1</span>) <span class="op">==</span> <span class="dv">1</span></span>
 <span id="cb14-2"><a></a><span class="cf">assert</span> maximum(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>) <span class="op">==</span> <span class="dv">6</span></span>
 <span id="cb14-3"><a></a><span class="cf">assert</span> maximum() <span class="op">==</span> <span class="va">None</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -407,7 +440,7 @@
 </section>
 <section id="write-a-function-solution" class="slide level2">
 <h2>Write a function – solution</h2>
-<div id="c68efe67" class="cell" data-execution_count="9">
+<div id="5111476c" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="kw">def</span> maximum(<span class="op">*</span>values):</span>
 <span id="cb15-2"><a></a>  <span class="bu">max</span> <span class="op">=</span> <span class="va">None</span></span>
 <span id="cb15-3"><a></a>  <span class="cf">for</span> v <span class="kw">in</span> values:</span>
@@ -424,23 +457,6 @@
 </div>
 <p>Can we change the order of <code>max == None</code> and <code>v &gt; max</code>?</p>
 <p>No we CANNOT. Try it on your own laptop.</p>
-</section>
-<section id="more-concepts" class="slide level2">
-<h2>More concepts</h2>
-<ul>
-<li><p>loop table (1D and 2D lists)</p></li>
-<li><p>sorting (number of sweeps and swaps)</p></li>
-<li><p>string methods</p>
-<ul>
-<li>iterate string</li>
-</ul></li>
-<li><p>data structures and their mutability</p>
-<ul>
-<li><p>iterate data structures</p></li>
-<li><p>if conditions</p></li>
-</ul></li>
-<li><p>reading, aggregating or writing to files</p></li>
-</ul>
 
 
 </section></section>

@@ -2390,7 +2390,7 @@
     "href": "slides-16-01.html#more-concepts",
     "title": "final exam review (slides)",
     "section": "More concepts",
-    "text": "More concepts\n\nloop table (1D and 2D lists)\nsorting (number of sweeps and swaps)\nstring methods\n\niterate string\n\ndata structures and their mutability\n\niterate data structures\nif conditions\n\nreading, aggregating or writing to files",
+    "text": "More concepts\n\nsorting (number of sweeps and swaps)\nreading, aggregating or writing to files",
     "crumbs": [
       "Module 16 - Review",
       "final exam review (slides)"
@@ -9675,7 +9675,7 @@
     "href": "slides-16-01.html#list-methods",
     "title": "final exam review (slides)",
     "section": "list methods",
-    "text": "list methods\n\nlist[index] = value mutate a list value using index\n.append(value) append an item to the end of a list\n.insert(index, value) insert a value at index\n.pop(index) remove an item at index\n.remove(value) remove a value\nlist[index_a:index_b] list slicing\n2D lists",
+    "text": "list methods\n\nlist[index] = value mutate a list value using index\n.append(value) append an item to the end of a list\n.insert(index, value) insert a value at index\n.pop(index) remove an item at index\n.remove(value) remove a value\n.extend(list_b) concatenate with another list\nlist[index_a:index_b] list slicing\n2D lists",
     "crumbs": [
       "Module 16 - Review",
       "final exam review (slides)"
@@ -9731,6 +9731,39 @@
     "title": "final exam review (slides)",
     "section": "dictionary: iterate with mutation",
     "text": "dictionary: iterate with mutation",
+    "crumbs": [
+      "Module 16 - Review",
+      "final exam review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-16-01.html#mutating-a-dictionary",
+    "href": "slides-16-01.html#mutating-a-dictionary",
+    "title": "final exam review (slides)",
+    "section": "mutating a dictionary",
+    "text": "mutating a dictionary\n\ncount_vowels\nsales_tax\nremove_records\nrepetition",
+    "crumbs": [
+      "Module 16 - Review",
+      "final exam review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-16-01.html#adding-to-a-dictionary",
+    "href": "slides-16-01.html#adding-to-a-dictionary",
+    "title": "final exam review (slides)",
+    "section": "adding to a dictionary",
+    "text": "adding to a dictionary\n\ncount_chars\ncount_words\ncount_names\ncreate_dictionary",
+    "crumbs": [
+      "Module 16 - Review",
+      "final exam review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-16-01.html#iterating-a-dictionary",
+    "href": "slides-16-01.html#iterating-a-dictionary",
+    "title": "final exam review (slides)",
+    "section": "iterating a dictionary",
+    "text": "iterating a dictionary\n\nmerge_dictionaries\nsum_and_multiplication\nget_names\nrepetition\nsales_tax",
     "crumbs": [
       "Module 16 - Review",
       "final exam review (slides)"
