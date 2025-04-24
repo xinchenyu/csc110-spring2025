@@ -109,6 +109,9 @@ This section covers how you should go about structuring and implementing the cod
 # All your functions are defined here
 
 def main():
+    word_filename = input("Name of the word bank file: ")
+    grid_filename = input("Name of the grid file: ")
+    
     # call a function to load in the forwards words, computes the backwards version of each word, and save into a dictionary, passing in the needed arguments
     
     # call a function for transposing the grid, passing in the needed arguments
@@ -147,6 +150,9 @@ You may also consider another strategy:
 # All your functions are defined here
 
 def main():
+    word_filename = input("Name of the word bank file: ")
+    grid_filename = input("Name of the grid file: ")
+    
     # call a function to load in the words and save into a list, passing in the needed arguments
     
     # call a function to get each word of the 4 directions at each position, passing in the needed arguments
