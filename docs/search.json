@@ -7625,7 +7625,7 @@
     "href": "slides-14-02.html#write-bubble-sort---step-1",
     "title": "sorting (slides)",
     "section": "Write bubble sort - step 1",
-    "text": "Write bubble sort - step 1\n\nFunction name is single_sweep_swap\nIt takes a list as argument\nIt mutates the list, sorting it\nIt iterates over the list, comparing each element with the next one, if the next one is smaller, swap elements\nIt sweeps the list only once\n\n\nassert single_sweep_swap([8, 3, 5, 7, 1]) == [3, 5, 7, 1, 8]",
+    "text": "Write bubble sort - step 1\n\nFunction name is single_sweep_swap that takes a list as argument\nIt mutates the list, sorting it\nIt iterates over the list, comparing each element with the next one, if the next one is smaller, swap elements\nIt sweeps the list only once\n\n\nassert single_sweep_swap([8, 3, 5, 7, 1]) == [3, 5, 7, 1, 8]",
     "crumbs": [
       "Module 14 - Combining Data Structures and Sorting Lists",
       "sorting (slides)"
@@ -9576,7 +9576,7 @@
     "href": "slides-14-02.html#how-many-total-sweeps-and-swaps-3",
     "title": "sorting (slides)",
     "section": "How many total sweeps and swaps?",
-    "text": "How many total sweeps and swaps?\nGo to gradescope and answer today’s attendance question:\n\nnumbers = [ 1, 5, 5, 7, 2, 4 ]",
+    "text": "How many total sweeps and swaps?\n\nnumbers = [ 1, 5, 5, 7, 2, 4 ]",
     "crumbs": [
       "Module 14 - Combining Data Structures and Sorting Lists",
       "sorting (slides)"
@@ -9767,6 +9767,28 @@
     "crumbs": [
       "Module 16 - Review",
       "final exam review (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-14-02.html#write-selection-sort",
+    "href": "slides-14-02.html#write-selection-sort",
+    "title": "sorting (slides)",
+    "section": "Write selection sort",
+    "text": "Write selection sort\n\ndef find_min_index(items):\n  min_index = None\n  for i in range(len(items)):\n    if min_index == None or items[min_index] &gt; items[i]:\n      min_index = i\n  return min_index\n\ndef selection_sort(items):\n  begin_index = 0\n  while begin_index &lt;  # &lt;---------&gt; :\n     # &lt;---------&gt; \n     # &lt;---------&gt; \n    begin_index += 1\n    \ndef main():\n  test_list = [5, 10, 20, 6, 7, 9, 43, 10, 12]\n  selection_sort(test_list)\n  assert test_list == [5, 6, 7, 9, 10, 10, 12, 20, 43]\n  \nmain()",
+    "crumbs": [
+      "Module 14 - Combining Data Structures and Sorting Lists",
+      "sorting (slides)"
+    ]
+  },
+  {
+    "objectID": "slides-14-02.html#how-many-total-sweeps-and-swaps-4",
+    "href": "slides-14-02.html#how-many-total-sweeps-and-swaps-4",
+    "title": "sorting (slides)",
+    "section": "How many total sweeps and swaps?",
+    "text": "How many total sweeps and swaps?\n\nnumbers = [ 1, 5, 5, 7, 2, 4 ]\n\n4 sweeps, 6 swaps",
+    "crumbs": [
+      "Module 14 - Combining Data Structures and Sorting Lists",
+      "sorting (slides)"
     ]
   }
 ]
