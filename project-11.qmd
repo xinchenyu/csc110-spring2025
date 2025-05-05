@@ -86,7 +86,7 @@ V B U L L E T
 A M E R I C A
 </pre>
 
-Your program should return and print:
+Your program should print:
 
 ```{python}
 #| eval: false
@@ -98,6 +98,57 @@ Your program should return and print:
 ```
 
 A word in the grid can be horizontal or vertical, the order of letters may go forward or backward. For example, when searching for the word `star`, the starting position is row 4 and column 5 for the letter `s` (vertical backward direction). Another example is the word `bullet`, the starting position is row 6 and column 2 for the letter `b` (horizontal forward direction). Consider the cases when a word only show up once in the grid.
+
+# Additional Example 
+
+Say that `words.txt` contains:
+
+```{html}
+house
+roof
+table
+kitchen
+computer
+bedromm
+bathroom
+```
+
+And then `grid.txt` contains:
+
+<pre>
+I L D T J R K I I I J N D A I D O W R S
+K P G M N J Z Q C T X J Y Y Q C E K W E
+I M K S I P M R V A J J T X J Z U H Y B
+U E T X N E V K M B S V Z A T Z U M N M
+X H Z F B J W S W U L M Q P X L Z A K V
+O L B E D R O O M Z H T C V A W B R O O
+H C T K F A J Q V J I Q I O J S S Q X A
+N V H B P I A D U O B P O P J X Y N Y O
+H B T I B A T H R O O M F A J I X O T X
+Z Y U C H O U S E O V S M O W M T P F V
+K B G I W T F M N I G X I A H R H N D O
+H Q N W Z T N D C F V A W O N J C V T C
+N T U I X Y M T A B L E F W B F J Y D M
+K O X W T C Y Q I H H D R T W I E C I X
+U O Q A F X J H V H L Z S U V B K A U R
+T N U Z A I G Q N C Q K I T C H E N R K
+N O D C I J O H N Q W R B P B Y V N S C
+H P C O M P U T E R L N H H T J W X Y A
+M A D J S O V L R O O F Y K D T E I M A
+U Q I W X E D J O R L D R H P R C W Y O
+</pre>
+
+Your program should print:
+
+```{python}
+#| eval: false
+{'house': [10, 5], 
+ 'roof': [19, 9], 
+ 'table': [13, 8], 
+ 'kitchen': [16, 12], 
+ 'computer': [18, 3], 
+ 'bathroom': [9, 5]}
+```
 
 # Development Strategy 1
 

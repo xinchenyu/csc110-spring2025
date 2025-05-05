@@ -963,6 +963,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#output" id="toc-output" class="nav-link" data-scroll-target="#output">Output</a></li>
   </ul></li>
   <li><a href="#example-run" id="toc-example-run" class="nav-link" data-scroll-target="#example-run">Example Run</a></li>
+  <li><a href="#additional-example" id="toc-additional-example" class="nav-link" data-scroll-target="#additional-example">Additional Example</a></li>
   <li><a href="#development-strategy-1" id="toc-development-strategy-1" class="nav-link" data-scroll-target="#development-strategy-1">Development Strategy 1</a>
   <ul class="collapse">
   <li><a href="#reading-in-input-files" id="toc-reading-in-input-files" class="nav-link" data-scroll-target="#reading-in-input-files">(1) Reading in input files</a></li>
@@ -1050,7 +1051,7 @@ B Y Z T C V B
 V B U L L E T
 A M E R I C A
 </pre>
-<p>Your program should return and print:</p>
+<p>Your program should print:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">"army"</span>: [<span class="dv">1</span>, <span class="dv">6</span>],</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a> <span class="st">"bullet"</span>: [<span class="dv">6</span>, <span class="dv">2</span>],</span>
@@ -1060,27 +1061,71 @@ A M E R I C A
 </div>
 <p>A word in the grid can be horizontal or vertical, the order of letters may go forward or backward. For example, when searching for the word <code>star</code>, the starting position is row 4 and column 5 for the letter <code>s</code> (vertical backward direction). Another example is the word <code>bullet</code>, the starting position is row 6 and column 2 for the letter <code>b</code> (horizontal forward direction). Consider the cases when a word only show up once in the grid.</p>
 </section>
+<section id="additional-example" class="level1">
+<h1>Additional Example</h1>
+<p>Say that <code>words.txt</code> contains:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>house</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>roof</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>table</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>kitchen</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>computer</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>bedromm</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>bathroom</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>And then <code>grid.txt</code> contains:</p>
+<pre>I L D T J R K I I I J N D A I D O W R S
+K P G M N J Z Q C T X J Y Y Q C E K W E
+I M K S I P M R V A J J T X J Z U H Y B
+U E T X N E V K M B S V Z A T Z U M N M
+X H Z F B J W S W U L M Q P X L Z A K V
+O L B E D R O O M Z H T C V A W B R O O
+H C T K F A J Q V J I Q I O J S S Q X A
+N V H B P I A D U O B P O P J X Y N Y O
+H B T I B A T H R O O M F A J I X O T X
+Z Y U C H O U S E O V S M O W M T P F V
+K B G I W T F M N I G X I A H R H N D O
+H Q N W Z T N D C F V A W O N J C V T C
+N T U I X Y M T A B L E F W B F J Y D M
+K O X W T C Y Q I H H D R T W I E C I X
+U O Q A F X J H V H L Z S U V B K A U R
+T N U Z A I G Q N C Q K I T C H E N R K
+N O D C I J O H N Q W R B P B Y V N S C
+H P C O M P U T E R L N H H T J W X Y A
+M A D J S O V L R O O F Y K D T E I M A
+U Q I W X E D J O R L D R H P R C W Y O
+</pre>
+<p>Your program should print:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">'house'</span>: [<span class="dv">10</span>, <span class="dv">5</span>], </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a> <span class="st">'roof'</span>: [<span class="dv">19</span>, <span class="dv">9</span>], </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a> <span class="st">'table'</span>: [<span class="dv">13</span>, <span class="dv">8</span>], </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a> <span class="st">'kitchen'</span>: [<span class="dv">16</span>, <span class="dv">12</span>], </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a> <span class="st">'computer'</span>: [<span class="dv">18</span>, <span class="dv">3</span>], </span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a> <span class="st">'bathroom'</span>: [<span class="dv">9</span>, <span class="dv">5</span>]}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
 <section id="development-strategy-1" class="level1">
 <h1>Development Strategy 1</h1>
 <p>This section covers how you should go about structuring and implementing the code. In total, your program should have at least 4 functions. My recommendation for these functions:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># All your functions are defined here</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    word_filename <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Name of the word bank file: "</span>)</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    grid_filename <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Name of the grid file: "</span>)</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># call a function to load in the forwards words, computes the backwards version of each word, and save into a dictionary, passing in the needed arguments</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># call a function for transposing the grid, passing in the needed arguments</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># call a function for searching through lines, passing in the needed arguments</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># call a function for checking if a word is found on a line and where it is (index), passing in the needed arguments</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># print the dictionary with words as keys and their positions as values</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># All your functions are defined here</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    word_filename <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Name of the word bank file: "</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    grid_filename <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Name of the grid file: "</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># call a function to load in the forwards words, computes the backwards version of each word, and save into a dictionary, passing in the needed arguments</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># call a function for transposing the grid, passing in the needed arguments</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># call a function for searching through lines, passing in the needed arguments</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># call a function for checking if a word is found on a line and where it is (index), passing in the needed arguments</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># print the dictionary with words as keys and their positions as values</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You may have other functions as well and use your preferred names for them, but you MUST call your <code>main</code> function when submitting your file. Your <code>main</code> function should call <code>print</code> function only once, which is in the last step to print the dictionary. You may build this program in the following sequence:</p>
 <section id="reading-in-input-files" class="level2">
@@ -1099,24 +1144,24 @@ A M E R I C A
 <h1>Development Strategy 2</h1>
 <p>You may also consider another strategy:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># All your functions are defined here</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    word_filename <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Name of the word bank file: "</span>)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    grid_filename <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Name of the grid file: "</span>)</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># call a function to load in the words and save into a list, passing in the needed arguments</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># call a function to get each word of the 4 directions at each position, passing in the needed arguments</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># call a function to save all the words in the 4 directions for all the indices using a dictionary, passing in the needed arguments</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># call a function for checking if a word is found in any one of the 4 directions (the value) and where it is (the key), passing in the needed arguments</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># print the dictionary with words as keys and their positions as values</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># All your functions are defined here</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    word_filename <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Name of the word bank file: "</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    grid_filename <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Name of the grid file: "</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># call a function to load in the words and save into a list, passing in the needed arguments</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># call a function to get each word of the 4 directions at each position, passing in the needed arguments</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># call a function to save all the words in the 4 directions for all the indices using a dictionary, passing in the needed arguments</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># call a function for checking if a word is found in any one of the 4 directions (the value) and where it is (the key), passing in the needed arguments</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># print the dictionary with words as keys and their positions as values</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The 4 directions are: horizontal forward, horizontal backward, vertical forward, and vertical backward. For example, for position <code>[2, 2]</code>, the words are: <code>navybm</code>, <code>ns</code>, <code>nzzaql</code> and <code>nr</code>.</p>
 <p>You may have other functions as well and use your preferred names for them, but you MUST call your <code>main</code> function when submitting your file. Your <code>main</code> function should call <code>print</code> function only once, which is in the last step to print the dictionary.</p>
