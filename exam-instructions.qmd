@@ -8,9 +8,7 @@ format: revealjs
 <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
 </center>
 
-1PM Section: exam starts at 1:00pm and ends at 1:50pm
-
-2PM Section: exam starts at 2:00pm and ends at 2:50pm
+Exam starts at 1:00pm and ends at 3:00pm
 
 <font color="red">No breaks during the exam.</font>
 
